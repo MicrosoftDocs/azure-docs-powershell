@@ -546,4 +546,3 @@ Update an existing Azure Managed Instances for Apache Cassandra cluster.
 
 ### [Update-AzManagedCassandraDataCenter](Update-AzManagedCassandraDataCenter.md)
 Update an existing Azure Managed Instances for Apache Cassandra data center.
-
