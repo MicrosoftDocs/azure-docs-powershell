@@ -1,7 +1,7 @@
 ---
 Module Name: Az.SignalR
 Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
-Download Help Link: {{Please enter FwLink manually}}
+Download Help Link:
 Help Version: 0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Az.SignalR.md
