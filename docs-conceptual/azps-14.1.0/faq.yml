@@ -87,3 +87,32 @@ sections:
           ```
 
           **Note:** Handle plain text carefully, as it is less secure than a SecureString.
+
+      - question: |
+          How to mitigate the error "SharedTokenCacheCredential authentication unavailable"?
+        answer: |
+          If you are getting this error when using an Azure PowerShell cmdlet that creates or
+          makes change to Azure resources, it is likely that you are blocked by the Entra ID
+          Conditional Access policy.
+
+          The complete error message is as follows:
+
+          ```
+          SharedTokenCacheCredential authentication unavailable. Token acquisition failed for user
+          someone@example.com. Ensure that you have authenticated with a developer tool that supports
+          Azure single sign on.
+          ```
+
+          To resolve this issue, please update to version 14.X.Y or later of the Azure PowerShell module,
+          or equivalently, version 5.X.Y of the Az.Accounts module.
+          With these versions, the Azure PowerShell cmdlets will be able to display detailed error messages
+          regarding which policy is blocking the authentication, and how to resolve the issue.
+
+          For example, if the admin has configured the policy to require multi-factor authentication (MFA),
+          you will see an error message similar to the following:
+
+          ```powershell
+          {Placeholder for error message}
+          ```
+          
+          Follow the instructions in the error message to sign in through multi-factor authentication (MFA).
