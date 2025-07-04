@@ -1,7 +1,7 @@
 ---
 Module Name: Az.Ssh
 Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
-Download Help Link: {{ Update Download Link }}
+Download Help Link:
 Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Az.Ssh.md
