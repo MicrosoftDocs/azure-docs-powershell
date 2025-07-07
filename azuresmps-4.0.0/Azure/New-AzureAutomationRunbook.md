@@ -30,7 +30,7 @@ New-AzureAutomationRunbook -Path <String> [-Description <String>] [-Tags <String
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **New-AzureAutomationRunbook** cmdlet creates a new, empty Microsoft Azure Automation runbook.
 Specify a name to create a new runbook.

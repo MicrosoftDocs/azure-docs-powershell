@@ -29,7 +29,7 @@ Get-AzureAutomationSchedule -Name <String> -AutomationAccountName <String> [-Pro
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **Get-AzureAutomationSchedule** cmdlet gets a Microsoft Azure Automation schedule.
 

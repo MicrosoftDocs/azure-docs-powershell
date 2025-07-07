@@ -35,13 +35,13 @@ PowerShell session.
 1. Download the latest azure-powershell image.
 
    ```console
-   docker pull mcr.microsoft.com/azure-powershell:mariner-2
+   docker pull mcr.microsoft.com/azure-powershell:azurelinux-3.0
    ```
 
 1. Run the azure-powershell container in interactive mode:
 
    ```console
-   docker run -it mcr.microsoft.com/azure-powershell:mariner-2 pwsh
+   docker run -it mcr.microsoft.com/azure-powershell:azurelinux-3.0 pwsh
    ```
 
 # [arm64](#tab/arm64)
@@ -49,13 +49,13 @@ PowerShell session.
 1. Download the latest azure-powershell image.
 
    ```console
-   docker pull mcr.microsoft.com/azure-powershell:mariner-2-arm64
+   docker pull mcr.microsoft.com/azure-powershell:azurelinux-3.0-arm64
    ```
 
 1. Run the azure-powershell container in interactive mode:
 
    ```console
-   docker run -it mcr.microsoft.com/azure-powershell:mariner-2-arm64 pwsh
+   docker run -it mcr.microsoft.com/azure-powershell:azurelinux-3.0-arm64 pwsh
    ```
 
 ---
@@ -71,13 +71,13 @@ The following command deletes the Docker container when you no longer need it.
 # [amd64](#tab/amd64)
 
 ```console
-docker rmi mcr.microsoft.com/azure-powershell:mariner-2
+docker rmi mcr.microsoft.com/azure-powershell:azurelinux-3.0
 ```
 
 # [arm64](#tab/arm64)
 
 ```console
-docker rmi mcr.microsoft.com/azure-powershell:mariner-2-arm64
+docker rmi mcr.microsoft.com/azure-powershell:azurelinux-3.0-arm64
 ```
 
 ---
