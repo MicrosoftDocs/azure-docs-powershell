@@ -23,7 +23,7 @@ Set-AzureAutomationSchedule -Name <String> [-IsEnabled <Boolean>] [-Description 
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **Set-AzureAutomationSchedule** cmdlet modifies a schedule in Microsoft Azure Automation.
 

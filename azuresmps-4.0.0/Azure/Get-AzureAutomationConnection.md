@@ -35,7 +35,7 @@ Get-AzureAutomationConnection -ConnectionTypeName <String> -AutomationAccountNam
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **Get-AzureAutomationConnection** cmdlet gets one or more Microsoft Azure Automation connections.
 By default, all connections are returned.
