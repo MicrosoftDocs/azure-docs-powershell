@@ -23,7 +23,7 @@ Remove-AzureAutomationRunbook -Name <String> [-Force] -AutomationAccountName <St
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **Remove-AzureAutomationRunbook** cmdlet removes a runbook from Microsoft Azure Automation.
 

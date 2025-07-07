@@ -31,7 +31,7 @@ New-AzureSBAuthorizationRule -Name <String> [-Permission <AccessRights[]>] -Name
 ## DESCRIPTION
 The **New-AzureSBAuthorizationRule** cmdlet creates a Service Bus authorization rule.
 
-[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+[!INCLUDE [sb-deprecation.md](../../includes/sb-deprecation.md)]
 
 ## EXAMPLES
 
