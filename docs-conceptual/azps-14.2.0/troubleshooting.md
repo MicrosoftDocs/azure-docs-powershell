@@ -55,6 +55,36 @@ Update-AzConfig -EnableLoginByWam $false
 - WAM popup window to select an account isn't easy to find. Minimize other windows to locate the
   popup window.
 
+## SharedTokenCacheCredential authentication unavailable
+
+If you receive this error when running an Azure PowerShell cmdlet that creates or modifies Azure
+resources, it's likely that you're blocked by the Microsoft Entra ID Conditional Access policy.
+
+The complete error message is as follows:
+
+```Output
+SharedTokenCacheCredential authentication unavailable. Token acquisition failed for user
+someone@contoso.com. Ensure that you have authenticated with a developer tool that supports
+Azure single sign on.
+```
+
+To resolve this issue, update to one of the following versions:
+
+- **Az** PowerShell module version 14.X.Y or later
+- Or equivalently, **Az.Accounts** PowerShell module version 5.X.Y or later
+
+These versions provide improved error messages that identify the specific Conditional Access policy
+causing the issue and offer guidance for resolving it.
+
+For example, if your organization requires multifactor authentication (MFA), you see an error
+message like:
+
+```powershell
+{Placeholder for error message}
+```
+
+To complete sign-in using MFA, follow the instructions in the error message.
+
 ## Installation
 
 This section contains a list of solutions to common problems when installing the Az PowerShell
