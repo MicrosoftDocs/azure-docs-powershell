@@ -23,7 +23,7 @@ Get-AzureAutomationRunbookDefinition -Name <String> [-Slot <String>] -Automation
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **Get-AzureAutomationRunbookDefinition** cmdlet gets the draft definition, the published definition, or both definitions of an Azure Automation runbook.
 By default, the published version is returned.
