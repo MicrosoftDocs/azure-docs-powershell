@@ -191,7 +191,7 @@ typically, that MFA is required but not enforced at login.
 
 ### Resolution steps
 
-To resolve these errors, upgrade to either or these supported module versions:
+To resolve these errors, upgrade to one of these supported module versions:
 
 - **Az** PowerShell module: version 14.3.0 or later
 - **Az.Accounts** module: version 5.x.y or later
