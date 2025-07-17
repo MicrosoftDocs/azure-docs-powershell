@@ -4,7 +4,7 @@ ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 title: Install Azure PowerShell on Windows | Microsoft Docs
-zone_pivot_group_filename: azure/zone-pivot-groups.json
+zone_pivot_groups_path: /powershell/azure/zone-pivot-groups.json
 zone_pivot_groups: install-azps-windows
 ---
 

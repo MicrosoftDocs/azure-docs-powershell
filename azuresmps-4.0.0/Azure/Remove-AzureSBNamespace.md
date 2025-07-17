@@ -26,7 +26,7 @@ To get the version of the module you're using, in the Azure PowerShell console, 
 
 The **Remove-AzureSBNamespace** cmdlet removes a service namespace for Service Bus.
 
-[!INCLUDE [sb-deprecation.md](../include/sb-deprecation.md)]
+[!INCLUDE [sb-deprecation.md](../../includes/sb-deprecation.md)]
 
 ## EXAMPLES
 

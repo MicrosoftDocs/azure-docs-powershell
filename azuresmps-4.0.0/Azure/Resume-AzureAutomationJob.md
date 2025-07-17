@@ -23,7 +23,7 @@ Resume-AzureAutomationJob -Id <Guid> -AutomationAccountName <String> [-Profile <
 
 ## DESCRIPTION
 
-[!INCLUDE [aa-deprecation](../include/aa-deprecation.md)]
+[!INCLUDE [aa-deprecation](../../includes/aa-deprecation.md)]
 
 The **Resume-AzureAutomationJob** cmdlet resumes a suspended Microsoft Azure Automation job.
 Use the *Id* parameter to specify the suspended job.
