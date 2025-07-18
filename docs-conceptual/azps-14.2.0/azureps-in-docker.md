@@ -1,16 +1,16 @@
 ---
-description: Learn how to run a Docker container hosting Azure PowerShell. Docker gets you started quickly with an isolated environment in which to run Azure PowerShell.
+title: Run Azure PowerShell in a Docker container
+description: Learn how to run Azure PowerShell in a Docker container using official Microsoft images. Quickly set up and manage Azure resources in an isolated environment.
 ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
-title: How to run Azure PowerShell in a Docker container
 ---
 
-# Using Azure PowerShell in a Docker container
+# Run Azure PowerShell in a Docker container
 
 We publish Docker images with Azure PowerShell preinstalled. You can use Docker to run a standalone
 Linux container with Azure PowerShell preinstalled. This article shows you how to use Azure
-PowerShell in the Docker container.
+PowerShell in a Docker container.
 
 ## Finding available images
 
@@ -25,10 +25,15 @@ modules supported with the Az PowerShell module.
 
 You can find a complete list of Azure PowerShell Docker images on our [Docker image][az-image] page.
 
+> [!IMPORTANT]
+> These images are built from official operating system (OS) images provided by the OS distributor.
+> These images might not have the latest security updates. Microsoft recommends that you update the
+> OS packages to the latest version to ensure the latest security updates are applied.
+
 ## Using Azure PowerShell in a container
 
-The following steps show the Docker commands required to download the image and start an interactive
-PowerShell session.
+The following steps outline the Docker commands necessary to download the image and start an
+interactive PowerShell session.
 
 # [amd64](#tab/amd64)
 
