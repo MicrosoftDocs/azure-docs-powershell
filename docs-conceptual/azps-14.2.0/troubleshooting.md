@@ -73,7 +73,7 @@ Recommended Actions:
 - Alternative: If MFA can't be enforced at sign-in, use interactive authentication with the
   **ClaimsChallenge** parameter as shown in the following example:
 
-  ```PowerShell
+  ```azurepowershell
   Connect-AzAccount -Tenant (Get-AzContext).Tenant.Id -ClaimsChallenge "<claims-challenge-token>"
   ```
 
