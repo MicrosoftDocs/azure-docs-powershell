@@ -30,13 +30,35 @@ $DebugPreference = 'Continue'
 
 ### Interactive login failures
 
-If you encounter errors when running Azure PowerShell cmdlets that create, modify, or delete Azure
-resources, the issue might be caused by a Microsoft Entra ID conditional access policy that requires
+If you encounter errors when running Azure PowerShell cmdlets that create, modify, or delete
+resources, the issue might be caused by a Microsoft Entra ID Conditional Access policy that requires
 multifactor authentication (MFA).
 
-#### Common error messages
+These errors typically occur when MFA is required by policy but isn't enforced during login.
 
-You might see an error like the following:
+#### SharedTokenCacheCredential authentication unavailable
+
+You might see this error when using:
+
+- **Az** PowerShell module version 14.2.0 or earlier
+- **Az.Accounts** PowerShell module 5.1.1 or earlier
+
+```Output
+SharedTokenCacheCredential authentication unavailable. Token acquisition failed for user
+someone@contoso.com. Ensure that you have authenticated with a developer tool that supports Azure
+single sign on.
+```
+
+Upgrade to the following versions or later to receive more informative error messages and policy
+details:
+
+- **Az** PowerShell module: version 14.3.0 or later
+- **Az.Accounts** module: version 5.x.y or later
+
+#### Resource was disallowed by policy
+
+This error occurs in newer module versions (**Az** 14.3.0+ and **Az.Accounts** 5.x.y+), where MFA is
+required by Conditional Access for specific operations.
 
 ```Output
 Resource was disallowed by policy. Users must use MFA for Create operation.
@@ -45,39 +67,18 @@ Run the cmdlet below to authenticate interactively; additional parameters may be
 Connect-AzAccount -Tenant (Get-AzContext).Tenant.Id -ClaimsChallenge "<claims-challenge-token>"
 ```
 
-Or:
+#### Resolution options
 
-```Output
-SharedTokenCacheCredential authentication unavailable. Token acquisition failed for user
-someone@contoso.com. Ensure that you have authenticated with a developer tool that supports Azure
-single sign on.
-```
-
-These messages indicate that your session doesn't meet the conditional access requirements,
-typically, that MFA is required but not enforced at login.
-
-#### Resolution steps
-
-To resolve these errors, upgrade to one of these supported module versions:
-
-- **Az** PowerShell module: version 14.3.0 or later
-- **Az.Accounts** module: version 5.x.y or later
-
-These versions improve error reporting by identifying the exact conditional access policy causing
-the issue and providing guidance.
-
-Recommended Actions:
-
-- Preferred: Ask your Azure administrator to enforce MFA at sign-in for your account. This ensures
-  compatibility with conditional access policies that require MFA.
-- Alternative: If MFA can't be enforced at sign-in, use interactive authentication with the
-  **ClaimsChallenge** parameter as shown in the following example:
+- Ask your Azure administrator to enforce MFA at sign-in. This allows your session to meet
+  Conditional Access requirements without additional steps.
+- If MFA enforcement at sign-in isn't possible, use the **ClaimsChallenge** parameter to
+  authenticate interactively:
 
   ```azurepowershell
   Connect-AzAccount -Tenant (Get-AzContext).Tenant.Id -ClaimsChallenge "<claims-challenge-token>"
   ```
 
-For more information about Microsoft Entra ID conditional access policies that require MFA, see
+For more information, see
 [Planning for mandatory multifactor authentication for Azure and other admin portals][01]
 
 ### ROPC error: Due to a configuration change made by your administrator
@@ -338,3 +339,7 @@ creating a service principal:
 
 If you experience a product issue with Azure PowerShell not listed in this article or require
 further assistance, [file an issue on GitHub](https://github.com/azure/azure-powershell/issues).
+
+<!-- link references -->
+
+[01]: /entra/identity/authentication/concept-mandatory-multifactor-authentication
