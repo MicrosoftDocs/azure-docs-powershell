@@ -159,6 +159,47 @@ To learn more about federated identities, see:
 - [What is workload identity federation?][identity-federations]
 - [Migrate to Microsoft Entra multifactor authentication with federations][mfa-federations]
 
+## Troubleshooting
+
+### ROPC error: Due to a configuration change made by your administrator
+
+You use the Resource Owner Password Credential (ROPC) flow when signing into Azure using a password.
+This authentication method doesn't support MFA. Here's an example:
+
+```azurepowershell
+Connect-AzAccount -Credential $Credential
+```
+
+If the user account requires MFA, the command fails with the following error:
+
+```Output
+Connect-AzAccount : UsernamePasswordCredential authentication failed: Response status code does not indicate success: 400 (BadRequest).
+See the troubleshooting guide for more information
+https://aka.ms/azsdk/net/identity/usernamepasswordcredential/troubleshoot
+```
+
+**Solution:** Use an authentication method that's compatible with MFA.
+
+### Cross-tenant warning: Authentication failed against tenant
+
+If you have access to multiple tenants, and one of them requires MFA, Azure PowerShell might display
+the following warning:
+
+```Output
+WARNING: Unable to acquire token for tenant '00000000-0000-0000-0000-000000000000' with error 'Authentication failed against tenant 00000000-0000-0000-0000-000000000000. User interaction is required. This may be due to the conditional access policy settings such as multi-factor authentication (MFA). If you need to access subscriptions in that tenant, please rerun 'Connect-AzAccount' with additional parameter '-TenantId 00000000-0000-0000-0000-000000000000.'
+```
+
+Azure PowerShell attempts to sign in with _the first tenant found_ during login. If that tenant
+enforces MFA, authentication might fail. To avoid this issue, explicitly specify the target tenant
+using the **TenantId** parameter:
+
+```azurepowershell
+Connect-AzAccount -TenantId 00000000-0000-0000-0000-000000000000
+```
+
+This ensures that authentication is attempted against the correct tenant, reducing the likelihood of
+MFA-related failures.
+
 ## Learn more about multifactor authentication
 
 The Microsoft Entra ID documentation site offers more detail on MFA.
@@ -192,4 +233,3 @@ The Microsoft Entra ID documentation site offers more detail on MFA.
 [steps-assign-role]: /azure/role-based-access-control/role-assignments-steps
 [assign-roles]: /azure/role-based-access-control/role-assignments-powershell
 [fic-serviceconn-blog]: https://devblogs.microsoft.com/azure-sdk/improve-security-posture-in-azure-service-connections-with-azurepipelinescredential/
-[01]: /entra/identity/authentication/concept-mandatory-multifactor-authentication
