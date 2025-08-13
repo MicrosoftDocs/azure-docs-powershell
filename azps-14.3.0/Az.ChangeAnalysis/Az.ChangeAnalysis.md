@@ -7,7 +7,7 @@ Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ChangeAnalysis/ChangeAnalysis/help/Az.ChangeAnalysis.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ChangeAnalysis/ChangeAnalysis/help/Az.ChangeAnalysis.md
 moduleStatus: preview
-moduleStatusMessage: This is a **Preview** module. The module is under development and subject to breaking changes. It's provided for testing and feedback purposes, but shouldn't be used in production. For more information, see https://aka.ms/azps-refstatus.
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
 
 # Az.ChangeAnalysis Module
