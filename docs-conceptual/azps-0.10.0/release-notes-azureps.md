@@ -2,8 +2,10 @@
 title: Azure PowerShell release notes
 description: Learn about all of the latest updates to the Azure PowerShell modules.
 ms.devlang: powershell
-ms.custom: devx-track-azurepowershell
 ms.service: azure-powershell
+ms.custom:
+  - devx-track-azurepowershell
+  - sfi-ropc-nochange
 ---
 
 # Azure PowerShell release notes

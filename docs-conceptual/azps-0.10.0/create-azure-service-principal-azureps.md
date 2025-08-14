@@ -2,8 +2,10 @@
 title: Use Azure service principals with Azure PowerShell
 description: Learn how to create and use service principals with Azure PowerShell.
 ms.devlang: powershell
-ms.custom: devx-track-azurepowershell 
 ms.service: azure-powershell
+ms.custom:
+  - devx-track-azurepowershell
+  - sfi-ropc-nochange
 ---
 # Create an Azure service principal with Azure PowerShell
 
