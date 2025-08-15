@@ -23,7 +23,7 @@ $authHeader = @{
     'Content-Type'  = 'application/json'
     'Authorization' = 'Bearer ' + (Get-AccessToken)
 }
-$respone = Invoke-RestMethod -Method Get -Headers $authHeader -Uri $uri
+$response = Invoke-RestMethod -Method Get -Headers $authHeader -Uri $uri
 ```
 
 #### After
@@ -40,7 +40,7 @@ $authHeader = @{
     'Content-Type'  = 'application/json'
     'Authorization' = 'Bearer ' + $plaintextToken
 }
-$respone = Invoke-RestMethod -Method Get -Headers $authHeader -Uri $uri
+$response = Invoke-RestMethod -Method Get -Headers $authHeader -Uri $uri
 ```
 
 
