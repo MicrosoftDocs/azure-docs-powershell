@@ -5,6 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/az.firmwareanalysi
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FirmwareAnalysis/FirmwareAnalysis/help/Get-AzFirmwareAnalysisPasswordHash.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FirmwareAnalysis/FirmwareAnalysis/help/Get-AzFirmwareAnalysisPasswordHash.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
 
 # Get-AzFirmwareAnalysisPasswordHash
