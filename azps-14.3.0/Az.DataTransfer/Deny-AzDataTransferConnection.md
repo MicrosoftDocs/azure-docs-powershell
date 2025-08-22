@@ -5,6 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/az.datatransfer/de
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataTransfer/DataTransfer/help/Deny-AzDataTransferConnection.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataTransfer/DataTransfer/help/Deny-AzDataTransferConnection.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
 
 # Deny-AzDataTransferConnection
