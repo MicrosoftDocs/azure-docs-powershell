@@ -22,6 +22,11 @@
     },
     {
       "redirect_document_id": false,
+      "redirect_url": "/training/modules/automate-azure-tasks-with-powershell/",
+      "source_path": "docs-conceptual/azps-14.3.0/azureps-vm-tutorial.yml"
+    },
+    {
+      "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azps-14.2.0/overview.md"
     },
@@ -39,6 +44,11 @@
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/azureps-support-lifecycle/",
       "source_path": "docs-conceptual/azps-14.2.0/azps-versioning-release-cadence.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/training/modules/automate-azure-tasks-with-powershell/",
+      "source_path": "docs-conceptual/azps-14.2.0/azureps-vm-tutorial.yml"
     },
     {
       "redirect_document_id": false,
@@ -62,6 +72,11 @@
     },
     {
       "redirect_document_id": false,
+      "redirect_url": "/training/modules/automate-azure-tasks-with-powershell/",
+      "source_path": "docs-conceptual/azps-12.5.0/azureps-vm-tutorial.yml"
+    },
+    {
+      "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azps-0.10.0/overview.md"
     },
@@ -74,11 +89,6 @@
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/overview",
       "source_path": "docs-conceptual/azuresmps-4.0.0/index.md"
-    },
-    {
-      "redirect_document_id": false,
-      "redirect_url": "/training/modules/automate-azure-tasks-with-powershell/",
-      "source_path": "docs-conceptual/azps-14.1.0/azureps-vm-tutorial.yml"
     }
   ]
 }
