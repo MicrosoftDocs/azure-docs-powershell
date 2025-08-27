@@ -20,7 +20,7 @@ Get-AzPolicyMetadata [-Name <String>] [-Top <Int32>] [-DefaultProfile <IAzureCon
 ```
 
 ## DESCRIPTION
-The **Get-AzPolicyRemediation** cmdlet gets all policy metadata resources or a particular policy metadata resource.
+The **Get-AzPolicyMetadata** cmdlet gets all policy metadata resources or a particular policy metadata resource.
 
 ## EXAMPLES
 
