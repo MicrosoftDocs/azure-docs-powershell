@@ -26,6 +26,22 @@ To enable debug logging for an entire PowerShell session, you set the value of t
 $DebugPreference = 'Continue'
 ```
 
+## Known issue: Installing Az modules from MAR fails
+
+When installing certain Az PowerShell modules from the Microsoft Artifact Registry (MAR) using
+**PSResourceGet**, you may encounter an error such as:
+
+```Output
+Install-PSResource: Package(s) 'Az.Keyvault' could not be installed from repository 'MAR'.
+```
+
+> [!NOTE]
+> As a temporary workaround, install the module from another repository, such as the PowerShell
+> Gallery, until the issue is resolved.
+
+For more information, see
+[Bugfix for comparing file path name to determine exact match](https://github.com/PowerShell/PSResourceGet/pull/1817).
+
 ## Troubleshooting multifactor authentication (MFA)
 
 ### Interactive login failures
