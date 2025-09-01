@@ -35,6 +35,7 @@ The **Az** PowerShell module is preinstalled in Azure [Cloud Shell][cloud-shell-
 
 - [What is Azure PowerShell][what-is-azps]
 - [Get started with Azure PowerShell][get-started]
+- [Manage modules in Azure Automation (for Runbooks)](https://learn.microsoft.com/en-us/azure/automation/shared-resources/modules)
 - [Support Lifecycle][support-lifecycle]
 
 <!-- link references -->
