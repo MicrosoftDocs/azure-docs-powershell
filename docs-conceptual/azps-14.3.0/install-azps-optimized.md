@@ -115,6 +115,11 @@ Installing the **Az** PowerShell module from the Microsoft Artifact Registry (MA
 more reliable installations. MAR ensures quick download speeds and a smooth setup process,
 minimizing potential issues during installation.
 
+> [!IMPORTANT]
+> There's a known issue when installing from MAR. For details, see the
+> [Known issues when installing from MAR](/powershell/azure/troubleshooting#known-issue-installing-az-modules-from-mar-fails)
+> section of our troubleshooting guide.
+
 1. If you're using a version of PowerShell earlier than 7.5.0, you must install
    **Microsoft.PowerShell.PSResourceGet** version 1.1.0 or higher
 
