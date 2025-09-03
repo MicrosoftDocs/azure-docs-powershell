@@ -5,6 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/az.neonpostgres/re
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Remove-AzNeonPostgresOrganization.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Remove-AzNeonPostgresOrganization.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
 
 # Remove-AzNeonPostgresOrganization

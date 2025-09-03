@@ -5,6 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/Az.Quantum/new-AzQ
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/New-AzQuantumProviderObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/New-AzQuantumProviderObject.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
 
 # New-AzQuantumProviderObject
