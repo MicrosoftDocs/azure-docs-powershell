@@ -51,7 +51,7 @@ There are two Az PowerShell modules:
 - [AzPreview](https://www.powershellgallery.com/packages/AzPreview/). Installs all GA and preview
   modules for managing Azure resources. Doesn't include feature preview modules.
 
-The **AzPreview** module is always the same version and is released at the same time as the Az
+The **AzPreview** module is always the same version and is released at the same time as the **Az**
 module.
 
 ## Release cadence
@@ -61,7 +61,7 @@ This release cadence is designed to provide customers with predictable release d
 businesses, developers, and the community to make strategic decisions when planning their roadmaps.
 
 > [!WARNING]
-> Before upgrading to a major breaking change version of the Az PowerShell module, you should
+> Before upgrading to a major breaking change version of the **Az** PowerShell module, you should
 > [**review the migration guide**](https://aka.ms/azps-migration-latest).
 
 ## Support of releases
@@ -79,7 +79,7 @@ difference is the length of support.
 
 - **Long Term Support (LTS) releases**
 
-  - Even-numbered major versions are LTS releases, beginning with Az 12.0.0.
+  - Even-numbered major versions are LTS releases, beginning with **Az** 12.0.0.
   - The final version of each LTS release is supported until the second subsequent STS version is
     released.
   - Supported for approximately 18 months from the original major version release date.
@@ -102,25 +102,32 @@ lifecycle:
 
 | Version number | Release schedule | Breaking changes | Release type | Support type | Supported until version |
 | -------------- | ---------------- | ---------------- | ------------ | ------------ | ----------------------- |
-| 12.0.0         | May 2024         | ![Yes][1]        | Major        | LTS          | 12.1.0                  |
-| 12.1.0         | June 2024        |                  | Minor        | LTS          | 12.2.0                  |
-| 12.2.0         | July 2024        |                  | Minor        | LTS          | 12.3.0                  |
-| 12.3.0         | August 2024      |                  | Minor        | LTS          | 12.4.0                  |
-| 12.4.0         | September 2024   |                  | Minor        | LTS          | 12.5.0                  |
 | 12.5.0         | October 2024     |                  | Minor        | LTS          | _**15.0.0**_            |
-| 13.0.0         | November 2024    | ![Yes][1]        | Major        | STS          | 13.1.0                  |
-| 13.1.0         | December 2024    |                  | Minor        | STS          | 13.2.0                  |
-| 13.2.0         | January 2025     |                  | Minor        | STS          | 13.3.0                  |
-| 13.3.0         | February 2025    |                  | Minor        | STS          | 13.4.0                  |
-| 13.4.0         | March 2025       |                  | Minor        | STS          | 13.5.0                  |
-| 13.5.0         | April 2025       |                  | Minor        | STS          | _**14.0.0**_            |
 | 14.0.0         | May 2025         | ![Yes][1]        | Major        | LTS          | 14.1.0                  |
+| 14.1.0         | June 2025        |                  | Minor        | LTS          | 14.2.0                  |
+| 14.2.0         | July 2025        |                  | Minor        | LTS          | 14.3.0                  |
+| 14.3.0         | August 2025      |                  | Minor        | LTS          | 14.4.0                  |
+| 14.4.0         | September 2025   |                  | Minor        | LTS          | 14.5.0                  |
+| 14.5.0         | October 2025     |                  | Minor        | LTS          | _**17.0.0**_            |
+| 15.0.0         | November 2025    | ![Yes][1]        | Major        | STS          | 15.1.0                  |
+| 15.1.0         | December 2025    |                  | Minor        | STS          | 15.2.0                  |
+| 15.2.0         | January 2026     |                  | Minor        | STS          | 15.3.0                  |
+| 15.3.0         | February 2026    |                  | Minor        | STS          | 15.4.0                  |
+| 15.4.0         | March 2026       |                  | Minor        | STS          | 15.5.0                  |
+| 15.5.0         | April 2026       |                  | Minor        | STS          | _**16.0.0**_            |
+| 16.0.0         | May 2026         | ![Yes][1]        | Major        | LTS          | 16.1.0                  |
+| 16.1.0         | June 2026        |                  | Minor        | LTS          | 16.2.0                  |
+| 16.2.0         | July 2026        |                  | Minor        | LTS          | 16.3.0                  |
+| 16.3.0         | August 2026      |                  | Minor        | LTS          | 16.4.0                  |
+| 16.4.0         | September 2026   |                  | Minor        | LTS          | 16.5.0                  |
+| 16.5.0         | October 2026     |                  | Minor        | LTS          | _**19.0.0**_            |
 
 - Examples:
-  - To qualify for support, you must update to 12.1.0 when released if you have Az 12.0.0 installed.
-  - If Az 12.5.0 is the final release of Az version 12, it's supported until the release of Az
-    15.0.0.
-  - When Az 14.0.0 is released, Az version 13 is no longer supported.
+  - To qualify for support, you must update to 14.1.0 when released if you have **Az** 14.0.0
+    installed.
+  - If **Az** 14.5.0 is the final release of **Az** version 14, it's supported until the release of
+    **Az** 17.0.0.
+  - When **Az** 14.0.0 is released, **Az** version 13 is no longer supported.
 
 ## Breaking changes
 
@@ -145,8 +152,8 @@ For more information, see
 
 ### List of breaking changes
 
-For detailed information about breaking changes in major releases of the Az PowerShell module, see
-the following articles.
+For detailed information about breaking changes in major releases of the **Az** PowerShell module,
+see the following articles.
 
 - [Upcoming breaking changes](upcoming-breaking-changes.md)
 - [Az 14.0.0 breaking changes](migrate-az-14.0.0.md)
@@ -165,20 +172,20 @@ the following articles.
 
 ## Supported environments
 
-The following table identifies the supported platforms for the Az, AzureRM, and Azure PowerShell
-modules.
+The following table identifies the supported platforms for the Azure PowerShell modules.
 
 > [!NOTE]
 > Azure PowerShell is supported only on versions of PowerShell that are still within their support
 > lifecycle. For details, refer to the [PowerShell end-of-support dates][powershell-support-dates].
 
-|          Azure PowerShell           | PowerShell <br/> 7.2, 7.4, and higher | Windows PowerShell <br/> 5.1 |
-| ----------------------------------- | :-----------------------------------: | :--------------------------: |
-| ![Supported][1] Az 12.x             |            ![Supported][1]            |       ![Supported][1]        |
-| ![Supported][1] Az 11.x             |            ![Supported][1]            |       ![Supported][1]        |
-| ![Out of Support][4] <= Az 10.x     |         ![Out of Support][4]          |     ![Out of Support][4]     |
-| ![Out of Support][4] AzureRM 6.13.2 |          ![Not Supported][3]          |     ![Out of Support][4]     |
-| ![Supported][1] Azure 5.3.1         |          ![Not Supported][3]          |       ![Supported][1]        |
+|              Azure PowerShell               | PowerShell <br/> 7.x (any supported version) | Windows PowerShell <br/> 5.1 |
+| ------------------------------------------- | :------------------------------------------: | :--------------------------: |
+| ![Supported][1] Az 14.x                     |               ![Supported][1]                |       ![Supported][1]        |
+| ![Out of Support][4] Az 13.x                |             ![Out of Support][4]             |     ![Out of Support][4]     |
+| ![Supported][1] Az 12.x                     |               ![Supported][1]                |       ![Supported][1]        |
+| ![Out of Support][4] <= Az 11.x             |             ![Out of Support][4]             |     ![Out of Support][4]     |
+| ![Out of Support][4] AzureRM (all versions) |             ![Not Supported][3]              |     ![Out of Support][4]     |
+| ![Out of Support][4] Azure (all versions)   |             ![Not Supported][3]              |     ![Out of Support][4]     |
 
 - The ![Supported][1] icon indicates supported version combinations of Azure PowerShell and
   PowerShell.
