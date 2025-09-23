@@ -194,11 +194,14 @@ The following table identifies the supported platforms for the Azure PowerShell 
 - The ![Not Supported][3] icon indicates unsupported version combinations of Azure PowerShell and
   PowerShell.
 
-## Guidance on preauthorization resources
+## Azure PowerShell application ID guidance
 
-The resources used by Azure PowerShell for preauthorization are reserved exclusively for that tool
-and shouldn't be used in customer applications. For questions or concerns, use the official support
-channels.
+The Azure PowerShell application ID is reserved exclusively for that tool and must not be used for
+other purposes. For questions or concerns, use the official support channels.
+
+> [!NOTE]
+> This application ID is subject to change or limitation at any time, and its continued availability
+> isn't guaranteed.
 
 ## Other resources
 
