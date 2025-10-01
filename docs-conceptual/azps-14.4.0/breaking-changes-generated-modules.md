@@ -22,6 +22,40 @@ upgrading the code generation tool for Azure PowerShell modules.
 > breaking changes may occur, please refer to the
 > [breaking change list](/powershell/azure/upcoming-breaking-changes) for the specific module.
 
+## Identity Parameter Updates
+
+Removed -IdentityType parameter and introduced clearer switches and parameters:
+
+ - -EnableSystemAssignedIdentity
+
+    Default value: false.
+    Must be explicitly added if a SystemAssigned Identity is required.
+
+ - -UserAssignedIdentity
+
+    Type: array of id strings
+    Accepts one or more User Assigned Managed Identities.
+
+### How to mitigate the impact of breaking changes
+
+- Replace old -IdentityType values with explicit parameters:
+
+    - SystemAssigned → -EnableSystemAssignedIdentity
+    - UserAssigned → -UserAssignedIdentity, specifying the desired identity IDs
+    - SystemAssigned,UserAssigned → use both -EnableSystemAssignedIdentity and -UserAssignedIdentity
+
+- Replace any previously used parameters for User Assigned identities (such as -IdentityUserAssigned or other variations, regardless of type) with -UserAssignedIdentity, which accepts an array of strings.
+
+All original functionality remains, but scripts must be updated to use the new explicit parameters. Refer to the cmdlet documentation for exact syntax and usage.
+
+## Removal of parameter sets
+
+Certain complex or cumbersome parameter sets have been removed from the cmdlet. All existing functionality remains available, but users must now use the supported parameter combinations as documented.
+
+### How to mitigate the impact of breaking changes
+
+Users should refer to the latest cmdlet documentation to ensure they are using supported parameter set combinations.
+
 ## List replaces array in generated C# classes
 
 We now generate collection-like properties as
