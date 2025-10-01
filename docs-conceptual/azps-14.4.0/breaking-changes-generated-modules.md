@@ -24,7 +24,7 @@ upgrading the code generation tool for Azure PowerShell modules.
 
 ## Identity Parameter Updates
 
-Removed -IdentityType and introduced clearer switches and parameters:
+Removed -IdentityType parameter and introduced clearer switches and parameters:
 
  - -EnableSystemAssignedIdentity
 
@@ -33,25 +33,28 @@ Removed -IdentityType and introduced clearer switches and parameters:
 
  - -UserAssignedIdentity
 
-    Directly accepts one or more User Assigned Managed Identities.
+    Type: array of id strings
+    Accepts one or more User Assigned Managed Identities.
 
 ### How to mitigate the impact of breaking changes
 
 - Replace old -IdentityType values with explicit parameters:
 
     - SystemAssigned → -EnableSystemAssignedIdentity
-    - UserAssigned → -UserAssignedIdentity
+    - UserAssigned → -UserAssignedIdentity, specifying the desired identity IDs
     - SystemAssigned,UserAssigned → use both -EnableSystemAssignedIdentity and -UserAssignedIdentity
 
-- Replace -IdentityUserAssigned with -UserAssignedIdentity.
+- Replace any previously used parameters for User Assigned identities (such as -IdentityUserAssigned or other variations, regardless of type) with -UserAssignedIdentity, which accepts an array of strings.
 
-## Unexpanded variants removed
+All original functionality remains, but scripts must be updated to use the new explicit parameters. Refer to the cmdlet documentation for exact syntax and usage.
 
-The Unexpanded variants has been removed.
+## Removal of parameter sets
+
+Certain complex or cumbersome parameter sets have been removed from the cmdlet. All existing functionality remains available, but users must now use the supported parameter combinations as documented.
 
 ### How to mitigate the impact of breaking changes
 
-Use expanded variants or check the docs and use any other variants may supported in the cmdlet.
+Users should refer to the latest cmdlet documentation to ensure they are using supported parameter set combinations.
 
 ## List replaces array in generated C# classes
 
