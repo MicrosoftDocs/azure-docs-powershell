@@ -435,10 +435,10 @@
                 "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
-                "azps-14.4.0/**/*": "OpenSource",
-                "docs-conceptual/azps-14.4.0/*": "OpenSource",
-                "azps-14.5.0/**/*": "None",
-                "docs-conceptual/azps-14.5.0/*": "None",
+                "azps-14.5.0/**/*": "OpenSource",
+                "docs-conceptual/azps-14.5.0/*": "OpenSource",
+                "azps-14.4.0/**/*": "None",
+                "docs-conceptual/azps-14.4.0/*": "None",
                 "azps-12.5.0/**/*": "OpenSource",
                 "docs-conceptual/azps-12.5.0/*": "OpenSource",
                 "aztools/**/*": "OpenSource",
@@ -486,7 +486,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "9/2/2025"
+            "ms.date": "10/14/2025"
         },
         "dest": "azureps",
         "lruSize": 0,
