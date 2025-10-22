@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkFunction/NetworkFunction/help/Az.NetworkFunction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkFunction/NetworkFunction/help/Az.NetworkFunction.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.NetworkFunction Module
 ## Description
 Microsoft Azure PowerShell: NetworkFunction cmdlets
@@ -42,4 +43,5 @@ Creates or updates a Azure Traffic Collector resource
 
 ### [Update-AzNetworkFunctionTrafficCollectorTag](Update-AzNetworkFunctionTrafficCollectorTag.md)
 update the specified Azure Traffic Collector tags.
+
 

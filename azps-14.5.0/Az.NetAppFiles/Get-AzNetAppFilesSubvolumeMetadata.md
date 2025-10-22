@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.netappfiles/get
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesSubvolumeMetadata.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesSubvolumeMetadata.md
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+cmdletStatus: preview
 ---
-
 # Get-AzNetAppFilesSubvolumeMetadata
 
 ## SYNOPSIS
@@ -205,3 +206,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Update-AzNetAppFilesSubvolume](./Update-AzNetAppFilesSubvolume.md)
 [Remove-AzNetAppFilesSubvolume](./Remove-AzNetAppFilesSubvolume.md)
 [Get-AzNetAppFilesSubvolume](./Get-AzNetAppFilesSubvolume.md)
+
