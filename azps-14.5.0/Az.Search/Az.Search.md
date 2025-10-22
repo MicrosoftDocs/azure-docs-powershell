@@ -6,8 +6,9 @@ Help Version: 0.1.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Az.Search.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Az.Search.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Search Module
 ## Description
 This topic displays help topics for the Azure Cognitive Search Cmdlets.
@@ -63,4 +64,5 @@ Update an Azure Cognitive Search service.
 
 ### [Set-AzSearchSharedPrivateLinkResource](Set-AzSearchSharedPrivateLinkResource.md)
 Update the shared private link resource for the Azure Cognitive Search service.
+
 

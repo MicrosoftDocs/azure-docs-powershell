@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/Az.ScVmm.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/Az.ScVmm.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.ScVmm Module
 ## Description
 Azure PowerShell cmdlets for managing Arc for SCVMM resources
@@ -160,4 +161,5 @@ The operation to Update a virtual machine network interface.
 
 ### [Update-AzScVmmVMTemplate](Update-AzScVmmVMTemplate.md)
 update the VirtualMachineTemplate resource.
+
 
