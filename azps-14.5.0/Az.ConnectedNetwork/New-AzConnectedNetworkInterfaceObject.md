@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/Az.ConnectedNetwor
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkInterfaceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkInterfaceObject.md
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+cmdletStatus: preview
 ---
-
 # New-AzConnectedNetworkInterfaceObject
 
 ## SYNOPSIS
@@ -112,3 +113,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
