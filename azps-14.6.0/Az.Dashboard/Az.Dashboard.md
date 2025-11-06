@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/Az.Dashboard.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/Az.Dashboard.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Dashboard Module
 ## Description
 Microsoft Azure PowerShell: Dashboard cmdlets
@@ -29,4 +30,5 @@ Delete a workspace for Grafana resource.
 ### [Update-AzGrafana](Update-AzGrafana.md)
 update a workspace for Grafana resource.
 This API is idempotent, so user can either update a new grafana or update an existing grafana.
+
 
