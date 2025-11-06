@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Az.NetAppFiles.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Az.NetAppFiles.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.NetAppFiles Module
 ## Description
 The topics in this section document the Azure PowerShell cmdlets for Azure NetApp Files in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.NetAppFiles namespace.
@@ -277,4 +278,5 @@ Updates an Azure NetApp Files (ANF) volume according to the optional modifiers p
 
 ### [Update-AzNetAppFilesVolumeQuotaRule](Update-AzNetAppFilesVolumeQuotaRule.md)
 Updates an Azure NetApp Files (ANF) volume quota rule according to the optional modifiers provided.
+
 
