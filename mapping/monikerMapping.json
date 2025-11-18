@@ -6,12 +6,12 @@
         "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
         "serviceMap": "mapping/az-groupMapping-14.6.0.json"
     },
-    "azps-14.5.0": {
-        "conceptualToc": "docs-conceptual/azps-14.5.0/toc.yml",
+    "azps-15.0.0": {
+        "conceptualToc": "docs-conceptual/azps-15.0.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
-        "packageRoot": "azps-14.5.0",
+        "packageRoot": "azps-15.0.0",
         "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
-        "serviceMap": "mapping/az-groupMapping-14.5.0.json"
+        "serviceMap": "mapping/az-groupMapping-15.0.0.json"
     },
     "azps-12.5.0": {
         "conceptualToc": "docs-conceptual/azps-12.5.0/toc.yml",
