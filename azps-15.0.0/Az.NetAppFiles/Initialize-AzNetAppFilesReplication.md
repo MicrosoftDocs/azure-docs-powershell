@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.netappfiles/ini
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Initialize-AzNetAppFilesReplication.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Initialize-AzNetAppFilesReplication.md
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+cmdletStatus: preview
 ---
-
 # Initialize-AzNetAppFilesReplication
 
 ## SYNOPSIS
@@ -225,3 +226,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzNetAppFilesVolume](./New-AzNetAppFilesVolume.md)
 [Update-AzNetAppFilesVolume](./Update-AzNetAppFilesVolume.md)
 [Remove-AzNetAppFilesVolume](./Remove-AzNetAppFilesVolume.md)
+

@@ -1,13 +1,14 @@
 ---
 Module Name: Az.ImageBuilder
 Module Guid: bdedc683-d9b6-41ea-b310-d068b8c72305
-Download Help Link: 
-Help Version: 
+Download Help Link: null
+Help Version: null
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/Az.ImageBuilder.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/Az.ImageBuilder.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ImageBuilder Module
 ## Description
 {{ Fill in the Description }}
@@ -57,4 +58,5 @@ run artifacts from a existing image template
 
 ### [Stop-AzImageBuilderTemplate](Stop-AzImageBuilderTemplate.md)
 Cancel the long running image build based on the image template
+
 

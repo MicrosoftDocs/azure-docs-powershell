@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/DynatraceObservability/help/Az.DynatraceObservability.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/DynatraceObservability/help/Az.DynatraceObservability.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.DynatraceObservability Module
 ## Description
 Microsoft Azure PowerShell: DynatraceObservability cmdlets
@@ -72,4 +73,5 @@ update a DynatraceSingleSignOnResource
 
 ### [Update-AzDynatraceMonitorTagRule](Update-AzDynatraceMonitorTagRule.md)
 update a TagRule
+
 

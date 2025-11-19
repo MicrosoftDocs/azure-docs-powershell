@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Az.ImportExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Az.ImportExport.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ImportExport Module
 ## Description
 Microsoft Azure PowerShell: ImportExport cmdlets
@@ -37,4 +38,5 @@ Only jobs in the Creating or Completed states can be deleted.
 update specific properties of a job.
 You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
 It can also be used to cancel an existing job.
+
 

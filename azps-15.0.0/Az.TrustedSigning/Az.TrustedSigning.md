@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Az.TrustedSigning.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Az.TrustedSigning.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.TrustedSigning Module
 ## Description
 Microsoft Azure PowerShell: TrustedSigning cmdlets
@@ -48,4 +49,5 @@ Checks that the trusted signing account name is valid and is not already in use.
 
 ### [Update-AzTrustedSigningAccount](Update-AzTrustedSigningAccount.md)
 update a trusted signing account.
+
 

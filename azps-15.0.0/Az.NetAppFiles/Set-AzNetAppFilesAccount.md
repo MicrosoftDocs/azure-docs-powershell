@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.netappfiles/set
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Set-AzNetAppFilesAccount.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Set-AzNetAppFilesAccount.md
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+cmdletStatus: preview
 ---
-
 # Set-AzNetAppFilesAccount
 
 ## SYNOPSIS
@@ -234,3 +235,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzNetAppFilesActiveDirectory](./New-AzNetAppFilesActiveDirectory.md)
 [Remove-AzNetAppFilesActiveDirectory](./Remove-AzNetAppFilesActiveDirectory.md)
 [Update-AzNetAppFilesActiveDirectory](./Update-AzNetAppFilesActiveDirectory.md)
+
