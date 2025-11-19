@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Az.Peering.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Az.Peering.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Peering Module
 ## Description
 Microsoft Azure PowerShell: Peering cmdlets
@@ -141,4 +142,5 @@ update a new registered prefix with the specified name under the given subscript
 
 ### [Update-AzPeeringService](Update-AzPeeringService.md)
 update tags for a peering service with the specified name under the given subscription and resource group.
+
 

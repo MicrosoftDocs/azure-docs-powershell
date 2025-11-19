@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Az.Ssh.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Az.Ssh.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Ssh Module
 ## Description
 This module allows you to create an interactive shell connection to Azure Resources, such as Azure VMs or Arc Servers, using SSH (Secure Shell). The connection can be established using Microsoft Entra accounts, or local machine accounts. Note that this module requires that OpenSSH be installed and discoverable on the client machine.
@@ -20,3 +21,4 @@ Users can login using Microsoft Entra accounts, or local user accounts via stand
 
 ### [Export-AzSshConfig](Export-AzSshConfig.md)
 This cmdlet exports an SSH configuration file that can be used to connect to Azure Resources through client applications that support OpenSSH config and certificates. SSH config files can be created that use Microsoft Entra ID issued certificates or local user credentials.
+
