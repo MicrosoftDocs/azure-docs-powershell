@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Az.StorageCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Az.StorageCache.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.StorageCache Module
 ## Description
 Microsoft Azure PowerShell: StorageCache cmdlets
@@ -72,4 +73,5 @@ Update an auto import job instance.
 
 ### [Update-AzStorageCacheImportJob](Update-AzStorageCacheImportJob.md)
 Update an import job instance.
+
 
