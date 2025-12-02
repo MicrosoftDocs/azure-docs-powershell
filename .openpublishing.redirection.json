@@ -3,6 +3,31 @@
     {
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azps-15.1.0/overview.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/install-azure-powershell/",
+      "source_path": "docs-conceptual/azps-15.1.0/install-az-ps.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/install-azure-powershell/",
+      "source_path": "docs-conceptual/azps-15.1.0/install-az-ps-msi.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/azureps-support-lifecycle/",
+      "source_path": "docs-conceptual/azps-15.1.0/azps-versioning-release-cadence.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/training/modules/automate-azure-tasks-with-powershell/",
+      "source_path": "docs-conceptual/azps-15.1.0/azureps-vm-tutorial.yml"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azps-15.0.0/overview.md"
     },
     {
