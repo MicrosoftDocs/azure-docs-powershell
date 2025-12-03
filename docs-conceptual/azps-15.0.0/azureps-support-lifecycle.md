@@ -79,6 +79,22 @@ difference is the length of support.
 
 - **Long Term Support (LTS) releases**
 
+  > [!IMPORTANT]
+  > At this time, Long-Term Support (LTS) releases for Azure PowerShell are temporarily paused while
+  > we evaluate improved ways to support customers who aren't always able to adopt the latest
+  > version of the client.
+  >
+  > During this pause:
+  >
+  > - Azure PowerShell continues to ship the Standard Term Support (STS) release cadence.
+  > - All supported STS versions continue to receive updates, including bug fixes and security
+      patches, according to the published support lifecycle.
+  > - This pause doesn't change the overall support policy or quality of Azure PowerShell releases.
+  >
+  > We're actively exploring alternative approaches that better balance stability, supportability,
+  > and customer needs, and we'll provide updates through official documentation as guidance
+  > evolves.
+
   - Even-numbered major versions are LTS releases, beginning with **Az** 12.0.0.
   - The final version of each LTS release is supported until the second subsequent STS version is
     released.
