@@ -87,3 +87,8 @@ sections:
           ```
 
           **Note:** Handle plain text carefully, as it is less secure than a SecureString.
+
+      - question: |
+          Why does the access token I get from `Get-AzAccessToken` contain scopes I did not ask for?
+        answer: |
+          Draft: They are the preauthorization of Azure PowerShell. It doesn't mean the token has access to those APIs. It still depends on the permissions of the user account. So it's safe.
