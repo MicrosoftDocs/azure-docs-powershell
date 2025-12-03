@@ -86,9 +86,9 @@ difference is the length of support.
   >
   > During this pause:
   >
-  > - Azure PowerShell continues to ship the Standard Term Support (STS) release cadence.
+  > - Azure PowerShell continues to follow the Standard Term Support (STS) release cadence.
   > - All supported STS versions continue to receive updates, including bug fixes and security
-      patches, according to the published support lifecycle.
+  >   patches, according to the published support lifecycle.
   > - This pause doesn't change the overall support policy or quality of Azure PowerShell releases.
   >
   > We're actively exploring alternative approaches that better balance stability, supportability,
