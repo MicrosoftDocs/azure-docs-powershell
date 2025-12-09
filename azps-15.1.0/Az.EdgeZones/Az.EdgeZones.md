@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeZones/EdgeZones/help/Az.EdgeZones.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeZones/EdgeZones/help/Az.EdgeZones.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.EdgeZones Module
 ## Description
 Microsoft Azure PowerShell: EdgeZones cmdlets
@@ -21,4 +22,5 @@ Registers a subscription for an Extended Zone
 
 ### [Unregister-AzEdgeZonesExtendedZone](Unregister-AzEdgeZonesExtendedZone.md)
 Unregisters a subscription for an Extended Zone
+
 

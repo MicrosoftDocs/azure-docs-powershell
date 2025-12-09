@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Az.Blueprint.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Az.Blueprint.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Blueprint Module
 ## Description
 The topics in this section document the Azure PowerShell cmdlets for Azure Blueprints in the Azure Resource Manager framework. The cmdlets exist in the Microsoft.Azure.PowerShell.Cmdlets.Blueprint namespace.
@@ -51,4 +52,5 @@ Update an artifact in a blueprint definition.
 
 ### [Set-AzBlueprintAssignment](Set-AzBlueprintAssignment.md)
 Update an existing blueprint assignment.
+
 
