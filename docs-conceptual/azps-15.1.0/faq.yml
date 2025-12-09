@@ -91,4 +91,4 @@ sections:
       - question: |
           Why does the access token I get from Get-AzAccessToken contain scopes I did not ask for?
         answer: |
-          Draft: They are the preauthorization of Azure PowerShell. It doesn't mean the token has access to those APIs. It still depends on the permissions of the user account. So it's safe.
+          They are the preauthorized scopes for Azure PowerShell. This does not mean the token has access to those APIs. Actual access still depends on the permissions of the user account, so this behavior is expected and safe.
