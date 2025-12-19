@@ -66,68 +66,17 @@ businesses, developers, and the community to make strategic decisions when plann
 
 ## Support of releases
 
-Azure PowerShell ships two types of generally available releases. Customers can choose Standard Term
-Support (STS) or Long Term Support (LTS) releases. The quality of all releases is the same. The only
-difference is the length of support.
+Azure PowerShell currently ships only one type of generally available release: Standard Term Support
+(STS). All major versions are considered STS releases.
 
 - **Standard Term Support (STS) releases**
 
-  - Odd-numbered major versions are STS releases.
   - STS versions are supported until the next major release of Azure PowerShell.
   - Supported for approximately six months from the original major version release date.
   - Receives minor version and patch updates until out of support.
 
-- **Long Term Support (LTS) releases**
-
-  - Even-numbered major versions are LTS releases, beginning with **Az** 12.0.0.
-  - The final version of each LTS release is supported until the second subsequent STS version is
-    released.
-  - Supported for approximately 18 months from the original major version release date.
-  - Receives minor version updates _only for the first 6 months_ and patch updates until out of
-    support.
-
 > [!IMPORTANT]
 > You must install the latest minor and patch version to qualify for support.
-
-The following image illustrates the release cadence and support lifecycle of Azure PowerShell for
-STS and LTS releases.
-
-![Support Lifecycle](../../media/support-lifecycle/support-lifecycle.jpg)
-
-The following table provides examples of how the release cadence correlates with the support
-lifecycle:
-
-> [!NOTE]
-> The dates in the following table are for example purposes only. The actual release dates vary.
-
-| Version number | Release schedule | Breaking changes | Release type | Support type | Supported until version |
-| -------------- | ---------------- | ---------------- | ------------ | ------------ | ----------------------- |
-| 12.5.0         | October 2024     |                  | Minor        | LTS          | _**15.0.0**_            |
-| 14.0.0         | May 2025         | ![Yes][1]        | Major        | LTS          | 14.1.0                  |
-| 14.1.0         | June 2025        |                  | Minor        | LTS          | 14.2.0                  |
-| 14.2.0         | July 2025        |                  | Minor        | LTS          | 14.3.0                  |
-| 14.3.0         | August 2025      |                  | Minor        | LTS          | 14.4.0                  |
-| 14.4.0         | September 2025   |                  | Minor        | LTS          | 14.5.0                  |
-| 14.5.0         | October 2025     |                  | Minor        | LTS          | _**17.0.0**_            |
-| 15.0.0         | November 2025    | ![Yes][1]        | Major        | STS          | 15.1.0                  |
-| 15.1.0         | December 2025    |                  | Minor        | STS          | 15.2.0                  |
-| 15.2.0         | January 2026     |                  | Minor        | STS          | 15.3.0                  |
-| 15.3.0         | February 2026    |                  | Minor        | STS          | 15.4.0                  |
-| 15.4.0         | March 2026       |                  | Minor        | STS          | 15.5.0                  |
-| 15.5.0         | April 2026       |                  | Minor        | STS          | _**16.0.0**_            |
-| 16.0.0         | May 2026         | ![Yes][1]        | Major        | LTS          | 16.1.0                  |
-| 16.1.0         | June 2026        |                  | Minor        | LTS          | 16.2.0                  |
-| 16.2.0         | July 2026        |                  | Minor        | LTS          | 16.3.0                  |
-| 16.3.0         | August 2026      |                  | Minor        | LTS          | 16.4.0                  |
-| 16.4.0         | September 2026   |                  | Minor        | LTS          | 16.5.0                  |
-| 16.5.0         | October 2026     |                  | Minor        | LTS          | _**19.0.0**_            |
-
-- Examples:
-  - To qualify for support, you must update to 14.1.0 when released if you have **Az** 14.0.0
-    installed.
-  - If **Az** 14.5.0 is the final release of **Az** version 14, it's supported until the release of
-    **Az** 17.0.0.
-  - When **Az** 14.0.0 is released, **Az** version 13 is no longer supported.
 
 ## Breaking changes
 
@@ -156,6 +105,7 @@ For detailed information about breaking changes in major releases of the **Az** 
 see the following articles.
 
 - [Upcoming breaking changes](upcoming-breaking-changes.md)
+- [Az 15.0.0 breaking changes](migrate-az-15.0.0.md)
 - [Az 14.0.0 breaking changes](migrate-az-14.0.0.md)
 - [Az 13.0.0 breaking changes](migrate-az-13.0.0.md)
 - [Az 12.0.0 breaking changes](migrate-az-12.0.0.md)
@@ -180,12 +130,8 @@ The following table identifies the supported platforms for the Azure PowerShell 
 
 |              Azure PowerShell               | PowerShell <br/> 7.x (any supported version) | Windows PowerShell <br/> 5.1 |
 | ------------------------------------------- | :------------------------------------------: | :--------------------------: |
-| ![Supported][1] Az 14.x                     |               ![Supported][1]                |       ![Supported][1]        |
-| ![Out of Support][4] Az 13.x                |             ![Out of Support][4]             |     ![Out of Support][4]     |
-| ![Supported][1] Az 12.x                     |               ![Supported][1]                |       ![Supported][1]        |
-| ![Out of Support][4] <= Az 11.x             |             ![Out of Support][4]             |     ![Out of Support][4]     |
-| ![Out of Support][4] AzureRM (all versions) |             ![Not Supported][3]              |     ![Out of Support][4]     |
-| ![Out of Support][4] Azure (all versions)   |             ![Not Supported][3]              |     ![Out of Support][4]     |
+| ![Supported][1] Az 15.x                     |               ![Supported][1]                |       ![Supported][1]        |
+| ![Out of Support][4] <= Az 14.x             |             ![Out of Support][4]             |     ![Out of Support][4]     |
 
 - The ![Supported][1] icon indicates supported version combinations of Azure PowerShell and
   PowerShell.
