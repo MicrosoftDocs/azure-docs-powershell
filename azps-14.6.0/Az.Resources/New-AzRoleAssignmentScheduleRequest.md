@@ -33,14 +33,14 @@ Creates a role assignment schedule request.
 ```powershell
 $guid = "12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca"
 $startTime = Get-Date -Format o 
-$scope = "/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/"
-New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId 5a4bdd72-ab3e-4d8e-ab0f-8dd8917481a2 -RequestType AdminAssign -RoleDefinitionId subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
+$scope = "/subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/"
+New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId aaaaaaaa-bbbb-cccc-1111-222222222222 -RequestType AdminAssign -RoleDefinitionId subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
 ```
 
 ```output
 Name                                 Type                                                    Scope                                               RoleDefinitionId
 ----                                 ----                                                    -----                                               ----------------                                                                 
-12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authori…
+12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333 /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authori…
 ```
 
 Creates a request to provision an active assignment of `roleDefinition` on the `scope` for the specified `principal`
@@ -49,14 +49,14 @@ Creates a request to provision an active assignment of `roleDefinition` on the `
 ```powershell
 $guid = "13f8978c-5d8d-4fbf-b4b6-2f43eeb43eca"
 $startTime = Get-Date -Format o 
-$scope = "/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/"
-New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId 5a4bdd72-ab3e-4d8e-ab0f-8dd8917481a2 -RequestType AdminRemove -RoleDefinitionId subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
+$scope = "/subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/"
+New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId aaaaaaaa-bbbb-cccc-1111-222222222222 -RequestType AdminRemove -RoleDefinitionId subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
 ```
 
 ```output
 Name                                 Type                                                    Scope                                               RoleDefinitionId
 ----                                 ----                                                    -----                                               ----------------                                                                 
-13f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authori…
+13f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333 /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authori…
 ```
 
 Creates a request to remove an active assignment of `roleDefinition` on the `scope` for the specified `principal`
@@ -65,14 +65,14 @@ Creates a request to remove an active assignment of `roleDefinition` on the `sco
 ```powershell
 $guid = "12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca"
 $startTime = Get-Date -Format o 
-$scope = "/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/"
-New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId 5a4bdd72-ab3e-4d8e-ab0f-8dd8917481a2 -RequestType SelfActivate -RoleDefinitionId subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
+$scope = "/subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/"
+New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId aaaaaaaa-bbbb-cccc-1111-222222222222 -RequestType SelfActivate -RoleDefinitionId subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
 ```
 
 ```output
 Name                                 Type                                                    Scope                                               RoleDefinitionId
 ----                                 ----                                                    -----                                               ----------------                                                                 
-12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authori…
+12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333 /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authori…
 ```
 
 Creates a request to activate an eligible assignment of `roleDefinition` on the `scope` for the specified `principal`
@@ -81,14 +81,14 @@ Creates a request to activate an eligible assignment of `roleDefinition` on the 
 ```powershell
 $guid = "12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca"
 $startTime = Get-Date -Format o 
-$scope = "/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/"
-New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId 5a4bdd72-ab3e-4d8e-ab0f-8dd8917481a2 -RequestType SelfDeactivate -RoleDefinitionId subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
+$scope = "/subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/"
+New-AzRoleAssignmentScheduleRequest -Name $guid -Scope $scope -ExpirationDuration PT1H -ExpirationType AfterDuration -PrincipalId aaaaaaaa-bbbb-cccc-1111-222222222222 -RequestType SelfDeactivate -RoleDefinitionId subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7 -ScheduleInfoStartDateTime $startTime
 ```
 
 ```output
 Name                                 Type                                                    Scope                                               RoleDefinitionId
 ----                                 ----                                                    -----                                               ----------------                                                                 
-12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/providers/Microsoft.Authori…
+12f8978c-5d8d-4fbf-b4b6-2f43eeb43eca Microsoft.Authorization/roleAssignmentScheduleRequests /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333 /subscriptions/bbbbbbbb-cccc-dddd-2222-333333333333/providers/Microsoft.Authori…
 ```
 
 Creates a request to deactivate an eligible assignment of `roleDefinition` on the `scope` for the specified `principal`
