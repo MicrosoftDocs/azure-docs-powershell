@@ -35,14 +35,14 @@ This command gets all of the Autoscale-related events associated with the curren
 
 ### Example 2: GetAutoscaleHistory for a particular resource
 ```powershell
-Get-AzAutoscaleHistory -StartTime 2015-02-09T18:35:00 -EndTime 2015-02-09T18:40:00 -ResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/Microsoft.Insights/autoscalesettings/DefaultServerFarm-Default-Web-EastUS" -DetailedOutput
+Get-AzAutoscaleHistory -StartTime 2015-02-09T18:35:00 -EndTime 2015-02-09T18:40:00 -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/Microsoft.Insights/autoscalesettings/DefaultServerFarm-Default-Web-EastUS" -DetailedOutput
 ```
 
 ```output
 Authorization        : 
 Caller               : Microsoft.Insights/autoscaleSettings
 Claims               :  http://schemas.xmlsoap.org/ws/2005/05/identity/claims/spn: Microsoft.Insights/autoscaleSettings
-CorrelationId        : 00001111-aaaa-2222-bbbb-3333cccc4444
+CorrelationId        : aaaa0000-bb11-2222-33cc-444444dddddd
 Description          : The autoscale engine attempting to scale resource '/subscriptions/a93fb07c-6c93-40be-bf3b-4f0deb
                        a10f4b/resourceGroups/Default-Web-EastUS/providers/microsoft.web/serverFarms/DefaultServerFarm'
                        from 1 instances count to 2 instances count. 
@@ -51,7 +51,7 @@ EventName            : AutoscaleAction
 EventSource          : Microsoft.Insights/autoscalesettings
 EventTimestamp       : 2/10/2015 2:38:19 AM
 HttpRequest          : 
-Id                   : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/
+Id                   : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        Microsoft.Insights/autoscalesettings/DefaultServerFarm-Default-Web-EastUS/events/c554f7ed-514c-4
                        49c-9338-13e15b4b56a3/ticks/635591326997519815
 Level                : Informational
@@ -61,7 +61,7 @@ Properties           :
 Description    : The autoscale engine attempting to scale resource '/subscriptions/a93fb07c-6c93
                        -40be-bf3b-4f0deba10f4b/resourceGroups/Default-Web-EastUS/providers/microsoft.web/serverFarms/De
                        faultServerFarm' from 1 instances count to 2 instances count. 
-ResourceName   : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-
+ResourceName   : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-
                        EastUS/providers/microsoft.web/serverFarms/DefaultServerFarm
 OldInstancesCount: 1
 NewInstancesCount: 2
@@ -77,7 +77,7 @@ ActiveAutoscaleProfile: {
                              "MetricTrigger": {
                                "Name": "CpuPercentage",
                                "Namespace": "",
-                               "Resource": "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-
+                               "Resource": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-
                        Web-EastUS/providers/microsoft.web/serverFarms/DefaultServerFarm",
                                "ResourceLocation": "East US",
                                "TimeGrain": "PT1M",
@@ -99,7 +99,7 @@ ActiveAutoscaleProfile: {
                              "MetricTrigger": {
                                "Name": "CpuPercentage",
                                "Namespace": "",
-                               "Resource": "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-
+                               "Resource": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-
                        Web-EastUS/providers/microsoft.web/serverFarms/DefaultServerFarm",
                                "ResourceLocation": "East US",
                                "TimeGrain": "PT1M",
@@ -121,7 +121,7 @@ ActiveAutoscaleProfile: {
                              "MetricTrigger": {
                                "Name": "BytesReceived",
                                "Namespace": "",
-                               "Resource": "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-
+                               "Resource": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-
                        Web-EastUS/providers/microsoft.web/serverFarms/DefaultServerFarm",
                                "ResourceLocation": "East US",
                                "TimeGrain": "PT1M",
@@ -143,7 +143,7 @@ ActiveAutoscaleProfile: {
                              "MetricTrigger": {
                                "Name": "BytesReceived",
                                "Namespace": "",
-                               "Resource": "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-
+                               "Resource": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-
                        Web-EastUS/providers/microsoft.web/serverFarms/DefaultServerFarm",
                                "ResourceLocation": "East US",
                                "TimeGrain": "PT1M",
@@ -165,11 +165,11 @@ ActiveAutoscaleProfile: {
                        }
 ResourceGroupName    : Default-Web-EastUS
 ResourceProviderName : Microsoft.Insights
-ResourceId           : /subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/
+ResourceId           : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        Microsoft.Insights/autoscalesettings/DefaultServerFarm-Default-Web-EastUS
 Status               : Succeeded
 SubmissionTimestamp  : 2/10/2015 2:38:19 AM
-SubscriptionId       : b93fb07a-6f93-30be-bf3e-4f0deca15f4f
+SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
 SubStatus            :
 ```
 
