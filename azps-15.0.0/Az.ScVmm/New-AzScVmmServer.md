@@ -42,7 +42,7 @@ Onboards the SCVmm fabric as an Azure VmmServer resource.
 ### Example 1: Create a VMM Server resource.
 ```powershell
 $securePassword = ConvertTo-SecureString "******" -AsPlainText -Force
-New-AzScVmmServer -Name "test-vmmserver-01" -Fqdn "vmmServerFqdn" -Location "eastus" -Username "scvmm-username" -Password $securePassword -Port 8100 -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -CustomLocationId "/subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl"
+New-AzScVmmServer -Name "test-vmmserver-01" -Fqdn "vmmServerFqdn" -Location "eastus" -Username "scvmm-username" -Password $securePassword -Port 8100 -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -CustomLocationId "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl"
 ```
 
 ```output
@@ -50,10 +50,10 @@ ConnectionStatus             : Connected
 CredentialsPassword          : 
 CredentialsUsername          : scvmm-username
 ErrorMessage                 : 
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
 Fqdn                         : vmmServerFqdn
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 Location                     : eastus
 Name                         : test-vmmserver-01
 Port                         : 8100
@@ -347,4 +347,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
