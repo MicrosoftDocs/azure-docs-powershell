@@ -48,7 +48,7 @@ ResourceGroupName	: myresourcegroup
 Name				: myiothub
 CertificateName		: mycertificate
 Subject				: CN=mycertificate
-Thumbprint			: 38303FC7371EC78DDE3E18D712C8414EE50969C7
+Thumbprint			: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 Status				: Unverified
 Expiry				: 1/01/2027 16:01
 Created				: 1/01/2017 16:01
@@ -66,7 +66,7 @@ ResourceGroupName	: myresourcegroup
 Name				: myiothub
 CertificateName		: mycertificate
 Subject				: CN=mycertificate
-Thumbprint			: 38303FC7371EC13DDE3E18D712C8414EE50969C7
+Thumbprint			: BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11
 Status				: Unverified
 Expiry				: 1/01/2027 16:01
 Created				: 1/01/2017 16:01

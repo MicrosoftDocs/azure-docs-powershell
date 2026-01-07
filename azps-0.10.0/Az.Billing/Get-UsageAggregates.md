@@ -27,7 +27,7 @@ The **Get-UsageAggregates** cmdlet gets aggregated Azure subscription usage data
 - Aggregation precision, either daily or hourly.
 - Instance level detail for multiple instances of the same resource.
 For consistent results, the returned data is based on when the usage details were reported by the Azure resource.
-For more information, see Azure Billing REST API Referencehttps://msdn.microsoft.com/library/azure/1ea5b323-54bb-423d-916f-190de96c6a3c (https://msdn.microsoft.com/library/azure/1ea5b323-54bb-423d-916f-190de96c6a3c) in the Microsoft Developer Network library.
+For more information, see Azure Billing REST API Referencehttps://msdn.microsoft.com/library/azure/aaaabbbb-0000-cccc-1111-dddd2222eeee (https://msdn.microsoft.com/library/azure/aaaabbbb-0000-cccc-1111-dddd2222eeee) in the Microsoft Developer Network library.
 
 ## EXAMPLES
 
