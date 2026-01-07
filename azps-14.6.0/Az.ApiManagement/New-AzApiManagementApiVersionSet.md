@@ -32,13 +32,13 @@ New-AzApiManagementApiVersionSet -Context $ApiMgmtContext  -Name "newversion" -S
 ```
 
 ```output
-ApiVersionSetId   : ea9a87cd-a699-4a75-bf7d-909846b91268
+ApiVersionSetId   : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Description       : version by xmsversion
 VersionQueryName  :
 VersionHeaderName : x-ms-version
 DisplayName       : newversion
 VersioningScheme  : Header
-Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/ea9a87cd-a699-4a75-bf7d-909846b91268
+Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/aaaabbbb-0000-cccc-1111-dddd2222eeee
 ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
