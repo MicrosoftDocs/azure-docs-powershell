@@ -40,14 +40,14 @@ Update an existing blueprint assignment.
 ```powershell
 $rg = @{ResourceGroup=@{name='storage_rg';location='eastus'}}
 $params = @{applytaganditsdefaultvalue_tagName="Department_Cost_Center"; applytaganditsdefaultvalue_tagValue="Contoso/HR/Dev/0001"}
-$blueprintObject =  Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myBlueprintName"
-Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "00000000-1111-0000-1111-000000000000" -Location "West US" -Parameter $params -ResourceGroupParameter $rg -SystemAssignedIdentity
+$blueprintObject =  Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myBlueprintName"
+Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "West US" -Parameter $params -ResourceGroupParameter $rg -SystemAssignedIdentity
 ```
 
 ```output
 Name              : myAssignment
-Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
-Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+Id                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
+Scope             : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 LastModified      : 2019-01-08
 LockMode          : None
 ProvisioningState : Creating
@@ -59,14 +59,14 @@ Update an existing blueprint assignment of the blueprint definition `$blueprintO
 
 ### Example 2
 ```powershell
-$blueprintObject =  Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myBlueprintName"
-Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "00000000-1111-0000-1111-000000000000" -AssignmentFile C:\myAssignmentfile.json
+$blueprintObject =  Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myBlueprintName"
+Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -AssignmentFile C:\myAssignmentfile.json
 ```
 
 ```output
 Name              : myAssignment
-Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
-Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+Id                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprintAssignments/myAssignment
+Scope             : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 LastModified      : 2019-01-08
 LockMode          : None
 ProvisioningState : Creating
@@ -79,7 +79,7 @@ Update an existing blueprint assignment through an assignment file. The format o
 ### Example 3
 ```powershell
 $blueprintObject =  Get-AzBlueprint -ManagementGroupId "myManagementGroup" -Name "myBlueprintName"
-Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -ManagementGroupId "myManagementGroup" -SubscriptionId 00000000-1111-0000-1111-000000000000 -Location "West US" -Parameter @{P1="v1"; P2="v2"}
+Set-AzBlueprintAssignment -Name "myAssignment" -Blueprint $blueprintObject -ManagementGroupId "myManagementGroup" -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -Location "West US" -Parameter @{P1="v1"; P2="v2"}
 ```
 
 Update an existing blueprint assignment of the blueprint definition `$blueprintObject` targeting the specified subscription within the specified management group using the defined parameter.
@@ -383,4 +383,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
