@@ -39,7 +39,7 @@ Patches the SAP Landscape Monitor Dashboard for the specified subscription, reso
 
 ### Example 1: Update SAP Landscape Monitor
 ```powershell
-New-AzWorkloadsSapLandscapeMonitor -MonitorName suha-0202-ams9 -ResourceGroupName suha-0802-rg1 -SubscriptionId 49d64d54-e966-4c46-a868-1999802b762c -GroupingLandscape '{"name":"Prod","topSid":["SID1","SID2"]}' -GroupingSapApplication '{"name":"ERP1","topSid":["SID1","SID2"]}' -TopMetricsThreshold '{"name":"Instance Availability","green":90,"yellow":75,"red":50}'
+New-AzWorkloadsSapLandscapeMonitor -MonitorName suha-0202-ams9 -ResourceGroupName suha-0802-rg1 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -GroupingLandscape '{"name":"Prod","topSid":["SID1","SID2"]}' -GroupingSapApplication '{"name":"ERP1","topSid":["SID1","SID2"]}' -TopMetricsThreshold '{"name":"Instance Availability","green":90,"yellow":75,"red":50}'
 ```
 
 ```output
@@ -51,7 +51,7 @@ GroupingSapApplication       : {{
                                  "name": "ERP1",
                                  "topSid": [ "SID1", "SID2" ]
                                }}
-Id                           : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.
                                Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default
 Name                         : default
 ProvisioningState            : Succeeded
