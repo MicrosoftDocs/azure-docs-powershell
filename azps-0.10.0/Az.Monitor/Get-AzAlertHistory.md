@@ -67,11 +67,11 @@ Properties           :
                        MetricUnit     : Count
 ResourceGroupName    : Default-Web-EastUS
 ResourceProviderName : microsoft.insights
-ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+ResourceId           : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        microsoft.insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 Status               : Resolved
 SubmissionTimestamp  : 2/11/2015 7:14:45 PM
-SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SubStatus            :
 Authorization        :
 Caller               : Microsoft.Insights/alertRules
@@ -112,11 +112,11 @@ Properties           :
                        MetricUnit     : Count
 ResourceGroupName    : Default-Web-EastUS
 ResourceProviderName : microsoft.web
-ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+ResourceId           : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        microsoft.web/sites/garyyang1
 Status               : Activated
 SubmissionTimestamp  : 2/11/2015 7:04:46 PM
-SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SubStatus            :
 Authorization        :
 Caller               : Microsoft.Insights/alertRules
@@ -157,11 +157,11 @@ Properties           :
                        MetricUnit     : Count
 ResourceGroupName    : Default-Web-EastUS
 ResourceProviderName : microsoft.insights
-ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+ResourceId           : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        microsoft.insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 Status               : Activated
 SubmissionTimestamp  : 2/11/2015 7:04:46 PM
-SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SubStatus            :
 ```
 
@@ -169,7 +169,7 @@ This command gets the alert history for the specified time frame for the current
 
 ### Example 2: Get alert history for a specified resource
 ```
-PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -ResourceId "/subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/microsoft.insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -DetailedOutput
+PS C:\>Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -DetailedOutput
 
 Authorization        :
 Caller               : Microsoft.Insights/alertRules
@@ -210,11 +210,11 @@ MetricName     : CpuTime
 MetricUnit     : Count
 ResourceGroupName    : Default-Web-EastUS
 ResourceProviderName : microsoft.insights
-ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+ResourceId           : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        microsoft.insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 Status               : Resolved
 SubmissionTimestamp  : 2/11/2015 7:14:45 PM
-SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SubStatus            :
 Authorization        :
 Caller               : Microsoft.Insights/alertRules
@@ -255,11 +255,11 @@ MetricName     : CpuTime
 MetricUnit     : Count
 ResourceGroupName    : Default-Web-EastUS
 ResourceProviderName : microsoft.insights
-ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+ResourceId           : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/
                        microsoft.insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 Status               : Activated
 SubmissionTimestamp  : 2/11/2015 7:04:46 PM
-SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SubStatus            :
 ```
 
