@@ -169,7 +169,7 @@ More information about configuring Managed Identities can be found here: https:/
 # For more information on creating a self-signed certificate
 # and giving it proper permissions, please see the following:
 # https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell
-PS C:\> $Thumbprint = "0SZTNJ34TCCMUJ5MJZGR8XQD3S0RVHJBA33Z8ZXV"
+PS C:\> $Thumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
 PS C:\> $TenantId = "aaaabbbb-0000-cccc-1111-dddd2222eeee"
 PS C:\> $ApplicationId = "00001111-aaaa-2222-bbbb-3333cccc4444"
 PS C:\> Connect-AzAccount -CertificateThumbprint $Thumbprint -ApplicationId $ApplicationId -Tenant $TenantId -ServicePrincipal
