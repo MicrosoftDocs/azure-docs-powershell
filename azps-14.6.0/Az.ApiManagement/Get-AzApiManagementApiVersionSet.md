@@ -48,24 +48,24 @@ Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/provi
 ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 
-ApiVersionSetId   : 4cbdfa34-25f3-4a93-a9b6-76b6eade7562
+ApiVersionSetId   : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Description       :
 VersionQueryName  : api-version
 VersionHeaderName :
 DisplayName       : getproduct old
 VersioningScheme  : Query
-Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/4cbdfa34-25f3-4a93-a9b6-76b6eade7562
+Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/aaaabbbb-0000-cccc-1111-dddd2222eeee
 ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 
 
-ApiVersionSetId   : 8c441e0e-a0cd-47d8-8d88-f944a83b41bd
+ApiVersionSetId   : bbbbcccc-1111-dddd-2222-eeee3333ffff
 Description       :
 VersionQueryName  :
 VersionHeaderName : Api-Version
 DisplayName       : ordersapi
 VersioningScheme  : Header
-Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/8c441e0e-a0cd-47d8-8d88-f944a83b41bd
+Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/bbbbcccc-1111-dddd-2222-eeee3333ffff
 ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
@@ -79,13 +79,13 @@ Get-AzApiManagementApiVersionSet -Context $ApiMgmtContext -ApiVersionSetId $ApiV
 ```
 
 ```output
-ApiVersionSetId   : 8c441e0e-a0cd-47d8-8d88-f944a83b41bd
+ApiVersionSetId   : bbbbcccc-1111-dddd-2222-eeee3333ffff
 Description       :
 VersionQueryName  :
 VersionHeaderName : Api-Version
 DisplayName       : ordersapi
 VersioningScheme  : Header
-Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/8c441e0e-a0cd-47d8-8d88-f944a83b41bd
+Id                : /subscriptions/subid/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/api-version-sets/bbbbcccc-1111-dddd-2222-eeee3333ffff
 ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
