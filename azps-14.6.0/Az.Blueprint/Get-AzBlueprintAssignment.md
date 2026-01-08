@@ -46,13 +46,13 @@ Get one or more blueprint assignments. Blueprint assignments exist at the subscr
 
 ### Example 1
 ```powershell
-Get-AzBlueprintAssignment -SubscriptionId "00000000-1111-0000-1111-000000000000"
+Get-AzBlueprintAssignment -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
 Name              : Assignment-PS-BlueprintDefinition
-Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/Assignment-PS-BlueprintDefinition
-Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+Id                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprintAssignments/Assignment-PS-BlueprintDefinition
+Scope             : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 LastModified      : 2019-01-08
 LockMode          : AllResourcesReadOnly
 ProvisioningState : Succeeded
@@ -64,7 +64,7 @@ Get the blueprint assignments within the specified subscription.
 
 ### Example 2
 ```powershell
-Get-AzBlueprintAssignment -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myAssignmentName"
+Get-AzBlueprintAssignment -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myAssignmentName"
 ```
 
 Get the blueprint assignment with the given name within the specified subscription.
@@ -158,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
