@@ -28,21 +28,21 @@ Get a Site from different scopes: Resource Group, Subscription, or Service Group
 
 ### Example 1: Get a specific site by name at resource group scope
 ```powershell
-Get-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "12345678-1234-1234-1234-123456789012"
+Get-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Get a specific Azure Edge Site at resource group scope.
 
 ### Example 2: Get a specific site by name at subscription scope
 ```powershell
-Get-AzSite -Name "mysite-001" -SubscriptionId "12345678-1234-1234-1234-123456789012"
+Get-AzSite -Name "mysite-001" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Get a specific Azure Edge Site at subscription scope.
 
 ### Example 3: List all sites in a subscription
 ```powershell
-Get-AzSite -SubscriptionId "12345678-1234-1234-1234-123456789012"
+Get-AzSite -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 List all Azure Edge Sites across all resource groups in the specified subscription.
@@ -164,4 +164,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
