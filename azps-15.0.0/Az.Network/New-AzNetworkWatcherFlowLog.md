@@ -115,8 +115,8 @@ IdentityText               : {
                                "Type": "UserAssigned",
                                "UserAssignedIdentities": {
                                  "/subscriptions/af15e575-f948-49ac-bce0-252d028e9379/resourcegroups/mejaRGEastUS2EUAP/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mejaid2": {
-                                    "PrincipalId": "57728676-94fe-4254-a01d-632b4a375c1d",
-                                    "ClientId": "95751030-0b3f-4b94-990a-ffdac5c85714"
+                                    "PrincipalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+                                    "ClientId": "00001111-aaaa-2222-bbbb-3333cccc4444"
                                   }
                                 }
                              }
