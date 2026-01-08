@@ -71,7 +71,7 @@ update a OrganizationResource
 
 ### Example 1: Update a Neon Resource
 ```powershell
-Update-AzNeonPostgresOrganization -Name "almasTestNeonPS8" -ResourceGroupName "NeonDemoRG" -SubscriptionId "5d9a6cc3-4e60-4b41-be79-d28f0a01074e" `
+Update-AzNeonPostgresOrganization -Name "almasTestNeonPS8" -ResourceGroupName "NeonDemoRG" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" `
 -CompanyDetailBusinessPhone "+1234567890" `
 -CompanyDetailCompanyName "DemoCompany" `
 -CompanyDetailCountry "USA" `
@@ -99,7 +99,7 @@ CompanyDetailCountry                        : USA
 CompanyDetailDomain                         : demo.com
 CompanyDetailNumberOfEmployee               : 500
 CompanyDetailOfficeAddress                  : 1234 Azure Ave
-Id                                          : /subscriptions/5d9a6cc3-4e60-4b41-be79-d28f0a01074e/resourceGroups/NeonDe
+Id                                          : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/NeonDe
                                               moRG/providers/Neon.Postgres/organizations/almasTestNeonPS8
 Location                                    : centraluseuap
 MarketplaceDetailSubscriptionId             : 44e2e61d-8456-4c6a-dd0a-acc4edaa729b
@@ -728,4 +728,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
