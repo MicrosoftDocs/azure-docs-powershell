@@ -45,16 +45,16 @@ Get a StandbyVirtualMachinePoolResource
 ### Example 1: get a standby virtual machine pool
 ```powershell
 Get-AzStandbyVMPool  `
--SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
+-SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `
 -ResourceGroupName test-standbypool `
 -Name testPool
 ```
 
 ```output
-AttachedVirtualMachineScaleSetId  : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
+AttachedVirtualMachineScaleSetId  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
 ElasticityProfileMaxReadyCapacity : 1
 ElasticityProfileMinReadyCapacity : 1
-Id                                : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
+Id                                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
 Location                          : eastus
 Name                              : testPool
 ProvisioningState                 : Succeeded
@@ -167,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
