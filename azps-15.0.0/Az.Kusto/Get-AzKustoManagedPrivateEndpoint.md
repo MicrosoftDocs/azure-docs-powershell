@@ -55,7 +55,7 @@ The above command returns all Kusto ManagedPrivateEndpoint in the cluster "myclu
 
 ### Example 2: Get a specific Kusto ManagedPrivateEndpoint by name
 ```powershell
-Get-AzKustoManagedPrivateEndpoint -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "12345678-1234-1234-1234-123456789098" -Name "ManagedPrivateEndpointName"
+Get-AzKustoManagedPrivateEndpoint -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "ManagedPrivateEndpointName"
 ```
 
 ```output
