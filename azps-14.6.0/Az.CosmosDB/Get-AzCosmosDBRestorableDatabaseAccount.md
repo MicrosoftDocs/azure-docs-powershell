@@ -31,8 +31,8 @@ Get-AzCosmosDBRestorableDatabaseAccount
 ```
 
 ```output
-Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/fb8f230e-bab0-452b-81cf-e32643ccc898
-DatabaseAccountInstanceId : fb8f230e-bab0-452b-81cf-e32643ccc898
+Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+DatabaseAccountInstanceId : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Location                  : West US
 DatabaseAccountName       : deleted-account-1
 CreationTime              : 8/2/2020 10:23:00 PM
@@ -41,8 +41,8 @@ OldestRestorableTime      : 8/2/2020 10:23:00 PM
 ApiType                   : Sql
 RestorableLocations       : {West US, East US}
 
-Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/eastus/restorableDatabaseAccounts/ff921125-e31c-4e8c-ae0a-20fe719baca6
-DatabaseAccountInstanceId : ff921125-e31c-4e8c-ae0a-20fe719baca6
+Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/eastus/restorableDatabaseAccounts/bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
+DatabaseAccountInstanceId : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 Location                  : East US
 DatabaseAccountName       : deleted-account-2
 CreationTime              : 8/2/2020 6:32:32 PM
@@ -51,8 +51,8 @@ OldestRestorableTime      : 8/2/2020 6:32:32 PM
 ApiType                   : Sql
 RestorableLocations       : {Australia Southeast, East US, West US}
 
-Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/c7b27ad9-3bc0-4955-8cc2-a81790e5c3b3
-DatabaseAccountInstanceId : c7b27ad9-3bc0-4955-8cc2-a81790e5c3b3
+Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/cccc2c2c-dd3d-ee4e-ff5f-aaaaaa6a6a6a
+DatabaseAccountInstanceId : cccc2c2c-dd3d-ee4e-ff5f-aaaaaa6a6a6a
 Location                  : West US
 DatabaseAccountName       : live-account-1
 CreationTime              : 8/2/2020 6:34:35 PM
@@ -66,12 +66,12 @@ Lists all the restorable database accounts in the current subscription
 
 ### Example 1
 ```powershell
-Get-AzCosmosDBRestorableDatabaseAccount -Location "West US" -DatabaseAccountInstanceId fb8f230e-bab0-452b-81cf-e32643ccc898
+Get-AzCosmosDBRestorableDatabaseAccount -Location "West US" -DatabaseAccountInstanceId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
-Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/fb8f230e-bab0-452b-81cf-e32643ccc898
-DatabaseAccountInstanceId : fb8f230e-bab0-452b-81cf-e32643ccc898
+Id                        : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/westus/restorableDatabaseAccounts/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+DatabaseAccountInstanceId : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Location                  : West US
 DatabaseAccountName       : deleted-account-1
 CreationTime              : 8/2/2020 10:23:00 PM
