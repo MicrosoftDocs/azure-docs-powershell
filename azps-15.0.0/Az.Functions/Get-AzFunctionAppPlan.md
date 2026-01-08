@@ -79,13 +79,13 @@ This command gets function app plans by resource group name.
 
 ### Example 3: Get function app plans for the given subscriptions.
 ```powershell
-Get-AzFunctionAppPlan -SubscriptionId fe16564a-d943-4bf8-8c28-cf01708c3f8z
+Get-AzFunctionAppPlan -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
 Name                               WorkerType SkuTier        SkuName Location    ResourceGroupName                SubscriptionId
 ----                               ---------- -------        ------- --------    -----------------                --------------
-Func99-West-Europe-Windows-Premium Windows    ElasticPremium EP1     West Europe Func99-West-Europe-Win-Premium   fe16564a-d943-4bf8-8c28-cf01708c3f8z
+Func99-West-Europe-Windows-Premium Windows    ElasticPremium EP1     West Europe Func99-West-Europe-Win-Premium   aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 This command gets function app plans for the given subscriptions.
