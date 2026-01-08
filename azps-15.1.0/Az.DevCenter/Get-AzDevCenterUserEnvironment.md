@@ -94,10 +94,10 @@ This command lists environments under the project "DevProject" assigned to the c
 
 ### Example 4: List environments by dev center, user id, and project
 ```powershell
-Get-AzDevCenterUserEnvironment -DevCenterName Contoso -ProjectName DevProject -UserId "786a823c-8037-48ab-89b8-8599901e67d0"
+Get-AzDevCenterUserEnvironment -DevCenterName Contoso -ProjectName DevProject -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 ```
 
-This command lists environments under the project "DevProject" assigned to the user "786a823c-8037-48ab-89b8-8599901e67d0".
+This command lists environments under the project "DevProject" assigned to the user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
 
 ### Example 5: Get an environment by endpoint
 ```powershell
@@ -108,18 +108,18 @@ This command gets the environment "myEnv" under the project "DevProject" assigne
 
 ### Example 6: Get an environment by dev center
 ```powershell
-Get-AzDevCenterUserEnvironment -DevCenterName Contoso -ProjectName DevProject -UserId "786a823c-8037-48ab-89b8-8599901e67d0" -Name myEnv
+Get-AzDevCenterUserEnvironment -DevCenterName Contoso -ProjectName DevProject -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" -Name myEnv
 ```
 
-This command gets the environment "myEnv" under the project "DevProject" assigned to the user "786a823c-8037-48ab-89b8-8599901e67d0".
+This command gets the environment "myEnv" under the project "DevProject" assigned to the user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
 
 ### Example 7: Get an environment by endpoint and InputObject
 ```powershell
-$envInput = @{"UserId" = "786a823c-8037-48ab-89b8-8599901e67d0"; "ProjectName" = "DevProject"; "EnvironmentName" = "myEnv" }
+$envInput = @{"UserId" = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"; "ProjectName" = "DevProject"; "EnvironmentName" = "myEnv" }
 Get-AzDevCenterUserEnvironment -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -InputObject $envInput
 ```
 
-This command gets the environment "myEnv" under the project "DevProject" assigned to the user "786a823c-8037-48ab-89b8-8599901e67d0".
+This command gets the environment "myEnv" under the project "DevProject" assigned to the user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
 
 ### Example 8: Get an environment by dev center and InputObject
 ```powershell

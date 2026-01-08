@@ -48,12 +48,12 @@ Certificate : [Subject]
                 7/27/2018 7:00:01 PM
 
               [Thumbprint]
-                A565D568082FEE2BE33B356ECC3703C2E9886555
+                AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 
 Id          : https://ContosoKV01.vault.azure.net:443/certificates/tt02
 KeyId       : https://ContosoKV01.vault.azure.net:443/keys/tt02
 SecretId    : https://ContosoKV01.vault.azure.net:443/secrets/tt02
-Thumbprint  : A565D568082FEE2BE33B356ECC3703C2E9886555
+Thumbprint  : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 Tags        : {[Role, Engg], [Team, Azure]}
 Enabled     : True
 Created     : 7/28/2016 2:00:01 AM

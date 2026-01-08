@@ -49,11 +49,11 @@ Create a OrganizationResource
 
 ### Example 1:  Create a new Organization in a Resource Group with SSO
 ```powershell
-New-AzLambdaTestOrganization -Name "test-cli-instance-3" -Location "Central US EUAP" -ResourceGroupName "abdul-test" -PartnerPropertyLicensesSubscribed 3 -SubscriptionId "fc35d936-3b89-41f8-8110-a24b56826c37" -MarketplaceSubscriptionId  "fc35d936-3b89-41f8-8110-a24b56826c37" -OfferDetailOfferId "lambdatest_liftr_testing" -OfferDetailPlanId "testing" -OfferDetailPlanName "testing_liftr" -OfferDetailTermUnit "P1Y" -OfferDetailPublisherId "lambdatestinc1584019832435" -OfferDetailTermId "o73usof6rkyy"  -SingleSignOnPropertyEnterpriseAppId "0b9873df-1629-4036-9360-5f2f65c0a0d3" -SingleSignOnPropertyAadDomain @("MicrosoftCustomerLed.onmicrosoft.com") -SingleSignOnPropertyType "Saml" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "aggarwalsw@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "aggarwalsw@microsoft.com"
+New-AzLambdaTestOrganization -Name "test-cli-instance-3" -Location "Central US EUAP" -ResourceGroupName "abdul-test" -PartnerPropertyLicensesSubscribed 3 -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -MarketplaceSubscriptionId  "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -OfferDetailOfferId "lambdatest_liftr_testing" -OfferDetailPlanId "testing" -OfferDetailPlanName "testing_liftr" -OfferDetailTermUnit "P1Y" -OfferDetailPublisherId "lambdatestinc1584019832435" -OfferDetailTermId "o73usof6rkyy"  -SingleSignOnPropertyEnterpriseAppId "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f" -SingleSignOnPropertyAadDomain @("MicrosoftCustomerLed.onmicrosoft.com") -SingleSignOnPropertyType "Saml" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "aggarwalsw@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "aggarwalsw@microsoft.com"
 ```
 
 ```output
-Id                                  : /subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/abdul-test/providers/LambdaTest.HyperExecute/organizations/test-cli-instance-3
+Id                                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/abdul-test/providers/LambdaTest.HyperExecute/organizations/test-cli-instance-3
 IdentityPrincipalId                 :
 IdentityTenantId                    :
 IdentityType                        :
@@ -73,7 +73,7 @@ PartnerPropertyLicensesSubscribed   : 3
 ProvisioningState                   : Succeeded
 ResourceGroupName                   : abdul-test
 SingleSignOnPropertyAadDomain       : {MicrosoftCustomerLed.onmicrosoft.com}
-SingleSignOnPropertyEnterpriseAppId : 0b9873df-1629-4036-9360-5f2f65c0a0d3
+SingleSignOnPropertyEnterpriseAppId : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 SingleSignOnPropertyState           :
 SingleSignOnPropertyType            : Saml
 SingleSignOnPropertyUrl             :
@@ -98,11 +98,11 @@ This command will create a new LambdaTest Resource
 
 ### Example 1:  Create a new Organization in a Resource Group without SSO
 ```powershell
-New-AzLambdaTestOrganization -Name "test-cli-instance-2" -PartnerPropertyLicensesSubscribed 3 -Location "Central US EUAP" -ResourceGroupName "abdul-test" -SubscriptionId "fc35d936-3b89-41f8-8110-a24b56826c37" -MarketplaceSubscriptionId  "fc35d936-3b89-41f8-8110-a24b56826c37" -OfferDetailOfferId "lambdatest_liftr_testing" -OfferDetailPlanId "testing" -OfferDetailPlanName "testing_liftr" -OfferDetailTermUnit "P1Y" -OfferDetailPublisherId "lambdatestinc1584019832435" -OfferDetailTermId "o73usof6rkyy" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "aggarwalsw@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "aggarwalsw@microsoft.com"
+New-AzLambdaTestOrganization -Name "test-cli-instance-2" -PartnerPropertyLicensesSubscribed 3 -Location "Central US EUAP" -ResourceGroupName "abdul-test" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -MarketplaceSubscriptionId  "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -OfferDetailOfferId "lambdatest_liftr_testing" -OfferDetailPlanId "testing" -OfferDetailPlanName "testing_liftr" -OfferDetailTermUnit "P1Y" -OfferDetailPublisherId "lambdatestinc1584019832435" -OfferDetailTermId "o73usof6rkyy" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "aggarwalsw@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "aggarwalsw@microsoft.com"
 ```
 
 ```output
-Id                                  : /subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/abdul-test/providers/LambdaTest.HyperExecute/organizations/test-cli-instance-2
+Id                                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/abdul-test/providers/LambdaTest.HyperExecute/organizations/test-cli-instance-2
 IdentityPrincipalId                 :
 IdentityTenantId                    :
 IdentityType                        :

@@ -40,7 +40,7 @@ Remove a blueprint that has been assigned to a subscription.
 
 ### Example 1
 ```powershell
-Remove-AzBlueprintAssignment -Name "myAssignment" -SubscriptionId "00000000-1111-0000-1111-000000000000" -Confirm
+Remove-AzBlueprintAssignment -Name "myAssignment" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Confirm
 ```
 
 Remove the blueprint assignment specified by name from the specified subscription. The cmdlet will prompt for confirmation before executing the command.
@@ -183,4 +183,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

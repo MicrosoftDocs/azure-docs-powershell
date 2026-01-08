@@ -64,9 +64,9 @@ Certificate : [Subject]
                 8/8/2016 4:21:45 PM
 
               [Thumbprint]
-                3E9B6848AD1834284157D68B060F748037F663C8
+                AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 
-Thumbprint  : 3E9B6848AD1834284157D68B060F748037F663C8
+Thumbprint  : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 Tags        :
 Enabled     : True
 Created     : 2/8/2016 11:21:45 PM
@@ -217,4 +217,3 @@ This cmdlet does not accept any input.
 [Import-AzKeyVaultCertificate](./Import-AzKeyVaultCertificate.md)
 
 [Remove-AzKeyVaultCertificate](./Remove-AzKeyVaultCertificate.md)
-

@@ -52,7 +52,7 @@ The credential to be removed is identified by its key ID.
 PS C:\> Remove-AzADAppCredential -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -KeyId 9044423a-60a3-45ac-9ab1-09534157ebb
 ```
 
-Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the application with object id 'ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0'.
+Removes the credential with key id '9044423a-60a3-45ac-9ab1-09534157ebb' from the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
 
 ### Example 2 - Remove all credentials from an application
 
