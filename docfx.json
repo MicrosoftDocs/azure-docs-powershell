@@ -21,10 +21,6 @@
             { "files": ["**/*.yml"], "src": "aztools", "version": "aztools", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/aztools", "version": "aztools", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "module/servicemanagement" },
-            { "files": ["**/*.yml"], "src": "azuresmps-4.0.0", "version": "azuresmps-4.0.0", "exclude": ["docs-conceptual/**"], "dest": "module/servicemanagement" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azuresmps-4.0.0", "version": "azuresmps-4.0.0", "dest": "azure/servicemanagement" },
-
             {
                 "files": [
                     "bread/toc.yml"
@@ -41,8 +37,7 @@
             "azps-15.1.0": { "dest": "azps-15.2.0" },
             "azps-15.2.0": { "dest": "azps-15.1.0" },
             "azps-14.6.0": { "dest": "azps-14.6.0" },
-            "azps-0.10.0": { "dest": "azps-0.10.0" },
-            "azuresmps-4.0.0": { "dest": "azuresmps-4.0.0" }
+            "azps-0.10.0": { "dest": "azps-0.10.0" }
         },
         "filemetadata": {
             "ms.subservice": {
@@ -50,8 +45,6 @@
                 "az*-*/Az*.OperationalInsights/*.yml": "azure-operational-insights"
             },
             "ms.service": {
-                "azuresmps-*/**/*.yml": "azure-asm",
-                "docs-conceptual/azuresmps-*/**/*.md": "azure-asm",
                 "az*-*/**/*.yml": "azure-powershell",
                 "az*-*/ApiManagement.ServiceManagement/*.yml": "azure-api-management",
                 "az*-*/Azure.Storage/*.yml": "azure-storage",
@@ -330,10 +323,6 @@
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/de8ce683-cbe1-461b-bae7-77db0888ec6d",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
                 ],
-                "azuresmps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
                 "az*-*/Azure.aks/*.md": [
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
@@ -390,10 +379,6 @@
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/bba62c59-6b53-4be4-8b9d-6624f9184c22",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
                 ],
-                "docs-conceptual/azuresmps-*/**/*.md": [
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/68ec7f3a-2bc6-459f-b959-19beb729907d",
-                    "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
-                ],
                 "az*-*/Az*.Cdn/*.md": [
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/befac1c4-b371-401f-bb32-b2c555258404",
                     "https://authoring-docs-microsoft.poolparty.biz/devrel/8bce367e-2e90-4b56-9ed5-5e4e9f3a2dc3"
@@ -406,15 +391,13 @@
             "ms.topic": {
                 "azps-*/**/*": "reference",
                 "aztools-*/**/*": "reference",
-                "azuresmps-*/**/*": "reference",
                 "docs-conceptual/**/*": "concept-article"
             },
             "ms.date": {
                 "azps-15.2.0/**/*": "1/13/2026",
                 "azps-15.1.0/**/*": "12/02/2025",
                 "azps-14.6.0/**/*": "11/04/2025",
-                "azps-0.10.0/**/*": "4/14/2020",
-                "azuresmps-4.0.0/**/*": "11/28/2020"
+                "azps-0.10.0/**/*": "4/14/2020"
             },
             "enable_powershell_try_it": {
                 "azps-*/**/*.yml": true
@@ -432,8 +415,6 @@
                 "az*-*/Az*.Websites/*.yml": ["App Service", "Azure", "Azure Powershell"]
             },
             "ROBOTS": {
-                "azuresmps-*/**/*": "NOINDEX, NOFOLLOW",
-                "docs-conceptual/azuresmps-*/**/*": "NOINDEX, NOFOLLOW"
             },
             "feedback_system": {
                 "azps-15.2.0/**/*": "OpenSource",
@@ -445,9 +426,7 @@
                 "aztools/**/*": "OpenSource",
                 "docs-conceptual/aztools/*": "OpenSource",
                 "azps-0.10.0/**/*": "None",
-                "docs-conceptual/azps-0.10.0/*": "None",
-                "azuresmps-4.0.0/**/*": "None",
-                "docs-conceptual/azuresmps-4.0.0/*": "None"
+                "docs-conceptual/azps-0.10.0/*": "None"
             },
             "open_source_feedback_issueUrl": {
                 "azps-*/**/*": "https://github.com/Azure/azure-powershell/issues/new?template=4-AZ-DOC-BUG.yml",
