@@ -71,8 +71,7 @@
   "need_preview_pull_request": true,
   "notification_subscribers": [],
   "redirection_files": [
-    ".openpublishing.redirection.json",
-    ".openpublishing.redirection.smps.json"
+    ".openpublishing.redirection.json"
   ],
   "skip_source_output_uploading": false,
   "sync_notification_subscribers": [],
