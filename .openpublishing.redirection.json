@@ -87,13 +87,18 @@
     },
     {
       "redirect_document_id": false,
-      "redirect_url": "/powershell/azure/overview",
+      "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azuresmps-4.0.0/overview.md"
     },
     {
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
-      "source_path": "azuresmps-4.0.0/Azure/Add-AzureAccount.md"
+      "source_path": "docs-conceptual/azuresmps-4.0.0/index.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/",
+      "source_path": "docs-conceptual/azuresmps-4.0.0/install-azure-ps.md"
     }
   ]
 }
