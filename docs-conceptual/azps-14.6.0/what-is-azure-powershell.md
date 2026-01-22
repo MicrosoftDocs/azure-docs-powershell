@@ -84,7 +84,7 @@ information, see [Overview of the AzureRM PowerShell module][azurerm-module].
 You might also encounter a version of Azure PowerShell named the **Azure** PowerShell module. This
 module is for managing legacy Azure resources that use Azure Service Manager (ASM) APIs. It isn't
 recommended for creating new resources as ASM is scheduled for retirement. For more information, see
-[Overview of the Azure PowerShell Service Management module][azure-rdfe-module].
+[Azure Service Manager retirement][azure-asm-retiremente].
 
 ## Azure-related PowerShell modules
 
@@ -120,4 +120,4 @@ Guidelines
 [azps-output]: queries-azureps.md
 [format-azps-output]: formatting-output.md
 [azurerm-module]: /previous-versions/powershell/azure/
-[azure-rdfe-module]: /powershell/azure/servicemanagement/overview
+[azure-asm-retirement]: /azure/azure-resource-manager/management/asm-retirement
