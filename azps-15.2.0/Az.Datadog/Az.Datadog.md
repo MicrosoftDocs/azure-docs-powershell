@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Datadog/Datadog/help/Az.Datadog.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Datadog/Datadog/help/Az.Datadog.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Datadog Module
 ## Description
 Microsoft Azure PowerShell: Datadog cmdlets
@@ -93,4 +94,5 @@ Configures single-sign-on for this resource.
 
 ### [Update-AzDatadogTagRule](Update-AzDatadogTagRule.md)
 Update a tag rule set for a given monitor resource.
+
 
