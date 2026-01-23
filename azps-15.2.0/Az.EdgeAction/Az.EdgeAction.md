@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeAction/EdgeAction/help/Az.EdgeAction.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeAction/EdgeAction/help/Az.EdgeAction.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.EdgeAction Module
 ## Description
 Microsoft Azure PowerShell: EdgeAction cmdlets. This module provides cmdlets for managing Azure Edge Actions, which enable serverless JavaScript execution at the edge for Azure Front Door profiles.
@@ -63,4 +64,5 @@ Update a EdgeActionExecutionFilter
 
 ### [Update-AzEdgeActionVersion](Update-AzEdgeActionVersion.md)
 Update a EdgeActionVersion
+
 

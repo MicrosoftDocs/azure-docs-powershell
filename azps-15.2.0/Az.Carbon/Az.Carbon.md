@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Carbon/Carbon/help/Az.Carbon.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Carbon/Carbon/help/Az.Carbon.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Carbon Module
 ## Description
 Microsoft Azure PowerShell: Carbon cmdlets
@@ -33,4 +34,5 @@ Create an in-memory object for TopItemsMonthlySummaryReportQueryFilterObject.
 
 ### [New-AzCarbonTopItemsSummaryReportQueryFilterObject](New-AzCarbonTopItemsSummaryReportQueryFilterObject.md)
 Create an in-memory object for TopItemsSummaryReportQueryFilterObject.
+
 
