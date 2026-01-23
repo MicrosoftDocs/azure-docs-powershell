@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/Az.VMware.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/Az.VMware.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.VMware Module
 ## Description
 Microsoft Azure PowerShell: Azure VMware Solution cmdlets
@@ -180,4 +181,5 @@ Update a PrivateCloud
 
 ### [Update-AzVMwarePureStoragePolicy](Update-AzVMwarePureStoragePolicy.md)
 Update a PureStoragePolicy
+
 

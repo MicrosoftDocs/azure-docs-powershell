@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/Az.PaloAltoNetworks.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/Az.PaloAltoNetworks.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.PaloAltoNetworks Module
 ## Description
 Microsoft Azure PowerShell: PaloAltoNetworks cmdlets
@@ -141,4 +142,5 @@ Update a LocalRulestackResource
 
 ### [Update-AzPaloAltoNetworksMetricsObjectFirewall](Update-AzPaloAltoNetworksMetricsObjectFirewall.md)
 Update a MetricsObjectFirewallResource
+
 
