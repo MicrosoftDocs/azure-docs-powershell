@@ -5,9 +5,9 @@
             { "files": ["**/*.yml"], "src": "azps-15.2.0", "version": "azps-15.2.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-15.2.0", "version": "azps-15.2.0", "dest": "azure" },
 
-            { "files": ["toc.yml"], "src": "azps-15.1.0", "version": "azps-15.1.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-15.1.0", "version": "azps-15.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-15.1.0", "version": "azps-15.1.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-15.3.0", "version": "azps-15.3.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-15.3.0", "version": "azps-15.3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-15.3.0", "version": "azps-15.3.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-14.6.0", "version": "azps-14.6.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-14.6.0", "version": "azps-14.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
@@ -29,13 +29,13 @@
         ],
         "resource": [
             { "files": ["media/**"], "version": "azps-15.2.0" },
-            { "files": ["media/**"], "version": "azps-15.1.0" },
+            { "files": ["media/**"], "version": "azps-15.3.0" },
             { "files": ["media/**"], "version": "azps-14.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
-            "azps-15.1.0": { "dest": "azps-15.2.0" },
-            "azps-15.2.0": { "dest": "azps-15.1.0" },
+            "azps-15.3.0": { "dest": "azps-15.3.0" },
+            "azps-15.2.0": { "dest": "azps-15.2.0" },
             "azps-14.6.0": { "dest": "azps-14.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" }
         },
@@ -395,7 +395,7 @@
             },
             "ms.date": {
                 "azps-15.2.0/**/*": "1/13/2026",
-                "azps-15.1.0/**/*": "12/02/2025",
+                "azps-15.3.0/**/*": "1/29/2025",
                 "azps-14.6.0/**/*": "11/04/2025",
                 "azps-0.10.0/**/*": "4/14/2020"
             },
@@ -419,8 +419,8 @@
             "feedback_system": {
                 "azps-15.2.0/**/*": "OpenSource",
                 "docs-conceptual/azps-15.2.0/*": "OpenSource",
-                "azps-15.1.0/**/*": "None",
-                "docs-conceptual/azps-15.1.0/*": "None",
+                "azps-15.3.0/**/*": "None",
+                "docs-conceptual/azps-15.3.0/*": "None",
                 "azps-14.6.0/**/*": "None",
                 "docs-conceptual/azps-14.6.0/*": "None",
                 "aztools/**/*": "OpenSource",
