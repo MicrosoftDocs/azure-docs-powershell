@@ -34,14 +34,14 @@ Deletes a SAP Landscape Monitor Dashboard with the specified subscription, resou
 
 ### Example 1: Delete SAP Landscape Monitor
 ```powershell
-Remove-AzWorkloadsSapLandscapeMonitor -MonitorName suha-160323-ams7 -ResourceGroupName suha-0802-rg1 -SubscriptionId 49d64d54-e966-4c46-a868-1999802b762c
+Remove-AzWorkloadsSapLandscapeMonitor -MonitorName suha-160323-ams7 -ResourceGroupName suha-0802-rg1 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 Delete SAP Landscape Monitor for a specific AMS Instance
 
 ### Example 2: Delete SAP Landscape Monitor by Id
 ```powershell
-Remove-AzWorkloadsSapLandscapeMonitor -InputObject "/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default"
+Remove-AzWorkloadsSapLandscapeMonitor -InputObject "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default"
 ```
 
 Delete SAP Landscape Monitor for a specific AMS Instance by ArmId
