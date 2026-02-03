@@ -366,7 +366,7 @@ AdministratorType         : ActiveDirectory
 PrincipalType             : Group
 Login                     : DummyLogin
 Sid                       : df7667b8-f9fd-4029-a0e3-b43c75ce9538
-TenantId                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId                  : aaaabbbb-0000-cccc-1111-dddd2222eeee
 AzureADOnlyAuthentication : True
 ```
 
