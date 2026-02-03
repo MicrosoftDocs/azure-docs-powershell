@@ -82,15 +82,18 @@ This article explains how to install the Az PowerShell module on Windows from th
 Use the [Install-Module][install-module] cmdlet to install the Az PowerShell module:
 
 ```powershell
-Install-Module -Name Az -Repository PSGallery -Force
+Install-Module -Name Az -Repository PSGallery -Force -Verbose
 ```
+
+> [!NOTE]
+> The installation can take several minutes. The `-Verbose` parameter shows progress and helps confirm that the installation is still running.
 
 ## Update the Az PowerShell module
 
 Use [Update-Module][update-module] to update to the latest version of the Az PowerShell module:
 
 ```powershell
-Update-Module -Name Az -Force
+Update-Module -Name Az -Force -Verbose
 ```
 
 Updating the Az PowerShell module using `Update-Module` doesn't remove old versions of the Az
