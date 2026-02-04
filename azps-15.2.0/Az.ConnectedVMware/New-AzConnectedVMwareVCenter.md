@@ -45,7 +45,7 @@ Create vCenter.
 
 ### Example 1: Create VCenter
 ```powershell
-New-AzConnectedVMwareVCenter -Name "test-vc" -Fqdn "1.2.3.4" -CredentialsUsername "test-user" -CredentialsPassword "test-pw" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d" -Location "eastus" -ExtendedLocationName "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl" -ExtendedLocationType "CustomLocation"
+New-AzConnectedVMwareVCenter -Name "test-vc" -Fqdn "1.2.3.4" -CredentialsUsername "test-user" -CredentialsPassword "test-pw" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "eastus" -ExtendedLocationName "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl" -ExtendedLocationType "CustomLocation"
 ```
 
 ```output
@@ -53,10 +53,10 @@ ConnectionStatus             : Connected
 CredentialsPassword          :
 CredentialsUsername          : abc
 CustomResourceName           : e6048b2a-ba86-4334-adff-ba3d617d12ef
-ExtendedLocationName         : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
 ExtendedLocationType         : CustomLocation
 Fqdn                         : 1.2.3.4
-Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
 InstanceUuid                 : db73f8f2-624c-4a0f-905b-8c6f34442cbc
 Kind                         : VMware
 Location                     : eastus
@@ -395,4 +395,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

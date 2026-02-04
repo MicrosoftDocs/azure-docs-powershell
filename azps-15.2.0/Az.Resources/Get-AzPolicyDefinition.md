@@ -96,10 +96,10 @@ This command gets the policy definition named VMPolicyDefinition from the manage
 
 ### Example 4: Get all built-in policy definitions from subscription
 ```powershell
-Get-AzPolicyDefinition -SubscriptionId '3bf44b72-c631-427a-b8c8-53e2595398ca' -Builtin
+Get-AzPolicyDefinition -SubscriptionId 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e' -Builtin
 ```
 
-This command gets all built-in policy definitions from the subscription with ID 3bf44b72-c631-427a-b8c8-53e2595398ca.
+This command gets all built-in policy definitions from the subscription with ID aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e.
 
 ### Example 5: Get policy definitions from a given category
 ```powershell

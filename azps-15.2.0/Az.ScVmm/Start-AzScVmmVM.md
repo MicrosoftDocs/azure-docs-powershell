@@ -34,7 +34,7 @@ This command will power on the VM and bring it to Running state from Stopped sta
 
 ### Example 2: Start a Virtual Machine
 ```powershell
-Start-AzScVmmVM -Name "test-vm" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Start-AzScVmmVM -Name "test-vm" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 This command will power on the VM and bring it to Running state from Stopped state.
@@ -192,4 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
