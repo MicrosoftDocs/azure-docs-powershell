@@ -48,11 +48,11 @@ create a OrganizationResource
 
 ### Example 1: Create a new Organization in a Resource Group
 ```powershell
-New-AzMongoDBOrganization -Name "testorg7" -Location "East US 2" -ResourceGroupName "yashika-rg" -SubscriptionId "61641157-140c-4b97-b365-30ff76d9f82e" -MarketplaceSubscriptionId  "61641157-140c-4b97-b365-30ff76d9f82e" -PartnerPropertyOrganizationName "testorg7" -PartnerPropertyOrganizationId "6805d3e6bb11bf624o2bbaef"  -OfferDetailOfferId "mongodb_atlas_azure_native_prod" -OfferDetailPlanId "private_plan" -OfferDetailPlanName "Pay as You Go (Free) (Private)" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "mongodb" -OfferDetailTermId "gmz7xq9ge3py" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
+New-AzMongoDBOrganization -Name "testorg7" -Location "East US 2" -ResourceGroupName "yashika-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -MarketplaceSubscriptionId  "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PartnerPropertyOrganizationName "testorg7" -PartnerPropertyOrganizationId "6805d3e6bb11bf624o2bbaef"  -OfferDetailOfferId "mongodb_atlas_azure_native_prod" -OfferDetailPlanId "private_plan" -OfferDetailPlanName "Pay as You Go (Free) (Private)" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "mongodb" -OfferDetailTermId "gmz7xq9ge3py" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
 ```
 
 ```output
-Id                              : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/yashika-rg/providers/MongoDB.Atlas/organizations/t
+Id                              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/yashika-rg/providers/MongoDB.Atlas/organizations/t
                                   estorg7
 IdentityPrincipalId             :
 IdentityTenantId                :
@@ -564,4 +564,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
