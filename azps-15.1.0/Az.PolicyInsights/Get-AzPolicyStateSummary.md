@@ -81,7 +81,7 @@ Gets the summary view of latest policy compliance states generated in the last d
 
 ### Example 2: Get latest non-compliant policy states summary in the specified subscription scope
 ```powershell
-Get-AzPolicyStateSummary -SubscriptionId "fff10b27-fff3-fff5-fff8-fffbe01e86a5"
+Get-AzPolicyStateSummary -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources within the specified subscription.
@@ -102,42 +102,42 @@ Gets the summary view of latest policy compliance states generated in the last d
 
 ### Example 5: Get latest non-compliant policy states summary in resource group scope in the specified subscription
 ```powershell
-Get-AzPolicyStateSummary -SubscriptionId "fff10b27-fff3-fff5-fff8-fffbe01e86a5" -ResourceGroupName "myResourceGroup"
+Get-AzPolicyStateSummary -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "myResourceGroup"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources within the specified resource group (in the specified subscription).
 
 ### Example 6: Get latest non-compliant policy states summary for a resource
 ```powershell
-Get-AzPolicyStateSummary -ResourceId "/subscriptions/fff10b27-fff3-fff5-fff8-fffbe01e86a5/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/myns1/eventhubs/eh1/consumergroups/cg1"
+Get-AzPolicyStateSummary -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/myns1/eventhubs/eh1/consumergroups/cg1"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for the specified resource.
 
 ### Example 7: Get latest non-compliant policy states summary for a policy set definition in current subscription
 ```powershell
-Get-AzPolicyStateSummary -PolicySetDefinitionName "fff58873-fff8-fff5-fffc-fffbe7c9d697"
+Get-AzPolicyStateSummary -PolicySetDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources (within the tenant in current session context) effected by the specified policy set definition (that exists in the subscription in current session context).
 
 ### Example 8: Get latest non-compliant policy states summary for a policy set definition in the specified subscription
 ```powershell
-Get-AzPolicyStateSummary -SubscriptionId "fff10b27-fff3-fff5-fff8-fffbe01e86a5" -PolicySetDefinitionName "fff58873-fff8-fff5-fffc-fffbe7c9d697"
+Get-AzPolicyStateSummary -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PolicySetDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources (within the tenant in current session context) effected by the specified policy set definition (that exists in the specified subscription).
 
 ### Example 9: Get latest non-compliant policy states summary for a policy definition in current subscription
 ```powershell
-Get-AzPolicyStateSummary -PolicyDefinitionName "fff58873-fff8-fff5-fffc-fffbe7c9d697"
+Get-AzPolicyStateSummary -PolicyDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources (within the tenant in current session context) effected by the specified policy definition (that exists in the subscription in current session context).
 
 ### Example 10: Get latest non-compliant policy states summary for a policy definition in the specified subscription
 ```powershell
-Get-AzPolicyStateSummary -SubscriptionId "fff10b27-fff3-fff5-fff8-fffbe01e86a5" -PolicyDefinitionName "fff58873-fff8-fff5-fffc-fffbe7c9d697"
+Get-AzPolicyStateSummary -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PolicyDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources (within the tenant in current session context) effected by the specified policy definition (that exists in the specified subscription).
@@ -151,7 +151,7 @@ Gets the summary view of latest policy compliance states generated in the last d
 
 ### Example 12: Get latest non-compliant policy states summary for a policy assignment in the specified subscription
 ```powershell
-Get-AzPolicyStateSummary -SubscriptionId "fff10b27-fff3-fff5-fff8-fffbe01e86a5" -PolicyAssignmentName "ddd8ef92e3714a5ea3d208c1"
+Get-AzPolicyStateSummary -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PolicyAssignmentName "ddd8ef92e3714a5ea3d208c1"
 ```
 
 Gets the summary view of latest policy compliance states generated in the last day for all resources (within the tenant in current session context) effected by the specified policy assignment (that exists in the specified subscription).
