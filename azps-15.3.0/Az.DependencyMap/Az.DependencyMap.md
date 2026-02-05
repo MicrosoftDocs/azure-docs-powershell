@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DependencyMap/DependencyMap/help/Az.DependencyMap.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DependencyMap/DependencyMap/help/Az.DependencyMap.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.DependencyMap Module
 ## Description
 Microsoft Azure PowerShell: DependencyMap cmdlets
@@ -39,4 +40,5 @@ Update a MapsResource
 
 ### [Update-AzDependencyMapDiscoverySource](Update-AzDependencyMapDiscoverySource.md)
 Update a DiscoverySourceResource
+
 
