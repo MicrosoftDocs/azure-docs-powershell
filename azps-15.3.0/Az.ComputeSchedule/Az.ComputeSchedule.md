@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeSchedule/ComputeSchedule/help/Az.ComputeSchedule.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeSchedule/ComputeSchedule/help/Az.ComputeSchedule.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ComputeSchedule Module
 ## Description
 Microsoft Azure PowerShell: ComputeSchedule cmdlets
@@ -39,4 +40,5 @@ VirtualMachinesSubmitStart: Schedule start operation for a batch of virtual mach
 
 ### [Stop-AzComputeScheduleScheduledAction](Stop-AzComputeScheduleScheduledAction.md)
 VirtualMachinesCancelOperations: Cancel a previously submitted (start/deallocate/hibernate) request
+
 

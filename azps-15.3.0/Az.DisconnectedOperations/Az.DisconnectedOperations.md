@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DisconnectedOperations/DisconnectedOperations/help/Az.DisconnectedOperations.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DisconnectedOperations/DisconnectedOperations/help/Az.DisconnectedOperations.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.DisconnectedOperations Module
 ## Description
 Microsoft Azure PowerShell: DisconnectedOperations cmdlets
@@ -39,4 +40,5 @@ Delete a DisconnectedOperation
 
 ### [Update-AzDisconnectedOperationsDisconnectedOperation](Update-AzDisconnectedOperationsDisconnectedOperation.md)
 Update a DisconnectedOperation
+
 
