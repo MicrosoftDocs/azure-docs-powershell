@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/Az.NewRelic.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/Az.NewRelic.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.NewRelic Module
 ## Description
 Microsoft Azure PowerShell: NewRelic cmdlets
@@ -102,4 +103,5 @@ Refreshes the ingestion key for all monitors linked to the same account associat
 
 ### [Update-AzNewRelicMonitorTagRule](Update-AzNewRelicMonitorTagRule.md)
 Update the tag rules for a specific New Relic monitor resource, allowing you to modify the rules that control which Azure resources are monitored
+
 
