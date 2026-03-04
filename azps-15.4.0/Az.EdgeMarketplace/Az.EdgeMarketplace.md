@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeMarketplace/EdgeMarketplace/help/Az.EdgeMarketplace.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeMarketplace/EdgeMarketplace/help/Az.EdgeMarketplace.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.EdgeMarketplace Module
 ## Description
 Microsoft Azure PowerShell: EdgeMarketplace cmdlets
@@ -25,4 +26,5 @@ it can poll for completion using the returned operation status URL and its resul
 
 ### [Request-AzEdgeMarketplaceOfferAccessToken](Request-AzEdgeMarketplaceOfferAccessToken.md)
 This cmdlet combines New-AzEdgeMarketplaceOfferAccessToken and Get-AzEdgeMarketplaceOfferAccessToken to generate access token and retrieve the final SAS token when the disk is ready-enabling clients to download marketplace images to their edge devices.
+
 
