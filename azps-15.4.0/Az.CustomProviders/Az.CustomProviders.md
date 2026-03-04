@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomProviders/CustomProviders/help/Az.CustomProviders.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomProviders/CustomProviders/help/Az.CustomProviders.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.CustomProviders Module
 ## Description
 Microsoft Azure PowerShell: Custom Providers cmdlets
@@ -37,4 +38,5 @@ The only value that can be updated via PATCH currently is the tags.
 
 ### [Update-AzCustomProviderAssociation](Update-AzCustomProviderAssociation.md)
 update an association.
+
 

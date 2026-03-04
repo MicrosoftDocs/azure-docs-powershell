@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Az.Maps.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Az.Maps.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Maps Module
 ## Description
 Microsoft Azure PowerShell: Maps cmdlets
@@ -53,4 +54,5 @@ Only a subset of the parameters may be updated after creation, such as Sku, Tags
 ### [Update-AzMapsCreator](Update-AzMapsCreator.md)
 update the Maps Creator resource.
 Only a subset of the parameters may be updated after creation, such as Tags.
+
 

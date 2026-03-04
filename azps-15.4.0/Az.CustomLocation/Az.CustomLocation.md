@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Az.CustomLocation.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Az.CustomLocation.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.CustomLocation Module
 ## Description
 Microsoft Azure PowerShell: CustomLocation cmdlets
@@ -45,4 +46,5 @@ Update a Custom Location in the specified Subscription and Resource Group
 
 ### [Update-AzCustomLocationResourceSyncRule](Update-AzCustomLocationResourceSyncRule.md)
 Update a Resource Sync Rule with the specified Resource Sync Rule name in the specified Resource Group, Subscription and Custom Location name.
+
 
