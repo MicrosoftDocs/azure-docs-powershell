@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Az.AlertsManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Az.AlertsManagement.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.AlertsManagement Module
 ## Description
 Manages alerts, smart groups and action rule configuration for Alerts Management Platform.
@@ -63,4 +64,5 @@ update an Prometheus rule group definition.
 
 ### [Update-AzSmartGroupState](Update-AzSmartGroupState.md)
 Updates smart group state
+
 

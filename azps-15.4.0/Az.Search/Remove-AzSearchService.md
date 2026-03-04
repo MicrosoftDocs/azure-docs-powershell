@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.search/remove-a
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Remove-AzSearchService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Remove-AzSearchService.md
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+cmdletStatus: preview
 ---
-
 # Remove-AzSearchService
 
 ## SYNOPSIS
@@ -212,3 +213,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzSearchService](./Get-AzSearchService.md)
 
 [Set-AzSearchService](./Set-AzSearchService.md)
+

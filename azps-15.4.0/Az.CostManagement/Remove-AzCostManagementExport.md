@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.costmanagement/
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Remove-AzCostManagementExport.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Remove-AzCostManagementExport.md
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+cmdletStatus: preview
 ---
-
 # Remove-AzCostManagementExport
 
 ## SYNOPSIS
@@ -171,3 +172,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [https://docs.microsoft.com/en-us/rest/api/costmanagement/](https://docs.microsoft.com/en-us/rest/api/costmanagement/)
+
