@@ -87,7 +87,7 @@ $resubscribeProps = @{
     OfferId = "newrelic-pay-as-you-go"
     TermId = "hjdtn7tfq3ka3"
     ResourceGroup = "ps-test-new"
-    SubscriptionId = "22222222-3333-4444-5555-666666666666"
+    SubscriptionId = "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 }
 Invoke-AzNewRelicResubscribeMonitor -MonitorName "test-01" -ResourceGroupName "ps-test" -Body $resubscribeProps
 ```
@@ -406,4 +406,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
