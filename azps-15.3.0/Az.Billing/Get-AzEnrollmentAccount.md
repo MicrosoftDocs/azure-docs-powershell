@@ -37,7 +37,7 @@ Get-AzEnrollmentAccount
 ```output
 ObjectId                             PrincipalName
 --------                             -------------
-dbd8453d-071f-4fb4-8e01-c99f5b067649 jason@contoso.onmicrosoft.com
+aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb jason@contoso.onmicrosoft.com
 7ff524ac-a0de-4402-876f-934ccee3b601 carol@contoso.onmicrosoft.com
 ```
 
@@ -45,13 +45,13 @@ Get all available enrollment accounts.
 
 ### Example 2
 ```powershell
-Get-AzEnrollmentAccount -ObjectId dbd8453d-071f-4fb4-8e01-c99f5b067649
+Get-AzEnrollmentAccount -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
 ```output
 ObjectId                             PrincipalName
 --------                             -------------
-dbd8453d-071f-4fb4-8e01-c99f5b067649 jason@contoso.onmicrosoft.com
+aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb jason@contoso.onmicrosoft.com
 ```
 
 Get the enrollment account with the specified object id.
