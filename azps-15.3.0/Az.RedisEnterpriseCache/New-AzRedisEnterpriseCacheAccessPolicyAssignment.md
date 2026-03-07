@@ -51,7 +51,7 @@ Creates/Updates a particular access policy assignment for a database
 
 ### Example 1: Add new access policy assignment.
 ```powershell
-New-AzRedisEnterpriseCacheAccessPolicyAssignment -AccessPolicyAssignmentName "testAccessPolicyAssignmentName" -ClusterName "MyCache" -DatabaseName "default" -ResourceGroupName "MyGroup" -UserObjectId "5fb3eb10-a8a2-4db7-8bb4-e377180e7427" -AccessPolicyName "default"
+New-AzRedisEnterpriseCacheAccessPolicyAssignment -AccessPolicyAssignmentName "testAccessPolicyAssignmentName" -ClusterName "MyCache" -DatabaseName "default" -ResourceGroupName "MyGroup" -UserObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -AccessPolicyName "default"
 ```
 
 ```output
