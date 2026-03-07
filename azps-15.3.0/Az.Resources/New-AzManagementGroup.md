@@ -42,7 +42,7 @@ New-AzManagementGroup -GroupName "TestGroup"
 Id                : /providers/Microsoft.Management/managementGroups/TestGroup
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroup
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroup
 UpdatedTime       : 2/1/2018 11:06:27 AM
 UpdatedBy         : 00001111-aaaa-2222-bbbb-3333cccc4444
@@ -62,7 +62,7 @@ New-AzManagementGroup -GroupName "TestGroup" -DisplayName "TestGroupDisplayName"
 Id                : /providers/Microsoft.Management/managementGroups/TestGroup
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroup
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroup
 UpdatedTime       : 2/1/2018 11:06:27 AM
 UpdatedBy         : 00001111-aaaa-2222-bbbb-3333cccc4444
@@ -82,7 +82,7 @@ New-AzManagementGroup -GroupName "TestGroup" -DisplayName "TestGroupDisplayName"
 Id                : /providers/Microsoft.Management/managementGroups/TestGroup
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroup
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroupDisplayName
 UpdatedTime       : 2/1/2018 11:16:12 AM
 UpdatedBy         : 00001111-aaaa-2222-bbbb-3333cccc4444
@@ -101,7 +101,7 @@ New-AzManagementGroup -GroupName "TestGroup" -ParentObject $parentObject
 Id                : /providers/Microsoft.Management/managementGroups/TestGroup
 Type              : /providers/Microsoft.Management/managementGroups
 Name              : TestGroup
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : TestGroupDisplayName
 UpdatedTime       : 2/1/2018 11:16:12 AM
 UpdatedBy         : 00001111-aaaa-2222-bbbb-3333cccc4444
