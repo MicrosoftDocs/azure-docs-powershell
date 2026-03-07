@@ -41,7 +41,7 @@ Deletes a provider instance for the specified subscription, resource group, SAP 
 
 ### Example 1: Delete a specific provider from AMS instance
 ```powershell
-Remove-AzWorkloadsProviderInstance -MonitorName suha-160323-ams7 -Name suha-os-1 -ResourceGroupName suha-0802-rg1 -SubscriptionId 49d64d54-e966-4c46-a868-1999802b762c
+Remove-AzWorkloadsProviderInstance -MonitorName suha-160323-ams7 -Name suha-os-1 -ResourceGroupName suha-0802-rg1 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -54,7 +54,7 @@ Delete a provider from specific AMS Instance
 
 ### Example 2: Delete a specific provider from AMS instance by Id
 ```powershell
-Remove-AzWorkloadsProviderInstance -InputObject "/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/suha-160323-ams7/providerInstances/suha-os-1"
+Remove-AzWorkloadsProviderInstance -InputObject "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/suha-160323-ams7/providerInstances/suha-os-1"
 ```
 
 ```output
