@@ -57,10 +57,10 @@ This command gets the permitted abilities for the signed-in user in the project 
 Get-AzDevCenterUserProjectAbility `
   -DevCenterName "ContosoDevCenter" `
   -ProjectName "DevProject" `
-  -UserId "786a823c-8037-48ab-89b8-8599901e67d0"
+  -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 ```
 
-This command gets the permitted abilities for user "786a823c-8037-48ab-89b8-8599901e67d0" in the project "DevProject" using the dev center name.
+This command gets the permitted abilities for user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" in the project "DevProject" using the dev center name.
 
 ### Example 3: Get the signed-in user's abilities for a project using InputObject and endpoint
 ```powershell
