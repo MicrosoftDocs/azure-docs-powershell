@@ -61,7 +61,7 @@ SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType : 
 Tag                          : {
                                }
-TenantId                     : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId                     : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Type                         : microsoft.azuresphere/catalogs
 ```
 
@@ -264,4 +264,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
