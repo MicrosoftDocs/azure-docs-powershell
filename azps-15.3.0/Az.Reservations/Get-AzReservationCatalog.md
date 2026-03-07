@@ -38,7 +38,7 @@ Get the regions and skus that are available for RI purchase for the specified Az
 
 ### Example 1: Get the list of reserved resource type skus with location
 ```powershell
-Get-AzReservationCatalog -SubscriptionId "10000000-aaaa-bbbb-cccc-100000000001" -Location "westus" -ReservedResourceType "VirtualMachine"
+Get-AzReservationCatalog -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "westus" -ReservedResourceType "VirtualMachine"
 ```
 
 ```output
@@ -59,7 +59,7 @@ This command gets a catlog of reserved resource type skus with location
 
 ### Example 2: Get the list of reserved resource type skus without location
 ```powershell
-Get-AzReservationCatalog -SubscriptionId "10000000-aaaa-bbbb-cccc-100000000001" -ReservedResourceType "SuseLinux"
+Get-AzReservationCatalog -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ReservedResourceType "SuseLinux"
 ```
 
 ```output
@@ -87,7 +87,7 @@ This command gets a catlog of reserved resource type skus without location
 
 ### Example 3: Get the list of eligible 3pp reserved resource type skus with publisher id, offer id, plan id
 ```powershell
-Get-AzReservationCatalog -SubscriptionId "10000000-aaaa-bbbb-cccc-100000000001" -ReservedResourceType "VirtualMachineSoftware" -PublisherId canonical -OfferId 0001-com-ubuntu-pro-xenial -PlanId pro-16_04-lts
+Get-AzReservationCatalog -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ReservedResourceType "VirtualMachineSoftware" -PublisherId canonical -OfferId 0001-com-ubuntu-pro-xenial -PlanId pro-16_04-lts
 ```
 
 ```output
@@ -292,4 +292,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
