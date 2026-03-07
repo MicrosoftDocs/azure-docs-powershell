@@ -49,14 +49,14 @@ To enable resource in a different Resource Group than the one where VMM Server r
 
 ### Example 1: Create Availability Set resource
 ```powershell
-New-AzScVmmAvailabilitySet -Name "test-avset" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -AvailabilitySetName "test-av-01" -Location "eastus" -VmmServerName "test-vmmserver-01"
+New-AzScVmmAvailabilitySet -Name "test-avset" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -AvailabilitySetName "test-av-01" -Location "eastus" -VmmServerName "test-vmmserver-01"
 ```
 
 ```output
 AvailabilitySetName          : test-avset
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/availabilitySets/test-avset
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/availabilitySets/test-avset
 Location                     : eastus
 Name                         : test-avset
 ProvisioningState            : Succeeded
@@ -70,7 +70,7 @@ SystemDataLastModifiedByType : Application
 Tag                          : {
                                }
 Type                         : microsoft.scvmm/availabilitysets
-VmmServerId                  : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+VmmServerId                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 ```
 
 This command creates a Availability Set resource named `test-avset` in the resource group named `test-rg-01`.
@@ -339,4 +339,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
