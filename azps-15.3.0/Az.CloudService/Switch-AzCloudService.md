@@ -35,7 +35,7 @@ Swaps VIPs between two cloud service (extended support) load balancers.
 
 ### Example 1: Switch cloud service using name
 ```powershell
-Switch-AzCloudService -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId 1133e0eb-b53c-1234-b478-2eac8f04afca
+Switch-AzCloudService -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 Above command invokes the vipswap operation on the Cloud service with name 'BService' and will perform the operation once the user confirms the action on the confirmation prompt.
@@ -43,7 +43,7 @@ Above command invokes the vipswap operation on the Cloud service with name 'BSer
 
 ### Example 2: Switch cloud service using cloud service object
 ```powershell
-$cs = Get-AzCloudService -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId 1133e0eb-b53c-1234-b478-2eac8f04afca
+$cs = Get-AzCloudService -ResourceGroupName "BRGThree" -CloudServiceName BService -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Switch-AzCloudService -CloudService $cs
 ```
 
