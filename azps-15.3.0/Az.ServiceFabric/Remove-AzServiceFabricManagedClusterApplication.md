@@ -61,7 +61,7 @@ This example removes the managed application "testApp" under the resource group 
 
 ### Example 3
 ```powershell
-$resourceId = "/subscriptions/13ad2c84-84fa-4798-ad71-e70c07af873f/resourcegroups/testRG/providers/Microsoft.ServiceFabric/managedClusters/testCluster/applications/testApp/services/testService"
+$resourceId = "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/testRG/providers/Microsoft.ServiceFabric/managedClusters/testCluster/applications/testApp/services/testService"
 Remove-AzServiceFabricManagedClusterApplication -ResourceId $resourceId
 ```
 
