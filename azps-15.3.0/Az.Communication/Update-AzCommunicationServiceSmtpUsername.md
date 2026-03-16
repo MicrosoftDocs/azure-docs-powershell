@@ -60,7 +60,7 @@ SystemDataCreatedByType      : User
 SystemDataLastModifiedAt     : 27-02-2025 10:55:10
 SystemDataLastModifiedBy     : newuser1@contoso.com
 SystemDataLastModifiedByType : User
-TenantId                     : aaaa1111-bbbb-2222-3333-aaaa11112222
+TenantId                     : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Type                         : microsoft.communication/communicationservices/smtpusernames
 Username                     : ContosoUsername1
 ```
@@ -268,4 +268,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
