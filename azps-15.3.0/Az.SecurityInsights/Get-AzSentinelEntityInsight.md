@@ -47,7 +47,7 @@ This command gets insights for an Entity for a given time range.
 ```powershell
 $startTime = (Get-Date).AddDays(-7).ToUniversalTime() | Get-Date -Format "yyyy-MM-ddThh:00:00.000Z"
  $endTime = (Get-Date).ToUniversalTime() | Get-Date -Format "yyyy-MM-ddThh:00:00.000Z"
- $Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "00001111-aaaa-2222-bbbb-3333cccc4444"
+ $Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
  $Entity | Get-AzSentinelEntityInsight -EndTime $endTime -StartTime $startTime
 ```
 

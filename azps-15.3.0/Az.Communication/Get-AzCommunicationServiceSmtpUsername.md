@@ -77,7 +77,7 @@ SystemDataCreatedByType      :
 SystemDataLastModifiedAt     :
 SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType :
-TenantId                     : aaaa1111-bbbb-2222-3333-aaaa11112222
+TenantId                     : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Type                         : communicationservices/smtpusernames
 Username                     : ContosoUsername2
 ```
@@ -101,7 +101,7 @@ SystemDataCreatedByType      :
 SystemDataLastModifiedAt     :
 SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType :
-TenantId                     : aaaa1111-bbbb-2222-3333-aaaa11112222
+TenantId                     : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Type                         : communicationservices/smtpusernames
 Username                     : ContosoUsername1
 ```
@@ -232,4 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

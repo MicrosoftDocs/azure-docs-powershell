@@ -46,8 +46,8 @@ Update-AzConfidentialLedger `
   -AadBasedSecurityPrincipal `
       @{
           LedgerRoleName="Administrator"; 
-          PrincipalId="00001111-aaaa-2222-bbbb-3333cccc4444"; 
-          TenantId="00001111-aaaa-2222-bbbb-3333cccc4444"
+          PrincipalId="ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0"; 
+          TenantId="aaaabbbb-0000-cccc-1111-dddd2222eeee"
       } `
   -CertBasedSecurityPrincipal `
       @{
