@@ -46,7 +46,7 @@ Get the CommunicationService and its properties.
 
 ### Example 1: List existing CommunicationServices for a Subscription
 ```powershell
-Get-AzCommunicationService -SubscriptionId 632ec9eb-fad7-4cbd-993a-e72973ba2acc
+Get-AzCommunicationService -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -168,4 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
