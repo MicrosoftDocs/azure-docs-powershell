@@ -70,7 +70,7 @@ This example will update the managed application type version "v1" tags and pack
 ```powershell
 $newTags = @{new="tags"}
 $packageUrl = "https://sftestapp.blob.core.windows.net/sftestapp/testAppType_v1.sfpkg"
-$resourceId = "/subscriptions/13ad2c84-84fa-4798-ad71-e70c07af873f/resourcegroups/testRG/providers/Microsoft.ServiceFabric/managedClusters/testCluster/applicationTypes/testAppType/versions/v1"
+$resourceId = "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/testRG/providers/Microsoft.ServiceFabric/managedClusters/testCluster/applicationTypes/testAppType/versions/v1"
 Set-AzServiceFabricManagedClusterApplicationTypeVersion -ResourceId $resourceId -Tag $newTags -PackageUrl $packageUrl -Verbose
 ```
 
