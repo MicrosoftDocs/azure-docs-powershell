@@ -49,7 +49,7 @@ API to Update certain properties of the vCenter resource.
 
 ### Example 1: Update VCenter
 ```powershell
-Update-AzConnectedVMwareVCenter -Name "test-vc" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d" -Tag @{"vc"="test"}
+Update-AzConnectedVMwareVCenter -Name "test-vc" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Tag @{"vc"="test"}
 ```
 
 ```output
@@ -57,10 +57,10 @@ ConnectionStatus             : Connected
 CredentialsPassword          :
 CredentialsUsername          : abc
 CustomResourceName           : e6048b2a-ba86-4334-adff-ba3d617d12ef
-ExtendedLocationName         : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
 ExtendedLocationType         : CustomLocation
 Fqdn                         : idclab-vcen67.fareast.corp.microsoft.com
-Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
 InstanceUuid                 : db73f8f2-624c-4a0f-905b-8c6f34442cbc
 Kind                         : VMware
 Location                     : eastus
@@ -265,4 +265,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
