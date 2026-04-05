@@ -52,7 +52,7 @@ Captures a manual snapshot of the Dev Box.\nUpon completion, a snapshotId will b
 New-AzDevCenterUserDevBoxSnapshot `
   -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" `
   -ProjectName "DevProject" `
-  -UserId "786a823c-8037-48ab-89b8-8599901e67d0" `
+  -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" `
   -DevBoxName "myDevBox"
 ```
 
@@ -87,7 +87,7 @@ This command creates a snapshot for the dev box "myDevBox" using the endpoint an
 ```powershell
 $snapshotInput = @{
     DevBoxName = "myDevBox"
-    UserId = "786a823c-8037-48ab-89b8-8599901e67d0"
+    UserId = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     ProjectName = "DevProject"
 }
 New-AzDevCenterUserDevBoxSnapshot `
