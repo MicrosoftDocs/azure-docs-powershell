@@ -70,7 +70,7 @@ This command deletes an Azure Synapse Analytics SQL pool restore point through p
 
 ### Example 4
 ```powershell
-Remove-AzSynapseSqlPoolRestorePoint -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/sqlPools/ContosoSqlPool/SqlPoolRestorePoints/RestorePointCreationDate
+Remove-AzSynapseSqlPoolRestorePoint -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/sqlPools/ContosoSqlPool/SqlPoolRestorePoints/RestorePointCreationDate
 ```
 
 This command deletes an Azure Synapse Analytics SQL pool restore point with the specified resource ID.
