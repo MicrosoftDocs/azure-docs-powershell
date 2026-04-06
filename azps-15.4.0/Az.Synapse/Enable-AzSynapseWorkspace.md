@@ -62,7 +62,7 @@ This command activates a new Azure Synapse Analytics workspace named ContosoWork
 
 ### Example 3
 ```powershell
-Enable-AzSynapseWorkspace -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/keys/default
+Enable-AzSynapseWorkspace -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/keys/default
 ```
 
 This command activates a new Azure Synapse Analytics workspace through pipeline with the specified resource ID.
