@@ -37,14 +37,14 @@ $newLabels = @{
     "updated-by" = "admin"
 }
 
-Update-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "12345678-1234-1234-1234-123456789012" -Description "Updated site description" -Labels $newLabels
+Update-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Description "Updated site description" -Labels $newLabels
 ```
 
 Update an existing Azure Edge Site's description and labels while preserving other properties.
 
 ### Example 2: Update only the display name
 ```powershell
-Update-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "12345678-1234-1234-1234-123456789012" -DisplayName "Updated West Coast Site"
+Update-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -DisplayName "Updated West Coast Site"
 ```
 
 Perform a partial update to change only the display name while leaving all other properties unchanged.
@@ -64,14 +64,14 @@ $jsonUpdate = @"
 }
 "@
 
-Update-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "12345678-1234-1234-1234-123456789012" -JsonString $jsonUpdate
+Update-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -JsonString $jsonUpdate
 ```
 
 Update an Azure Edge Site using a JSON configuration for complex updates or automation scenarios.
 
 ### Example 4: Update a site at subscription scope
 ```powershell
-Update-AzSite -Name "global-site-001" -SubscriptionId "12345678-1234-1234-1234-123456789012" -DisplayName "Updated Global Site" -Description "Updated enterprise operations center"
+Update-AzSite -Name "global-site-001" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -DisplayName "Updated Global Site" -Description "Updated enterprise operations center"
 ```
 
 Update an Azure Edge Site that exists at the subscription scope rather than within a specific resource group.
@@ -437,4 +437,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
