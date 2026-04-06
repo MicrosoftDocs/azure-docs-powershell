@@ -28,7 +28,7 @@ Import a blueprint definition with its artifacts.
 
 ### Example 1
 ```powershell
-Import-AzBlueprintWithArtifact -Name MySimpleBlueprint -SubscriptionId 00000000-1111-0000-1111-000000000000 -InputPath  C:\Blueprints\SimpleBlueprint
+Import-AzBlueprintWithArtifact -Name MySimpleBlueprint -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -InputPath  C:\Blueprints\SimpleBlueprint
 ```
 
 Import a blueprint definition with its artifacts and save within a subscription.
@@ -199,4 +199,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
