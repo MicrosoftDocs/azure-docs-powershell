@@ -46,7 +46,7 @@ Implements virtual machine template GET method.
 
 ### Example 1: List VM Templates in current subscription
 ```powershell
-Get-AzConnectedVMwareVMTemplate -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareVMTemplate -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -66,7 +66,7 @@ This command lists VM Templates in current subscription.
 
 ### Example 2: List VM Templates in a resource group
 ```powershell
-Get-AzConnectedVMwareVMTemplate -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareVMTemplate -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -80,7 +80,7 @@ This command lists VM Templates in a resource group named `test-rg`.
 
 ### Example 3: Get a specific VM Template
 ```powershell
-Get-AzConnectedVMwareVMTemplate -Name "test-vmtmpl" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareVMTemplate -Name "test-vmtmpl" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -96,12 +96,12 @@ Disk                         : {{
                                  "unitNumber": 0,
                                  "diskType": "flat"
                                }}
-ExtendedLocationName         : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
 ExtendedLocationType         : CustomLocation
 FirmwareType                 :
 FolderPath                   : ArcPrivateClouds-67/Templates
-Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachineTemplates/azurearcvmwareubuntu20template
-InventoryItemId              : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/vmtpl-vm-651995
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VirtualMachineTemplates/azurearcvmwareubuntu20template
+InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/vmtpl-vm-651995
 Kind                         :
 Location                     : westus3
 MemorySizeMb                 : 8192
@@ -148,7 +148,7 @@ ToolsVersion                 : 11333
 ToolsVersionStatus           : guestToolsSupportedNew
 Type                         : microsoft.connectedvmwarevsphere/virtualmachinetemplates
 Uuid                         : 6da8abd3-8857-4599-bd6f-831846bbdd0d
-VCenterId                    : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc
+VCenterId                    : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc
 ```
 
 This command gets a VM Template named `test-vmtmpl` in a resource group named `test-rg`.
@@ -245,4 +245,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
