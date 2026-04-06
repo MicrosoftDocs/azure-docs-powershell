@@ -33,7 +33,7 @@ Lists API permissions the application has requested.
 
 ### Example 1: Get API permission
 ```powershell
-Get-AzADAppPermission -ObjectId 18797549-86a9-4906-b2a9-54f08cd3c427
+Get-AzADAppPermission -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
 
 ```output
@@ -43,7 +43,7 @@ ApiId                                Id                                   Type
 00000003-0000-0000-c000-000000000000 5b567255-7703-4780-807c-7be8301ae99b Scope
 ```
 
-Fetches all API permissions of Azure AD object 18797549-86a9-4906-b2a9-54f08cd3c427
+Fetches all API permissions of Azure AD object aaaabbbb-0000-cccc-1111-dddd2222eeee
 
 ## PARAMETERS
 

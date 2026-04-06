@@ -36,14 +36,14 @@ ServerName        : ContosoServer
 ServerKeyName     : contoso_contosokey_01234567890123456789012345678901
 Type              : AzureKeyVault
 Uri               : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
-Thumbprint        : 1122334455667788990011223344556677889900
+Thumbprint        : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 CreationDate      : 1/1/2017 12:00:00 AM
 ResourceGroupName : ContosoResourceGroup
 ServerName        : ContosoServer
 ServerKeyName     : contoso_contosokey2_01234567890123456789012345678901
 Type              : AzureKeyVault
 Uri               : https://contoso.vault.azure.net/keys/contosokey2/09876543210987654321098765432109
-Thumbprint        : 0099887766554433221100998877665544332211
+Thumbprint        : BB22CC33DD44EE55FF66AA77BB88CC99DD00EE11
 CreationDate      : 1/1/2017 12:00:00 AM
 ```
 
