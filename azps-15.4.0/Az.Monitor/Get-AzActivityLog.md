@@ -84,7 +84,7 @@ This command lists at most 1000 of the events associated with the user's subscri
 
 ### Example 5: Get an event log by correlation ID
 ```powershell
-Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444"
+Get-AzActivityLog -CorrelationId "aaaa0000-bb11-2222-33cc-444444dddddd"
 ```
 
 This command lists at most 1000 events associated with the specified correlation ID that took place 7 days from the current date/time. 
@@ -92,7 +92,7 @@ This command lists at most 1000 events associated with the specified correlation
 
 ### Example 6: Get an event log by correlation ID with a maximum number of events
 ```powershell
-Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444" -MaxRecord 100
+Get-AzActivityLog -CorrelationId "aaaa0000-bb11-2222-33cc-444444dddddd" -MaxRecord 100
 ```
 
 This command lists at most 100 events associated with the specified correlation ID that took place 7 days from the current date/time. 
@@ -100,7 +100,7 @@ This command lists at most 100 events associated with the specified correlation 
 
 ### Example 7: Get an event log by correlation ID and start time
 ```powershell
-Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444" -StartTime 2017-05-22T04:30:00
+Get-AzActivityLog -CorrelationId "aaaa0000-bb11-2222-33cc-444444dddddd" -StartTime 2017-05-22T04:30:00
 ```
 
 This command lists at most 1000 events associated with the specified correlation ID that took place on or after 2017-05-22T04:30:00 local time if the start time is not older than 90 days from the current date/time.
@@ -108,7 +108,7 @@ This command lists at most 1000 events associated with the specified correlation
 
 ### Example 8: Get an event log by correlation ID with start time and end time
 ```powershell
-Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444" -StartTime 2017-04-15T04:30:00 -EndTime 2017-04-25T12:30:00
+Get-AzActivityLog -CorrelationId "aaaa0000-bb11-2222-33cc-444444dddddd" -StartTime 2017-04-15T04:30:00 -EndTime 2017-04-25T12:30:00
 ```
 
 This command lists at most 1000 events associated with the specified correlation ID that took place on or after 2017-04-15T04:30 local time, but before 2017-04-25T12:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.
@@ -143,28 +143,28 @@ This command lists at most 1000 events associated with the specified resource gr
 
 ### Example 13: Get an event log by resource ID
 ```powershell
-Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1"
+Get-AzActivityLog -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1"
 ```
 
 This command lists at most 1000 events associated with the specified resource ID that took place 7 days from the current date/time.
 
 ### Example 14: Get an event log by resource ID with a maximum number of events
 ```powershell
-Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -MaxRecord 100
+Get-AzActivityLog -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -MaxRecord 100
 ```
 
 This command lists at most 100 events associated with the specified resource ID that took place 7 days from the current date/time.
 
 ### Example 15: Get an event log by resource ID with a start time
 ```powershell
-Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -StartTime 2017-05-22T04:30
+Get-AzActivityLog -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -StartTime 2017-05-22T04:30
 ```
 
 This command lists at most 1000 events associated with the specified resource ID that took place on or after 2017-05-22T04:30:00 local time if the start time is not older than 90 days from the current date/time.
 
 ### Example 16: Get an event log by resource ID with a start time and end time
 ```powershell
-Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -StartTime 2017-04-15T04:30 -EndTime 2017-04-25T12:30
+Get-AzActivityLog -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -StartTime 2017-04-15T04:30 -EndTime 2017-04-25T12:30
 ```
 
 This command lists at most 1000 events associated with the specified resource ID that took place on or after 2017-04-15T04:30 local time, but before 2017-04-25T12:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.

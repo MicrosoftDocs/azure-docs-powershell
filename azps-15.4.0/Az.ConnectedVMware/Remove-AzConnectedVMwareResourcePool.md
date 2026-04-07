@@ -36,7 +36,7 @@ Implements resourcePool DELETE method.
 
 ### Example 1: Delete Resource Pool
 ```powershell
-Remove-AzConnectedVMwareResourcePool -Name "test-rp" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Remove-AzConnectedVMwareResourcePool -Name "test-rp" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 This command delete a Resource Pool named `test-rp` from a resource group named `test-rg`.
@@ -224,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -280,7 +280,7 @@ The `-DisplayName` parameter was removed.
 
 #### Before
 ```powershell
-PS C:\> New-AzManagedServicesDefinition -DisplayName "MyTestDefinition" -ManagedByTenantId 00001111-aaaa-2222-bbbb-3333cccc4444 -RoleDefinitionId acdd72a7-3385-48ef-bd42-f606fba81ae7 -PrincipalId 714160ec-87d5-42bb-8b17-287c0dd7417d
+PS C:\> New-AzManagedServicesDefinition -DisplayName "MyTestDefinition" -ManagedByTenantId 00001111-aaaa-2222-bbbb-3333cccc4444 -RoleDefinitionId acdd72a7-3385-48ef-bd42-f606fba81ae7 -PrincipalId aaaaaaaa-bbbb-cccc-1111-222222222222
 ```
 #### After
 ```powershell

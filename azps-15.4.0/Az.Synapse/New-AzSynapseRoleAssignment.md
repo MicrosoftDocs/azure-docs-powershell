@@ -81,7 +81,7 @@ The cmdlet may call below Microsoft Graph API according to input parameters:
 
 >[!Note]
 > To create a role assignment for a service principal, pass the object ID of the principal in the ObjectId parameter.
-> When you are a user with permission to manage Azure RBAC role assignment on the workspace but not a Synapse Administrator, please create Synapse Administrator role by **-RoleDefinitionId** and **-ObjectId** directly but not by **-RoleDefinitionName**, for Synapse Administrator, RoleDefinitionId is "00001111-aaaa-2222-bbbb-3333cccc4444", please take below Example 5 as reference. The reason for this is , when you try to add a "Synapse Administrator" role, the cmdlet needs to get the role ID from the role name which requires workspace read permission, which the current user does not have.
+> When you are a user with permission to manage Azure RBAC role assignment on the workspace but not a Synapse Administrator, please create Synapse Administrator role by **-RoleDefinitionId** and **-ObjectId** directly but not by **-RoleDefinitionName**, for Synapse Administrator, RoleDefinitionId is "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb", please take below Example 5 as reference. The reason for this is , when you try to add a "Synapse Administrator" role, the cmdlet needs to get the role ID from the role name which requires workspace read permission, which the current user does not have.
 
 ## EXAMPLES
 
