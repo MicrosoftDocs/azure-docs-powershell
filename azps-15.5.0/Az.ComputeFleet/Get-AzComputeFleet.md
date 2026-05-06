@@ -80,7 +80,7 @@ ComputeProfileBaseVirtualMachineProfile              : {
                                                              {
                                                                "properties": {
                                                                  "networkSecurityGroup": {
-                                                                   "id": "/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/t
+                                                                   "id": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/t
                                                        est-fleet/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-2-ni
                                                        c01"
                                                                  },
@@ -90,7 +90,7 @@ ComputeProfileBaseVirtualMachineProfile              : {
                                                                    {
                                                                      "properties": {
                                                                        "subnet": {
-                                                                         "id": "/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGr
+                                                                         "id": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGr
                                                        oups/test-fleet/providers/Microsoft.Network/virtualNetworks/vnet-centralus-2/subnets/sn
                                                        et-centralus-1"
                                                                        },
@@ -124,7 +124,7 @@ ComputeProfileComputeApiVersion                      : 2023-09-01
 ComputeProfilePlatformFaultDomainCount               : 1
 DataDiskCountMax                                     : 
 DataDiskCountMin                                     : 
-Id                                                   : /subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers
+Id                                                   : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-fleet/providers
                                                        /Microsoft.AzureFleet/fleets/testFleet
 IdentityPrincipalId                                  : 
 IdentityTenantId                                     : 
@@ -199,7 +199,7 @@ This command gets a compute fleet resource by ResourceGroupName and FleetName.
 
 ### Example 2: Get a list of compute fleet resources by SubscriptionId
 ```powershell
-Get-AzComputeFleet -SubscriptionId "ca8520e1-3c83-4b64-bb99-60a64673daa3"
+Get-AzComputeFleet -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -229,7 +229,7 @@ This command gets a list of compute fleet resources by ResourceGroupName.
 
 ### Example 4: Get a list of compute fleet resources by Identity
 ```powershell
-$fleet = Get-AzComputeFleet -SubscriptionId "ca8520e1-3c83-4b64-bb99-60a64673daa3" -ResourceGroupName "test-fleet" -FleetName "testFleet"
+$fleet = Get-AzComputeFleet -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-fleet" -FleetName "testFleet"
 Get-AzComputeFleet -InputObject $fleet
 ```
 
@@ -265,7 +265,7 @@ ComputeProfileBaseVirtualMachineProfile              : {
                                                              {
                                                                "properties": {
                                                                  "networkSecurityGroup": {
-                                                                   "id": "/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/t
+                                                                   "id": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/t
                                                        est-fleet/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-2-ni
                                                        c01"
                                                                  },
@@ -275,7 +275,7 @@ ComputeProfileBaseVirtualMachineProfile              : {
                                                                    {
                                                                      "properties": {
                                                                        "subnet": {
-                                                                         "id": "/subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGr
+                                                                         "id": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGr
                                                        oups/test-fleet/providers/Microsoft.Network/virtualNetworks/vnet-centralus-2/subnets/sn
                                                        et-centralus-1"
                                                                        },
@@ -309,7 +309,7 @@ ComputeProfileComputeApiVersion                      : 2023-09-01
 ComputeProfilePlatformFaultDomainCount               : 1
 DataDiskCountMax                                     : 
 DataDiskCountMin                                     : 
-Id                                                   : /subscriptions/ca8520e1-3c83-4b64-bb99-60a64673daa3/resourceGroups/test-fleet/providers
+Id                                                   : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-fleet/providers
                                                        /Microsoft.AzureFleet/fleets/testFleet
 IdentityPrincipalId                                  : 
 IdentityTenantId                                     : 
