@@ -1,0 +1,283 @@
+---
+external help file: Az.StackHCI-help.xml
+Module Name: Az.StackHCI
+online version: https://learn.microsoft.com/powershell/module/az.stackhci/invoke-azstackhciarcinitialization
+schema: 2.0.0
+---
+
+# Invoke-AzStackHciArcInitialization
+
+## SYNOPSIS
+Initializes Azure Arc integration on Azure Stack HCI cluster nodes, enabling hybrid management capabilities through Azure Arc.
+
+## SYNTAX
+
+```
+Invoke-AzStackHciArcInitialization [-SubscriptionID] <String> [-ResourceGroup] <String>
+ [-TenantID] <String> [-Region] <String> [-Cloud] <String> [-ArmAccessToken] <String>
+ [-AccountID] <String> [[-ComputerName] <String>] [[-Credential] <PSCredential>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The `Invoke-AzStackHciArcInitialization` cmdlet registers Azure Stack HCI (Azure Local) nodes with Azure Arc, enabling hybrid cloud management features such as extension deployment, monitoring, and policy enforcement. This is a prerequisite step before deploying Azure Local clusters.
+
+The cmdlet configures the Arc agent on each node, establishes connectivity to Azure Resource Manager, and prepares the node for cluster deployment. If the process is interrupted (e.g., due to a required reboot), you can safely rerun the cmdlet to resume from where it left off.
+
+## EXAMPLES
+
+### Example 1: Initialize Arc on the local node
+```powershell
+$token = (Get-AzAccessToken).Token
+$accountId = (Get-AzContext).Account.Id
+
+Invoke-AzStackHciArcInitialization `
+  -SubscriptionID "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" `
+  -ResourceGroup "MyHCICluster-rg" `
+  -TenantID "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f" `
+  -Region "eastus" `
+  -Cloud "AzureCloud" `
+  -ArmAccessToken $token `
+  -AccountID $accountId
+```
+
+Initializes Azure Arc on the current node using the specified subscription, resource group, and region.
+
+### Example 2: Initialize Arc on a remote node
+```powershell
+$token = (Get-AzAccessToken).Token
+$accountId = (Get-AzContext).Account.Id
+$cred = Get-Credential
+
+Invoke-AzStackHciArcInitialization `
+  -SubscriptionID "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" `
+  -ResourceGroup "MyHCICluster-rg" `
+  -TenantID "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f" `
+  -Region "eastus" `
+  -Cloud "AzureCloud" `
+  -ArmAccessToken $token `
+  -AccountID $accountId `
+  -ComputerName "HCINode02" `
+  -Credential $cred
+```
+
+Initializes Azure Arc on a remote cluster node by specifying the computer name and credentials.
+
+### Example 3: Initialize Arc for Azure Government
+```powershell
+$token = (Get-AzAccessToken).Token
+$accountId = (Get-AzContext).Account.Id
+
+Invoke-AzStackHciArcInitialization `
+  -SubscriptionID "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" `
+  -ResourceGroup "GovCluster-rg" `
+  -TenantID "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f" `
+  -Region "usgovvirginia" `
+  -Cloud "AzureUSGovernment" `
+  -ArmAccessToken $token `
+  -AccountID $accountId
+```
+
+Initializes Azure Arc registration targeting the Azure Government cloud environment.
+
+## PARAMETERS
+
+### -SubscriptionID
+The Azure subscription ID where the Azure Stack HCI cluster resource will be registered.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroup
+The name of the Azure resource group for the Azure Stack HCI cluster resource.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantID
+The Microsoft Entra tenant ID associated with the Azure subscription.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Region
+The Azure region where the Arc-enabled server resource will be created (e.g., "eastus", "westeurope").
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Cloud
+The Azure cloud environment to connect to. Valid values are "AzureCloud", "AzureUSGovernment", "AzureChinaCloud".
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: AzureCloud, AzureUSGovernment, AzureChinaCloud
+
+Required: True
+Position: 5
+Default value: AzureCloud
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArmAccessToken
+The Azure Resource Manager access token used for authentication. Obtain this using `(Get-AzAccessToken).Token`. This parameter expects a plain string, not a SecureString.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AccountID
+The Azure account ID (user principal name or service principal ID) used for authentication. Obtain this using `(Get-AzContext).Account.Id`.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ComputerName
+The name of the remote cluster node to initialize. If not specified, the cmdlet runs on the local machine.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Credential
+The credentials to use when connecting to a remote computer specified by `-ComputerName`.
+
+```yaml
+Type: System.Management.Automation.PSCredential
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Management.Automation.PSObject
+
+## NOTES
+
+### Prerequisites
+- The `Az.Accounts`, `Az.Resources`, and `Az.ConnectedMachine` modules must be installed.
+- You must have **Contributor** and **User Access Administrator** roles on the target subscription or resource group.
+- Authenticate using `Connect-AzAccount` before running this cmdlet.
+- If the node requires an OS update during Arc initialization, a reboot may be triggered. Rerun the cmdlet after reboot to complete initialization.
+
+### Troubleshooting
+- Use `Get-ArcBootstrapStatus` to check the current Arc registration status of a node.
+- If extensions are not installed after initialization, rerun the cmdlet.
+- Ensure outbound network connectivity to Azure endpoints (or configure proxy settings) before running.
+
+## RELATED LINKS
+
+[Register-AzStackHCI](register-azstackhci)
+
+[Get-AzStackHciArcSetting](get-azstackhciarcsetting)
+
+[New-AzStackHciArcSetting](new-azstackhciarcsetting)
+
+[Azure Stack HCI Arc Registration Guide](https://learn.microsoft.com/en-us/azure-stack/hci/deploy/register-hci-with-azure-arc)
