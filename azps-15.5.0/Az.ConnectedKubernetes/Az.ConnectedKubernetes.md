@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedKubernetes/ConnectedKubernetes/help/Az.ConnectedKubernetes.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedKubernetes/ConnectedKubernetes/help/Az.ConnectedKubernetes.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ConnectedKubernetes Module
 ## Description
 Microsoft Azure PowerShell: ConnectedKubernetes cmdlets
@@ -30,4 +31,5 @@ API to set properties of the connected cluster resource
 
 ### [Update-AzConnectedKubernetes](Update-AzConnectedKubernetes.md)
 API to update certain properties of the connected cluster resource
+
 

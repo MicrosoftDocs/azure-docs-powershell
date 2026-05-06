@@ -6,8 +6,9 @@ Help Version: 0.0.1.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sftp/Sftp/help/Az.Sftp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sftp/Sftp/help/Az.Sftp.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Sftp Module
 ## Description
 SFTP module for Azure Storage. Provides cmdlets to generate SSH certificates and establish secure SFTP connections to Azure Storage accounts with hierarchical namespace enabled. For more information on Azure Storage SFTP support, please visit: https://learn.microsoft.com/en-us/azure/storage/blobs/secure-file-transfer-protocol-support

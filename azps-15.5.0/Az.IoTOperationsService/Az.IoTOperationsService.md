@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Az.IoTOperationsService.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Az.IoTOperationsService.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.IoTOperationsService Module
 ## Description
 Microsoft Azure PowerShell: IoTOperationsService cmdlets
@@ -132,4 +133,5 @@ update a DataflowProfileResource
 
 ### [Update-AzIoTOperationsServiceInstance](Update-AzIoTOperationsServiceInstance.md)
 update a InstanceResource
+
 

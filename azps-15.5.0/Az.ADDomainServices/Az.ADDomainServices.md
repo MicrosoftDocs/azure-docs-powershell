@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ADDomainServices/ADDomainServices/help/Az.ADDomainServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ADDomainServices/ADDomainServices/help/Az.ADDomainServices.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ADDomainServices Module
 ## Description
 Microsoft Azure PowerShell: AdDomainServices cmdlets
@@ -32,4 +33,5 @@ The Delete Domain Service operation deletes an existing Domain Service.
 ### [Update-AzADDomainService](Update-AzADDomainService.md)
 The update Domain Service operation can be used to update the existing deployment.
 The update call only supports the properties listed in the PATCH body.
+
 
