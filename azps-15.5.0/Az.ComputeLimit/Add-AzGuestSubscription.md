@@ -73,7 +73,7 @@ Adds a subscription as a guest to consume the compute limits shared by the host 
 
 ### Example 2: Add a guest subscription in a different region with an explicit subscription
 ```powershell
-Add-AzGuestSubscription -Location "westus2" -Id "00000000-0000-0000-0000-000000000002" -SubscriptionId "00000000-0000-0000-0000-000000000099"
+Add-AzGuestSubscription -Location "westus2" -Id "00000000-0000-0000-0000-000000000002" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
