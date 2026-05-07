@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Pinecone/Pinecone/help/Az.Pinecone.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Pinecone/Pinecone/help/Az.Pinecone.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Pinecone Module
 ## Description
 Microsoft Azure PowerShell: Pinecone cmdlets
@@ -15,4 +16,5 @@ Microsoft Azure PowerShell: Pinecone cmdlets
 ## Az.Pinecone Cmdlets
 ### [Get-AzPineconeOrganization](Get-AzPineconeOrganization.md)
 Get a OrganizationResource
+
 

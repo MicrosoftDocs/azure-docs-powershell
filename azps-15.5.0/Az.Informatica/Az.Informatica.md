@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/Az.Informatica.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/Az.Informatica.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Informatica Module
 ## Description
 Microsoft Azure PowerShell: Informatica cmdlets
@@ -51,4 +52,5 @@ Update a InformaticaOrganizationResource
 
 ### [Update-AzInformaticaServerlessRuntime](Update-AzInformaticaServerlessRuntime.md)
 Update a InformaticaServerlessRuntimeResource
+
 

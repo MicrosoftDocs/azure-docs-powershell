@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/GraphServices/GraphServices/help/Az.GraphServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/GraphServices/GraphServices/help/Az.GraphServices.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.GraphServices Module
 ## Description
 Microsoft Azure PowerShell: GraphServices cmdlets
@@ -24,4 +25,5 @@ Deletes a account resource.
 
 ### [Update-AzGraphServicesAccount](Update-AzGraphServicesAccount.md)
 update account details.
+
 

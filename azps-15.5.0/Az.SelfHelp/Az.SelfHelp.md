@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Az.SelfHelp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Az.SelfHelp.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.SelfHelp Module
 ## Description
 Microsoft Azure PowerShell: SelfHelp cmdlets
@@ -91,4 +92,5 @@ Ends the troubleshooter action
 
 ### [Update-AzSelfHelpSolution](Update-AzSelfHelpSolution.md)
 update the requiredInputs or additional information needed to execute the solution
+
 

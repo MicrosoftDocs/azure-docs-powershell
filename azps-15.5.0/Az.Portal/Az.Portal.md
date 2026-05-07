@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Portal/Portal/help/Az.Portal.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Portal/Portal/help/Az.Portal.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Portal Module
 ## Description
 Microsoft Azure PowerShell: Portal Dashboard cmdlets
@@ -27,4 +28,5 @@ Creates or updates a Dashboard.
 
 ### [Update-AzPortalDashboard](Update-AzPortalDashboard.md)
 update an existing Dashboard.
+
 
