@@ -89,11 +89,17 @@ platforms including Windows, Linux, and macOS.
    tar zxf $downloadFilePath -C $downloadFolderPath
    ```
 
+1. Change into the download folder.
+
+   ```powershell
+   Set-Location -Path $downloadFolderPath
+   ```
+
 1. Run the `InstallModule.ps1` script that's one of the extracted files on the offline system where
    you want to install the Az PowerShell module.
 
    ```powershell
-   .$downloadFolderPath/InstallModule.ps1
+   ./InstallModule.ps1
    ```
 
 ### Save and copy installation
