@@ -105,6 +105,7 @@ For detailed information about breaking changes in major releases of the **Az** 
 see the following articles.
 
 - [Upcoming breaking changes](upcoming-breaking-changes.md)
+- [Az 16.0.0 breaking changes](migrate-az-16.0.0.md)
 - [Az 15.0.0 breaking changes](migrate-az-15.0.0.md)
 - [Az 14.0.0 breaking changes](migrate-az-14.0.0.md)
 - [Az 13.0.0 breaking changes](migrate-az-13.0.0.md)
