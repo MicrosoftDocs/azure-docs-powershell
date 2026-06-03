@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.search/get-azse
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Get-AzSearchQueryKey.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Get-AzSearchQueryKey.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Get-AzSearchQueryKey
 
 ## SYNOPSIS
@@ -147,3 +148,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzSearchQueryKey.md](./New-AzSearchQueryKey.md)
 
 [Remove-AzSearchQueryKey.md](./Remove-AzSearchQueryKey.md)
+
