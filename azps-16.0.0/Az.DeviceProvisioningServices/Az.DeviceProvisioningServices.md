@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Az.DeviceProvisioningServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Az.DeviceProvisioningServices.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.DeviceProvisioningServices Module
 ## Description
 Commands for Managing Azure IoT Hub Device Provisioning Service.
@@ -93,4 +94,5 @@ Update a shared access policy in an Azure IoT Hub device provisioning service.
 
 ### [Update-AzIoTDeviceProvisioningServiceLinkedHub](Update-AzIoTDeviceProvisioningServiceLinkedHub.md)
 Update a linked IoT hub in an Azure IoT Hub device provisioning service.
+
 

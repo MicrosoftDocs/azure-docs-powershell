@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.managementpartn
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagementPartner/ManagementPartner/help/Update-AzManagementPartner.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagementPartner/ManagementPartner/help/Update-AzManagementPartner.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Update-AzManagementPartner
 
 ## SYNOPSIS
@@ -122,3 +123,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzManagementPartner](./New-AzManagementPartner.md)
 
 [Get-AzManagementPartner](./Get-AzManagementPartner.md)
+

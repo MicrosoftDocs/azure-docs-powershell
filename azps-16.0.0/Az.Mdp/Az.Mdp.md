@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Mdp/Mdp/help/Az.Mdp.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Mdp/Mdp/help/Az.Mdp.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Mdp Module
 ## Description
 Microsoft Azure PowerShell: Mdp cmdlets
@@ -30,4 +31,5 @@ Delete a Pool
 
 ### [Update-AzMdpPool](Update-AzMdpPool.md)
 update a Pool
+
 

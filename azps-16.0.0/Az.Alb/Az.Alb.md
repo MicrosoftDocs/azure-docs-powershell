@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Alb/Alb/help/Az.Alb.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Alb/Alb/help/Az.Alb.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Alb Module
 ## Description
 Microsoft Azure PowerShell: Alb cmdlets
@@ -60,4 +61,5 @@ update a Frontend
 
 ### [Update-AzAlbSecurityPolicyWaf](Update-AzAlbSecurityPolicyWaf.md)
 update a SecurityPolicy
+
 

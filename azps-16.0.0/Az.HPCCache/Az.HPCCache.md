@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HPCCache/HPCCache/help/Az.HPCCache.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HPCCache/HPCCache/help/Az.HPCCache.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.HPCCache Module
 ## Description
 HPC Cache
@@ -51,4 +52,5 @@ Stops HPC cache.
 
 ### [Update-AzHpcCache](Update-AzHpcCache.md)
 Updates a HPC Cache.
+
 
