@@ -34,7 +34,7 @@ Removes the SCVmm fabric from Azure.
 
 ### Example 1: Remove VMM Server resource
 ```powershell
-Remove-AzScVmmServer -Name "test-vmmserver-01" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Remove-AzScVmmServer -Name "test-vmmserver-01" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Removes the given VMM Server resource from Azure.
@@ -224,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
