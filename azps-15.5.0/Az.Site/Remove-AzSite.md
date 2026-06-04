@@ -28,7 +28,7 @@ Delete a Site from different scopes: Resource Group, Subscription, or Service Gr
 
 ### Example 1: Remove a site at resource group scope
 ```powershell
-Remove-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "12345678-1234-1234-1234-123456789012"
+Remove-AzSite -Name "mysite-001" -ResourceGroupName "rg-sites" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Remove an Azure Edge Site at resource group scope.
@@ -36,7 +36,7 @@ The command completes silently upon successful deletion.
 
 ### Example 2: Remove a site at subscription scope
 ```powershell
-Remove-AzSite -Name "global-site-001" -SubscriptionId "12345678-1234-1234-1234-123456789012"
+Remove-AzSite -Name "global-site-001" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Remove an Azure Edge Site that exists at the subscription scope.
@@ -234,4 +234,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
