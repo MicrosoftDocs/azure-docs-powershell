@@ -61,7 +61,7 @@ This command lists VMM Servers in provided subscription.
 
 ### Example 2: List VMM Servers in a Resource Group
 ```powershell
-Get-AzScVmmServer -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -ResourceGroupName "test-rg-01"
+Get-AzScVmmServer -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-rg-01"
 ```
 
 ```output
@@ -75,7 +75,7 @@ This command lists VMM Servers in provided Resource Group.
 
 ### Example 3: Get a specific VMM Server
 ```powershell
-Get-AzScVmmServer -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -ResourceGroupName "test-rg-01" -Name "test-vmmserver-01"
+Get-AzScVmmServer -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-rg-01" -Name "test-vmmserver-01"
 ```
 
 ```output
@@ -83,10 +83,10 @@ ConnectionStatus             : Connected
 CredentialsPassword          : 
 CredentialsUsername          : scvmm-username
 ErrorMessage                 : 
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
 Fqdn                         : vmmServerFqdn
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 Location                     : eastus
 Name                         : test-vmmserver-01
 Port                         : 8100
@@ -201,4 +201,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
