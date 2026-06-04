@@ -27,12 +27,12 @@ The **New-AzNetworkManagerStaticMember** cmdlet creates a network manager static
 
 ### Example 1
 ```powershell
-$vnetId = "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnet"
+$vnetId = "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnet"
 New-AzNetworkManagerStaticMember -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" -NetworkGroupName "psNetworkGroup" -Name "psStaticMember" -ResourceId $vnetId
 ```
 
 ```output
-ResourceId        : /subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnet
+ResourceId        : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnet
 DisplayName       :
 Description       :
 Type              : Microsoft.Network/networkManagers/networkGroups/staticMembers
