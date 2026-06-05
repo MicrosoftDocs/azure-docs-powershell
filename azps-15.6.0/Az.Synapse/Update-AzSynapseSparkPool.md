@@ -101,7 +101,7 @@ This command updates an Apache Spark pool in Azure Synapse Analytics through pip
 
 ### Example 4
 ```powershell
-Update-AzSynapseSparkPool -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/bigDataPools/ContosoSparkPool -Tag @{"key" = "value3"}
+Update-AzSynapseSparkPool -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/bigDataPools/ContosoSparkPool -Tag @{"key" = "value3"}
 ```
 
 This command updates an Apache Spark pool in Azure Synapse Analytics with resource ID.
