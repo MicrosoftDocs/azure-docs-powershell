@@ -44,7 +44,7 @@ Implements Cloud GET method.
 
 ### Example 1: Get Cloud By Subscription Id
 ```powershell
-Get-AzScVmmCloud -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Get-AzScVmmCloud -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -62,7 +62,7 @@ This command lists Cloud in provided subscription.
 
 ### Example 2: Get Cloud By ResourceGroup
 ```powershell
-Get-AzScVmmCloud -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -ResourceGroupName "test-rg-01"
+Get-AzScVmmCloud -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-rg-01"
 ```
 
 ```output
@@ -77,7 +77,7 @@ This command lists Cloud in provided Resource Group.
 
 ### Example 3: Get Cloud
 ```powershell
-Get-AzScVmmCloud -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -ResourceGroupName "test-rg-01" -Name "test-cloud"
+Get-AzScVmmCloud -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-rg-01" -Name "test-cloud"
 ```
 
 ```output
@@ -85,10 +85,10 @@ CapacityCpuCount             : 10
 CapacityMemoryMb             : 10240
 CapacityVMCount              : 10
 CloudName                    : test-cloud
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/clouds/test-cloud
-InventoryItemId              : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0002-000000000000
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/clouds/test-cloud
+InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0002-000000000000
 Location                     : eastus
 Name                         : test-cloud
 ProvisioningState            : Succeeded
@@ -105,7 +105,7 @@ Tag                          : {
                                }
 Type                         : microsoft.scvmm/clouds
 Uuid                         : 00000000-1111-0000-0002-000000000000
-VmmServerId                  : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+VmmServerId                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 ```
 
 This command gets the Cloud named `test-cloud` in the resource group named `test-rg-01`.
@@ -204,4 +204,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
