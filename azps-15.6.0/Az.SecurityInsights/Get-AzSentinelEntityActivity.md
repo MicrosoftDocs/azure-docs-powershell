@@ -41,14 +41,14 @@ Name         : 876fda24-fe06-62b7-7dca-bced167a0ca3
 
 FriendlyName : 52.166.111.66
 Kind         : Ip
-Name         : 4ebb68f3-a435-fac0-d3b6-94712d246f0a
+Name         : 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 ```
 
 This command gets insights and activities for an Entity.
 
 ### Example 2: Get Insights and Activities for an Entity by Id
 ```powershell
-$Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "4ebb68f3-a435-fac0-d3b6-94712d246f0a"
+$Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
  $Entity | Get-AzSentinelEntityActivity
 ```
 
