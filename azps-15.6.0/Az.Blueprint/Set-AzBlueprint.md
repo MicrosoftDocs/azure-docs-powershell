@@ -34,7 +34,7 @@ Update a blueprint definition and save it within the specified subscription or m
 
 ### Example 1
 ```powershell
-Set-AzBlueprint -Name MyBlueprint -SubscriptionId 00000000-1111-0000-1111-000000000000 -BlueprintFile C:\Blueprint.json
+Set-AzBlueprint -Name MyBlueprint -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -BlueprintFile C:\Blueprint.json
 ```
 
 ```output
@@ -173,4 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
