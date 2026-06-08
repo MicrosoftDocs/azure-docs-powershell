@@ -44,7 +44,7 @@ create an SmtpUsernameResource.
 
 ### Example 1: Create a SMTP Username resource
 ```powershell
-New-AzCommunicationServiceSmtpUsername -SmtpUsername ContosoSmtpUsernameResource1 -CommunicationServiceName ContosoAcsResource1 -ResourceGroupName ContosoResourceProvider1 -EntraApplicationId 1ebe1d1a-1111-1111-1c11-11ad111bf111 -TenantId 11f111b1-11f1-11af-11ab-1d1cd111db11 -Username ContosoUsername1
+New-AzCommunicationServiceSmtpUsername -SmtpUsername ContosoSmtpUsernameResource1 -CommunicationServiceName ContosoAcsResource1 -ResourceGroupName ContosoResourceProvider1 -EntraApplicationId 1ebe1d1a-1111-1111-1c11-11ad111bf111 -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee -Username ContosoUsername1
 ```
 
 ```output
@@ -58,7 +58,7 @@ SystemDataCreatedByType      : User
 SystemDataLastModifiedAt     : 25-02-2025 11:24:05
 SystemDataLastModifiedBy     : newuser1@contoso.com
 SystemDataLastModifiedByType : User
-TenantId                     : aaaa1111-bbbb-2222-3333-aaaa11112222
+TenantId                     : bbbbcccc-1111-dddd-2222-eeee3333ffff
 Type                         : microsoft.communication/communicationservices/smtpusernames
 Username                     : ContosoUsername1
 ```
@@ -264,4 +264,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
