@@ -36,13 +36,13 @@ Approve or reject a private endpoint connection with a given name.
 
 ### Example 1: Create a new PrivateEndpointConnection in a cluster
 ```powershell
-New-AzKustoPrivateEndpointConnection -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "12345678-1234-1234-1234-123456789098" -Parameter $privateEndpointConnection -Name "testprivateconnection-12345678-1234-1234-1234-123456789098"
+New-AzKustoPrivateEndpointConnection -ClusterName "mycluster" -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Parameter $privateEndpointConnection -Name "testprivateconnection-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
 Name                                                       	Type
 ----                                                       	----
-testprivateconnection-12345678-1234-1234-1234-123456789098  Microsoft.Kusto/Clusters/PrivateEndpointConnections
+testprivateconnection-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e  Microsoft.Kusto/Clusters/PrivateEndpointConnections
 ```
 
 The above command creates a new PrivateEndpointConnection in the cluster "mycluster" found in the resource group "testrg".
