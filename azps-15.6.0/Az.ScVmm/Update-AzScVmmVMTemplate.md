@@ -47,7 +47,7 @@ Update the VirtualMachineTemplate resource.
 
 ### Example 1: Update Tag in Virtual Machine Template resource
 ```powershell
-Update-AzScVmmVMTemplate -Name "test-vmt" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -Tag @{"key-1"="value-1"}
+Update-AzScVmmVMTemplate -Name "test-vmt" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Tag @{"key-1"="value-1"}
 ```
 
 ```output
@@ -70,11 +70,11 @@ Disk                         : {{
 DynamicMemoryEnabled         : false
 DynamicMemoryMaxMb           :
 DynamicMemoryMinMb           :
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
 Generation                   : 1
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/VirtualNetworks/test-vmt
-InventoryItemId              : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/VirtualNetworks/test-vmt
+InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
 IsCustomizable               : true
 IsHighlyAvailable            : false
 LimitCpuForMigration         : false
@@ -84,7 +84,7 @@ Name                         : test-vmt
 NetworkInterface             : {{
                                  "name": "nic_1",
                                  "displayName": "Network Adapter 1",
-                                 "virtualNetworkId": "/subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/provid
+                                 "virtualNetworkId": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/provid
                                ers/Microsoft.SCVMM/VirtualNetworks/test-vnet",
                                  "networkName": "00000000-1111-0000-0001-000000000000",
                                  "ipv4AddressType": "Dynamic",
@@ -107,7 +107,7 @@ Tag                          : {
                                }
 Type                         : microsoft.scvmm/virtualnetworks
 Uuid                         : 00000000-1111-0000-0001-000000000000
-VmmServerId                  : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+VmmServerId                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 ```
 
 Updates the tag on the SCVMM Virtual Machine Template resource on Azure.
@@ -312,4 +312,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
