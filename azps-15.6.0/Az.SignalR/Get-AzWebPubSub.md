@@ -45,7 +45,7 @@ Get the resource and its properties.
 
 ### Example 1: List all Web PubSub resources in a subscription
 ```powershell
-Get-AzWebPubSub -SubscriptionId ef72249e-9785-4799-a76b-7cdd80e1b1d0
+Get-AzWebPubSub -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
