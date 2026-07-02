@@ -28,7 +28,7 @@ VirtualMachinesExecuteDeallocate: Execute deallocate operation for a batch of vi
 
 ### Example 1: Deallocate a batch of virtual machines immediately
 ```powershell
-Invoke-AzComputeScheduleExecuteDeallocate -Location "eastus2euap" -CorrelationId "0736f2d2-2708-4ed1-a567-e64ffe857ad9" -ResourceId "/subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85190", "/subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85253" -SubscriptionId "ed5d2ee7-ede1-44bd-97a2-369489bbefe4" -RetryCount 2 -RetryWindowInMinutes 30 | Format-List
+Invoke-AzComputeScheduleExecuteDeallocate -Location "eastus2euap" -CorrelationId "aaaa0000-bb11-2222-33cc-444444dddddd" -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85190", "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85253" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -RetryCount 2 -RetryWindowInMinutes 30 | Format-List
 ```
 
 ```output
@@ -41,14 +41,14 @@ Result      : {{
                     "retryWindowInMinutes": 30
                   },
                   "operationId": "7eebe846-f687-463d-aa68-3c7485ce28a3",
-                  "resourceId": "/subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85190",
+                  "resourceId": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85190",
                   "opType": "Deallocate",
-                  "subscriptionId": "ed5d2ee7-ede1-44bd-97a2-369489bbefe4",
+                  "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
                   "deadline": "2024-12-25T23:00:00.0000000Z",
                   "deadlineType": "InitiateAt",
                   "state": "Succeeded"
                 },
-                "resourceId": "/subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85190"
+                "resourceId": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85190"
               }}
 Type        : VirtualMachines
 
@@ -61,14 +61,14 @@ Result      : {{
                     "retryWindowInMinutes": 30
                   },
                   "operationId": "7eebe846-f687-463d-aa68-3c7485ce28a3",
-                  "resourceId": "/subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85253",
+                  "resourceId": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85253",
                   "opType": "Deallocate",
-                  "subscriptionId": "ed5d2ee7-ede1-44bd-97a2-369489bbefe4",
+                  "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
                   "deadline": "2024-12-25T23:00:00.0000000Z",
                   "deadlineType": "InitiateAt",
                   "state": "Succeeded"
                 },
-                "resourceId": "/subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85253"
+                "resourceId": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.Compute/virtualMachines/pwshtest85253"
               }}
 Type        : VirtualMachines
 ```
@@ -227,4 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
