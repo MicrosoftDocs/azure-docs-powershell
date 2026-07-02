@@ -27,14 +27,14 @@ The **Get-AzManagementGroupSubscription** cmdlet gets the subscription info unde
 
 ### Example 1: Get Subscription Details under a Management Group
 ```powershell
-Get-AzManagementGroupSubscription -GroupName "TestGroup" -SubscriptionId 5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+Get-AzManagementGroupSubscription -GroupName "TestGroup" -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
-Name              : 5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+Name              : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Type              : Microsoft.Management/managementGroups/subscriptions
-Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : Visual Studio Enterprise Subscription
 ParentId          : /providers/Microsoft.Management/managementGroups/TestGroup
 State             : Active
@@ -46,10 +46,10 @@ Get-AzManagementGroupSubscription -GroupName "TestGroup"
 ```
 
 ```output
-Name              : 5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+Name              : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Type              : Microsoft.Management/managementGroups/subscriptions
-Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : Visual Studio Enterprise Subscription
 ParentId          : /providers/Microsoft.Management/managementGroups/TestGroup
 State             : Active
@@ -57,7 +57,7 @@ State             : Active
 Name              : 2120692d-35c3-44c8-81f5-631fa7351726
 Type              : Microsoft.Management/managementGroups/subscriptions
 Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/2120692d-35c3-44c8-81f5-631fa7351726
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 DisplayName       : Test Subscription
 ParentId          : /providers/Microsoft.Management/managementGroups/TestGroup
 State             : Active
