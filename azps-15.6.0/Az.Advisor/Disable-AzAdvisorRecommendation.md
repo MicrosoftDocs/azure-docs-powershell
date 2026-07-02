@@ -39,7 +39,7 @@ Disable an Azure Advisor recommendation.
 
 ### Example 1: Disable recommendation by recommendation name
 ```powershell
-Disable-AzAdvisorRecommendation -RecommendationName 42963553-61de-5334-2d2e-47f3a0099d41 -Day 1
+Disable-AzAdvisorRecommendation -RecommendationName b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2 -Day 1
 ```
 
 ```output
@@ -52,7 +52,7 @@ Disable recommendation by recommendation name
 
 ### Example 2: Disable recommendation by recommendation resource id
 ```powershell
-Disable-AzAdvisorRecommendation -ResourceId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/automanagehcrprg/providers/microsoft.compute/virtualmachines/arcbox-capi-mgmt/providers/Microsoft.Advisor/recommendations/42963553-61de-5334-2d2e-47f3a0099d41 -Day 1
+Disable-AzAdvisorRecommendation -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/automanagehcrprg/providers/microsoft.compute/virtualmachines/arcbox-capi-mgmt/providers/Microsoft.Advisor/recommendations/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2 -Day 1
 ```
 
 ```output
