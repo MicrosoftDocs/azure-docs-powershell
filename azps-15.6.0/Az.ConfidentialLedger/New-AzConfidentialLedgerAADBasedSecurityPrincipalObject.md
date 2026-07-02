@@ -28,7 +28,7 @@ Create an in-memory object for AADBasedSecurityPrincipal.
 ```powershell
 New-AzConfidentialLedgerAADBasedSecurityPrincipalObject `
   -LedgerRoleName "Administrator" `
-  -PrincipalId "ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0" `
+  -PrincipalId "aaaaaaaa-bbbb-cccc-1111-222222222222" `
   -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee"
 ```
 
