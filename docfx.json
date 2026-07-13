@@ -1,9 +1,9 @@
 {
     "build": {
         "content": [
-            { "files": ["toc.yml"], "src": "azps-16.0.0", "version": "azps-16.0.0", "dest": "module/azure-powershell" },
-            { "files": ["**/*.yml"], "src": "azps-16.0.0", "version": "azps-16.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
-            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-16.0.0", "version": "azps-16.0.0", "dest": "azure" },
+            { "files": ["toc.yml"], "src": "azps-16.1.0", "version": "azps-16.1.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-16.1.0", "version": "azps-16.1.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-16.1.0", "version": "azps-16.1.0", "dest": "azure" },
 
             { "files": ["toc.yml"], "src": "azps-15.6.0", "version": "azps-15.6.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-15.6.0", "version": "azps-15.6.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
@@ -24,12 +24,12 @@
             }
         ],
         "resource": [
-            { "files": ["media/**"], "version": "azps-16.0.0" },
+            { "files": ["media/**"], "version": "azps-16.1.0" },
             { "files": ["media/**"], "version": "azps-15.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
-            "azps-16.0.0": { "dest": "azps-16.0.0" },
+            "azps-16.1.0": { "dest": "azps-16.1.0" },
             "azps-15.6.0": { "dest": "azps-15.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" }
         },
@@ -388,7 +388,7 @@
                 "docs-conceptual/**/*": "concept-article"
             },
             "ms.date": {
-                "azps-16.0.0/**/*": "6/02/2026",
+                "azps-16.1.0/**/*": "7/08/2026",
                 "azps-15.6.0/**/*": "5/05/2026",
                 "azps-0.10.0/**/*": "4/14/2020"
             },
@@ -410,8 +410,8 @@
             "ROBOTS": {
             },
             "feedback_system": {
-                "azps-16.0.0/**/*": "OpenSource",
-                "docs-conceptual/azps-16.0.0/*": "OpenSource",
+                "azps-16.1.0/**/*": "OpenSource",
+                "docs-conceptual/azps-16.1.0/*": "OpenSource",
                 "azps-15.6.0/**/*": "None",
                 "docs-conceptual/azps-15.6.0/*": "None",
                 "aztools/**/*": "OpenSource",
