@@ -388,7 +388,7 @@
                 "docs-conceptual/**/*": "concept-article"
             },
             "ms.date": {
-                "azps-16.1.0/**/*": "7/08/2026",
+                "azps-16.1.0/**/*": "7/07/2026",
                 "azps-15.6.0/**/*": "5/05/2026",
                 "azps-0.10.0/**/*": "4/14/2020"
             },
@@ -457,7 +457,7 @@
             "author": "mikefrobbins",
             "ms.manager": "jasongroce",
             "uhfHeaderId": "Azure",
-            "ms.date": "6/2/2026"
+            "ms.date": "7/7/2026"
         },
         "dest": "azureps",
         "lruSize": 0,
