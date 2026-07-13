@@ -33,8 +33,8 @@ Update-AzManagementPartner -PartnerId 4977985
 ```output
 PartnerId   : 4977985
 PartnerName : Test_Test_DPORTest
-TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
-ObjectId    : aa67f786-0552-423e-8849-244ed12bf581
+TenantId    : aaaabbbb-0000-cccc-1111-dddd2222eeee
+ObjectId    : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 State       : Active
 ```
 
@@ -123,4 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzManagementPartner](./New-AzManagementPartner.md)
 
 [Get-AzManagementPartner](./Get-AzManagementPartner.md)
-

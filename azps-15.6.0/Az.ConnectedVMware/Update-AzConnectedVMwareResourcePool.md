@@ -49,7 +49,7 @@ API to Update certain properties of the resourcePool resource.
 
 ### Example 1: Update Resource Pool
 ```powershell
-Update-AzConnectedVMwareResourcePool -Name "test-rp" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d" -Tag @{"rp"="test"}
+Update-AzConnectedVMwareResourcePool -Name "test-rp" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Tag @{"rp"="test"}
 ```
 
 ```output
@@ -59,11 +59,11 @@ CpuOverallUsageMHz           : 1030
 CpuReservationMHz            :
 CpuSharesLevel               : normal
 CustomResourceName           : e296ddc2-ab72-4bba-9bf9-9fb18abaabf7
-DatastoreId                  : {/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/Datastores/test-datastore}
-ExtendedLocationName         : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+DatastoreId                  : {/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/Datastores/test-datastore}
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
 ExtendedLocationType         : CustomLocation
-Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/resourcePools/test-rp
-InventoryItemId              : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/resgroup-724471
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/resourcePools/test-rp
+InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/resgroup-724471
 Kind                         :
 Location                     : eastus
 MemCapacityGb                : 344
@@ -74,7 +74,7 @@ MemSharesLevel               : normal
 MoName                       : test-rp
 MoRefId                      : resgroup-724471
 Name                         : test-rp
-NetworkId                    : {/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VirtualNetworks/test-vnet}
+NetworkId                    : {/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VirtualNetworks/test-vnet}
 ProvisioningState            : Succeeded
 ResourceGroupName            : test-rg
 Statuses                     : {{
@@ -97,7 +97,7 @@ Tag                          : {
                                }
 Type                         : microsoft.connectedvmwarevsphere/resourcepools
 Uuid                         : e296ddc2-ab72-4bba-9bf9-9fb18abaabf7
-VCenterId                    : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc
+VCenterId                    : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc
 ```
 
 This command update tag of a Resource Pool named `test-rp` in a resource group named `test-rg`.
@@ -270,4 +270,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

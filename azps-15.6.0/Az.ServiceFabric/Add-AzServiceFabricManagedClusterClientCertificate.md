@@ -51,16 +51,16 @@ Add certificate common name or thumbprint to the cluster. This will register the
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-Add-AzServiceFabricManagedClusterClientCertificate -ResourceGroupName $rgName -ClusterName $clusterName -Thumbprint 5F3660C715EBBDA31DB1FFDCF508302348DE8E7A -Admin
+Add-AzServiceFabricManagedClusterClientCertificate -ResourceGroupName $rgName -ClusterName $clusterName -Thumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00 -Admin
 ```
 
-This command will add the certificate with thumbprint '5F3660C715EBBDA31DB1FFDCF508302348DE8E7A' to the cluster, so the client can use the certificate as admin to communicate with the cluster.
+This command will add the certificate with thumbprint 'AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00' to the cluster, so the client can use the certificate as admin to communicate with the cluster.
 
 ### Example 2
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-Add-AzServiceFabricManagedClusterClientCertificate -ResourceGroupName $rgName -ClusterName $clusterName -CommonName 'Contoso.com' -IssuerThumbprint 5F3660C715EBBDA31DB1FFDCF508302348DE8E7A, 5F3660C715EBBDA31DB1FFDCF508302348DE8E7B
+Add-AzServiceFabricManagedClusterClientCertificate -ResourceGroupName $rgName -ClusterName $clusterName -CommonName 'Contoso.com' -IssuerThumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00, 5F3660C715EBBDA31DB1FFDCF508302348DE8E7B
 ```
 
 This command will add a read only client certificate with common name 'Contoso.com' and 2 issuers.
@@ -70,7 +70,7 @@ This command will add a read only client certificate with common name 'Contoso.c
 $rgName = "testRG"
 $clusterName = "testCluster"
 $cluster = Get-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Name $clusterName
-$cluster | Add-AzServiceFabricManagedClusterClientCertificate -CommonName 'Contoso.com' -IssuerThumbprint 5F3660C715EBBDA31DB1FFDCF508302348DE8E7A, 5F3660C715EBBDA31DB1FFDCF508302348DE8E7B
+$cluster | Add-AzServiceFabricManagedClusterClientCertificate -CommonName 'Contoso.com' -IssuerThumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00, 5F3660C715EBBDA31DB1FFDCF508302348DE8E7B
 ```
 
 This command will add a read only client certificate with common name 'Contoso.com' and 2 issuers, with piping.

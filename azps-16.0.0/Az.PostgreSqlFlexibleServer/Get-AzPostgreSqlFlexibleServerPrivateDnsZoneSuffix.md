@@ -1,0 +1,100 @@
+---
+external help file: Az.PostgreSqlFlexibleServer-help.xml
+Module Name: Az.PostgreSqlFlexibleServer
+online version: https://learn.microsoft.com/powershell/module/az.postgresqlflexibleserver/get-azpostgresqlflexibleserverprivatednszonesuffix
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSqlFlexibleServer/PostgreSqlFlexibleServer/help/Get-AzPostgreSqlFlexibleServerPrivateDnsZoneSuffix.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSqlFlexibleServer/PostgreSqlFlexibleServer/help/Get-AzPostgreSqlFlexibleServerPrivateDnsZoneSuffix.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+---
+# Get-AzPostgreSqlFlexibleServerPrivateDnsZoneSuffix
+
+## SYNOPSIS
+Gets the private DNS zone suffix.
+
+## SYNTAX
+
+```
+Get-AzPostgreSqlFlexibleServerPrivateDnsZoneSuffix [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+Gets the private DNS zone suffix.
+
+## EXAMPLES
+
+### Example 1: Get the suffix that should be appended to private DNS zones for flexible server
+```powershell
+Get-AzPostgreSqlFlexibleServerPrivateDnsZoneSuffix
+```
+
+```output
+"postgres.database.azure.com"
+```
+
+Get the suffix that should be appended to private DNS zones associated to servers with network topology integrated in a virtual network owned by customer.
+
+## PARAMETERS
+
+### -DefaultProfile
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+### System.String
+
+## NOTES
+
+## RELATED LINKS
+

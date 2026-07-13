@@ -48,7 +48,7 @@ Solution discovery using natural language processing.
 
 ### Example 1: Discover Solution using natural language at subscription scope
 ```powershell
-Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope -SubscriptionId "6bded6d5-a6af-43e1-96d3-bf71f6f5f8ba" -IssueSummary "Billing Issues"
+Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -IssueSummary "Billing Issues"
 ```
 
 ```output
@@ -242,4 +242,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
