@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Az.TimeSeriesInsights.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Az.TimeSeriesInsights.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.TimeSeriesInsights Module
 ## Description
 Microsoft Azure PowerShell: TimeSeriesInsights cmdlets
@@ -60,4 +61,5 @@ Updates the event source with the specified name in the specified subscription, 
 
 ### [Update-AzTimeSeriesInsightsReferenceDataSet](Update-AzTimeSeriesInsightsReferenceDataSet.md)
 Updates the reference data set with the specified name in the specified subscription, resource group, and environment.
+
 

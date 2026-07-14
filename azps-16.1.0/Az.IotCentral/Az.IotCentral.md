@@ -6,8 +6,9 @@ Help Version: 0.1.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Az.IotCentral.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Az.IotCentral.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.IotCentral Module
 ## Description
 Provides CRUD Management for IoT Central Applications.
@@ -24,4 +25,5 @@ Deletes an IoT Central Application.
 
 ### [Set-AzIotCentralApp](Set-AzIotCentralApp.md)
 Updates the metadata for an IoT Central Application.
+
 
