@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeLimit/ComputeLimit/help/Az.ComputeLimit.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeLimit/ComputeLimit/help/Az.ComputeLimit.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.ComputeLimit Module
 ## Description
 Microsoft Azure PowerShell: ComputeLimit cmdlets
@@ -30,4 +31,5 @@ Deletes a subscription as a guest to stop consuming the compute limits shared by
 
 ### [Remove-AzSharedLimit](Remove-AzSharedLimit.md)
 Disables sharing of a compute limit by the host subscription with its guest subscriptions.
+
 

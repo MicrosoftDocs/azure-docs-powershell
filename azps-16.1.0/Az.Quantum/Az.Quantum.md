@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/Az.Quantum.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/Az.Quantum.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.Quantum Module
 ## Description
 Microsoft Azure PowerShell: Quantum cmdlets
@@ -33,4 +34,5 @@ Check the availability of the resource name.
 
 ### [Update-AzQuantumWorkspace](Update-AzQuantumWorkspace.md)
 update an existing workspace's tags.
+
 
