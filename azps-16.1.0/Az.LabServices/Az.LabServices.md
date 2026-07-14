@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Az.LabServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Az.LabServices.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.LabServices Module
 ## Description
 Microsoft Azure PowerShell: LabServices cmdlets
@@ -121,4 +122,5 @@ Operation to update a lab user.
 ### [Update-AzLabServicesVMReimage](Update-AzLabServicesVMReimage.md)
 Re-image a lab virtual machine.
 The virtual machine will be deleted and recreated using the latest published snapshot of the reference environment of the lab.
+
 
