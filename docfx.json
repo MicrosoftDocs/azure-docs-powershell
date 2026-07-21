@@ -52,7 +52,7 @@
                 "az*-*/Az*.Backup/*.yml": "azure-backup",
                 "az*-*/Az*.Batch/*.yml": "azure-batch",
                 "az*-*/Az*.Billing/*.yml": "cost-management-billing",
-                "az*-*/Az*.Cdn/*.yml": "azure-cdn",
+                "az*-*/Az*.Cdn/*.yml": "azure-content-delivery-network",
                 "az*-*/Az*.CognitiveServices/*.yml": "foundry-tools",
                 "az*-*/Az*.Compute/*.yml": "azure-virtual-machines",
                 "az*-*/Az*.ContainerInstance/*.yml": "azure-container-instances",
