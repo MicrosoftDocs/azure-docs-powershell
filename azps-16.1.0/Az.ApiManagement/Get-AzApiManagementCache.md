@@ -40,8 +40,8 @@ Get-AzApiManagementCache -Context $apimContext
 CacheId           : westus
 Description       : apim.redis.cache.windows.net
 ConnectionString  : {{5cc1848125a3f724dcf9a928}}
-ResourceId        : https://management.azure.com/subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/Api-Default-West-US/providers/Microsoft.Cache/Redis/apim
-Id                : /subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/caches/westus
+ResourceId        : https://management.azure.com/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Api-Default-West-US/providers/Microsoft.Cache/Redis/apim
+Id                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/caches/westus
 ResourceGroupName : Api-Default-West-US
 ServiceName       : contoso
 ```
@@ -58,8 +58,8 @@ Get-AzApiManagementCache -Context $apimContext -cacheId westus
 CacheId           : westus
 Description       : apim.redis.cache.windows.net
 ConnectionString  : {{5cc1848125a3f724dcf9a928}}
-ResourceId        : https://management.azure.com/subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/Api-Default-West-US/providers/Microsoft.Cache/Redis/apim
-Id                : /subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/caches/westus
+ResourceId        : https://management.azure.com/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Api-Default-West-US/providers/Microsoft.Cache/Redis/apim
+Id                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Api-Default-WestUS/providers/Microsoft.ApiManagement/service/contoso/caches/westus
 ResourceGroupName : Api-Default-WestUS
 ServiceName       : contoso
 ```
