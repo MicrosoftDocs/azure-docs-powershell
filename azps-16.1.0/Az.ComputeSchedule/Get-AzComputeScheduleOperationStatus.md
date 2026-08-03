@@ -28,7 +28,7 @@ VirtualMachinesGetOperationStatus: Polling endpoint to read status of operations
 
 ### Example 1: Poll the status of operations performed on a batch of virtual machines using the operation id from a previous Start/Deallocate/Hibernate operation
 ```powershell
-Get-AzComputeScheduleOperationStatus -Location "eastus2euap" -Correlationid "bbb34b32-0ca1-473f-b53d-d06148d0d1fa" -OperationId "d099fda7-4fdb-4db0-98e5-53fab1821267","333f8f97-32d0-4a88-9bf0-75e65da2052c" -SubscriptionId "ed5d2ee7-ede1-44bd-97a2-369489bbefe4" | Format-List
+Get-AzComputeScheduleOperationStatus -Location "eastus2euap" -Correlationid "aaaa0000-bb11-2222-33cc-444444dddddd" -OperationId "bbbb1111-cc22-3333-44dd-555555eeeeee","cccc2222-dd33-4444-55ee-666666ffffff" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" | Format-List
 ```
 
 ```output
@@ -37,13 +37,13 @@ ErrorDetail                    :
 OperationCompletedAt           : 12/18/2024 5:09:20 AM
 OperationDeadline              : 12/18/2024 5:08:36 AM
 OperationDeadlineType          : InitiateAt
-OperationId                    : d099fda7-4fdb-4db0-98e5-53fab1821267
+OperationId                    : bbbb1111-cc22-3333-44dd-555555eeeeee
 OperationOpType                : Start
-OperationResourceId            : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exesta83600
+OperationResourceId            : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exesta83600
 OperationState                 : Succeeded
-OperationSubscriptionId        : ed5d2ee7-ede1-44bd-97a2-369489bbefe4
+OperationSubscriptionId        : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 OperationTimezone              :
-ResourceId                     : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exesta83600
+ResourceId                     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exesta83600
 ResourceOperationErrorCode     :
 ResourceOperationErrorDetail   :
 RetryPolicyRetryCount          : 3
@@ -54,13 +54,13 @@ ErrorDetail                    :
 OperationCompletedAt           : 12/18/2024 5:04:18 AM
 OperationDeadline              : 12/18/2024 5:03:15 AM
 OperationDeadlineType          : InitiateAt
-OperationId                    : 333f8f97-32d0-4a88-9bf0-75e65da2052c
+OperationId                    : cccc2222-dd33-4444-55ee-666666ffffff
 OperationOpType                : Hibernate
-OperationResourceId            : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exeHib80440
+OperationResourceId            : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exeHib80440
 OperationState                 : Succeeded
-OperationSubscriptionId        : ed5d2ee7-ede1-44bd-97a2-369489bbefe4
+OperationSubscriptionId        : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 OperationTimezone              :
-ResourceId                     : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exeHib80440
+ResourceId                     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/exeHib80440
 ResourceOperationErrorCode     :
 ResourceOperationErrorDetail   :
 RetryPolicyRetryCount          : 3
@@ -191,4 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
