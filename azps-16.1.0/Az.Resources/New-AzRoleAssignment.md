@@ -151,9 +151,9 @@ Get-AzADGroup -SearchString "Christine Koch Team"
 
           DisplayName                    Type                           Id
           -----------                    ----                           --------
-          Christine Koch Team                                           2f9d4375-cbf1-48e8-83c9-2a0be4cb33fb
+          Christine Koch Team                                           aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 
-New-AzRoleAssignment -ObjectId 2f9d4375-cbf1-48e8-83c9-2a0be4cb33fb -RoleDefinitionName Contributor  -ResourceGroupName rg1
+New-AzRoleAssignment -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -RoleDefinitionName Contributor  -ResourceGroupName rg1
 ```
 
 Grant access to a security group
@@ -167,7 +167,7 @@ Grant access to a user at a resource (website)
 
 ### Example 4
 ```powershell
-New-AzRoleAssignment -ObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network
+New-AzRoleAssignment -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network
 ```
 
 Grant access to a group at a nested resource (subnet)
@@ -207,7 +207,7 @@ $DelegationParams = @{
     Condition = $Condition 
     Scope = "/subscriptions/11112222-bbbb-3333-cccc-4444dddd5555" 
     RoleDefinitionName = 'User Access Administrator' 
-    ObjectId = "00001111-aaaa-2222-bbbb-3333cccc4444"
+    ObjectId = "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
 }
 
 New-AzRoleAssignment @DelegationParams
@@ -247,7 +247,7 @@ $DelegationParams = @{
     Condition = $Condition 
     Scope = "/subscriptions/11112222-bbbb-3333-cccc-4444dddd5555" 
     RoleDefinitionName = 'User Access Administrator' 
-    ObjectId = "00001111-aaaa-2222-bbbb-3333cccc4444"
+    ObjectId = "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
 }
 
 New-AzRoleAssignment @DelegationParams

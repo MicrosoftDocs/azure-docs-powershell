@@ -45,7 +45,7 @@ Shows an inventory item.
 
 ### Example 1: List InventoryItems
 ```powershell
-Get-AzScVmmInventoryItem -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -VmmServerName "test-vmmserver-01"
+Get-AzScVmmInventoryItem -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -VmmServerName "test-vmmserver-01"
 ```
 
 ```output
@@ -64,19 +64,19 @@ The Name here is the UUID of the resource specified by InventoryItemName of the 
 
 ### Example 2: Get InventoryItem
 ```powershell
-Get-AzScVmmInventoryItem -Name "00000000-1111-0000-0001-000000000000" Get-AzScVmmInventoryItem -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -VmmServerName "test-vmmserver-01"
+Get-AzScVmmInventoryItem -Name "00000000-1111-0000-0001-000000000000" Get-AzScVmmInventoryItem -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -VmmServerName "test-vmmserver-01"
 ```
 
 ```output
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
 InventoryItemName            : test-vnet-01
 InventoryType                : VirtualNetwork
 Kind                         : VirtualNetwork
-ManagedResourceId            : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/VirtualNetworks/test-vnet-01
+ManagedResourceId            : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/VirtualNetworks/test-vnet-01
 Name                         : 00000000-1111-0000-0001-000000000000
 Property                     : {
                                  "inventoryType": "VirtualNetwork",
-                                 "managedResourceId": "/subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/VirtualNetworks/test-vnet-01",
+                                 "managedResourceId": "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/VirtualNetworks/test-vnet-01",
                                  "uuid": "00000000-1111-0000-0001-000000000000",
                                  "inventoryItemName": "test-vnet-01",
                                  "provisioningState": "Succeeded"
@@ -221,4 +221,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

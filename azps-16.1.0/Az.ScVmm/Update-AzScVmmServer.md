@@ -47,7 +47,7 @@ Update the VmmServers resource.
 
 ### Example 1: Update Tag in VMM Server Resource
 ```powershell
-Update-AzScVmmServer -Name "test-vmmserver-01" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -Tag @{"key-1"="value-1"}
+Update-AzScVmmServer -Name "test-vmmserver-01" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Tag @{"key-1"="value-1"}
 ```
 
 ```output
@@ -55,10 +55,10 @@ ConnectionStatus             : Connected
 CredentialsPassword          : 
 CredentialsUsername          : scvmm-username
 ErrorMessage                 : 
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
 Fqdn                         : vmmServerFqdn
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 Location                     : eastus
 Name                         : test-vmmserver-01
 Port                         : 8100
@@ -280,4 +280,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

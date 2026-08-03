@@ -45,17 +45,17 @@ Once locked, the immutability policy cannot be removed, there is no way for the 
 
 ### Example 1
 ```powershell
-Lock-AzSqlDatabaseLongTermRetentionBackupImmutability -Location northeurope -ServerName server01 -DatabaseName testdb2 -BackupName "601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000" -PassThru
+Lock-AzSqlDatabaseLongTermRetentionBackupImmutability -Location northeurope -ServerName server01 -DatabaseName testdb2 -BackupName "b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2;131655666550000000" -PassThru
 ```
 
 ```output
 BackupExpirationTime      : 8/5/2025 8:23:33 PM
-BackupName                : 601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+BackupName                : b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2;131655666550000000
 BackupTime                : 7/29/2025 8:23:33 PM
 DatabaseName              : testdb2
 DatabaseDeletionTime      :
 Location                  : northeurope
-ResourceId                : /subscriptions/b75889fa-6661-44e0-a844-cd96ec938991/resourceGroups/resourcegroup01/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/testdb2/longTermRetentionBackups/601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000
+ResourceId                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/resourcegroup01/providers/Microsoft.Sql/locations/northeurope/longTermRetentionServers/server01/longTermRetentionDatabases/testdb2/longTermRetentionBackups/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2;131655666550000000
 ServerName                : server01
 ServerCreateTime          : 7/29/2025 7:28:46 PM
 ResourceGroupName         : resourcegroup01
@@ -65,7 +65,7 @@ TimeBasedImmutabilityMode : Locked
 LegalHoldImmutability     : Disabled
 ```
 
-This locks the time-based immutability policy for the backup "601061b7-d10b-46e0-bf77-a2bfb16a6add;131655666550000000". 
+This locks the time-based immutability policy for the backup "b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2;131655666550000000". 
 Note that a prerequisite to this operation is that the backup has TimeBasedImmutability set to "Enabled" and TimeBasedImmutabilityMode set to "Unlocked".
 
 ## PARAMETERS

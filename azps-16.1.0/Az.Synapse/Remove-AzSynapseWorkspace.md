@@ -54,7 +54,7 @@ This command deletes an Azure Synapse Analytics workspace through pipeline.
 
 ### Example 3
 ```powershell
-Remove-AzSynapseWorkspace -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
+Remove-AzSynapseWorkspace -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
 ```
 
 This command deletes an Azure Synapse Analytics workspace through pipeline with the specified resource ID.

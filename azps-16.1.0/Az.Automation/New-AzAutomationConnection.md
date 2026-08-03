@@ -28,7 +28,7 @@ The **New-AzAutomationConnection** cmdlet creates a connection in Azure Automati
 
 ### Example 1: Create a connection for ConnectionTypeName=Azure
 ```powershell
-$FieldValues = @{"AutomationCertificateName"="ContosoCertificate";"SubscriptionID"="81b59010-dc55-45b7-89cd-5ca26db62472"}
+$FieldValues = @{"AutomationCertificateName"="ContosoCertificate";"SubscriptionID"="aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"}
 New-AzAutomationConnection -Name "Connection12" -ConnectionTypeName Azure -ConnectionFieldValues $FieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
 
@@ -38,10 +38,10 @@ The command uses the connection field values in $FieldValues.
 
 ### Example 2: Create a connection for ConnectionTypeName=AzureServicePrincipal
 ```powershell
-$Thumbprint = "0SZTNJ34TCCMUJ5MJZGR8XQD3S0RVHJBA33Z8ZXV"
-$TenantId = "00001111-aaaa-2222-bbbb-3333cccc4444"
+$Thumbprint = "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
+$TenantId = "aaaabbbb-0000-cccc-1111-dddd2222eeee"
 $ApplicationId = "00001111-aaaa-2222-bbbb-3333cccc4444"
-$SubscriptionId = "81b59010-dc55-45b7-89cd-5ca26db62472"
+$SubscriptionId = "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 $RunAsAccountConnectionFieldValues = @{"ApplicationId" = $ApplicationId; "TenantId" = $TenantId; "CertificateThumbprint" = $Thumbprint; "SubscriptionId" = $SubscriptionId}
 New-AzAutomationConnection -Name "Connection13" -ConnectionTypeName AzureServicePrincipal -ConnectionFieldValues $RunAsAccountConnectionFieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
 ```
@@ -52,7 +52,7 @@ This ConnectionTypeName=AzureServicePrincipal is mainly used for Azure Run As Ac
 ### Example 3: Create a connection for ConnectionTypeName=AzureClassicCertificate
 ```powershell
 $SubscriptionName = "MyTestSubscription"
-$SubscriptionId = "81b59010-dc55-45b7-89cd-5ca26db62472"
+$SubscriptionId = "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 $ClassicRunAsAccountCertificateAssetName = "AzureClassicRunAsCertificate"
 $ClassicRunAsAccountConnectionFieldValues = @{"SubscriptionName" = $SubscriptionName; "SubscriptionId" = $SubscriptionId; "CertificateAssetName" = $ClassicRunAsAccountCertificateAssetName}
 New-AzAutomationConnection -Name "Connection14" -ConnectionTypeName AzureClassicCertificate  -ConnectionFieldValues $ClassicRunAsAccountConnectionFieldValues -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
@@ -190,5 +190,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-AzAutomationConnection](./Get-AzAutomationConnection.md)
 
 [Remove-AzAutomationConnection](./Remove-AzAutomationConnection.md)
-
-
