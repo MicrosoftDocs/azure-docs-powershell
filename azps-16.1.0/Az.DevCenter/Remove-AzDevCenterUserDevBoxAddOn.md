@@ -54,10 +54,10 @@ Remove-AzDevCenterUserDevBoxAddOn `
   -ProjectName "DevProject" `
   -DevBoxName "myDevBox" `
   -AddOnName "devboxtunnel-sys-default" `
-  -UserId "786a823c-8037-48ab-89b8-8599901e67d0"
+  -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
 ```
 
-This command deletes the add-on "devboxtunnel-sys-default" from the dev box "myDevBox" assigned to user "786a823c-8037-48ab-89b8-8599901e67d0" using the endpoint.
+This command deletes the add-on "devboxtunnel-sys-default" from the dev box "myDevBox" assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" using the endpoint.
 
 ### Example 2: Remove a Dev Box add-on by dev center name and current user
 ```powershell
@@ -75,7 +75,7 @@ This command deletes the add-on "devboxtunnel-sys-default" from the dev box "myD
 ```powershell
 $addOnInput = @{
     DevBoxName = "myDevBox"
-    UserId = "786a823c-8037-48ab-89b8-8599901e67d0"
+    UserId = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
     ProjectName = "DevProject"
     AddOnName = "devboxtunnel-sys-default"
 }
