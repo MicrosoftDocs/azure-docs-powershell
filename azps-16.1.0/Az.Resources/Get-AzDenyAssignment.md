@@ -184,7 +184,7 @@ Principals              : {
 ExcludePrincipals       : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 IsSystemProtected       : True
 
@@ -200,11 +200,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  PowershellTestingApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                          ObjectId:     bbbbbbbb-1111-2222-3333-cccccccccccc
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -231,7 +231,7 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  john.doe
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -248,11 +248,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  john.doe
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  PowershellTestingApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                          ObjectId:     bbbbbbbb-1111-2222-3333-cccccccccccc
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -279,7 +279,7 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  TestApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                          ObjectId:     bbbbbbbb-1111-2222-3333-cccccccccccc
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -296,11 +296,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  TestApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                          ObjectId:     bbbbbbbb-1111-2222-3333-cccccccccccc
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -327,7 +327,7 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
@@ -344,11 +344,11 @@ DoNotApplyToChildScopes : False
 Principals              : {
                           DisplayName:  testuser
                           ObjectType:   User
-                          ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                          ObjectId:     aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
                           ,
                           DisplayName:  TestApp
                           ObjectType:   ServicePrincipal
-                          ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                          ObjectId:     bbbbbbbb-1111-2222-3333-cccccccccccc
                           }
 ExcludePrincipals       : {}
 IsSystemProtected       : True
