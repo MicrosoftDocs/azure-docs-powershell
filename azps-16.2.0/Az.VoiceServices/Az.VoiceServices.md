@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VoiceServices/VoiceServices/help/Az.VoiceServices.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VoiceServices/VoiceServices/help/Az.VoiceServices.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.VoiceServices Module
 ## Description
 Microsoft Azure PowerShell: VoiceServices cmdlets
@@ -42,4 +43,5 @@ update a CommunicationsGateway
 
 ### [Update-AzVoiceServicesCommunicationsTestLine](Update-AzVoiceServicesCommunicationsTestLine.md)
 update a TestLine
+
 

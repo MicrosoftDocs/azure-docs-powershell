@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Az.ConnectedVMware.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Az.ConnectedVMware.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ConnectedVMware Module
 ## Description
 Microsoft Azure PowerShell: ConnectedVMware cmdlets
@@ -127,4 +128,5 @@ API to update certain properties of the virtual machine template resource.
 
 ### [Update-AzConnectedVMwareVNet](Update-AzConnectedVMwareVNet.md)
 API to update certain properties of the virtual network resource.
+
 
