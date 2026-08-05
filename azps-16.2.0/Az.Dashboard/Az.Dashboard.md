@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/Az.Dashboard.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/Az.Dashboard.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Dashboard Module
 ## Description
 Microsoft Azure PowerShell: Dashboard cmdlets
@@ -60,4 +61,5 @@ Update a IntegrationFabric
 
 ### [Update-AzGrafanaManagedDashboard](Update-AzGrafanaManagedDashboard.md)
 Update a dashboard for Grafana resource.
+
 

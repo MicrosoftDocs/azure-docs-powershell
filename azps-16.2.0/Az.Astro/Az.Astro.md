@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Astro/Astro/help/Az.Astro.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Astro/Astro/help/Az.Astro.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Astro Module
 ## Description
 Microsoft Azure PowerShell: Astro cmdlets
@@ -24,4 +25,5 @@ Delete a OrganizationResource
 
 ### [Update-AzAstroOrganization](Update-AzAstroOrganization.md)
 Update a OrganizationResource
+
 

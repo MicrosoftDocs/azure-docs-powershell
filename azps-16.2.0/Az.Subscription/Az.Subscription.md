@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Az.Subscription.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Az.Subscription.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.Subscription Module
 ## Description
 Microsoft Azure PowerShell: Subscription cmdlets
@@ -39,4 +40,5 @@ Delete Alias.
 
 ### [Rename-AzSubscription](Rename-AzSubscription.md)
 The operation to rename a subscription
+
 

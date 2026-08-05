@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/HanaOnAzure/help/Az.HanaOnAzure.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/HanaOnAzure/help/Az.HanaOnAzure.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.HanaOnAzure Module
 ## Description
 Microsoft Azure PowerShell: HanaOn cmdlets
@@ -36,4 +37,5 @@ Patches the Tags field of a SAP monitor for the specified subscription, resource
 
 ### [Update-AzSapMonitorProviderInstance](Update-AzSapMonitorProviderInstance.md)
 update a provider instance for the specified subscription, resource group, SapMonitor name, and resource name.
+
 

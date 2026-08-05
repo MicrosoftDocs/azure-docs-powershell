@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Az.MixedReality.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Az.MixedReality.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.MixedReality Module
 ## Description
 Microsoft Azure PowerShell: MixedReality cmdlets
@@ -69,4 +70,5 @@ Creating or Updating a Remote Rendering Account.
 
 ### [Update-AzMixedRealitySpatialAnchorsAccount](Update-AzMixedRealitySpatialAnchorsAccount.md)
 Creating or Updating a Spatial Anchors Account.
+
 

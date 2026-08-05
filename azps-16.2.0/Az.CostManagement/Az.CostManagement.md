@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Az.CostManagement.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Az.CostManagement.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.CostManagement Module
 ## Description
 Microsoft Azure PowerShell: Cost cmdlets
@@ -60,4 +61,5 @@ The operation to create or update a export.
 Update operation requires latest eTag to be set in the request.
 You may obtain the latest eTag by performing a get operation.
 Create operation does not require eTag.
+
 
