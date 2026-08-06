@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/DedicatedHsm/help/Az.DedicatedHsm.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/DedicatedHsm/help/Az.DedicatedHsm.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.DedicatedHsm Module
 ## Description
 Microsoft Azure PowerShell: DedicatedHsm cmdlets
@@ -28,4 +29,5 @@ Deletes the specified Azure Dedicated HSM.
 
 ### [Update-AzDedicatedHsm](Update-AzDedicatedHsm.md)
 update a dedicated HSM in the specified subscription.
+
 

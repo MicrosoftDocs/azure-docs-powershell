@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceGroups/ServiceGroups/help/Az.ServiceGroups.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceGroups/ServiceGroups/help/Az.ServiceGroups.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.ServiceGroups Module
 ## Description
 Microsoft Azure PowerShell: ServiceGroups cmdlets
@@ -27,4 +28,5 @@ Delete a ServiceGroup
 
 ### [Update-AzServiceGroup](Update-AzServiceGroup.md)
 Update a serviceGroup
+
 

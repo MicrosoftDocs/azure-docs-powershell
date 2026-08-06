@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthBot/HealthBot/help/Az.HealthBot.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthBot/HealthBot/help/Az.HealthBot.md
+moduleStatus: preview
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Az.HealthBot Module
 ## Description
 Microsoft Azure PowerShell: HealthBot cmdlets
@@ -24,4 +25,5 @@ Delete a HealthBot.
 
 ### [Update-AzHealthBot](Update-AzHealthBot.md)
 Patch a HealthBot.
+
 

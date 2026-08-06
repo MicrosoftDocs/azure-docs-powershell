@@ -5,8 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/az.ssh/enter-azvm
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Enter-AzVM.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Enter-AzVM.md
+cmdletStatus: preview
+cmdletStatusMessage: This cmdlet is part of a **Preview** module. Preview versions aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
 ---
-
 # Enter-AzVM
 
 ## SYNOPSIS
@@ -358,3 +359,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Troubleshoot SSH access to Azure Arc Enabled Servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-troubleshoot)
 [Login to a Linux VM by using Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux)
 [Install OpenSSH for Windows](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui)
+
