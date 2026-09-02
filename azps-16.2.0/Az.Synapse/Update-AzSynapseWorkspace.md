@@ -72,7 +72,7 @@ This commands updates tags for the specified Azure Synapse Analytics workspace t
 
 ### Example 3
 ```powershell
-Update-AzSynapseWorkspace -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace -Tag @{'key'='value2'}
+Update-AzSynapseWorkspace -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace -Tag @{'key'='value2'}
 ```
 
 This commands updates tags for the specified Azure Synapse Analytics workspace through pipeline with resource ID.
