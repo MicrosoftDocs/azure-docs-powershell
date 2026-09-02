@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSqlFlexibleServer/PostgreSqlFlexibleServer/help/Az.PostgreSqlFlexibleServer.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSqlFlexibleServer/PostgreSqlFlexibleServer/help/Az.PostgreSqlFlexibleServer.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.PostgreSqlFlexibleServer Module
 ## Description
 Microsoft Azure PowerShell: PostgreSqlFlexibleServer cmdlets
@@ -144,4 +145,5 @@ Update a new firewall rule or update an existing firewall rule.
 
 ### [Update-AzPostgreSqlFlexibleServerVirtualEndpoint](Update-AzPostgreSqlFlexibleServerVirtualEndpoint.md)
 Update a pair of virtual endpoints for a server.
+
 
