@@ -44,7 +44,7 @@ Create a FabricCapacity
 ### Example 1: Create Capacity
 ```powershell
 New-AzFabricCapacity `
-            -SubscriptionId "548B7FB7-3B2A-4F46-BB02-66473F1FC22C" `
+            -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" `
             -ResourceGroupName "testrg" `
             -CapacityName "azsdktest"`
             -Location "westcentralus" `
@@ -54,7 +54,7 @@ New-AzFabricCapacity `
 
 ```output
 AdministrationMember         : {azsdktest@microsoft.com}
-Id                           : /subscriptions/548B7FB7-3B2A-4F46-BB02-66473F1FC22C/resourceGroups/testrg/providers/Microsoft.Fabric/capacities/azsdktest
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/testrg/providers/Microsoft.Fabric/capacities/azsdktest
 Location                     : West Central US
 Name                         : azsdktest
 ProvisioningState            : Succeeded
@@ -73,7 +73,7 @@ Tag                          : {
 Type                         : Microsoft.Fabric/capacities
 ```
 
-The above command creates a new Fabric capacity named 'azsdktest' within the resource group 'testrg' in the subscription '548B7FB7-3B2A-4F46-BB02-66473F1FC22C'
+The above command creates a new Fabric capacity named 'azsdktest' within the resource group 'testrg' in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'
 
 ## PARAMETERS
 
