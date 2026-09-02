@@ -52,7 +52,7 @@ Gets properties of a DNS resolver.
 
 ### Example 1: List all DNS Resolvers under the subscription
 ```powershell
-Get-AzDnsResolver -SubscriptionId 0e5a46b1-de0b-4ec3-a5d7-dda908b4e076
+Get-AzDnsResolver -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
