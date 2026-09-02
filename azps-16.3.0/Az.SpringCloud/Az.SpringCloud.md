@@ -6,8 +6,9 @@ Help Version: 1.0.0.0
 Locale: en-US
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Az.SpringCloud.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Az.SpringCloud.md
+moduleStatusMessage: This is a Preview module. Preview modules aren't recommended for use in production environments. For more information, see https://aka.ms/azps-refstatus.
+moduleStatus: preview
 ---
-
 # Az.SpringCloud Module
 ## Description
 Microsoft Azure PowerShell: SpringCloud cmdlets
@@ -240,4 +241,5 @@ update the default Application Configuration Service or update the existing Appl
 
 ### [Update-AzSpringCloudMonitoringSetting](Update-AzSpringCloudMonitoringSetting.md)
 update the Monitoring Setting.
+
 
