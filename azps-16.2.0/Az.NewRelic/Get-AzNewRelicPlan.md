@@ -27,7 +27,7 @@ Lists the plans data linked to your organization, providing an overview of the a
 
 ### Example 1: List plans data associated with specified organization
 ```powershell
-Get-AzNewRelicPlan -SubscriptionId 11111111-2222-3333-4444-123456789101 -OrganizationId 11111111-2222-3333-4444-123456789104
+Get-AzNewRelicPlan -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -OrganizationId 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 ```
 
 ```output
@@ -40,7 +40,7 @@ List plans data associated with specified Organization Id
 
 ### Example 2: Link plans account with specified organization in different subscription
 ```powershell
-Get-AzNewRelicPlan -SubscriptionId 11111111-2222-3333-4444-123456789101 -OrganizationId 11111111-2222-3333-4444-123456789104 -AccountId 1234567
+Get-AzNewRelicPlan -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -OrganizationId 00aa00aa-bb11-cc22-dd33-44ee44ee44ee -AccountId 1234567
 ```
 
 Link plans account with specified organization in different subscription
@@ -120,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
