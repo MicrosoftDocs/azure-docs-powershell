@@ -55,7 +55,7 @@ VirtualMachinesCancelOperations: Cancel a previously submitted (start/deallocate
 
 ### Example 1: Cancel a batch of operations scheduled on virtual machines using the operation id from a previous Start/Deallocate/Hibernate operation
 ```powershell
-Stop-AzComputeScheduleScheduledAction -Location "eastus2euap" -Correlationid "9992a233-8f42-4e7c-8b5a-71eea1a0ead2" -OperationId "d099fda7-4fdb-4db0-98e5-53fab1821267","333f8f97-32d0-4a88-9bf0-75e65da2052c" -SubscriptionId "ed5d2ee7-ede1-44bd-97a2-369489bbefe4" | Format-List
+Stop-AzComputeScheduleScheduledAction -Location "eastus2euap" -Correlationid "aaaa0000-bb11-2222-33cc-444444dddddd" -OperationId "bbbb1111-cc22-3333-44dd-555555eeeeee","cccc2222-dd33-4444-55ee-666666ffffff" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" | Format-List
 ```
 
 ```output
@@ -64,15 +64,15 @@ ErrorDetail                    :
 OperationCompletedAt           : 12/18/2024 5:36:18 PM
 OperationDeadline              : 12/25/2024 11:00:00 PM
 OperationDeadlineType          : InitiateAt
-OperationId                    : d099fda7-4fdb-4db0-98e5-53fab1821267
+OperationId                    : bbbb1111-cc22-3333-44dd-555555eeeeee
 OperationOpType                : Hibernate
-OperationResourceId            : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85155
+OperationResourceId            : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85155
 OperationState                 : Cancelled
-OperationSubscriptionId        : ed5d2ee7-ede1-44bd-97a2-369489bbefe4
+OperationSubscriptionId        : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 OperationTimezone              :
-ResourceId                     : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85155
+ResourceId                     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85155
 ResourceOperationErrorCode     : OperationCancelledByUser
-ResourceOperationErrorDetail   : Operation: d099fda7-4fdb-4db0-98e5-53fab1821267 was cancelled by the user.
+ResourceOperationErrorDetail   : Operation: bbbb1111-cc22-3333-44dd-555555eeeeee was cancelled by the user.
 RetryPolicyRetryCount          : 2
 RetryPolicyRetryWindowInMinute : 30
 
@@ -81,15 +81,15 @@ ErrorDetail                    :
 OperationCompletedAt           : 12/18/2024 5:36:18 PM
 OperationDeadline              : 12/25/2024 11:00:00 PM
 OperationDeadlineType          : InitiateAt
-OperationId                    : 333f8f97-32d0-4a88-9bf0-75e65da2052c
+OperationId                    : cccc2222-dd33-4444-55ee-666666ffffff
 OperationOpType                : Hibernate
-OperationResourceId            : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85152
+OperationResourceId            : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85152
 OperationState                 : Cancelled
-OperationSubscriptionId        : ed5d2ee7-ede1-44bd-97a2-369489bbefe4
+OperationSubscriptionId        : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 OperationTimezone              :
-ResourceId                     : /subscriptions/ed5d2ee7-ede1-44bd-97a2-369489bbefe4/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85152
+ResourceId                     : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-resource-group/providers/Microsoft.Compute/virtualMachines/pwshtest85152
 ResourceOperationErrorCode     : OperationCancelledByUser
-ResourceOperationErrorDetail   : Operation: 333f8f97-32d0-4a88-9bf0-75e65da2052c was cancelled by the user.
+ResourceOperationErrorDetail   : Operation: cccc2222-dd33-4444-55ee-666666ffffff was cancelled by the user.
 RetryPolicyRetryCount          : 2
 RetryPolicyRetryWindowInMinute : 30
 ```
@@ -282,4 +282,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
