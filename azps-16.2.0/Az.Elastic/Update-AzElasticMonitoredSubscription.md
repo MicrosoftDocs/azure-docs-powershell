@@ -58,26 +58,26 @@ Update subscriptions to be monitored by the Elastic monitor resource, ensuring o
 
 ### Example 1: Enable monitoring for a subscription
 ```powershell
-Update-AzElasticMonitoredSubscription -ResourceGroupName "myResourceGroup" -MonitorName "myElasticMonitor" -ConfigurationName "12345678-1234-1234-1234-123456789012" -SubscriptionId "12345678-1234-1234-1234-123456789012" -Operation "Add"
+Update-AzElasticMonitoredSubscription -ResourceGroupName "myResourceGroup" -MonitorName "myElasticMonitor" -ConfigurationName "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Operation "Add"
 ```
 
 ```output
 SubscriptionId                        Status    Error TagRules
 --------------                        ------    ----- --------
-12345678-1234-1234-1234-123456789012 Enabled         Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.Api20200701.MonitoringTagRules
+aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e Enabled         Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.Api20200701.MonitoringTagRules
 ```
 
 This command adds a subscription to the Elastic monitor for monitoring, enabling log and metric collection from the specified subscription.
 
 ### Example 2: Disable monitoring for a subscription
 ```powershell
-Update-AzElasticMonitoredSubscription -ResourceGroupName "myResourceGroup" -MonitorName "myElasticMonitor" -ConfigurationName "12345678-1234-1234-1234-123456789012" -SubscriptionId "12345678-1234-1234-1234-123456789012" -Operation "Delete"
+Update-AzElasticMonitoredSubscription -ResourceGroupName "myResourceGroup" -MonitorName "myElasticMonitor" -ConfigurationName "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Operation "Delete"
 ```
 
 ```output
 SubscriptionId                        Status     Error TagRules
 --------------                        ------     ----- --------
-12345678-1234-1234-1234-123456789012 Disabled         Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.Api20200701.MonitoringTagRules
+aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e Disabled         Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.Api20200701.MonitoringTagRules
 ```
 
 This command removes a subscription from monitoring, disabling log and metric collection from the specified subscription.
@@ -328,4 +328,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

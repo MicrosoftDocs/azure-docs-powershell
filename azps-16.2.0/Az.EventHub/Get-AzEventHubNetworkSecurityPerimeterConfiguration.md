@@ -37,7 +37,7 @@ Id                               : /subscriptions/subscriptionid/resourceGroups/
                                    7739397aa
 IsBackingResource                : False
 Location                         : eastus2euap
-Name                             : subscriptionid.testPranjitEH1-4263ede0-d5e1-4166-9694-2f07739397aa
+Name                             : subscriptionid.testPranjitEH1-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 NetworkSecurityPerimeterGuid     : subscriptionid
 NetworkSecurityPerimeterId       : /subscriptions/subscriptionid/resourceGroups/myresourcegroup/providers/Microsoft.Network/networkSecurityPe
                                    rimeters/pranjit-nsp-ncus
