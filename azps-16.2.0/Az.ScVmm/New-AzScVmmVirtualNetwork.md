@@ -52,14 +52,14 @@ To enable resource in a different Resource Group than the one where VMM Server r
 
 ### Example 1: Create a SCVMM Virtual Network resource
 ```powershell
-New-AzScVmmVirtualNetwork -Name "test-vnet" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -Location "eastus" -VmmServerName "test-vmmserver-01" -InventoryUuid "00000000-1111-0000-0001-000000000000"
+New-AzScVmmVirtualNetwork -Name "test-vnet" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "eastus" -VmmServerName "test-vmmserver-01" -InventoryUuid "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
 ```
 
 ```output
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/VirtualNetworks/test-vnet
-InventoryItemId              : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/VirtualNetworks/test-vnet
+InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 Location                     : eastus
 Name                         : test-vnet
 NetworkName                  : test-vnet
@@ -74,8 +74,8 @@ SystemDataLastModifiedByType : Application
 Tag                          : {
                                }
 Type                         : microsoft.scvmm/virtualnetworks
-Uuid                         : 00000000-1111-0000-0001-000000000000
-VmmServerId                  : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+Uuid                         : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
+VmmServerId                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 ```
 
 This command creates a Virtual Network resource named `test-vnet` in the resource group named `test-rg-01`.
@@ -362,4 +362,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
