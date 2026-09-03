@@ -50,18 +50,18 @@ Create a OrganizationResource
 
 ### Example 1: Create a new Napster Organization with Single Sign-On
 ```powershell
-New-AzNapsterOrganization -Name "napster-test3" -Location "eastus2euap" -ResourceGroupName "acctest0001" -SubscriptionId "61641157-140c-4b97-b365-30ff76d9f82e" -MarketplaceSubscriptionId "09fffd7d-d000-4467-cc23-d82b97e9431d" -OfferDetailOfferId "napster_companion_api" -OfferDetailPlanId "napster_companion_api_feb_2026" -OfferDetailPlanName "Pay As You Go" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "touchcastinc1655995956899" -OfferDetailTermId "n7ja87drquhy" -PartnerPropertyApplication "dsaf" -SingleSignOnPropertyType "OpenId" -SingleSignOnPropertyState "Initial" -SingleSignOnPropertyAadDomain @("MicrosoftCustomerLed.onmicrosoft.com") -SingleSignOnPropertyUrl "https://companion-api.napsterai.dev/admin/ms-auth" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
+New-AzNapsterOrganization -Name "napster-test3" -Location "eastus2euap" -ResourceGroupName "acctest0001" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -MarketplaceSubscriptionId "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f" -OfferDetailOfferId "napster_companion_api" -OfferDetailPlanId "napster_companion_api_feb_2026" -OfferDetailPlanName "Pay As You Go" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "touchcastinc1655995956899" -OfferDetailTermId "n7ja87drquhy" -PartnerPropertyApplication "dsaf" -SingleSignOnPropertyType "OpenId" -SingleSignOnPropertyState "Initial" -SingleSignOnPropertyAadDomain @("MicrosoftCustomerLed.onmicrosoft.com") -SingleSignOnPropertyUrl "https://companion-api.napsterai.dev/admin/ms-auth" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
 ```
 
 ```output
-Id                                  : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test3
+Id                                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test3
 IdentityPrincipalId                 :
 IdentityTenantId                    :
 IdentityType                        :
 IdentityUserAssignedIdentity        : {
                                       }
 Location                            : eastus2euap
-MarketplaceSubscriptionId           : 09fffd7d-d000-4467-cc23-d82b97e9431d
+MarketplaceSubscriptionId           : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 MarketplaceSubscriptionStatus       : Subscribed
 Name                                : napster-test3
 OfferDetailOfferId                  : napster_companion_api
@@ -98,13 +98,13 @@ This command creates a new Napster Companion API organization with Single Sign-O
 
 ### Example 2: Create a new Napster Organization without Single Sign-On
 ```powershell
-New-AzNapsterOrganization -Name "napster-test-basic" -Location "eastus2euap" -ResourceGroupName "acctest0001" -SubscriptionId "61641157-140c-4b97-b365-30ff76d9f82e" -MarketplaceSubscriptionId "09fffd7d-d000-4467-cc23-d82b97e9431d" -OfferDetailOfferId "napster_companion_api" -OfferDetailPlanId "napster_companion_api_feb_2026" -OfferDetailPlanName "Pay As You Go" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "touchcastinc1655995956899" -OfferDetailTermId "n7ja87drquhy" -PartnerPropertyApplication "dsaf" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
+New-AzNapsterOrganization -Name "napster-test-basic" -Location "eastus2euap" -ResourceGroupName "acctest0001" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -MarketplaceSubscriptionId "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f" -OfferDetailOfferId "napster_companion_api" -OfferDetailPlanId "napster_companion_api_feb_2026" -OfferDetailPlanName "Pay As You Go" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "touchcastinc1655995956899" -OfferDetailTermId "n7ja87drquhy" -PartnerPropertyApplication "dsaf" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
 ```
 
 ```output
-Id                                  : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test-basic
+Id                                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test-basic
 Location                            : eastus2euap
-MarketplaceSubscriptionId           : 09fffd7d-d000-4467-cc23-d82b97e9431d
+MarketplaceSubscriptionId           : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 MarketplaceSubscriptionStatus       : Subscribed
 Name                                : napster-test-basic
 OfferDetailOfferId                  : napster_companion_api
@@ -640,4 +640,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

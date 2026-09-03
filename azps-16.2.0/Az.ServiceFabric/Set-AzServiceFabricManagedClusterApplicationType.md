@@ -64,7 +64,7 @@ This example will update the managed application type "testAppType" tags.
 ### Example 3
 ```powershell
 $newTags = @{new="tags"}
-$resourceId = "/subscriptions/13ad2c84-84fa-4798-ad71-e70c07af873f/resourcegroups/testRG/providers/Microsoft.ServiceFabric/managedClusters/testCluster/applicationTypes/testAppType"
+$resourceId = "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourcegroups/testRG/providers/Microsoft.ServiceFabric/managedClusters/testCluster/applicationTypes/testAppType"
 Set-AzServiceFabricManagedClusterApplicationType -ResourceId $resourceId -Tag $newTags
 ```
 

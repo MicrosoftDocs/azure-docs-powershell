@@ -44,7 +44,7 @@ Implements AvailabilitySet GET method.
 
 ### Example 1: Get Availability Set By Subscription Id
 ```powershell
-Get-AzScVmmAvailabilitySet -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Get-AzScVmmAvailabilitySet -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -62,7 +62,7 @@ This command list Availability Sets in provided subscription.
 
 ### Example 2: Get Availability Set By Resource Group
 ```powershell
-Get-AzScVmmAvailabilitySet -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Get-AzScVmmAvailabilitySet -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -77,14 +77,14 @@ This command list Availability Sets in provided Resource Group.
 
 ### Example 3: Get Availability Set
 ```powershell
-Get-AzScVmmAvailabilitySet -Name "test-avset" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Get-AzScVmmAvailabilitySet -Name "test-avset" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
 AvailabilitySetName          : test-avset
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/availabilitySets/test-avset
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.SCVMM/availabilitySets/test-avset
 Location                     : eastus
 Name                         : test-avset
 ProvisioningState            : Succeeded
@@ -98,7 +98,7 @@ SystemDataLastModifiedByType : Application
 Tag                          : {
                                }
 Type                         : microsoft.scvmm/availabilitysets
-VmmServerId                  : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+VmmServerId                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 ```
 
 This command gets the Availability Set named `test-avset` in the resource group named `test-rg-01`.
@@ -197,4 +197,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
