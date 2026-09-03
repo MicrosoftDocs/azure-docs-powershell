@@ -55,13 +55,13 @@ Get-AzSecurityAlert
 ```
 
 ```output
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/RSG/providers/Microsoft.Securit
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/RSG/providers/Microsoft.Securit
                      y/locations/centralus/alerts/2518710774294070750_FFF23C70-80EF-4A8B-9122-507B0EA8DFFF
 Name               : 2518710774294070750_FFF23C70-80EF-4A8B-9122-507B0EA8DFFF
 ActionTaken        : Undefined
 AlertDisplayName   : PREVIEW - Vulnerability scanner detected
 AlertName          : APPS_WpScanner
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/RSG/providers/Microsoft.Web/sit
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/RSG/providers/Microsoft.Web/sit
                      es/testSite1
 CanBeInvestigated  : True
 CompromisedEntity  : testSite1
@@ -86,18 +86,18 @@ RemediationSteps   : 1. If WordPress is installed, make sure that the applicatio
 ReportedSeverity   : High
 ReportedTimeUtc    : 10/07/2018 16:31:52
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : 
 VendorName         : Microsoft
 WorkspaceArmId     : 
 
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/locations/central
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Security/locations/central
                      us/alerts/2518710774894070750_EEE23C70-80EF-4A8B-9122-507B0EA8DFFF
 Name               : 2518710774894070750_EEE23C70-80EF-4A8B-9122-507B0EA8DFFF
 ActionTaken        : Undefined
 AlertDisplayName   : PREVIEW - Spam folder referrer detected
 AlertName          : APPS_SpamReferrer
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Web/sites/testSite2
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Web/sites/testSite2
 CanBeInvestigated  : True
 CompromisedEntity  : testSite2
 ConfidenceReasons  : {}
@@ -120,18 +120,18 @@ RemediationSteps   : Review the URIs in the alert details. Check whether the cor
 ReportedSeverity   : High
 ReportedTimeUtc    : 10/07/2018 16:31:52
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : 
 VendorName         : Microsoft
 WorkspaceArmId     : 
 
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675199999999999_0501972d-06cd-47c7-a276-036f67d89262
 Name               : 2518675199999999999_0501972d-06cd-47c7-a276-036f67d89262
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.4
@@ -141,27 +141,27 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117:80
 DetectedTimeUtc    : 20/08/2018 16:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 177.189.28.238], [management URL, https://portal.azure.com#resource/
-                     subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.N
+                     subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.N
                      etwork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : 0501972d-06cd-47c7-a276-036f67d89262
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 17:00:18
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675235999999999_0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 Name               : 2518675235999999999_0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.4
@@ -171,18 +171,18 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117
 DetectedTimeUtc    : 20/08/2018 15:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 217.91.251.86], [management URL, https://portal.azure.com#resource/s
-                     ubscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Ne
+                     ubscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.Ne
                      twork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : 0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 16:00:03
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 ```
 
@@ -194,13 +194,13 @@ Get-AzSecurityAlert -ResourceGroupName "myService1"
 ```
 
 ```output
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675199999999999_0501972d-06cd-47c7-a276-036f67d89262
 Name               : 2518675199999999999_0501972d-06cd-47c7-a276-036f67d89262
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.4
@@ -210,27 +210,27 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117:80
 DetectedTimeUtc    : 20/08/2018 16:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 177.189.28.238], [management URL, https://portal.azure.com#resource/
-                     subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.N
+                     subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.N
                      etwork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : 0501972d-06cd-47c7-a276-036f67d89262
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 17:00:18
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675235999999999_0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 Name               : 2518675235999999999_0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.4
@@ -240,27 +240,27 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117
 DetectedTimeUtc    : 20/08/2018 15:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 217.91.251.86], [management URL, https://portal.azure.com#resource/s
-                     ubscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Ne
+                     ubscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.Ne
                      twork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : 0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 16:00:03
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675235999999999_3cc2c984-3d3d-4af2-a2d9-ed7c6d078315
 Name               : 2518675235999999999_3cc2c984-3d3d-4af2-a2d9-ed7c6d078315
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.5
@@ -270,27 +270,27 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117
 DetectedTimeUtc    : 20/08/2018 15:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 217.91.251.86], [management URL, https://portal.azure.com#resource/s
-                     ubscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Ne
+                     ubscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.Ne
                      twork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : 3cc2c984-3d3d-4af2-a2d9-ed7c6d078315
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 16:00:04
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675307999999999_bbbda0ad-b149-49f4-a4ba-3e95540cbf1c
 Name               : 2518675307999999999_bbbda0ad-b149-49f4-a4ba-3e95540cbf1c
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.4
@@ -300,18 +300,18 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117:80
 DetectedTimeUtc    : 20/08/2018 13:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 177.86.202.171], [management URL, https://portal.azure.com#resource/
-                     subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.N
+                     subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.N
                      etwork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : bbbda0ad-b149-49f4-a4ba-3e95540cbf1c
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 14:00:36
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 ```
 
@@ -323,13 +323,13 @@ Get-AzSecurityAlert -ResourceGroupName "myService1" -Location "westeurope" -Name
 ```
 
 ```output
-Id                 : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+Id                 : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Security/locations/westeurope/alerts/2518675235999999999_0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 Name               : 2518675235999999999_0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 ActionTaken        : Detected
 AlertDisplayName   : PROTOCOL-ENFORCEMENT
 AlertName          : PROTOCOL-ENFORCEMENT
-AssociatedResource : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.
+AssociatedResource : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.
                      Network/applicationGateways/ContosoWAF
 CanBeInvestigated  : True
 CompromisedEntity  : 10.1.0.4
@@ -339,18 +339,18 @@ Description        : Detail:Host header is a numeric IP address 13.69.131.117
 DetectedTimeUtc    : 20/08/2018 15:00:00
 Entities           : {}
 ExtendedProperties : {[hit Count, 1], [source IPs, 217.91.251.86], [management URL, https://portal.azure.com#resource/s
-                     ubscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/myService1/providers/Microsoft.Ne
+                     ubscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myService1/providers/Microsoft.Ne
                      twork/applicationGateways/ContosoWAF/overview], [resourceType, Networking]}
 InstanceId         : 0cd957d9-8101-47f7-88cc-0c5d0ebdbfd0
 RemediationSteps   : 
 ReportedSeverity   : Low
 ReportedTimeUtc    : 20/08/2018 16:00:03
 State              : Active
-SubscriptionId     : 487bb485-b5b0-471e-9c0d-10717612f869
+SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 SystemSource       : Azure
 VendorName         : Microsoft WAF
-WorkspaceArmId     : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/defaultresourcegroup-eus/provid
-                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-487bb485-b5b0-471e-9c0d-10717612f869
+WorkspaceArmId     : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/defaultresourcegroup-eus/provid
+                     ers/microsoft.operationalinsights/workspaces/defaultworkspace-aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
                      -eus
 ```
 
