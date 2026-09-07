@@ -1,6 +1,10 @@
 {
     "build": {
         "content": [
+            { "files": ["toc.yml"], "src": "azps-100.0.0", "version": "azps-100.0.0", "dest": "module/azure-powershell" },
+            { "files": ["**/*.yml"], "src": "azps-100.0.0", "version": "azps-100.0.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
+            { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-100.0.0", "version": "azps-100.0.0", "dest": "azure" },
+
             { "files": ["toc.yml"], "src": "azps-16.3.0", "version": "azps-16.3.0", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-16.3.0", "version": "azps-16.3.0", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-16.3.0", "version": "azps-16.3.0", "dest": "azure" },
@@ -24,11 +28,13 @@
             }
         ],
         "resource": [
+            { "files": ["media/**"], "version": "azps-100.0.0" },
             { "files": ["media/**"], "version": "azps-16.3.0" },
             { "files": ["media/**"], "version": "azps-15.6.0" },
             { "files": ["media/**"], "version": "azps-0.10.0" }
         ],
         "versions": {
+            "azps-100.0.0": { "dest": "azps-100.0.0" },
             "azps-16.3.0": { "dest": "azps-16.3.0" },
             "azps-15.6.0": { "dest": "azps-15.6.0" },
             "azps-0.10.0": { "dest": "azps-0.10.0" }
@@ -388,6 +394,7 @@
                 "docs-conceptual/**/*": "concept-article"
             },
             "ms.date": {
+                "azps-100.0.0/**/*": "9/07/2026",
                 "azps-16.3.0/**/*": "9/01/2026",
                 "azps-15.6.0/**/*": "5/05/2026",
                 "azps-0.10.0/**/*": "4/14/2020"
@@ -410,6 +417,8 @@
             "ROBOTS": {
             },
             "feedback_system": {
+                "azps-100.0.0/**/*": "OpenSource",
+                "docs-conceptual/azps-100.0.0/*": "OpenSource",
                 "azps-16.3.0/**/*": "OpenSource",
                 "docs-conceptual/azps-16.3.0/*": "OpenSource",
                 "azps-15.6.0/**/*": "None",
