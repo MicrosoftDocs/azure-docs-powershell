@@ -20,7 +20,7 @@ version numbers (for example, `15.6.0`).
 | Product | Example version | Notes |
 | --- | --- | --- |
 | Classic Azure PowerShell | `15.6.0` | Your existing, full Az installation. |
-| Preview (azclips) | `0.1.0` | The private-preview modules. |
+| Preview (azclips) | `0.1.0` | The preview modules. |
 
 Because both versions are available, PowerShell decides which one to load based on the version you
 request. See [Install Azure PowerShell modules][01] for how the preview is installed.
