@@ -1,5 +1,32 @@
 items:
-  - name: AzClips PowerShell (Preview)
+  - name: Azure PowerShell (preview)
+    href: index.yml
+  - name: Get started
+    items:
+      - name: Getting started
+        href: getting-started.md
+        displayName: intro, introduction, sign in, signin, log in, login, preview
+      - name: Configuration
+        href: config.md
+        displayName: config, defaults, settings, environment, variables
+  - name: Install
     items:
       - name: Overview
-        href: index.yml
+        href: install-overview.md
+        displayName: install, setup, preview
+      - name: Install Azure PowerShell modules
+        href: install-powershell-modules.md
+        displayName: install, modules, nupkg, tarball
+  - name: Sign in
+    items:
+      - name: Manage sign-in profiles
+        href: profile-base-login.md
+        displayName: profile, login, signin, authentication, tenant, subscription
+  - name: Troubleshoot
+    items:
+      - name: Troubleshooting
+        href: troubleshooting.md
+        displayName: troubleshoot, help, support, error, debug
+      - name: Switch between classic Azure PowerShell and preview build
+        href: switch-azps-versions.md
+        displayName: switch, toggle, azps, classic, version, side by side

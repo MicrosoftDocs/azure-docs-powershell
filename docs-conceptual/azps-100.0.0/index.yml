@@ -1,0 +1,65 @@
+### YamlMime:Landing
+
+title: Azure PowerShell (preview) documentation
+summary: |
+  Official documentation for the preview of Azure PowerShell. Learn how to install, configure, sign in, and troubleshoot the preview build of Azure PowerShell.
+
+metadata:
+  title: Azure PowerShell (preview) documentation
+  description: Official documentation for the preview of Azure PowerShell. Learn how to install, configure, sign in, and troubleshoot the preview build of Azure PowerShell.
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.custom: devx-track-azurepowershell
+  ms.service: azure-powershell
+  keywords: azure powershell, azure powershell preview, azps, preview, powershell
+landingContent:
+  - title: About Azure PowerShell (preview)
+    linkLists:
+    - linkListType: overview
+      links:
+        - text: Getting started
+          url: getting-started.md
+  - title: Installation
+    linkLists:
+      - linkListType: download
+        links:
+          - text: Overview
+            url: install-overview.md
+          - text: Install Azure PowerShell modules
+            url: install-powershell-modules.md
+  - title: Azure PowerShell reference
+    linkLists:
+    - linkListType: reference
+      links:
+        - text: Cmdlet reference
+          url: /powershell/module/?view=azps-100.0.0
+  - title: Identity and authentication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Manage sign-in profiles
+            url: profile-base-login.md
+  - title: Configuration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configuration management
+            url: config.md
+  - title: Coexistence and migration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Switch between classic and preview Azure PowerShell
+            url: switch-azps-versions.md
+  - title: Troubleshoot
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshooting
+            url: troubleshooting.md
+  - title: Help &amp; support
+    linkLists:
+    - linkListType: overview
+      links:
+        - text: Report a problem or share feedback
+          url: https://github.com/Azure/azure-powershell/issues
