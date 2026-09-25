@@ -1,0 +1,30 @@
+{
+  "Get-AzVM": "Compute",
+  "New-AzVM": "Compute",
+  "Remove-AzVM": "Compute",
+
+  "Get-AzConfig": "Config",
+  "Get-AzConfigInfo": "Config",
+  "Get-AzConfigList": "Config",
+  "Remove-AzConfig": "Config",
+  "Set-AzConfig": "Config",
+
+  "Connect-AzAccount": "Accounts",
+  "Disconnect-AzAccount": "Accounts",
+  "Get-AzProfile": "Accounts",
+  "Remove-AzProfile": "Accounts",
+  "Set-AzProfile": "Accounts",
+
+  "Get-AzMsGraphApplication": "MS Graph",
+  "Get-AzMsGraphGroup": "MS Graph",
+  "Get-AzMsGraphGroupMember": "MS Graph",
+  "Get-AzMsGraphUser": "MS Graph",
+  "New-AzMsGraphApplication": "MS Graph",
+  "Remove-AzMsGraphApplication": "MS Graph",
+
+  "Get-AzResourceGroup": "Resources",
+  "Invoke-AzRestMethod": "Resources",
+  "New-AzResourceGroup": "Resources",
+  "New-AzResourceGroupDeployment": "Resources",
+  "New-AzResourceGroupDeploymentWhatIf": "Resources"
+}

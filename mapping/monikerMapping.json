@@ -1,4 +1,11 @@
 {
+    "azps-100.0.0": {
+        "conceptualToc": "docs-conceptual/azps-100.0.0/toc.yml",
+        "conceptualTocUrl": "/powershell/azure/toc.json",
+        "packageRoot": "azps-100.0.0",
+        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
+        "serviceMap": "mapping/az-groupMapping-100.0.0.json"
+    },
     "azps-16.3.0": {
         "conceptualToc": "docs-conceptual/azps-16.3.0/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
