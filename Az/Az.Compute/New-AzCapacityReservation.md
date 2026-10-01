@@ -1,0 +1,282 @@
+---
+external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+Module Name: Az.Compute
+online version: https://learn.microsoft.com/powershell/module/az.compute/new-azcapacityreservation
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzCapacityReservation.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzCapacityReservation.md
+---
+
+# New-AzCapacityReservation
+
+## SYNOPSIS
+Creates a Capacity Reservation resource in a Capacity Reservation Group
+
+## SYNTAX
+
+```
+New-AzCapacityReservation -ResourceGroupName <String> -ReservationGroupName <String> -Name <String>
+ -Location <String> -CapacityToReserve <Int32> -Sku <String> [-AsJob] [-Tag <Hashtable>] [-Zone <String[]>]
+ [-ScheduleProfileStart <DateTimeOffset>] [-MinimumCommitmentDayCount <Int32>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+The **New-AzCapacityReservation** cmdlet creates a Capacity Reservation resource in a Capacity Reservation Group
+
+## EXAMPLES
+
+### Example 1
+```powershell
+New-AzCapacityReservation -ResourceGroupName "myRG" -Location "eastus" -ReservationGroupName "myCapacityReservationGroup" -Name "myCapacityReservation" -Sku "Standard_DS1_v2" -CapacityToReserve 4
+```
+
+This command will create a Capacity Reservation resource with the provided sku and capacity in the Capacity Reservation Group named "myCapacityReservationGroup".
+
+### Example 2
+```powershell
+New-AzCapacityReservation -ResourceGroupName "myRG" -Location "eastus" -ReservationGroupName "myCapacityReservationGroup" -Name "myCapacityReservation" -Sku "Standard_DS1_v2" -CapacityToReserve 4 -ScheduleProfileStart "2026-12-25" -MinimumCommitmentDayCount 35
+```
+
+This command will create a Future Capacity Reservation resource that reserves capacity starting on 2026-12-25, and that cannot be updated or deleted until 35 days have passed after the start date once the reservation is committed.
+
+## PARAMETERS
+
+### -AsJob
+Run cmdlet in the background
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CapacityToReserve
+Specifies the number of virtual machines in the scale set.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with Azure.
+
+```yaml
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Parameter Sets: (All)
+Aliases: AzContext, AzureRmContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+Specifies the location.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MinimumCommitmentDayCount
+The minimum number of days that must pass after the start date before a Future Capacity Reservation can be updated or deleted once it has been committed.
+Must be at least 30 if provided, and otherwise defaults to 30.
+This parameter is only valid for Future Capacity Reservations.
+Minimum API version: 2026-04-01.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the capacity reservation resource.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: CapacityReservationName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReservationGroupName
+Specifies the name of the capacity reservation group.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: CapacityReservationGroupName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: True
+```
+
+### -ResourceGroupName
+Specifies the name of a resource group.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ScheduleProfileStart
+The required start date for a Future Capacity Reservation.
+It must be at least 7 days and at most 6 months in the future.
+In a Targeted or Open capacity reservation group, providing a start date without an end date creates a Future Capacity Reservation.
+Minimum API version: 2026-04-01.
+
+```yaml
+Type: System.DateTimeOffset
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sku
+SKU of the resource for which capacity needs be reserved.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Size
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tag
+Specifies that resources and resource groups can be tagged with a set of name-value pairs. Adding tags to resources enables you to group resources together across resource groups and to create your own views. Each resource or resource group can have a maximum of 15 tags.
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Zone
+Availability Zone to use for this capacity reservation.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### System.String
+
+### System.Int32
+
+### System.DateTimeOffset
+
+### System.Collections.Hashtable
+
+## OUTPUTS
+
+### Microsoft.Azure.Commands.Compute.Automation.Models.PSCapacityReservation
+
+## NOTES
+
+## RELATED LINKS
