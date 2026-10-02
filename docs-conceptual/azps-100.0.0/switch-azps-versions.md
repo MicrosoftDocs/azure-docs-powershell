@@ -1,7 +1,7 @@
 ---
 title: Switch between classic and preview Azure PowerShell (Preview)
 description: Learn how the preview Az modules coexist with your classic Az installation and how to choose which version loads in a PowerShell session.
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Switch between classic and preview Azure PowerShell (Preview)
@@ -109,7 +109,7 @@ function az-classic { pwsh -NoExit -Command 'Import-Module Az' }
 
 Run `az-preview` or `az-classic` to open a fresh session with that version loaded.
 
-For steps on adding these functions to your profile, see [How to edit a profile](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7.6#how-to-edit-a-profile).
+For steps on adding these functions to your profile, see [How to edit a profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-edit-a-profile).
 
 ## Related content
 
