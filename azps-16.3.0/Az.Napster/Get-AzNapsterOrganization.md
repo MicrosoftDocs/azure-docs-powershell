@@ -64,7 +64,7 @@ Get-AzNapsterOrganization -ResourceGroupName acctest0001 -Name napster-test1
 ```
 
 ```output
-Id                                  : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test1
+Id                                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test1
 IdentityPrincipalId                 :
 IdentityTenantId                    :
 IdentityType                        :
@@ -107,7 +107,7 @@ This command gets details of a specific Napster organization by name in the spec
 
 ### Example 3: List all Napster Organizations in the subscription
 ```powershell
-Get-AzNapsterOrganization -SubscriptionId 61641157-140c-4b97-b365-30ff76d9f82e
+Get-AzNapsterOrganization -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -213,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
