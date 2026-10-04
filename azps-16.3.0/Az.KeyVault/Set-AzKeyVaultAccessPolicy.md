@@ -264,7 +264,7 @@ This example specifies the service principal name `http://payroll.contoso.com`, 
 
 ### Example 3: Grant permissions for an application using its object ID
 ```powershell
-Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId 34595082-9346-41b6-8d6b-295a2808b8db -PermissionsToSecrets Get,Set
+Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -PermissionsToSecrets Get,Set
 ```
 
 This command grants the application permissions to read and write secrets.
