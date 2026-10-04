@@ -34,7 +34,7 @@ Deletes a SAP monitor with the specified subscription, resource group, and SAP m
 
 ### Example 1: Delete a specific AMS
 ```powershell
-Remove-AzWorkloadsMonitor -Name suha-050423-ams7 -ResourceGroupName suha-0802-rg1 -SubscriptionId 49d64d54-e966-4c46-a868-1999802b762c
+Remove-AzWorkloadsMonitor -Name suha-050423-ams7 -ResourceGroupName suha-0802-rg1 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -49,7 +49,7 @@ Delete a specific AMS
 
 ### Example 2: Delete a specific AMS by Id
 ```powershell
-Remove-AzWorkloadsMonitor -InputObject "/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/suha-050423-ams7"
+Remove-AzWorkloadsMonitor -InputObject "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/suha-050423-ams7"
 ```
 
 ```output
