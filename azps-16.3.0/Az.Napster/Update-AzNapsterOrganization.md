@@ -49,11 +49,11 @@ Update a OrganizationResource
 
 ### Example 1: Update tags on an existing Napster Organization
 ```powershell
-Update-AzNapsterOrganization -Name "napster-test1" -ResourceGroupName "acctest0001" -SubscriptionId "61641157-140c-4b97-b365-30ff76d9f82e" -Tag @{"TestName1" = "TestValue1"}
+Update-AzNapsterOrganization -Name "napster-test1" -ResourceGroupName "acctest0001" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Tag @{"TestName1" = "TestValue1"}
 ```
 
 ```output
-Id                                  : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test1
+Id                                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/acctest0001/providers/napster.companionapi/organizations/napster-test1
 IdentityType                        : None
 IdentityUserAssignedIdentity        : {
                                       }
@@ -572,4 +572,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
