@@ -58,7 +58,7 @@ Remove client certificate by common name.
 ```powershell
 $rgName = "testRG"
 $clusterName = "testCluster"
-Remove-AzServiceFabricManagedClusterClientCertificate -ResourceGroupName $rgName -Name $clusterName -Thumbprint 5F3660C715EBBDA31DB1FFDCF508302348DE8E7A
+Remove-AzServiceFabricManagedClusterClientCertificate -ResourceGroupName $rgName -Name $clusterName -Thumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 ```
 
 Remove client certificate by thumbprint.
@@ -69,7 +69,7 @@ $rgName = "testRG"
 $clusterName = "testCluster"
 $cluster = Get-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Name $clusterName
 
-$cluster | Remove-AzServiceFabricManagedClusterClientCertificate -Thumbprint 5F3660C715EBBDA31DB1FFDCF508302348DE8E7A
+$cluster | Remove-AzServiceFabricManagedClusterClientCertificate -Thumbprint AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 ```
 
 Remove client certificate by thumbprint, with piping.
