@@ -1,0 +1,45 @@
+---
+Module Name: Az.StandbyPool
+Module Guid: 33d2e0ce-630e-420f-8d11-9038d630e08b
+Download Help Link: https://learn.microsoft.com/powershell/module/az.standbypool
+Help Version: 1.0.0.0
+Locale: en-US
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StandbyPool/StandbyPool/help/Az.StandbyPool.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StandbyPool/StandbyPool/help/Az.StandbyPool.md
+---
+
+# Az.StandbyPool Module
+## Description
+Microsoft Azure PowerShell: StandbyPool cmdlets
+
+## Az.StandbyPool Cmdlets
+### [Get-AzStandbyContainerGroupPool](Get-AzStandbyContainerGroupPool.md)
+Get a StandbyContainerGroupPoolResource
+
+### [Get-AzStandbyContainerGroupPoolStatus](Get-AzStandbyContainerGroupPoolStatus.md)
+Get a StandbyContainerGroupPoolRuntimeViewResource
+
+### [Get-AzStandbyVMPool](Get-AzStandbyVMPool.md)
+Get a StandbyVirtualMachinePoolResource
+
+### [Get-AzStandbyVMPoolStatus](Get-AzStandbyVMPoolStatus.md)
+Get a StandbyVirtualMachinePoolRuntimeViewResource
+
+### [New-AzStandbyContainerGroupPool](New-AzStandbyContainerGroupPool.md)
+Create a StandbyContainerGroupPoolResource
+
+### [New-AzStandbyVMPool](New-AzStandbyVMPool.md)
+Create a StandbyVirtualMachinePoolResource
+
+### [Remove-AzStandbyContainerGroupPool](Remove-AzStandbyContainerGroupPool.md)
+Delete a StandbyContainerGroupPoolResource
+
+### [Remove-AzStandbyVMPool](Remove-AzStandbyVMPool.md)
+Delete a StandbyVirtualMachinePoolResource
+
+### [Update-AzStandbyContainerGroupPool](Update-AzStandbyContainerGroupPool.md)
+Update a StandbyContainerGroupPoolResource
+
+### [Update-AzStandbyVMPool](Update-AzStandbyVMPool.md)
+Update a StandbyVirtualMachinePoolResource
+
