@@ -35,11 +35,11 @@ Location                  : centralus
 DeletionTime              : 11/6/2025 12:30:00 PM
 FullyQualifiedDomainName  : myserver.database.windows.net
 Version                   : 12.0
-Id                        : /subscriptions/12345678-1234-1234-1234-123456789012/providers/Microsoft.Sql/locations/centralus/deletedServers/myserver
-OriginalId                : /subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
+Id                        : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Sql/locations/centralus/deletedServers/myserver
+OriginalId                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
 ScheduledPurgeTime        : 11/13/2025 12:30:00 PM
 ResourceGroupName         : myresourcegroup
-SubscriptionId            : 12345678-1234-1234-1234-123456789012
+SubscriptionId            : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 This command gets all deleted SQL servers in the Central US location under the current subscription.
@@ -62,11 +62,11 @@ Location                  : centralus
 DeletionTime              : 11/6/2025 12:30:00 PM
 FullyQualifiedDomainName  : myserver.database.windows.net
 Version                   : 12.0
-Id                        : /subscriptions/12345678-1234-1234-1234-123456789012/providers/Microsoft.Sql/locations/centralus/deletedServers/myserver
-OriginalId                : /subscriptions/12345678-1234-1234-1234-123456789012/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
+Id                        : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Sql/locations/centralus/deletedServers/myserver
+OriginalId                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
 ScheduledPurgeTime        : 11/13/2025 12:30:00 PM
 ResourceGroupName         : myresourcegroup
-SubscriptionId            : 12345678-1234-1234-1234-123456789012
+SubscriptionId            : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 This command gets information about a specific deleted SQL server named "myserver" in the Central US location.
