@@ -35,7 +35,7 @@ Deregisters the ScVmm VM Template from Azure.
 
 ### Example 1: Remove Virtual Machine Template resource
 ```powershell
-Remove-AzScVmmVMTemplate -Name "test-vmt" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Remove-AzScVmmVMTemplate -Name "test-vmt" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 Removes the SCVMM Virtual Machine Template resource from Azure.
@@ -225,4 +225,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
