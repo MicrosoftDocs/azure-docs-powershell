@@ -52,7 +52,7 @@ Gets a DNS forwarding ruleset properties.
 
 ### Example 1: List all DNS forwarding rulesets in a subscription
 ```powershell
-Get-AzDnsForwardingRuleset -SubscriptionId 0e5a46b1-de0b-4ec3-a5d7-dda908b4e076
+Get-AzDnsForwardingRuleset -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
