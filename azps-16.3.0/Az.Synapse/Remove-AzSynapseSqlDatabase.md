@@ -68,7 +68,7 @@ This command deletes an Azure Synapse Analytics SQL database through pipeline.
 
 ### Example 4
 ```powershell
-Remove-AzSynapseSqlDatabase -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/sqlDatabases/ContosoSqlDatabase
+Remove-AzSynapseSqlDatabase -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/sqlDatabases/ContosoSqlDatabase
 ```
 
 This command deletes an Azure Synapse Analytics SQL database with the specified resource ID.
