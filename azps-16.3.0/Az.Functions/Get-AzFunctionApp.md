@@ -51,8 +51,8 @@ Get-AzFunctionApp
 ```output
 Name                     Status  OSType  Runtime Location    AppServicePlan ResourceGroupName         SubscriptionId
 ----                     ------  ------  ------- --------    -------------- -----------------         --------------
-Functions1-Windows-DoNet Running Windows DotNet  Central US  CentralUSPlan  Functions-West-Europe-Win fe16564a-d943-4bf8-8c28-cf01708c3f8b
-Functions1-Windows-Java  Running Windows Java    West Europe Premium1-WE    Functions-West-Europe1    fe16564a-d943-4bf8-8c28-cf01708c3f8b
+Functions1-Windows-DoNet Running Windows DotNet  Central US  CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+Functions1-Windows-Java  Running Windows Java    West Europe Premium1-WE    Functions-West-Europe1    aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ### Example 2: Get function apps by name.
@@ -63,7 +63,7 @@ Get-AzFunctionApp -ResourceGroupName Functions-West-Europe-Win -Name Functions1-
 ```output
 Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
 ----                     ------  ------  ------- --------   -------------- -----------------         --------------
-Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win fe16564a-d943-4bf8-8c28-cf01708c3f8b
+Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ### Example 3: Get function apps by resource group name.
@@ -74,18 +74,18 @@ Get-AzFunctionApp -ResourceGroupName Functions-West-Europe-Win
 ```output
 Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
 ----                     ------  ------  ------- --------   -------------- -----------------         --------------
-Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win fe16564a-d943-4bf8-8c28-cf01708c3f8b
+Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ### Example 4: Get function apps for the given subscriptions.
 ```powershell
-Get-AzFunctionApp -SubscriptionId fe16564a-d943-4bf8-8c28-cf01708c3f8b
+Get-AzFunctionApp -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
 Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
 ----                     ------  ------  ------- --------   -------------- -----------------         --------------
-Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win fe16564a-d943-4bf8-8c28-cf01708c3f8b
+Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ### Example 5: Get function apps by location.
@@ -96,7 +96,7 @@ Get-AzFunctionApp -Location "Central US"
 ```output
 Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
 ----                     ------  ------  ------- --------   -------------- -----------------         --------------
-Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win fe16564a-d943-4bf8-8c28-cf01708c3f8b
+Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ## PARAMETERS
