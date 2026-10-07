@@ -44,7 +44,7 @@ Implements VirtualNetwork GET method.
 
 ### Example 1: Get Virtual Network By Subscription Id
 ```powershell
-Get-AzScVmmVirtualNetwork -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Get-AzScVmmVirtualNetwork -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -62,7 +62,7 @@ This command lists Virtual Networks in provided subscription.
 
 ### Example 2: Get Virtual Network By Resource Group
 ```powershell
-Get-AzScVmmVirtualNetwork -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -ResourceGroupName "test-rg-01"
+Get-AzScVmmVirtualNetwork -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-rg-01"
 ```
 
 ```output
@@ -77,14 +77,14 @@ This command lists Virtual Networks in provided Resource Group.
 
 ### Example 3: Get Virtual Network
 ```powershell
-Get-AzScVmmVirtualNetwork -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -ResourceGroupName "test-rg-01" -Name "test-vnet"
+Get-AzScVmmVirtualNetwork -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "test-rg-01" -Name "test-vnet"
 ```
 
 ```output
-ExtendedLocationName         : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ExtendedLocation/customLocations/test-cl
 ExtendedLocationType         : customLocation
-Id                           : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/VirtualNetworks/test-vnet
-InventoryItemId              : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/VirtualNetworks/test-vnet
+InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01/InventoryItems/00000000-1111-0000-0001-000000000000
 Location                     : eastus
 Name                         : test-vnet
 NetworkName                  : test-vnet
@@ -100,7 +100,7 @@ Tag                          : {
                                }
 Type                         : microsoft.scvmm/virtualnetworks
 Uuid                         : 00000000-1111-0000-0001-000000000000
-VmmServerId                  : /subscriptions/00000000-abcd-0000-abcd-000000000000/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
+VmmServerId                  : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg-01/providers/Microsoft.ScVmm/vmmServers/test-vmmserver-01
 ```
 
 This command gets the Virtual Network named `test-vnet` in the resource group named `test-rg-01`.
@@ -199,4 +199,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
