@@ -38,11 +38,11 @@ The **Get-AzMetric** cmdlet gets the metric values for a specified resource.
 
 ### Example 1: Get a metric with summarized output
 ```powershell
-Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00
+Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00
 ```
 
 ```output
-Id         : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
+Id         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
 Name       : 
                 LocalizedValue : Requests
                 Value          : Requests
@@ -58,11 +58,11 @@ This command gets the metric values for website3 with a time grain of 1 minute.
 
 ### Example 2: Get a metric with detailed output
 ```powershell
-Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00 -DetailedOutput
+Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00 -DetailedOutput
 ```
 
 ```output
-Id         : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
+Id         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
 Name       : Microsoft.Azure.Management.Monitor.Models.LocalizableString
 
 Type       : Microsoft.Insights/metrics
@@ -77,11 +77,11 @@ The output is detailed.
 
 ### Example 3: Get a specified metric
 ```powershell
-Get-AzMetric -ResourceId "/subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -MetricName "Requests" -TimeGrain 00:01:00
+Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -MetricName "Requests" -TimeGrain 00:01:00
 ```
 
 ```output
-Id         : /subscriptions/e3f5b07d-3c39-4b0f-bf3b-40fdeba10f2a/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
+Id         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
 Name       : 
                 LocalizedValue : Requests
                 Value          : Requests

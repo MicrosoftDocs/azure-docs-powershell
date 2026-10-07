@@ -35,11 +35,11 @@ Returns the latest SaaS linked to the Napster organization of the underlying mon
 
 ### Example 1: Get the latest SaaS linked to a Napster Organization
 ```powershell
-Invoke-AzNapsterLatestOrganizationLinkedSaaS -Organizationname napster-test1 -ResourceGroupName acctest0001 -SubscriptionId 61641157-140c-4b97-b365-30ff76d9f82e
+Invoke-AzNapsterLatestOrganizationLinkedSaaS -Organizationname napster-test1 -ResourceGroupName acctest0001 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
-Id                            : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/acctest0001/providers/Microsoft.SaaS/resources/a4fa84fc_dsafsa
+Id                            : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/acctest0001/providers/Microsoft.SaaS/resources/a4fa84fc_dsafsa
 MarketplaceSubscriptionId     : 09fffd7d-d000-4467-cc23-d82b97e9431d
 MarketplaceSubscriptionStatus : Subscribed
 OfferDetailOfferId            : napster_companion_api
@@ -48,7 +48,7 @@ OfferDetailPlanName           : Pay As You Go
 OfferDetailPublisherId        : touchcastinc1655995956899
 OfferDetailTermId             : n7ja87drquhy
 OfferDetailTermUnit           : P1M
-SaaSResourceId                : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/acctest0001/providers/Microsoft.SaaS/resources/a4fa84fc_dsafsa
+SaaSResourceId                : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/acctest0001/providers/Microsoft.SaaS/resources/a4fa84fc_dsafsa
 ```
 
 This command returns the most recent SaaS resource linked to the specified Napster organization.
@@ -178,4 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

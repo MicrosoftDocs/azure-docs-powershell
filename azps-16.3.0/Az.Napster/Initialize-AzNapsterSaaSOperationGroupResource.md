@@ -50,7 +50,7 @@ Resolve the token to get the SaaS resource ID and activate the SaaS resource
 
 ### Example 1: Activate a Napster SaaS resource
 ```powershell
-Initialize-AzNapsterSaaSOperationGroupResource -SubscriptionId "61641157-140c-4b97-b365-30ff76d9f82e" -SaasGuid "00000000-0000-0000-0000-000000000000" -PublisherId "touchcastinc1655995956899"
+Initialize-AzNapsterSaaSOperationGroupResource -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -SaasGuid "00000000-0000-0000-0000-000000000000" -PublisherId "touchcastinc1655995956899"
 ```
 
 This command resolves the marketplace SaaS token and activates the underlying Napster SaaS resource for the given publisher in the specified subscription.
@@ -239,4 +239,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
