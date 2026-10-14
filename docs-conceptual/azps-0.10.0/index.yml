@@ -11,8 +11,8 @@ metadata:
   title: Overview of Azure PowerShell
   description: Get started with Azure PowerShell by installing and learning about its features and capabilities.
   ms.topic: landing-page
-  author: mikefrobbins
-  ms.author: mirobb
+  author: akashdubey-ms
+  ms.author: akashdubey
   ms.devlang: powershell
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
