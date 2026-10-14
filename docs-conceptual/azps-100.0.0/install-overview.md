@@ -8,7 +8,7 @@ description: Learn how to install the Azure PowerShell preview modules.
 The Azure PowerShell preview ships as **azps** — the Az PowerShell modules (`Az.*`). The modules require PowerShell 7.6 or later.
 
 > [!NOTE]
-> For the Azure CLI (`az` command-line tool), see the [Azure CLI preview install overview](/cli/azure/install-overview?view=azure-cli-preview).
+> For the Azure CLI (`az` command-line tool), see the [Azure CLI preview install overview](/cli/azure/install-overview?view=azure-cli-preview&preserve-view=true).
 
 ## Install azps (one command)
 
@@ -41,7 +41,7 @@ Get-Module -Name Az.* -ListAvailable | Select-Object Name, Version
 | You want to… | Guide |
 | --- | --- |
 | Install a single module, pin a version, or install machine-wide | [install-powershell-modules.md](./install-powershell-modules.md) |
-| Install the Azure CLI preview | [install-overview](/cli/azure/install-overview?view=azure-cli-preview) |
+| Install the Azure CLI preview | [install-overview](/cli/azure/install-overview?view=azure-cli-preview&preserve-view=true) |
 
 ## What's in a release
 
