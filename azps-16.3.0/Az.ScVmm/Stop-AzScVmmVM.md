@@ -58,7 +58,7 @@ This command will Shut down the VM gracefully and bring it to Stopped state.
 
 ### Example 2: Power off the VM
 ```powershell
-Stop-AzScVmmVM -Name "test-vm" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000" -SkipShutdown
+Stop-AzScVmmVM -Name "test-vm" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -SkipShutdown
 ```
 
 This command will Skip shutdown and power-off the VM immediately.
@@ -288,4 +288,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -69,7 +69,7 @@ This command deletes an Azure Synapse Analytics SQL pool through pipeline.
 
 ### Example 4
 ```powershell
-Remove-AzSynapseSqlPool -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/sqlPools/ContosoSqlPool
+Remove-AzSynapseSqlPool -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/sqlPools/ContosoSqlPool
 ```
 
 This command deletes an Azure Synapse Analytics SQL pool with the specified resource ID.

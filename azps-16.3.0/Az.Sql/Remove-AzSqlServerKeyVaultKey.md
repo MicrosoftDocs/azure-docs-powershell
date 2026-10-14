@@ -39,7 +39,7 @@ ServerName        : ContosoServer
 ServerKeyName     : contoso_contosokey_01234567890123456789012345678901
 Type              : AzureKeyVault
 Uri               : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
-Thumbprint        : 1122334455667788990011223344556677889900
+Thumbprint        : AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 CreationDate      : 1/1/2017 12:00:00 AM
 ```
 

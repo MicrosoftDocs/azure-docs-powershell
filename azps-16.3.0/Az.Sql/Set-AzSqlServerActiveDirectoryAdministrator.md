@@ -43,7 +43,7 @@ Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01"
 ```output
 ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication
 ----------------- ---------- ----------- -------- ---------------------------
-ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b False
+ResourceGroup01   Server01   DBAs        aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb False
 ```
 
 This command provisions a Microsoft Entra administrator group named DBAs for the server named Server01.
@@ -64,13 +64,13 @@ This command provisions a Microsoft Entra user as an administrator for the serve
 
 ### Example 3: Provision an administrator group by specifying its ID
 ```powershell
-Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DisplayName "DBAs" -ObjectId "40b79501-b343-44ed-9ce7-da4c8cc7353b"
+Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DisplayName "DBAs" -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
 ```
 
 ```output
 ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication 
 ----------------- ---------- ----------- -------- 
-ResourceGroup01   Server01   DBAs        40b79501-b343-44ed-9ce7-da4c8cc7353b False
+ResourceGroup01   Server01   DBAs        aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb False
 ```
 
 This command provisions a Microsoft Entra administrator group named DBAs for the server named Server01.
