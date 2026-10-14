@@ -66,7 +66,7 @@ This command gets Microsoft Entra-only authentication status for Synapse workspa
 
 ### Example 3
 ```powershell
-Get-AzSynapseActiveDirectoryOnlyAuthentication -ResourceId /subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
+Get-AzSynapseActiveDirectoryOnlyAuthentication -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
 ```
 
 ```output

@@ -174,14 +174,14 @@ AdministratorType         : ActiveDirectory
 PrincipalType             : Group
 Login                     : Dummy
 Sid                       : df7667b8-f9fd-4029-a0e3-b43c75ce9538
-TenantId                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId                  : aaaabbbb-0000-cccc-1111-dddd2222eeee
 AzureADOnlyAuthentication : True
 
 AdministratorType         : ActiveDirectory
 PrincipalType             : Group
 Login                     : Dummy2
 Sid                       : df7667b8-f9fd-4029-a0e3-b43c75ce9538
-TenantId                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId                  : aaaabbbb-0000-cccc-1111-dddd2222eeee
 AzureADOnlyAuthentication : True
 ```
 
@@ -207,7 +207,7 @@ AdministratorType         : ActiveDirectory
 PrincipalType             : Group
 Login                     : Dummy
 Sid                       : df7667b8-f9fd-4029-a0e3-b43c75ce9538
-TenantId                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId                  : aaaabbbb-0000-cccc-1111-dddd2222eeee
 AzureADOnlyAuthentication : True
 ```
 
@@ -328,5 +328,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-AzSqlServer](./Set-AzSqlServer.md)
 
 [SQL Database Documentation](https://learn.microsoft.com/azure/sql-database/)
-
-

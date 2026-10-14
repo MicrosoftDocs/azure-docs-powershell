@@ -34,7 +34,7 @@ This command will restart the Virtual Machine.
 
 ### Example 2: Restart the Virtual Machine
 ```powershell
-Restart-AzScVmmVM -Name "test-vm" -ResourceGroupName "test-rg-01" -SubscriptionId "00000000-abcd-0000-abcd-000000000000"
+Restart-AzScVmmVM -Name "test-vm" -ResourceGroupName "test-rg-01" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 This command will restart the Virtual Machine.
@@ -192,4 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

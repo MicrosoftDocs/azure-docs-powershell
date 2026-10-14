@@ -46,7 +46,7 @@ Get a FileSystemResource
 
 ### Example 1: List all Dell filesystems in a subscription
 ```powershell
-Get-AzDellFileSystem -SubscriptionId 834be33e-67e6-45ed-a454-c25a34cdec1f
+Get-AzDellFileSystem -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -67,7 +67,7 @@ Lists all Dell filesystem resources in the specified subscription.
 
 ### Example 2: List Dell filesystems in a resource group
 ```powershell
-Get-AzDellFileSystem -ResourceGroupName bhargavi-rg -SubscriptionId 834be33e-67e6-45ed-a454-c25a34cdec1f
+Get-AzDellFileSystem -ResourceGroupName bhargavi-rg -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -87,7 +87,7 @@ Lists all Dell filesystem resources in the specified resource group.
 
 ### Example 3: Get a specific Dell filesystem by name
 ```powershell
-Get-AzDellFileSystem -ResourceGroupName praveensingh-test -Name dell-e2e-missingrequired-tests-70302421 -SubscriptionId b9aad304-baa9-4d2a-9404-dbdd3ab55ac5
+Get-AzDellFileSystem -ResourceGroupName praveensingh-test -Name dell-e2e-missingrequired-tests-70302421 -SubscriptionId bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
 ```
 
 ```output
@@ -96,7 +96,7 @@ CapacityIncremental                          : 1
 CapacityMax                                  : 2100
 CapacityMin                                  : 65
 DelegatedSubnetCidr                          : 10.0.1.0/24
-DelegatedSubnetId                            : /subscriptions/b9aad304-baa9-4d2a-9404-dbdd3ab55ac5/resourceGroups/prave
+DelegatedSubnetId                            : /subscriptions/bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f/resourceGroups/prave
                                                ensingh-test/providers/Microsoft.Network/virtualNetworks/scusVnet/subnet
                                                s/default2
 DellReferenceNumber                          : 100438419
@@ -105,7 +105,7 @@ EncryptionIdentityPropertyIdentityType       :
 EncryptionKeyUrl                             :
 EncryptionType                               : Microsoft-managed keys (MMK)
 FileSystemId                                 : ONEFS-0ad6b06d44738aafcd6527093d9afe3f2268
-Id                                           : /subscriptions/b9aad304-baa9-4d2a-9404-dbdd3ab55ac5/resourceGroups/prave
+Id                                           : /subscriptions/bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f/resourceGroups/prave
                                                ensingh-test/providers/Dell.Storage/filesystems/dell-e2e-missingrequired
                                                -tests-70302421
 IdentityPrincipalId                          :
@@ -237,5 +237,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-
