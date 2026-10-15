@@ -93,7 +93,7 @@ latest information, see the current limitations section of this article.
 
 ## Logging issues and providing feedback
 
-Your feedback is essential during the preview.
+Your feedback is essential during the preview. To share feedback directly from the command line, run `Invoke-AzSurvey`.
 
 If you encounter an issue:
 

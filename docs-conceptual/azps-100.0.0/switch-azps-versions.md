@@ -15,11 +15,11 @@ them.
 
 When you install the preview, its modules land in the same module path as the classic modules, just
 at a different version number. The preview ships as version `0.1.0`; classic releases use higher
-version numbers (for example, `15.6.0`).
+version numbers (for example, `16.4.0`).
 
 | Product | Example version | Notes |
 | --- | --- | --- |
-| Classic Azure PowerShell | `15.6.0` | Your existing, full Az installation. |
+| Classic Azure PowerShell | `16.4.0` | Your existing, full Az installation. |
 | Preview (azclips) | `0.1.0` | The preview modules. |
 
 Because both versions are available, PowerShell decides which one to load based on the version you
@@ -56,7 +56,7 @@ Import-Module Az -RequiredVersion 0.1.0
 Load the **classic** version (use the version number from the previous step):
 
 ```powershell
-Import-Module Az -RequiredVersion 15.6.0
+Import-Module Az -RequiredVersion 16.4.0
 ```
 
 > [!NOTE]
