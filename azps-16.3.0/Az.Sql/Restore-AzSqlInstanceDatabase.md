@@ -185,7 +185,7 @@ The second command restores the fetched database, from the specified point-in-ti
 
 ### Example 6: Restore a database from LTR backup.
 ```powershell
-Restore-AzSqlInstanceDatabase -FromLongTermRetentionBackup -ResourceId "/subscriptions/f46521f3-5bb0-4eea-a3c2-c2d5987df96b/resourceGroups/testResourceGroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/testInstance/longTermRetentionDatabases/test/longTermRetentionManagedInstanceBackups/15be823c-7e2c-49d8-819f-a3fdcad92215;132268250550000000" -TargetInstanceDatabaseName "restoreTarget" -TargetInstanceName "testInstance" -TargetResourceGroupName "testResourceGroup"
+Restore-AzSqlInstanceDatabase -FromLongTermRetentionBackup -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/testResourceGroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/testInstance/longTermRetentionDatabases/test/longTermRetentionManagedInstanceBackups/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2;132268250550000000" -TargetInstanceDatabaseName "restoreTarget" -TargetInstanceName "testInstance" -TargetResourceGroupName "testResourceGroup"
 ```
 
 ```output
@@ -209,7 +209,7 @@ ManagedInstanceName               : testInstance
 Name                              : restoreTarget
 CreationDate                      : 3/4/2020 8:12:56 AM
 EarliestRestorePoint              : 3/4/2020 8:14:29 AM
-Id                                : /subscriptions/f46521f3-5bb0-4eea-a3c2-c2d5987df96b/resourceGroups/testResourceGroup/providers/Microsoft.Sql/managedInstances/testInstance/databases/restoreTarget
+Id                                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/testResourceGroup/providers/Microsoft.Sql/managedInstances/testInstance/databases/restoreTarget
 ```
 
 Restores LTR backup with the given resource ID (which can be found by running Get-AzSqlInstanceDatabaseLongTermRetentionBackup).

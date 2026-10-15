@@ -60,7 +60,7 @@ This command gets information about the workspace key named ContosoWorkspaceKey 
 
 ### Example 4
 ```powershell
-Get-AzSynapseSqlPool -ResourceId "/subscriptions/21686af7-58ec-4f4d-9c68-f431f4db4edd/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/keys/ContosoWorkspaceKey"
+Get-AzSynapseSqlPool -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace/keys/ContosoWorkspaceKey"
 ```
 
 This command gets the workspace key with the specified resource ID.

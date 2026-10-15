@@ -47,10 +47,10 @@ EndTime                            :
 Error                              : {}
 Id                                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/jobs/2b0b356e-d106-43af-ad26-02631fcaebba
 Name                               : 2b0b356e-d106-43af-ad26-02631fcaebba
-ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/c1a34301-3bff-4ec6-97f1-6c4bd5adcde0
+ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectInternalId                   : a40ecd8e-6413-574d-b1f8-2ef925e087fc
 ObjectInternalName                 : testmachine
-ObjectName                         : c1a34301-3bff-4ec6-97f1-6c4bd5adcde0
+ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectType                         : ProtectedItem
 ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
 SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
@@ -87,10 +87,10 @@ EndTime                            :
 Error                              : {}
 Id                                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/jobs/2b0b356e-d106-43af-ad26-02631fcaebba
 Name                               : 2b0b356e-d106-43af-ad26-02631fcaebba
-ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/c1a34301-3bff-4ec6-97f1-6c4bd5adcde0
+ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectInternalId                   : a40ecd8e-6413-574d-b1f8-2ef925e087fc
 ObjectInternalName                 : testmachine
-ObjectName                         : c1a34301-3bff-4ec6-97f1-6c4bd5adcde0
+ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ObjectType                         : ProtectedItem
 ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
 SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc

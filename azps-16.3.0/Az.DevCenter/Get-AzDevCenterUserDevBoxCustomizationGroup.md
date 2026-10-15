@@ -97,7 +97,7 @@ This command gets a customization group named "Provisioning" for the dev box "My
 
 ### Example 6: Get a customization group by dev center and InputObject
 ```powershell
-$customizationGroupInput = @{"CustomizationGroupName" = "Provisioning"; "ProjectName" = "DevProject"; "DevBoxName" = "MyDevBox"; "UserId" = "786a823c-8037-48ab-89b8-8599901e67d0" }
+$customizationGroupInput = @{"CustomizationGroupName" = "Provisioning"; "ProjectName" = "DevProject"; "DevBoxName" = "MyDevBox"; "UserId" = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" }
 Get-AzDevCenterUserDevBoxCustomizationGroup -DevCenterName Contoso -InputObject $customizationGroupInput
 ```
 
