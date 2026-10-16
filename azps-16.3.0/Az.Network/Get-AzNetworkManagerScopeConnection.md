@@ -66,8 +66,8 @@ Get-AzNetworkManagerScopeConnection -ResourceGroupName "psResourceGroup" -Networ
 ```
 
 ```output
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
-ResourceId        : /subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
+ResourceId        : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ConnectionState   : Pending
 DisplayName       :
 Description       : SampleDescription
@@ -86,7 +86,7 @@ Name              : subConnection
 Etag              :
 Id                : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/scopeConnections/subConnection
 
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 ResourceId        : /providers/Microsoft.Management/managementGroups/newMG
 ConnectionState   : Pending
 DisplayName       :

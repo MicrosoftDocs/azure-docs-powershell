@@ -50,7 +50,7 @@ Removes a namespace discovered asset by specifying the resource group name, name
 ### Example 2: Remove a namespace discovered asset using namespace identity object
 ```powershell
 $namespaceIdentity = @{
-    SubscriptionId = "12345678-1234-1234-1234-123456789abc"
+    SubscriptionId = "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
     ResourceGroupName = "my-resource-group"
     NamespaceName = "my-namespace"
 }

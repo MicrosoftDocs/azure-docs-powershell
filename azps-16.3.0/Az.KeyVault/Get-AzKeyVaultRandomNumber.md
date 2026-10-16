@@ -70,7 +70,7 @@ This command gets 10 random bytes as base-64 string from managed HSM "testmhsm"
 
 ### Example 3: Get random number by resource id
 ```powershell
-Get-AzKeyVaultRandomNumber -ResourceId /subscriptions/0b1fxxxx-xxxx-xxxx-aec3-xxxx72f09590/resourceGroups/test-rg/providers/Microsoft.KeyVault/managedHSMs/testhsm -Count 10
+Get-AzKeyVaultRandomNumber -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/providers/Microsoft.KeyVault/managedHSMs/testhsm -Count 10
 ```
 
 ```output

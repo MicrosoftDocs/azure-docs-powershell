@@ -51,7 +51,7 @@ Create a FileSystemResource
 
 ### Example 1: Create a Dell filesystem resource
 ```powershell
-New-AzDellFileSystem -Name biswadeep-test-rss -ResourceGroupName biswadeep-test-rg -SubscriptionId fc35d936-3b89-41f8-8110-a24b56826c37 -Location "eastus" -DelegatedSubnetId "/subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/pp-test/providers/Microsoft.Network/virtualNetworks/dell-test/subnets/default" -DelegatedSubnetCidr "10.0.0.0/24" -UserEmail "dummy@example.com" -DellReferenceNumber "12345" -EncryptionType "Microsoft-managed keys (MMK)" -MarketplaceOfferId "dell-managed-powerscale-for-azure" -MarketplacePlanId "plus1" -MarketplacePublisherId "dellemc" -MarketplacePlanName "Plus Plan" -MarketplaceTermUnit "P1Y" -MarketplaceSubscriptionId "00000000-0000-0000-0000-000000000000" -Tag @{"bypassPartner"="true"}
+New-AzDellFileSystem -Name biswadeep-test-rss -ResourceGroupName biswadeep-test-rg -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -Location "eastus" -DelegatedSubnetId "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/pp-test/providers/Microsoft.Network/virtualNetworks/dell-test/subnets/default" -DelegatedSubnetCidr "10.0.0.0/24" -UserEmail "dummy@example.com" -DellReferenceNumber "12345" -EncryptionType "Microsoft-managed keys (MMK)" -MarketplaceOfferId "dell-managed-powerscale-for-azure" -MarketplacePlanId "plus1" -MarketplacePublisherId "dellemc" -MarketplacePlanName "Plus Plan" -MarketplaceTermUnit "P1Y" -MarketplaceSubscriptionId "00000000-0000-0000-0000-000000000000" -Tag @{"bypassPartner"="true"}
 ```
 
 ```output
@@ -60,7 +60,7 @@ CapacityIncremental                          :
 CapacityMax                                  :
 CapacityMin                                  :
 DelegatedSubnetCidr                          : 10.0.0.0/24
-DelegatedSubnetId                            : /subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/pp-te
+DelegatedSubnetId                            : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/pp-te
                                                st/providers/Microsoft.Network/virtualNetworks/dell-test/subnets/default
 DellReferenceNumber                          : 12345
 EncryptionIdentityPropertyIdentityResourceId :
@@ -68,7 +68,7 @@ EncryptionIdentityPropertyIdentityType       :
 EncryptionKeyUrl                             :
 EncryptionType                               : Microsoft-managed keys (MMK)
 FileSystemId                                 : PartnerBypassed
-Id                                           : /subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/biswa
+Id                                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/biswa
                                                deep-test-rg/providers/Dell.Storage/filesystems/biswadeep-test-rss
 IdentityPrincipalId                          :
 IdentityTenantId                             :
@@ -107,7 +107,7 @@ Creates a new Dell filesystem resource with networking configuration.
 
 ### Example 2: Create a Dell filesystem resource using a JSON file
 ```powershell
-New-AzDellFileSystem -Name biswadeep-test-rss-2 -ResourceGroupName biswadeep-test-rg -SubscriptionId fc35d936-3b89-41f8-8110-a24b56826c37 -JsonFilePath ".\examples\dell-filesystem.json"
+New-AzDellFileSystem -Name biswadeep-test-rss-2 -ResourceGroupName biswadeep-test-rg -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e -JsonFilePath ".\examples\dell-filesystem.json"
 ```
 
 ```output
@@ -116,7 +116,7 @@ CapacityIncremental                          :
 CapacityMax                                  :
 CapacityMin                                  :
 DelegatedSubnetCidr                          : 10.0.0.0/24
-DelegatedSubnetId                            : /subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/pp-te
+DelegatedSubnetId                            : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/pp-te
                                                st/providers/Microsoft.Network/virtualNetworks/dell-test/subnets/default
 DellReferenceNumber                          : 12345
 EncryptionIdentityPropertyIdentityResourceId :
@@ -124,7 +124,7 @@ EncryptionIdentityPropertyIdentityType       :
 EncryptionKeyUrl                             :
 EncryptionType                               : Microsoft-managed keys (MMK)
 FileSystemId                                 : PartnerBypassed
-Id                                           : /subscriptions/fc35d936-3b89-41f8-8110-a24b56826c37/resourceGroups/biswa
+Id                                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/biswa
                                                deep-test-rg/providers/Dell.Storage/filesystems/biswadeep-test-rss-2
 IdentityPrincipalId                          :
 IdentityTenantId                             :
@@ -736,5 +736,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

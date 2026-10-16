@@ -35,7 +35,7 @@ Delete a OrganizationResource
 
 ### Example 1: Remove a Napster Organization
 ```powershell
-Remove-AzNapsterOrganization -ResourceGroupName acctest0001 -Name napster-test2 -SubscriptionId 61641157-140c-4b97-b365-30ff76d9f82e
+Remove-AzNapsterOrganization -ResourceGroupName acctest0001 -Name napster-test2 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 This command deletes the Napster organization resource named `napster-test2` in the resource group `acctest0001`.
@@ -210,4 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
