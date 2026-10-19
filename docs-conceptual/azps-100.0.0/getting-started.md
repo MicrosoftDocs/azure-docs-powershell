@@ -1,6 +1,7 @@
 ---
 title: Get started with Azure PowerShell (Preview)
 description: Learn the core concepts, supported environments, authentication model, current limitations, and coexistence guidance for Azure PowerShell during the preview.
+ms.date: 10/19/2026
 ---
 
 # Get started with Azure PowerShell (Preview)
@@ -20,19 +21,20 @@ assistance while continuing to use the same Azure management APIs and authentica
 
 Azure PowerShell is designed around a few key concepts:
 
-- **Shared authentication** - Azure PowerShell and Azure CLI share a common sign-in experience.
+- **Profile-based authentication** - Save named sign-in contexts for different accounts and subscriptions.
 - **AI-assisted workflows** - AI helps explain errors, recommend next steps, and improve
   productivity.
-- **Cross-platform** - Runs anywhere PowerShell 7 is supported.
+- **Cross-platform** - Runs on operating systems supported by PowerShell 7.6 or later.
 - **Side-by-side installation** - Can be installed alongside existing Azure PowerShell and Azure CLI
   installations.
 
 ## Authentication
 
-Azure PowerShell uses a shared authentication experience across Azure PowerShell and Azure CLI.
+Sign in to the Azure PowerShell preview with `Connect-AzAccount`.
 
-After you sign in, your authenticated session is available to both products. You don't need to sign
-in separately when switching between Azure PowerShell and Azure CLI.
+Azure PowerShell and Azure CLI don't share authenticated sessions during the preview. If you use
+both tools, sign in separately to each: use `Connect-AzAccount` for Azure PowerShell and `az login`
+for Azure CLI.
 
 For the best experience, use interactive user authentication.
 
@@ -46,8 +48,6 @@ The following authentication methods are currently **not supported**:
 - Resource Owner Password Credentials (ROPC)
 - Service principals
 - Managed identities
-
-Additional authentication scenarios may be added in future releases.
 
 ## Coexistence with Azure PowerShell and Azure CLI
 
@@ -71,11 +71,11 @@ Azure PowerShell preview supports modern, cross-platform environments.
 
 ### Supported operating systems
 
-- Any operating system PowerShell 7 is supported on
+- Any operating system supported by PowerShell 7.6 or later
 
 ### Supported shells
 
-- PowerShell 7 or later
+- PowerShell 7.6 or later
 
 ### Unsupported environments
 
@@ -97,7 +97,7 @@ Your feedback is essential during the preview. To share feedback directly from t
 
 If you encounter an issue:
 
-1. Verify that you're using a supported operating system and PowerShell 7 or higher.
+1. Verify that you're using a supported operating system and PowerShell 7.6 or later.
 1. Reproduce the issue, if possible.
 1. Collect any relevant error messages or command output.
 1. Open an issue in [the AzCLIPS GitHub repository][01].
