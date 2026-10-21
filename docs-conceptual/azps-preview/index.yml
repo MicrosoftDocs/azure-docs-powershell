@@ -32,7 +32,7 @@ landingContent:
     - linkListType: reference
       links:
         - text: Cmdlet reference
-          url: /powershell/module/?view=azps-100.0.0&preserve-view=true
+          url: /powershell/module/?view=azps-preview&preserve-view=true
   - title: Identity and authentication
     linkLists:
       - linkListType: how-to-guide
