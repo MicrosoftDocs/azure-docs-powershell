@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 09/01/2026
+ms.date: 10-09-2026
 PlatyPS schema version: 2024-05-01
 title: Invoke-AzRestMethod
 ---
@@ -23,7 +23,7 @@ Send an authenticated REST request to Azure Resource Manager and return the raw 
 Invoke-AzRestMethod [-Method <string>] [-Uri <string>] [-Payload <string>] [-Headers <Object>]
  [-SubscriptionId <string>] [-ResourceGroupName <string>] [-ResourceProviderName <string>]
  [-ResourceType <string[]>] [-Name <string[]>] [-ApiVersion <string>] [-UriParameters <Object>]
- [<CommonParameters>]
+ [-Profile <string>] [<CommonParameters>]
 ```
 
 ## ALIASES
@@ -151,6 +151,27 @@ HelpMessage: ''
 ### -Payload
 
 Optional request body (typically JSON). Sent whenever provided, for any HTTP method.
+
+```yaml
+Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -Profile
+
+Use the named profile for this command, overriding the active profile.
 
 ```yaml
 Type: System.String

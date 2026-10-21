@@ -1,9 +1,9 @@
 ---
 document type: cmdlet
-external help file: Microsoft.Azure.Azclips.Cmdlets.Login.dll-Help.xml
+external help file: Microsoft.Azure.Azclips.Cmdlets.Accounts.dll-Help.xml
 HelpUri: ''
 Locale: en-US
-Module Name: Az.Login
+Module Name: Az.Accounts
 ms.date: 09/01/2026
 PlatyPS schema version: 2024-05-01
 title: Set-AzProfile
@@ -73,11 +73,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Core.Abstractions.Profile
+### Microsoft.Azure.Azclips.Extensions.Accounts.Models.ProfileResult
 
-The activated profile object with its tenant ID, subscription ID, cloud, and authentication method after the switch.
+The activated profile projection with its tenant ID, subscription ID, cloud, authentication method, and other persisted profile fields after the switch.
 
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,9 +1,9 @@
 ---
 document type: cmdlet
-external help file: Microsoft.Azure.Azclips.Cmdlets.Login.dll-Help.xml
+external help file: Microsoft.Azure.Azclips.Cmdlets.Accounts.dll-Help.xml
 HelpUri: ''
 Locale: en-US
-Module Name: Az.Login
+Module Name: Az.Accounts
 ms.date: 09/01/2026
 PlatyPS schema version: 2024-05-01
 title: Remove-AzProfile

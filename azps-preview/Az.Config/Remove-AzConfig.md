@@ -35,10 +35,10 @@ Unknown keys are rejected unless -Force is specified.
 
 ### Delete a configuration value
 
-Remove the `output.format` setting. The configuration will revert to its default value (if one exists).
+Remove the configured global logging level so it reverts to the default value.
 
 ```powershell
-Remove-AzConfig -Key output.format
+Remove-AzConfig -Key core.logging.level
 ```
 
 ### Force delete

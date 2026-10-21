@@ -82,9 +82,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
+### Microsoft.Azure.Azclips.Extensions.Config.Models.ConfigKeyInfo
+
+Structured metadata describing available configuration keys, their purpose, and constraints.
+
 ### System.String
 
-Descriptive text listing available configuration keys, their purpose, and default values. When `-KeysOnly` is supplied, only the key names are emitted (one per line).
+When `-KeysOnly` is supplied, each key name is emitted as a string.
 
 ## NOTES
 

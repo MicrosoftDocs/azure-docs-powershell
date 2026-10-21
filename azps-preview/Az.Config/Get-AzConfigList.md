@@ -20,7 +20,7 @@ List all configuration settings.
 ### __AllParameterSets
 
 ```
-Get-AzConfigList [-IncludeDefaults] [-AsJson] [<CommonParameters>]
+Get-AzConfigList [-IncludeDefaults] [<CommonParameters>]
 ```
 
 ## ALIASES
@@ -29,8 +29,8 @@ Get-AzConfigList [-IncludeDefaults] [-AsJson] [<CommonParameters>]
 
 Display all current configuration values.
 By default, only explicitly-set values are shown.
-Use --all to include default values.
-Output can be formatted as JSON for scripting.
+Use `-IncludeDefaults` to include default values.
+Each configuration entry is emitted as a structured object.
 
 ## EXAMPLES
 
@@ -50,36 +50,7 @@ Include default values for keys that have not been explicitly set.
 Get-AzConfigList -IncludeDefaults
 ```
 
-### List as JSON
-
-Format the output as JSON for downstream scripting.
-
-```powershell
-Get-AzConfigList -AsJson
-```
-
 ## PARAMETERS
-
-### -AsJson
-
-Return the configuration list as a JSON document instead of the default plain text. Useful when piping into `ConvertFrom-Json` or capturing structured output for downstream scripts.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-DefaultValue: ''
-SupportsWildcards: false
-Aliases: []
-ParameterSets:
-- Name: (All)
-  Position: Named
-  IsRequired: false
-  ValueFromPipeline: false
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
 
 ### -IncludeDefaults
 
@@ -113,9 +84,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.String
+### Microsoft.Azure.Azclips.Extensions.Config.Models.ConfigEntry
 
-The set of currently-configured `key=value` entries as plain text (one per line), or as a JSON document when `-AsJson` is supplied. Add `-IncludeDefaults` to also emit keys that have not been explicitly set.
+One object per configured entry. Add `-IncludeDefaults` to also emit keys that have not been explicitly set.
 
 ## NOTES
 

@@ -20,7 +20,7 @@ Retrieve a configuration value.
 ### __AllParameterSets
 
 ```
-Get-AzConfig -Key <string> [-AsJson] [<CommonParameters>]
+Get-AzConfig -Key <string> [<CommonParameters>]
 ```
 
 ## ALIASES
@@ -28,49 +28,28 @@ Get-AzConfig -Key <string> [-AsJson] [<CommonParameters>]
 ## DESCRIPTION
 
 Get the current value of a configuration setting by key.
-Configuration keys use dot notation (e.g., output.format, core.debug).
+Configuration keys use dot notation (e.g., core.logging.level, defaults.location).
 If the key is not found, an error is displayed.
 
 ## EXAMPLES
 
 ### Get a configuration value
 
-Return the current value of the `output.format` configuration setting.
+Return the current global logging level.
 
 ```powershell
-Get-AzConfig -Key output.format
+Get-AzConfig -Key core.logging.level
 ```
 
-### Get output as JSON
+### Get a configuration section
 
-Return the value formatted as JSON instead of plain text. Useful for piping into `ConvertFrom-Json` in scripts.
+Return structured entries whose keys are relative to the requested section.
 
 ```powershell
-Get-AzConfig -Key output.format -AsJson
+Get-AzConfig -Key core
 ```
 
 ## PARAMETERS
-
-### -AsJson
-
-Return the configuration value as a JSON string instead of the default plain text. Useful when piping into `ConvertFrom-Json` or capturing structured output for downstream scripts.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-DefaultValue: ''
-SupportsWildcards: false
-Aliases: []
-ParameterSets:
-- Name: (All)
-  Position: Named
-  IsRequired: false
-  ValueFromPipeline: false
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
 
 ### -Key
 
@@ -104,9 +83,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.String
+### Microsoft.Azure.Azclips.Extensions.Config.Models.ConfigEntry
 
-The current value of the configuration setting identified by `-Key`. Returned as plain text by default, or as a JSON string when `-AsJson` is supplied (pipe into `ConvertFrom-Json` for structured downstream processing).
+One configuration entry for an exact key, or configuration entries with relative keys when `-Key` identifies a section.
 
 ## NOTES
 

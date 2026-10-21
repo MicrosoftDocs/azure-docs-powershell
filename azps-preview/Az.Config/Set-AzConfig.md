@@ -33,12 +33,12 @@ Unknown keys are rejected unless -Force is specified.
 
 ## EXAMPLES
 
-### Set output format
+### Enable debug logging
 
-Update the `output.format` setting to `json` so that subsequent commands emit JSON output by default.
+Set the global logging level to `debug`.
 
 ```powershell
-Set-AzConfig -Key output.format -Value json
+Set-AzConfig -Key core.logging.level -Value debug
 ```
 
 ### Set custom key with force

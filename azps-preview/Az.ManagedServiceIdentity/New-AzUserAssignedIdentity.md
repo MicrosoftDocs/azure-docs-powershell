@@ -1,77 +1,58 @@
 ---
 document type: cmdlet
-external help file: Microsoft.Azure.Azclips.Cmdlets.Login.dll-Help.xml
+external help file: Microsoft.Azure.Azclips.Cmdlets.ManagedServiceIdentity.dll-Help.xml
 HelpUri: ''
 Locale: en-US
-Module Name: Az.Login
-ms.date: 09/01/2026
+Module Name: Az.ManagedServiceIdentity
+ms.date: 09/04/2026
 PlatyPS schema version: 2024-05-01
-title: Connect-AzAccount
+title: New-AzUserAssignedIdentity
 ---
 
-# Connect-AzAccount
+# New-AzUserAssignedIdentity
 
 ## SYNOPSIS
 
-Authenticate to Azure.
+Creates a user-assigned managed identity.
 
 ## SYNTAX
 
 ### __AllParameterSets
 
 ```
-Connect-AzAccount [-SubscriptionId <string>] [-TenantId <string>] [-UseDeviceCode]
- [-OutProfile <string>] [-Profile <string>] [-Identity] [-ClientId <string>] [-ObjectId <string>]
- [-ResourceId <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzUserAssignedIdentity -ResourceGroupName <string> -Name <string> -Location <string>
+ [-SubscriptionId <string>] [-Tag <hashtable>] [-IsolationScope <string>]
+ [-ResourceRestriction <string[]>] [-Profile <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## ALIASES
 
+This cmdlet has no aliases.
+
+
 ## DESCRIPTION
 
-Authenticate to Azure and persist account context for subsequent commands.
+Creates a user-assigned managed identity in a resource group. You can optionally set tags, assignment resource restrictions, and the identity isolation scope.
 
 ## EXAMPLES
 
-### Sign in with the default browser flow
+### Example 1: Create a user-assigned managed identity
 
-Launches the interactive browser sign-in experience and persists the resulting account context for the specified subscription. Use this on a workstation with a default browser available.
+Create a user-assigned managed identity in a resource group.
 
 ```powershell
-Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '11111111-1111-1111-1111-111111111111'
+New-AzUserAssignedIdentity -ResourceGroupName myResourceGroup -Name myIdentity -Location eastus
 ```
 
-### Sign in with device code on a host without a browser
+### Example 2: Create an identity with tags and assignment restrictions
 
-Uses the device-code authentication flow — prints a code and verification URL to the console so you can complete the sign-in from another device. Useful for SSH sessions, containers, and headless build agents.
+Create a user-assigned managed identity with tags and restrict assignment to compute resources.
 
 ```powershell
-Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '11111111-1111-1111-1111-111111111111' -UseDeviceCode
+New-AzUserAssignedIdentity -ResourceGroupName myResourceGroup -Name myIdentity -Location eastus -Tag @{ env = "test" } -ResourceRestriction Microsoft.Compute -IsolationScope Regional
 ```
 
 ## PARAMETERS
-
-### -ClientId
-
-Client ID of the user-assigned managed identity to authenticate as. Use with `-Identity`. Mutually exclusive with `-ObjectId` and `-ResourceId`.
-
-```yaml
-Type: System.String
-DefaultValue: ''
-SupportsWildcards: false
-Aliases:
-- AccountId
-ParameterSets:
-- Name: (All)
-  Position: Named
-  IsRequired: false
-  ValueFromPipeline: false
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
 
 ### -Confirm
 
@@ -95,33 +76,9 @@ AcceptedValues: []
 HelpMessage: ''
 ```
 
-### -Identity
+### -IsolationScope
 
-Sign in using a managed identity. System-assigned by default; combine with `-ClientId`, `-ObjectId`, or `-ResourceId` to select a specific user-assigned identity.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-DefaultValue: ''
-SupportsWildcards: false
-Aliases:
-- MSI
-- ManagedIdentity
-- ManagedService
-ParameterSets:
-- Name: (All)
-  Position: Named
-  IsRequired: false
-  ValueFromPipeline: false
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
-
-### -ObjectId
-
-Object (principal) ID of the user-assigned managed identity. Use with `-Identity`. Mutually exclusive with `-ClientId` and `-ResourceId`.
+Specifies the identity isolation scope. Valid values are None and Regional.
 
 ```yaml
 Type: System.String
@@ -140,9 +97,9 @@ AcceptedValues: []
 HelpMessage: ''
 ```
 
-### -OutProfile
+### -Location
 
-Name of a new named profile in which to persist the sign-in context. Use `-Profile <name>` on subsequent invocations to switch back to it. Mutually exclusive with `-Profile`.
+Specifies the Azure region where the identity is created.
 
 ```yaml
 Type: System.String
@@ -152,7 +109,28 @@ Aliases: []
 ParameterSets:
 - Name: (All)
   Position: Named
-  IsRequired: false
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -Name
+
+Specifies the name of the user-assigned managed identity.
+
+```yaml
+Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: true
   ValueFromPipeline: false
   ValueFromPipelineByPropertyName: false
   ValueFromRemainingArguments: false
@@ -163,7 +141,7 @@ HelpMessage: ''
 
 ### -Profile
 
-Name of an existing named profile to sign into. Mutually exclusive with `-OutProfile`.
+Specifies the Azclips profile to use for authentication and defaults.
 
 ```yaml
 Type: System.String
@@ -182,12 +160,33 @@ AcceptedValues: []
 HelpMessage: ''
 ```
 
-### -ResourceId
+### -ResourceGroupName
 
-Full ARM resource ID of the user-assigned managed identity (`/subscriptions/.../resourceGroups/.../providers/Microsoft.ManagedIdentity/userAssignedIdentities/<name>`). Use with `-Identity`. Mutually exclusive with `-ClientId` and `-ObjectId`.
+Specifies the name of the resource group that contains the identity.
 
 ```yaml
 Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -ResourceRestriction
+
+Specifies the resource provider namespaces that this identity can be assigned to.
+
+```yaml
+Type: System.String[]
 DefaultValue: ''
 SupportsWildcards: false
 Aliases: []
@@ -205,7 +204,7 @@ HelpMessage: ''
 
 ### -SubscriptionId
 
-Azure Subscription Id.
+Specifies the Azure subscription ID. If omitted, the active profile subscription is used.
 
 ```yaml
 Type: System.String
@@ -224,33 +223,12 @@ AcceptedValues: []
 HelpMessage: ''
 ```
 
-### -TenantId
+### -Tag
 
-Tenant ID to login to.
-
-```yaml
-Type: System.String
-DefaultValue: ''
-SupportsWildcards: false
-Aliases: []
-ParameterSets:
-- Name: (All)
-  Position: Named
-  IsRequired: false
-  ValueFromPipeline: false
-  ValueFromPipelineByPropertyName: false
-  ValueFromRemainingArguments: false
-DontShow: false
-AcceptedValues: []
-HelpMessage: ''
-```
-
-### -UseDeviceCode
-
-Use device code flow for authentication.
+Specifies resource tags to apply to the identity.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.Collections.Hashtable
 DefaultValue: ''
 SupportsWildcards: false
 Aliases: []
@@ -268,10 +246,6 @@ HelpMessage: ''
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-Runs the command in a mode that only reports what would happen without performing the actions.
-Runs the command in a mode that only reports what would happen without performing the actions.
 Runs the command in a mode that only reports what would happen without performing the actions.
 
 ```yaml
@@ -303,15 +277,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Core.Abstractions.Profile
+### Microsoft.Azure.Azclips.Extensions.ManagedServiceIdentity.Models.UserAssignedIdentity
 
-The activated profile object (name, tenant ID, subscription ID, cloud, authentication method) after successful sign-in. Also persisted to the on-disk profile store; use `Get-AzProfile` later to enumerate saved profiles.
+Microsoft.Azure.Azclips.Extensions.ManagedServiceIdentity.Models.UserAssignedIdentity
 
 ## NOTES
 
-Generated help for login.
+None.
 
 ## RELATED LINKS
 
-
-- [Online Version]()
+https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview

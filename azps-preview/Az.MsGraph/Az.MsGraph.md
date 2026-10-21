@@ -2,7 +2,7 @@
 Module Name: Az.MsGraph
 Module Guid: 2f0c9c1e-8a2d-4d5b-9f3a-7e6b1c4d8a90
 Download Help Link: https://learn.microsoft.com/powershell/module/az.msgraph
-Help Version: 0.1.0
+Help Version: 0.1.3
 Locale: en-US
 content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/MsGraph/help
 original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/MsGraph/help
