@@ -161,6 +161,7 @@ Valid values are:
 - AAAA
 - CNAME
 - MX
+- NAPTR
 - NS
 - PTR
 - SRV

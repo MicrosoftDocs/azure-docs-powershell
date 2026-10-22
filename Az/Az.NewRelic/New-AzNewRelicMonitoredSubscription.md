@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzNewRelicMonitoredSubscription
 
 ## SYNOPSIS
-Add the subscriptions that should be monitored by the NewRelic monitor resource.
+Add subscriptions to be monitored by the New Relic monitor resource, enabling observability and monitoring.
 
 ## SYNTAX
 
@@ -37,7 +37,7 @@ New-AzNewRelicMonitoredSubscription -MonitorName <String> -ResourceGroupName <St
 ```
 
 ## DESCRIPTION
-Add the subscriptions that should be monitored by the NewRelic monitor resource.
+Add subscriptions to be monitored by the New Relic monitor resource, enabling observability and monitoring.
 
 ## EXAMPLES
 

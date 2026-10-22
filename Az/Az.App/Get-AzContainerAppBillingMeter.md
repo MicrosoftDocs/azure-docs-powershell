@@ -22,7 +22,8 @@ Get-AzContainerAppBillingMeter -Location <String> [-SubscriptionId <String[]>] [
 
 ### GetViaIdentity
 ```
-Get-AzContainerAppBillingMeter -InputObject <IAppIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzContainerAppBillingMeter -InputObject <IAppIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,7 +90,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity

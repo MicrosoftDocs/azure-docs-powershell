@@ -32,10 +32,10 @@ Gets NetworkRuleSet for a Namespace.
 Returns the description for the specified WCF relay.
 
 ### [New-AzRelayAuthorizationRule](New-AzRelayAuthorizationRule.md)
-Creates or updates an authorization rule for a namespace.
+Create an authorization rule for a namespace.
 
 ### [New-AzRelayHybridConnection](New-AzRelayHybridConnection.md)
-Creates or updates a service hybrid connection.
+Create a service hybrid connection.
 This operation is idempotent.
 
 ### [New-AzRelayKey](New-AzRelayKey.md)
@@ -48,7 +48,7 @@ Create Azure Relay namespace.
 Create an in-memory object for NwRuleSetIPRules.
 
 ### [New-AzWcfRelay](New-AzWcfRelay.md)
-Creates or updates a WCF relay.
+Create a WCF relay.
 This operation is idempotent.
 
 ### [Remove-AzRelayAuthorizationRule](Remove-AzRelayAuthorizationRule.md)
@@ -82,7 +82,7 @@ This operation is idempotent.
 Check the specified namespace name availability.
 
 ### [Update-AzRelayNamespace](Update-AzRelayNamespace.md)
-Creates or updates a namespace.
+Update a namespace.
 Once created, this namespace's resource manifest is immutable.
 This operation is idempotent.
 

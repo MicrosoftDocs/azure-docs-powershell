@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzPeeringAsn
 
 ## SYNOPSIS
-Creates a new peer ASN or updates an existing peer ASN with the specified name under the given subscription.
+create a new peer ASN or create an existing peer ASN with the specified name under the given subscription.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzPeeringAsn -Name <String> [-SubscriptionId <String>] [-PeerAsn <Int32>]
 ```
 
 ## DESCRIPTION
-Creates a new peer ASN or updates an existing peer ASN with the specified name under the given subscription.
+create a new peer ASN or create an existing peer ASN with the specified name under the given subscription.
 
 ## EXAMPLES
 
@@ -90,10 +90,9 @@ Accept wildcard characters: False
 
 ### -PeerContactDetail
 The contact details of the peer.
-To construct, see NOTES section for PEERCONTACTDETAIL properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IContactDetail[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IContactDetail[]
 Parameter Sets: (All)
 Aliases:
 
@@ -172,7 +171,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IPeerAsn
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeerAsn
 
 ## NOTES
 

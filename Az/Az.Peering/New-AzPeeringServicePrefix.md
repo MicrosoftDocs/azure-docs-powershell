@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzPeeringServicePrefix
 
 ## SYNOPSIS
-Creates a new prefix with the specified name under the given subscription, resource group and peering service.
+create a new prefix with the specified name under the given subscription, resource group and peering service.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzPeeringServicePrefix -Name <String> -PeeringServiceName <String> -Resource
 ```
 
 ## DESCRIPTION
-Creates a new prefix with the specified name under the given subscription, resource group and peering service.
+create a new prefix with the specified name under the given subscription, resource group and peering service.
 
 ## EXAMPLES
 
@@ -184,7 +184,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IPeeringServicePrefix
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringServicePrefix
 
 ## NOTES
 

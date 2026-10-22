@@ -61,7 +61,7 @@ Location                   : centralus
 PrivateEndpointConnections : {}
 ```
 
-Gets all of the resoure management private links at the subscription scope.
+Gets all of the resource management private links at the subscription scope.
 
 ### Example 3
 ```powershell
@@ -84,7 +84,7 @@ Location                   : centralus
 PrivateEndpointConnections : {}
 ```
 
-Gets all of the resoure management private links at the resource group scope.
+Gets all of the resource management private links at the resource group scope.
 
 ## PARAMETERS
 

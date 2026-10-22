@@ -57,6 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -260,7 +261,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20231201.IAppServicePlan
+### Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.IAppServicePlan
 
 ## NOTES
 

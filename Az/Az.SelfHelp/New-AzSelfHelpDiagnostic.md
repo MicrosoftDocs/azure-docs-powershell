@@ -10,19 +10,41 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzSelfHelpDiagnostic
 
 ## SYNOPSIS
-Creates a diagnostic for the specific resource using solutionId and requiredInputs* from discovery solutions.
+create a diagnostic for the specific resource using solutionId and requiredInputs* from discovery solutions.
 \<br/\>Diagnostics are powerful solutions that access product resources or other relevant data and provide the root cause of the issue and the steps to address the issue.\<br/\>\<br/\> \<b\>Note: \</b\> 'requiredInputs' from Discovery solutions response must be passed via 'additionalParameters' as an input to Diagnostics API.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzSelfHelpDiagnostic -SResourceName <String> -Scope <String> [-GlobalParameter <Hashtable>]
  [-Insight <IDiagnosticInvocation[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzSelfHelpDiagnostic -SResourceName <String> -Scope <String> -JsonString <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzSelfHelpDiagnostic -SResourceName <String> -Scope <String> -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaIdentityExpanded
+```
+New-AzSelfHelpDiagnostic -InputObject <ISelfHelpIdentity> [-GlobalParameter <Hashtable>]
+ [-Insight <IDiagnosticInvocation[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates a diagnostic for the specific resource using solutionId and requiredInputs* from discovery solutions.
+create a diagnostic for the specific resource using solutionId and requiredInputs* from discovery solutions.
 \<br/\>Diagnostics are powerful solutions that access product resources or other relevant data and provide the root cause of the issue and the steps to address the issue.\<br/\>\<br/\> \<b\>Note: \</b\> 'requiredInputs' from Discovery solutions response must be passed via 'additionalParameters' as an input to Diagnostics API.
 
 ## EXAMPLES
@@ -81,7 +103,7 @@ Global parameters is an optional map which can be used to add key and value to r
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -91,16 +113,60 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Insight
-SolutionIds that are needed to be invoked.
-To construct, see NOTES section for INSIGHT properties and create a hash table.
+### -InputObject
+Identity Parameter
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.IDiagnosticInvocation[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
+Parameter Sets: CreateViaIdentityExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Insight
+SolutionIds that are needed to be invoked.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiagnosticInvocation[]
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -127,7 +193,7 @@ scope = resourceUri of affected resource.\<br/\> For example: /subscriptions/0d0
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -142,7 +208,7 @@ Unique resource name for insight resources
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases: DiagnosticsResourceName
 
 Required: True
@@ -188,9 +254,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.IDiagnosticResource
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiagnosticResource
 
 ## NOTES
 

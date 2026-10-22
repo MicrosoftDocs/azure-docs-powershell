@@ -30,8 +30,8 @@ Update-AzKubernetesConfigurationFlux -ClusterName <String> -ClusterType <String>
  [-RepositoryRefTag <String>] [-ServicePrincipalClientCertificate <String>]
  [-ServicePrincipalClientCertificatePassword <String>] [-ServicePrincipalClientCertificateSendChain]
  [-ServicePrincipalClientId <String>] [-ServicePrincipalClientSecret <String>]
- [-ServicePrincipalTenantId <String>] [-SourceKind <SourceKindType>] [-Suspend] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ServicePrincipalTenantId <String>] [-SourceKind <String>] [-Suspend] [-DefaultProfile <PSObject>] [-AsJob]
+ [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
@@ -49,8 +49,8 @@ Update-AzKubernetesConfigurationFlux -InputObject <IKubernetesConfigurationIdent
  [-RepositoryRefTag <String>] [-ServicePrincipalClientCertificate <String>]
  [-ServicePrincipalClientCertificatePassword <String>] [-ServicePrincipalClientCertificateSendChain]
  [-ServicePrincipalClientId <String>] [-ServicePrincipalClientSecret <String>]
- [-ServicePrincipalTenantId <String>] [-SourceKind <SourceKindType>] [-Suspend] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ServicePrincipalTenantId <String>] [-SourceKind <String>] [-Suspend] [-DefaultProfile <PSObject>] [-AsJob]
+ [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -728,7 +728,7 @@ Accept wildcard characters: False
 Source Kind to pull the configuration data from.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Support.SourceKindType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -809,7 +809,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.Api20221101.IFluxConfiguration
+### Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.IFluxConfiguration
 
 ## NOTES
 

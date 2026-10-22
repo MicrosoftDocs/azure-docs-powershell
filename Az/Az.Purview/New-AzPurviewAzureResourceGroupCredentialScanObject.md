@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewAzureResourceGroupCredentialScanObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewazureresourcegroupcredentialscanobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureResourceGroupCredentialScanObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureResourceGroupCredentialScanObject.md
@@ -15,11 +15,10 @@ Create an in-memory object for AzureResourceGroupCredentialScan.
 ## SYNTAX
 
 ```
-New-AzPurviewAzureResourceGroupCredentialScanObject -Kind <ScanAuthorizationType>
- [-CollectionReferenceName <String>] [-CollectionType <String>] [-ConnectedViaReferenceName <String>]
- [-CredentialReferenceName <String>] [-CredentialType <CredentialType>]
- [-ResourceType <IExpandingResourceScanPropertiesResourceTypes>] [-ScanRulesetName <String>]
- [-ScanRulesetType <ScanRulesetType>] [-Worker <Int32>]
+New-AzPurviewAzureResourceGroupCredentialScanObject [-CollectionReferenceName <String>]
+ [-CollectionType <String>] [-ConnectedViaReferenceName <String>] [-CredentialReferenceName <String>]
+ [-CredentialType <String>] [-ResourceType <IExpandingResourceScanPropertiesResourceTypes>]
+ [-ScanRulesetName <String>] [-ScanRulesetType <String>] [-Worker <Int32>]
  [<CommonParameters>]
 ```
 
@@ -30,7 +29,7 @@ Create an in-memory object for AzureResourceGroupCredentialScan.
 
 ### Example 1: Create Azure resource group Credential scan object
 ```powershell
-New-AzPurviewAzureResourceGroupCredentialScanObject -Kind 'AzureResourceGroupCredential' -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -CredentialType 'ServicePrincipal' -CredentialReferenceName 'svcp'
+New-AzPurviewAzureResourceGroupCredentialScanObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -CredentialType 'ServicePrincipal' -CredentialReferenceName 'svcp'
 ```
 
 ```output
@@ -116,7 +115,7 @@ Accept wildcard characters: False
 ### -CredentialType
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.CredentialType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -127,25 +126,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ScanAuthorizationType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceType
-To construct, see NOTES section for RESOURCETYPE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.IExpandingResourceScanPropertiesResourceTypes
+Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.IExpandingResourceScanPropertiesResourceTypes
 Parameter Sets: (All)
 Aliases:
 
@@ -173,7 +157,7 @@ Accept wildcard characters: False
 ### -ScanRulesetType
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ScanRulesetType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -205,7 +189,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.AzureResourceGroupCredentialScan
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AzureResourceGroupCredentialScan
 
 ## NOTES
 

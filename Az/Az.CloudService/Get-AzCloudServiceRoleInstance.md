@@ -17,20 +17,26 @@ Gets a role instance from a cloud service.
 ### List (Default)
 ```
 Get-AzCloudServiceRoleInstance -CloudServiceName <String> -ResourceGroupName <String>
- [-SubscriptionId <String[]>] [-Expand <InstanceViewTypes>] [-DefaultProfile <PSObject>]
+ [-SubscriptionId <String[]>] [-Expand <String>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
+```
+
+### GetViaIdentityRoleInstance
+```
+Get-AzCloudServiceRoleInstance -CloudServiceName <String> -RoleInstanceInputObject <ICloudServiceIdentity>
+ [-Expand <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
 Get-AzCloudServiceRoleInstance -CloudServiceName <String> -ResourceGroupName <String>
- -RoleInstanceName <String> [-SubscriptionId <String[]>] [-Expand <InstanceViewTypes>]
- [-DefaultProfile <PSObject>] [<CommonParameters>]
+ -RoleInstanceName <String> [-SubscriptionId <String[]>] [-Expand <String>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### GetViaIdentity
 ```
-Get-AzCloudServiceRoleInstance -InputObject <ICloudServiceIdentity> [-Expand <InstanceViewTypes>]
+Get-AzCloudServiceRoleInstance -InputObject <ICloudServiceIdentity> [-Expand <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -75,7 +81,7 @@ Name of the cloud service.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get
+Parameter Sets: List, GetViaIdentityRoleInstance, Get
 Aliases:
 
 Required: True
@@ -106,7 +112,7 @@ The expand expression to apply to the operation.
 'UserData' is not supported for cloud services.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CloudService.Support.InstanceViewTypes
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -119,7 +125,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.ICloudServiceIdentity
@@ -145,6 +150,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoleInstanceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.ICloudServiceIdentity
+Parameter Sets: GetViaIdentityRoleInstance
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -188,7 +208,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.IRoleInstance
+### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.IRoleInstance
 
 ## NOTES
 

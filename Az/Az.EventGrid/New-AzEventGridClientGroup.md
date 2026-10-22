@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridClientGroup
 
 ## SYNOPSIS
-Create a client group with the specified parameters.
+create a client group with the specified parameters.
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ New-AzEventGridClientGroup -InputObject <IEventGridIdentity> [-Description <Stri
 ```
 
 ## DESCRIPTION
-Create a client group with the specified parameters.
+create a client group with the specified parameters.
 
 ## EXAMPLES
 

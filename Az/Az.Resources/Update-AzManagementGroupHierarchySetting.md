@@ -18,14 +18,15 @@ Updates Hierarchy Settings under the current tenant
 ```
 Update-AzManagementGroupHierarchySetting [-GroupName] <String> [-Authorization <Boolean>]
  [-DefaultManagementGroup <String>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>]
+ [<CommonParameters>]
 ```
 
 ### ParentGroupObject
 ```
 Update-AzManagementGroupHierarchySetting [-GroupName] <String> [-Authorization <Boolean>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,7 +43,7 @@ Update-AzManagementGroupHierarchySetting -GroupName c7a87cda-9a66-4920-b0f8-869b
 Id          : /providers/Microsoft.Management/managementGroups/c7a87cda-9a66-4920-b0f8-869baa04efe0/settings/default
 Type        : Microsoft.Management/managementGroups/settings
 Name        : default
-TenantId    : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 RequireAuthorizationForGroupCreation : true
 DefaultManagementGroup :
 ```
@@ -56,7 +57,7 @@ Update-AzManagementGroupHierarchySetting -GroupName c7a87cda-9a66-4920-b0f8-869b
 Id          : /providers/Microsoft.Management/managementGroups/c7a87cda-9a66-4920-b0f8-869baa04efe0/settings/default
 Type        : Microsoft.Management/managementGroups/settings
 Name        : default
-TenantId    : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 RequireAuthorizationForGroupCreation : false
 DefaultManagementGroup : TestGroup
 ```
@@ -70,12 +71,27 @@ Update-AzManagementGroupHierarchySetting -GroupName c7a87cda-9a66-4920-b0f8-869b
 Id          : /providers/Microsoft.Management/managementGroups/c7a87cda-9a66-4920-b0f8-869baa04efe0/settings/default
 Type        : Microsoft.Management/managementGroups/settings
 Name        : default
-TenantId    : 6b2064b9-34bd-46e6-9092-52f2dd5f7fc0
+TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
 RequireAuthorizationForGroupCreation : true
 DefaultManagementGroup : TestGroup
 ```
 
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Authorization
 Indicate whether RBAC access is required upon group creation under the root Management Group. True means user will require Microsoft.Management/managementGroups/write action on the root Management Group. Default setting is false.
@@ -84,6 +100,21 @@ Indicate whether RBAC access is required upon group creation under the root Mana
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: RequireAuthorizationForGroupCreation
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

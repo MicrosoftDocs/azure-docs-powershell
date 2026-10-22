@@ -10,20 +10,35 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzDedicatedHsm
 
 ## SYNOPSIS
-Create or Update a dedicated HSM in the specified subscription.
+create a dedicated HSM in the specified subscription.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzDedicatedHsm -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -Location <String>
  [-ManagementNetworkInterface <INetworkInterface[]>] [-ManagementSubnetId <String>]
- [-NetworkInterface <INetworkInterface[]>] [-Sku <SkuName>] [-StampId <String>] [-SubnetId <String>]
+ [-NetworkInterface <INetworkInterface[]>] [-Sku <String>] [-StampId <String>] [-SubnetId <String>]
  [-Tag <Hashtable>] [-Zone <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonFilePath
+```
+New-AzDedicatedHsm -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzDedicatedHsm -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Create or Update a dedicated HSM in the specified subscription.
+create a dedicated HSM in the specified subscription.
 
 ## EXAMPLES
 
@@ -76,12 +91,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
 The supported Azure location where the dedicated HSM should be created.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -93,11 +138,10 @@ Accept wildcard characters: False
 
 ### -ManagementNetworkInterface
 Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-To construct, see NOTES section for MANAGEMENTNETWORKINTERFACE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.Api20211130.INetworkInterface[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.INetworkInterface[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -112,7 +156,7 @@ The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroup
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -139,11 +183,10 @@ Accept wildcard characters: False
 
 ### -NetworkInterface
 Specifies the list of resource Ids for the network interfaces associated with the dedicated HSM.
-To construct, see NOTES section for NETWORKINTERFACE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.Api20211130.INetworkInterface[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.INetworkInterface[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -187,8 +230,8 @@ Accept wildcard characters: False
 SKU of the dedicated HSM
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Support.SkuName
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -203,7 +246,7 @@ This field will be used when RP does not support Availability zones.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -218,7 +261,7 @@ The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroup
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -249,7 +292,7 @@ Resource tags
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -264,7 +307,7 @@ The Dedicated Hsm zones.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -312,7 +355,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.Api20211130.IDedicatedHsm
+### Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.IDedicatedHsm
 
 ## NOTES
 

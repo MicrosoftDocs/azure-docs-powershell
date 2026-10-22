@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewAmazonAccountDataSourceObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewamazonaccountdatasourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAmazonAccountDataSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAmazonAccountDataSourceObject.md
@@ -15,9 +15,8 @@ Create an in-memory object for AmazonAccountDataSource.
 ## SYNTAX
 
 ```
-New-AzPurviewAmazonAccountDataSourceObject -Kind <DataSourceType> [-AwsAccountId <String>]
- [-CollectionReferenceName <String>] [-CollectionType <String>] [-RoleArn <String>]
- [<CommonParameters>]
+New-AzPurviewAmazonAccountDataSourceObject [-AwsAccountId <String>] [-CollectionReferenceName <String>]
+ [-CollectionType <String>] [-RoleArn <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +26,7 @@ Create an in-memory object for AmazonAccountDataSource.
 
 ### Example 1: Create Amazon Account data source object
 ```powershell
-New-AzPurviewAmazonAccountDataSourceObject -Kind 'AmazonAccount' -AwsAccountId 123456789012 -CollectionReferenceName parv-brs-2 -CollectionType 'CollectionReference'
+New-AzPurviewAmazonAccountDataSourceObject -AwsAccountId 123456789012 -CollectionReferenceName parv-brs-2 -CollectionType 'CollectionReference'
 ```
 
 ```output
@@ -90,20 +89,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RoleArn
 
 ```yaml
@@ -125,7 +110,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.AmazonAccountDataSource
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AmazonAccountDataSource
 
 ## NOTES
 

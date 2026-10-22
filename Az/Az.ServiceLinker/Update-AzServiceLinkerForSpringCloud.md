@@ -17,20 +17,18 @@ Operation to update an existing link in spring cloud.
 ### UpdateExpanded (Default)
 ```
 Update-AzServiceLinkerForSpringCloud -Name <String> [-ResourceUri <String>] -AuthInfo <IAuthInfoBase>
- -ClientType <ClientType> -TargetService <ITargetServiceBase> [-Scope <String>]
- [-SecretStoreKeyVaultId <String>] [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>]
- -ServiceName <String> -AppName <String> [-DeploymentName <String>] -ResourceGroupName <String>
- [-SubscriptionId <String>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -ClientType <String> -TargetService <ITargetServiceBase> [-Scope <String>] [-SecretStoreKeyVaultId <String>]
+ [-VNetSolutionType <String>] [-DefaultProfile <PSObject>] -ServiceName <String> -AppName <String>
+ [-DeploymentName <String>] -ResourceGroupName <String> [-SubscriptionId <String>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
 Update-AzServiceLinkerForSpringCloud -InputObject <IServiceLinkerIdentity> -AuthInfo <IAuthInfoBase>
- -ClientType <ClientType> -TargetService <ITargetServiceBase> [-Scope <String>]
- [-SecretStoreKeyVaultId <String>] [-VNetSolutionType <VNetSolutionType>] [-DefaultProfile <PSObject>]
- [-SubscriptionId <String>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -ClientType <String> -TargetService <ITargetServiceBase> [-Scope <String>] [-SecretStoreKeyVaultId <String>]
+ [-VNetSolutionType <String>] [-DefaultProfile <PSObject>] [-SubscriptionId <String>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -90,7 +88,7 @@ The authentication type.
 To construct, see NOTES section for AUTHINFO properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.Api20221101Preview.IAuthInfoBase
+Type: Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.IAuthInfoBase
 Parameter Sets: (All)
 Aliases:
 
@@ -105,7 +103,7 @@ Accept wildcard characters: False
 The application client type
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Support.ClientType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -288,7 +286,7 @@ The target service properties
 To construct, see NOTES section for TARGETSERVICE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.Api20221101Preview.ITargetServiceBase
+Type: Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.ITargetServiceBase
 Parameter Sets: (All)
 Aliases:
 
@@ -303,7 +301,7 @@ Accept wildcard characters: False
 Type of VNet solution.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Support.VNetSolutionType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -354,7 +352,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.Api20221101Preview.ILinkerResource
+### Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.ILinkerResource
 
 ## NOTES
 

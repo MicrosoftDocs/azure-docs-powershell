@@ -1,7 +1,7 @@
 ---
 external help file: Az.Cdn-help.xml
 Module Name: Az.Cdn
-online version: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject
+online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnrulerouteconfigurationoverrideactionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject.md
@@ -15,13 +15,11 @@ Create an in-memory object for DeliveryRuleRouteConfigurationOverrideAction.
 ## SYNTAX
 
 ```
-New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject -Name <DeliveryRuleAction>
- [-CacheConfigurationCacheBehavior <RuleCacheBehavior>] [-CacheConfigurationCacheDuration <String>]
- [-CacheConfigurationIsCompressionEnabled <RuleIsCompressionEnabled>]
- [-CacheConfigurationQueryParameter <String>]
- [-CacheConfigurationQueryStringCachingBehavior <RuleQueryStringCachingBehavior>] [-OriginGroupId <String>]
- [-OriginGroupOverrideForwardingProtocol <ForwardingProtocol>]
- [<CommonParameters>]
+New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject -Name <String>
+ [-CacheConfigurationCacheBehavior <String>] [-CacheConfigurationCacheDuration <String>]
+ [-CacheConfigurationIsCompressionEnabled <String>] [-CacheConfigurationQueryParameter <String>]
+ [-CacheConfigurationQueryStringCachingBehavior <String>] [-OriginGroupId <String>]
+ [-OriginGroupOverrideForwardingProtocol <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,7 +47,7 @@ Create an in-memory object for DeliveryRuleRouteConfigurationOverrideAction
 Caching behavior for the requests.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RuleCacheBehavior
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -82,7 +80,7 @@ If compression is enabled, content will be served as compressed if user requests
 Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RuleIsCompressionEnabled
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -113,7 +111,7 @@ Defines how Frontdoor caches requests that include query strings.
 You can ignore any query strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query strings.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RuleQueryStringCachingBehavior
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -128,7 +126,7 @@ Accept wildcard characters: False
 The name of the action for the delivery rule.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DeliveryRuleAction
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -158,7 +156,7 @@ Accept wildcard characters: False
 Protocol this rule will use when forwarding traffic to backends.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.ForwardingProtocol
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -176,7 +174,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.DeliveryRuleRouteConfigurationOverrideAction
+### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.DeliveryRuleRouteConfigurationOverrideAction
 
 ## NOTES
 

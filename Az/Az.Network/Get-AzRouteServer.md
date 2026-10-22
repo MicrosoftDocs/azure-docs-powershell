@@ -16,7 +16,8 @@ Get an Azure RouteServer
 
 ### RouteServerSubscriptionIdParameterSet (Default)
 ```
-Get-AzRouteServer [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzRouteServer [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### RouteServerNameParameterSet
@@ -27,7 +28,8 @@ Get-AzRouteServer -ResourceGroupName <String> [-RouteServerName <String>]
 
 ### RouteServerResourceIdParameterSet
 ```
-Get-AzRouteServer -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzRouteServer -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

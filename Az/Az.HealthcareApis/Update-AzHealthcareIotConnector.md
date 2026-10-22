@@ -10,28 +10,43 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzHealthcareIotConnector
 
 ## SYNOPSIS
-Patch an IoT Connector.
+Update an IoT Connector resource with the specified parameters.
 
 ## SYNTAX
 
 ### UpdateExpanded (Default)
 ```
 Update-AzHealthcareIotConnector -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -WorkspaceName <String> [-IdentityType <ServiceManagedIdentityType>]
- [-IdentityUserAssignedIdentity <Hashtable>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ -WorkspaceName <String> [-DeviceMappingContent <Hashtable>] [-EnableSystemAssignedIdentity <Boolean>]
+ [-Etag <String>] [-IngestionEndpointConfigurationConsumerGroup <String>]
+ [-IngestionEndpointConfigurationEventHubName <String>]
+ [-IngestionEndpointConfigurationFullyQualifiedEventHubNamespace <String>] [-Tag <Hashtable>]
+ [-UserAssignedIdentity <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaIdentityWorkspaceExpanded
+```
+Update-AzHealthcareIotConnector -Name <String> -WorkspaceInputObject <IHealthcareApisIdentity>
+ [-DeviceMappingContent <Hashtable>] [-EnableSystemAssignedIdentity <Boolean>] [-Etag <String>]
+ [-IngestionEndpointConfigurationConsumerGroup <String>] [-IngestionEndpointConfigurationEventHubName <String>]
+ [-IngestionEndpointConfigurationFullyQualifiedEventHubNamespace <String>] [-Tag <Hashtable>]
+ [-UserAssignedIdentity <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzHealthcareIotConnector -InputObject <IHealthcareApisIdentity>
- [-IdentityType <ServiceManagedIdentityType>] [-IdentityUserAssignedIdentity <Hashtable>] [-Tag <Hashtable>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Update-AzHealthcareIotConnector -InputObject <IHealthcareApisIdentity> [-DeviceMappingContent <Hashtable>]
+ [-EnableSystemAssignedIdentity <Boolean>] [-Etag <String>]
+ [-IngestionEndpointConfigurationConsumerGroup <String>] [-IngestionEndpointConfigurationEventHubName <String>]
+ [-IngestionEndpointConfigurationFullyQualifiedEventHubNamespace <String>] [-Tag <Hashtable>]
+ [-UserAssignedIdentity <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Patch an IoT Connector.
+Update an IoT Connector resource with the specified parameters.
 
 ## EXAMPLES
 
@@ -94,25 +109,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IdentityType
-Type of identity being specified, currently SystemAssigned and None are allowed.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Support.ServiceManagedIdentityType
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IdentityUserAssignedIdentity
-The set of user assigned identities associated with the resource.
-The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
-The dictionary values can be empty objects ({}) in requests.
+### -DeviceMappingContent
+The mapping.
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -126,9 +124,83 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSystemAssignedIdentity
+Determines whether to enable a system-assigned identity for the resource.
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Etag
+An etag associated with the resource, used for optimistic concurrency when editing it.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IngestionEndpointConfigurationConsumerGroup
+Consumer group of the event hub to connected to.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IngestionEndpointConfigurationEventHubName
+Event Hub name to connect to.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IngestionEndpointConfigurationFullyQualifiedEventHubNamespace
+Fully qualified namespace of the Event Hub to connect to.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IHealthcareApisIdentity
@@ -147,7 +219,7 @@ The name of IoT Connector resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityWorkspaceExpanded
 Aliases: IotConnectorName
 
 Required: True
@@ -217,6 +289,37 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -UserAssignedIdentity
+The array of user assigned identities associated with the resource.
+The elements in array will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.'
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkspaceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IHealthcareApisIdentity
+Parameter Sets: UpdateViaIdentityWorkspaceExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -WorkspaceName
 The name of workspace resource.
 
@@ -272,7 +375,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.IIotConnector
+### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IIotConnector
 
 ## NOTES
 

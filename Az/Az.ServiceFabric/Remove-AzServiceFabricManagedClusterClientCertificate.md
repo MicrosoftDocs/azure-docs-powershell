@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzServiceFabricManagedClusterClientCertificate
 
 ## SYNOPSIS
-Remvoe client certificate by thumbprint or common name.
+Remove client certificate by thumbprint or common name.
 
 ## SYNTAX
 
@@ -41,7 +41,7 @@ Remove-AzServiceFabricManagedClusterClientCertificate [-InputObject] <PSManagedC
 ```
 
 ## DESCRIPTION
-Remvoe client certificate by thumbprint or common name.
+Remove client certificate by thumbprint or common name.
 
 ## EXAMPLES
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-{{ Fill PassThru Description }}
+Returns an object representing the item with which you are working. By default, this cmdlet does not generate any output.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

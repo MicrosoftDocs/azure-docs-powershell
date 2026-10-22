@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzFirmwareAnalysisFirmware
 
 ## SYNOPSIS
-The operation to Update firmware.
+The operation to update firmware.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Update-AzFirmwareAnalysisFirmware -InputObject <IFirmwareAnalysisIdentity> [-Des
 ```
 
 ## DESCRIPTION
-The operation to Update firmware.
+The operation to update firmware.
 
 ## EXAMPLES
 

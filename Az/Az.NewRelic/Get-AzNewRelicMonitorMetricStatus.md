@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNewRelicMonitorMetricStatus
 
 ## SYNOPSIS
-Get metric status
+Retrieves the metric status that are configured in the New Relic monitor resource
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Get-AzNewRelicMonitorMetricStatus -InputObject <INewRelicIdentity> -UserEmail <S
 ```
 
 ## DESCRIPTION
-Get metric status
+Retrieves the metric status that are configured in the New Relic monitor resource
 
 ## EXAMPLES
 

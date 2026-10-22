@@ -16,24 +16,25 @@ Put a key-value.
 
 ### PutExpanded (Default)
 ```
-Set-AzAppConfigurationKeyValue -Endpoint <String> -Key <String> [-Label <String>] [-IfMatch <String>]
- [-IfNoneMatch <String>] [-SyncToken <String>] [-ContentType <String>] [-Etag <String>] [-Key1 <String>]
- [-Label1 <String>] [-LastModified <DateTime>] [-Locked] [-Tag <Hashtable>] [-Value <String>]
- [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AzAppConfigurationKeyValue -Endpoint <String> -Key <String> [-Label <String>] [-ClientRequestId <String>]
+ [-IfMatch <String>] [-IfNoneMatch <String>] [-SyncToken <String>] [-ContentType <String>]
+ [-Description <String>] [-Etag <String>] [-LastModified <DateTime>] [-Locked] [-Tag <Hashtable>]
+ [-Value <String>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### PutViaJsonFilePath
 ```
-Set-AzAppConfigurationKeyValue -Endpoint <String> -Key <String> [-Label <String>] [-IfMatch <String>]
- [-IfNoneMatch <String>] [-SyncToken <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AzAppConfigurationKeyValue -Endpoint <String> -Key <String> [-Label <String>] [-ClientRequestId <String>]
+ [-IfMatch <String>] [-IfNoneMatch <String>] [-SyncToken <String>] -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PutViaJsonString
 ```
-Set-AzAppConfigurationKeyValue -Endpoint <String> -Key <String> [-Label <String>] [-IfMatch <String>]
- [-IfNoneMatch <String>] [-SyncToken <String>] -JsonString <String> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-AzAppConfigurationKeyValue -Endpoint <String> -Key <String> [-Label <String>] [-ClientRequestId <String>]
+ [-IfMatch <String>] [-IfNoneMatch <String>] [-SyncToken <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,8 +66,23 @@ If the key exists, the value will be updated.
 
 ## PARAMETERS
 
+### -ClientRequestId
+An opaque, globally-unique, client-generated string identifier for the request.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContentType
-.
+The content type of the value stored within the key-value.
 
 ```yaml
 Type: System.String
@@ -96,6 +112,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Description
+The description of the key-value.
+
+```yaml
+Type: System.String
+Parameter Sets: PutExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Endpoint
 The endpoint of the App Configuration instance to send requests to.
 
@@ -112,7 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Etag
-.
+A value representing the current state of the resource.
 
 ```yaml
 Type: System.String
@@ -127,7 +158,8 @@ Accept wildcard characters: False
 ```
 
 ### -IfMatch
-Used to perform an operation only if the targeted resource's etag matches the value provided.
+Used to perform an operation only if the targeted resource's etag matches the
+value provided.
 
 ```yaml
 Type: System.String
@@ -142,7 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -IfNoneMatch
-Used to perform an operation only if the targeted resource's etag does not match the value provided.
+Used to perform an operation only if the targeted resource's etag does not
+match the value provided.
 
 ```yaml
 Type: System.String
@@ -201,21 +234,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Key1
-.
-
-```yaml
-Type: System.String
-Parameter Sets: PutExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Label
 The label of the key-value to create.
 
@@ -231,23 +249,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Label1
-.
-
-```yaml
-Type: System.String
-Parameter Sets: PutExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LastModified
-.
+A date representing the last time the key-value was modified.
 
 ```yaml
 Type: System.DateTime
@@ -262,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -Locked
-.
+Indicates whether the key-value is locked.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -292,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-Dictionary of \<string\>
+The tags of the key-value
 
 ```yaml
 Type: System.Collections.Hashtable
@@ -307,7 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-.
+The value of the key-value.
 
 ```yaml
 Type: System.String

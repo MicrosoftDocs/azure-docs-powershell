@@ -34,7 +34,7 @@ Add-AzDataFactoryV2TriggerSubscription [-ResourceId] <String> [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-This command subscribes the event trigger to the specified external service events from the trigger defintion.
+This command subscribes the event trigger to the specified external service events from the trigger definition.
 
 ## EXAMPLES
 
@@ -49,7 +49,7 @@ TriggerName Status
 Trigger1    Provisioning
 ```
 
-This command will subscribe BlobEnetTrigger1 trigger to the specified events from the trigger defintion.
+This command will subscribe BlobEnetTrigger1 trigger to the specified events from the trigger definition.
 
 ## PARAMETERS
 
@@ -57,9 +57,9 @@ This command will subscribe BlobEnetTrigger1 trigger to the specified events fro
 The data factory name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 1
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The credentials, account, tenant, and subscription used for communication with Azure.
 
 ```yaml
-Type: IAzureContextContainer
+Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
 Parameter Sets: (All)
 Aliases: AzContext, AzureRmContext, AzureCredential
 
@@ -87,9 +87,9 @@ Accept wildcard characters: False
 The trigger object.
 
 ```yaml
-Type: PSTrigger
+Type: Microsoft.Azure.Commands.DataFactoryV2.Models.PSTrigger
 Parameter Sets: ByInputObject
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 The trigger name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
 Aliases: TriggerName
 
@@ -117,9 +117,9 @@ Accept wildcard characters: False
 The resource group name.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByFactoryName
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -132,9 +132,9 @@ Accept wildcard characters: False
 The Azure resource ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: ByResourceId
-Aliases: 
+Aliases:
 
 Required: True
 Position: 0
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -163,7 +163,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -189,4 +189,3 @@ Microsoft.Azure.Commands.DataFactoryV2.Models.PSTrigger
 ## NOTES
 
 ## RELATED LINKS
-

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridNamespaceTopic
 
 ## SYNOPSIS
-Asynchronously creates a new namespace topic with the specified parameters.
+Asynchronously create a new namespace topic with the specified parameters.
 
 ## SYNTAX
 
@@ -51,7 +51,7 @@ New-AzEventGridNamespaceTopic -InputObject <IEventGridIdentity> [-EventRetention
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new namespace topic with the specified parameters.
+Asynchronously create a new namespace topic with the specified parameters.
 
 ## EXAMPLES
 

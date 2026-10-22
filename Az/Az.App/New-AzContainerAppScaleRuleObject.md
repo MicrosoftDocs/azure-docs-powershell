@@ -18,7 +18,8 @@ Create an in-memory object for ScaleRule.
 New-AzContainerAppScaleRuleObject [-AzureQueueAuth <IScaleRuleAuth[]>] [-AzureQueueLength <Int32>]
  [-AzureQueueName <String>] [-CustomAuth <IScaleRuleAuth[]>] [-CustomMetadata <ICustomScaleRuleMetadata>]
  [-CustomType <String>] [-HttpAuth <IScaleRuleAuth[]>] [-HttpMetadata <IHttpScaleRuleMetadata>]
- [-Name <String>] [-TcpAuth <IScaleRuleAuth[]>] [-TcpMetadata <ITcpScaleRuleMetadata>] [<CommonParameters>]
+ [-Name <String>] [-TcpAuth <IScaleRuleAuth[]>] [-TcpMetadata <ITcpScaleRuleMetadata>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +44,6 @@ Create an in-memory object for ScaleRule.
 
 ### -AzureQueueAuth
 Authentication secrets for the queue scale rule.
-To construct, see NOTES section for AZUREQUEUEAUTH properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth[]
@@ -89,7 +89,6 @@ Accept wildcard characters: False
 
 ### -CustomAuth
 Authentication secrets for the custom scale rule.
-To construct, see NOTES section for CUSTOMAUTH properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth[]
@@ -105,7 +104,6 @@ Accept wildcard characters: False
 
 ### -CustomMetadata
 Metadata properties to describe custom scale rule.
-To construct, see NOTES section for CUSTOMMETADATA properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.ICustomScaleRuleMetadata
@@ -137,7 +135,6 @@ Accept wildcard characters: False
 
 ### -HttpAuth
 Authentication secrets for the custom scale rule.
-To construct, see NOTES section for HTTPAUTH properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth[]
@@ -153,7 +150,6 @@ Accept wildcard characters: False
 
 ### -HttpMetadata
 Metadata properties to describe http scale rule.
-To construct, see NOTES section for HTTPMETADATA properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IHttpScaleRuleMetadata
@@ -184,7 +180,6 @@ Accept wildcard characters: False
 
 ### -TcpAuth
 Authentication secrets for the tcp scale rule.
-To construct, see NOTES section for TCPAUTH properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth[]
@@ -200,7 +195,6 @@ Accept wildcard characters: False
 
 ### -TcpMetadata
 Metadata properties to describe tcp scale rule.
-To construct, see NOTES section for TCPMETADATA properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.ITcpScaleRuleMetadata

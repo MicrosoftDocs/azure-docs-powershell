@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDevCenterUserEnvironmentOutput
 
 ## SYNOPSIS
-Gets Outputs from the environment
+Gets Outputs from the environment.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Get-AzDevCenterUserEnvironmentOutput -DevCenterName <String> -EnvironmentName <S
 ```
 
 ## DESCRIPTION
-Gets Outputs from the environment
+Gets Outputs from the environment.
 
 ## EXAMPLES
 
@@ -192,7 +192,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IEnvironmentOutputs
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IEnvironmentOutputs
 
 ## NOTES
 

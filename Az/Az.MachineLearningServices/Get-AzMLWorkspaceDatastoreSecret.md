@@ -155,7 +155,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.SecretsType
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IDatastoreSecrets
 
 ## NOTES
 

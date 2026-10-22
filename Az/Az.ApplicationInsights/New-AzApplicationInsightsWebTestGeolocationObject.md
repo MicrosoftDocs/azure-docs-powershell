@@ -1,7 +1,7 @@
 ---
 external help file: Az.ApplicationInsights-help.xml
 Module Name: Az.ApplicationInsights
-online version: https://learn.microsoft.com/powershell/module/Az.ApplicationInsights/new-AzApplicationInsightsWebTestGeolocationObject
+online version: https://learn.microsoft.com/powershell/module/Az.ApplicationInsights/new-azapplicationinsightswebtestgeolocationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTestGeolocationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTestGeolocationObject.md
@@ -62,7 +62,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220615.WebTestGeolocation
+### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.WebTestGeolocation
 
 ## NOTES
 

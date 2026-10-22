@@ -1,7 +1,7 @@
 ---
 external help file: Az.SqlVirtualMachine-help.xml
 Module Name: Az.SqlVirtualMachine
-online version: https://learn.microsoft.com/powershell/module/Az.SqlVirtualMachine/new-AzSqlVirtualMachineAgReplicaObject
+online version: https://learn.microsoft.com/powershell/module/Az.SqlVirtualMachine/new-azsqlvirtualmachineagreplicaobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/New-AzSqlVirtualMachineAgReplicaObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/New-AzSqlVirtualMachineAgReplicaObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for AgReplica.
 ## SYNTAX
 
 ```
-New-AzSqlVirtualMachineAgReplicaObject [-Commit <Commit>] [-Failover <Failover>]
- [-ReadableSecondary <ReadableSecondary>] [-Role <Role>] [-SqlVirtualMachineInstanceId <String>]
+New-AzSqlVirtualMachineAgReplicaObject [-Commit <String>] [-Failover <String>] [-ReadableSecondary <String>]
+ [-Role <String>] [-SqlVirtualMachineInstanceId <String>]
  [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ This object represents an availability group replica configuration and will be u
 Replica commit mode in availability group.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.Commit
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 Replica failover mode in availability group.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.Failover
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 Replica readable secondary mode in availability group.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.ReadableSecondary
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 Replica Role in availability group.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.Role
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -124,7 +124,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Models.Api20220801Preview.AgReplica
+### Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Models.AgReplica
 
 ## NOTES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridPartnerNamespace
 
 ## SYNOPSIS
-Asynchronously updates a partner namespace with the specified parameters.
+Asynchronously update a partner namespace with the specified parameters.
 
 ## SYNTAX
 
@@ -45,7 +45,7 @@ Update-AzEventGridPartnerNamespace -InputObject <IEventGridIdentity> [-DisableLo
 ```
 
 ## DESCRIPTION
-Asynchronously updates a partner namespace with the specified parameters.
+Asynchronously update a partner namespace with the specified parameters.
 
 ## EXAMPLES
 

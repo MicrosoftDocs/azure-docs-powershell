@@ -27,17 +27,16 @@ Test-AzHealthcareServiceNameAvailability [-SubscriptionId <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### CheckViaIdentityExpanded
+### CheckViaJsonFilePath
 ```
-Test-AzHealthcareServiceNameAvailability -InputObject <IHealthcareApisIdentity> -Name <String> -Type <String>
+Test-AzHealthcareServiceNameAvailability [-SubscriptionId <String>] -JsonFilePath <String>
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### CheckViaIdentity
+### CheckViaJsonString
 ```
-Test-AzHealthcareServiceNameAvailability -InputObject <IHealthcareApisIdentity>
- -CheckNameAvailabilityInput <ICheckNameAvailabilityParameters> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Test-AzHealthcareServiceNameAvailability [-SubscriptionId <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,11 +61,10 @@ Check if a service instance name is available.
 
 ### -CheckNameAvailabilityInput
 Input values.
-To construct, see NOTES section for CHECKNAMEAVAILABILITYINPUT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.ICheckNameAvailabilityParameters
-Parameter Sets: Check, CheckViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.ICheckNameAvailabilityParameters
+Parameter Sets: Check
 Aliases:
 
 Required: True
@@ -92,19 +90,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+### -JsonFilePath
+Path of Json file supplied to the Check operation
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IHealthcareApisIdentity
-Parameter Sets: CheckViaIdentityExpanded, CheckViaIdentity
+Type: System.String
+Parameter Sets: CheckViaJsonFilePath
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Check operation
+
+```yaml
+Type: System.String
+Parameter Sets: CheckViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -113,7 +125,7 @@ The name of the service instance to check.
 
 ```yaml
 Type: System.String
-Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
+Parameter Sets: CheckExpanded
 Aliases:
 
 Required: True
@@ -128,7 +140,7 @@ The subscription identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: CheckExpanded, Check
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -143,7 +155,7 @@ The fully qualified resource type which includes provider namespace.
 
 ```yaml
 Type: System.String
-Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
+Parameter Sets: CheckExpanded
 Aliases:
 
 Required: True
@@ -189,13 +201,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.ICheckNameAvailabilityParameters
-
-### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IHealthcareApisIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.ICheckNameAvailabilityParameters
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.IServicesNameAvailabilityInfo
+### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IServicesNameAvailabilityInfo
 
 ## NOTES
 

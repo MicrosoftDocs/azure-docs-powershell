@@ -16,7 +16,7 @@ Skips an occurrence of an action.
 
 ### Skip (Default)
 ```
-Skip-AzDevCenterUserDevBoxAction -Endpoint <String> -Name <String> -DevBoxName <String> -ProjectName <String>
+Skip-AzDevCenterUserDevBoxAction -Endpoint <String> -DevBoxName <String> -Name <String> -ProjectName <String>
  [-UserId <String>] [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -37,7 +37,7 @@ Skip-AzDevCenterUserDevBoxAction -DevCenterName <String> -InputObject <IDevCente
 
 ### SkipByDevCenter
 ```
-Skip-AzDevCenterUserDevBoxAction -DevCenterName <String> -Name <String> -DevBoxName <String>
+Skip-AzDevCenterUserDevBoxAction -DevCenterName <String> -DevBoxName <String> -Name <String>
  -ProjectName <String> [-UserId <String>] [-DefaultProfile <PSObject>] [-PassThru]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -DevBoxName
-The name of a Dev Box.
+Display name for the Dev Box.
 
 ```yaml
 Type: System.String
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of an action that will take place on a Dev Box.
+The name of the action.
 
 ```yaml
 Type: System.String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProjectName
-The DevCenter Project upon which to execute operations.
+Name of the project.
 
 ```yaml
 Type: System.String

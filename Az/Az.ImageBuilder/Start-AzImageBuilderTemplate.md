@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Start-AzImageBuilderTemplate
 
 ## SYNOPSIS
-Create artifacts from a existing image template
+run artifacts from a existing image template
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Start-AzImageBuilderTemplate -InputObject <IImageBuilderIdentity> [-DefaultProfi
 ```
 
 ## DESCRIPTION
-Create artifacts from a existing image template
+run artifacts from a existing image template
 
 ## EXAMPLES
 
@@ -81,7 +81,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.IImageBuilderIdentity

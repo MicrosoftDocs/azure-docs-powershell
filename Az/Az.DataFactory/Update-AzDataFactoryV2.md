@@ -17,6 +17,7 @@ Updates the properties of a data factory.
 ### ByFactoryName (Default)
 ```
 Update-AzDataFactoryV2 [-ResourceGroupName] <String> [-Name] <String> [-IdentityType <String>]
+ [-PublicNetworkAccess <String>]
  [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
  [-EncryptionVaultBaseUrl <String>] [-EncryptionKeyName <String>] [-EncryptionKeyVersion <String>]
  [-EncryptionUserAssignedIdentity <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
@@ -25,7 +26,7 @@ Update-AzDataFactoryV2 [-ResourceGroupName] <String> [-Name] <String> [-Identity
 
 ### ByFactoryObject
 ```
-Update-AzDataFactoryV2 [-IdentityType <String>]
+Update-AzDataFactoryV2 [-IdentityType <String>] [-PublicNetworkAccess <String>]
  [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
  [-EncryptionVaultBaseUrl <String>] [-EncryptionKeyName <String>] [-EncryptionKeyVersion <String>]
  [-EncryptionUserAssignedIdentity <String>] [-InputObject] <PSDataFactory> [-Tag <Hashtable>]
@@ -34,7 +35,7 @@ Update-AzDataFactoryV2 [-IdentityType <String>]
 
 ### ByResourceId
 ```
-Update-AzDataFactoryV2 [-IdentityType <String>]
+Update-AzDataFactoryV2 [-IdentityType <String>] [-PublicNetworkAccess <String>]
  [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
  [-EncryptionVaultBaseUrl <String>] [-EncryptionKeyName <String>] [-EncryptionKeyVersion <String>]
  [-EncryptionUserAssignedIdentity <String>] [-ResourceId] <String> [-Tag <Hashtable>]
@@ -161,20 +162,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PublicNetworkAccess
-Whether or not public network access is allowed for the data factory. Options are 'Enabled' or 'Disabled'
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: Enabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -InputObject
 The data factory object.
 
@@ -201,6 +188,21 @@ Aliases: DataFactoryName
 Required: True
 Position: 1
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicNetworkAccess
+Whether or not public network access is allowed for the data factory. Options are 'Enabled' or 'Disabled'
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

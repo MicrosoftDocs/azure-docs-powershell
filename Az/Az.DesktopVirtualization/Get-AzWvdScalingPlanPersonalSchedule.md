@@ -28,6 +28,13 @@ Get-AzWvdScalingPlanPersonalSchedule -ResourceGroupName <String> -ScalingPlanNam
  [<CommonParameters>]
 ```
 
+### GetViaIdentityScalingPlan
+```
+Get-AzWvdScalingPlanPersonalSchedule -ScalingPlanScheduleName <String>
+ -ScalingPlanInputObject <IDesktopVirtualizationIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzWvdScalingPlanPersonalSchedule -InputObject <IDesktopVirtualizationIdentity> [-DefaultProfile <PSObject>]
@@ -88,7 +95,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity
@@ -148,6 +154,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScalingPlanInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity
+Parameter Sets: GetViaIdentityScalingPlan
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ScalingPlanName
 The name of the scaling plan.
 
@@ -168,7 +189,7 @@ The name of the ScalingPlanSchedule
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityScalingPlan
 Aliases:
 
 Required: True
@@ -180,6 +201,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]
@@ -202,7 +224,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IScalingPlanPersonalSchedule
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IScalingPlanPersonalSchedule
 
 ## NOTES
 

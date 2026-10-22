@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzPeeringConnectionMonitorTest
 
 ## SYNOPSIS
-Creates or updates a connection monitor test with the specified name under the given subscription, resource group and peering service.
+create a connection monitor test with the specified name under the given subscription, resource group and peering service.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-AzPeeringConnectionMonitorTest -Name <String> -PeeringServiceName <String> -
 ```
 
 ## DESCRIPTION
-Creates or updates a connection monitor test with the specified name under the given subscription, resource group and peering service.
+create a connection monitor test with the specified name under the given subscription, resource group and peering service.
 
 ## EXAMPLES
 
@@ -215,7 +215,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IConnectionMonitorTest
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IConnectionMonitorTest
 
 ## NOTES
 

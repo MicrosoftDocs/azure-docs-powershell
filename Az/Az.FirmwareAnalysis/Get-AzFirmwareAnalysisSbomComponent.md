@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzFirmwareAnalysisSbomComponent
 
 ## SYNOPSIS
-Lists SBOM analysis results of a firmware.
+Lists sbom analysis results of a firmware.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-AzFirmwareAnalysisSbomComponent -FirmwareId <String> -ResourceGroupName <Str
 ```
 
 ## DESCRIPTION
-Lists SBOM analysis results of a firmware.
+Lists sbom analysis results of a firmware.
 
 ## EXAMPLES
 

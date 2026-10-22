@@ -20,7 +20,7 @@ Returns account details for the given account name.
 Returns instance details for the given instance and account name.
 
 ### [New-AzDeviceUpdateAccount](New-AzDeviceUpdateAccount.md)
-Creates or updates Account.
+create Account.
 
 ### [New-AzDeviceUpdateCheckNameAvailabilityRequestObject](New-AzDeviceUpdateCheckNameAvailabilityRequestObject.md)
 Create an in-memory object for CheckNameAvailabilityRequest.
@@ -38,8 +38,8 @@ Deletes instance.
 Checks ADU resource name availability.
 
 ### [Update-AzDeviceUpdateAccount](Update-AzDeviceUpdateAccount.md)
-Updates account's patchable properties
+update Account.
 
 ### [Update-AzDeviceUpdateInstance](Update-AzDeviceUpdateInstance.md)
-Updates instance's tags.
+update instance's tags.
 

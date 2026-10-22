@@ -11,7 +11,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Suspend-AzAutomationJob
 
 ## SYNOPSIS
-Suspends an Automation job.
+Suspends an Automation job (Only applicable for PowerShell Workflow jobs).
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Suspend-AzAutomationJob [-Id] <Guid> [-ResourceGroupName] <String> [-AutomationA
 ## DESCRIPTION
 The **Suspend-AzAutomationJob** cmdlet suspends an Azure Automation job.
 Specify a running Automation job.
-To resume a suspended job, use the Resume-AzAutomationJob cmdlet.
+To resume a suspended PowerShell Workflow job, use the Resume-AzAutomationJob cmdlet.
 
 ## EXAMPLES
 

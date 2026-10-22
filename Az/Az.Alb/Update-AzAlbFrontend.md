@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzAlbFrontend
 
 ## SYNOPSIS
-Update a Frontend
+update a Frontend
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ Update-AzAlbFrontend -InputObject <IAlbIdentity> [-Tag <Hashtable>] [-DefaultPro
 ```
 
 ## DESCRIPTION
-Update a Frontend
+update a Frontend
 
 ## EXAMPLES
 

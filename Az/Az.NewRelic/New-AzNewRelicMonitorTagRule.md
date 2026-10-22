@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzNewRelicMonitorTagRule
 
 ## SYNOPSIS
-Create a TagRule
+Create a new set of tag rules for a specific New Relic monitor resource, determining which Azure resources are monitored based on their tags
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ New-AzNewRelicMonitorTagRule -MonitorName <String> -ResourceGroupName <String> -
 ```
 
 ## DESCRIPTION
-Create a TagRule
+Create a new set of tag rules for a specific New Relic monitor resource, determining which Azure resources are monitored based on their tags
 
 ## EXAMPLES
 

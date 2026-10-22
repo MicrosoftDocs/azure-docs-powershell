@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzContainerAppConnectedEnvDapr
 
 ## SYNOPSIS
-Create a Dapr Component in a connected environment.
+update a Dapr Component in a connected environment.
 
 ## SYNTAX
 
@@ -19,8 +19,8 @@ Create a Dapr Component in a connected environment.
 Update-AzContainerAppConnectedEnvDapr -ConnectedEnvironmentName <String> -Name <String>
  -ResourceGroupName <String> [-SubscriptionId <String>] [-ComponentType <String>] [-IgnoreError]
  [-InitTimeout <String>] [-Metadata <IDaprMetadata[]>] [-Scope <String[]>] [-Secret <ISecret[]>]
- [-SecretStoreComponent <String>] [-Version <String>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SecretStoreComponent <String>] [-Version <String>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityConnectedEnvironmentExpanded
@@ -35,12 +35,12 @@ Update-AzContainerAppConnectedEnvDapr -Name <String> -ConnectedEnvironmentInputO
 ```
 Update-AzContainerAppConnectedEnvDapr -InputObject <IAppIdentity> [-ComponentType <String>] [-IgnoreError]
  [-InitTimeout <String>] [-Metadata <IDaprMetadata[]>] [-Scope <String[]>] [-Secret <ISecret[]>]
- [-SecretStoreComponent <String>] [-Version <String>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SecretStoreComponent <String>] [-Version <String>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a Dapr Component in a connected environment.
+update a Dapr Component in a connected environment.
 
 ## EXAMPLES
 
@@ -113,7 +113,6 @@ Accept wildcard characters: False
 
 ### -ConnectedEnvironmentInputObject
 Identity Parameter
-To construct, see NOTES section for CONNECTEDENVIRONMENTINPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -190,7 +189,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -206,7 +204,6 @@ Accept wildcard characters: False
 
 ### -Metadata
 Component metadata
-To construct, see NOTES section for METADATA properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IDaprMetadata[]
@@ -268,7 +265,6 @@ Accept wildcard characters: False
 
 ### -Secret
 Collection of secrets used by a Dapr component
-To construct, see NOTES section for SECRET properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.ISecret[]

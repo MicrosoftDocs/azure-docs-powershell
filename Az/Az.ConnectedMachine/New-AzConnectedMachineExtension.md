@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzConnectedMachineExtension
 
 ## SYNOPSIS
-The operation to create or update the extension.
+The operation to create the extension.
 
 ## SYNTAX
 
@@ -85,7 +85,7 @@ New-AzConnectedMachineExtension -InputObject <IConnectedMachineIdentity>
 ```
 
 ## DESCRIPTION
-The operation to create or update the extension.
+The operation to create the extension.
 
 ## EXAMPLES
 

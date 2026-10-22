@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzManagedServicesEligibleAuthorizationObject
 
 ## SYNOPSIS
-Create a in-memory object for EligibleAuthorization
+Create an in-memory object for EligibleAuthorization.
 
 ## SYNTAX
 
@@ -18,12 +18,12 @@ Create a in-memory object for EligibleAuthorization
 New-AzManagedServicesEligibleAuthorizationObject -PrincipalId <String> -RoleDefinitionId <String>
  [-JustInTimeAccessPolicyManagedByTenantApprover <IEligibleApprover[]>]
  [-JustInTimeAccessPolicyMaximumActivationDuration <TimeSpan>]
- [-JustInTimeAccessPolicyMultiFactorAuthProvider <MultiFactorAuthProvider>] [-PrincipalIdDisplayName <String>]
+ [-JustInTimeAccessPolicyMultiFactorAuthProvider <String>] [-PrincipalIdDisplayName <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a in-memory object for EligibleAuthorization
+Create an in-memory object for EligibleAuthorization.
 
 ## EXAMPLES
 
@@ -64,10 +64,9 @@ Creates new Azure Lighthouse eligible authorization object with JustInTime (JIT)
 
 ### -JustInTimeAccessPolicyManagedByTenantApprover
 The list of managedByTenant approvers for the eligible authorization.
-To construct, see NOTES section for JUSTINTIMEACCESSPOLICYMANAGEDBYTENANTAPPROVER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.IEligibleApprover[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IEligibleApprover[]
 Parameter Sets: (All)
 Aliases:
 
@@ -97,7 +96,7 @@ Accept wildcard characters: False
 The multi-factor authorization provider to be used for just-in-time access requests.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Support.MultiFactorAuthProvider
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -160,7 +159,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.EligibleAuthorization
+### Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.EligibleAuthorization
 
 ## NOTES
 

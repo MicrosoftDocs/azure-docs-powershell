@@ -28,6 +28,13 @@ Get-AzVoiceServicesCommunicationsTestLine -CommunicationsGatewayName <String> -N
  [<CommonParameters>]
 ```
 
+### GetViaIdentityCommunicationsGateway
+```
+Get-AzVoiceServicesCommunicationsTestLine -Name <String>
+ -CommunicationsGatewayInputObject <IVoiceServicesIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzVoiceServicesCommunicationsTestLine -InputObject <IVoiceServicesIdentity> [-DefaultProfile <PSObject>]
@@ -80,6 +87,21 @@ Get a testline by pipeline.
 
 ## PARAMETERS
 
+### -CommunicationsGatewayInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.VoiceServices.Models.IVoiceServicesIdentity
+Parameter Sets: GetViaIdentityCommunicationsGateway
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -CommunicationsGatewayName
 Unique identifier for this deployment
 
@@ -113,7 +135,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.VoiceServices.Models.IVoiceServicesIdentity
@@ -132,7 +153,7 @@ Unique identifier for this test line
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityCommunicationsGateway
 Aliases: TestLineName
 
 Required: True
@@ -182,7 +203,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.VoiceServices.Models.Api20230131.ITestLine
+### Microsoft.Azure.PowerShell.Cmdlets.VoiceServices.Models.ITestLine
 
 ## NOTES
 

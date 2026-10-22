@@ -25,7 +25,7 @@ Stop-AzStorageFileCopy [-ShareName] <String> [-FilePath] <String> [-CopyId <Stri
 
 ### File
 ```
-Stop-AzStorageFileCopy [-File] <CloudFile> [-ShareFileClient <ShareFileClient>] [-CopyId <String>] [-Force]
+Stop-AzStorageFileCopy [-ShareFileClient] <ShareFileClient> [-CopyId <String>] [-Force]
  [-Context <IStorageContext>] [-ServerTimeoutPerRequest <Int32>] [-ClientTimeoutPerRequest <Int32>]
  [-DefaultProfile <IAzureContextContainer>] [-ConcurrentTaskCount <Int32>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -142,22 +142,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -File
-Specifies a **CloudFile** object.
-You can create a cloud file or obtain one by using the Get-AzStorageFile cmdlet.
-
-```yaml
-Type: Microsoft.Azure.Storage.File.CloudFile
-Parameter Sets: File
-Aliases: CloudFile
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ### -FilePath
 Specifies the path of a file.
 
@@ -211,8 +195,8 @@ Type: Azure.Storage.Files.Shares.ShareFileClient
 Parameter Sets: File
 Aliases:
 
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -269,7 +253,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.Storage.File.CloudFile
+### Azure.Storage.Files.Shares.ShareFileClient
 
 ### Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext
 

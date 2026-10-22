@@ -17,7 +17,7 @@ Microsoft Azure PowerShell: Portal Dashboard cmdlets
 Gets the Dashboard.
 
 ### [New-AzPortalDashboard](New-AzPortalDashboard.md)
-Creates or updates a Dashboard.
+create a Dashboard.
 
 ### [Remove-AzPortalDashboard](Remove-AzPortalDashboard.md)
 Deletes the Dashboard.
@@ -26,5 +26,5 @@ Deletes the Dashboard.
 Creates or updates a Dashboard.
 
 ### [Update-AzPortalDashboard](Update-AzPortalDashboard.md)
-Updates an existing Dashboard.
+update an existing Dashboard.
 

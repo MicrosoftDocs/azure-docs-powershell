@@ -10,9 +10,9 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzStorageActionTask
 
 ## SYNOPSIS
-Asynchronously creates a new storage task resource with the specified parameters.
+Asynchronously create a new storage task resource with the specified parameters.
 If a storage task is already created and a subsequent create request is issued with different properties, the storage task properties will be updated.
-If a storage task is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.
+If a storage task is already created and a subsequent create request is issued with the exact same set of properties, the request will succeed.
 
 ## SYNTAX
 
@@ -40,9 +40,9 @@ New-AzStorageActionTask -Name <String> -ResourceGroupName <String> [-Subscriptio
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new storage task resource with the specified parameters.
+Asynchronously create a new storage task resource with the specified parameters.
 If a storage task is already created and a subsequent create request is issued with different properties, the storage task properties will be updated.
-If a storage task is already created and a subsequent create or update request is issued with the exact same set of properties, the request will succeed.
+If a storage task is already created and a subsequent create request is issued with the exact same set of properties, the request will succeed.
 
 ## EXAMPLES
 
@@ -163,7 +163,7 @@ ElseOperation                : {{
                                }}
 Enabled                      : True
 Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask3
-IdentityPrincipalId          : 11111111-2222-3333-4444-123456789123
+IdentityPrincipalId          : 00001111-aaaa-2222-bbbb-3333cccc4444
 IdentityTenantId             : 11111111-2222-3333-4444-123456789101
 IdentityType                 : SystemAssigned
 IdentityUserAssignedIdentity : {
@@ -276,7 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSystemAssignedIdentity
-Decides if enable a system assigned identity for the resource.
+Determines whether to enable a system-assigned identity for the resource.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

@@ -17,13 +17,15 @@ Get a SourceControl of a Container App.
 ### List (Default)
 ```
 Get-AzContainerAppSourceControl -ContainerAppName <String> -ResourceGroupName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+ [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### Get
 ```
 Get-AzContainerAppSourceControl -ContainerAppName <String> -Name <String> -ResourceGroupName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+ [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### GetViaIdentityContainerApp
@@ -34,7 +36,8 @@ Get-AzContainerAppSourceControl -Name <String> -ContainerAppInputObject <IAppIde
 
 ### GetViaIdentity
 ```
-Get-AzContainerAppSourceControl -InputObject <IAppIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzContainerAppSourceControl -InputObject <IAppIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,7 +89,6 @@ Get a SourceControl of a Container App.
 
 ### -ContainerAppInputObject
 Identity Parameter
-To construct, see NOTES section for CONTAINERAPPINPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -133,7 +135,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity

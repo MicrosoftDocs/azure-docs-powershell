@@ -28,6 +28,12 @@ Get-AzKustoClusterPrincipalAssignment -ClusterName <String> -PrincipalAssignment
  [<CommonParameters>]
 ```
 
+### GetViaIdentityCluster
+```
+Get-AzKustoClusterPrincipalAssignment -PrincipalAssignmentName <String> -ClusterInputObject <IKustoIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzKustoClusterPrincipalAssignment -InputObject <IKustoIdentity> [-DefaultProfile <PSObject>]
@@ -67,6 +73,21 @@ The above command returns the Kusto cluster principalAssignment named "kustoprin
 
 ## PARAMETERS
 
+### -ClusterInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
+Parameter Sets: GetViaIdentityCluster
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 The name of the Kusto cluster.
 
@@ -100,7 +121,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
@@ -119,7 +139,7 @@ The name of the Kusto principalAssignment.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityCluster
 Aliases:
 
 Required: True
@@ -169,7 +189,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IClusterPrincipalAssignment
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IClusterPrincipalAssignment
 
 ## NOTES
 

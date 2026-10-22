@@ -17,8 +17,8 @@ Adds a version for a service running in a cluster to a cluster configuration obj
 
 ```
 Add-AzHDInsightComponentVersion [-Config] <AzureHDInsightConfig> [-ComponentName] <String>
- [-ComponentVersion] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ComponentVersion] <String> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +28,7 @@ The Add-AzHDInsightComponentVersion cmdlet adds a version for a service running 
 
 ### Example 1: Add a version for Spark to the cluster configuration object.
 ```powershell
-        # Primary storage account info
+# Primary storage account info
         $storageAccountResourceGroupName = "Group"
         $storageAccountName = "yourstorageacct001"
         $storageAccountResourceId = "yourstorageaccountresourceid"

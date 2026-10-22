@@ -14,27 +14,10 @@ Update the provisioned cluster instance
 
 ## SYNTAX
 
-### UpdateExpanded (Default)
 ```
 Update-AzAksArcCluster -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-AdminGroupObjectID <String[]>] [-EnableAzureHybridBenefit] [-ControlPlaneCount <Int32>]
- [-NfCsiDriverEnabled] [-SmbCsiDriverEnabled] [-AutoScalerProfileBalanceSimilarNodeGroup <String>]
- [-AutoScalerProfileExpander <String>] [-AutoScalerProfileMaxEmptyBulkDelete <String>]
- [-AutoScalerProfileMaxGracefulTerminationSec <String>] [-AutoScalerProfileMaxNodeProvisionTime <String>]
- [-AutoScalerProfileMaxTotalUnreadyPercentage <String>] [-AutoScalerProfileNewPodScaleUpDelay <String>]
- [-AutoScalerProfileOkTotalUnreadyCount <String>] [-AutoScalerProfileScaleDownDelayAfterAdd <String>]
- [-AutoScalerProfileScaleDownDelayAfterDelete <String>] [-AutoScalerProfileScaleDownDelayAfterFailure <String>]
- [-AutoScalerProfileScaleDownUnneededTime <String>] [-AutoScalerProfileScaleDownUnreadyTime <String>]
- [-AutoScalerProfileScaleDownUtilizationThreshold <String>] [-AutoScalerProfileScanInterval <String>]
- [-AutoScalerProfileSkipNodesWithLocalStorage <String>] [-AutoScalerProfileSkipNodesWithSystemPod <String>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AutoScaling
-```
-Update-AzAksArcCluster -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -MinCount <Int32> -MaxCount <Int32> [-AdminGroupObjectID <String[]>] [-EnableAzureHybridBenefit]
- [-ControlPlaneCount <Int32>] [-NfCsiDriverEnabled] [-SmbCsiDriverEnabled]
+ [-MinCount <Int32>] [-MaxCount <Int32>] [-AdminGroupObjectID <String[]>] [-EnableAutoScaling]
+ [-EnableAzureHybridBenefit] [-ControlPlaneCount <Int32>] [-NfCsiDriverEnabled] [-SmbCsiDriverEnabled]
  [-AutoScalerProfileBalanceSimilarNodeGroup <String>] [-AutoScalerProfileExpander <String>]
  [-AutoScalerProfileMaxEmptyBulkDelete <String>] [-AutoScalerProfileMaxGracefulTerminationSec <String>]
  [-AutoScalerProfileMaxNodeProvisionTime <String>] [-AutoScalerProfileMaxTotalUnreadyPercentage <String>]
@@ -43,7 +26,7 @@ Update-AzAksArcCluster -ClusterName <String> -ResourceGroupName <String> [-Subsc
  [-AutoScalerProfileScaleDownDelayAfterFailure <String>] [-AutoScalerProfileScaleDownUnneededTime <String>]
  [-AutoScalerProfileScaleDownUnreadyTime <String>] [-AutoScalerProfileScaleDownUtilizationThreshold <String>]
  [-AutoScalerProfileScanInterval <String>] [-AutoScalerProfileSkipNodesWithLocalStorage <String>]
- [-AutoScalerProfileSkipNodesWithSystemPod <String>] [-EnableAutoScaling] [-AsJob] [-NoWait]
+ [-AutoScalerProfileSkipNodesWithSystemPod <String>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -463,10 +446,10 @@ The default value is true.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: AutoScaling
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -494,10 +477,10 @@ Max nodes in autoscalar
 
 ```yaml
 Type: System.Int32
-Parameter Sets: AutoScaling
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -509,10 +492,10 @@ Min nodes in autoscalar
 
 ```yaml
 Type: System.Int32
-Parameter Sets: AutoScaling
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

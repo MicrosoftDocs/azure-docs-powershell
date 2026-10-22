@@ -39,7 +39,7 @@ Get-AzDataFactoryV2TriggerRun -ResourceGroupName "ADF" -DataFactoryName "WikiADF
 ```
 
 ```output
-    ResourceGroupName   : ADF
+ResourceGroupName   : ADF
     DataFactoryName     : WikiADF
     TriggerName         : WikiTrigger
     TriggerRunId        : 08586958400454144995526033731
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -174,7 +174,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-AzDataFactoryV2Trigger]()
+[Start-AzDataFactoryV2Trigger](Start-AzDataFactoryV2Trigger.md)
 
-[Stop-AzDataFactoryV2Trigger]()
+[Stop-AzDataFactoryV2Trigger](Stop-AzDataFactoryV2Trigger.md)
 

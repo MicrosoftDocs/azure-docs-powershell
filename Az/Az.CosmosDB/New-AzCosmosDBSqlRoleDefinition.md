@@ -27,7 +27,8 @@ New-AzCosmosDBSqlRoleDefinition -ResourceGroupName <String> -AccountName <String
 New-AzCosmosDBSqlRoleDefinition -ResourceGroupName <String> -AccountName <String> [-Id <String>]
  -RoleName <String> [-Type <String>] -AssignableScope <System.Collections.Generic.List`1[System.String]>
  -Permission <System.Collections.Generic.List`1[Microsoft.Azure.Commands.CosmosDB.Models.PSPermission]>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByParentObjectDataActionsParameterSet
@@ -35,7 +36,8 @@ New-AzCosmosDBSqlRoleDefinition -ResourceGroupName <String> -AccountName <String
 New-AzCosmosDBSqlRoleDefinition [-Id <String>] -RoleName <String> [-Type <String>]
  -AssignableScope <System.Collections.Generic.List`1[System.String]>
  -DataAction <System.Collections.Generic.List`1[System.String]> -ParentObject <PSDatabaseAccountGetResults>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByParentObjectPermissionsParameterSet
@@ -43,8 +45,8 @@ New-AzCosmosDBSqlRoleDefinition [-Id <String>] -RoleName <String> [-Type <String
 New-AzCosmosDBSqlRoleDefinition [-Id <String>] -RoleName <String> [-Type <String>]
  -AssignableScope <System.Collections.Generic.List`1[System.String]>
  -Permission <System.Collections.Generic.List`1[Microsoft.Azure.Commands.CosmosDB.Models.PSPermission]>
- -ParentObject <PSDatabaseAccountGetResults> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -ParentObject <PSDatabaseAccountGetResults> [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

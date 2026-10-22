@@ -15,7 +15,7 @@ Get the default account for the scope.
 ## SYNTAX
 
 ```
-Get-AzPurviewDefaultAccount -ScopeTenantId <String> -ScopeType <ScopeType> [-Scope <String>]
+Get-AzPurviewDefaultAccount -ScopeTenantId <String> -ScopeType <String> [-Scope <String>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 The scope for the default account.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purview.Support.ScopeType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -107,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purview.Models.Api20210701.IDefaultAccountPayload
+### Microsoft.Azure.PowerShell.Cmdlets.Purview.Models.IDefaultAccountPayload
 
 ## NOTES
 

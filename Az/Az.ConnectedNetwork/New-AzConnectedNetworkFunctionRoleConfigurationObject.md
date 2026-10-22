@@ -1,7 +1,7 @@
 ---
 external help file: Az.ConnectedNetwork-help.xml
 Module Name: Az.ConnectedNetwork
-online version: https://learn.microsoft.com/powershell/module/az.ConnectedNetwork/new-AzConnectedNetworkFunctionRoleConfigurationObject
+online version: https://learn.microsoft.com/powershell/module/Az.ConnectedNetwork/new-azconnectednetworkfunctionroleconfigurationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkFunctionRoleConfigurationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkFunctionRoleConfigurationObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzConnectedNetworkFunctionRoleConfigurationObject
 
 ## SYNOPSIS
-Create a in-memory object for NetworkFunctionRoleConfiguration
+Create an in-memory object for NetworkFunctionRoleConfiguration.
 
 ## SYNTAX
 
@@ -18,16 +18,15 @@ Create a in-memory object for NetworkFunctionRoleConfiguration
 New-AzConnectedNetworkFunctionRoleConfigurationObject [-CustomProfileMetadataConfigurationPath <String>]
  [-ImageReferenceExactVersion <String>] [-ImageReferenceOffer <String>] [-ImageReferencePublisher <String>]
  [-ImageReferenceSku <String>] [-ImageReferenceVersion <String>] [-NetworkInterface <INetworkInterface[]>]
- [-OSDiskName <String>] [-OSDiskOstype <OperatingSystemTypes>] [-OSDiskSizeGb <Int32>]
- [-OSProfileAdminUsername <String>] [-OSProfileCustomData <String>] [-OSProfileCustomDataRequired <Boolean>]
- [-RoleName <String>] [-RoleType <NetworkFunctionRoleConfigurationType>] [-SshPublicKey <ISshPublicKey[]>]
- [-StorageProfileDataDisk <IDataDisk[]>] [-UserDataParameter <IAny>] [-UserDataTemplate <IAny>]
- [-VhdUri <String>] [-VirtualMachineSize <VirtualMachineSizeTypes>]
+ [-OSDiskName <String>] [-OSDiskOstype <String>] [-OSDiskSizeGb <Int32>] [-OSProfileAdminUsername <String>]
+ [-OSProfileCustomData <String>] [-OSProfileCustomDataRequired <Boolean>] [-RoleName <String>]
+ [-RoleType <String>] [-SshPublicKey <ISshPublicKey[]>] [-StorageProfileDataDisk <IDataDisk[]>]
+ [-UserDataParameter <IAny>] [-UserDataTemplate <IAny>] [-VhdUri <String>] [-VirtualMachineSize <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a in-memory object for NetworkFunctionRoleConfiguration
+Create an in-memory object for NetworkFunctionRoleConfiguration.
 
 ## EXAMPLES
 
@@ -151,10 +150,9 @@ Accept wildcard characters: False
 
 ### -NetworkInterface
 The network interface configurations.
-To construct, see NOTES section for NETWORKINTERFACE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.INetworkInterface[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.INetworkInterface[]
 Parameter Sets: (All)
 Aliases:
 
@@ -184,7 +182,7 @@ Accept wildcard characters: False
 The OS type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.OperatingSystemTypes
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -225,9 +223,7 @@ Specifies the name of the administrator account.
 
  **Max-length (Linux):** 64 characters 
 
- **Max-length (Windows):** 20 characters  
-
--\<li\> For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://learn.microsoft.com/azure/virtual-machines/linux/faq#what-are-the-username-requirements-when-creating-a-vm-).
+ **Max-length (Windows):** 20 characters
 
 ```yaml
 Type: System.String
@@ -253,9 +249,7 @@ The maximum length of the binary array is 65535 bytes.
 
 
  customData is passed to the VM to be saved as a file.
-For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) 
-
- For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://learn.microsoft.com/azure/virtual-machines/linux/tutorial-automate-vm-deployment).
+For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/)
 
 ```yaml
 Type: System.String
@@ -303,7 +297,7 @@ Accept wildcard characters: False
 Role type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.NetworkFunctionRoleConfigurationType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -316,10 +310,9 @@ Accept wildcard characters: False
 
 ### -SshPublicKey
 The list of SSH public keys used to authenticate with linux based VMs.
-To construct, see NOTES section for SSHPUBLICKEY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.ISshPublicKey[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.ISshPublicKey[]
 Parameter Sets: (All)
 Aliases:
 
@@ -332,10 +325,9 @@ Accept wildcard characters: False
 
 ### -StorageProfileDataDisk
 Specifies the parameters that are used to add a data disk to a virtual machine.
-To construct, see NOTES section for STORAGEPROFILEDATADISK properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.IDataDisk[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IDataDisk[]
 Parameter Sets: (All)
 Aliases:
 
@@ -397,7 +389,7 @@ Accept wildcard characters: False
 The size of the virtual machine.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.VirtualMachineSizeTypes
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -415,7 +407,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.NetworkFunctionRoleConfiguration
+### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.NetworkFunctionRoleConfiguration
 
 ## NOTES
 

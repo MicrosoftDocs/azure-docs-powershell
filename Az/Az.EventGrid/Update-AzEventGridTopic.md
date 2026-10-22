@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridTopic
 
 ## SYNOPSIS
-Asynchronously creates a new topic with the specified parameters.
+Asynchronously update a new topic with the specified parameters.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Update-AzEventGridTopic -InputObject <IEventGridIdentity> [-DataResidencyBoundar
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new topic with the specified parameters.
+Asynchronously update a new topic with the specified parameters.
 
 ## EXAMPLES
 
@@ -138,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSystemAssignedIdentity
-Decides if enable a system assigned identity for the resource.
+Determines whether to enable a system-assigned identity for the resource.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]

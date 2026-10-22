@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridPermissionBinding
 
 ## SYNOPSIS
-Create a permission binding with the specified parameters.
+create a permission binding with the specified parameters.
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ New-AzEventGridPermissionBinding -InputObject <IEventGridIdentity> [-ClientGroup
 ```
 
 ## DESCRIPTION
-Create a permission binding with the specified parameters.
+create a permission binding with the specified parameters.
 
 ## EXAMPLES
 

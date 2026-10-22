@@ -16,8 +16,8 @@ Restore a deleted gremlin database to a given timestamp in the same account
 
 ```
 Restore-AzCosmosDBGremlinDatabase -ResourceGroupName <String> -AccountName <String> -Name <String>
- -RestoreTimestampInUtc <DateTime> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RestoreTimestampInUtc <DateTime>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -110,7 +110,7 @@ Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

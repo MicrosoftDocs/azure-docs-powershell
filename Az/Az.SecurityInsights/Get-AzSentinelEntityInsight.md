@@ -14,11 +14,19 @@ Execute Insights for an entity.
 
 ## SYNTAX
 
+### GetExpanded (Default)
 ```
-Get-AzSentinelEntityInsight -EntityId <String> -ResourceGroupName <String> -WorkspaceName <String>
- [-SubscriptionId <String[]>] -EndTime <DateTime> -StartTime <DateTime> [-AddDefaultExtendedTimeRange]
+Get-AzSentinelEntityInsight -EntityId <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ -WorkspaceName <String> -EndTime <DateTime> -StartTime <DateTime> [-AddDefaultExtendedTimeRange]
  [-InsightQueryId <String[]>] [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### GetViaIdentityExpanded
+```
+Get-AzSentinelEntityInsight -InputObject <ISecurityInsightsIdentity> -EndTime <DateTime> -StartTime <DateTime>
+ [-AddDefaultExtendedTimeRange] [-InsightQueryId <String[]>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +55,7 @@ This command gets insights for an Entity for a given time range.
 ```powershell
 $startTime = (Get-Date).AddDays(-7).ToUniversalTime() | Get-Date -Format "yyyy-MM-ddThh:00:00.000Z"
  $endTime = (Get-Date).ToUniversalTime() | Get-Date -Format "yyyy-MM-ddThh:00:00.000Z"
- $Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "8d036a2d-f37d-e936-6cca-4e172687cb79"
+ $Entity = Get-AzSentinelEntity -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -EntityId "00001111-aaaa-2222-bbbb-3333cccc4444"
  $Entity | Get-AzSentinelEntityInsight -EndTime $endTime -StartTime $startTime
 ```
 
@@ -115,13 +123,28 @@ entity ID
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: GetExpanded
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+Parameter Sets: GetViaIdentityExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -147,7 +170,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: GetExpanded
 Aliases:
 
 Required: True
@@ -177,7 +200,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: GetExpanded
 Aliases:
 
 Required: False
@@ -192,7 +215,7 @@ The name of the workspace.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: GetExpanded
 Aliases:
 
 Required: True
@@ -238,9 +261,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.IEntityGetInsightsResponse
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.IEntityGetInsightsResponse
 
 ## NOTES
 

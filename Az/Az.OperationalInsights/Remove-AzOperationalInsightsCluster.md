@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputCluster
-{{ Fill InputCluster Description }}
+The cluster object to remove.
 
 ```yaml
 Type: Microsoft.Azure.Commands.OperationalInsights.Models.PSCluster

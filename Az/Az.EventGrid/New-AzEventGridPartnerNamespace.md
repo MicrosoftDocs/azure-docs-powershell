@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridPartnerNamespace
 
 ## SYNOPSIS
-Asynchronously creates a new partner namespace with the specified parameters.
+Asynchronously create a new partner namespace with the specified parameters.
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ New-AzEventGridPartnerNamespace -InputObject <IEventGridIdentity> -Location <Str
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new partner namespace with the specified parameters.
+Asynchronously create a new partner namespace with the specified parameters.
 
 ## EXAMPLES
 
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerTopicRoutingMode
-This determines if events published to this partner namespace should use the source attribute in the event payloador use the channel name in the header when matching to the partner topic.
+This determines if events published to this partner namespace should use the source attribute in the event payload or use the channel name in the header when matching to the partner topic.
 If none is specified, source attribute routing will be used to match the partner topic.
 
 ```yaml

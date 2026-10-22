@@ -1,7 +1,7 @@
 ---
 external help file: Az.NetworkCloud-help.xml
 Module Name: Az.NetworkCloud
-online version: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudEndpointDependencyObject
+online version: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-aznetworkcloudendpointdependencyobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEndpointDependencyObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEndpointDependencyObject.md
@@ -15,8 +15,7 @@ Create an in-memory object for EndpointDependency.
 ## SYNTAX
 
 ```
-New-AzNetworkCloudEndpointDependencyObject -DomainName <String> [-Port <Int64>]
- [<CommonParameters>]
+New-AzNetworkCloudEndpointDependencyObject -DomainName <String> [-Port <Int64>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +75,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.EndpointDependency
+### Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.EndpointDependency
 
 ## NOTES
 

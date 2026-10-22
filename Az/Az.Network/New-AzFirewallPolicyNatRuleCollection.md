@@ -17,7 +17,7 @@ Create a new Azure Firewall Policy Nat Rule Collection
 ```
 New-AzFirewallPolicyNatRuleCollection -Name <String> -Priority <UInt32>
  [-Rule <PSAzureFirewallPolicyNatRule[]>] -ActionType <String> [-DefaultProfile <IAzureContextContainer>]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +35,21 @@ This example creates a nat rule collection with a network rule
 
 ## PARAMETERS
 
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ActionType
 The type of the rule action
 
@@ -45,6 +60,21 @@ Aliases:
 Accepted values: Dnat, Snat
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -26,10 +26,10 @@ New-AzKubernetesConfigurationFlux -ClusterName <String> -ClusterType <String> -N
  [-GitRepositorySyncIntervalInSecond <Int64>] [-GitRepositoryTimeoutInSecond <Int64>]
  [-GitRepositoryUrl <String>] [-Kustomization <Hashtable>] [-ManagedIdentityClientId <String>]
  [-Namespace <String>] [-RepositoryRefBranch <String>] [-RepositoryRefCommit <String>]
- [-RepositoryRefSemver <String>] [-RepositoryRefTag <String>] [-Scope <ScopeType>]
+ [-RepositoryRefSemver <String>] [-RepositoryRefTag <String>] [-Scope <String>]
  [-ServicePrincipalClientCertificate <String>] [-ServicePrincipalClientCertificatePassword <String>]
  [-ServicePrincipalClientCertificateSendChain] [-ServicePrincipalClientId <String>]
- [-ServicePrincipalClientSecret <String>] [-ServicePrincipalTenantId <String>] [-SourceKind <SourceKindType>]
+ [-ServicePrincipalClientSecret <String>] [-ServicePrincipalTenantId <String>] [-SourceKind <String>]
  [-Suspend] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -619,7 +619,7 @@ Accept wildcard characters: False
 Scope at which the operator will be installed.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Support.ScopeType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -724,7 +724,7 @@ Accept wildcard characters: False
 Source Kind to pull the configuration data from.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Support.SourceKindType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -803,7 +803,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.Api20221101.IFluxConfiguration
+### Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.IFluxConfiguration
 
 ## NOTES
 

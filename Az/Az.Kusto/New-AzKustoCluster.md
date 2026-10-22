@@ -14,23 +14,38 @@ Create or update a Kusto cluster.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzKustoCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-IfMatch <String>]
- [-IfNoneMatch <String>] -Location <String> -SkuName <AzureSkuName> -SkuTier <AzureSkuTier>
+ [-IfNoneMatch <String>] -Location <String> -SkuName <String> -SkuTier <String>
  [-AcceptedAudience <IAcceptedAudiences[]>] [-AllowedFqdnList <String[]>] [-AllowedIPRangeList <String[]>]
- [-EnableAutoStop] [-EnableDiskEncryption] [-EnableDoubleEncryption] [-EnablePurge] [-EnableStreamingIngest]
- [-EngineType <EngineType>] [-IdentityType <IdentityType>] [-IdentityUserAssignedIdentity <Hashtable>]
+ [-CalloutPolicy <ICalloutPolicy[]>] [-EnableAutoStop] [-EnableDiskEncryption] [-EnableDoubleEncryption]
+ [-EnablePurge] [-EnableStreamingIngest] [-EnableSystemAssignedIdentity] [-EngineType <String>]
  [-KeyVaultPropertyKeyName <String>] [-KeyVaultPropertyKeyVaultUri <String>]
  [-KeyVaultPropertyKeyVersion <String>] [-KeyVaultPropertyUserIdentity <String>]
  [-LanguageExtensionValue <ILanguageExtension[]>] [-OptimizedAutoscaleIsEnabled]
  [-OptimizedAutoscaleMaximum <Int32>] [-OptimizedAutoscaleMinimum <Int32>] [-OptimizedAutoscaleVersion <Int32>]
- [-PublicIPType <PublicIPType>] [-PublicNetworkAccess <PublicNetworkAccess>]
- [-RestrictOutboundNetworkAccess <ClusterNetworkAccessFlag>] [-SkuCapacity <Int32>] [-Tag <Hashtable>]
- [-TrustedExternalTenant <ITrustedExternalTenant[]>] [-VirtualClusterGraduationProperty <String>]
+ [-PublicIPType <String>] [-PublicNetworkAccess <String>] [-RestrictOutboundNetworkAccess <String>]
+ [-SkuCapacity <Int32>] [-Tag <Hashtable>] [-TrustedExternalTenant <ITrustedExternalTenant[]>]
+ [-UserAssignedIdentity <String[]>] [-VirtualClusterGraduationProperty <String>]
  [-VirtualNetworkConfigurationDataManagementPublicIPId <String>]
- [-VirtualNetworkConfigurationEnginePublicIPId <String>] [-VirtualNetworkConfigurationState <VnetState>]
+ [-VirtualNetworkConfigurationEnginePublicIPId <String>] [-VirtualNetworkConfigurationState <String>]
  [-VirtualNetworkConfigurationSubnetId <String>] [-Zone <String[]>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzKustoCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-IfMatch <String>]
+ [-IfNoneMatch <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzKustoCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] [-IfMatch <String>]
+ [-IfNoneMatch <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -55,11 +70,10 @@ The above command creates a new Kusto cluster named "testnewkustocluster" in the
 
 ### -AcceptedAudience
 The cluster's accepted audiences.
-To construct, see NOTES section for ACCEPTEDAUDIENCE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IAcceptedAudiences[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IAcceptedAudiences[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -74,7 +88,7 @@ List of allowed FQDNs(Fully Qualified Domain Name) for egress from Cluster.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -89,7 +103,7 @@ The list of ips in the format of CIDR allowed to connect to the cluster.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -105,6 +119,21 @@ Run the command as a job
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CalloutPolicy
+List of callout policies for egress from Cluster.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.ICalloutPolicy[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -135,7 +164,7 @@ A boolean value that indicates if the cluster could be automatically stopped (du
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -150,7 +179,7 @@ A boolean value that indicates if the cluster's disks are encrypted.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -165,7 +194,7 @@ A boolean value that indicates if double encryption is enabled.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -180,7 +209,7 @@ A boolean value that indicates if the purge operations are enabled.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -195,7 +224,22 @@ A boolean value that indicates if the streaming ingest is enabled.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSystemAssignedIdentity
+Determines whether to enable a system-assigned identity for the resource.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -209,41 +253,8 @@ Accept wildcard characters: False
 The engine type
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.EngineType
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IdentityType
-The type of managed identity used.
-The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities.
-The type 'None' will remove all identities.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.IdentityType
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IdentityUserAssignedIdentity
-The list of user identities associated with the Kusto cluster.
-The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-
-```yaml
-Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -286,12 +297,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -KeyVaultPropertyKeyName
 The name of the key vault key.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -306,7 +347,7 @@ The Uri of the key vault.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -321,7 +362,7 @@ The version of the key vault key.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -336,7 +377,7 @@ The user assigned identity (ARM resource id) that has access to the key.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -348,11 +389,10 @@ Accept wildcard characters: False
 
 ### -LanguageExtensionValue
 The list of language extensions.
-To construct, see NOTES section for LANGUAGEEXTENSIONVALUE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.ILanguageExtension[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.ILanguageExtension[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -367,7 +407,7 @@ The geo-location where the resource lives
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -412,7 +452,7 @@ A boolean value that indicate if the optimized autoscale feature is enabled or n
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -427,7 +467,7 @@ Maximum allowed instances count.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -442,7 +482,7 @@ Minimum allowed instances count.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -457,7 +497,7 @@ The version of the template defined, for instance 1.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -471,8 +511,8 @@ Accept wildcard characters: False
 Indicates what public IP type to create - IPv4 (default), or DualStack (both IPv4 and IPv6)
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.PublicIPType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -487,8 +527,8 @@ Public network access to the cluster is enabled by default.
 When disabled, only private endpoint connection to the cluster is allowed
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.PublicNetworkAccess
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -519,8 +559,8 @@ Whether or not to restrict outbound network access.
 Value is optional but if passed in, must be 'Enabled' or 'Disabled'
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.ClusterNetworkAccessFlag
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -535,7 +575,7 @@ The number of instances of the cluster.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -549,8 +589,8 @@ Accept wildcard characters: False
 SKU name.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.AzureSkuName
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -564,8 +604,8 @@ Accept wildcard characters: False
 SKU tier.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.AzureSkuTier
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -595,7 +635,7 @@ Resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -607,11 +647,26 @@ Accept wildcard characters: False
 
 ### -TrustedExternalTenant
 The cluster's external tenants.
-To construct, see NOTES section for TRUSTEDEXTERNALTENANT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.ITrustedExternalTenant[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.ITrustedExternalTenant[]
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserAssignedIdentity
+The array of user assigned identities associated with the resource.
+The elements in array will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.'
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -626,7 +681,7 @@ Virtual Cluster graduation properties
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -641,7 +696,7 @@ Data management's service public IP address resource id.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -656,7 +711,7 @@ Engine service's public IP address resource id.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -670,8 +725,8 @@ Accept wildcard characters: False
 When enabled, the cluster is deployed into the configured subnet, when disabled it will be removed from the subnet.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.VnetState
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -686,7 +741,7 @@ The subnet resource id.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -701,7 +756,7 @@ The availability zones of the cluster.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -749,7 +804,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.ICluster
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.ICluster
 
 ## NOTES
 

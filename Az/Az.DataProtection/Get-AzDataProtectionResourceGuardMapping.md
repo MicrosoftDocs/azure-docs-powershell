@@ -32,6 +32,12 @@ Get-AzDataProtectionResourceGuardMapping -InputObject <IDataProtectionIdentity> 
  [<CommonParameters>]
 ```
 
+### GetViaIdentityBackupVault
+```
+Get-AzDataProtectionResourceGuardMapping -BackupVaultInputObject <IDataProtectionIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 Returns the ResourceGuardProxy object associated with the vault, and that matches the name in the request
 
@@ -51,8 +57,8 @@ LastUpdatedTime              : 2023-08-29T07:23:05.1111730Z
 Name                         : DppResourceGuardProxy
 ResourceGuardId              : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/hiaga-rg/providers/Microsoft.DataProtection/resourceGuard
                                s/mua-pstest-resguard
-ResourceGuardOperationDetail : {Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.ResourceGuardOperationDetail,
-                               Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.ResourceGuardOperationDetail}
+ResourceGuardOperationDetail : {Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.ResourceGuardOperationDetail,
+                               Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.ResourceGuardOperationDetail}
 SystemData                   : Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api40.SystemData
 Type                         : Microsoft.DataProtection/vaults/backupResourceGuardProxies
 ```
@@ -61,6 +67,21 @@ This command gets the MUA setting (resource guard mapping with backup vault) for
 The output of this command is used to ensure whether MUA is enabled on the backup vault and to determine the underlying resource guard to protect the critical operations.
 
 ## PARAMETERS
+
+### -BackupVaultInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.IDataProtectionIdentity
+Parameter Sets: GetViaIdentityBackupVault
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
@@ -80,7 +101,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.IDataProtectionIdentity
@@ -150,7 +170,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IResourceGuardProxyBaseResource
+### Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.IResourceGuardProxyBaseResource
 
 ## NOTES
 

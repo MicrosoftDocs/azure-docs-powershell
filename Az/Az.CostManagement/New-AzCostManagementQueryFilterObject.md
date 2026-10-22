@@ -1,7 +1,7 @@
 ---
 external help file: Az.CostManagement-help.xml
 Module Name: Az.CostManagement
-online version: https://learn.microsoft.com/powershell/module/az.CostManagement/new-AzCostManagementQueryFilterObject
+online version: https://learn.microsoft.com/powershell/module/Az.CostManagement/new-azcostmanagementqueryfilterobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/New-AzCostManagementQueryFilterObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/New-AzCostManagementQueryFilterObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzCostManagementQueryFilterObject
 
 ## SYNOPSIS
-Create a in-memory object for QueryFilter
+Create an in-memory object for QueryFilter.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzCostManagementQueryFilterObject [-And <IQueryFilter[]>] [-Dimensions <IQue
 ```
 
 ## DESCRIPTION
-Create a in-memory object for QueryFilter
+Create an in-memory object for QueryFilter.
 
 ## EXAMPLES
 
@@ -47,10 +47,9 @@ this command creates a filter object of query for cost management export.
 ### -And
 The logical "AND" expression.
 Must have at least 2 items.
-To construct, see NOTES section for AND properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryFilter[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter[]
 Parameter Sets: (All)
 Aliases:
 
@@ -62,11 +61,10 @@ Accept wildcard characters: False
 ```
 
 ### -Dimensions
-Has comparison expression for a dimensions.
-To construct, see NOTES section for DIMENSIONS properties and create a hash table.
+Has comparison expression for a dimension.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryComparisonExpression
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryComparisonExpression
 Parameter Sets: (All)
 Aliases:
 
@@ -79,10 +77,9 @@ Accept wildcard characters: False
 
 ### -Not
 The logical "NOT" expression.
-To construct, see NOTES section for NOT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryFilter
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter
 Parameter Sets: (All)
 Aliases:
 
@@ -96,10 +93,9 @@ Accept wildcard characters: False
 ### -Or
 The logical "OR" expression.
 Must have at least 2 items.
-To construct, see NOTES section for OR properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryFilter[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter[]
 Parameter Sets: (All)
 Aliases:
 
@@ -112,10 +108,9 @@ Accept wildcard characters: False
 
 ### -Tag
 Has comparison expression for a tag.
-To construct, see NOTES section for TAG properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryComparisonExpression
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryComparisonExpression
 Parameter Sets: (All)
 Aliases:
 
@@ -133,7 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.QueryFilter
+### Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.QueryFilter
 
 ## NOTES
 

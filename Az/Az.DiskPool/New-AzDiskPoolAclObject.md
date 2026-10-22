@@ -1,7 +1,7 @@
 ---
 external help file: Az.DiskPool-help.xml
 Module Name: Az.DiskPool
-online version: https://learn.microsoft.com/powershell/module/Az.DiskPool/new-AzDiskPoolAclObject
+online version: https://learn.microsoft.com/powershell/module/Az.DiskPool/new-azdiskpoolaclobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/New-AzDiskPoolAclObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/New-AzDiskPoolAclObject.md
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.Api20210801.Acl
+### Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.Acl
 
 ## NOTES
 

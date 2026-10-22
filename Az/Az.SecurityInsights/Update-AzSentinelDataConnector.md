@@ -119,9 +119,8 @@ Update-AzSentinelDataConnector -ResourceGroupName <String> -WorkspaceName <Strin
 Update-AzSentinelDataConnector -ResourceGroupName <String> -WorkspaceName <String> -Id <String>
  [-SubscriptionId <String>] [-TenantId <String>] -APIRootURL <String> [-WorkspaceId <String>]
  [-FriendlyName <String>] [-CollectionId <String>] [-UserName <String>] [-Password <String>]
- [-TaxiiLookbackPeriod <String>] [-PollingFrequency <PollingFrequency>] [-DefaultProfile <PSObject>] [-AsJob]
- [-NoWait] [-ThreatIntelligenceTaxii] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-TaxiiLookbackPeriod <String>] [-PollingFrequency <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-ThreatIntelligenceTaxii] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityAmazonWebServicesCloudTrail
@@ -222,9 +221,9 @@ Update-AzSentinelDataConnector -InputObject <ISecurityInsightsIdentity> [-Tenant
 ```
 Update-AzSentinelDataConnector -InputObject <ISecurityInsightsIdentity> [-TenantId <String>]
  [-WorkspaceId <String>] [-FriendlyName <String>] [-CollectionId <String>] [-UserName <String>]
- [-Password <String>] [-TaxiiLookbackPeriod <String>] [-PollingFrequency <PollingFrequency>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-ThreatIntelligenceTaxii]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-Password <String>] [-TaxiiLookbackPeriod <String>] [-PollingFrequency <String>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-ThreatIntelligenceTaxii] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### UpdateGenericUI
@@ -644,8 +643,7 @@ Accept wildcard characters: False
 ### -InputObject
 [Parameter(ParameterSetName = 'UpdateViaIdentityGenericUI', Mandatory, ValueFromPipeline)]
  Identity Parameter
-
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+ To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
@@ -801,10 +799,9 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionCustom
-To construct, see NOTES section for PERMISSIONCUSTOM properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.PermissionsCustomsItem[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.PermissionsCustomsItem[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -816,10 +813,9 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionResourceProvider
-To construct, see NOTES section for PERMISSIONRESOURCEPROVIDER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.PermissionsResourceProviderItem[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.PermissionsResourceProviderItem[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -833,7 +829,7 @@ Accept wildcard characters: False
 ### -PollingFrequency
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Support.PollingFrequency
+Type: System.String
 Parameter Sets: UpdateThreatIntelligenceTaxii, UpdateViaIdentityThreatIntelligenceTaxii
 Aliases:
 
@@ -978,10 +974,9 @@ Accept wildcard characters: False
 ```
 
 ### -UiConfigConnectivityCriterion
-To construct, see NOTES section for UICONFIGCONNECTIVITYCRITERION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.ConnectivityCriteria[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ConnectivityCriteria[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -1007,10 +1002,9 @@ Accept wildcard characters: False
 ```
 
 ### -UiConfigDataType
-To construct, see NOTES section for UICONFIGDATATYPE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.LastDataReceivedDataType[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.LastDataReceivedDataType[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -1050,10 +1044,9 @@ Accept wildcard characters: False
 ```
 
 ### -UiConfigGraphQuery
-To construct, see NOTES section for UICONFIGGRAPHQUERY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.GraphQueries[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.GraphQueries[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -1065,10 +1058,9 @@ Accept wildcard characters: False
 ```
 
 ### -UiConfigInstructionStep
-To construct, see NOTES section for UICONFIGINSTRUCTIONSTEP properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.InstructionSteps[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.InstructionSteps[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -1094,10 +1086,9 @@ Accept wildcard characters: False
 ```
 
 ### -UiConfigSampleQuery
-To construct, see NOTES section for UICONFIGSAMPLEQUERY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.SampleQueries[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.SampleQueries[]
 Parameter Sets: UpdateGenericUI, UpdateViaIdentityGenericUI
 Aliases:
 
@@ -1206,7 +1197,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.DataConnector
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.DataConnector
 
 ## NOTES
 

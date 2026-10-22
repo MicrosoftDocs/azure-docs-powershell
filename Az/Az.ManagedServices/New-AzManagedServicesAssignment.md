@@ -10,18 +10,33 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzManagedServicesAssignment
 
 ## SYNOPSIS
-Creates or updates a registration assignment.
+Create a registration assignment.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzManagedServicesAssignment -Name <String> [-Scope <String>] [-RegistrationDefinitionId <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
+### CreateViaJsonFilePath
+```
+New-AzManagedServicesAssignment -Name <String> [-Scope <String>] -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzManagedServicesAssignment -Name <String> [-Scope <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates or updates a registration assignment.
+Create a registration assignment.
 
 ## EXAMPLES
 
@@ -84,6 +99,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The GUID of the registration assignment.
 
@@ -119,7 +164,7 @@ The fully qualified path of the registration definition.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -182,7 +227,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.IRegistrationAssignment
+### Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IRegistrationAssignment
 
 ## NOTES
 

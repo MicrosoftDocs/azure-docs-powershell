@@ -27,10 +27,22 @@ Remove-AzLabServicesSchedule -LabName <String> -Name <String> -ResourceGroupName
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DeleteViaIdentityLab
+```
+Remove-AzLabServicesSchedule -Name <String> -LabInputObject <ILabServicesIdentity> [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### Schedule
 ```
 Remove-AzLabServicesSchedule [-SubscriptionId <String>] -Schedule <Schedule> [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteViaIdentity
+```
+Remove-AzLabServicesSchedule -InputObject <ILabServicesIdentity> [-DefaultProfile <PSObject>] [-AsJob]
+ [-NoWait] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,6 +90,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILabServicesIdentity
+Parameter Sets: DeleteViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -LabInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILabServicesIdentity
+Parameter Sets: DeleteViaIdentityLab
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -LabName
 The name of the lab that uniquely identifies it within containing lab account.
 Used in resource URIs.
@@ -100,7 +142,7 @@ Used in resource URIs.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Delete, DeleteViaIdentityLab
 Aliases: ScheduleName
 
 Required: True
@@ -157,6 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+The resource Id of lab service schedule.
 
 ```yaml
 Type: System.String
@@ -171,10 +214,10 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-To construct, see NOTES section for SCHEDULE properties and create a hash table.
+The object of lab service schedule to remove.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.Schedule
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Schedule
 Parameter Sets: Schedule
 Aliases:
 
@@ -190,7 +233,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: ResourceId, Delete, Schedule
 Aliases:
 
 Required: False
@@ -236,7 +279,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.Schedule
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILabServicesIdentity
+
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Schedule
 
 ## OUTPUTS
 

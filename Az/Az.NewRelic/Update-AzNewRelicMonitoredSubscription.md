@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzNewRelicMonitoredSubscription
 
 ## SYNOPSIS
-Add the subscriptions that should be monitored by the NewRelic monitor resource.
+Add subscriptions to be monitored by the New Relic monitor resource, enabling observability and monitoring.
 
 ## SYNTAX
 
@@ -31,7 +31,7 @@ Update-AzNewRelicMonitoredSubscription -InputObject <INewRelicIdentity>
 ```
 
 ## DESCRIPTION
-Add the subscriptions that should be monitored by the NewRelic monitor resource.
+Add subscriptions to be monitored by the New Relic monitor resource, enabling observability and monitoring.
 
 ## EXAMPLES
 
@@ -43,7 +43,7 @@ Update-AzNewRelicMonitoredSubscription -MonitorName test-01 -ResourceGroupName g
 ```
 
 ```output
-Id                        : /subscriptions/11111111-2222-3333-4444-123456789123/resourceGroups/group_test/providers/NewRelic.Observability/monitors/test-01/monitoredSubscriptions/default
+Id                        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/group_test/providers/NewRelic.Observability/monitors/test-01/monitoredSubscriptions/default
 MonitoredSubscriptionList : {{
                               "tagRules": {
                                 "provisioningState": "Accepted"

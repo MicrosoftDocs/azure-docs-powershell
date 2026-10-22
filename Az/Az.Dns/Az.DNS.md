@@ -4,8 +4,8 @@ Module Guid: 5e5ed8bc-27bf-4380-9de1-4b22ba0920b2
 Download Help Link: https://learn.microsoft.com/powershell/module/az.dns
 Help Version: 4.1.2.0
 Locale: en-US
-content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Az.DNS.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Az.DNS.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Az.Dns.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Az.Dns.md
 ---
 
 # Az.Dns Module
@@ -26,7 +26,7 @@ Gets a DNS record set.
 Gets a DNS zone.
 
 ### [New-AzDnsDnssecConfig](New-AzDnsDnssecConfig.md)
-Creates or updates the DNSSEC configuration on a DNS zone.
+Create the DNSSEC configuration on a DNS zone.
 
 ### [New-AzDnsRecordConfig](New-AzDnsRecordConfig.md)
 Creates a new DNS record local object.

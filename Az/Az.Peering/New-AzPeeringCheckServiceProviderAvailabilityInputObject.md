@@ -1,7 +1,7 @@
 ---
 external help file: Az.Peering-help.xml
 Module Name: Az.Peering
-online version: https://learn.microsoft.com/powershell/module/Az.Peering/new-AzPeeringCheckServiceProviderAvailabilityInputObject
+online version: https://learn.microsoft.com/powershell/module/Az.Peering/new-azpeeringcheckserviceprovideravailabilityinputobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/New-AzPeeringCheckServiceProviderAvailabilityInputObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/New-AzPeeringCheckServiceProviderAvailabilityInputObject.md
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.CheckServiceProviderAvailabilityInput
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.CheckServiceProviderAvailabilityInput
 
 ## NOTES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzDataCollectionRuleAssociation
 
 ## SYNOPSIS
-Update an association.
+update an association.
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Update-AzDataCollectionRuleAssociation -InputObject <IDataCollectionRuleIdentity
 ```
 
 ## DESCRIPTION
-Update an association.
+update an association.
 
 ## EXAMPLES
 

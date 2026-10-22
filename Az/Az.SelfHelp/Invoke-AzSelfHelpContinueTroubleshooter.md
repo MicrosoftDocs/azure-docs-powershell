@@ -12,7 +12,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 ## SYNOPSIS
 Uses 'stepId' and 'responses' as the trigger to continue the troubleshooting steps for the respective troubleshooter resource name.
 \<br/\>Continue API is used to provide inputs that are required for the specific troubleshooter to progress into the next step in the process.
-This API is used after the Troubleshooter has been created using the Create API.
+This API is used after the Troubleshooter has been created using the continue API.
 
 ## SYNTAX
 
@@ -21,6 +21,20 @@ This API is used after the Troubleshooter has been created using the Create API.
 Invoke-AzSelfHelpContinueTroubleshooter -Scope <String> -TroubleshooterName <String>
  [-Response <ITroubleshooterResponse[]>] [-StepId <String>] [-DefaultProfile <PSObject>] [-PassThru]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ContinueViaJsonString
+```
+Invoke-AzSelfHelpContinueTroubleshooter -Scope <String> -TroubleshooterName <String> -JsonString <String>
+ [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### ContinueViaJsonFilePath
+```
+Invoke-AzSelfHelpContinueTroubleshooter -Scope <String> -TroubleshooterName <String> -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Continue
@@ -47,7 +61,7 @@ Invoke-AzSelfHelpContinueTroubleshooter -InputObject <ISelfHelpIdentity>
 ## DESCRIPTION
 Uses 'stepId' and 'responses' as the trigger to continue the troubleshooting steps for the respective troubleshooter resource name.
 \<br/\>Continue API is used to provide inputs that are required for the specific troubleshooter to progress into the next step in the process.
-This API is used after the Troubleshooter has been created using the Create API.
+This API is used after the Troubleshooter has been created using the continue API.
 
 ## EXAMPLES
 
@@ -72,10 +86,9 @@ You can see the status of the troubleshooter step by using `Get-AzSelfHelpTroubl
 
 ### -ContinueRequestBody
 Troubleshooter ContinueRequest body.
-To construct, see NOTES section for CONTINUEREQUESTBODY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.IContinueRequestBody
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IContinueRequestBody
 Parameter Sets: Continue, ContinueViaIdentity
 Aliases:
 
@@ -104,7 +117,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
@@ -115,6 +127,36 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Continue operation
+
+```yaml
+Type: System.String
+Parameter Sets: ContinueViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Continue operation
+
+```yaml
+Type: System.String
+Parameter Sets: ContinueViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -135,10 +177,9 @@ Accept wildcard characters: False
 
 ### -Response
 .
-To construct, see NOTES section for RESPONSE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.ITroubleshooterResponse[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ITroubleshooterResponse[]
 Parameter Sets: ContinueExpanded, ContinueViaIdentityExpanded
 Aliases:
 
@@ -154,7 +195,7 @@ scope = resourceUri of affected resource.\<br/\> For example: /subscriptions/0d0
 
 ```yaml
 Type: System.String
-Parameter Sets: ContinueExpanded, Continue
+Parameter Sets: ContinueExpanded, ContinueViaJsonString, ContinueViaJsonFilePath, Continue
 Aliases:
 
 Required: True
@@ -184,7 +225,7 @@ Troubleshooter resource Name.
 
 ```yaml
 Type: System.String
-Parameter Sets: ContinueExpanded, Continue
+Parameter Sets: ContinueExpanded, ContinueViaJsonString, ContinueViaJsonFilePath, Continue
 Aliases:
 
 Required: True
@@ -230,7 +271,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.IContinueRequestBody
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IContinueRequestBody
 
 ### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
 

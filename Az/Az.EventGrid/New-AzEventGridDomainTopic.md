@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridDomainTopic
 
 ## SYNOPSIS
-Asynchronously creates or updates a new domain topic with the specified parameters.
+Asynchronously create a new domain topic with the specified parameters.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzEventGridDomainTopic -DomainName <String> -Name <String> -ResourceGroupNam
 ```
 
 ## DESCRIPTION
-Asynchronously creates or updates a new domain topic with the specified parameters.
+Asynchronously create a new domain topic with the specified parameters.
 
 ## EXAMPLES
 

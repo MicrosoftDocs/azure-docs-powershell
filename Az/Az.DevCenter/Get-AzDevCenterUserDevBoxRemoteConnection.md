@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDevCenterUserDevBoxRemoteConnection
 
 ## SYNOPSIS
-Gets RDP Connection info
+Gets RDP Connection info.
 
 ## SYNTAX
 
@@ -39,7 +39,7 @@ Get-AzDevCenterUserDevBoxRemoteConnection -DevCenterName <String> -DevBoxName <S
 ```
 
 ## DESCRIPTION
-Gets RDP Connection info
+Gets RDP Connection info.
 
 ## EXAMPLES
 
@@ -192,7 +192,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IRemoteConnection
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IRemoteConnection
 
 ## NOTES
 

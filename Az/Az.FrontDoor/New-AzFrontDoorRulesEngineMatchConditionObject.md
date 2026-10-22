@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+external help file: Az.FrontDoor-help.xml
 Module Name: Az.FrontDoor
-online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesenginematchconditionobject
+online version: https://learn.microsoft.com/powershell/module/Az.FrontDoor/new-azfrontdoorrulesenginematchconditionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineMatchConditionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineMatchConditionObject.md
@@ -10,22 +10,22 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFrontDoorRulesEngineMatchConditionObject
 
 ## SYNOPSIS
-Create a PSRulesEngineMatchCondition object for creating a rules engine rule.
+Create an in-memory object for RulesEngineMatchCondition.
 
 ## SYNTAX
 
 ```
-New-AzFrontDoorRulesEngineMatchConditionObject -MatchVariable <PSRulesEngineMatchVariable>
- -MatchValue <String[]> [-Selector <String>] [-Operator <PSRulesEngineOperator>] [-NegateCondition <Boolean>]
- [-Transform <PSTransform[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+New-AzFrontDoorRulesEngineMatchConditionObject -MatchValue <String[]> -MatchVariable <String>
+ -Operator <String> [-NegateCondition <Boolean>] [-Selector <String>] [-Transform <String[]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a PSRulesEngineMatchCondition object for creating a rules engine rule.
+Create an in-memory object for RulesEngineMatchCondition.
 
 ## EXAMPLES
 
-### Example 1
+### Example 1: Create a new PSRulesEngineMatchCondition object.
 ```powershell
 New-AzFrontDoorRulesEngineMatchConditionObject -MatchVariable RequestHeader -Operator Equal -MatchValue allowoverride -Transform "LowerCase", "UpperCase"-Selector Rules-Engine-Route-Forward -NegateCondition $false
 ```
@@ -39,24 +39,9 @@ NegateCondition          : False
 Transform                : {Lowercase, Uppercase}
 ```
 
-Greate a new PSRulesEngineMatchCondition object.
+Create a new PSRulesEngineMatchCondition object.
 
 ## PARAMETERS
-
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzContext, AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -MatchValue
 Match values to match against.
@@ -77,13 +62,11 @@ Accept wildcard characters: False
 
 ### -MatchVariable
 Match Variable.
-Possible values are IsMobile, RemoteAddr, RequestMethod, QueryString, PostArg, RequestUri, RequestPath, RequestFileName, RequestfilenameExtension, RequestHeader, RequestBody, RequestScheme
 
 ```yaml
-Type: Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineMatchVariable
+Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: IsMobile, RemoteAddr, RequestMethod, QueryString, PostArgs, RequestUri, RequestPath, RequestFilename, RequestFilenameExtension, RequestHeader, RequestBody, RequestScheme
 
 Required: True
 Position: Named
@@ -93,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -NegateCondition
-Describes if this is negate condition or not
+Describes if this is negate condition or not.
 
 ```yaml
 Type: System.Boolean
@@ -109,15 +92,13 @@ Accept wildcard characters: False
 
 ### -Operator
 Describes operator to apply to the match condition.
-Possible values are Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith.
 
 ```yaml
-Type: Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineOperator
+Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -125,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Selector
-Name of selector in RequestHeader or RequestBody to be matched
+Name of selector in RequestHeader or RequestBody to be matched.
 
 ```yaml
 Type: System.String
@@ -140,13 +121,12 @@ Accept wildcard characters: False
 ```
 
 ### -Transform
-List of what transforms are applied before matching. Possible individual transform values are Lowercase, Uppercase, Trim, UrlDecode, UrlEncode, RemoveNulls.
+List of transforms.
 
 ```yaml
-Type: Microsoft.Azure.Commands.FrontDoor.Models.PSTransform[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Accepted values: Lowercase, Uppercase, Trim, UrlDecode, UrlEncode, RemoveNulls
 
 Required: False
 Position: Named
@@ -160,11 +140,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineMatchCondition
+### Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.RulesEngineMatchCondition
 
 ## NOTES
 

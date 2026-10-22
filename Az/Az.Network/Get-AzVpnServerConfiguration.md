@@ -16,7 +16,8 @@ Gets an existing VpnServerConfiguration for point to site connectivity.
 
 ### ListBySubscriptionId (Default)
 ```
-Get-AzVpnServerConfiguration [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzVpnServerConfiguration [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ListByResourceGroupName

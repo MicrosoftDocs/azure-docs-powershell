@@ -124,10 +124,10 @@ Accept wildcard characters: False
 ```
 
 ### -LabPlan
-To construct, see NOTES section for LABPLAN properties and create a hash table.
+The object of lab service lab plan.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.LabPlan
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.LabPlan
 Parameter Sets: LabPlan
 Aliases:
 
@@ -139,6 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+The name of the user that uniquely identifies it within containing lab.
+Used in resource URIs.
 
 ```yaml
 Type: System.String
@@ -165,6 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
@@ -191,6 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+The resource Id of lab service lab.
 
 ```yaml
 Type: System.String
@@ -255,11 +260,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.LabPlan
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.LabPlan
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.ILab
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILab
 
 ## NOTES
 

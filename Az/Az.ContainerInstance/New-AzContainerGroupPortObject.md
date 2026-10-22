@@ -1,7 +1,7 @@
 ---
 external help file: Az.ContainerInstance-help.xml
 Module Name: Az.ContainerInstance
-online version: https://learn.microsoft.com/powershell/module/az.ContainerInstance/new-AzContainerGroupPortObject
+online version: https://learn.microsoft.com/powershell/module/Az.ContainerInstance/new-azcontainergroupportobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerGroupPortObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerGroupPortObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzContainerGroupPortObject
 
 ## SYNOPSIS
-Create a in-memory object for Port
+Create an in-memory object for Port.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzContainerGroupPortObject -Port <Int32> [-Protocol <String>]
 ```
 
 ## DESCRIPTION
-Create a in-memory object for Port
+Create an in-memory object for Port.
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20221001Preview.Port
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Port
 
 ## NOTES
 

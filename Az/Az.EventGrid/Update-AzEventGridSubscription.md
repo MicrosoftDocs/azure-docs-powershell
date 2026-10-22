@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridSubscription
 
 ## SYNOPSIS
-Asynchronously updates an existing event subscription.
+Asynchronously update an existing event subscription.
 
 ## SYNTAX
 
@@ -56,7 +56,7 @@ Update-AzEventGridSubscription -InputObject <IEventGridIdentity> [-DeadLetterWit
 ```
 
 ## DESCRIPTION
-Asynchronously updates an existing event subscription.
+Asynchronously update an existing event subscription.
 
 ## EXAMPLES
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterIsSubjectCaseSensitive
-Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filtershould be compared in a case sensitive manner.
+Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter should be compared in a case sensitive manner.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

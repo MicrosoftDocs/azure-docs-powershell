@@ -16,7 +16,8 @@ Gets the available Azure Firewall Fqdn Tags.
 ## SYNTAX
 
 ```
-Get-AzFirewallFqdnTag [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzFirewallFqdnTag [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

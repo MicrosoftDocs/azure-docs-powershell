@@ -14,16 +14,8 @@ Get the number of available IP addresses needed for the AML file system informat
 
 ## SYNTAX
 
-### GetExpanded (Default)
 ```
 Get-AzStorageCacheAmlFileSystemSubnetRequiredSize [-SubscriptionId <String[]>] [-SkuName <String>]
- [-StorageCapacityTiB <Single>] [-DefaultProfile <PSObject>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
-```
-
-### GetViaIdentityExpanded
-```
-Get-AzStorageCacheAmlFileSystemSubnetRequiredSize -InputObject <IStorageCacheIdentity> [-SkuName <String>]
  [-StorageCapacityTiB <Single>] [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
@@ -62,22 +54,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.IStorageCacheIdentity
-Parameter Sets: GetViaIdentityExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -SkuName
 SKU name for this resource.
 
@@ -113,7 +89,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: GetExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -159,11 +135,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.IStorageCacheIdentity
-
 ## OUTPUTS
 
-### System.Int32
+### Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.IRequiredAmlFilesystemSubnetsSize
 
 ## NOTES
 

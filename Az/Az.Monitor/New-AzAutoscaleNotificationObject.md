@@ -1,7 +1,7 @@
 ---
 external help file: Az.Autoscale.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleNotificationObject
+online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azautoscalenotificationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleNotificationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleNotificationObject.md
@@ -83,10 +83,9 @@ Accept wildcard characters: False
 
 ### -Webhook
 the collection of webhook notifications.
-To construct, see NOTES section for WEBHOOK properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IWebhookNotification[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IWebhookNotification[]
 Parameter Sets: (All)
 Aliases:
 
@@ -104,7 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.AutoscaleNotification
+### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.AutoscaleNotification
 
 ## NOTES
 

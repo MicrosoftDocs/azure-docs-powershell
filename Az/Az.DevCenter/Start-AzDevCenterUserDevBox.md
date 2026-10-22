@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Start-AzDevCenterUserDevBox
 
 ## SYNOPSIS
-Starts a Dev Box
+Starts a Dev Box.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Start-AzDevCenterUserDevBox -DevCenterName <String> -Name <String> -ProjectName 
 ```
 
 ## DESCRIPTION
-Starts a Dev Box
+Starts a Dev Box.
 
 ## EXAMPLES
 
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of a Dev Box.
+Display name for the Dev Box.
 
 ```yaml
 Type: System.String
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProjectName
-The DevCenter Project upon which to execute operations.
+Name of the project.
 
 ```yaml
 Type: System.String
@@ -257,7 +257,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IOperationStatus
 
 ## NOTES
 

@@ -16,7 +16,8 @@ Gets an existing P2SVpnGateway under VirtualHub.
 
 ### ListBySubscriptionId (Default)
 ```
-Get-AzP2sVpnGateway [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzP2sVpnGateway [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ListByResourceGroupName

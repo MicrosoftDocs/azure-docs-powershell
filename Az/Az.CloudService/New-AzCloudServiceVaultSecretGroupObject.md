@@ -1,7 +1,7 @@
 ---
 external help file: Az.CloudService-help.xml
 Module Name: Az.CloudService
-online version: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudservicevaultsecretgroupobject
+online version: https://learn.microsoft.com/powershell/module/Az.CloudService/new-azcloudservicevaultsecretgroupobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceVaultSecretGroupObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceVaultSecretGroupObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzCloudServiceVaultSecretGroupObject
 
 ## SYNOPSIS
-Create a in-memory object for Vault Secret Group
+Create an in-memory object for CloudServiceVaultSecretGroup.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzCloudServiceVaultSecretGroupObject [-Id <String>] [-CertificateUrl <String
 ```
 
 ## DESCRIPTION
-Create a in-memory object for Secret Group
+Create an in-memory object for CloudServiceVaultSecretGroup.
 
 ## EXAMPLES
 
@@ -73,7 +73,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.CloudServiceVaultSecretGroup
+### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.CloudServiceVaultSecretGroup
 
 ## NOTES
 

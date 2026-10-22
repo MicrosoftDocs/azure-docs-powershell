@@ -16,19 +16,12 @@ Get a StandbyContainerGroupPoolResource
 
 ### List (Default)
 ```
-Get-AzStandbyContainerGroupPool [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+Get-AzStandbyContainerGroupPool [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### Get
 ```
 Get-AzStandbyContainerGroupPool -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
- [-DefaultProfile <PSObject>] [<CommonParameters>]
-```
-
-### List1
-```
-Get-AzStandbyContainerGroupPool -ResourceGroupName <String> [-SubscriptionId <String[]>]
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -38,12 +31,18 @@ Get-AzStandbyContainerGroupPool -InputObject <IStandbyPoolIdentity> [-DefaultPro
  [<CommonParameters>]
 ```
 
+### List1
+```
+Get-AzStandbyContainerGroupPool -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 Get a StandbyContainerGroupPoolResource
 
 ## EXAMPLES
 
-### Example 1: Get a standby container pool
+### Example 1: Get a standby container group pool
 ```powershell
 Get-AzStandbyContainerGroupPool `
 -SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
@@ -73,9 +72,10 @@ SystemDataLastModifiedByType      : User
 Tag                               : {
                                     }
 Type                              : microsoft.standbypool/standbycontainergrouppools
+Zone                              : {1}
 ```
 
-Above command is getting a standby container pool.
+Above command is getting a standby container group pool.
 
 ## PARAMETERS
 
@@ -147,7 +147,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: List, Get, List1
+Parameter Sets: Get, List, List1
 Aliases:
 
 Required: False
@@ -171,3 +171,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

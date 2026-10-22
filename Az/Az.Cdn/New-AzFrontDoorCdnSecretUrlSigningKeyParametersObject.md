@@ -1,7 +1,7 @@
 ---
 external help file: Az.Cdn-help.xml
 Module Name: Az.Cdn
-online version: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnSecretUrlSigningKeyParametersObject
+online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnsecreturlsigningkeyparametersobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnSecretUrlSigningKeyParametersObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnSecretUrlSigningKeyParametersObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for UrlSigningKeyParameters.
 ## SYNTAX
 
 ```
-New-AzFrontDoorCdnSecretUrlSigningKeyParametersObject -KeyId <String> -Type <SecretType>
- [-SecretSourceId <String>] [-SecretVersion <String>] [<CommonParameters>]
+New-AzFrontDoorCdnSecretUrlSigningKeyParametersObject -KeyId <String> [-SecretSourceId <String>]
+ [-SecretVersion <String>] [-Type <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,14 +86,14 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The type of the secret resource.
+Type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.SecretType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -107,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.UrlSigningKeyParameters
+### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.UrlSigningKeyParameters
 
 ## NOTES
 

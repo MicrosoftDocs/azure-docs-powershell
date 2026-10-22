@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzSearchService
 
 ## SYNOPSIS
-Gets an Azure Cognitive Search service.
+Gets an Azure AI Search service.
 
 ## SYNTAX
 
@@ -22,11 +22,12 @@ Get-AzSearchService [-ResourceGroupName] <String> [[-Name] <String>] [-DefaultPr
 
 ### ResourceIdParameterSet
 ```
-Get-AzSearchService [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzSearchService [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzSearchService** cmdlet gets the specified Azure Cognitive Search service.
+The **Get-AzSearchService** cmdlet gets the specified Azure AI Search service.
 
 ## EXAMPLES
 
@@ -46,7 +47,7 @@ HostingMode       : Default
 Id                : /subscriptions/f9b96b36-1f5e-4021-8959-51527e26e6d3/resourceGroups/felixwa-01/providers/Microsoft.Search/searchServices/felixwa-basic-search
 ```
 
-Get an Azure Cognitive Search service with specified parameters.
+Get an Azure AI Search service with specified parameters.
 
 ## PARAMETERS
 
@@ -66,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Azure Cognitive Search Service name.
+Azure AI Search Service name.
 
 ```yaml
 Type: System.String
@@ -96,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Azure Cognitive Search Service Resource Id.
+Azure AI Search Service Resource Id.
 
 ```yaml
 Type: System.String

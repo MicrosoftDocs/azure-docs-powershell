@@ -21,6 +21,18 @@ Invoke-AzSpotPlacementScore -Location <String> [-SubscriptionId <String>] [-Avai
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### PostViaJsonString
+```
+Invoke-AzSpotPlacementScore -Location <String> [-SubscriptionId <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### PostViaJsonFilePath
+```
+Invoke-AzSpotPlacementScore -Location <String> [-SubscriptionId <String>] -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### Post
 ```
 Invoke-AzSpotPlacementScore -Location <String> [-SubscriptionId <String>]
@@ -264,10 +276,9 @@ Accept wildcard characters: False
 
 ### -DesiredSize
 The desired resource SKUs.
-To construct, see NOTES section for DESIREDSIZE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.IResourceSize[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IResourceSize[]
 Parameter Sets: PostExpanded, PostViaIdentityExpanded
 Aliases:
 
@@ -280,7 +291,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IComputeIdentity
@@ -294,12 +304,42 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Post operation
+
+```yaml
+Type: System.String
+Parameter Sets: PostViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Post operation
+
+```yaml
+Type: System.String
+Parameter Sets: PostViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
 The name of the Azure region.
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, Post
+Parameter Sets: PostExpanded, PostViaJsonString, PostViaJsonFilePath, Post
 Aliases:
 
 Required: True
@@ -311,10 +351,9 @@ Accept wildcard characters: False
 
 ### -SpotPlacementScoresInput
 SpotPlacementScores API Input.
-To construct, see NOTES section for SPOTPLACEMENTSCORESINPUT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.ISpotPlacementScoresInput
+Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.ISpotPlacementScoresInput
 Parameter Sets: Post, PostViaIdentity
 Aliases: SpotPlacementRecommenderInput
 
@@ -331,7 +370,7 @@ The subscription ID forms part of the URI for every service call.
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, Post
+Parameter Sets: PostExpanded, PostViaJsonString, PostViaJsonFilePath, Post
 Aliases:
 
 Required: False
@@ -377,13 +416,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.ISpotPlacementScoresInput
-
 ### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IComputeIdentity
+
+### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.ISpotPlacementScoresInput
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.ISpotPlacementScoresResponse
+### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.ISpotPlacementScoresResponse
 
 ## NOTES
 

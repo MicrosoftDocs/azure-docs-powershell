@@ -33,12 +33,13 @@ Remove-AzADGroupOwner -GroupId $groupId -OwnerId $ownerId
 
 Unassign an owner for a group.
 Notice: 1.this cmdlet does not delete the owner directory object.
-2.a group does not have a onwer by default, but has to have at least one owner once had one.
+2.a group does not have a owner by default, but has to have at least one owner once had one.
 
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -138,7 +139,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Boolean
 
 ## NOTES
-
-ALIASES
 
 ## RELATED LINKS

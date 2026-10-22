@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzActionGroup
 
 ## SYNOPSIS
-Create a new action group or Create an existing one.
+create a new action group or create an existing one.
 
 ## SYNTAX
 
@@ -51,7 +51,7 @@ New-AzActionGroup -InputObject <IActionGroupIdentity> -Location <String>
 ```
 
 ## DESCRIPTION
-Create a new action group or Create an existing one.
+create a new action group or create an existing one.
 
 ## EXAMPLES
 

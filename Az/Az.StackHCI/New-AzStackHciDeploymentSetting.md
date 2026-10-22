@@ -14,10 +14,34 @@ Create a DeploymentSetting
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzStackHciDeploymentSetting -ClusterName <String> -ResourceGroupName <String> -SName <String>
+New-AzStackHciDeploymentSetting -SName <String> -ClusterName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-ArcNodeResourceId <String[]>] [-DeploymentConfigurationScaleUnit <IScaleUnits[]>]
- [-DeploymentConfigurationVersion <String>] [-DeploymentMode <DeploymentMode>] [-OperationType <OperationType>]
+ [-DeploymentConfigurationVersion <String>] [-DeploymentMode <String>] [-OperationType <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzStackHciDeploymentSetting -SName <String> -ClusterName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzStackHciDeploymentSetting -SName <String> -ClusterName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityClusterExpanded
+```
+New-AzStackHciDeploymentSetting -SName <String> -ClusterInputObject <IStackHciIdentity>
+ [-ArcNodeResourceId <String[]>] [-DeploymentConfigurationScaleUnit <IScaleUnits[]>]
+ [-DeploymentConfigurationVersion <String>] [-DeploymentMode <String>] [-OperationType <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -47,7 +71,7 @@ Azure resource ids of Arc machines to be part of cluster.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded
 Aliases:
 
 Required: False
@@ -72,12 +96,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClusterInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+Parameter Sets: CreateViaIdentityClusterExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 The name of the cluster.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -105,11 +144,10 @@ Accept wildcard characters: False
 
 ### -DeploymentConfigurationScaleUnit
 Scale units will contains list of deployment data
-To construct, see NOTES section for DEPLOYMENTCONFIGURATIONSCALEUNIT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IScaleUnits[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IScaleUnits[]
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded
 Aliases:
 
 Required: False
@@ -124,7 +162,7 @@ deployment template version
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded
 Aliases:
 
 Required: False
@@ -138,11 +176,41 @@ Accept wildcard characters: False
 The deployment mode for cluster deployment.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.DeploymentMode
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -168,8 +236,8 @@ Accept wildcard characters: False
 The intended operation for a cluster.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.OperationType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded
 Aliases:
 
 Required: False
@@ -185,7 +253,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -216,7 +284,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -262,9 +330,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IDeploymentSetting
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IDeploymentSetting
 
 ## NOTES
 

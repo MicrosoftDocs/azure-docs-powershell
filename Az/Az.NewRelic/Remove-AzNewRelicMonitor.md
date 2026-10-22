@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzNewRelicMonitor
 
 ## SYNOPSIS
-Delete a NewRelicMonitorResource
+Deletes an existing New Relic monitor resource from your Azure subscription, removing the integration and stopping the observability of your Azure resources through New Relic
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-AzNewRelicMonitor -InputObject <INewRelicIdentity> -UserEmail <String> [-
 ```
 
 ## DESCRIPTION
-Delete a NewRelicMonitorResource
+Deletes an existing New Relic monitor resource from your Azure subscription, removing the integration and stopping the observability of your Azure resources through New Relic
 
 ## EXAMPLES
 

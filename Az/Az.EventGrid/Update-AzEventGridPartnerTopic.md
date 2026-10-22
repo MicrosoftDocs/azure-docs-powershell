@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridPartnerTopic
 
 ## SYNOPSIS
-Asynchronously creates a new partner topic with the specified parameters.
+Asynchronously update a new partner topic with the specified parameters.
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ Update-AzEventGridPartnerTopic -InputObject <IEventGridIdentity> [-ActivationSta
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new partner topic with the specified parameters.
+Asynchronously update a new partner topic with the specified parameters.
 
 ## EXAMPLES
 
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSystemAssignedIdentity
-Decides if enable a system assigned identity for the resource.
+Determines whether to enable a system-assigned identity for the resource.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]

@@ -10,21 +10,45 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzDatabricksVNetPeering
 
 ## SYNOPSIS
-Creates vNet Peering for workspace.
+Create vNet Peering for workspace.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzDatabricksVNetPeering -Name <String> -ResourceGroupName <String> -WorkspaceName <String>
- [-SubscriptionId <String>] [-AllowForwardedTraffic] [-AllowGatewayTransit] [-AllowVirtualNetworkAccess]
+New-AzDatabricksVNetPeering -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -WorkspaceName <String> [-AllowForwardedTraffic] [-AllowGatewayTransit] [-AllowVirtualNetworkAccess]
  [-DatabricksAddressSpacePrefix <String[]>] [-DatabricksVirtualNetworkId <String>]
  [-RemoteAddressSpacePrefix <String[]>] [-RemoteVirtualNetworkId <String>] [-UseRemoteGateway]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzDatabricksVNetPeering -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -WorkspaceName <String> -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzDatabricksVNetPeering -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -WorkspaceName <String> -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityWorkspaceExpanded
+```
+New-AzDatabricksVNetPeering -Name <String> -WorkspaceInputObject <IDatabricksIdentity> [-AllowForwardedTraffic]
+ [-AllowGatewayTransit] [-AllowVirtualNetworkAccess] [-DatabricksAddressSpacePrefix <String[]>]
+ [-DatabricksVirtualNetworkId <String>] [-RemoteAddressSpacePrefix <String[]>]
+ [-RemoteVirtualNetworkId <String>] [-UseRemoteGateway] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates vNet Peering for workspace.
+Create vNet Peering for workspace.
 
 ## EXAMPLES
 
@@ -48,7 +72,7 @@ Whether the forwarded traffic from the VMs in the local virtual network will be 
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -63,7 +87,7 @@ If gateway links can be used in remote virtual networking to link to this virtua
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -78,7 +102,7 @@ Whether the VMs in the local virtual network space would be able to access the V
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -108,7 +132,7 @@ A list of address blocks reserved for this virtual network in CIDR notation.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -123,7 +147,7 @@ The Id of the databricks virtual network.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -143,6 +167,36 @@ Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -184,7 +238,7 @@ A list of address blocks reserved for this virtual network in CIDR notation.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -199,7 +253,7 @@ The Id of the remote virtual network.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -215,7 +269,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -231,7 +285,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -249,7 +303,7 @@ This flag cannot be set if virtual network already has a gateway.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: False
@@ -259,12 +313,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkspaceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Databricks.Models.IDatabricksIdentity
+Parameter Sets: CreateViaIdentityWorkspaceExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -WorkspaceName
 The name of the workspace.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -310,9 +379,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.Databricks.Models.IDatabricksIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Databricks.Models.Api20240501.IVirtualNetworkPeering
+### Microsoft.Azure.PowerShell.Cmdlets.Databricks.Models.IVirtualNetworkPeering
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Workloads-help.xml
 Module Name: Az.Workloads
-online version: https://learn.microsoft.com/powershell/module/Az.Workloads/new-AzWorkloadsSapLandscapeMonitorMetricThresholdsObject
+online version: https://learn.microsoft.com/powershell/module/Az.Workloads/new-azworkloadssaplandscapemonitormetricthresholdsobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsSapLandscapeMonitorMetricThresholdsObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsSapLandscapeMonitorMetricThresholdsObject.md
@@ -106,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Workloads.Models.Api20230401.SapLandscapeMonitorMetricThresholds
+### Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.SapLandscapeMonitorMetricThresholds
 
 ## NOTES
 

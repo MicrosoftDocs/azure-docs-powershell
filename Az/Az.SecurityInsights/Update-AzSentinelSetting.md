@@ -24,7 +24,7 @@ Update-AzSentinelSetting -ResourceGroupName <String> -WorkspaceName <String> [-S
 ### UpdateExpandedUeba
 ```
 Update-AzSentinelSetting -ResourceGroupName <String> -WorkspaceName <String> [-SubscriptionId <String>]
- -SettingsName <String> -DataSource <UebaDataSources[]> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ -SettingsName <String> -DataSource <String[]> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -37,7 +37,7 @@ Update-AzSentinelSetting -InputObject <ISecurityInsightsIdentity> -Enabled <Bool
 
 ### UpdateViaIdentityExpandedUeba
 ```
-Update-AzSentinelSetting -InputObject <ISecurityInsightsIdentity> -DataSource <UebaDataSources[]>
+Update-AzSentinelSetting -InputObject <ISecurityInsightsIdentity> -DataSource <String[]>
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ### -DataSource
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Support.UebaDataSources[]
+Type: System.String[]
 Parameter Sets: UpdateExpandedUeba, UpdateViaIdentityExpandedUeba
 Aliases:
 
@@ -248,7 +248,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.Settings
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Settings
 
 ## NOTES
 

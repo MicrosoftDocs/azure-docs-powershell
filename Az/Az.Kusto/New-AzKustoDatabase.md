@@ -10,21 +10,36 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzKustoDatabase
 
 ## SYNOPSIS
-Creates or updates a database.
+Create or update a database.
 
 ## SYNTAX
 
+### CreateReadWrite (Default)
 ```
 New-AzKustoDatabase -ClusterName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-CallerRole <CallerRole>] -Kind <Kind> [-HotCachePeriod <TimeSpan>] [-SoftDeletePeriod <TimeSpan>]
+ [-CallerRole <String>] -Kind <String> [-HotCachePeriod <TimeSpan>] [-SoftDeletePeriod <TimeSpan>]
  [-KeyVaultPropertyKeyName <String>] [-KeyVaultPropertyKeyVaultUri <String>]
  [-KeyVaultPropertyKeyVersion <String>] [-KeyVaultPropertyUserIdentity <String>] [-Location <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
+### CreateViaJsonFilePath
+```
+New-AzKustoDatabase -ClusterName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ [-CallerRole <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzKustoDatabase -ClusterName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ [-CallerRole <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates or updates a database.
+Create or update a database.
 
 ## EXAMPLES
 
@@ -39,7 +54,7 @@ Kind      Location Name                                Type
 ReadWrite East US  testnewkustocluster/mykustodatabase Microsoft.Kusto/Clusters/Databases
 ```
 
-The above command creates a new datebase named "mykustodatabase" in the resource group "testrg".
+The above command creates a new database named "mykustodatabase" in the resource group "testrg".
 
 ## PARAMETERS
 
@@ -63,7 +78,7 @@ By default, any user who run operation on a database become an Admin on it.
 This property allows the caller to exclude the caller from Admins list.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.CallerRole
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -90,7 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -109,10 +125,40 @@ The time the data should be kept in cache for fast queries in TimeSpan.
 
 ```yaml
 Type: System.TimeSpan
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -124,7 +170,7 @@ The name of the key vault key.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
@@ -139,7 +185,7 @@ The Uri of the key vault.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
@@ -154,7 +200,7 @@ The version of the key vault key.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
@@ -169,7 +215,7 @@ The user assigned identity (ARM resource id) that has access to the key.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
@@ -183,8 +229,8 @@ Accept wildcard characters: False
 Kind of the database
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Support.Kind
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: True
@@ -199,7 +245,7 @@ Resource location.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
@@ -240,7 +286,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group containing the Kusto cluster.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
@@ -259,7 +306,7 @@ The time the data should be kept before it stops being accessible to queries in 
 
 ```yaml
 Type: System.TimeSpan
-Parameter Sets: (All)
+Parameter Sets: CreateReadWrite
 Aliases:
 
 Required: False
@@ -270,8 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-Gets subscription credentials which uniquely identify Microsoft Azure subscription.
-The subscription ID forms part of the URI for every service call.
+The ID of the target subscription.
 
 ```yaml
 Type: System.String
@@ -323,7 +369,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IDatabase
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IDatabase
 
 ## NOTES
 

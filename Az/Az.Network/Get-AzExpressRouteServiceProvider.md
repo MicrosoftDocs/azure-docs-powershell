@@ -16,7 +16,8 @@ Gets a list ExpressRoute service providers and their attributes.
 ## SYNTAX
 
 ```
-Get-AzExpressRouteServiceProvider [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzExpressRouteServiceProvider [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

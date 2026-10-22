@@ -1,6 +1,6 @@
 ---
 Module Name: Az.StandbyPool
-Module Guid: bb1182ed-2a39-47be-8b39-46b13e973cea
+Module Guid: 33d2e0ce-630e-420f-8d11-9038d630e08b
 Download Help Link: https://learn.microsoft.com/powershell/module/az.standbypool
 Help Version: 1.0.0.0
 Locale: en-US
@@ -16,11 +16,14 @@ Microsoft Azure PowerShell: StandbyPool cmdlets
 ### [Get-AzStandbyContainerGroupPool](Get-AzStandbyContainerGroupPool.md)
 Get a StandbyContainerGroupPoolResource
 
+### [Get-AzStandbyContainerGroupPoolStatus](Get-AzStandbyContainerGroupPoolStatus.md)
+Get a StandbyContainerGroupPoolRuntimeViewResource
+
 ### [Get-AzStandbyVMPool](Get-AzStandbyVMPool.md)
 Get a StandbyVirtualMachinePoolResource
 
-### [Get-AzStandbyVMPoolVM](Get-AzStandbyVMPoolVM.md)
-Get a StandbyVirtualMachineResource
+### [Get-AzStandbyVMPoolStatus](Get-AzStandbyVMPoolStatus.md)
+Get a StandbyVirtualMachinePoolRuntimeViewResource
 
 ### [New-AzStandbyContainerGroupPool](New-AzStandbyContainerGroupPool.md)
 Create a StandbyContainerGroupPoolResource

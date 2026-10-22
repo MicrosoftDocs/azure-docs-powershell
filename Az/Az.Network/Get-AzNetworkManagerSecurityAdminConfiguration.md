@@ -17,13 +17,15 @@ Gets a network security admin configuration in a network manager.
 ### NoExpand (Default)
 ```
 Get-AzNetworkManagerSecurityAdminConfiguration [-Name <String>] -NetworkManagerName <String>
- -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Expand
 ```
 Get-AzNetworkManagerSecurityAdminConfiguration -Name <String> -NetworkManagerName <String>
- -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

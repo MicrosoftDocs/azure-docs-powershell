@@ -15,7 +15,8 @@ Gets the list of service tag information resources.
 ## SYNTAX
 
 ```
-Get-AzNetworkServiceTag -Location <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzNetworkServiceTag -Location <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

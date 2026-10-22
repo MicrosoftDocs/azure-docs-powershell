@@ -18,8 +18,8 @@ Creates a CustomIpPrefix resource
 New-AzCustomIpPrefix -Name <String> -ResourceGroupName <String> -Location <String> -Cidr <String>
  [-Asn <String>] [-Geo <String>] [-SignedMessage <String>] [-AuthorizationMessage <String>]
  [-ExpressRouteAdvertise] [-CustomIpPrefixParent <PSCustomIpPrefix>] [-IsParent] [-Zone <String[]>]
- [-Tag <Hashtable>] [-AsJob] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Tag <Hashtable>] [-AsJob] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,7 +32,7 @@ The **New-AzCustomIpPrefix** cmdlet creates a CustomIpPrefix resource.
 $myCustomIpPrefix = New-AzCustomIpPrefix -Name $prefixName -ResourceGroupName $rgName -Cidr "40.40.40.0/24" -Location westus2 -Zone 1,2,3 -AuthorizationMessage $authorizationMessage -SignedMessage $signedMessage
 ```
 
-This command kicks off the provisioning process for a new zone-redundant IPv4 Custom IP Prefix resource with name $prefixName in resource group $rgName with a CIDR of 40.40.40.0/24 in West US 2 region.  Note the AuthorizationMessage is a contactenated string (containing the subscription ID, CIDR, and Route Origin Authorization expiration date) and the SignedMessage is the same string signed by X509 certificate offline. 
+This command kicks off the provisioning process for a new zone-redundant IPv4 Custom IP Prefix resource with name $prefixName in resource group $rgName with a CIDR of 40.40.40.0/24 in West US 2 region.  Note the AuthorizationMessage is a concatenated string (containing the subscription ID, CIDR, and Route Origin Authorization expiration date) and the SignedMessage is the same string signed by X509 certificate offline. 
 
 ### Example 2
 ```powershell
@@ -49,6 +49,21 @@ $myV4ChildIpPrefix = New-AzCustomIpPrefix -Name $prefixName -ResourceGroupName $
 This command kicks off the provisioning process for a new Child IPv4 Custom IP Prefix resource with name $prefixName in resource group $rgName with a CIDR of 40.40.40.0/25. Its parent prefix is $myV4ParentPrefix.
 
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsJob
 Run cmdlet in the background
@@ -92,6 +107,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

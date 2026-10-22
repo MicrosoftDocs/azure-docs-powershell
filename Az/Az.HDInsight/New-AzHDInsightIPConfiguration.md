@@ -21,7 +21,7 @@ New-AzHDInsightIPConfiguration [-Name <String>] [-Primary] [-PrivateIPAddress <S
 ```
 
 ## DESCRIPTION
-This cmdlet **New-AzHDInsightIPConfiguration** creates the ip configuration in memeory.
+This cmdlet **New-AzHDInsightIPConfiguration** creates the ip configuration in memory.
 
 ## EXAMPLES
 
@@ -107,7 +107,6 @@ Gets or sets the private ip allocation method.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: dynamic, static
 
 Required: False
 Position: Named

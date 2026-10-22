@@ -208,5 +208,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzHDInsightHiveJobDefinition](./New-AzHDInsightHiveJobDefinition.md)
 
 [Start-AzHDInsightJob](./Start-AzHDInsightJob.md)
-
-

@@ -10,10 +10,11 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzWorkloadsSapLandscapeMonitor
 
 ## SYNOPSIS
-Creates a SAP Landscape Monitor Dashboard for the specified subscription, resource group, and resource name.
+Create a SAP Landscape Monitor Dashboard for the specified subscription, resource group, and resource name.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzWorkloadsSapLandscapeMonitor -MonitorName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-GroupingLandscape <ISapLandscapeMonitorSidMapping[]>]
@@ -22,8 +23,22 @@ New-AzWorkloadsSapLandscapeMonitor -MonitorName <String> -ResourceGroupName <Str
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonFilePath
+```
+New-AzWorkloadsSapLandscapeMonitor -MonitorName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzWorkloadsSapLandscapeMonitor -MonitorName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates a SAP Landscape Monitor Dashboard for the specified subscription, resource group, and resource name.
+Create a SAP Landscape Monitor Dashboard for the specified subscription, resource group, and resource name.
 
 ## EXAMPLES
 
@@ -91,11 +106,10 @@ Accept wildcard characters: False
 
 ### -GroupingLandscape
 Gets or sets the list of landscape to SID mappings.
-To construct, see NOTES section for GROUPINGLANDSCAPE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Models.Api20230401.ISapLandscapeMonitorSidMapping[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.ISapLandscapeMonitorSidMapping[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -107,14 +121,43 @@ Accept wildcard characters: False
 
 ### -GroupingSapApplication
 Gets or sets the list of Sap Applications to SID mappings.
-To construct, see NOTES section for GROUPINGSAPAPPLICATION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Models.Api20230401.ISapLandscapeMonitorSidMapping[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.ISapLandscapeMonitorSidMapping[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -169,11 +212,10 @@ Accept wildcard characters: False
 
 ### -TopMetricsThreshold
 Gets or sets the list Top Metric Thresholds for SAP Landscape Monitor Dashboard
-To construct, see NOTES section for TOPMETRICSTHRESHOLD properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Models.Api20230401.ISapLandscapeMonitorMetricThresholds[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.ISapLandscapeMonitorMetricThresholds[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -221,7 +263,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Workloads.Models.Api20230401.ISapLandscapeMonitor
+### Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.ISapLandscapeMonitor
 
 ## NOTES
 

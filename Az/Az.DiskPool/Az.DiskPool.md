@@ -45,7 +45,7 @@ Create an in-memory object for Acl.
 Create an in-memory object for IscsiLun.
 
 ### [New-AzDiskPoolIscsiTarget](New-AzDiskPoolIscsiTarget.md)
-Create or Update an iSCSI Target.
+create an iSCSI Target.
 
 ### [Remove-AzDiskPool](Remove-AzDiskPool.md)
 Delete a Disk pool; attached disks are not affected.
@@ -70,5 +70,5 @@ This is expected service behavior.
 Update a Disk pool.
 
 ### [Update-AzDiskPoolIscsiTarget](Update-AzDiskPoolIscsiTarget.md)
-Update an iSCSI Target.
+update an iSCSI Target.
 

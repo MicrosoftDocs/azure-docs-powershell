@@ -17,9 +17,15 @@ Get version.
 ### List (Default)
 ```
 Get-AzMLWorkspaceModelVersion -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
- [-Version <String>] -WorkspaceName <String> [-Description <String>] [-Feed <String>]
- [-ListViewType <ListViewType>] [-Offset <Int32>] [-OrderBy <String>] [-Property <String>] [-Skip <String>]
- [-Tag <String>] [-Top <Int32>] [-DefaultProfile <PSObject>]
+ [-Version <String>] -WorkspaceName <String> [-Description <String>] [-Feed <String>] [-ListViewType <String>]
+ [-Offset <Int32>] [-OrderBy <String>] [-Property <String>] [-Skip <String>] [-Tag <String>] [-Top <Int32>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### GetViaIdentityWorkspace
+```
+Get-AzMLWorkspaceModelVersion -Name <String> -Version <String>
+ -WorkspaceInputObject <IMachineLearningServicesIdentity> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -28,6 +34,12 @@ Get-AzMLWorkspaceModelVersion -Name <String> -ResourceGroupName <String> [-Subsc
 Get-AzMLWorkspaceModelVersion -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
  -Version <String> -WorkspaceName <String> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
+```
+
+### GetViaIdentityModel
+```
+Get-AzMLWorkspaceModelVersion -Version <String> -ModelInputObject <IMachineLearningServicesIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -105,7 +117,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
@@ -123,7 +134,7 @@ Accept wildcard characters: False
 View type for including/excluding (for example) archived entities.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ListViewType
+Type: System.String
 Parameter Sets: List
 Aliases:
 
@@ -134,13 +145,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ModelInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: GetViaIdentityModel
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Name
 Container name.
 This is case-sensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get
+Parameter Sets: List, GetViaIdentityWorkspace, Get
 Aliases:
 
 Required: True
@@ -276,13 +302,28 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: GetViaIdentityWorkspace, Get, GetViaIdentityModel
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkspaceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: GetViaIdentityWorkspace
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -325,7 +366,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IModelVersion
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IModelVersion
 
 ## NOTES
 

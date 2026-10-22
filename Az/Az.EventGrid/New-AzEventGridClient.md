@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridClient
 
 ## SYNOPSIS
-Create a client with the specified parameters.
+create a client with the specified parameters.
 
 ## SYNTAX
 
@@ -66,7 +66,7 @@ New-AzEventGridClient -InputObject <IEventGridIdentity> [-Attribute <Hashtable>]
 ```
 
 ## DESCRIPTION
-Create a client with the specified parameters.
+create a client with the specified parameters.
 
 ## EXAMPLES
 

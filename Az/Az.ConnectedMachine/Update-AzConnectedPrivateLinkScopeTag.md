@@ -10,8 +10,8 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzConnectedPrivateLinkScopeTag
 
 ## SYNOPSIS
-Update an existing PrivateLinkScope's tags.
-To update other fields use the CreateOrUpdate method.
+update an existing PrivateLinkScope's tags.
+To update other fields use the CreateOrupdate method.
 
 ## SYNTAX
 
@@ -57,8 +57,8 @@ Update-AzConnectedPrivateLinkScopeTag -InputObject <IConnectedMachineIdentity>
 ```
 
 ## DESCRIPTION
-Update an existing PrivateLinkScope's tags.
-To update other fields use the CreateOrUpdate method.
+update an existing PrivateLinkScope's tags.
+To update other fields use the CreateOrupdate method.
 
 ## EXAMPLES
 

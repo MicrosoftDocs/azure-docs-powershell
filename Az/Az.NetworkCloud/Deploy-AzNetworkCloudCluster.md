@@ -10,26 +10,39 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Deploy-AzNetworkCloudCluster
 
 ## SYNOPSIS
-Deploy the cluster to the provided rack.
+Deploy the cluster using the rack configuration provided during creation.
 
 ## SYNTAX
 
 ### DeployExpanded (Default)
 ```
 Deploy-AzNetworkCloudCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-SkipValidationsForMachine <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SkipValidationsForMachine <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### DeployViaJsonString
+```
+Deploy-AzNetworkCloudCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### DeployViaJsonFilePath
+```
+Deploy-AzNetworkCloudCluster -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeployViaIdentityExpanded
 ```
 Deploy-AzNetworkCloudCluster -InputObject <INetworkCloudIdentity> [-SkipValidationsForMachine <String[]>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Deploy the cluster to the provided rack.
+Deploy the cluster using the rack configuration provided during creation.
 
 ## EXAMPLES
 
@@ -81,7 +94,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.INetworkCloudIdentity
@@ -95,12 +107,42 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Deploy operation
+
+```yaml
+Type: System.String
+Parameter Sets: DeployViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Deploy operation
+
+```yaml
+Type: System.String
+Parameter Sets: DeployViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The name of the cluster.
 
 ```yaml
 Type: System.String
-Parameter Sets: DeployExpanded
+Parameter Sets: DeployExpanded, DeployViaJsonString, DeployViaJsonFilePath
 Aliases: ClusterName
 
 Required: True
@@ -146,7 +188,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: DeployExpanded
+Parameter Sets: DeployExpanded, DeployViaJsonString, DeployViaJsonFilePath
 Aliases:
 
 Required: True
@@ -161,7 +203,7 @@ The names of bare metal machines in the cluster that should be skipped during en
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: DeployExpanded, DeployViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -177,7 +219,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: DeployExpanded
+Parameter Sets: DeployExpanded, DeployViaJsonString, DeployViaJsonFilePath
 Aliases:
 
 Required: False

@@ -17,15 +17,23 @@ Partially updates a devcenter.
 ### UpdateExpanded (Default)
 ```
 Update-AzDevCenterAdminDevCenter -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ [-DevBoxProvisioningSettingInstallAzureMonitorAgentEnableStatus <InstallAzureMonitorAgentEnableStatus>]
  [-DisplayName <String>] [-IdentityType <ManagedServiceIdentityType>]
- [-IdentityUserAssignedIdentity <Hashtable>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IdentityUserAssignedIdentity <Hashtable>]
+ [-NetworkSettingMicrosoftHostedNetworkEnableStatus <MicrosoftHostedNetworkEnableStatus>]
+ [-ProjectCatalogSettingCatalogItemSyncEnableStatus <CatalogItemSyncEnableStatus>] [-Tag <Hashtable>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzDevCenterAdminDevCenter -InputObject <IDevCenterIdentity> [-DisplayName <String>]
- [-IdentityType <ManagedServiceIdentityType>] [-IdentityUserAssignedIdentity <Hashtable>] [-Tag <Hashtable>]
+Update-AzDevCenterAdminDevCenter -InputObject <IDevCenterIdentity>
+ [-DevBoxProvisioningSettingInstallAzureMonitorAgentEnableStatus <InstallAzureMonitorAgentEnableStatus>]
+ [-DisplayName <String>] [-IdentityType <ManagedServiceIdentityType>]
+ [-IdentityUserAssignedIdentity <Hashtable>]
+ [-NetworkSettingMicrosoftHostedNetworkEnableStatus <MicrosoftHostedNetworkEnableStatus>]
+ [-ProjectCatalogSettingCatalogItemSyncEnableStatus <CatalogItemSyncEnableStatus>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -76,6 +84,21 @@ Use the SubscriptionId parameter when available if executing the cmdlet against 
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DevBoxProvisioningSettingInstallAzureMonitorAgentEnableStatus
+Whether project catalogs associated with projects in this dev center can be configured to sync catalog items.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Support.InstallAzureMonitorAgentEnableStatus
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
@@ -162,11 +185,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NetworkSettingMicrosoftHostedNetworkEnableStatus
+Indicates whether pools in this Dev Center can use Microsoft Hosted Networks.
+Defaults to Enabled if not set.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Support.MicrosoftHostedNetworkEnableStatus
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NoWait
 Run the command asynchronously
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProjectCatalogSettingCatalogItemSyncEnableStatus
+Whether project catalogs associated with projects in this dev center can be configured to sync catalog items.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Support.CatalogItemSyncEnableStatus
 Parameter Sets: (All)
 Aliases:
 
@@ -263,7 +317,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20231001Preview.IDevCenter
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20250401Preview.IDevCenter
 
 ## NOTES
 

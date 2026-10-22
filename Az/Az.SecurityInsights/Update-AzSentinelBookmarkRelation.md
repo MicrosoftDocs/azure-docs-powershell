@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzSentinelBookmarkRelation
 
 ## SYNOPSIS
-Creates the bookmark relation.
+Update the bookmark relation.
 
 ## SYNTAX
 
@@ -21,6 +21,13 @@ Update-AzSentinelBookmarkRelation -BookmarkId <String> -RelationName <String> -R
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### UpdateViaIdentityBookmarkExpanded
+```
+Update-AzSentinelBookmarkRelation -RelationName <String> -BookmarkInputObject <ISecurityInsightsIdentity>
+ [-RelatedResourceId <String>] [-DefaultProfile <PSObject>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
 ### UpdateViaIdentityExpanded
 ```
 Update-AzSentinelBookmarkRelation -InputObject <ISecurityInsightsIdentity> [-RelatedResourceId <String>]
@@ -28,7 +35,7 @@ Update-AzSentinelBookmarkRelation -InputObject <ISecurityInsightsIdentity> [-Rel
 ```
 
 ## DESCRIPTION
-Creates the bookmark relation.
+Update the bookmark relation.
 
 ## EXAMPLES
 
@@ -56,6 +63,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BookmarkInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+Parameter Sets: UpdateViaIdentityBookmarkExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
 Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
@@ -74,7 +96,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
@@ -108,7 +129,7 @@ Relation Name
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityBookmarkExpanded
 Aliases:
 
 Required: True
@@ -204,7 +225,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.IRelation
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.IRelation
 
 ## NOTES
 

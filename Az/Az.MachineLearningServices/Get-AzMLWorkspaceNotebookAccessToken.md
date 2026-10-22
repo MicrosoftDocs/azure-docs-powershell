@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzMLWorkspaceNotebookAccessToken
 
 ## SYNOPSIS
-return notebook access token and refresh token
+Return notebook access token and refresh token
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-AzMLWorkspaceNotebookAccessToken -ResourceGroupName <String> -WorkspaceName 
 ```
 
 ## DESCRIPTION
-return notebook access token and refresh token
+Return notebook access token and refresh token
 
 ## EXAMPLES
 
@@ -140,7 +140,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.INotebookAccessTokenResult
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.INotebookAccessTokenResult
 
 ## NOTES
 

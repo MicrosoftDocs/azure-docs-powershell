@@ -19,7 +19,7 @@ Adds data sets to azure data share.
 New-AzDataShareDataSet [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ByBlobDataSetParamaterSet
+### ByBlobDataSetParameterSet
 ```
 New-AzDataShareDataSet -ResourceGroupName <String> -AccountName <String> -ShareName <String> -Name <String>
  -StorageAccountResourceId <String> -Container <String> [-FilePath <String>] [-FolderPath <String>]
@@ -70,7 +70,7 @@ Azure data share account name
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
 Aliases:
 
 Required: True
@@ -100,7 +100,7 @@ Azure storage account container name
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet
+Parameter Sets: ByBlobDataSetParameterSet
 Aliases:
 
 Required: True
@@ -145,7 +145,7 @@ Azure storage file path
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet
 Aliases:
 
 Required: False
@@ -175,7 +175,7 @@ Azure storage folder path
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet
 Aliases:
 
 Required: False
@@ -190,7 +190,7 @@ Azure data set name
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
 Aliases:
 
 Required: True
@@ -205,7 +205,7 @@ The resource group name of the azure data share account
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
 Aliases:
 
 Required: True
@@ -220,7 +220,7 @@ Azure data share name
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
 Aliases:
 
 Required: True
@@ -235,7 +235,7 @@ Azure storage account resourceId
 
 ```yaml
 Type: System.String
-Parameter Sets: ByBlobDataSetParamaterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
+Parameter Sets: ByBlobDataSetParameterSet, ByAdlsGen2DataSetParameterSet, ByAdlsGen1DataSetParameterSet
 Aliases:
 
 Required: True

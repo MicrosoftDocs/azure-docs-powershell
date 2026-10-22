@@ -10,23 +10,48 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzConnectedNetworkVendorSku
 
 ## SYNOPSIS
-Creates or updates a sku.
+create a sku.
 This operation can take up to 2 hours to complete.
 This is expected service behavior.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzConnectedNetworkVendorSku -SkuName <String> -VendorName <String> [-SubscriptionId <String>]
- [-DeploymentMode <SkuDeploymentMode>] [-ManagedApplicationParameter <Hashtable>]
+New-AzConnectedNetworkVendorSku -SkuName <String> [-SubscriptionId <String>] -VendorName <String>
+ [-DeploymentMode <String>] [-ManagedApplicationParameter <Hashtable>]
  [-ManagedApplicationTemplate <Hashtable>]
- [-NetworkFunctionRoleConfigurationType <INetworkFunctionRoleConfiguration[]>]
- [-NetworkFunctionType <NetworkFunctionType>] [-Preview] [-SkuType <SkuType>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-NetworkFunctionRoleConfigurationType <INetworkFunctionRoleConfiguration[]>] [-NetworkFunctionType <String>]
+ [-Preview] [-SkuType <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzConnectedNetworkVendorSku -SkuName <String> [-SubscriptionId <String>] -VendorName <String>
+ -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzConnectedNetworkVendorSku -SkuName <String> [-SubscriptionId <String>] -VendorName <String>
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityVendorExpanded
+```
+New-AzConnectedNetworkVendorSku -SkuName <String> -VendorInputObject <IConnectedNetworkIdentity>
+ [-DeploymentMode <String>] [-ManagedApplicationParameter <Hashtable>]
+ [-ManagedApplicationTemplate <Hashtable>]
+ [-NetworkFunctionRoleConfigurationType <INetworkFunctionRoleConfiguration[]>] [-NetworkFunctionType <String>]
+ [-Preview] [-SkuType <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates or updates a sku.
+create a sku.
 This operation can take up to 2 hours to complete.
 This is expected service behavior.
 
@@ -78,11 +103,41 @@ Accept wildcard characters: False
 The sku deployment mode.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.SkuDeploymentMode
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -94,7 +149,7 @@ The parameters for the managed application to be supplied by the vendor.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
@@ -109,7 +164,7 @@ The template for the managed application deployment.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
@@ -121,11 +176,10 @@ Accept wildcard characters: False
 
 ### -NetworkFunctionRoleConfigurationType
 An array of network function role definitions.
-To construct, see NOTES section for NETWORKFUNCTIONROLECONFIGURATIONTYPE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.INetworkFunctionRoleConfiguration[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.INetworkFunctionRoleConfiguration[]
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
@@ -139,8 +193,8 @@ Accept wildcard characters: False
 The network function type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.NetworkFunctionType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
@@ -170,7 +224,7 @@ Indicates if the vendor sku is in preview mode.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
@@ -199,8 +253,8 @@ Accept wildcard characters: False
 The sku type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.SkuType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityVendorExpanded
 Aliases:
 
 Required: False
@@ -215,7 +269,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -225,12 +279,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VendorInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity
+Parameter Sets: CreateViaIdentityVendorExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -VendorName
 The name of the vendor.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -276,9 +345,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.IVendorSku
+### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IVendorSku
 
 ## NOTES
 

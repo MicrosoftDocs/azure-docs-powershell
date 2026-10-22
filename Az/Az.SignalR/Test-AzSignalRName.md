@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Test-AzSignalRName
 
 ## SYNOPSIS
-Check the availability of a name. Alias: Test-AzSignal.
+Check whether a name is available. Alias: Test-AzSignal.
 
 ## SYNTAX
 
@@ -20,22 +20,22 @@ Test-AzSignalRName [-Name] <String> [-Location] <String> [-DefaultProfile <IAzur
 ```
 
 ## DESCRIPTION
-Check the availability of a name. Alias: Test-AzSignal.
+Check whether a name is available. If a name is available, returns true. Otherwise, return false.  Alias: Test-AzSignal.
 
 ## EXAMPLES
 
-### Example 1: Check an existed name.
+### Example 1: When the name is already in use, it's not available.
 ```powershell
-Test-AzSignalRName -Name existedsignalr -Location eastus
+Test-AzSignalRName -Name inusesignalr -Location eastus
 ```
 
 ```output
 False
 ```
 
-### Example 2: Check an unexisted name.
+### Example 2: When the name is not in use, it's available.
 ```powershell
-Test-AzSignalRName -Name unexistedsignalr -Location eastus
+Test-AzSignalRName -Name availablesignalr -Location eastus
 ```
 
 ```output

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzPeeringService
 
 ## SYNOPSIS
-Creates a new peering service or updates an existing peering with the specified name under the given subscription and resource group.
+create a new peering service or create an existing peering with the specified name under the given subscription and resource group.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ New-AzPeeringService -Name <String> -ResourceGroupName <String> [-SubscriptionId
 ```
 
 ## DESCRIPTION
-Creates a new peering service or updates an existing peering with the specified name under the given subscription and resource group.
+create a new peering service or create an existing peering with the specified name under the given subscription and resource group.
 
 ## EXAMPLES
 
@@ -246,7 +246,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IPeeringService
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringService
 
 ## NOTES
 

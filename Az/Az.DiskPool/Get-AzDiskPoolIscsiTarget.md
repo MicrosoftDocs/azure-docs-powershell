@@ -27,6 +27,12 @@ Get-AzDiskPoolIscsiTarget -DiskPoolName <String> -Name <String> -ResourceGroupNa
  [<CommonParameters>]
 ```
 
+### GetViaIdentityDiskPool
+```
+Get-AzDiskPoolIscsiTarget -Name <String> -DiskPoolInputObject <IDiskPoolIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzDiskPoolIscsiTarget -InputObject <IDiskPoolIdentity> [-DefaultProfile <PSObject>]
@@ -95,6 +101,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DiskPoolInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IDiskPoolIdentity
+Parameter Sets: GetViaIdentityDiskPool
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DiskPoolName
 The name of the Disk Pool.
 
@@ -112,7 +133,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IDiskPoolIdentity
@@ -131,7 +151,7 @@ The name of the iSCSI Target.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityDiskPool
 Aliases: IscsiTargetName
 
 Required: True
@@ -181,7 +201,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.Api20210801.IIscsiTarget
+### Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IIscsiTarget
 
 ## NOTES
 

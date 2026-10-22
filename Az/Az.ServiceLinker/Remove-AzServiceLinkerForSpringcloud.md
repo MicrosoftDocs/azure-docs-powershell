@@ -3,8 +3,8 @@ external help file: Az.ServiceLinker-help.xml
 Module Name: Az.ServiceLinker
 online version: https://learn.microsoft.com/powershell/module/az.servicelinker/remove-azservicelinkerforspringcloud
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/Remove-AzServiceLinkerForSpringcloud.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/Remove-AzServiceLinkerForSpringcloud.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/Remove-AzServiceLinkerForSpringCloud.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/Remove-AzServiceLinkerForSpringCloud.md
 ---
 
 # Remove-AzServiceLinkerForSpringCloud

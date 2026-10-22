@@ -21,7 +21,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddress <PSPub
  [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>] [-EnableIpConnect <Boolean>]
  [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob] [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressByVirtualNetworkRGNameByVirtualNetworkName
@@ -31,7 +31,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddress <PSPub
  [-EnableKerberos <Boolean>] [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>]
  [-EnableIpConnect <Boolean>] [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob]
  [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressByVirtualNetworkId
@@ -41,7 +41,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddress <PSPub
  [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>] [-EnableIpConnect <Boolean>]
  [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob] [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressIdByVirtualNetwork
@@ -51,7 +51,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressId <Str
  [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>] [-EnableIpConnect <Boolean>]
  [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob] [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressIdByVirtualNetworkRGNameByVirtualNetworkName
@@ -61,7 +61,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressId <Str
  [-EnableKerberos <Boolean>] [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>]
  [-EnableIpConnect <Boolean>] [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob]
  [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressIdByVirtualNetworkId
@@ -70,7 +70,8 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressId <Str
  [-Sku <String>] [-ScaleUnit <Int32>] [-EnableKerberos <Boolean>] [-DisableCopyPaste <Boolean>]
  [-EnableTunneling <Boolean>] [-EnableIpConnect <Boolean>] [-EnableShareableLink <Boolean>]
  [-EnableSessionRecording <Boolean>] [-AsJob] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>]
+ [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetwork
@@ -80,7 +81,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressRgName 
  [-EnableKerberos <Boolean>] [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>]
  [-EnableIpConnect <Boolean>] [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob]
  [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkRGNameByVirtualNetworkName
@@ -90,7 +91,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressRgName 
  [-ScaleUnit <Int32>] [-EnableKerberos <Boolean>] [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>]
  [-EnableIpConnect <Boolean>] [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob]
  [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkId
@@ -100,7 +101,7 @@ New-AzBastion -ResourceGroupName <String> -Name <String> -PublicIpAddressRgName 
  [-EnableKerberos <Boolean>] [-DisableCopyPaste <Boolean>] [-EnableTunneling <Boolean>]
  [-EnableIpConnect <Boolean>] [-EnableShareableLink <Boolean>] [-EnableSessionRecording <Boolean>] [-AsJob]
  [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -243,11 +244,41 @@ This example creates a BastionHost resource with Standard Sku and 3 Scale Units.
 
 ## PARAMETERS
 
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AsJob
 Run cmdlet in the background
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

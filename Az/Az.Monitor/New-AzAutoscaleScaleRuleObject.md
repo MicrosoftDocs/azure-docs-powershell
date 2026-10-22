@@ -1,7 +1,7 @@
 ---
 external help file: Az.Autoscale.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleScaleRuleObject
+online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azautoscalescaleruleobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleScaleRuleObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleScaleRuleObject.md
@@ -16,10 +16,9 @@ Create an in-memory object for ScaleRule.
 
 ```
 New-AzAutoscaleScaleRuleObject -MetricTriggerMetricName <String> -MetricTriggerMetricResourceUri <String>
- -MetricTriggerOperator <ComparisonOperationType> -MetricTriggerStatistic <MetricStatisticType>
- -MetricTriggerThreshold <Double> -MetricTriggerTimeAggregation <TimeAggregationType>
- -MetricTriggerTimeGrain <TimeSpan> -MetricTriggerTimeWindow <TimeSpan> -ScaleActionCooldown <TimeSpan>
- -ScaleActionDirection <ScaleDirection> -ScaleActionType <ScaleType>
+ -MetricTriggerOperator <String> -MetricTriggerStatistic <String> -MetricTriggerThreshold <Double>
+ -MetricTriggerTimeAggregation <String> -MetricTriggerTimeGrain <TimeSpan> -MetricTriggerTimeWindow <TimeSpan>
+ -ScaleActionCooldown <TimeSpan> -ScaleActionDirection <String> -ScaleActionType <String>
  [-MetricTriggerDimension <IScaleRuleMetricDimension[]>] [-MetricTriggerDividePerInstance <Boolean>]
  [-MetricTriggerMetricNamespace <String>] [-MetricTriggerMetricResourceLocation <String>]
  [-ScaleActionValue <String>] [<CommonParameters>]
@@ -43,10 +42,9 @@ Create scale rule object
 ### -MetricTriggerDimension
 List of dimension conditions.
 For example: [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
-To construct, see NOTES section for METRICTRIGGERDIMENSION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IScaleRuleMetricDimension[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IScaleRuleMetricDimension[]
 Parameter Sets: (All)
 Aliases:
 
@@ -136,7 +134,7 @@ Accept wildcard characters: False
 the operator that is used to compare the metric data and the threshold.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.ComparisonOperationType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -152,7 +150,7 @@ the metric statistic type.
 How the metrics from multiple instances are combined.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.MetricStatisticType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -184,7 +182,7 @@ How the data that is collected should be combined over time.
 The default value is Average.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.TimeAggregationType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -250,7 +248,7 @@ the scale direction.
 Whether the scaling action increases or decreases the number of instances.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.ScaleDirection
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -265,7 +263,7 @@ Accept wildcard characters: False
 the type of action that should occur when the scale rule fires.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.ScaleType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -300,7 +298,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.ScaleRule
+### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.ScaleRule
 
 ## NOTES
 

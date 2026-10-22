@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzDataCollectionRuleAssociation
 
 ## SYNOPSIS
-Create an association.
+create an association.
 
 ## SYNTAX
 
@@ -34,7 +34,7 @@ New-AzDataCollectionRuleAssociation -AssociationName <String> -ResourceUri <Stri
 ```
 
 ## DESCRIPTION
-Create an association.
+create an association.
 
 ## EXAMPLES
 

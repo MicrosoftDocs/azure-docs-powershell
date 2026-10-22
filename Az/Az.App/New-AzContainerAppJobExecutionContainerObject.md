@@ -72,7 +72,6 @@ Accept wildcard characters: False
 
 ### -Env
 Container environment variables.
-To construct, see NOTES section for ENV properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IEnvironmentVar[]

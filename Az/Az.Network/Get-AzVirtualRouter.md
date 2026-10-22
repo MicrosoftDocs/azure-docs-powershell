@@ -16,7 +16,8 @@ Get an Azure VirtualRouter
 
 ### VirtualRouterSubscriptionIdParameterSet (Default)
 ```
-Get-AzVirtualRouter [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzVirtualRouter [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### VirtualRouterNameParameterSet
@@ -27,7 +28,8 @@ Get-AzVirtualRouter -ResourceGroupName <String> [-RouterName <String>]
 
 ### VirtualRouterResourceIdParameterSet
 ```
-Get-AzVirtualRouter -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzVirtualRouter -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

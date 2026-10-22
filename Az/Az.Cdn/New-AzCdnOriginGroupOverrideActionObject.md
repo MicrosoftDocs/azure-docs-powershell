@@ -1,7 +1,7 @@
 ---
 external help file: Az.Cdn-help.xml
 Module Name: Az.Cdn
-online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-AzCdnOriginGroupOverrideActionObject
+online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azcdnorigingroupoverrideactionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnOriginGroupOverrideActionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnOriginGroupOverrideActionObject.md
@@ -15,7 +15,7 @@ Create an in-memory object for OriginGroupOverrideAction.
 ## SYNTAX
 
 ```
-New-AzCdnOriginGroupOverrideActionObject -Name <DeliveryRuleAction> [-OriginGroupId <String>]
+New-AzCdnOriginGroupOverrideActionObject -ParameterTypeName <String> [-OriginGroupId <String>]
  [<CommonParameters>]
 ```
 
@@ -39,21 +39,6 @@ Create an in-memory object for AzureCDN OriginGroupOverrideAction
 
 ## PARAMETERS
 
-### -Name
-The name of the action for the delivery rule.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DeliveryRuleAction
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OriginGroupId
 Resource ID.
 
@@ -69,6 +54,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ParameterTypeName
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -76,7 +75,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.OriginGroupOverrideAction
+### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.OriginGroupOverrideAction
 
 ## NOTES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridPartnerDestination
 
 ## SYNOPSIS
-Asynchronously updates a partner destination with the specified parameters.
+Asynchronously update a partner destination with the specified parameters.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Update-AzEventGridPartnerDestination -InputObject <IEventGridIdentity> [-Tag <Ha
 ```
 
 ## DESCRIPTION
-Asynchronously updates a partner destination with the specified parameters.
+Asynchronously update a partner destination with the specified parameters.
 
 ## EXAMPLES
 

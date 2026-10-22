@@ -1,7 +1,7 @@
 ---
 external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceDataFactoryObject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-azmlworkspacedatafactoryobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDataFactoryObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDataFactoryObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for DataFactory.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceDataFactoryObject [-Description <String>] [-DisableLocalAuth <Boolean>] [-ResourceId <String>]
- [<CommonParameters>]
+New-AzMLWorkspaceDataFactoryObject [-Description <String>] [-DisableLocalAuth <Boolean>] [-Location <String>]
+ [-ResourceId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,6 +63,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Location for the underlying compute.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceId
 ARM resource id of the underlying compute.
 
@@ -85,7 +100,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.DataFactory
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.DataFactory
 
 ## NOTES
 

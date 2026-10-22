@@ -17,13 +17,15 @@ Get a replica for a Container App Revision.
 ### List (Default)
 ```
 Get-AzContainerAppRevisionReplica -ContainerAppName <String> -ResourceGroupName <String> -RevisionName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+ [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### Get
 ```
 Get-AzContainerAppRevisionReplica -ContainerAppName <String> -Name <String> -ResourceGroupName <String>
- -RevisionName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+ -RevisionName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### GetViaIdentityRevision
@@ -40,7 +42,8 @@ Get-AzContainerAppRevisionReplica -Name <String> -RevisionName <String> -Contain
 
 ### GetViaIdentity
 ```
-Get-AzContainerAppRevisionReplica -InputObject <IAppIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzContainerAppRevisionReplica -InputObject <IAppIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -108,7 +111,6 @@ Get a replica for a Container App Revision.
 
 ### -ContainerAppInputObject
 Identity Parameter
-To construct, see NOTES section for CONTAINERAPPINPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -155,7 +157,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -202,7 +203,6 @@ Accept wildcard characters: False
 
 ### -RevisionInputObject
 Identity Parameter
-To construct, see NOTES section for REVISIONINPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity

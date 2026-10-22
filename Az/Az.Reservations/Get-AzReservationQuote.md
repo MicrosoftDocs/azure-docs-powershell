@@ -19,16 +19,21 @@ Calculate price for placing a `ReservationOrder`.
 Get-AzReservationQuote [-AppliedScope <String[]>] [-AppliedScopePropertyDisplayName <String>]
  [-AppliedScopePropertyManagementGroupId <String>] [-AppliedScopePropertyResourceGroupId <String>]
  [-AppliedScopePropertySubscriptionId <String>] [-AppliedScopePropertyTenantId <String>]
- [-AppliedScopeType <AppliedScopeType>] [-BillingPlan <ReservationBillingPlan>] [-BillingScopeId <String>]
- [-DisplayName <String>] [-InstanceFlexibility <InstanceFlexibility>] [-Location <String>] [-Quantity <Int32>]
- [-Renew] [-ReservedResourceType <ReservedResourceType>] [-ReviewDateTime <DateTime>] [-Sku <String>]
- [-Term <ReservationTerm>] [-DefaultProfile <PSObject>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-AppliedScopeType <String>] [-BillingPlan <String>] [-BillingScopeId <String>] [-DisplayName <String>]
+ [-InstanceFlexibility <String>] [-Location <String>] [-Quantity <Int32>] [-Renew]
+ [-ReservedResourceType <String>] [-ReviewDateTime <DateTime>] [-Sku <String>] [-Term <String>]
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Calculate
+### CalculateViaJsonFilePath
 ```
-Get-AzReservationQuote -Body <IPurchaseRequest> [-DefaultProfile <PSObject>]
+Get-AzReservationQuote -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CalculateViaJsonString
+```
+Get-AzReservationQuote -JsonString <String> [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -221,7 +226,7 @@ Accept wildcard characters: False
 Type of the Applied Scope.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.AppliedScopeType
+Type: System.String
 Parameter Sets: CalculateExpanded
 Aliases:
 
@@ -236,7 +241,7 @@ Accept wildcard characters: False
 Represent the billing plans.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.ReservationBillingPlan
+Type: System.String
 Parameter Sets: CalculateExpanded
 Aliases:
 
@@ -259,22 +264,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Body
-The request for reservation purchase
-To construct, see NOTES section for BODY properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IPurchaseRequest
-Parameter Sets: Calculate
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -314,11 +303,41 @@ Turning this on will apply the reservation discount to other VMs in the same VM 
 Only specify for VirtualMachines reserved resource type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.InstanceFlexibility
+Type: System.String
 Parameter Sets: CalculateExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Calculate operation
+
+```yaml
+Type: System.String
+Parameter Sets: CalculateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Calculate operation
+
+```yaml
+Type: System.String
+Parameter Sets: CalculateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -374,7 +393,7 @@ Accept wildcard characters: False
 The type of the resource that is being reserved.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.ReservedResourceType
+Type: System.String
 Parameter Sets: CalculateExpanded
 Aliases:
 
@@ -419,7 +438,7 @@ Accept wildcard characters: False
 Represent the term of reservation.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.ReservationTerm
+Type: System.String
 Parameter Sets: CalculateExpanded
 Aliases:
 
@@ -466,11 +485,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IPurchaseRequest
-
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.ICalculatePriceResponseProperties
+### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.ICalculatePriceResponse
 
 ## NOTES
 

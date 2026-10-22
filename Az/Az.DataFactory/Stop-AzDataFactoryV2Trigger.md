@@ -16,7 +16,7 @@ Stops a trigger in a data factory.
 
 ### ByFactoryName (Default)
 ```
-Stop-AzDataFactoryV2Trigger [-Name] <String> [-ResourceGroupName] <String> [-DataFactoryName] <String> [-Force]
+Stop-AzDataFactoryV2Trigger [-Name] <String> [-Force] [-ResourceGroupName] <String> [-DataFactoryName] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Stop-AzDataFactoryV2Trigger [-InputObject] <PSTrigger> [-Force] [-DefaultProfile
 
 ### ByResourceId
 ```
-Stop-AzDataFactoryV2Trigger [-ResourceId] <String> [-Force] [-DefaultProfile <IAzureContextContainer>]
+Stop-AzDataFactoryV2Trigger [-Force] [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -189,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -205,10 +205,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-AzDataFactoryV2Trigger]()
+[Get-AzDataFactoryV2Trigger](Get-AzDataFactoryV2Trigger.md)
 
-[Set-AzDataFactoryV2Trigger]()
+[Set-AzDataFactoryV2Trigger](Set-AzDataFactoryV2Trigger.md)
 
-[Start-AzDataFactoryV2Trigger]()
+[Start-AzDataFactoryV2Trigger](Start-AzDataFactoryV2Trigger.md)
 
-[Remove-AzDataFactoryV2Trigger]()
+[Remove-AzDataFactoryV2Trigger](Remove-AzDataFactoryV2Trigger.md)

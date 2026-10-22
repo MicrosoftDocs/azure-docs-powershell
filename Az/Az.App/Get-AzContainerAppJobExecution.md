@@ -17,7 +17,8 @@ Get details of a single job execution
 ### Job (Default)
 ```
 Get-AzContainerAppJobExecution -JobName <String> -Name <String> -ResourceGroupName <String>
- [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+ [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### JobViaIdentityJob
@@ -28,7 +29,8 @@ Get-AzContainerAppJobExecution -Name <String> -JobInputObject <IAppIdentity> [-D
 
 ### JobViaIdentity
 ```
-Get-AzContainerAppJobExecution -InputObject <IAppIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzContainerAppJobExecution -InputObject <IAppIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,7 +71,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -85,7 +86,6 @@ Accept wildcard characters: False
 
 ### -JobInputObject
 Identity Parameter
-To construct, see NOTES section for JOBINPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity

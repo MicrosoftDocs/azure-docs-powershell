@@ -1,7 +1,7 @@
 ---
 external help file: Az.SpringCloud-help.xml
 Module Name: Az.SpringCloud
-online version: https://learn.microsoft.com/powershell/module/az.SpringCloud/new-AzSpringCloudAppDeploymentJarUploadedObject
+online version: https://learn.microsoft.com/powershell/module/Az.SpringCloud/new-azspringcloudappdeploymentjaruploadedobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudAppDeploymentJarUploadedObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudAppDeploymentJarUploadedObject.md
@@ -91,10 +91,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.JarUploadedUserSourceInfo
+### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.JarUploadedUserSourceInfo
 
 ## NOTES
-
-ALIASES
 
 ## RELATED LINKS

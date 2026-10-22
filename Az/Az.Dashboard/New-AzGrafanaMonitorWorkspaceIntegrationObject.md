@@ -1,7 +1,7 @@
 ---
 external help file: Az.Dashboard-help.xml
 Module Name: Az.Dashboard
-online version: https://learn.microsoft.com/powershell/module/az.dashboard/new-azgrafanamonitorworkspaceintegrationobject
+online version: https://learn.microsoft.com/powershell/module/Az.Dashboard/new-azgrafanamonitorworkspaceintegrationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/New-AzGrafanaMonitorWorkspaceIntegrationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/New-AzGrafanaMonitorWorkspaceIntegrationObject.md
@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Dashboard.Models.Api20220801.AzureMonitorWorkspaceIntegration
+### Microsoft.Azure.PowerShell.Cmdlets.Dashboard.Models.AzureMonitorWorkspaceIntegration
 
 ## NOTES
 

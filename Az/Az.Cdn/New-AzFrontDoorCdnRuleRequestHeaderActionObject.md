@@ -1,7 +1,7 @@
 ---
 external help file: Az.Cdn-help.xml
 Module Name: Az.Cdn
-online version: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnRuleRequestHeaderActionObject
+online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnrulerequestheaderactionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRequestHeaderActionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRequestHeaderActionObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for DeliveryRuleRequestHeaderAction.
 ## SYNTAX
 
 ```
-New-AzFrontDoorCdnRuleRequestHeaderActionObject -ParameterHeaderAction <HeaderAction>
- -ParameterHeaderName <String> -Name <DeliveryRuleAction> [-ParameterValue <String>]
+New-AzFrontDoorCdnRuleRequestHeaderActionObject -ParameterHeaderAction <String> -ParameterHeaderName <String>
+ -ParameterTypeName <String> [-ParameterValue <String>]
  [<CommonParameters>]
 ```
 
@@ -40,26 +40,11 @@ Create an in-memory object for DeliveryRuleRequestHeaderAction
 
 ## PARAMETERS
 
-### -Name
-The name of the action for the delivery rule.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DeliveryRuleAction
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ParameterHeaderAction
 Action to perform.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.HeaderAction
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -77,6 +62,20 @@ Name of the header to modify.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParameterTypeName
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Name
 
 Required: True
 Position: Named
@@ -107,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.DeliveryRuleRequestHeaderAction
+### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.DeliveryRuleRequestHeaderAction
 
 ## NOTES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzNewRelicMonitorTagRule
 
 ## SYNOPSIS
-Update a TagRule
+Update the tag rules for a specific New Relic monitor resource, allowing you to modify the rules that control which Azure resources are monitored
 
 ## SYNTAX
 
@@ -55,7 +55,7 @@ Update-AzNewRelicMonitorTagRule -InputObject <INewRelicIdentity> [-LogRuleFilter
 ```
 
 ## DESCRIPTION
-Update a TagRule
+Update the tag rules for a specific New Relic monitor resource, allowing you to modify the rules that control which Azure resources are monitored
 
 ## EXAMPLES
 

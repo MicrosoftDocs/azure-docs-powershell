@@ -1,7 +1,7 @@
 ---
 external help file: Az.NetworkCloud-help.xml
 Module Name: Az.NetworkCloud
-online version: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudEgressEndpointObject
+online version: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-aznetworkcloudegressendpointobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEgressEndpointObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEgressEndpointObject.md
@@ -60,10 +60,9 @@ Accept wildcard characters: False
 
 ### -Endpoint
 The list of endpoint dependencies.
-To construct, see NOTES section for ENDPOINT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.IEndpointDependency[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.IEndpointDependency[]
 Parameter Sets: (All)
 Aliases:
 
@@ -81,7 +80,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.EgressEndpoint
+### Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.EgressEndpoint
 
 ## NOTES
 

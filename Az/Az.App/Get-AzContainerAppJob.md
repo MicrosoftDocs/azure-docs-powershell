@@ -16,7 +16,8 @@ Get the properties of a Container Apps Job.
 
 ### List (Default)
 ```
-Get-AzContainerAppJob [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzContainerAppJob [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### Get
@@ -33,7 +34,8 @@ Get-AzContainerAppJob -ResourceGroupName <String> [-SubscriptionId <String[]>] [
 
 ### GetViaIdentity
 ```
-Get-AzContainerAppJob -InputObject <IAppIdentity> [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzContainerAppJob -InputObject <IAppIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +102,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity

@@ -21,6 +21,12 @@ Get-AzSentinelIncidentComment -IncidentId <String> -ResourceGroupName <String> [
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
+### GetViaIdentityIncident
+```
+Get-AzSentinelIncidentComment -Id <String> -IncidentInputObject <ISecurityInsightsIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### Get
 ```
 Get-AzSentinelIncidentComment -Id <String> -IncidentId <String> -ResourceGroupName <String>
@@ -110,7 +116,7 @@ Incident comment ID
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: GetViaIdentityIncident, Get
 Aliases: IncidentCommentId
 
 Required: True
@@ -135,9 +141,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncidentInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+Parameter Sets: GetViaIdentityIncident
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
@@ -255,7 +275,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.IIncidentComment
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.IIncidentComment
 
 ## NOTES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzQuotaOperation
 
 ## SYNOPSIS
-List all the operations supported by the Microsoft.Quota resource provider.
+List the operations for the provider
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Get-AzQuotaOperation [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-List all the operations supported by the Microsoft.Quota resource provider.
+List the operations for the provider
 
 ## EXAMPLES
 

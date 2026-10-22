@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFirmwareAnalysisFirmware
 
 ## SYNOPSIS
-The operation to Create a firmware.
+The operation to create a firmware.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ New-AzFirmwareAnalysisFirmware -ResourceGroupName <String> -WorkspaceName <Strin
 ```
 
 ## DESCRIPTION
-The operation to Create a firmware.
+The operation to create a firmware.
 
 ## EXAMPLES
 

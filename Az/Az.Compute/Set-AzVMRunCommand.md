@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzVMRunCommand
 
 ## SYNOPSIS
-The operation to create or update the run command.
+The operation to update the run command.
 
 ## SYNTAX
 
@@ -42,14 +42,28 @@ Set-AzVMRunCommand -ResourceGroupName <String> -RunCommandName <String> -VMName 
  [<CommonParameters>]
 ```
 
+### UpdateViaJsonFilePath
+```
+Set-AzVMRunCommand -ResourceGroupName <String> -RunCommandName <String> -VMName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaJsonString
+```
+Set-AzVMRunCommand -ResourceGroupName <String> -RunCommandName <String> -VMName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-The operation to create or update the run command.
+The operation to update the run command.
 
 ## EXAMPLES
 
 ### Example 1: Create or update Run Command on a VM using a storage blob SAS URL
 ```powershell
-Set-AzVMRunCommand -ResourceGroupName MyRG0 -VMName MyVMEE -RunCommandName MyRunCommand -Location EastUS2EUAP -SourceScriptUri "https://myst.blob.core.windows.net/mycontainer/myscript.ps1?sp=r&st=2022-10-27T21:02:35Z&se=2022-10-28T05:02:35Z&spr=https&sv=2021-06-08&sr=b&sig=0I%2FIiYayRwHasfasasfdasdfasdeTsQjLnpZjA%3D"
+Set-AzVMRunCommand -ResourceGroupName MyRG0 -VMName MyVMEE -RunCommandName MyRunCommand -Location EastUS2EUAP -SourceScriptUri "https://myst.blob.core.windows.net/mycontainer/myscript.ps1?sp=r&st=2022-10-27T21:02:35Z&se=2022-10-28T05:02:35Z&spr=https&sv=2021-06-08&sr=b&sig=******"
 ```
 
 ```output
@@ -107,7 +121,7 @@ Available commandIds can be retrieved using Get-AzVMRunCommandDocument.
 
 ### Example 5: Create or update Run Command on a VM and stream standard output and standard error messages to output and error Append blobs.
 ```powershell
-Set-AzVMRunCommand -ResourceGroupName MyRG0 -VMName MyVML -RunCommandName MyRunCommand3 -Location EastUS2EUAP -ScriptLocalPath "C:\MyScriptsDir\MyScript.ps1" -OutputBlobUri "https://vivst.blob.core.windows.net/vivcontainer/output.txt?sp=racw&st=2022-10-27T22:18:36Z&se=2022-10-28T06:18:36Z&spr=https&sv=2021-06-08&sr=b&sig=HQAu3Bl%2BKMofYTjMo8o5hasfadsfasdF4jIkRJra4S5FlEo%3D" -ErrorBlobUri "https://vivst.blob.core.windows.net/vivcontainer/error.txt?sp=racw&st=2022-10-27T22:18:36Z&se=2022-10-28T06:18:36Z&spr=https&sv=2021-06-08&sr=b&sig=HQAu3Bl%2BKMofYTjMo8o5h%asfasdfgdT%2F4jasfasdf5FlEo%3D"
+Set-AzVMRunCommand -ResourceGroupName MyRG0 -VMName MyVML -RunCommandName MyRunCommand3 -Location EastUS2EUAP -ScriptLocalPath "C:\MyScriptsDir\MyScript.ps1" -OutputBlobUri "https://vivst.blob.core.windows.net/vivcontainer/output.txt?sp=racw&st=2022-10-27T22:18:36Z&se=2022-10-28T06:18:36Z&spr=https&sv=2021-06-08&sr=b&sig=******" -ErrorBlobUri "https://vivst.blob.core.windows.net/vivcontainer/error.txt?sp=racw&st=2022-10-27T22:18:36Z&se=2022-10-28T06:18:36Z&spr=https&sv=2021-06-08&sr=b&sig=******"
 ```
 
 ```output
@@ -160,7 +174,7 @@ If set to true, provisioning will complete as soon as the script starts and will
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -192,7 +206,7 @@ ObjectId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -208,7 +222,7 @@ ClientId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -225,10 +239,40 @@ Refer errorBlobManagedIdentity parameter.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Update operation
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Update operation
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -240,7 +284,7 @@ Resource location
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: True
@@ -271,7 +315,7 @@ ObjectId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -287,7 +331,7 @@ ClientId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -304,7 +348,7 @@ Refer outputBlobManagedIdentity parameter.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -316,11 +360,10 @@ Accept wildcard characters: False
 
 ### -Parameter
 The parameters used by the script.
-To construct, see NOTES section for PARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20230701.IRunCommandInputParameter[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IRunCommandInputParameter[]
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -332,11 +375,10 @@ Accept wildcard characters: False
 
 ### -ProtectedParameter
 The parameters used by the script.
-To construct, see NOTES section for PROTECTEDPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20230701.IRunCommandInputParameter[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IRunCommandInputParameter[]
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -366,7 +408,7 @@ Specifies the user account password on the VM when executing the run command.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -381,7 +423,7 @@ Specifies the user account on the VM when executing the run command.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -426,7 +468,7 @@ ObjectId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -442,7 +484,7 @@ ClientId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -519,7 +561,7 @@ Resource tags
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -534,7 +576,7 @@ The timeout in seconds to execute the run command.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -552,7 +594,7 @@ See instance view of run command in case of script failures to see executionMess
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded, ScriptLocalPath
 Aliases:
 
 Required: False
@@ -615,7 +657,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20230701.IVirtualMachineRunCommand
+### Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IVirtualMachineRunCommand
 
 ## NOTES
 

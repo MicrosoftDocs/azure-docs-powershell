@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridSystemTopicEventSubscription
 
 ## SYNOPSIS
-Asynchronously creates or updates an event subscription with the specified parameters.
+Asynchronously create an event subscription with the specified parameters.
 Existing event subscriptions will be updated with this API.
 
 ## SYNTAX
@@ -74,7 +74,7 @@ New-AzEventGridSystemTopicEventSubscription -InputObject <IEventGridIdentity>
 ```
 
 ## DESCRIPTION
-Asynchronously creates or updates an event subscription with the specified parameters.
+Asynchronously create an event subscription with the specified parameters.
 Existing event subscriptions will be updated with this API.
 
 ## EXAMPLES
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterIsSubjectCaseSensitive
-Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filtershould be compared in a case sensitive manner.
+Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter should be compared in a case sensitive manner.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

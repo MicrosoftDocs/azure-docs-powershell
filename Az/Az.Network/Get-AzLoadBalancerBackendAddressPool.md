@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzLoadBalancerBackendAddressPool
 
 ## SYNOPSIS
-Get-AzLoadBalancerBackendAddressPool retrieves one or more backend address pools associated with a load balancer. 
+Get-AzLoadBalancerBackendAddressPool retrieves one or more backend address pools associated with a load balancer.
 
 ## SYNTAX
 
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoadBalancer
-{{ Fill LoadBalancer Description }}
+Specifies a **LoadBalancer** object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Network.Models.PSLoadBalancer

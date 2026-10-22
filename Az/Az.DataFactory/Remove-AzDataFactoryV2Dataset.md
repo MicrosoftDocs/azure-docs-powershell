@@ -16,8 +16,9 @@ Removes a dataset from Data Factory.
 
 ### ByFactoryName (Default)
 ```
-Remove-AzDataFactoryV2Dataset [-Name] <String> [-ResourceGroupName] <String> [-DataFactoryName] <String>
- [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-AzDataFactoryV2Dataset [-Name] <String> [-Force] [-ResourceGroupName] <String>
+ [-DataFactoryName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByInputObject
@@ -28,7 +29,7 @@ Remove-AzDataFactoryV2Dataset [-InputObject] <PSDataset> [-Force] [-DefaultProfi
 
 ### ByResourceId
 ```
-Remove-AzDataFactoryV2Dataset [-ResourceId] <String> [-Force] [-DefaultProfile <IAzureContextContainer>]
+Remove-AzDataFactoryV2Dataset [-Force] [-ResourceId] <String> [-DefaultProfile <IAzureContextContainer>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,7 +44,7 @@ Remove-AzDataFactoryV2Dataset -ResourceGroupName "ADF" -DataFactoryName "WikiADF
 ```
 
 ```output
-          Confirm
+Confirm
           Are you sure you want to remove dataset 'DAWikiAggregatedData' in data factory 'WikiADF'?
           [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
           True
@@ -192,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -209,6 +210,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, data, factories
 
 ## RELATED LINKS
 
-[Get-AzDataFactoryV2Dataset]()
+[Get-AzDataFactoryV2Dataset](Get-AzDataFactoryV2Dataset.md)
 
-[Set-AzDataFactoryV2Dataset]()
+[Set-AzDataFactoryV2Dataset](Set-AzDataFactoryV2Dataset.md)

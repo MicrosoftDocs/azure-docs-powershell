@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridClient
 
 ## SYNOPSIS
-Update a client with the specified parameters.
+update a client with the specified parameters.
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Update-AzEventGridClient -InputObject <IEventGridIdentity> [-Attribute <Hashtabl
 ```
 
 ## DESCRIPTION
-Update a client with the specified parameters.
+update a client with the specified parameters.
 
 ## EXAMPLES
 

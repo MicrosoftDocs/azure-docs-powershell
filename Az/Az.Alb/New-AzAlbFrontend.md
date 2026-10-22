@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzAlbFrontend
 
 ## SYNOPSIS
-Create a Frontend
+create a Frontend
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzAlbFrontend -AlbName <String> -Name <String> -ResourceGroupName <String> [
 ```
 
 ## DESCRIPTION
-Create a Frontend
+create a Frontend
 
 ## EXAMPLES
 

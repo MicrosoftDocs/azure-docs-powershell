@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzConnectedLicense
 
 ## SYNOPSIS
-The operation to create or update a license.
+The operation to create a license.
 
 ## SYNTAX
 
@@ -63,7 +63,7 @@ New-AzConnectedLicense -InputObject <IConnectedMachineIdentity> -Parameter <ILic
 ```
 
 ## DESCRIPTION
-The operation to create or update a license.
+The operation to create a license.
 
 ## EXAMPLES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzAlbAssociation
 
 ## SYNOPSIS
-Update a Association
+update a Association
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Update-AzAlbAssociation -InputObject <IAlbIdentity> [-AssociationType <String>] 
 ```
 
 ## DESCRIPTION
-Update a Association
+update a Association
 
 ## EXAMPLES
 

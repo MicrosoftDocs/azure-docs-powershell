@@ -28,6 +28,13 @@ Get-AzStaticWebAppUserProvidedFunctionApp -EnvironmentName <String> -Name <Strin
  [<CommonParameters>]
 ```
 
+### GetViaIdentityStaticSite
+```
+Get-AzStaticWebAppUserProvidedFunctionApp -EnvironmentName <String> -FunctionAppName <String>
+ -StaticSiteInputObject <IWebsitesIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
 ### Get
 ```
 Get-AzStaticWebAppUserProvidedFunctionApp -EnvironmentName <String> -FunctionAppName <String> -Name <String>
@@ -40,6 +47,12 @@ Get-AzStaticWebAppUserProvidedFunctionApp -EnvironmentName <String> -FunctionApp
 Get-AzStaticWebAppUserProvidedFunctionApp -FunctionAppName <String> -Name <String> -ResourceGroupName <String>
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
+```
+
+### GetViaIdentityBuild
+```
+Get-AzStaticWebAppUserProvidedFunctionApp -FunctionAppName <String> -BuildInputObject <IWebsitesIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -120,6 +133,21 @@ This command gets the details of the user provided function app registered with 
 
 ## PARAMETERS
 
+### -BuildInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity
+Parameter Sets: GetViaIdentityBuild
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
 Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
@@ -141,7 +169,7 @@ The stage site identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get
+Parameter Sets: List, GetViaIdentityStaticSite, Get
 Aliases:
 
 Required: True
@@ -156,7 +184,7 @@ Name of the function app registered with the static site build.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List2
+Parameter Sets: GetViaIdentityStaticSite, Get, List2, GetViaIdentityBuild
 Aliases:
 
 Required: True
@@ -168,7 +196,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity
@@ -212,6 +239,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StaticSiteInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity
+Parameter Sets: GetViaIdentityStaticSite
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 Your Azure subscription ID.
 This is a GUID-formatted string (e.g.
@@ -238,7 +280,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.Api20201201.IStaticSiteUserProvidedFunctionAppArmResource
+### Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IStaticSiteUserProvidedFunctionAppArmResource
 
 ## NOTES
 

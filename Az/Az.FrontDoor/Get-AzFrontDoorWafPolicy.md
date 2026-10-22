@@ -1,5 +1,5 @@
 ---
-external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+external help file: Az.FrontDoor-help.xml
 Module Name: Az.FrontDoor
 online version: https://learn.microsoft.com/powershell/module/az.frontdoor/get-azfrontdoorwafpolicy
 schema: 2.0.0
@@ -10,17 +10,36 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzFrontDoorWafPolicy
 
 ## SYNOPSIS
-Get WAF policy
+Retrieve protection policy with specified name within a resource group.
 
 ## SYNTAX
 
+### List (Default)
 ```
-Get-AzFrontDoorWafPolicy -ResourceGroupName <String> [-Name <String>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzFrontDoorWafPolicy [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### Get
+```
+Get-AzFrontDoorWafPolicy -Name <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### List1
+```
+Get-AzFrontDoorWafPolicy -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-AzFrontDoorWafPolicy -InputObject <IFrontDoorIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Get-AzFrontDoorWafPolicy** cmdletGet gets WAF policy in a resource group under the current subscription
+Retrieve protection policy with specified name within a resource group.
 
 ## EXAMPLES
 
@@ -30,9 +49,36 @@ Get-AzFrontDoorWafPolicy -Name $policyName -ResourceGroupName $resourceGroupName
 ```
 
 ```output
-Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
-----         ---------- ------------------ ----------------------------- -----------
-{policyName} Prevention            Enabled                           403 https://www.bing.com/
+Customrule           : {customrule0, customrule01}
+Etag                 :
+FrontendEndpointLink : {}
+Id                   : /subscriptions/{subid}/resourcegroups/{rg}/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/{policyName}
+Location             : Global
+ManagedRuleSet       : {{
+                         "ruleSetType": "Microsoft_DefaultRuleSet",
+                         "ruleSetVersion": "2.0",
+                         "ruleSetAction": "Block",
+                         "exclusions": [ ],
+                         "ruleGroupOverrides": [ ]
+                       }}
+Name                 : {policyName}
+PolicySetting        : {
+                         "enabledState": "Enabled",
+                         "mode": "Detection",
+                         "customBlockResponseStatusCode": 403,
+                         "requestBodyCheck": "Enabled"
+                       }
+ProvisioningState    : Succeeded
+ResourceGroupName    : {rg}
+ResourceState        : Enabled
+RoutingRuleLink      :
+SecurityPolicyLink   : {{
+                         "id": "/subscriptions/{subid}/resourcegroups/{rg}/providers/Microsoft.Cdn/profiles/hdis-fe/securitypolicies/premium"
+                       }}
+SkuName              : Premium_AzureFrontDoor
+Tag                  : {
+                       }
+Type                 : Microsoft.Network/frontdoorwebapplicationfirewallpolicies
 ```
 
 Get a WAF policy called $policyName in $resourceGroupName
@@ -43,11 +89,17 @@ Get-AzFrontDoorWafPolicy -ResourceGroupName $resourceGroupName
 ```
 
 ```output
-Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
-----         ---------- ------------------ ----------------------------- -----------
-{policyName} Prevention           Disabled
-{policyName} Detection             Enabled                           403 https://www.bing.com/
-{policyName} Detection             Enabled                           404
+Location Name              Etag ResourceGroupName
+-------- ----              ---- -----------------
+Global   n1                     rg
+Global   n2                     rg
+Global   n3                     rg
+Global   n4                     rg
+Global   n5                     rg
+Global   n6                     rg
+Global   n7                     rg
+Global   n8                     rg
+Global   n9                     rg
 ```
 
 Get all WAF policy in $resourceGroupName
@@ -55,12 +107,13 @@ Get all WAF policy in $resourceGroupName
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
-Aliases: AzContext, AzureRmContext, AzureCredential
+Aliases: AzureRMContext, AzureCredential
 
 Required: False
 Position: Named
@@ -69,15 +122,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.IFrontDoorIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Name
-FireWallPolicy name.
+The name of the Web Application Firewall Policy.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Get
+Aliases: PolicyName
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -85,11 +153,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The resource group name.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Get, List1
 Aliases:
 
 Required: True
@@ -99,21 +168,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SubscriptionId
+The ID of the target subscription.
+
+```yaml
+Type: System.String[]
+Parameter Sets: List, Get, List1
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
+### Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.IFrontDoorIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy
+### Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.IWebApplicationFirewallPolicy
 
 ## NOTES
 
 ## RELATED LINKS
-
-[New-AzFrontDoorWafPolicy](./New-AzFrontDoorWafPolicy.md)
-[Update-AzFrontDoorWafPolicy](./Update-AzFrontDoorWafPolicy.md)
-[Remove-AzFrontDoorWafPolicy](./Remove-AzFrontDoorWafPolicy.md)

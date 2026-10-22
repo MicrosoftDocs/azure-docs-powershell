@@ -15,7 +15,8 @@ Lists network usages for a subscription
 ## SYNTAX
 
 ```
-Get-AzNetworkUsage -Location <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzNetworkUsage -Location <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

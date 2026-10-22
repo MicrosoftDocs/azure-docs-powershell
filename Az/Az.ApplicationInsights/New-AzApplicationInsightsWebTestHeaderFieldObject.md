@@ -1,7 +1,7 @@
 ---
 external help file: Az.ApplicationInsights-help.xml
 Module Name: Az.ApplicationInsights
-online version: https://learn.microsoft.com/powershell/module/az.ApplicationInsights/new-AzApplicationInsightsWebTestHeaderFieldObject
+online version: https://learn.microsoft.com/powershell/module/Az.ApplicationInsights/new-azapplicationinsightswebtestheaderfieldobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTestHeaderFieldObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTestHeaderFieldObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzApplicationInsightsWebTestHeaderFieldObject
 
 ## SYNOPSIS
-Create a in-memory object for HeaderField
+Create an in-memory object for HeaderField.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ New-AzApplicationInsightsWebTestHeaderFieldObject [-Name <String>] [-Value <Stri
 ```
 
 ## DESCRIPTION
-Create a in-memory object for HeaderField
+Create an in-memory object for HeaderField.
 
 ## EXAMPLES
 
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220615.HeaderField
+### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.HeaderField
 
 ## NOTES
 

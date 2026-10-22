@@ -17,29 +17,28 @@ Update a StandbyVirtualMachinePoolResource
 ### UpdateExpanded (Default)
 ```
 Update-AzStandbyVMPool -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-MaxReadyCapacity <Int64>] [-Tag <Hashtable>] [-VMSSId <String>] [-VMState <String>]
- [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### UpdateViaJsonString
-```
-Update-AzStandbyVMPool -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -JsonString <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### UpdateViaJsonFilePath
-```
-Update-AzStandbyVMPool -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -JsonFilePath <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DynamicSizingEnabled] [-MaxReadyCapacity <Int64>] [-MinReadyCapacity <Int64>]
+ [-PostProvisioningDelay <String>] [-Tag <Hashtable>] [-VMSSId <String>] [-VMState <String>]
+ [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
-Update-AzStandbyVMPool -InputObject <IStandbyPoolIdentity> [-MaxReadyCapacity <Int64>] [-Tag <Hashtable>]
- [-VMSSId <String>] [-VMState <String>] [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzStandbyVMPool -InputObject <IStandbyPoolIdentity> [-DynamicSizingEnabled] [-MaxReadyCapacity <Int64>]
+ [-MinReadyCapacity <Int64>] [-PostProvisioningDelay <String>] [-Tag <Hashtable>] [-VMSSId <String>]
+ [-VMState <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### UpdateViaJsonFilePath
+```
+Update-AzStandbyVMPool -Name <String> -ResourceGroupName <String> -JsonFilePath <String>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+### UpdateViaJsonString
+```
+Update-AzStandbyVMPool -Name <String> -ResourceGroupName <String> -JsonString <String>
+ [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,12 +52,17 @@ Update-AzStandbyVMPool `
 -SubscriptionId f8da6e30-a9d8-48ab-b05c-3f7fe482e13b `
 -ResourceGroupName test-standbypool `
 -Name testPool `
--MaxReadyCapacity 2
+-MaxReadyCapacity 2 `
+-DynamicSizingEnabled `
+-PostProvisioningDelay "PT5S"
 ```
 
 ```output
 AttachedVirtualMachineScaleSetId  : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.Compute/virtualMachineScaleSets/test-vmss
+DynamicSizingEnabled              : True
 ElasticityProfileMaxReadyCapacity : 2
+ElasticityProfileMinReadyCapacity : 2
+ElasticityProfilePostProvisioningDelay : PT5S
 Id                                : /subscriptions/f8da6e30-a9d8-48ab-b05c-3f7fe482e13b/resourceGroups/test-standbypool/providers/Microsoft.StandbyPool/standbyVirtualMachinePools/testPool
 Location                          : eastus
 Name                              : testPool
@@ -88,6 +92,21 @@ Use the SubscriptionId parameter when available if executing the cmdlet against 
 Type: System.Management.Automation.PSObject
 Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DynamicSizingEnabled
+Indicates whether dynamic sizing is enabled for the standby pool.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
 
 Required: False
 Position: Named
@@ -142,7 +161,23 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReadyCapacity
-Specifies maximum number of virtual machines in the standby virtual machine pool.
+Specifies the maximum number of virtual machines in the standby virtual machine pool.
+
+```yaml
+Type: System.Int64
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinReadyCapacity
+Specifies the desired minimum number of virtual machines in the standby virtual machine pool.
+MinReadyCapacity cannot exceed MaxReadyCapacity.
 
 ```yaml
 Type: System.Int64
@@ -161,10 +196,26 @@ Name of the standby virtual machine pool
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath
+Parameter Sets: UpdateExpanded, UpdateViaJsonFilePath, UpdateViaJsonString
 Aliases: StandbyVirtualMachinePoolName
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostProvisioningDelay
+Specifies the duration to wait after virtual machine provisioning before the virtual machine becomes available for use.
+The duration should be specified in ISO 8601 format (e.g., PT2S for 2 seconds).
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -177,7 +228,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath
+Parameter Sets: UpdateExpanded, UpdateViaJsonFilePath, UpdateViaJsonString
 Aliases:
 
 Required: True
@@ -193,7 +244,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath
+Parameter Sets: UpdateExpanded, UpdateViaJsonFilePath, UpdateViaJsonString
 Aliases:
 
 Required: False
@@ -293,3 +344,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

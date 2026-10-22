@@ -15,8 +15,8 @@ Create an in-memory object for UserAssignedIdentityAuthInfo.
 ## SYNTAX
 
 ```
-New-AzServiceLinkerUserAssignedIdentityAuthInfoObject [-ClientId <String>] [-SubscriptionId <String>]
- [<CommonParameters>]
+New-AzServiceLinkerUserAssignedIdentityAuthInfoObject [-ClientId <String>] [-Role <String[]>]
+ [-SubscriptionId <String>] [-UserName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,8 +54,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Role
+Optional, this value specifies the Azure role to be assigned.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 Subscription id for userAssignedIdentity.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserName
+Username created in the database which is mapped to a user in AAD.
 
 ```yaml
 Type: System.String
@@ -76,7 +106,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.Api20221101Preview.UserAssignedIdentityAuthInfo
+### Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.UserAssignedIdentityAuthInfo
 
 ## NOTES
 

@@ -16,8 +16,9 @@ Get a single workbook by its resourceName.
 
 ### List (Default)
 ```
-Get-AzApplicationInsightsWorkbook [-SubscriptionId <String[]>] [-CanFetchContent] -Category <CategoryType>
- [-Tag <String[]>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+Get-AzApplicationInsightsWorkbook [-SubscriptionId <String[]>] [-CanFetchContent] -Category <String>
+ [-Tag <System.Collections.Generic.List`1[System.String]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ### Get
@@ -29,8 +30,8 @@ Get-AzApplicationInsightsWorkbook -Name <String> -ResourceGroupName <String> [-S
 ### List1
 ```
 Get-AzApplicationInsightsWorkbook -ResourceGroupName <String> [-SubscriptionId <String[]>] [-CanFetchContent]
- -Category <CategoryType> [-Tag <String[]>] [-LinkedSourceId <String>] [-DefaultProfile <PSObject>]
- [<CommonParameters>]
+ -Category <String> [-Tag <System.Collections.Generic.List`1[System.String]>] [-LinkedSourceId <String>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### GetViaIdentity
@@ -135,7 +136,7 @@ Accept wildcard characters: False
 Category of workbook to return.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Support.CategoryType
+Type: System.String
 Parameter Sets: List, List1
 Aliases:
 
@@ -164,7 +165,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.IApplicationInsightsIdentity
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 Tags presents on each workbook returned.
 
 ```yaml
-Type: System.String[]
+Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: List, List1
 Aliases:
 
@@ -263,7 +263,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220401.IWorkbook
+### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.IWorkbook
 
 ## NOTES
 

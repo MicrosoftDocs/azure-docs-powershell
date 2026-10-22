@@ -20,6 +20,12 @@ Get-AzStorageMoverEndpoint -ResourceGroupName <String> -StorageMoverName <String
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
+### GetViaIdentityStorageMover
+```
+Get-AzStorageMoverEndpoint -Name <String> -StorageMoverInputObject <IStorageMoverIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### Get
 ```
 Get-AzStorageMoverEndpoint -Name <String> -ResourceGroupName <String> -StorageMoverName <String>
@@ -124,7 +130,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity
@@ -143,7 +148,7 @@ The name of the Endpoint resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: GetViaIdentityStorageMover, Get
 Aliases: EndpointName
 
 Required: True
@@ -166,6 +171,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageMoverInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity
+Parameter Sets: GetViaIdentityStorageMover
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -208,7 +228,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IEndpoint
+### Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IEndpoint
 
 ## NOTES
 

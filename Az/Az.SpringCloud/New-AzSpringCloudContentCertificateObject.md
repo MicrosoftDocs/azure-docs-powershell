@@ -1,7 +1,7 @@
 ---
 external help file: Az.SpringCloud-help.xml
 Module Name: Az.SpringCloud
-online version: https://learn.microsoft.com/powershell/module/az.SpringCloud/new-AzSpringCloudContentCertificateObject
+online version: https://learn.microsoft.com/powershell/module/Az.SpringCloud/new-azspringcloudcontentcertificateobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudContentCertificateObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudContentCertificateObject.md
@@ -15,7 +15,8 @@ Create an in-memory object for ContentCertificateProperties.
 ## SYNTAX
 
 ```
-New-AzSpringCloudContentCertificateObject [-Content <String>] [<CommonParameters>]
+New-AzSpringCloudContentCertificateObject [-Content <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -60,10 +61,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.ContentCertificateProperties
+### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.ContentCertificateProperties
 
 ## NOTES
-
-ALIASES
 
 ## RELATED LINKS

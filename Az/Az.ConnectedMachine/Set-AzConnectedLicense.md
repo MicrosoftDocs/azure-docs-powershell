@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzConnectedLicense
 
 ## SYNOPSIS
-The operation to create or update a license.
+The operation to update a license.
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ Set-AzConnectedLicense -Name <String> -ResourceGroupName <String> [-Subscription
 ```
 
 ## DESCRIPTION
-The operation to create or update a license.
+The operation to update a license.
 
 ## EXAMPLES
 

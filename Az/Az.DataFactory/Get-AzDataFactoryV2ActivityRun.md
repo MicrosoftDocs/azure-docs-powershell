@@ -39,7 +39,7 @@ Get-AzDataFactoryV2ActivityRun -ResourceGroupName "ADF" -DataFactoryName "WikiAD
 ```
 
 ```output
-    ResourceGroupName : ADF
+ResourceGroupName : ADF
     DataFactoryName   : WikiADF
     ActivityName      : MyWebActivity
     PipelineRunId     : f288712d-fb08-4cb8-96ef-82d3b9b30621
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -209,7 +209,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-AzDataFactoryV2Pipeline]()
+[Invoke-AzDataFactoryV2Pipeline](Invoke-AzDataFactoryV2Pipeline.md)
 
-[Get-AzDataFactoryV2PipelineRun]()
+[Get-AzDataFactoryV2PipelineRun](Get-AzDataFactoryV2PipelineRun.md)
 

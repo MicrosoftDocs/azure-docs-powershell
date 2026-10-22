@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewPowerBIDelegatedScanObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewpowerbidelegatedscanobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewPowerBIDelegatedScanObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewPowerBIDelegatedScanObject.md
@@ -15,11 +15,11 @@ Create an in-memory object for PowerBIDelegatedScan.
 ## SYNTAX
 
 ```
-New-AzPurviewPowerBIDelegatedScanObject -Kind <ScanAuthorizationType> [-AuthenticationType <String>]
- [-ClientId <String>] [-CollectionReferenceName <String>] [-CollectionType <String>]
- [-ConnectedViaReferenceName <String>] [-IncludePersonalWorkspace <Boolean>] [-Password <String>]
- [-ScanRulesetName <String>] [-ScanRulesetType <ScanRulesetType>] [-Tenant <String>] [-UserName <String>]
- [-Worker <Int32>] [<CommonParameters>]
+New-AzPurviewPowerBIDelegatedScanObject [-AuthenticationType <String>] [-ClientId <String>]
+ [-CollectionReferenceName <String>] [-CollectionType <String>] [-ConnectedViaReferenceName <String>]
+ [-IncludePersonalWorkspace <Boolean>] [-Password <String>] [-ScanRulesetName <String>]
+ [-ScanRulesetType <String>] [-Tenant <String>] [-UserName <String>] [-Worker <Int32>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -29,7 +29,7 @@ Create an in-memory object for PowerBIDelegatedScan.
 
 ### Example 1: Create PowerBI delegated scan object
 ```powershell
-New-AzPurviewPowerBIDelegatedScanObject -Kind 'PowerBIDelegated' -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -IncludePersonalWorkspace $true -ClientId 'xxxxxxx-cdfd-4016-9e80-xxxxxxxx' -UserName 'abcd@msft.com' -Password 'pwd'
+New-AzPurviewPowerBIDelegatedScanObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -IncludePersonalWorkspace $true -ClientId 'xxxxxxx-cdfd-4016-9e80-xxxxxxxx' -UserName 'abcd@msft.com' -Password 'pwd'
 ```
 
 ```output
@@ -142,20 +142,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ScanAuthorizationType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Password
 
 ```yaml
@@ -187,7 +173,7 @@ Accept wildcard characters: False
 ### -ScanRulesetType
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ScanRulesetType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -247,7 +233,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.PowerBiDelegatedScan
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.PowerBiDelegatedScan
 
 ## NOTES
 

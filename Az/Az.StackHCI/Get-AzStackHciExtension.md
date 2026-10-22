@@ -21,10 +21,22 @@ Get-AzStackHciExtension -ArcSettingName <String> -ClusterName <String> -Resource
  [<CommonParameters>]
 ```
 
+### GetViaIdentityCluster
+```
+Get-AzStackHciExtension -ArcSettingName <String> -Name <String> -ClusterInputObject <IStackHciIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### Get
 ```
 Get-AzStackHciExtension -ArcSettingName <String> -ClusterName <String> -Name <String>
  -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### GetViaIdentityArcSetting
+```
+Get-AzStackHciExtension -Name <String> -ArcSettingInputObject <IStackHciIdentity> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -55,18 +67,48 @@ To see the details use : "Write-Host( $extension | Format-List | Out-String)"
 
 ## PARAMETERS
 
+### -ArcSettingInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+Parameter Sets: GetViaIdentityArcSetting
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ArcSettingName
 The name of the proxy resource holding details of HCI ArcSetting information.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get
+Parameter Sets: List, GetViaIdentityCluster, Get
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClusterInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+Parameter Sets: GetViaIdentityCluster
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -103,7 +145,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
@@ -122,7 +163,7 @@ The name of the machine extension.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: GetViaIdentityCluster, Get, GetViaIdentityArcSetting
 Aliases: ExtensionName
 
 Required: True
@@ -173,7 +214,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IExtension
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IExtension
 
 ## NOTES
 

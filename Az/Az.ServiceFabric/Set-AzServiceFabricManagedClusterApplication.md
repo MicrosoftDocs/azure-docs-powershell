@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultServiceTypeMaxPercentUnhealthyPartitionsPerService
-Specifies the maximum percent of unhelthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade.
+Specifies the maximum percent of unhealthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade.
 
 ```yaml
 Type: System.Int32
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultServiceTypeMaxPercentUnhealthyReplicasPerPartition
-Specifies the maximum percent of unhelthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade.
+Specifies the maximum percent of unhealthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade.
 
 ```yaml
 Type: System.Int32
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultServiceTypeUnhealthyServicesMaxPercent
-Specifies the maximum percent of unhelthy services allowed by the health policy for the default service type to use for the monitored upgrade.
+Specifies the maximum percent of unhealthy services allowed by the health policy for the default service type to use for the monitored upgrade.
 
 ```yaml
 Type: System.Int32

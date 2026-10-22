@@ -16,7 +16,7 @@ Updates or creates the Azure Advisor Configuration.
 
 ### CreateByLCT (Default)
 ```
-Set-AzAdvisorConfiguration [-SubscriptionId <String>] [-Exclude] [-LowCpuThreshold <CpuThreshold>]
+Set-AzAdvisorConfiguration [-SubscriptionId <String>] [-Exclude] [-LowCpuThreshold <String>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Set-AzAdvisorConfiguration [-SubscriptionId <String>] -ResourceGroupName <String
 
 ### CreateByInputObject
 ```
-Set-AzAdvisorConfiguration -InputObject <IAdvisorIdentity> [-Exclude] [-LowCpuThreshold <CpuThreshold>]
+Set-AzAdvisorConfiguration -InputObject <IAdvisorIdentity> [-Exclude] [-LowCpuThreshold <String>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -118,7 +118,7 @@ Valid only for subscriptions.
 Valid values: 5 (default), 10, 15 or 20.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Advisor.Support.CpuThreshold
+Type: System.String
 Parameter Sets: CreateByLCT, CreateByInputObject
 Aliases:
 
@@ -199,7 +199,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Advisor.Models.Api202001.IConfigData
+### Microsoft.Azure.PowerShell.Cmdlets.Advisor.Models.IConfigData
 
 ## NOTES
 

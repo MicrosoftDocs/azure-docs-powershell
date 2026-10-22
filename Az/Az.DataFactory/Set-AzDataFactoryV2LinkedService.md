@@ -16,14 +16,14 @@ Links a data store or a cloud service to Data Factory.
 
 ### ByFactoryName (Default)
 ```
-Set-AzDataFactoryV2LinkedService [-Name] <String> [-DefinitionFile] <String> [-ResourceGroupName] <String>
- [-DataFactoryName] <String> [-Force] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-AzDataFactoryV2LinkedService [-Name] <String> [-DefinitionFile] <String> [-Force]
+ [-ResourceGroupName] <String> [-DataFactoryName] <String> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByResourceId
 ```
-Set-AzDataFactoryV2LinkedService [-DefinitionFile] <String> [-ResourceId] <String> [-Force]
+Set-AzDataFactoryV2LinkedService [-DefinitionFile] <String> [-Force] [-ResourceId] <String>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ Set-AzDataFactoryV2LinkedService -ResourceGroupName "ADF" -DataFactoryName "Wiki
 ```
 
 ```output
-    LinkedServiceName : LinkedServiceCuratedWikiData
+LinkedServiceName : LinkedServiceCuratedWikiData
     ResourceGroupName : ADF
     DataFactoryName   : WikiADF
     Properties        : Microsoft.Azure.Management.DataFactory.Models.AzureStorageLinkedService
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -212,6 +212,6 @@ Keywords: azure, azurerm, arm, resource, management, manager, data, factories
 
 ## RELATED LINKS
 
-[Get-AzDataFactoryV2LinkedService]()
+[Get-AzDataFactoryV2LinkedService](Get-AzDataFactoryV2LinkedService.md)
 
-[Remove-AzDataFactoryV2LinkedService]()
+[Remove-AzDataFactoryV2LinkedService](Remove-AzDataFactoryV2LinkedService.md)

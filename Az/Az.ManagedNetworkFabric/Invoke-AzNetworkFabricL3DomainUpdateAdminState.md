@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Invoke-AzNetworkFabricL3DomainUpdateAdminState
 
 ## SYNOPSIS
-Enables racks for this Isolation Domain.
+Update the administrative state of the L3 Isolation Domain resource.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Invoke-AzNetworkFabricL3DomainUpdateAdminState -InputObject <IManagedNetworkFabr
 ```
 
 ## DESCRIPTION
-Enables racks for this Isolation Domain.
+Update the administrative state of the L3 Isolation Domain resource.
 
 ## EXAMPLES
 
@@ -265,7 +265,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.ICommonPostActionResponseForDeviceUpdate
+### Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IUpdateAdministrativeStateResponse
 
 ## NOTES
 

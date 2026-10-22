@@ -27,6 +27,12 @@ Get-AzStreamAnalyticsInput -JobName <String> -Name <String> -ResourceGroupName <
  [<CommonParameters>]
 ```
 
+### GetViaIdentityStreamingjob
+```
+Get-AzStreamAnalyticsInput -Name <String> -StreamingjobInputObject <IStreamAnalyticsIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzStreamAnalyticsInput -InputObject <IStreamAnalyticsIdentity> [-DefaultProfile <PSObject>]
@@ -97,7 +103,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.IStreamAnalyticsIdentity
@@ -131,7 +136,7 @@ The name of the input.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityStreamingjob
 Aliases: InputName
 
 Required: True
@@ -175,6 +180,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StreamingjobInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.IStreamAnalyticsIdentity
+Parameter Sets: GetViaIdentityStreamingjob
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
 The ID of the target subscription.
 
@@ -199,7 +219,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.Api20170401Preview.IInput
+### Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.IInput
 
 ## NOTES
 

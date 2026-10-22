@@ -20,6 +20,12 @@ Get-AzBillingBenefitsSavingsPlan -OrderId <String> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
+### GetViaIdentitySavingsPlanOrder
+```
+Get-AzBillingBenefitsSavingsPlan -Id <String> -SavingsPlanOrderInputObject <IBillingBenefitsIdentity>
+ [-Expand <String>] [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### Get
 ```
 Get-AzBillingBenefitsSavingsPlan -Id <String> -OrderId <String> [-Expand <String>] [-DefaultProfile <PSObject>]
@@ -86,7 +92,7 @@ May be used to expand the detail information of some properties.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, GetViaIdentity
+Parameter Sets: GetViaIdentitySavingsPlanOrder, Get, GetViaIdentity
 Aliases:
 
 Required: False
@@ -101,7 +107,7 @@ ID of the savings plan
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: GetViaIdentitySavingsPlanOrder, Get
 Aliases: SavingsPlanId
 
 Required: True
@@ -113,7 +119,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity
@@ -142,6 +147,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SavingsPlanOrderInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity
+Parameter Sets: GetViaIdentitySavingsPlanOrder
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -151,7 +171,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.Api20221101.ISavingsPlanModel
+### Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.ISavingsPlanModel
 
 ## NOTES
 

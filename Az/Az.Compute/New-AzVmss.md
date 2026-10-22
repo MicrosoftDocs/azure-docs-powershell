@@ -19,8 +19,8 @@ Creates a virtual machine scale set.
 ```
 New-AzVmss [-ResourceGroupName] <String> [-VMScaleSetName] <String>
  [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet> [-AsJob] [-IfMatch <String>] [-IfNoneMatch <String>]
- [-EdgeZone <String>] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-EdgeZone <String>] [-HighSpeedInterconnectPlacement <String>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SimpleParameterSet
@@ -37,26 +37,37 @@ New-AzVmss [[-ResourceGroupName] <String>] [-VMScaleSetName] <String> [-AsJob] [
  [-DataDiskSizeInGb <Int32[]>] [-ProximityPlacementGroupId <String>] [-HostGroupId <String>]
  [-Priority <String>] [-EvictionPolicy <String>] [-MaxPrice <Double>] [-ScaleInPolicy <String[]>]
  [-SkipExtensionsOnOverprovisionedVMs] [-EncryptionAtHost] [-PlatformFaultDomainCount <Int32>]
- [-OrchestrationMode <String>] [-CapacityReservationGroupId <String>] [-ImageReferenceId <String>]
- [-DiskControllerType <String>] [-SharedGalleryImageId <String>] [-SecurityType <String>]
- [-EnableVtpm <Boolean>] [-EnableSecureBoot <Boolean>] [-DefaultProfile <IAzureContextContainer>]
- [-SinglePlacementGroup] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-OrchestrationMode <String>] [-CapacityReservationGroupId <String>]
+ [-DisableCapacityReservationAssignment] [-ImageReferenceId <String>]
+ [-DiskControllerType <String>] [-SharedGalleryImageId <String>] [-ProcessorMode <String>] [-SecurityType <String>]
+ [-EnableVtpm <Boolean>] [-EnableSecureBoot <Boolean>] [-SecurityPostureId <String>]
+ [-SecurityPostureExcludeExtension <String[]>] [-SkuProfileVmSize <String[]>]
+ [-SkuProfileAllocationStrategy <String>] [-EnableProxyAgent] [-AddProxyAgentExtension]
+ [-ZonePlacementPolicy <String>] [-IncludeZone <String[]>] [-ExcludeZone <String[]>]
+ [-HighSpeedInterconnectPlacement <String>] [-ScheduledEventsApiVersion <String>]
+ [-EnableAllInstancesDown <Boolean>] [-ZonalPlatformFaultDomainAlignMode <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-SinglePlacementGroup]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **New-AzVmss** cmdlet creates a Virtual Machine Scale Set (VMSS) in Azure.
-Use the simple parameter set (`SimpleParameterSet`) to quickly create a pre-set VMSS and associated resources. <br> 
+Use the simple parameter set (`SimpleParameterSet`) to quickly create a pre-set VMSS and associated resources. <br>
 
-Use the default parameter set (`DefaultParameter`) for more advanced scenarios when you need to precisely configure each component of the VMSS and each associated resource before creation. 
-For default parameter set, first use the **[New-AzVmssConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmss)** cmdlet to create a virtual machine scale set object. <br> <br>
+Use the default parameter set (`DefaultParameter`) for more advanced scenarios when you need to precisely configure each component of the VMSS and each associated resource before creation.
+For default parameter set, first use the **[New-AzVmssConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmss)** cmdlet to create a virtual machine scale set object. <br>
 
 Then use the following cmdlets to set different properties of the virtual machine scale set object: <br>
 - **[Add-AzVmssNetworkInterfaceConfiguration](https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmssnetworkinterfaceconfiguration)** to set the network profile.<br>
 - **[Set-AzVmssOsProfile](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssosprofile)** to set the OS profile. <br>
 - **[Set-AzVmssStorageProfile](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssstorageprofile)** to set the storage profile.<br>
-- **[Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku)** can also be used to find out available virtual machine sizes for your subscription and region.<br><br>
+- **[Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku)** can also be used to find out available virtual machine sizes for your subscription and region.<br>
 
-See other cmdlets for virtual machine scale set [here](https://learn.microsoft.com/en-us/powershell/module/az.compute/#vm-scale-sets).<br>
+See other cmdlets for virtual machine scale set [here](https://learn.microsoft.com/en-us/powershell/module/az.compute/#vm-scale-sets).<br><br>
+
+VMSS creation will default to OrchestrationMode:Flexible. Default parameter set will set properties in VirtualMachineScaleSetVMProfile by default. To create a VMSS with an empty VirtualMachineScaleSetVMProfile property, use simple parameter set by first creating a VirtualMachineScaleSet object with an empty VirtualMachineScaleSetVMProfile property using **[New-AzVmssConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmss)**.
+
+
 <br>
 See [Quickstart: Create a virtual machine scale set with Azure PowerShell](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/quick-create-powershell) for tutorial.
 
@@ -223,25 +234,25 @@ $adminUsername = "<Username>";
 $adminPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;
 $vmCred = New-Object System.Management.Automation.PSCredential ($adminUsername, $adminPassword);
 
-# VMSS Creation 
+# VMSS Creation
 $result = New-AzVmss -Credential $vmCred -VMScaleSetName $vmssName1 -ImageName $imageName -SecurityType "TrustedLaunch";
 # Validate that for -SecurityType "TrustedLaunch", "-Vtpm" and -"SecureBoot" are "Enabled/true"
 # $result.VirtualMachineProfile.SecurityProfile.UefiSettings.VTpmEnabled;
 # $result.VirtualMachineProfile.SecurityProfile.UefiSettings.SecureBootEnabled;
 ```
 
-This example Creates a new VMSS with the new Security Type 'TrustedLaunch' and the necessary UEFISettings values, VTpmEnabled and SecureBootEnalbed are true. Please check [the Trusted Launch feature page](https://aka.ms/trustedlaunch) for more information.
+This example Creates a new VMSS with the new Security Type 'TrustedLaunch' and the necessary UEFISettings values, VTpmEnabled and SecureBootEnabled are true. Please check [the Trusted Launch feature page](https://aka.ms/trustedlaunch) for more information.
 
 ### Example 5: Create a Vmss in Orchestration Mode: Flexible by default
 ```powershell
-# Create configration object
+# Create configuration object
 $vmssConfig = New-AzVmssConfig -Location EastUs2 -UpgradePolicyMode Manual -SinglePlacementGroup $true
 
-# VMSS Creation 
+# VMSS Creation
 New-AzVmss -ResourceGroupName TestRg -VMScaleSetName myVMSS -VirtualMachineScaleSet $vmssConfig
 ```
 
-This example Creates a new VMSS and it will default to OrchestrationMode Flexible. 
+This example Creates a new VMSS and it will default to OrchestrationMode Flexible.
 
 ### Example 6: Create a new VMSS with TrustedLaunch turned on by default.
 ```powershell
@@ -271,7 +282,7 @@ $ipCfg = New-AzVmssIpConfig -Name 'test' -SubnetId $subnetId;
 $vmss = New-AzVmssConfig -Location $loc -SkuCapacity 2 -SkuName $vmssSize -UpgradePolicyMode 'Manual' `
     | Add-AzVmssNetworkInterfaceConfiguration -Name 'test' -Primary $true -IPConfiguration $ipCfg `
     | Set-AzVmssOsProfile -ComputerNamePrefix 'test' -AdminUsername $adminUsername -AdminPassword $password;
-    
+
 # Create TL Vmss
 $result = New-AzVmss -ResourceGroupName $rgname -VMScaleSetName $vmssName -VirtualMachineScaleSet $vmss;
 $vmssGet = Get-AzVmss -ResourceGroupName $rgname -VMScaleSetName $vmssName;
@@ -284,7 +295,27 @@ $vmssGet = Get-AzVmss -ResourceGroupName $rgname -VMScaleSetName $vmssName;
 
 The virtual machine scale set above has Trusted Launch enabled by default. Please check [the Trusted Launch feature page](https://aka.ms/trustedlaunch) for more information.
 
+### Example 7: Create a VMSS with processor mode
+```powershell
+New-AzVmss -ResourceGroupName "myResourceGroup" -VMScaleSetName "myVMSS" -Credential (Get-Credential) -Location "westus" -VmSize "Standard_E2pds_v8" -ProcessorMode "Deterministic"
+```
+
 ## PARAMETERS
+
+### -AddProxyAgentExtension
+Specifies whether to implicitly install the ProxyAgent Extension. This option is currently applicable only for Linux OS.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AllocationMethod
 Allocation method for the Public IP Address of the Scale Set (Static or Dynamic).  If no value is supplied, allocation will be static.
@@ -417,6 +448,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableCapacityReservationAssignment
+Specifies that the virtual machine scale set instances are explicitly opted out from being associated with any capacity reservation. When set, the instances will not be allowed to implicitly or explicitly associate with any type of capacity reservation and will consume capacity from the publicly available capacity.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DiskControllerType
 Specifies the disk controller type configured for the VM and VirtualMachineScaleSet. This property is only supported for virtual machines whose operating system disk and VM sku supports Generation 2 (https://learn.microsoft.com/en-us/azure/virtual-machines/generation-2), please check the HyperVGenerations capability returned as part of VM sku capabilities in the response of Microsoft.Compute SKUs api for the region contains V2 (https://learn.microsoft.com/rest/api/compute/resourceskus/list) . <br> For more information about Disk Controller Types supported please refer to https://aka.ms/azure-diskcontrollertypes.
 
@@ -462,6 +508,21 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -EnableAllInstancesDown
+Specifies if Scheduled Events should be auto-approved when all instances are down.
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -EnableAutomaticOSUpgrade
 Whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.
 
@@ -474,6 +535,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableProxyAgent
+Specifies whether Metadata Security Protocol(ProxyAgent) feature should be enabled or not.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -553,6 +629,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExcludeZone
+This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection.
+
+```yaml
+Type: System.String[]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FrontendPoolName
 The name of the frontend address pool to use in the Scale Set load balancer.  If no value is supplied, a new Frontend Address Pool will be created, with the same name as the scale set.
 
@@ -565,6 +656,38 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighSpeedInterconnectPlacement
+Specifies the high speed interconnect placement for the virtual machine scale set.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: None, Trunk
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ZonalPlatformFaultDomainAlignMode
+Specifies the align mode between Virtual Machine Scale Set (VMSS) compute and storage Fault Domain count. Valid values are 'Aligned', 'Unaligned', and 'BestEffortAligned'. 'BestEffortAligned' offloads alignment to VMSS - disks that support enough Storage Fault Domains are aligned, while others remain unaligned, preventing deployment failures for mixed-SKU disk configurations. Applicable to VMSS Flex only.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+Accepted values: Aligned, Unaligned, BestEffortAligned
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -633,6 +756,21 @@ Specified the shared gallery image unique id for vmss deployment. This can be fe
 
 ```yaml
 Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeZone
+This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection.
+
+```yaml
+Type: System.String[]
 Parameter Sets: SimpleParameterSet
 Aliases:
 
@@ -721,6 +859,9 @@ Accept wildcard characters: False
 ### -OrchestrationMode
 Specifies the orchestration mode for the virtual machine scale set. Possible values: Uniform, Flexible
 
+Creating a VMSS in OrchestrationMode:Flexible using default parameter set will result in having the VirtualMachineScaleSetVMProfile being populated by default.
+If you want to create a VMSS with an empty VirtualMachineScaleSetVMProfile, first create a VirtualMachineScaleSet object with empty VMProfile property using **[New-AzVmssConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmss)**, then create the VMSS using simple parameter set.
+
 ```yaml
 Type: System.String
 Parameter Sets: SimpleParameterSet
@@ -763,6 +904,21 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProcessorMode
+Specifies processor frequency behavior for VM instances in the scale set model. Typical values are `Deterministic` and `Opportunistic`.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -838,6 +994,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ScheduledEventsApiVersion
+Specifies the api-version to determine which Scheduled Events configuration schema version will be delivered. Format: YYYY-MM-DD. For available API versions, see https://learn.microsoft.com/rest/api/compute/scheduled-events.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SecurityGroupName
 The name of the network security group to apply to this Scale Set.  If no value is provided, a default network security group with the same name as the Scale Set will be created and applied to the Scale Set.
 
@@ -850,6 +1021,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecurityPostureExcludeExtension
+List of virtual machine extensions to exclude when applying the security posture.
+
+```yaml
+Type: System.String[]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SecurityPostureId
+The security posture reference id in the form of /CommunityGalleries/{communityGalleryName}/securityPostures/{securityPostureName}/versions/{major.minor.patch}|latest
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -911,6 +1112,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkuProfileAllocationStrategy
+Allocation strategy for the SKU profile.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkuProfileVmSize
+Array of VM sizes for the scale set.
+
+```yaml
+Type: System.String[]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -1063,7 +1294,7 @@ Accept wildcard characters: False
 ```
 
 ### -VmSize
-The size of the VM instances in this scale set. [Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku) can be used to find out available sizes for your subscription and region. A default size (Standard_DS1_v2) will be used if no Size is specified. 
+The size of the VM instances in this scale set. [Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku) can be used to find out available sizes for your subscription and region. A default size (Standard_DS1_v2) will be used if no Size is specified.
 
 ```yaml
 Type: System.String
@@ -1097,6 +1328,21 @@ A list of availability zones denoting the IP allocated for the resource needs to
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ZonePlacementPolicy
+Specifies the policy for resource's placement in availability zone. Possible values are: **Any** (used for Virtual Machines), **Auto** (used for Virtual Machine Scale Sets) - An availability zone will be automatically picked by system as part of resource creation.
+
+```yaml
+Type: System.String
 Parameter Sets: SimpleParameterSet
 Aliases:
 

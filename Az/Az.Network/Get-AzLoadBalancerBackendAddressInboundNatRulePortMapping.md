@@ -18,7 +18,8 @@ Get-AzLoadBalancerBackendAddressInboundNatRulePortMapping retrieves inbound nat 
 ```
 Get-AzLoadBalancerBackendAddressInboundNatRulePortMapping -ResourceGroupName <String>
  -LoadBalancerName <String> [-Name <String>] [-IpAddress <String>]
- [-NetworkInterfaceIpConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-NetworkInterfaceIpConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### GetByParentObjectParameterSet
@@ -31,7 +32,8 @@ Get-AzLoadBalancerBackendAddressInboundNatRulePortMapping [-Name <String>] -Load
 ### GetByResourceIdParameterSet
 ```
 Get-AzLoadBalancerBackendAddressInboundNatRulePortMapping -ResourceId <String> [-IpAddress <String>]
- [-NetworkInterfaceIpConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-NetworkInterfaceIpConfigurationId <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

@@ -3,8 +3,8 @@ external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
 Module Name: Az.CosmosDB
 online version: https://learn.microsoft.com/powershell/module/az.cosmosdb/remove-azmanagedcassandradatacenter
 schema: 2.0.0
-content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Remove-AzManagedCassandraDataCenter.md
-original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Remove-AzManagedCassandraDataCenter.md
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Remove-AzManagedCassandraDatacenter.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Remove-AzManagedCassandraDatacenter.md
 ---
 
 # Remove-AzManagedCassandraDatacenter
@@ -17,35 +17,39 @@ Deletes a Azure Managed Instances for Apache Cassandra data center.
 ### ByNameParameterSet (Default)
 ```
 Remove-AzManagedCassandraDatacenter -ResourceGroupName <String> -ClusterName <String> -DataCenterName <String>
- [-AsJob] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AsJob] [-PassThru] [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByResourceIdParameterSet
 ```
 Remove-AzManagedCassandraDatacenter -ResourceId <String> [-AsJob] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByObjectParameterSet
 ```
 Remove-AzManagedCassandraDatacenter -InputObject <PSDataCenterResource> [-AsJob] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ByParentObjectParameterSet
 ```
 Remove-AzManagedCassandraDatacenter [-AsJob] [-PassThru] -ParentObject <PSClusterResource>
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The **Remove-AzManagedCassandraDataCenter** cmdlet deletes a managed Cassandra data center.
+The **Remove-AzManagedCassandraDatacenter** cmdlet deletes a managed Cassandra data center.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-AzManagedCassandraDataCenter `
+Remove-AzManagedCassandraDatacenter `
  -ResourceGroupName "resourceGroupName" `
  -ClusterName "clusterName" `
  -DataCenterName "dataCenterName"
@@ -53,12 +57,12 @@ Remove-AzManagedCassandraDataCenter `
 
 ### Example 2
 ```powershell
-Remove-AzManagedCassandraDataCenter -ResourceId "dataCenterResourceId"
+Remove-AzManagedCassandraDatacenter -ResourceId "dataCenterResourceId"
 ```
 
 ### Example 3
 ```powershell
-$dataCenterResource | Remove-AzManagedCassandraDataCenter
+$dataCenterResource | Remove-AzManagedCassandraDatacenter
 ```
 
 ## PARAMETERS

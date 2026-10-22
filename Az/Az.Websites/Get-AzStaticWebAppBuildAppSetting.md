@@ -156,7 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.Api20201201.IStringDictionary
+### Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IStringDictionary
 
 ## NOTES
 

@@ -10,18 +10,18 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzAlb
 
 ## SYNOPSIS
-Create a TrafficController
+create a TrafficController
 
 ## SYNTAX
 
 ```
 New-AzAlb -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -Location <String>
- [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-Tag <Hashtable>] [-WafSecurityPolicyId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a TrafficController
+create a TrafficController
 
 ## EXAMPLES
 
@@ -152,6 +152,21 @@ Resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WafSecurityPolicyId
+Resource ID of the Waf Security Policy
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

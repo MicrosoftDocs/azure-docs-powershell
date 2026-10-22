@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridSystemTopic
 
 ## SYNOPSIS
-Asynchronously creates a new system topic with the specified parameters.
+Asynchronously create a new system topic with the specified parameters.
 
 ## SYNTAX
 
@@ -46,7 +46,7 @@ New-AzEventGridSystemTopic -InputObject <IEventGridIdentity> -Location <String> 
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new system topic with the specified parameters.
+Asynchronously create a new system topic with the specified parameters.
 
 ## EXAMPLES
 
@@ -97,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSystemAssignedIdentity
-Decides if enable a system assigned identity for the resource.
+Determines whether to enable a system-assigned identity for the resource.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

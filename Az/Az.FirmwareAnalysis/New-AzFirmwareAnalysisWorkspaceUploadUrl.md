@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFirmwareAnalysisWorkspaceUploadUrl
 
 ## SYNOPSIS
-The operation to get a url for file upload.
+Generate a URL for uploading a firmware image.
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ New-AzFirmwareAnalysisWorkspaceUploadUrl -ResourceGroupName <String> [-Subscript
 ### Generate
 ```
 New-AzFirmwareAnalysisWorkspaceUploadUrl -ResourceGroupName <String> [-SubscriptionId <String>]
- -WorkspaceName <String> -GenerateUploadUrl <IGenerateUploadUrlRequest> [-DefaultProfile <PSObject>]
+ -WorkspaceName <String> -Body <IGenerateUploadUrlRequest> [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -51,12 +51,12 @@ New-AzFirmwareAnalysisWorkspaceUploadUrl -InputObject <IFirmwareAnalysisIdentity
 ### GenerateViaIdentity
 ```
 New-AzFirmwareAnalysisWorkspaceUploadUrl -InputObject <IFirmwareAnalysisIdentity>
- -GenerateUploadUrl <IGenerateUploadUrlRequest> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Body <IGenerateUploadUrlRequest> [-DefaultProfile <PSObject>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The operation to get a url for file upload.
+Generate a URL for uploading a firmware image.
 
 ## EXAMPLES
 
@@ -74,6 +74,21 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Create a url for file upload.
 
 ## PARAMETERS
+
+### -Body
+Properties for generating an upload URL
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.FirmwareAnalysis.Models.IGenerateUploadUrlRequest
+Parameter Sets: Generate, GenerateViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
@@ -103,21 +118,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GenerateUploadUrl
-Properties for generating an upload URL
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.FirmwareAnalysis.Models.IGenerateUploadUrlRequest
-Parameter Sets: Generate, GenerateViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

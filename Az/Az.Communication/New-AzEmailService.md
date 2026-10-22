@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEmailService
 
 ## SYNOPSIS
-Create a new EmailService or update an existing EmailService.
+create a new EmailService or create an existing EmailService.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ New-AzEmailService -Name <String> -ResourceGroupName <String> [-SubscriptionId <
 ```
 
 ## DESCRIPTION
-Create a new EmailService or update an existing EmailService.
+create a new EmailService or create an existing EmailService.
 
 ## EXAMPLES
 

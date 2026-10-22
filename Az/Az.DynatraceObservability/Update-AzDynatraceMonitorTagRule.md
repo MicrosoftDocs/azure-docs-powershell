@@ -17,18 +17,27 @@ Update a TagRule
 ### UpdateExpanded (Default)
 ```
 Update-AzDynatraceMonitorTagRule -MonitorName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <SendAadLogsStatus>]
- [-LogRuleSendActivityLog <SendActivityLogsStatus>] [-LogRuleSendSubscriptionLog <SendSubscriptionLogsStatus>]
- [-MetricRuleFilteringTag <IFilteringTag[]>] [-DefaultProfile <PSObject>]
+ [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <String>] [-LogRuleSendActivityLog <String>]
+ [-LogRuleSendSubscriptionLog <String>] [-MetricRuleFilteringTag <IFilteringTag[]>]
+ [-MetricRuleSendingMetric <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
 ```
 Update-AzDynatraceMonitorTagRule -InputObject <IDynatraceObservabilityIdentity>
- [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <SendAadLogsStatus>]
- [-LogRuleSendActivityLog <SendActivityLogsStatus>] [-LogRuleSendSubscriptionLog <SendSubscriptionLogsStatus>]
- [-MetricRuleFilteringTag <IFilteringTag[]>] [-DefaultProfile <PSObject>]
+ [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <String>] [-LogRuleSendActivityLog <String>]
+ [-LogRuleSendSubscriptionLog <String>] [-MetricRuleFilteringTag <IFilteringTag[]>]
+ [-MetricRuleSendingMetric <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaIdentityMonitorExpanded
+```
+Update-AzDynatraceMonitorTagRule -MonitorInputObject <IDynatraceObservabilityIdentity>
+ [-LogRuleFilteringTag <IFilteringTag[]>] [-LogRuleSendAadLog <String>] [-LogRuleSendActivityLog <String>]
+ [-LogRuleSendSubscriptionLog <String>] [-MetricRuleFilteringTag <IFilteringTag[]>]
+ [-MetricRuleSendingMetric <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -49,23 +58,24 @@ Name    ResourceGroupName ProvisioningState LogRuleSendAadLog
 default dyobrg            Succeeded         Disabled
 ```
 
-This command updates a tag rule for the dynatrace monitor.
-
-### Example 2: Update a tag rule for the dynatrace monitor by pipeline
-```powershell
-$tagFilter = New-AzDynatraceMonitorFilteringTagObject -Action 'Include' -Name 'Environment' -Value 'Prod'
-Get-AzDynatraceMonitorTagRule -ResourceGroupName dyobrg -MonitorName dyob-pwsh01 | Update-AzDynatraceMonitorTagRule -LogRuleFilteringTag $tagFilter
-```
-
-```output
-Name    ResourceGroupName ProvisioningState LogRuleSendAadLog
-----    ----------------- ----------------- -----------------
-default dyobrg            Succeeded         Disabled
-```
-
-This command updates a tag rule for the dynatrace monitor by pipeline.
+This command update a tag rule for the dynatrace monitor.
 
 ## PARAMETERS
+
+### -AsJob
+Run the command as a job
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
@@ -85,7 +95,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IDynatraceObservabilityIdentity
@@ -104,10 +113,9 @@ List of filtering tags to be used for capturing logs.
 This only takes effect if SendActivityLogs flag is enabled.
 If empty, all resources will be captured.If only Exclude action is specified, the rules will apply to the list of all available resources.
 If Include actions are specified, the rules will only include resources with the associated tags.
-To construct, see NOTES section for LOGRULEFILTERINGTAG properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.Api20210901.IFilteringTag[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IFilteringTag[]
 Parameter Sets: (All)
 Aliases:
 
@@ -122,7 +130,7 @@ Accept wildcard characters: False
 Flag specifying if AAD logs should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Support.SendAadLogsStatus
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +145,7 @@ Accept wildcard characters: False
 Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Support.SendActivityLogsStatus
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -152,7 +160,7 @@ Accept wildcard characters: False
 Flag specifying if subscription logs should be sent for the Monitor resource.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Support.SendSubscriptionLogsStatus
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -168,10 +176,9 @@ List of filtering tags to be used for capturing metrics.
 If empty, all resources will be captured.
 If only Exclude action is specified, the rules will apply to the list of all available resources.
 If Include actions are specified, the rules will only include resources with the associated tags.
-To construct, see NOTES section for METRICRULEFILTERINGTAG properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.Api20210901.IFilteringTag[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IFilteringTag[]
 Parameter Sets: (All)
 Aliases:
 
@@ -179,6 +186,36 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MetricRuleSendingMetric
+Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MonitorInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IDynatraceObservabilityIdentity
+Parameter Sets: UpdateViaIdentityMonitorExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -191,6 +228,21 @@ Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoWait
+Run the command asynchronously
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -215,6 +267,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
@@ -268,7 +321,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.Api20210901.ITagRule
+### Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.ITagRule
 
 ## NOTES
 

@@ -207,3 +207,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Set-AzStorageAccountManagementPolicy](./Set-AzStorageAccountManagementPolicy.md)
+
+[Get-AzStorageAccountManagementPolicy](./Get-AzStorageAccountManagementPolicy.md)

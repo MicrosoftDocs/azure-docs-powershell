@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzAlbAssociation
 
 ## SYNOPSIS
-Create a Association
+create a Association
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzAlbAssociation -AlbName <String> -Name <String> -ResourceGroupName <String
 ```
 
 ## DESCRIPTION
-Create a Association
+create a Association
 
 ## EXAMPLES
 

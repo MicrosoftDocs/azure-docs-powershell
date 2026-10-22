@@ -16,8 +16,10 @@ Gets a list of key-value revisions.
 
 ```
 Get-AzAppConfigurationRevision -Endpoint <String> [-After <String>] [-Key <String>] [-Label <String>]
- [-Select <System.Collections.Generic.List`1[System.String]>] [-AcceptDatetime <String>] [-SyncToken <String>]
- [-DefaultProfile <PSObject>] [<CommonParameters>]
+ [-Select <System.Collections.Generic.List`1[System.String]>]
+ [-Tag <System.Collections.Generic.List`1[System.String]>] [-AcceptDatetime <String>]
+ [-ClientRequestId <String>] [-SyncToken <String>] [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -59,7 +61,8 @@ List the revision of a key-value in an App Configuration store
 ## PARAMETERS
 
 ### -AcceptDatetime
-Requests the server to respond with the state of the resource at the specified time.
+Requests the server to respond with the state of the resource at the specified
+time.
 
 ```yaml
 Type: System.String
@@ -74,7 +77,23 @@ Accept wildcard characters: False
 ```
 
 ### -After
-Instructs the server to return elements that appear after the element referred to by the specified token.
+Instructs the server to return elements that appear after the element referred
+to by the specified token.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientRequestId
+An opaque, globally-unique, client-generated string identifier for the request.
 
 ```yaml
 Type: System.String
@@ -121,6 +140,8 @@ Accept wildcard characters: False
 
 ### -Key
 A filter used to match keys.
+Syntax reference:
+https://aka.ms/azconfig/docs/restapirevisions
 
 ```yaml
 Type: System.String
@@ -135,7 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Label
-A filter used to match labels
+A filter used to match labels.
+Syntax reference:
+https://aka.ms/azconfig/docs/restapirevisions
 
 ```yaml
 Type: System.String
@@ -169,6 +192,23 @@ Used to guarantee real-time consistency between requests.
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+A filter used to query by tags.
+Syntax reference:
+https://aka.ms/azconfig/docs/restapirevisions
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
 Aliases:
 

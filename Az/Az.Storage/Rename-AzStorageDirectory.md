@@ -49,7 +49,7 @@ Rename-AzStorageDirectory -ShareName myshare -SourcePath testdir1 -DestinationPa
 ```
 
 ```output
-Directory: https://myaccount.file.core.windows.net/myshare
+AccountName: myaccount, ShareName: myshare
 
 Type                Length Name
 ----                ------ ----
@@ -64,7 +64,7 @@ Get-AzStorageFile -ShareName myshare -Path testdir1 | Rename-AzStorageDirectory 
 ```
 
 ```output
-Directory: https://myaccount.file.core.windows.net/myshare
+AccountName: myaccount, ShareName: myshare
 
 Type                Length Name
 ----                ------ ----
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShareClient
-ShareClienr indicated the share where the directory would be listed.
+ShareClient indicated the share where the directory would be listed.
 
 ```yaml
 Type: Azure.Storage.Files.Shares.ShareClient

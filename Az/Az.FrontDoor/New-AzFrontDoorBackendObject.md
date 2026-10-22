@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+external help file: Az.FrontDoor-help.xml
 Module Name: Az.FrontDoor
-online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorbackendobject
+online version: https://learn.microsoft.com/powershell/module/Az.FrontDoor/new-azfrontdoorbackendobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorBackendObject.md
@@ -10,19 +10,19 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFrontDoorBackendObject
 
 ## SYNOPSIS
-Create a PSBackend object
+Create an in-memory object for Backend.
 
 ## SYNTAX
 
 ```
-New-AzFrontDoorBackendObject -Address <String> [-HttpPort <Int32>] [-HttpsPort <Int32>] [-Priority <Int32>]
- [-Weight <Int32>] [-EnabledState <PSEnabledState>] [-BackendHostHeader <String>] [-PrivateLinkAlias <String>]
- [-PrivateLinkResourceId <String>] [-PrivateLinkLocation <String>] [-PrivateLinkApprovalMessage <String>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+New-AzFrontDoorBackendObject [-Address <String>] [-BackendHostHeader <String>] [-EnabledState <String>]
+ [-HttpPort <Int32>] [-HttpsPort <Int32>] [-Priority <Int32>] [-PrivateLinkAlias <String>]
+ [-PrivateLinkApprovalMessage <String>] [-PrivateLinkLocation <String>] [-PrivateLinkResourceId <String>]
+ [-Weight <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a PSBackend object for Front Door creation
+Create an in-memory object for Backend.
 
 ## EXAMPLES
 
@@ -32,13 +32,18 @@ New-AzFrontDoorBackendObject -Address "contoso1.azurewebsites.net"
 ```
 
 ```output
-Address           : contoso1.azurewebsites.net
-HttpPort          : 80
-HttpsPort         : 443
-Priority          : 1
-Weight            : 50
-BackendHostHeader :
-EnabledState      : Enabled
+Address                    : contoso1.azurewebsites.net
+BackendHostHeader          : contoso1.azurewebsites.net
+EnabledState               : Enabled
+HttpPort                   : 80
+HttpsPort                  : 443
+Priority                   : 1
+PrivateEndpointStatus      :
+PrivateLinkAlias           :
+PrivateLinkApprovalMessage :
+PrivateLinkLocation        :
+PrivateLinkResourceId      :
+Weight                     : 50
 ```
 
 Create a PSBackend object for Front Door creation
@@ -46,23 +51,7 @@ Create a PSBackend object for Front Door creation
 ## PARAMETERS
 
 ### -Address
-Location of the backend (IP address or FQDN)
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BackendHostHeader
-The value to use as the host header sent to the backend. 
-Default value is the backend address.
+Location of the backend (IP address or FQDN).
 
 ```yaml
 Type: System.String
@@ -76,13 +65,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+### -BackendHostHeader
+The value to use as the host header sent to the backend.
+If blank or unspecified, this defaults to the incoming host.
 
 ```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
+Type: System.String
 Parameter Sets: (All)
-Aliases: AzContext, AzureRmContext, AzureCredential
+Aliases:
 
 Required: False
 Position: Named
@@ -92,14 +82,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledState
-Whether to enable use of this backend. 
-Default value is Enabled
+Whether to enable use of this backend.
+Permitted values are 'Enabled' or 'Disabled'.
 
 ```yaml
-Type: Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState
+Type: System.String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Enabled, Disabled
 
 Required: False
 Position: Named
@@ -111,7 +100,6 @@ Accept wildcard characters: False
 ### -HttpPort
 The HTTP TCP port number.
 Must be between 1 and 65535.
-Default value is 80.
 
 ```yaml
 Type: System.Int32
@@ -128,7 +116,6 @@ Accept wildcard characters: False
 ### -HttpsPort
 The HTTPS TCP port number.
 Must be between 1 and 65535.
-Default value is 443
 
 ```yaml
 Type: System.Int32
@@ -144,8 +131,7 @@ Accept wildcard characters: False
 
 ### -Priority
 Priority to use for load balancing.
-Must be between 1 and 5.
-Default value is 1
+Higher priorities will not be used for load balancing if any lower priority backend is healthy.
 
 ```yaml
 Type: System.Int32
@@ -160,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateLinkAlias
-The Alias of the Private Link resource. Populating this optional field indicates that this backend is 'Private'
+The Alias of the Private Link resource.
+Populating this optional field indicates that this backend is 'Private'.
 
 ```yaml
 Type: System.String
@@ -175,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateLinkApprovalMessage
-A custom message to be included in the approval request to connect to the Private Link
+A custom message to be included in the approval request to connect to the Private Link.
 
 ```yaml
 Type: System.String
@@ -190,7 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateLinkLocation
-The Location of Private Link resource. Location is required when PrivateLinkResourceId is set
+The location of the Private Link resource.
+Required only if 'privateLinkResourceId' is populated.
 
 ```yaml
 Type: System.String
@@ -205,7 +193,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateLinkResourceId
-The Resource ID of the Private Link. Populating this optional field indicates that this backend is 'Private'
+The Resource Id of the Private Link resource.
+Populating this optional field indicates that this backend is 'Private'.
 
 ```yaml
 Type: System.String
@@ -221,8 +210,6 @@ Accept wildcard characters: False
 
 ### -Weight
 Weight of this endpoint for load balancing purposes.
-Must be between 1 and 1000.
-Default value is 50
 
 ```yaml
 Type: System.Int32
@@ -241,14 +228,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.FrontDoor.Models.PSBackend
+### Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.Backend
 
 ## NOTES
 
 ## RELATED LINKS
-
-[New-AzFrontDoorBackendPoolObject](./New-AzFrontDoorBackendPoolObject.md)

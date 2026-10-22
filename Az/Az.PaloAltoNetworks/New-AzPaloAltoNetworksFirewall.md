@@ -21,11 +21,12 @@ New-AzPaloAltoNetworksFirewall -Name <String> -ResourceGroupName <String> [-Subs
  [-AssociatedRulestackId <String>] [-AssociatedRulestackLocation <String>]
  [-AssociatedRulestackResourceId <String>] [-DnsSettingDnsServer <IIPAddress[]>]
  [-DnsSettingEnableDnsProxy <String>] [-DnsSettingEnabledDnsType <String>] [-EnableSystemAssignedIdentity]
- [-FrontEndSetting <IFrontendSetting[]>] [-IsPanoramaManaged <String>]
+ [-FrontEndSetting <IFrontendSetting[]>] [-IsPanoramaManaged <String>] [-IsStrataCloudManaged <String>]
  [-MarketplaceDetailMarketplaceSubscriptionStatus <String>] [-PanEtag <String>]
- [-PanoramaConfigString <String>] [-PlanDataUsageType <String>] [-Tag <Hashtable>]
- [-UserAssignedIdentity <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PanoramaConfigString <String>] [-PlanDataUsageType <String>]
+ [-StratumCloudManagerConfigCloudManagerName <String>] [-Tag <Hashtable>] [-UserAssignedIdentity <String[]>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -174,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSystemAssignedIdentity
-Decides if enable a system assigned identity for the resource.
+Determines whether to enable a system-assigned identity for the resource.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -205,6 +206,22 @@ Accept wildcard characters: False
 
 ### -IsPanoramaManaged
 Panorama Managed: Default is False.
+Default will be CloudSec managed
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsStrataCloudManaged
+Strata Cloud Managed: Default is False.
 Default will be CloudSec managed
 
 ```yaml
@@ -410,6 +427,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StratumCloudManagerConfigCloudManagerName
+Strata Cloud Manager name which is intended to manage the policy for this firewall.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewSapS4HanaDataSourceObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewsaps4hanadatasourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewSapS4HanaDataSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewSapS4HanaDataSourceObject.md
@@ -15,9 +15,8 @@ Create an in-memory object for SapS4HanaDataSource.
 ## SYNTAX
 
 ```
-New-AzPurviewSapS4HanaDataSourceObject -Kind <DataSourceType> [-ApplicationServer <String>]
- [-CollectionReferenceName <String>] [-CollectionType <String>] [-SystemNumber <String>]
- [<CommonParameters>]
+New-AzPurviewSapS4HanaDataSourceObject [-ApplicationServer <String>] [-CollectionReferenceName <String>]
+ [-CollectionType <String>] [-SystemNumber <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +26,7 @@ Create an in-memory object for SapS4HanaDataSource.
 
 ### Example 1: Create SAPS4Hana data source object
 ```powershell
-New-AzPurviewSapS4HanaDataSourceObject -Kind 'SapS4Hana' -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -ApplicationServer '12.13.14.12' -SystemNumber 32
+New-AzPurviewSapS4HanaDataSourceObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -ApplicationServer '12.13.14.12' -SystemNumber 32
 ```
 
 ```output
@@ -90,20 +89,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SystemNumber
 
 ```yaml
@@ -125,7 +110,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.SapS4HanaDataSource
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.SapS4HanaDataSource
 
 ## NOTES
 

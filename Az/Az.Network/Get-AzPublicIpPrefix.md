@@ -22,7 +22,8 @@ Get-AzPublicIpPrefix [-Name <String>] [-ResourceGroupName <String>] [-DefaultPro
 
 ### GetByResourceIdParameterSet
 ```
-Get-AzPublicIpPrefix -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzPublicIpPrefix -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

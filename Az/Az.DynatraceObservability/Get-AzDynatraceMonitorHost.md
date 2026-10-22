@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDynatraceMonitorHost
 
 ## SYNOPSIS
-List the compute resources currently being monitored by the Dynatrace resource.
+List the VM/VMSS resources currently being monitored by the Dynatrace resource.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-AzDynatraceMonitorHost -MonitorName <String> -ResourceGroupName <String> [-S
 ```
 
 ## DESCRIPTION
-List the compute resources currently being monitored by the Dynatrace resource.
+List the VM/VMSS resources currently being monitored by the Dynatrace resource.
 
 ## EXAMPLES
 
@@ -82,6 +82,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]
@@ -102,7 +103,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.Api20210901.IVMInfo
+### Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IVMInfo
 
 ## NOTES
 

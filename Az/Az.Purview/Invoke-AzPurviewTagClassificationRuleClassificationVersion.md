@@ -16,7 +16,7 @@ Sets Classification Action on a specific classification rule version.
 
 ```
 Invoke-AzPurviewTagClassificationRuleClassificationVersion -Endpoint <String> -ClassificationRuleName <String>
- -ClassificationRuleVersion <Int32> -Action <ClassificationAction> [-DefaultProfile <PSObject>]
+ -ClassificationRuleVersion <Int32> -Action <String> [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -44,7 +44,7 @@ Set Classification Action on specific rule version
 .
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ClassificationAction
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -155,7 +155,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.IOperationResponse
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.IOperationResponse
 
 ## NOTES
 

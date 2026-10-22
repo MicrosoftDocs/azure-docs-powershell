@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNewRelicPlan
 
 ## SYNOPSIS
-List plans data
+Lists the plans data linked to your organization, providing an overview of the available plans
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-AzNewRelicPlan [-SubscriptionId <String[]>] [-AccountId <String>] [-Organiza
 ```
 
 ## DESCRIPTION
-List plans data
+Lists the plans data linked to your organization, providing an overview of the available plans
 
 ## EXAMPLES
 

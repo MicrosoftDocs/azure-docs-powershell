@@ -14,7 +14,7 @@ Returns the properties of a lab Schedule.
 
 ## SYNTAX
 
-### LabObject (Default)
+### ResourceId (Default)
 ```
 Get-AzLabServicesSchedule [-SubscriptionId <String[]>] -ResourceId <String> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
@@ -36,6 +36,18 @@ Get-AzLabServicesSchedule -LabName <String> -Name <String> -ResourceGroupName <S
 ### Lab
 ```
 Get-AzLabServicesSchedule [-Name <String>] [-SubscriptionId <String[]>] -Lab <Lab> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### GetViaIdentityLab
+```
+Get-AzLabServicesSchedule -Name <String> -LabInputObject <ILabServicesIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-AzLabServicesSchedule -InputObject <ILabServicesIdentity> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -91,12 +103,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Lab
-To construct, see NOTES section for LAB properties and create a hash table.
+### -InputObject
+Identity Parameter
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.Lab
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILabServicesIdentity
+Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Lab
+The object of lab service lab.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Lab
 Parameter Sets: Lab
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -LabInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILabServicesIdentity
+Parameter Sets: GetViaIdentityLab
 Aliases:
 
 Required: True
@@ -128,7 +170,7 @@ Used in resource URIs.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityLab
 Aliases: ScheduleName
 
 Required: True
@@ -167,10 +209,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
+The resource Id of lab service schedule.
 
 ```yaml
 Type: System.String
-Parameter Sets: LabObject
+Parameter Sets: ResourceId
 Aliases:
 
 Required: True
@@ -185,7 +228,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: ResourceId, List, Get, Lab
 Aliases:
 
 Required: False
@@ -200,11 +243,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.Lab
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ILabServicesIdentity
+
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Lab
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.ISchedule
+### Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.ISchedule
 
 ## NOTES
 

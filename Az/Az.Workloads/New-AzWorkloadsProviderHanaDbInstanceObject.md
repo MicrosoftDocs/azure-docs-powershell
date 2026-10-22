@@ -17,7 +17,7 @@ Create an in-memory object for HanaDbProviderInstanceProperties.
 ```
 New-AzWorkloadsProviderHanaDbInstanceObject [-Name <String>] [-Password <String>] [-PasswordUri <String>]
  [-Username <String>] [-Hostname <String>] [-InstanceNumber <String>] [-SapSid <String>] [-SqlPort <String>]
- [-SslCertificateUri <String>] [-SslHostNameInCertificate <String>] [-SslPreference <SslPreference>]
+ [-SslCertificateUri <String>] [-SslHostNameInCertificate <String>] [-SslPreference <String>]
  [<CommonParameters>]
 ```
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 Gets or sets certificate preference if secure communication is enabled.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Workloads.Support.SslPreference
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -214,7 +214,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Workloads.Models.Api20230401.HanaDbProviderInstanceProperties
+### Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.HanaDbProviderInstanceProperties
 
 ## NOTES
 

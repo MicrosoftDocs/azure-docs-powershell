@@ -14,7 +14,7 @@ Get an environment definition from a catalog.
 
 ## SYNTAX
 
-### List (Default)
+### List1 (Default)
 ```
 Get-AzDevCenterUserEnvironmentDefinition -Endpoint <String> -ProjectName <String> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
@@ -33,7 +33,7 @@ Get-AzDevCenterUserEnvironmentDefinition -Endpoint <String> -InputObject <IDevCe
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
-### List1
+### List
 ```
 Get-AzDevCenterUserEnvironmentDefinition -Endpoint <String> -ProjectName <String> -CatalogName <String>
  [-DefaultProfile <PSObject>] [<CommonParameters>]
@@ -47,13 +47,13 @@ Get-AzDevCenterUserEnvironmentDefinition -DevCenterName <String> -InputObject <I
 
 ### List1ByDevCenter
 ```
-Get-AzDevCenterUserEnvironmentDefinition -DevCenterName <String> -ProjectName <String> -CatalogName <String>
+Get-AzDevCenterUserEnvironmentDefinition -DevCenterName <String> -ProjectName <String>
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ### ListByDevCenter
 ```
-Get-AzDevCenterUserEnvironmentDefinition -DevCenterName <String> -ProjectName <String>
+Get-AzDevCenterUserEnvironmentDefinition -DevCenterName <String> -ProjectName <String> -CatalogName <String>
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -134,11 +134,11 @@ This command gets the environment definition "Sandbox" under the project "DevPro
 ## PARAMETERS
 
 ### -CatalogName
-The name of the catalog
+Name of the catalog.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get, List1, List1ByDevCenter, GetByDevCenter
+Parameter Sets: Get, List, ListByDevCenter, GetByDevCenter
 Aliases:
 
 Required: True
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefinitionName
-The name of the environment definition
+Name of the environment definition.
 
 ```yaml
 Type: System.String
@@ -199,7 +199,7 @@ The DevCenter-specific URI to operate on.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get, GetViaIdentity, List1
+Parameter Sets: List1, Get, GetViaIdentity, List
 Aliases:
 
 Required: True
@@ -226,11 +226,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProjectName
-The DevCenter Project upon which to execute operations.
+Name of the project.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get, List1, List1ByDevCenter, ListByDevCenter, GetByDevCenter
+Parameter Sets: List1, Get, List, List1ByDevCenter, ListByDevCenter, GetByDevCenter
 Aliases:
 
 Required: True
@@ -249,7 +249,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IEnvironmentDefinition
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IEnvironmentDefinition
 
 ## NOTES
 

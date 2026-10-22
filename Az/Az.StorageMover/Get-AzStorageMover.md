@@ -43,7 +43,7 @@ Gets a Storage Mover resource.
 
 ## EXAMPLES
 
-### Example 1: Get all Storage movers in a subcription
+### Example 1: Get all Storage movers in a subscription
 ```powershell
 Get-AzStorageMover
 ```
@@ -158,7 +158,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity
@@ -227,7 +226,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IStorageMover
+### Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMover
 
 ## NOTES
 

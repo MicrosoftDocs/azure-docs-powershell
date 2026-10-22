@@ -1,7 +1,7 @@
 ---
 external help file: Az.Databricks-help.xml
 Module Name: Az.Databricks
-online version: https://learn.microsoft.com/powershell/module/Az.Databricks/new-AzDatabricksWorkspaceProviderAuthorizationObject
+online version: https://learn.microsoft.com/powershell/module/Az.Databricks/new-azdatabricksworkspaceproviderauthorizationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/Databricks/help/New-AzDatabricksWorkspaceProviderAuthorizationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/Databricks/help/New-AzDatabricksWorkspaceProviderAuthorizationObject.md
@@ -79,7 +79,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Databricks.Models.Api20240501.WorkspaceProviderAuthorization
+### Microsoft.Azure.PowerShell.Cmdlets.Databricks.Models.WorkspaceProviderAuthorization
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceDatabricksObject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-azmlworkspacedatabricksobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDatabricksObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDatabricksObject.md
@@ -15,8 +15,9 @@ Create an in-memory object for Databricks.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceDatabricksObject [-Description <String>] [-DisableLocalAuth <Boolean>] [-ResourceId <String>]
- [-AccessToken <String>] [-WorkspaceUrl <String>] [<CommonParameters>]
+New-AzMLWorkspaceDatabricksObject [-Description <String>] [-DisableLocalAuth <Boolean>] [-Location <String>]
+ [-ResourceId <String>] [-AccessToken <String>] [-WorkspaceUrl <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,6 +83,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Location
+Location for the underlying compute.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceId
 ARM resource id of the underlying compute.
 
@@ -119,7 +135,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.Databricks
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Databricks
 
 ## NOTES
 

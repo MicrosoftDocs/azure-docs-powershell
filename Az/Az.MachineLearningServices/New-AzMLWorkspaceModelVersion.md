@@ -10,20 +10,53 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzMLWorkspaceModelVersion
 
 ## SYNOPSIS
-Create or update version.
+Create version.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzMLWorkspaceModelVersion -Name <String> -ResourceGroupName <String> -Version <String>
- -WorkspaceName <String> [-SubscriptionId <String>] [-Description <String>] [-Flavor <Hashtable>] [-IsAnonymou]
+New-AzMLWorkspaceModelVersion -Version <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> [-Description <String>] [-Flavor <Hashtable>] [-IsAnonymou]
  [-IsArchived] [-JobName <String>] [-ModelType <String>] [-ModelUri <String>]
  [-ResourceBaseProperty <Hashtable>] [-Stage <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzMLWorkspaceModelVersion -Version <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> -JsonString <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzMLWorkspaceModelVersion -Version <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityWorkspaceExpanded
+```
+New-AzMLWorkspaceModelVersion -Version <String> -Name <String>
+ -WorkspaceInputObject <IMachineLearningServicesIdentity> [-Description <String>] [-Flavor <Hashtable>]
+ [-IsAnonymou] [-IsArchived] [-JobName <String>] [-ModelType <String>] [-ModelUri <String>]
+ [-ResourceBaseProperty <Hashtable>] [-Stage <String>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityModelExpanded
+```
+New-AzMLWorkspaceModelVersion -Version <String> -ModelInputObject <IMachineLearningServicesIdentity>
+ [-Description <String>] [-Flavor <Hashtable>] [-IsAnonymou] [-IsArchived] [-JobName <String>]
+ [-ModelType <String>] [-ModelUri <String>] [-ResourceBaseProperty <Hashtable>] [-Stage <String>]
+ [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Create or update version.
+Create version.
 
 ## EXAMPLES
 
@@ -63,7 +96,7 @@ The asset description text.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -78,7 +111,7 @@ Mapping of model flavors to their properties.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -93,7 +126,7 @@ If the name version are system generated (anonymous registration).
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -104,11 +137,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsArchived
-Is the asset archived
+Is the asset archived?
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -123,7 +156,7 @@ Name of the training job which produced this model
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -133,13 +166,58 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ModelInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: CreateViaIdentityModelExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ModelType
 The storage format for this entity.
 Used for NCD.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -154,7 +232,7 @@ The URI path to the model contents.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -170,7 +248,7 @@ This is case-sensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: True
@@ -185,7 +263,7 @@ The asset property dictionary.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -201,7 +279,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -216,7 +294,7 @@ Stage in the model lifecycle assigned to this model
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -231,7 +309,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -247,7 +325,7 @@ Tags can be added, removed, and updated.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityModelExpanded
 Aliases:
 
 Required: False
@@ -273,12 +351,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkspaceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: CreateViaIdentityWorkspaceExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -WorkspaceName
 Name of Azure Machine Learning workspace.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -324,9 +417,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IModelVersion
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IModelVersion
 
 ## NOTES
 

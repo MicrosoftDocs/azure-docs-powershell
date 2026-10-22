@@ -105,5 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzLoadBalancerProbeConfig](./Remove-AzLoadBalancerProbeConfig.md)
 
 [Set-AzLoadBalancerProbeConfig](./Set-AzLoadBalancerProbeConfig.md)
-
-

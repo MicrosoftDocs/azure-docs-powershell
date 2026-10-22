@@ -27,6 +27,12 @@ Get-AzDatadogTagRule -MonitorName <String> -Name <String> -ResourceGroupName <St
  [<CommonParameters>]
 ```
 
+### GetViaIdentityMonitor
+```
+Get-AzDatadogTagRule -Name <String> -MonitorInputObject <IDatadogIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzDatadogTagRule -InputObject <IDatadogIdentity> [-DefaultProfile <PSObject>]
@@ -97,11 +103,25 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Datadog.Models.IDatadogIdentity
 Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -MonitorInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Datadog.Models.IDatadogIdentity
+Parameter Sets: GetViaIdentityMonitor
 Aliases:
 
 Required: True
@@ -131,7 +151,7 @@ Rule set name
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityMonitor
 Aliases:
 
 Required: True
@@ -181,7 +201,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Datadog.Models.Api20210301.IMonitoringTagRules
+### Microsoft.Azure.PowerShell.Cmdlets.Datadog.Models.IMonitoringTagRules
 
 ## NOTES
 

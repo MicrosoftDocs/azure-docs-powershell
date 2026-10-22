@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDataProtectionOperation
 
 ## SYNOPSIS
-Returns the list of available operations.
+List the operations for the provider
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-AzDataProtectionOperation [-DefaultProfile <PSObject>]
 ```
 
 ## DESCRIPTION
-Returns the list of available operations.
+List the operations for the provider
 
 ## EXAMPLES
 
@@ -113,7 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IClientDiscoveryValueForSingleApi
+### Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.IClientDiscoveryValueForSingleApi
 
 ## NOTES
 

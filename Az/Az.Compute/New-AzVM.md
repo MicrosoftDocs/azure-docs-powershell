@@ -28,10 +28,13 @@ New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] [-EdgeZone <Stri
  [-Priority <String>] [-EvictionPolicy <String>] [-MaxPrice <Double>] [-EncryptionAtHost]
  [-HostGroupId <String>] [-SshKeyName <String>] [-GenerateSshKey] [-CapacityReservationGroupId <String>]
  [-UserData <String>] [-ImageReferenceId <String>] [-PlatformFaultDomain <Int32>] [-HibernationEnabled]
- [-vCPUCountAvailable <Int32>] [-vCPUCountPerCore <Int32>] [-DiskControllerType <String>]
+ [-vCPUCountAvailable <Int32>] [-vCPUCountPerCore <Int32>] [-ProcessorMode <String>] [-DiskControllerType <String>]
  [-SharedGalleryImageId <String>] [-SecurityType <String>] [-EnableVtpm <Boolean>]
- [-EnableSecureBoot <Boolean>] [-IfMatch <String>] [-IfNoneMatch <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-EnableSecureBoot <Boolean>] [-IfMatch <String>] [-IfNoneMatch <String>] [-SshKeyType <String>]
+ [-ZonePlacementPolicy <String>] [-IncludeZone <String[]>] [-ExcludeZone <String[]>]
+ [-AlignRegionalDisksToVMZone] [-EnableProxyAgent] [-AddProxyAgentExtension]
+ [-ScheduledEventsApiVersion <String>] [-EnableAllInstancesDown <Boolean>]
+ [-DisableCapacityReservationAssignment] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -58,14 +61,14 @@ New-AzVM [[-ResourceGroupName] <String>] [[-Location] <String>] [-EdgeZone <Stri
  [-Priority <String>] [-EvictionPolicy <String>] [-MaxPrice <Double>] [-EncryptionAtHost]
  [-HostGroupId <String>] [-CapacityReservationGroupId <String>] [-UserData <String>]
  [-PlatformFaultDomain <Int32>] [-HibernationEnabled] [-vCPUCountAvailable <Int32>] [-vCPUCountPerCore <Int32>]
- [-IfMatch <String>] [-IfNoneMatch <String>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-ProcessorMode <String>] [-IfMatch <String>] [-IfNoneMatch <String>] [-DisableCapacityReservationAssignment]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The **New-AzVM** cmdlet creates a virtual machine in Azure.
 This cmdlet takes a virtual machine object as input. The **New-AzVM** cmdlet will create a new storage account for boot diagnostics if one does not already exist. <br> <br>
-Use the **[New-AzVMConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig)** cmdlet to create a virtual machine object. <br> 
+Use the **[New-AzVMConfig](https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmconfig)** cmdlet to create a virtual machine object. <br>
 Then use the following cmdlets to set different properties of the virtual machine object:
 - **[Add-AzVMNetworkInterface](https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmnetworkinterface)** to set the network profile.<br>
 - **[Set-AzVMOperatingSystem](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmoperatingsystem)** to set the OS profile. <br>
@@ -73,8 +76,10 @@ Then use the following cmdlets to set different properties of the virtual machin
 - **[Set-AzVMOSDisk](https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmosdisk)** to set the OS disk(storage profile).<br>
 - **[Get-AzComputeResourceSku](https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azcomputeresourcesku)** can also be used to find out available virtual machine sizes for your subscription and region.<br>
 <br>
+
 The `SimpleParameterSet` provides a convenient method to create a VM by making common VM creation arguments optional.<br>
 <br>
+
 See [Quickstart: Create a Windows virtual machine in Azure with PowerShell](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-powershell) for tutorial. <br>
 
 ## EXAMPLES
@@ -149,7 +154,7 @@ $NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupNa
 $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
 
 $securityTypeStnd = "Standard"
-$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize -SecurityType $securityTypeStnd 
+$VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize -SecurityType $securityTypeStnd
 $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
 $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
 $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -SourceImageUri $SourceImageUri -Caching $OSDiskCaching -CreateOption $OSCreateOption -Windows
@@ -219,7 +224,7 @@ New-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -Credential $Creden
 $vm = Get-AzVM -ResourceGroupName $ResourceGroupName -Name $VMName -UserData;
 ```
 
-The UserData value must always be Base64 encoded. 
+The UserData value must always be Base64 encoded.
 
 ### Example 5: Creating a new VM with an existing subnet in another resource group
 ```powershell
@@ -283,15 +288,15 @@ $vm = New-AzVM -ResourceGroupName $resourceGroupName -Name $vmname -Credential $
 $vm = Get-AzVM -ResourceGroupName $resourceGroupName -Name $vmname
 ```
 
-This example creates a new VM using the -Image parameter, providing many default values to the VM. 
+This example creates a new VM using the -Image parameter, providing many default values to the VM.
 
 ### Example 8: Creating a VM for Trusted Launch SecurityType.
 ```powershell
 $rgname = <Resource Group Name>;
 $loc = "eastus";
- 
-New-AzResourceGroup -Name $rgname -Location $loc -Force;    
-# VM Profile & Hardware       
+
+New-AzResourceGroup -Name $rgname -Location $loc -Force;
+# VM Profile & Hardware
 $domainNameLabel1 = 'd1' + $rgname;
 $vmsize = 'Standard_D4s_v3';
 $vmname1 = 'v' + $rgname;
@@ -316,7 +321,7 @@ $vm1 = Get-AzVM -ResourceGroupName $rgname -Name $vmname1;
 
 This example Creates a new VM with the TrustedLaunch Security Type and sets flags EnableSecureBoot and EnableVtpm as True by default. A Trusted Launch VM requires a Gen2 image. Please check [the Trusted Launch feature page](https://aka.ms/trustedlaunch) for more information.
 
-### Example 9: Create a VM with Trusted Launch turned on by defualt using New-AzVMConfig.
+### Example 9: Create a VM with Trusted Launch turned on by default using New-AzVMConfig.
 ```powershell
 $rgname = "<Resource Group Name>";
 $loc = "<Azure Region>";
@@ -368,7 +373,7 @@ $securePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;
 $user = <Username>;
 $cred = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
 # Create VM
-$vm = New-AzVM -ResourceGroupName $rgname -Name $vmname -Credential $cred -DomainNameLabel $domainNameLabel; 
+$vm = New-AzVM -ResourceGroupName $rgname -Name $vmname -Credential $cred -DomainNameLabel $domainNameLabel;
 $vm = Get-AzVM -ResourceGroupName $rgname -Name $vmname;
 # Verify $vm.SecurityProfile.SecurityType is TrustedLaunch.
 # Verify the $vm.StorageProfile.ImageReference.Sku has defaulted to "2022-datacenter-azure-edition", a Gen2 image.
@@ -376,9 +381,29 @@ $vm = Get-AzVM -ResourceGroupName $rgname -Name $vmname;
 
 This example shows how the simple cmdlet call with minimal parameters will result in a TrustedLaunch enabled VM with a Gen2 image. Please check [the Trusted Launch feature page](https://aka.ms/trustedlaunch) for more information.
 
-=======
+### Example 14: Create a VM with a specific processor mode
+```powershell
+New-AzVM -ResourceGroupName "myResourceGroup" -Location "westus" -Name "myVM" -Credential (Get-Credential) -Size "Standard_E2pds_v8" -ProcessorMode "Deterministic"
+```
+
+This command creates a VM and sets processor frequency behavior to deterministic mode.
 
 ## PARAMETERS
+
+### -AddProxyAgentExtension
+Specifies whether to implicitly install the ProxyAgent Extension. This option is currently applicable only for Linux OS.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AddressPrefix
 The address prefix for the virtual network which will be created for the VM.
@@ -391,6 +416,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: 192.168.0.0/16
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AlignRegionalDisksToVMZone
+Specifies whether the regional disks should be aligned/moved to the VM zone. This is applicable only for VMs with placement property set. Please note that this change is irreversible.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -542,6 +582,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableCapacityReservationAssignment
+Specifies that the virtual machine is explicitly opted out from any capacity reservation assignment.
+When set, the virtual machine will not be implicitly or explicitly associated with any capacity reservation and will consume publicly available capacity instead.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet, DiskFileParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DiskControllerType
 Specifies the disk controller type configured for the VM and VirtualMachineScaleSet. This property is only supported for virtual machines whose operating system disk and VM sku supports Generation 2 (https://learn.microsoft.com/en-us/azure/virtual-machines/generation-2), please check the HyperVGenerations capability returned as part of VM sku capabilities in the response of Microsoft.Compute SKUs api for the region contains V2 (https://learn.microsoft.com/rest/api/compute/resourceskus/list) . <br> For more information about Disk Controller Types supported please refer to https://aka.ms/azure-diskcontrollertypes.
 
@@ -602,6 +658,36 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -EnableAllInstancesDown
+Specifies if Scheduled Events should be auto-approved when all instances are down.
+
+```yaml
+Type: System.Nullable`1[System.Boolean]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableProxyAgent
+Specifies whether Metadata Security Protocol(ProxyAgent) feature should be enabled or not.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -EnableSecureBoot
 Specifies whether secure boot should be enabled on the virtual machine.
 
@@ -648,8 +734,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionAtHost
-EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. 
-This will enable the encryption for all the disks including Resource/Temp disk at host itself. 
+EncryptionAtHost property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set.
+This will enable the encryption for all the disks including Resource/Temp disk at host itself.
 Default: The Encryption at host will be disabled unless this property is set to true for the resource.
 
 ```yaml
@@ -670,6 +756,21 @@ The eviction policy for the Azure Spot virtual machine.  Supported values are 'D
 ```yaml
 Type: System.String
 Parameter Sets: SimpleParameterSet, DiskFileParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeZone
+This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection.
+
+```yaml
+Type: System.String[]
+Parameter Sets: SimpleParameterSet
 Aliases:
 
 Required: False
@@ -799,15 +900,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncludeZone
+This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection.
+
+```yaml
+Type: System.String[]
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LicenseType
 Specifies a license type, which indicates that the image or disk for the virtual machine was licensed on-premises.
 Possible values for Windows Server are:
 - Windows_Client
 - Windows_Server
 
-Possible values for Linux Server operating system are: 
-- RHEL_BYOS (for RHEL) 
-- SLES_BYOS (for SUSE) 
+Possible values for Linux Server operating system are:
+- RHEL_BYOS (for RHEL)
+- SLES_BYOS (for SUSE)
 
 ```yaml
 Type: System.String
@@ -971,6 +1087,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProcessorMode
+Specifies processor frequency behavior. Typical values are `Deterministic` and `Opportunistic`.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet, DiskFileParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ProximityPlacementGroupId
 The resource id of the Proximity Placement Group to use with this virtual machine.
 
@@ -1013,7 +1144,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: Standard
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1042,6 +1173,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScheduledEventsApiVersion
+Specifies the api-version to determine which Scheduled Events configuration schema version will be delivered. Format: YYYY-MM-DD. For available API versions, see https://learn.microsoft.com/rest/api/compute/scheduled-events.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -1114,6 +1260,22 @@ Name of the SSH Public Key resource.
 Type: System.String
 Parameter Sets: SimpleParameterSet, DefaultParameterSet
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SshKeyType
+Specify the type of SSH key to generate. Allowed values are 'Ed25519' and 'RSA'.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+Accepted values: Ed25519, RSA
 
 Required: False
 Position: Named
@@ -1314,6 +1476,21 @@ Aliases:
 
 Required: False
 Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ZonePlacementPolicy
+Specifies the policy for virtual machine's placement in availability zone. Possible values are: **Any** - An availability zone will be automatically picked by system as part of virtual machine creation.
+
+```yaml
+Type: System.String
+Parameter Sets: SimpleParameterSet
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

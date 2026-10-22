@@ -10,20 +10,43 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzContainerRegistryToken
 
 ## SYNOPSIS
-Creates a token for a container registry with the specified parameters.
+Create a token for a container registry with the specified parameters.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzContainerRegistryToken -Name <String> -RegistryName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-CredentialsCertificate <ITokenCertificate[]>]
- [-CredentialsPassword <ITokenPassword[]>] [-ScopeMapId <String>] [-Status <TokenStatus>]
+ [-CredentialsPassword <ITokenPassword[]>] [-ScopeMapId <String>] [-Status <String>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzContainerRegistryToken -Name <String> -RegistryName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzContainerRegistryToken -Name <String> -RegistryName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityRegistryExpanded
+```
+New-AzContainerRegistryToken -Name <String> -RegistryInputObject <IContainerRegistryIdentity>
+ [-CredentialsCertificate <ITokenCertificate[]>] [-CredentialsPassword <ITokenPassword[]>]
+ [-ScopeMapId <String>] [-Status <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates a token for a container registry with the specified parameters.
+Create a token for a container registry with the specified parameters.
 
 ## EXAMPLES
 
@@ -60,11 +83,10 @@ Accept wildcard characters: False
 
 ### -CredentialsCertificate
 .
-To construct, see NOTES section for CREDENTIALSCERTIFICATE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.ITokenCertificate[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.ITokenCertificate[]
+Parameter Sets: CreateExpanded, CreateViaIdentityRegistryExpanded
 Aliases:
 
 Required: False
@@ -76,11 +98,10 @@ Accept wildcard characters: False
 
 ### -CredentialsPassword
 .
-To construct, see NOTES section for CREDENTIALSPASSWORD properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.ITokenPassword[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.ITokenPassword[]
+Parameter Sets: CreateExpanded, CreateViaIdentityRegistryExpanded
 Aliases:
 
 Required: False
@@ -100,6 +121,36 @@ Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -136,12 +187,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RegistryInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
+Parameter Sets: CreateViaIdentityRegistryExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -RegistryName
 The name of the container registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -157,7 +223,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -172,7 +238,7 @@ The resource ID of the scope map to which the token will be associated with.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityRegistryExpanded
 Aliases:
 
 Required: False
@@ -186,8 +252,8 @@ Accept wildcard characters: False
 The status of the token example enabled or disabled.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.TokenStatus
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityRegistryExpanded
 Aliases:
 
 Required: False
@@ -203,7 +269,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -249,9 +315,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IToken
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IToken
 
 ## NOTES
 

@@ -10,20 +10,22 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzSearchService
 
 ## SYNOPSIS
-Remove an Azure Cognitive Search service.
+Remove an Azure AI Search service.
 
 ## SYNTAX
 
 ### ResourceNameParameterSet (Default)
 ```
 Remove-AzSearchService [-ResourceGroupName] <String> [-Name] <String> [-Force] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### InputObjectParameterSet
 ```
 Remove-AzSearchService [-InputObject] <PSSearchService> [-Force] [-PassThru]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceIdParameterSet
@@ -33,7 +35,7 @@ Remove-AzSearchService [-ResourceId] <String> [-Force] [-PassThru] [-DefaultProf
 ```
 
 ## DESCRIPTION
-The **Remove-AzSearchService** cmdlet removes an Azure Cognitive Search service with specified parameters.
+The **Remove-AzSearchService** cmdlet removes an Azure AI Search service with specified parameters.
 
 ## EXAMPLES
 
@@ -48,7 +50,7 @@ Are you sure you want to remove Search Service 'pstestazuresearch01'?
 [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
 ```
 
-The example removes an Azure Cognitive Search service.
+The example removes an Azure AI Search service.
 
 ## PARAMETERS
 
@@ -83,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Azure Cognitive Search Service Input Object.
+Azure AI Search Service Input Object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.Search.Models.PSSearchService
@@ -98,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Azure Cognitive Search Service name.
+Azure AI Search Service name.
 
 ```yaml
 Type: System.String
@@ -143,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-Azure Cognitive Search Service Resource Id.
+Azure AI Search Service Resource Id.
 
 ```yaml
 Type: System.String

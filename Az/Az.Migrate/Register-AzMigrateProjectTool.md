@@ -14,9 +14,24 @@ Registers a tool with the migrate project.
 
 ## SYNTAX
 
+### RegisterExpanded (Default)
 ```
 Register-AzMigrateProjectTool -MigrateProjectName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-AcceptLanguage <String>] [-Tool <String>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RegisterViaJsonFilePath
+```
+Register-AzMigrateProjectTool -MigrateProjectName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] [-AcceptLanguage <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RegisterViaJsonString
+```
+Register-AzMigrateProjectTool -MigrateProjectName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] [-AcceptLanguage <String>] -JsonString <String> [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -64,6 +79,36 @@ Parameter Sets: (All)
 Aliases: AzureRMContext, AzureCredential
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Register operation
+
+```yaml
+Type: System.String
+Parameter Sets: RegisterViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Register operation
+
+```yaml
+Type: System.String
+Parameter Sets: RegisterViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -120,7 +165,7 @@ Gets or sets the tool to be registered.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: RegisterExpanded
 Aliases:
 
 Required: False
@@ -168,7 +213,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Boolean
+### Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.IRegistrationResult
 
 ## NOTES
 

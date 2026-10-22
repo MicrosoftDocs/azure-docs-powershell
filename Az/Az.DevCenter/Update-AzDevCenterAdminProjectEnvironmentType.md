@@ -18,7 +18,7 @@ Partially updates a project environment type.
 ```
 Update-AzDevCenterAdminProjectEnvironmentType -EnvironmentTypeName <String> -ProjectName <String>
  -ResourceGroupName <String> [-SubscriptionId <String>] [-CreatorRoleAssignmentRole <Hashtable>]
- [-DeploymentTargetId <String>] [-IdentityType <ManagedServiceIdentityType>]
+ [-DeploymentTargetId <String>] [-DisplayName <String>] [-IdentityType <ManagedServiceIdentityType>]
  [-IdentityUserAssignedIdentity <Hashtable>] [-Status <EnvironmentTypeEnableStatus>] [-Tag <Hashtable>]
  [-UserRoleAssignment <Hashtable>] [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -27,7 +27,7 @@ Update-AzDevCenterAdminProjectEnvironmentType -EnvironmentTypeName <String> -Pro
 ### UpdateViaIdentityExpanded
 ```
 Update-AzDevCenterAdminProjectEnvironmentType -InputObject <IDevCenterIdentity>
- [-CreatorRoleAssignmentRole <Hashtable>] [-DeploymentTargetId <String>]
+ [-CreatorRoleAssignmentRole <Hashtable>] [-DeploymentTargetId <String>] [-DisplayName <String>]
  [-IdentityType <ManagedServiceIdentityType>] [-IdentityUserAssignedIdentity <Hashtable>]
  [-Status <EnvironmentTypeEnableStatus>] [-Tag <Hashtable>] [-UserRoleAssignment <Hashtable>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -110,6 +110,21 @@ Accept wildcard characters: False
 ### -DeploymentTargetId
 Id of a subscription that the environment type will be mapped to.
 The environment's resources will be deployed into this subscription.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayName
+The display name of the project environment type.
 
 ```yaml
 Type: System.String
@@ -318,7 +333,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20231001Preview.IProjectEnvironmentType
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20250401Preview.IProjectEnvironmentType
 
 ## NOTES
 

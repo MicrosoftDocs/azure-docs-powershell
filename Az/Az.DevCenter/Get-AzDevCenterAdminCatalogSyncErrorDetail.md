@@ -32,7 +32,7 @@ Gets catalog synchronization error details
 
 ## EXAMPLES
 
-### Example 1: Get the catalog sync error dteail
+### Example 1: Get the catalog sync error details
 ```powershell
 Get-AzDevCenterAdminCatalogSyncErrorDetail -DevCenterName Contoso -CatalogName CentralCatalog -ResourceGroupName testRg
 ```
@@ -182,7 +182,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20231001Preview.ISyncErrorDetails
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20250401Preview.ISyncErrorDetails
 
 ## NOTES
 

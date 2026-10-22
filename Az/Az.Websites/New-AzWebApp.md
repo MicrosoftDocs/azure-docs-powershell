@@ -20,7 +20,8 @@ Creates an Azure Web App.
 New-AzWebApp [[-ResourceGroupName] <String>] [-Name] <String> [[-Location] <String>]
  [[-AppServicePlan] <String>] [-ContainerImageName <String>] [-EnableContainerContinuousDeployment] [-AsJob]
  [-GitRepositoryPath <String>] [-Tag <Hashtable>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>]
+ [<CommonParameters>]
 ```
 
 ### PrivateRegistry
@@ -29,7 +30,7 @@ New-AzWebApp [-ResourceGroupName] <String> [-Name] <String> [[-Location] <String
  -ContainerImageName <String> -ContainerRegistryUrl <String> -ContainerRegistryUser <String>
  -ContainerRegistryPassword <SecureString> [-EnableContainerContinuousDeployment] [-AsJob] [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### WebAppParameterSet
@@ -39,7 +40,7 @@ New-AzWebApp [-ResourceGroupName] <String> [-Name] <String> [-Location] <String>
  [-IgnoreSourceControl] [-IgnoreCustomHostNames] [[-AppSettingsOverrides] <Hashtable>] [[-AseName] <String>]
  [[-AseResourceGroupName] <String>] [-IncludeSourceWebAppSlots] [-AsJob] [-Tag <Hashtable>]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -56,6 +57,21 @@ This command creates an Azure Web App named ContosoSite in the existing resource
 The command uses an existing App Service plan named ContosoServicePlan.
 
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AppServicePlan
 App Service Plan Name or App Service Plan Id. If a WebApp and App Service Plan are in different Resource Groups, use the ID instead of the name. 
@@ -126,6 +142,21 @@ Run cmdlet in the background
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzActionGroup
 
 ## SYNOPSIS
-Update a new action group or Update an existing one.
+update a new action group or update an existing one.
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ Update-AzActionGroup -InputObject <IActionGroupIdentity> [-ArmRoleReceiver <IArm
 ```
 
 ## DESCRIPTION
-Update a new action group or Update an existing one.
+update a new action group or update an existing one.
 
 ## EXAMPLES
 

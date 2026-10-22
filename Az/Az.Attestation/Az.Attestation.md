@@ -44,5 +44,5 @@ Resets the policy from a tenant in Azure Attestationn.}
 Sets the policy from a tenant in Azure Attestationn.
 
 ### [Update-AzAttestationProvider](Update-AzAttestationProvider.md)
-Updates the Attestation Provider.
+Update the Attestation Provider.
 

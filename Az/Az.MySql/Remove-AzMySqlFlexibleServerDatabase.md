@@ -21,6 +21,13 @@ Remove-AzMySqlFlexibleServerDatabase -Name <String> -ResourceGroupName <String> 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DeleteViaIdentityFlexibleServer
+```
+Remove-AzMySqlFlexibleServerDatabase -Name <String> -FlexibleServerInputObject <IMySqlIdentity>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
 ### DeleteViaIdentity
 ```
 Remove-AzMySqlFlexibleServerDatabase -InputObject <IMySqlIdentity> [-DefaultProfile <PSObject>] [-AsJob]
@@ -80,9 +87,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FlexibleServerInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.IMySqlIdentity
+Parameter Sets: DeleteViaIdentityFlexibleServer
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.IMySqlIdentity
@@ -101,7 +122,7 @@ The name of the database.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Delete, DeleteViaIdentityFlexibleServer
 Aliases: DatabaseName
 
 Required: True

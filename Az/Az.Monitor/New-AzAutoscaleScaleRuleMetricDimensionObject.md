@@ -1,7 +1,7 @@
 ---
 external help file: Az.Autoscale.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleScaleRuleMetricDimensionObject
+online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azautoscalescalerulemetricdimensionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleScaleRuleMetricDimensionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleScaleRuleMetricDimensionObject.md
@@ -15,8 +15,7 @@ Create an in-memory object for ScaleRuleMetricDimension.
 ## SYNTAX
 
 ```
-New-AzAutoscaleScaleRuleMetricDimensionObject -DimensionName <String>
- -Operator <ScaleRuleMetricDimensionOperationType> -Value <String[]>
+New-AzAutoscaleScaleRuleMetricDimensionObject -DimensionName <String> -Operator <String> -Value <String[]>
  [<CommonParameters>]
 ```
 
@@ -56,7 +55,7 @@ Only 'Equals' and 'NotEquals' are supported.
 'NotEquals' being not equal to all of the values.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.ScaleRuleMetricDimensionOperationType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -90,7 +89,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.ScaleRuleMetricDimension
+### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.ScaleRuleMetricDimension
 
 ## NOTES
 

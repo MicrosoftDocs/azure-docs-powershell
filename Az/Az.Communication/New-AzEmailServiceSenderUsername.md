@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEmailServiceSenderUsername
 
 ## SYNOPSIS
-Add a new SenderUsername resource under the parent Domains resource or update an existing SenderUsername resource.
+Add a new SenderUsername resource under the parent Domains resource or create an existing SenderUsername resource.
 
 ## SYNTAX
 
@@ -64,7 +64,7 @@ New-AzEmailServiceSenderUsername -SenderUsername <String> -DomainInputObject <IE
 ```
 
 ## DESCRIPTION
-Add a new SenderUsername resource under the parent Domains resource or update an existing SenderUsername resource.
+Add a new SenderUsername resource under the parent Domains resource or create an existing SenderUsername resource.
 
 ## EXAMPLES
 

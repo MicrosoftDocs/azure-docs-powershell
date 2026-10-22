@@ -28,6 +28,12 @@ Get-AzDnsResolverOutboundEndpoint -DnsResolverName <String> -Name <String> -Reso
  [<CommonParameters>]
 ```
 
+### GetViaIdentityDnsResolver
+```
+Get-AzDnsResolverOutboundEndpoint -Name <String> -DnsResolverInputObject <IDnsResolverIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzDnsResolverOutboundEndpoint -InputObject <IDnsResolverIdentity> [-DefaultProfile <PSObject>]
@@ -84,6 +90,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DnsResolverInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DnsResolver.Models.IDnsResolverIdentity
+Parameter Sets: GetViaIdentityDnsResolver
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DnsResolverName
 The name of the DNS resolver.
 
@@ -101,7 +122,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DnsResolver.Models.IDnsResolverIdentity
@@ -120,7 +140,7 @@ The name of the outbound endpoint for the DNS resolver.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityDnsResolver
 Aliases: OutboundEndpointName
 
 Required: True
@@ -148,6 +168,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]
@@ -186,7 +207,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DnsResolver.Models.Api20220701.IOutboundEndpoint
+### Microsoft.Azure.PowerShell.Cmdlets.DnsResolver.Models.IOutboundEndpoint
 
 ## NOTES
 

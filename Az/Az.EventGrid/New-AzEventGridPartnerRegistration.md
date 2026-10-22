@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridPartnerRegistration
 
 ## SYNOPSIS
-Create a new partner registration with the specified parameters.
+create a new partner registration with the specified parameters.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ New-AzEventGridPartnerRegistration -InputObject <IEventGridIdentity> -Location <
 ```
 
 ## DESCRIPTION
-Create a new partner registration with the specified parameters.
+create a new partner registration with the specified parameters.
 
 ## EXAMPLES
 

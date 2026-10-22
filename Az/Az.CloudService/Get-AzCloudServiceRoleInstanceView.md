@@ -14,10 +14,17 @@ Retrieves information about the run-time state of a role instance in a cloud ser
 
 ## SYNTAX
 
+### Get (Default)
 ```
 Get-AzCloudServiceRoleInstanceView -CloudServiceName <String> -ResourceGroupName <String>
  -RoleInstanceName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
  [<CommonParameters>]
+```
+
+### GetViaIdentityRoleInstance
+```
+Get-AzCloudServiceRoleInstanceView -CloudServiceName <String> -RoleInstanceInputObject <ICloudServiceIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -76,7 +83,7 @@ Name of the resource group.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -86,12 +93,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RoleInstanceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.ICloudServiceIdentity
+Parameter Sets: GetViaIdentityRoleInstance
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -RoleInstanceName
 Name of the role instance.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Get
 Aliases:
 
 Required: True
@@ -107,7 +129,7 @@ The subscription ID forms part of the URI for every service call.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: Get
 Aliases:
 
 Required: False
@@ -122,9 +144,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.ICloudServiceIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.IRoleInstanceView
+### Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.IRoleInstanceView
 
 ## NOTES
 

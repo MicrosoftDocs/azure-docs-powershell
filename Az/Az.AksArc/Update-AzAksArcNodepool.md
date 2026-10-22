@@ -17,25 +17,18 @@ Update the agent pool in the provisioned cluster
 ### UpdateExpanded (Default)
 ```
 Update-AzAksArcNodepool -ClusterName <String> -ResourceGroupName <String> -Name <String>
- [-SubscriptionId <String>] [-Count <Int32>] [-NodeLabel <Hashtable>] [-NodeTaint <String[]>]
+ [-SubscriptionId <String>] [-Count <Int32>] [-EnableAutoScaling] [-MaxPod <Int32>] [-MaxCount <Int32>]
+ [-MinCount <Int32>] [-NodeLabel <Hashtable>] [-NodeTaint <String[]>] [-OSSku <String>] [-OSType <String>]
  [-VMSize <String>] [-Tag <Hashtable>] [-AsJob] [-NoWait] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
-### CreateViaIdentityExpanded
+### UpdateViaIdentityExpanded
 ```
-Update-AzAksArcNodepool -ClusterName <String> -ResourceGroupName <String> -Name <String>
- [-SubscriptionId <String>] -InputObject <IAksArcIdentity> [-Count <Int32>] [-NodeLabel <Hashtable>]
- [-NodeTaint <String[]>] [-VMSize <String>] [-Tag <Hashtable>] [-AsJob] [-NoWait]
+Update-AzAksArcNodepool -InputObject <IAksArcIdentity> [-Count <Int32>] [-EnableAutoScaling] [-MaxPod <Int32>]
+ [-MaxCount <Int32>] [-MinCount <Int32>] [-NodeLabel <Hashtable>] [-NodeTaint <String[]>] [-OSSku <String>]
+ [-OSType <String>] [-VMSize <String>] [-Tag <Hashtable>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### AutoScaling
-```
-Update-AzAksArcNodepool -ClusterName <String> -ResourceGroupName <String> -Name <String>
- [-SubscriptionId <String>] [-Count <Int32>] [-NodeLabel <Hashtable>] [-NodeTaint <String[]>]
- [-VMSize <String>] [-Tag <Hashtable>] [-EnableAutoScaling] -MaxCount <Int32> -MinCount <Int32> [-AsJob]
- [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -86,7 +79,7 @@ The name of the Kubernetes cluster on which get is called.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -118,10 +111,10 @@ Default value is false
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: AutoScaling
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,7 +126,7 @@ Identity Parameter
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.AksArc.Models.IAksArcIdentity
-Parameter Sets: CreateViaIdentityExpanded
+Parameter Sets: UpdateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -148,10 +141,25 @@ The maximum number of nodes for auto-scaling
 
 ```yaml
 Type: System.Int32
-Parameter Sets: AutoScaling
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxPod
+The maximum number of pods that can run on a node.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -163,10 +171,10 @@ The minimum number of nodes for auto-scaling
 
 ```yaml
 Type: System.Int32
-Parameter Sets: AutoScaling
+Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -178,7 +186,7 @@ Parameter for the name of the agent pool in the provisioned cluster.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -234,13 +242,45 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OSSku
+Specifies the OS SKU used by the agent pool.
+The default is CBLMariner if OSType is Linux.
+The default is Windows2019 when OSType is Windows.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OSType
+The particular KubernetesVersion Image OS Type (Linux, Windows)
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -255,7 +295,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: False

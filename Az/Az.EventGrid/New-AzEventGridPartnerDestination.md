@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridPartnerDestination
 
 ## SYNOPSIS
-Asynchronously creates a new partner destination with the specified parameters.
+Asynchronously create a new partner destination with the specified parameters.
 
 ## SYNTAX
 
@@ -47,7 +47,7 @@ New-AzEventGridPartnerDestination -InputObject <IEventGridIdentity> -Location <S
 ```
 
 ## DESCRIPTION
-Asynchronously creates a new partner destination with the specified parameters.
+Asynchronously create a new partner destination with the specified parameters.
 
 ## EXAMPLES
 

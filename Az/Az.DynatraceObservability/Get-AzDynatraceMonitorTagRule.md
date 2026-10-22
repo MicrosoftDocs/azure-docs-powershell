@@ -26,6 +26,12 @@ Get-AzDynatraceMonitorTagRule -InputObject <IDynatraceObservabilityIdentity> [-D
  [<CommonParameters>]
 ```
 
+### GetViaIdentityMonitor
+```
+Get-AzDynatraceMonitorTagRule -MonitorInputObject <IDynatraceObservabilityIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 Get a TagRule
 
@@ -78,11 +84,25 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IDynatraceObservabilityIdentity
 Parameter Sets: GetViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -MonitorInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.IDynatraceObservabilityIdentity
+Parameter Sets: GetViaIdentityMonitor
 Aliases:
 
 Required: True
@@ -125,6 +145,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]
@@ -147,7 +168,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.Api20210901.ITagRule
+### Microsoft.Azure.PowerShell.Cmdlets.DynatraceObservability.Models.ITagRule
 
 ## NOTES
 

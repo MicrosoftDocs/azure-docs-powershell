@@ -1,7 +1,7 @@
 ---
 external help file: Az.Cdn-help.xml
 Module Name: Az.Cdn
-online version: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnSecretFirstPartyManagedCertificateParametersObject
+online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnsecretfirstpartymanagedcertificateparametersobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnSecretFirstPartyManagedCertificateParametersObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnSecretFirstPartyManagedCertificateParametersObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for AzureFirstPartyManagedCertificateParameters.
 ## SYNTAX
 
 ```
-New-AzFrontDoorCdnSecretFirstPartyManagedCertificateParametersObject -Type <SecretType>
- [<CommonParameters>]
+New-AzFrontDoorCdnSecretFirstPartyManagedCertificateParametersObject [-SubjectAlternativeName <String[]>]
+ [-Type <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,15 +39,30 @@ Create an in-memory object for AzureFirstPartyManagedCertificateParameters
 
 ## PARAMETERS
 
-### -Type
-The type of the secret resource.
+### -SubjectAlternativeName
+The list of SANs.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.SecretType
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Type
+Type.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -61,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.AzureFirstPartyManagedCertificateParameters
+### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.AzureFirstPartyManagedCertificateParameters
 
 ## NOTES
 

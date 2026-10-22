@@ -21,23 +21,30 @@ Get-AzReservationAvailableScope -ReservationId <String> -ReservationOrderId <Str
  [<CommonParameters>]
 ```
 
-### Available
+### AvailableViaJsonString
 ```
-Get-AzReservationAvailableScope -ReservationId <String> -ReservationOrderId <String>
- -Body <IAvailableScopeRequest> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+Get-AzReservationAvailableScope -ReservationId <String> -ReservationOrderId <String> -JsonString <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AvailableViaJsonFilePath
+```
+Get-AzReservationAvailableScope -ReservationId <String> -ReservationOrderId <String> -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### AvailableViaIdentityReservationOrderExpanded
+```
+Get-AzReservationAvailableScope -ReservationId <String> -ReservationOrderInputObject <IReservationsIdentity>
+ [-Scope <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AvailableViaIdentityExpanded
 ```
 Get-AzReservationAvailableScope -InputObject <IReservationsIdentity> [-Scope <String[]>]
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
-```
-
-### AvailableViaIdentity
-```
-Get-AzReservationAvailableScope -InputObject <IReservationsIdentity> -Body <IAvailableScopeRequest>
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -77,22 +84,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Body
-Available scope
-To construct, see NOTES section for BODY properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IAvailableScopeRequest
-Parameter Sets: Available, AvailableViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
 Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
@@ -111,17 +102,46 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity
-Parameter Sets: AvailableViaIdentityExpanded, AvailableViaIdentity
+Parameter Sets: AvailableViaIdentityExpanded
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Available operation
+
+```yaml
+Type: System.String
+Parameter Sets: AvailableViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Available operation
+
+```yaml
+Type: System.String
+Parameter Sets: AvailableViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -145,7 +165,7 @@ Id of the reservation item
 
 ```yaml
 Type: System.String
-Parameter Sets: AvailableExpanded, Available
+Parameter Sets: AvailableExpanded, AvailableViaJsonString, AvailableViaJsonFilePath, AvailableViaIdentityReservationOrderExpanded
 Aliases:
 
 Required: True
@@ -160,7 +180,7 @@ Order Id of the reservation
 
 ```yaml
 Type: System.String
-Parameter Sets: AvailableExpanded, Available
+Parameter Sets: AvailableExpanded, AvailableViaJsonString, AvailableViaJsonFilePath
 Aliases:
 
 Required: True
@@ -170,12 +190,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReservationOrderInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity
+Parameter Sets: AvailableViaIdentityReservationOrderExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Scope
 .
 
 ```yaml
 Type: System.String[]
-Parameter Sets: AvailableExpanded, AvailableViaIdentityExpanded
+Parameter Sets: AvailableExpanded, AvailableViaIdentityReservationOrderExpanded, AvailableViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -221,13 +256,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IAvailableScopeRequest
-
 ### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.ISubscriptionScopeProperties
+### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IAvailableScopeProperties
 
 ## NOTES
 

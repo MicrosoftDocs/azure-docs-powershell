@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDevCenterUserPool
 
 ## SYNOPSIS
-Gets a pool
+Gets a pool.
 
 ## SYNTAX
 
@@ -51,7 +51,7 @@ Get-AzDevCenterUserPool -DevCenterName <String> -ProjectName <String> [-DefaultP
 ```
 
 ## DESCRIPTION
-Gets a pool
+Gets a pool.
 
 ## EXAMPLES
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -PoolName
-The name of a pool of Dev Boxes.
+Pool name.
 
 ```yaml
 Type: System.String
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProjectName
-The DevCenter Project upon which to execute operations.
+Name of the project.
 
 ```yaml
 Type: System.String
@@ -202,7 +202,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IPool
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IPool
 
 ## NOTES
 

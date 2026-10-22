@@ -322,7 +322,6 @@ Accept wildcard characters: False
 
 ### -IngressCustomDomain
 custom domain bindings for Container Apps' hostnames.
-To construct, see NOTES section for INGRESSCUSTOMDOMAIN properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.ICustomDomain[]
@@ -368,7 +367,6 @@ Accept wildcard characters: False
 
 ### -IngressIPSecurityRestriction
 Rules to restrict incoming IP address.
-To construct, see NOTES section for INGRESSIPSECURITYRESTRICTION properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IIPSecurityRestrictionRule[]
@@ -399,7 +397,6 @@ Accept wildcard characters: False
 
 ### -IngressTraffic
 Traffic weights for app's revisions.
-To construct, see NOTES section for INGRESSTRAFFIC properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.ITrafficWeight[]
@@ -446,7 +443,6 @@ Accept wildcard characters: False
 
 ### -Registry
 Collection of private container registry credentials for containers used by the Container app.
-To construct, see NOTES section for REGISTRY properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IRegistryCredentials[]
@@ -462,7 +458,6 @@ Accept wildcard characters: False
 
 ### -Secret
 Collection of secrets used by a Container app.
-To construct, see NOTES section for SECRET properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.ISecret[]

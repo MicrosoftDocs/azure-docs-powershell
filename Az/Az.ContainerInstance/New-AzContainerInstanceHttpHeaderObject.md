@@ -1,7 +1,7 @@
 ---
 external help file: Az.ContainerInstance-help.xml
 Module Name: Az.ContainerInstance
-online version: https://learn.microsoft.com/powershell/module/az.ContainerInstance/New-AzContainerInstanceHttpHeaderObject
+online version: https://learn.microsoft.com/powershell/module/Az.ContainerInstance/new-azcontainerinstancehttpheaderobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceHttpHeaderObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceHttpHeaderObject.md
@@ -10,17 +10,17 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzContainerInstanceHttpHeaderObject
 
 ## SYNOPSIS
-Create a in-memory object for HttpHeader
+Create an in-memory object for HttpHeader.
 
 ## SYNTAX
 
 ```
-New-AzContainerInstanceHttpHeaderObject -Name <String> [-Value <String>]
+New-AzContainerInstanceHttpHeaderObject [-Name <String>] [-Value <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a in-memory object for HttpHeader
+Create an in-memory object for HttpHeader.
 
 ## EXAMPLES
 
@@ -47,7 +47,7 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The header value..
+The header value.
 
 ```yaml
 Type: System.String
@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20221001Preview.HttpHeader
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.HttpHeader
 
 ## NOTES
 

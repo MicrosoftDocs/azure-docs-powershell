@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Set-AzConnectedMachineExtension
 
 ## SYNOPSIS
-The operation to create or update the extension.
+The operation to update the extension.
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ Set-AzConnectedMachineExtension -MachineName <String> -Name <String> -ResourceGr
 ```
 
 ## DESCRIPTION
-The operation to create or update the extension.
+The operation to update the extension.
 
 ## EXAMPLES
 

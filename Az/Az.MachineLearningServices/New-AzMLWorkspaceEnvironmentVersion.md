@@ -10,38 +10,105 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzMLWorkspaceEnvironmentVersion
 
 ## SYNOPSIS
-Creates or updates an EnvironmentVersion.
+Create an EnvironmentVersion.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzMLWorkspaceEnvironmentVersion -Name <String> -ResourceGroupName <String> -Version <String>
- -WorkspaceName <String> [-SubscriptionId <String>] [-AutoRebuild <AutoRebuildSetting>]
- [-BuildContextUri <String>] [-BuildDockerfilePath <String>] [-CondaFile <String>] [-Description <String>]
- [-Image <String>] [-IsAnonymou] [-IsArchived] [-LivenessRoutePath <String>] [-LivenessRoutePort <Int32>]
- [-OSType <OperatingSystemType>] [-ReadinessRoutePath <String>] [-ReadinessRoutePort <Int32>]
- [-ResourceBaseProperty <Hashtable>] [-ScoringRoutePath <String>] [-ScoringRoutePort <Int32>] [-Stage <String>]
- [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzMLWorkspaceEnvironmentVersion -Version <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> [-AutoRebuild <String>] [-BuildContextUri <String>]
+ [-BuildDockerfilePath <String>] [-CondaFile <String>] [-Description <String>] [-Image <String>] [-IsAnonymou]
+ [-IsArchived] [-LivenessRoutePath <String>] [-LivenessRoutePort <Int32>] [-OSType <String>]
+ [-ReadinessRoutePath <String>] [-ReadinessRoutePort <Int32>] [-ResourceBaseProperty <Hashtable>]
+ [-ScoringRoutePath <String>] [-ScoringRoutePort <Int32>] [-Stage <String>] [-Tag <Hashtable>]
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzMLWorkspaceEnvironmentVersion -Version <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> -JsonString <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzMLWorkspaceEnvironmentVersion -Version <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityWorkspaceExpanded
+```
+New-AzMLWorkspaceEnvironmentVersion -Version <String> -Name <String>
+ -WorkspaceInputObject <IMachineLearningServicesIdentity> [-AutoRebuild <String>] [-BuildContextUri <String>]
+ [-BuildDockerfilePath <String>] [-CondaFile <String>] [-Description <String>] [-Image <String>] [-IsAnonymou]
+ [-IsArchived] [-LivenessRoutePath <String>] [-LivenessRoutePort <Int32>] [-OSType <String>]
+ [-ReadinessRoutePath <String>] [-ReadinessRoutePort <Int32>] [-ResourceBaseProperty <Hashtable>]
+ [-ScoringRoutePath <String>] [-ScoringRoutePort <Int32>] [-Stage <String>] [-Tag <Hashtable>]
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityEnvironmentExpanded
+```
+New-AzMLWorkspaceEnvironmentVersion -Version <String>
+ -EnvironmentInputObject <IMachineLearningServicesIdentity> [-AutoRebuild <String>] [-BuildContextUri <String>]
+ [-BuildDockerfilePath <String>] [-CondaFile <String>] [-Description <String>] [-Image <String>] [-IsAnonymou]
+ [-IsArchived] [-LivenessRoutePath <String>] [-LivenessRoutePort <Int32>] [-OSType <String>]
+ [-ReadinessRoutePath <String>] [-ReadinessRoutePort <Int32>] [-ResourceBaseProperty <Hashtable>]
+ [-ScoringRoutePath <String>] [-ScoringRoutePort <Int32>] [-Stage <String>] [-Tag <Hashtable>]
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates or updates an EnvironmentVersion.
+Create an EnvironmentVersion.
 
 ## EXAMPLES
 
-### Example 1: Creates or updates an EnvironmentVersion.
+### Example 1: Create or update an EnvironmentVersion.
 ```powershell
-New-AzMLWorkspaceEnvironmentVersion -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-test01 -Name commandjobenv -Version 1 -Image "library/python:latest"
+New-AzMLWorkspaceEnvironmentVersion -ResourceGroupName ml-test -WorkspaceName mlworkspace-test2 -Name commandjobenv -Version 1 -Image "library/python:latest"
 ```
 
 ```output
-Name SystemDataCreatedAt  SystemDataCreatedBy                 SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy            SystemDataLastModifiedByType ResourceGroupName
----- -------------------  -------------------                 ----------------------- ------------------------ ------------------------            ---------------------------- -----------------
-1    5/31/2022 8:28:35 AM UserName (Example)                  User                    5/31/2022 8:28:35 AM     UserName (Example)                  User                         ml-rg-test
+AutoRebuild                  : Disabled
+BuildContextUri              : 
+BuildDockerfilePath          : 
+CondaFile                    : 
+Description                  : 
+EnvironmentType              : UserCreated
+Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/ml-test/providers/Microsoft.MachineLearningServices/workspaces/mlworkspace-test2/environments/commandjobenv/versions/1
+Image                        : library/python:latest
+IsAnonymou                   : False
+IsArchived                   : False
+LivenessRoutePath            : 
+LivenessRoutePort            : 0
+Name                         : 1
+OSType                       : Linux
+ProvisioningState            : Succeeded
+ReadinessRoutePath           : 
+ReadinessRoutePort           : 0
+ResourceBaseProperty         : {
+                                 "azureml.labels": "latest"
+                               }
+ResourceGroupName            : ml-test
+ScoringRoutePath             : 
+ScoringRoutePort             : 0
+Stage                        : Development
+SystemDataCreatedAt          : 11/5/2025 9:40:49 AM
+SystemDataCreatedBy          : User Name (Example)
+SystemDataCreatedByType      : User
+SystemDataLastModifiedAt     : 11/5/2025 9:40:49 AM
+SystemDataLastModifiedBy     : User Name (Example)
+SystemDataLastModifiedByType : User
+Tag                          : {
+                               }
+Type                         : Microsoft.MachineLearningServices/workspaces/environments/versions
+XmsAsyncOperationTimeout     :
 ```
 
-Creates or updates an EnvironmentVersion.
+This command creates or updates an EnvironmentVersion.
 
 ## PARAMETERS
 
@@ -49,8 +116,8 @@ Creates or updates an EnvironmentVersion.
 Defines if image needs to be rebuilt based on base image changes.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.AutoRebuildSetting
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -66,7 +133,7 @@ Supports blob URIs on environment creation and may return blob or Git URIs.\<see
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -81,7 +148,7 @@ Path to the Dockerfile in the build context.\<seealso href="https://docs.docker.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -96,7 +163,7 @@ Standard configuration file used by Conda that lets you install any kind of pack
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -127,7 +194,7 @@ The asset description text.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -137,12 +204,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnvironmentInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: CreateViaIdentityEnvironmentExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Image
 Name of the image that will be used for the environment.\<seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" /\>
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -157,7 +239,7 @@ If the name version are system generated (anonymous registration).
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -168,14 +250,44 @@ Accept wildcard characters: False
 ```
 
 ### -IsArchived
-Is the asset archived
+Is the asset archived?
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -187,7 +299,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -202,7 +314,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -218,7 +330,7 @@ This is case-sensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, CreateViaIdentityWorkspaceExpanded
 Aliases:
 
 Required: True
@@ -232,8 +344,8 @@ Accept wildcard characters: False
 The OS type of the environment.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.OperatingSystemType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -248,7 +360,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -263,7 +375,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -278,7 +390,7 @@ The asset property dictionary.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -294,7 +406,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -309,7 +421,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -324,7 +436,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -339,7 +451,7 @@ Stage in the environment lifecycle assigned to this environment
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -354,7 +466,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -370,7 +482,7 @@ Tags can be added, removed, and updated.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityWorkspaceExpanded, CreateViaIdentityEnvironmentExpanded
 Aliases:
 
 Required: False
@@ -395,12 +507,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WorkspaceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: CreateViaIdentityWorkspaceExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -WorkspaceName
 Name of Azure Machine Learning workspace.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -446,9 +573,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IEnvironmentVersion
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IEnvironmentVersion
 
 ## NOTES
 

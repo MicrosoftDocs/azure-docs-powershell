@@ -17,7 +17,13 @@ Get container.
 ### List (Default)
 ```
 Get-AzMLWorkspaceModelContainer -ResourceGroupName <String> [-SubscriptionId <String[]>]
- -WorkspaceName <String> [-Count <Int32>] [-ListViewType <ListViewType>] [-Skip <String>]
+ -WorkspaceName <String> [-Count <Int32>] [-ListViewType <String>] [-Skip <String>]
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### GetViaIdentityWorkspace
+```
+Get-AzMLWorkspaceModelContainer -Name <String> -WorkspaceInputObject <IMachineLearningServicesIdentity>
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
@@ -106,7 +112,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
@@ -124,7 +129,7 @@ Accept wildcard characters: False
 View type for including/excluding (for example) archived entities.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ListViewType
+Type: System.String
 Parameter Sets: List
 Aliases:
 
@@ -141,7 +146,7 @@ This is case-sensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: GetViaIdentityWorkspace, Get
 Aliases:
 
 Required: True
@@ -179,6 +184,21 @@ Required: False
 Position: Named
 Default value: (Get-AzContext).Subscription.Id
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WorkspaceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity
+Parameter Sets: GetViaIdentityWorkspace
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -221,7 +241,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IModelContainer
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IModelContainer
 
 ## NOTES
 

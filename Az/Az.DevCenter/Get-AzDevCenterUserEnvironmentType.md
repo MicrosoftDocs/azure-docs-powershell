@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDevCenterUserEnvironmentType
 
 ## SYNOPSIS
-Lists all environment types configured for a project.
+Get an environment type configured for a project.
 
 ## SYNTAX
 
@@ -20,14 +20,38 @@ Get-AzDevCenterUserEnvironmentType -Endpoint <String> -ProjectName <String> [-De
  [<CommonParameters>]
 ```
 
+### Get
+```
+Get-AzDevCenterUserEnvironmentType -Endpoint <String> -ProjectName <String> -Name <String>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### GetViaIdentity
+```
+Get-AzDevCenterUserEnvironmentType -Endpoint <String> -InputObject <IDevCenterdataIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### ListByDevCenter
 ```
 Get-AzDevCenterUserEnvironmentType -DevCenterName <String> -ProjectName <String> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
+### GetByDevCenter
+```
+Get-AzDevCenterUserEnvironmentType -DevCenterName <String> -ProjectName <String> -Name <String>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### GetViaIdentityByDevCenter
+```
+Get-AzDevCenterUserEnvironmentType -DevCenterName <String> -InputObject <IDevCenterdataIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Lists all environment types configured for a project.
+Get an environment type configured for a project.
 
 ## EXAMPLES
 
@@ -68,7 +92,7 @@ The DevCenter upon which to execute operations.
 
 ```yaml
 Type: System.String
-Parameter Sets: ListByDevCenter
+Parameter Sets: ListByDevCenter, GetByDevCenter, GetViaIdentityByDevCenter
 Aliases: DevCenter
 
 Required: True
@@ -83,7 +107,7 @@ The DevCenter-specific URI to operate on.
 
 ```yaml
 Type: System.String
-Parameter Sets: List
+Parameter Sets: List, Get, GetViaIdentity
 Aliases:
 
 Required: True
@@ -93,12 +117,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProjectName
-The DevCenter Project upon which to execute operations.
+### -InputObject
+Identity Parameter
+To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity
+Parameter Sets: GetViaIdentity, GetViaIdentityByDevCenter
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the environment type.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Get, GetByDevCenter
+Aliases: EnvironmentTypeName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProjectName
+Name of the project.
+
+```yaml
+Type: System.String
+Parameter Sets: List, Get, ListByDevCenter, GetByDevCenter
 Aliases:
 
 Required: True
@@ -113,9 +168,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IEnvironmentType
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IEnvironmentType
 
 ## NOTES
 

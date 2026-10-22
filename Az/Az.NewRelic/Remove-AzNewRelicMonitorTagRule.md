@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzNewRelicMonitorTagRule
 
 ## SYNOPSIS
-Delete a TagRule
+Deletes a tag rule set for a given New Relic monitor resource, removing fine-grained control over observability based on resource tags
 
 ## SYNTAX
 
@@ -35,7 +35,7 @@ Remove-AzNewRelicMonitorTagRule -InputObject <INewRelicIdentity> [-DefaultProfil
 ```
 
 ## DESCRIPTION
-Delete a TagRule
+Deletes a tag rule set for a given New Relic monitor resource, removing fine-grained control over observability based on resource tags
 
 ## EXAMPLES
 

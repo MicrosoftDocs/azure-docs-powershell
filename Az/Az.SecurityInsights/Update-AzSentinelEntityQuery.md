@@ -16,9 +16,9 @@ Updates the entity query.
 
 ### UpdateActivity (Default)
 ```
-Update-AzSentinelEntityQuery -ResourceGroupName <String> -WorkspaceName <String> -EntityQueryId <String>
+Update-AzSentinelEntityQuery -ResourceGroupName <String> -WorkspaceName <String> -Id <String>
  [-SubscriptionId <String>] [-Title <String>] [-Content <String>] [-Description <String>]
- [-QueryDefinitionQuery <String>] [-InputEntityType <EntityType>] [-RequiredInputFieldsSet <String[]>]
+ [-QueryDefinitionQuery <String>] [-InputEntityType <String>] [-RequiredInputFieldsSet <String[]>]
  [-EntitiesFilter <ActivityEntityQueriesPropertiesEntitiesFilter>] [-TemplateName <String>] [-Enabled]
  [-Disabled] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -27,7 +27,7 @@ Update-AzSentinelEntityQuery -ResourceGroupName <String> -WorkspaceName <String>
 ### UpdateViaIdentityActivity
 ```
 Update-AzSentinelEntityQuery -InputObject <ISecurityInsightsIdentity> [-Title <String>] [-Content <String>]
- [-Description <String>] [-QueryDefinitionQuery <String>] [-InputEntityType <EntityType>]
+ [-Description <String>] [-QueryDefinitionQuery <String>] [-InputEntityType <String>]
  [-RequiredInputFieldsSet <String[]>] [-EntitiesFilter <ActivityEntityQueriesPropertiesEntitiesFilter>]
  [-TemplateName <String>] [-Enabled] [-Disabled] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -134,10 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -EntitiesFilter
-To construct, see NOTES section for ENTITIESFILTER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.ActivityEntityQueriesPropertiesEntitiesFilter
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ActivityEntityQueriesPropertiesEntitiesFilter
 Parameter Sets: (All)
 Aliases:
 
@@ -148,13 +147,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EntityQueryId
+### -Id
 The Id of the Entity Query.
 
 ```yaml
 Type: System.String
 Parameter Sets: UpdateActivity
-Aliases:
+Aliases: EntityQueryId
 
 Required: True
 Position: Named
@@ -166,7 +165,7 @@ Accept wildcard characters: False
 ### -InputEntityType
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Support.EntityType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -351,7 +350,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.CustomEntityQuery
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.CustomEntityQuery
 
 ## NOTES
 

@@ -17,16 +17,16 @@ Removes a resource group.
 
 ### RemoveByResourceGroupName (Default)
 ```
-Remove-AzResourceGroup [-Name] <String> [-Force] [-AsJob] [-ApiVersion <String>] [-Pre]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzResourceGroup [-Name] <String> [-ForceDeletionType <String>] [-Force] [-AsJob] [-ApiVersion <String>]
+ [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### RemoveByResourceGroupId
 ```
-Remove-AzResourceGroup -Id <String> [-Force] [-AsJob] [-ApiVersion <String>] [-Pre]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Remove-AzResourceGroup -Id <String> [-ForceDeletionType <String>] [-Force] [-AsJob] [-ApiVersion <String>]
+ [-Pre] [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +57,30 @@ Get-AzResourceGroup | Remove-AzResourceGroup
 
 This command uses the **Get-AzResourceGroup** cmdlet to get all resource groups, and then passes them to **Remove-AzResourceGroup** by using the pipeline operator.
 
+### Example 4: Remove a resource groups use ForceDeletionType
+```powershell
+Remove-AzResourceGroup -Name "ContosoRG01" -ForceDeletionType "Microsoft.Compute/virtualMachineScaleSets,Microsoft.Compute/virtualMachines,Microsoft.Databricks/workspaces"
+```
+
+This command removes the ContosoRG01 resource group use the ForceDeletionType.
+The cmdlet prompts you for confirmation and returns no output.
+
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApiVersion
 Specifies the API version that is supported by the resource Provider.
@@ -90,6 +113,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure
 
@@ -110,6 +148,21 @@ Forces the command to run without asking for user confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceDeletionType
+The resource types you want to force delete.Currently, only the following is supported: forceDeletionTypes=Microsoft.Compute/virtualMachines,Microsoft.Compute/virtualMachineScaleSets
+
+```yaml
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 

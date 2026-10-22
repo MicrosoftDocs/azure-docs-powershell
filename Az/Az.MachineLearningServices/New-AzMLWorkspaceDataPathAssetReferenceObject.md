@@ -1,7 +1,7 @@
 ---
 external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceDataPathAssetReferenceObject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-azmlworkspacedatapathassetreferenceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDataPathAssetReferenceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDataPathAssetReferenceObject.md
@@ -15,8 +15,8 @@ Create an in-memory object for DataPathAssetReference.
 ## SYNTAX
 
 ```
-New-AzMLWorkspaceDataPathAssetReferenceObject -ReferenceType <ReferenceType> [-DatastoreId <String>]
- [-Path <String>] [<CommonParameters>]
+New-AzMLWorkspaceDataPathAssetReferenceObject [-DatastoreId <String>] [-Path <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,21 +63,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReferenceType
-[Required] Specifies the type of asset reference.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ReferenceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -85,7 +70,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.DataPathAssetReference
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.DataPathAssetReference
 
 ## NOTES
 

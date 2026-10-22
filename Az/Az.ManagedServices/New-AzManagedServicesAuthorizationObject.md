@@ -1,7 +1,7 @@
 ---
 external help file: Az.ManagedServices-help.xml
 Module Name: Az.ManagedServices
-online version: https://learn.microsoft.com/powershell/module/Az.ManagedServices/new-AzManagedServicesAuthorizationObject
+online version: https://learn.microsoft.com/powershell/module/Az.ManagedServices/new-azmanagedservicesauthorizationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/New-AzManagedServicesAuthorizationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/New-AzManagedServicesAuthorizationObject.md
@@ -121,7 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.Authorization
+### Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Authorization
 
 ## NOTES
 

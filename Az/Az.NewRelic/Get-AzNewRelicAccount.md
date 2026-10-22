@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNewRelicAccount
 
 ## SYNOPSIS
-List all the existing accounts
+Lists all the New Relic accounts linked to your email address, helping you understand the existing accounts that have been created
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-AzNewRelicAccount [-SubscriptionId <String[]>] -Location <String> -UserEmail
 ```
 
 ## DESCRIPTION
-List all the existing accounts
+Lists all the New Relic accounts linked to your email address, helping you understand the existing accounts that have been created
 
 ## EXAMPLES
 

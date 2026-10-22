@@ -10,30 +10,43 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzWvdApplication
 
 ## SYNOPSIS
-Create or update an application.
+Create an application.
 
 ## SYNTAX
 
 ### CreateExpanded (Default)
 ```
-New-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String>
- -CommandLineSetting <CommandLineSetting> [-SubscriptionId <String>] [-Description <String>]
- [-FriendlyName <String>] [-ShowInPortal] [-ApplicationType <RemoteApplicationType>]
- [-CommandLineArgument <String>] [-FilePath <String>] [-IconIndex <Int32>] [-IconPath <String>]
- [-MsixPackageApplicationId <String>] [-MsixPackageFamilyName <String>] [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -CommandLineSetting <String> [-Description <String>] [-FriendlyName <String>] [-ShowInPortal]
+ [-ApplicationType <String>] [-CommandLineArgument <String>] [-FilePath <String>] [-IconIndex <Int32>]
+ [-IconPath <String>] [-MsixPackageApplicationId <String>] [-MsixPackageFamilyName <String>]
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AppAlias
 ```
-New-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String>
- -CommandLineSetting <CommandLineSetting> [-SubscriptionId <String>] [-Description <String>]
- [-FriendlyName <String>] [-ShowInPortal] -AppAlias <String> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -CommandLineSetting <String> [-Description <String>] [-FriendlyName <String>] [-ShowInPortal]
+ -AppAlias <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzWvdApplication -GroupName <String> -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create or update an application.
+Create an application.
 
 ## EXAMPLES
 
@@ -80,7 +93,7 @@ Accept wildcard characters: False
 Resource Type of Application.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.RemoteApplicationType
+Type: System.String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -110,8 +123,8 @@ Accept wildcard characters: False
 Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.CommandLineSetting
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, AppAlias
 Aliases:
 
 Required: True
@@ -142,7 +155,7 @@ Description of Application.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, AppAlias
 Aliases:
 
 Required: False
@@ -172,7 +185,7 @@ Friendly name of Application.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, AppAlias
 Aliases:
 
 Required: False
@@ -221,6 +234,36 @@ Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -293,7 +336,7 @@ Specifies whether to show the RemoteApp program in the RD Web Access server.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, AppAlias
 Aliases:
 
 Required: False
@@ -305,6 +348,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
@@ -356,7 +400,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IApplication
+### Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IApplication
 
 ## NOTES
 

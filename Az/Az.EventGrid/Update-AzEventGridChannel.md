@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridChannel
 
 ## SYNOPSIS
-Synchronously updates a channel with the specified parameters.
+Synchronously update a channel with the specified parameters.
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ Update-AzEventGridChannel -InputObject <IEventGridIdentity> [-EventTypeInfoInlin
 ```
 
 ## DESCRIPTION
-Synchronously updates a channel with the specified parameters.
+Synchronously update a channel with the specified parameters.
 
 ## EXAMPLES
 

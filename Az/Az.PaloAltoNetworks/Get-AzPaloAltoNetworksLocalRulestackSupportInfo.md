@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzPaloAltoNetworksLocalRulestackSupportInfo
 
 ## SYNOPSIS
-support info for rulestack.
+Support info for rulestack.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Get-AzPaloAltoNetworksLocalRulestackSupportInfo -InputObject <IPaloAltoNetworksI
 ```
 
 ## DESCRIPTION
-support info for rulestack.
+Support info for rulestack.
 
 ## EXAMPLES
 

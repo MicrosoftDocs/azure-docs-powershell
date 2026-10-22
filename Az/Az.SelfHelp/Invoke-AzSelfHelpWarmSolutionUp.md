@@ -21,6 +21,20 @@ Invoke-AzSelfHelpWarmSolutionUp -Scope <String> -SolutionResourceName <String> [
  [<CommonParameters>]
 ```
 
+### WarmViaJsonString
+```
+Invoke-AzSelfHelpWarmSolutionUp -Scope <String> -SolutionResourceName <String> -JsonString <String>
+ [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### WarmViaJsonFilePath
+```
+Invoke-AzSelfHelpWarmSolutionUp -Scope <String> -SolutionResourceName <String> -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### Warm
 ```
 Invoke-AzSelfHelpWarmSolutionUp -Scope <String> -SolutionResourceName <String>
@@ -82,7 +96,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
@@ -93,6 +106,36 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Warm operation
+
+```yaml
+Type: System.String
+Parameter Sets: WarmViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Warm operation
+
+```yaml
+Type: System.String
+Parameter Sets: WarmViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -131,7 +174,7 @@ scope = resourceUri of affected resource.\<br/\> For example: /subscriptions/0d0
 
 ```yaml
 Type: System.String
-Parameter Sets: WarmExpanded, Warm
+Parameter Sets: WarmExpanded, WarmViaJsonString, WarmViaJsonFilePath, Warm
 Aliases:
 
 Required: True
@@ -146,7 +189,7 @@ Solution resource Name.
 
 ```yaml
 Type: System.String
-Parameter Sets: WarmExpanded, Warm
+Parameter Sets: WarmExpanded, WarmViaJsonString, WarmViaJsonFilePath, Warm
 Aliases:
 
 Required: True
@@ -158,10 +201,9 @@ Accept wildcard characters: False
 
 ### -SolutionWarmUpRequestBody
 Solution WarmUpRequest body
-To construct, see NOTES section for SOLUTIONWARMUPREQUESTBODY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.ISolutionWarmUpRequestBody
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISolutionWarmUpRequestBody
 Parameter Sets: Warm, WarmViaIdentity
 Aliases:
 
@@ -208,9 +250,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.ISolutionWarmUpRequestBody
-
 ### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
+
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISolutionWarmUpRequestBody
 
 ## OUTPUTS
 

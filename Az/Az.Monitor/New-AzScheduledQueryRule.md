@@ -10,22 +10,37 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzScheduledQueryRule
 
 ## SYNOPSIS
-Creates or updates a scheduled query rule.
+Create a scheduled query rule.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzScheduledQueryRule -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  -Location <String> [-ActionCustomProperty <Hashtable>] [-ActionGroupResourceId <String[]>] [-AutoMitigate]
  [-CheckWorkspaceAlertsStorageConfigured] [-CriterionAllOf <ICondition[]>] [-Description <String>]
- [-DisplayName <String>] [-Enabled] [-EvaluationFrequency <TimeSpan>] [-Kind <Kind>]
+ [-DisplayName <String>] [-Enabled] [-EvaluationFrequency <TimeSpan>] [-Kind <String>]
  [-MuteActionsDuration <TimeSpan>] [-OverrideQueryTimeRange <TimeSpan>] [-Scope <String[]>] [-Severity <Int64>]
  [-SkipQueryValidation] [-Tag <Hashtable>] [-TargetResourceType <String[]>] [-WindowSize <TimeSpan>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonFilePath
+```
+New-AzScheduledQueryRule -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzScheduledQueryRule -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates or updates a scheduled query rule.
+Create a scheduled query rule.
 
 ## EXAMPLES
 
@@ -46,7 +61,7 @@ The properties of an alert payload.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -61,7 +76,7 @@ Action Group resource Ids to invoke when the alert fires.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -78,7 +93,7 @@ Relevant only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -95,7 +110,7 @@ Relevant only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -107,11 +122,10 @@ Accept wildcard characters: False
 
 ### -CriterionAllOf
 A list of conditions to evaluate against the specified scopes
-To construct, see NOTES section for CRITERIONALLOF properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Models.Api20210801.ICondition[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Models.ICondition[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -142,7 +156,7 @@ The description of the scheduled query rule.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -157,7 +171,7 @@ The display name of the alert rule
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -173,7 +187,7 @@ Value should be true or false
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -189,10 +203,40 @@ Relevant and required only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.TimeSpan
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -204,8 +248,8 @@ Indicates the type of scheduled query rule.
 The default is LogAlert.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Support.Kind
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -220,7 +264,7 @@ The geo-location where the resource lives
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -236,7 +280,7 @@ Relevant only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.TimeSpan
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -267,7 +311,7 @@ Relevant only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.TimeSpan
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -298,7 +342,7 @@ The list of resource id's that this scheduled query rule is scoped to.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -316,7 +360,7 @@ Relevant and required only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.Int64
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -333,7 +377,7 @@ Relevant only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -363,7 +407,7 @@ Resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -380,7 +424,7 @@ Relevant only for rules of the kind LogAlert
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -396,7 +440,7 @@ Relevant and required only for rules of the kind LogAlert.
 
 ```yaml
 Type: System.TimeSpan
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -444,7 +488,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Models.Api20210801.IScheduledQueryRuleResource
+### Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Models.IScheduledQueryRuleResource
 
 ## NOTES
 

@@ -10,20 +10,22 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzSearchPrivateEndpointConnection
 
 ## SYNOPSIS
-Gets private endpoint connection(s) to the Azure Cognitive Search service.
+Gets private endpoint connection(s) to the Azure AI Search service.
 
 ## SYNTAX
 
 ### ResourceNameParameterSet (Default)
 ```
 Get-AzSearchPrivateEndpointConnection [-ResourceGroupName] <String> [-ServiceName] <String> [[-Name] <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ParentObjectParameterSet
 ```
 Get-AzSearchPrivateEndpointConnection [-ParentObject] <PSSearchService> [[-Name] <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### ResourceIdParameterSet
@@ -33,7 +35,7 @@ Get-AzSearchPrivateEndpointConnection [-ResourceId] <String> [-DefaultProfile <I
 ```
 
 ## DESCRIPTION
-The **Get-AzSearchPrivateEndpointConnection** cmdlet gets the private endpoint connection(s) to the Azure Cognitive Search service.
+The **Get-AzSearchPrivateEndpointConnection** cmdlet gets the private endpoint connection(s) to the Azure AI Search service.
 
 ## EXAMPLES
 
@@ -48,7 +50,7 @@ Name                                                          Id
 arjagann-test-cuseuap-pe.4c74dd7c-7016-42ac-827a-8d5d1378f266 /subscriptions/a4337210-c6b0-4de4-907a-688f1c120d9a/resourceGroups/arjagann/providers/Microsoft.Search/searchServices/arjagann-test-cuseuap/privateEndpointConnections/arjagann-test-cuseuap-pe.4c74dd7c-7016-42ac-827a-8d5d1378f266
 ```
 
-The example gets all the private endpoint connections to the Azure Cognitive Search service.
+The example gets all the private endpoint connections to the Azure AI Search service.
 
 ### Example 2
 ```powershell
@@ -70,7 +72,7 @@ Get-AzSearchPrivateEndpointConnection -ResourceGroupName arjagann -ServiceName a
 }
 ```
 
-The example gets a specific private endpoint connection by name (converted to JSON for ease of reading) to the Azure Cognitive Search service.
+The example gets a specific private endpoint connection by name (converted to JSON for ease of reading) to the Azure AI Search service.
 
 ## PARAMETERS
 
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Azure Cognitive Search Service private endpoint connection name
+Azure AI Search Service private endpoint connection name
 
 ```yaml
 Type: System.String
@@ -105,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParentObject
-Azure Cognitive Search Service Input Object.
+Azure AI Search Service Input Object.
 
 ```yaml
 Type: Microsoft.Azure.Commands.Management.Search.Models.PSSearchService
@@ -150,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceName
-Azure Cognitive Search Service name.
+Azure AI Search Service name.
 
 ```yaml
 Type: System.String

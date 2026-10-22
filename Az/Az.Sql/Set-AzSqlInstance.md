@@ -18,42 +18,42 @@ Sets properties for an Azure SQL Managed Instance.
 ```
 Set-AzSqlInstance [-Name] <String> [-ResourceGroupName] <String> [-AdministratorPassword <SecureString>]
  [-Edition <String>] [-IsGeneralPurposeV2 <Boolean>] [-SubnetId <String>] [-LicenseType <String>]
- [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>] [-VCore <Int32>]
+ [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>] [-VCore <Int32>] [-MemorySizeInGB <Int32>]
  [-PublicDataEndpointEnabled <Boolean>] [-ProxyOverride <String>] [-Tag <Hashtable>] [-AssignIdentity]
  [-InstancePoolName <String>] [-MinimalTlsVersion <String>] [-PrimaryUserAssignedIdentityId <String>]
  [-KeyId <String>] [-Force] [-ComputeGeneration <String>] [-MaintenanceConfigurationId <String>]
  [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>] [-IdentityType <String>]
  [-BackupStorageRedundancy <String>] [-AsJob] [-ZoneRedundant] [-ServicePrincipalType <String>]
- [-DatabaseFormat <String>] [-PricingModel <String>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DatabaseFormat <String>] [-PricingModel <String>] [-AuthenticationMetadata <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetInstanceFromAzureSqlManagedInstanceModelInstanceDefinition
 ```
 Set-AzSqlInstance [-InputObject] <AzureSqlManagedInstanceModel> [-AdministratorPassword <SecureString>]
  [-Edition <String>] [-IsGeneralPurposeV2 <Boolean>] [-SubnetId <String>] [-LicenseType <String>]
- [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>]  [-VCore <Int32>]
+ [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>]  [-VCore <Int32>] [-MemorySizeInGB <Int32>]
  [-PublicDataEndpointEnabled <Boolean>] [-ProxyOverride <String>] [-Tag <Hashtable>] [-AssignIdentity]
  [-InstancePoolName <String>] [-MinimalTlsVersion <String>] [-PrimaryUserAssignedIdentityId <String>]
  [-KeyId <String>] [-Force] [-ComputeGeneration <String>] [-MaintenanceConfigurationId <String>]
  [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>] [-IdentityType <String>]
  [-BackupStorageRedundancy <String>] [-AsJob] [-ZoneRedundant] [-ServicePrincipalType <String>]
- [-DefaultProfile <IAzureContextContainer>] [-DatabaseFormat <String>] [-PricingModel <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DatabaseFormat <String>] [-PricingModel <String>] [-AuthenticationMetadata <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetInstanceFromAzureResourceId
 ```
 Set-AzSqlInstance [-ResourceId] <String> [-AdministratorPassword <SecureString>] [-Edition <String>]
  [-IsGeneralPurposeV2 <Boolean>] [-SubnetId <String>] [-LicenseType <String>]
- [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>] [-VCore <Int32>]
+ [-StorageSizeInGB <Int32>] [-StorageIOps <Int32>] [-VCore <Int32>] [-MemorySizeInGB <Int32>]
  [-PublicDataEndpointEnabled <Boolean>] [-ProxyOverride <String>] [-Tag <Hashtable>] [-AssignIdentity]
  [-InstancePoolName <String>] [-MinimalTlsVersion <String>] [-PrimaryUserAssignedIdentityId <String>]
  [-KeyId <String>] [-Force] [-ComputeGeneration <String>] [-MaintenanceConfigurationId <String>]
  [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>] [-IdentityType <String>]
  [-BackupStorageRedundancy <String>] [-AsJob] [-ZoneRedundant] [-ServicePrincipalType <String>]
- [-DatabaseFormat <String>] [-PricingModel <String>] [-DefaultProfile <IAzureContextContainer>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-DatabaseFormat <String>] [-PricingModel <String>] [-AuthenticationMetadata <String>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,6 +82,7 @@ AdministratorPassword    :
 SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
 LicenseType              : LicenseIncluded
 VCores                   : 16
+MemorySizeInGB           :
 StorageSizeInGB          : 1024
 StorageIOps              :
 InstancePoolName         :
@@ -107,6 +108,7 @@ AdministratorPassword    :
 SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
 LicenseType              : LicenseIncluded
 VCores                   : 16
+MemorySizeInGB           :
 StorageSizeInGB          : 1024
 StorageIOps              :
 InstancePoolName         :
@@ -134,6 +136,7 @@ AdministratorPassword    :
 SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
 LicenseType              : LicenseIncluded
 VCores                   : 8
+MemorySizeInGB           :
 StorageSizeInGB          : 1024
 StorageIOps              : 4000
 InstancePoolName         :
@@ -187,6 +190,7 @@ AdministratorPassword      :
 SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
 LicenseType                : LicenseIncluded
 VCores                     : 8
+MemorySizeInGB             :
 StorageSizeInGB            : 256
 StorageIOps                :
 Collation                  : SQL_Latin1_General_CP1_CI_AS
@@ -224,6 +228,7 @@ AdministratorPassword      :
 SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
 LicenseType                : LicenseIncluded
 VCores                     : 8
+MemorySizeInGB             :
 StorageSizeInGB            : 256
 StorageIOps                :
 Collation                  : SQL_Latin1_General_CP1_CI_AS
@@ -261,6 +266,7 @@ AdministratorPassword      :
 SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
 LicenseType                : LicenseIncluded
 VCores                     : 8
+MemorySizeInGB             :
 StorageSizeInGB            : 256
 StorageIOps                :
 Collation                  : SQL_Latin1_General_CP1_CI_AS
@@ -276,11 +282,11 @@ CurrentBackupStorageRedundancy    : Geo
 MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
 ```
 
-This command updates an existing instance to be zone - redundant
+This command moves managed instance to another subnet
 
 ### Example 8: Update an existing instance to be zone - redundant
 ```powershell
-Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name" -ZoneRedundant
+Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -ZoneRedundant
 ```
 
 ```output
@@ -298,6 +304,7 @@ AdministratorPassword      :
 SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
 LicenseType                : LicenseIncluded
 VCores                     : 8
+MemorySizeInGB             :
 StorageSizeInGB            : 256
 StorageIOps                :
 Collation                  : SQL_Latin1_General_CP1_CI_AS
@@ -314,7 +321,7 @@ MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ZoneRedundant              : true
 ```
 
-This command moves managed instance to another subnet
+This command updates an existing instance to be zone - redundant.
 
 ### Example 9: Update backup storage redundancy on existing instance
 ```powershell
@@ -336,6 +343,7 @@ AdministratorPassword            :
 SubnetId                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
 LicenseType                      : LicenseIncluded
 VCores                           : 8
+MemorySizeInGB             :
 StorageSizeInGB                  : 256
 StorageIOps                      :
 Collation                        : SQL_Latin1_General_CP1_CI_AS
@@ -357,7 +365,7 @@ This command changes backups storage redundancy type for managed instance
 
 ### Example 10: Update an existing instance with database format and pricing model
 ```powershell
-Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name" -DatabaseFormat AlwaysUpToDate -PricingModel Regular
+Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -DatabaseFormat AlwaysUpToDate -PricingModel Regular
 ```
 
 ```output
@@ -375,6 +383,7 @@ AdministratorPassword      :
 SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
 LicenseType                : LicenseIncluded
 VCores                     : 8
+MemorySizeInGB             :
 StorageSizeInGB            : 256
 StorageIOps                :
 Collation                  : SQL_Latin1_General_CP1_CI_AS
@@ -393,7 +402,79 @@ DatabaseFormat             : AlwaysUpToDate
 PricingModel               : Regular
 ```
 
-This command moves managed instance to another subnet
+This command updates managed instance with given with database format and pricing model specified.
+
+### Example 11: Update an existing managed instance to use Windows authentication metadata mode
+```powershell
+Set-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -AuthenticationMetadata Windows
+```
+
+```output
+Location                         : westcentralus
+Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+ResourceGroupName                : resourcegroup01
+ManagedInstanceName              : managedInstance1
+Tags                             :
+Identity                         :
+Sku                              : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+FullyQualifiedDomainName         : managedInstance1.xxxxxxxxxxxx.database.windows.net
+AdministratorLogin               : adminLogin1
+AdministratorPassword            :
+SubnetId                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+LicenseType                      : LicenseIncluded
+VCores                           : 8
+MemorySizeInGB                   :
+StorageSizeInGB                  : 256
+Collation                        : SQL_Latin1_General_CP1_CI_AS
+PublicDataEndpointEnabled        : False
+ProxyOverride                    : Proxy
+TimezoneId                       : UTC
+DnsZonePartner                   :
+DnsZone                          : ad35cna0mw
+InstancePoolName                 :
+MinimalTlsVersion                :
+BackupStorageRedundancy          : Geo
+RequestedBackupStorageRedundancy : Geo
+CurrentBackupStorageRedundancy   : Geo
+MaintenanceConfigurationId       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+Administrators                   :
+PrimaryUserAssignedIdentityId    :
+KeyId                            :
+ZoneRedundant                    : False
+ServicePrincipal                 :
+DatabaseFormat                   : SQLServer2022
+PricingModel                     : Regular
+ExternalGovernanceStatus         : Disabled
+AuthenticationMetadata           : Windows
+```
+
+This command updates an existing managed instance to use Windows metadata for authentication of synced users.
+
+### Example 12: Change existing instance by setting new value to MemorySizeInGB and keeping current or setting new value for VCores and keeping NextGen GP edition (v2)
+```powershell
+Set-AzSqlInstance -Name "managedinstance1" -ResourceGroupName "ResourceGroup01" -MemorySizeInGB 64 -VCore 8 -IsGeneralPurposeV2 $true
+```
+
+```output
+Location                 : westcentralus
+Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+ResourceGroupName        : resourcegroup01
+ManagedInstanceName      : managedInstance1
+Tags                     :
+Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+IsGeneralPurposeV2       : true
+FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+AdministratorLogin       : adminLogin1
+AdministratorPassword    :
+SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+LicenseType              : LicenseIncluded
+VCores                   : 8
+MemorySizeInGB           : 64
+StorageSizeInGB          : 1024
+StorageIOps              : 4000
+InstancePoolName         :
+```
 
 ## PARAMETERS
 
@@ -434,6 +515,22 @@ Generate and assign a Microsoft Entra identity for this instance for use with ke
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationMetadata
+Preferred metadata to use for authentication of synced on-prem users. Default is AzureAD.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: AzureAD, Paired, Windows
 
 Required: False
 Position: Named
@@ -519,7 +616,7 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityType
-Type of identity to be assigned to the server. Possible values are SystemAsssigned, UserAssigned, 'SystemAssigned,UserAssigned' and None.
+Type of identity to be assigned to the server. Possible values are SystemAssigned, UserAssigned, 'SystemAssigned,UserAssigned' and None.
 
 ```yaml
 Type: System.String
@@ -824,6 +921,21 @@ Accept wildcard characters: False
 
 ### -VCore
 Determines how much VCore to associate with instance
+
+```yaml
+Type: System.Nullable`1[System.Int32]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MemorySizeInGB
+Determines how much memory in GB to associate with instance
 
 ```yaml
 Type: System.Nullable`1[System.Int32]

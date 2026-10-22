@@ -10,15 +10,30 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzKustoScript
 
 ## SYNOPSIS
-Updates a database script.
+Update a database script.
 
 ## SYNTAX
 
 ### UpdateExpanded (Default)
 ```
 Update-AzKustoScript -ClusterName <String> -DatabaseName <String> -Name <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-ContinueOnError] [-ForceUpdateTag <String>] [-ScriptContent <String>]
- [-ScriptUrl <String>] [-ScriptUrlSasToken <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-SubscriptionId <String>] [-ContinueOnError] [-ForceUpdateTag <String>]
+ [-PrincipalPermissionsAction <String>] [-ScriptLevel <String>] [-ScriptUrl <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### UpdateViaJsonString
+```
+Update-AzKustoScript -ClusterName <String> -DatabaseName <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaJsonFilePath
+```
+Update-AzKustoScript -ClusterName <String> -DatabaseName <String> -Name <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -29,11 +44,42 @@ Update-AzKustoScript -ClusterName <String> -DatabaseName <String> -Name <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### UpdateViaIdentityClusterExpanded
+```
+Update-AzKustoScript -DatabaseName <String> -Name <String> -ClusterInputObject <IKustoIdentity>
+ [-ContinueOnError] [-ForceUpdateTag <String>] [-PrincipalPermissionsAction <String>] [-ScriptLevel <String>]
+ [-ScriptUrl <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaIdentityCluster
+```
+Update-AzKustoScript -DatabaseName <String> -Name <String> -ClusterInputObject <IKustoIdentity>
+ -Parameter <IScript> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaIdentityDatabaseExpanded
+```
+Update-AzKustoScript -Name <String> -DatabaseInputObject <IKustoIdentity> [-ContinueOnError]
+ [-ForceUpdateTag <String>] [-PrincipalPermissionsAction <String>] [-ScriptLevel <String>]
+ [-ScriptUrl <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaIdentityDatabase
+```
+Update-AzKustoScript -Name <String> -DatabaseInputObject <IKustoIdentity> -Parameter <IScript>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### UpdateViaIdentityExpanded
 ```
 Update-AzKustoScript -InputObject <IKustoIdentity> [-ContinueOnError] [-ForceUpdateTag <String>]
- [-ScriptContent <String>] [-ScriptUrl <String>] [-ScriptUrlSasToken <String>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PrincipalPermissionsAction <String>] [-ScriptLevel <String>] [-ScriptUrl <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### UpdateViaIdentity
@@ -43,13 +89,13 @@ Update-AzKustoScript -InputObject <IKustoIdentity> -Parameter <IScript> [-Defaul
 ```
 
 ## DESCRIPTION
-Updates a database script.
+Update a database script.
 
 ## EXAMPLES
 
 ### Example 1: Update an existing kusto script by name
 ```powershell
-Update-AzKustoScript -DatabaseName mykustodatabase -Name newkustoscript -ClusterName testnewkustocluster -ResourceGroupName testrg -ScriptUrl $BlobSASURL -ScriptUrlSasToken $BlobSASToken
+Update-AzKustoScript -ClusterName $clusterName -DatabaseName $databaseName -Name $scriptName -ResourceGroupName $resourceGroupName -SubscriptionId $SubscriptionId -JsonString $jsonBody
 ```
 
 ```output
@@ -77,12 +123,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClusterInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
+Parameter Sets: UpdateViaIdentityClusterExpanded, UpdateViaIdentityCluster
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 The name of the Kusto cluster.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath, Update
 Aliases:
 
 Required: True
@@ -97,7 +158,7 @@ Flag that indicates whether to continue if one of the command fails.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityClusterExpanded, UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -107,12 +168,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DatabaseInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
+Parameter Sets: UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityDatabase
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DatabaseName
 The name of the database in the Kusto cluster.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath, Update, UpdateViaIdentityClusterExpanded, UpdateViaIdentityCluster
 Aliases:
 
 Required: True
@@ -144,7 +220,7 @@ If changed the script will be applied again.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityClusterExpanded, UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -156,7 +232,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
@@ -170,12 +245,42 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Update operation
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Update operation
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Name
 The name of the Kusto database script.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath, Update, UpdateViaIdentityClusterExpanded, UpdateViaIdentityCluster, UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityDatabase
 Aliases: ScriptName
 
 Required: True
@@ -202,11 +307,10 @@ Accept wildcard characters: False
 
 ### -Parameter
 Class representing a database script.
-To construct, see NOTES section for PARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IScript
-Parameter Sets: Update, UpdateViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IScript
+Parameter Sets: Update, UpdateViaIdentityCluster, UpdateViaIdentityDatabase, UpdateViaIdentity
 Aliases:
 
 Required: True
@@ -216,13 +320,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -PrincipalPermissionsAction
+Indicates if the permissions for the script caller are kept following completion of the script.
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityClusterExpanded, UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath, Update
 Aliases:
 
 Required: True
@@ -232,14 +351,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScriptContent
-The script content.
-This property should be used when the script is provide inline and not through file in a SA.
-Must not be used together with scriptUrl and scriptUrlSasToken properties.
+### -ScriptLevel
+Differentiates between the type of script commands included - Database or Cluster.
+The default is Database.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityClusterExpanded, UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -255,23 +373,7 @@ Must not be used together with scriptContent property
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ScriptUrlSasToken
-The SaS token that provide read access to the file which contain the script.
-Must be provided when using scriptUrl property.
-
-```yaml
-Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityClusterExpanded, UpdateViaIdentityDatabaseExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -286,7 +388,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath, Update
 Aliases:
 
 Required: False
@@ -332,13 +434,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IScript
-
 ### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
+
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IScript
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IScript
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IScript
 
 ## NOTES
 

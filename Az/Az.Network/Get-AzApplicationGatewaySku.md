@@ -84,5 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzApplicationGatewaySku](./New-AzApplicationGatewaySku.md)
 
 [Set-AzApplicationGatewaySku](./Set-AzApplicationGatewaySku.md)
-
-

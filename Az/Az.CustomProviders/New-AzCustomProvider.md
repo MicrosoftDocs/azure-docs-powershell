@@ -10,10 +10,11 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzCustomProvider
 
 ## SYNOPSIS
-Creates or updates the custom resource provider.
+create the custom resource provider.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzCustomProvider -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -Location <String>
  [-Action <ICustomRpActionRouteDefinition[]>] [-ResourceType <ICustomRpResourceTypeRouteDefinition[]>]
@@ -21,8 +22,22 @@ New-AzCustomProvider -Name <String> -ResourceGroupName <String> [-SubscriptionId
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonFilePath
+```
+New-AzCustomProvider -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzCustomProvider -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates or updates the custom resource provider.
+create the custom resource provider.
 
 ## EXAMPLES
 
@@ -56,11 +71,10 @@ Create a custom provider, with a route for Custom provider associations.
 
 ### -Action
 A list of actions that the custom resource provider implements.
-To construct, see NOTES section for ACTION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.Api20180901Preview.ICustomRpActionRouteDefinition[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.ICustomRpActionRouteDefinition[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -101,12 +115,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Location
 Resource location
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -163,11 +207,10 @@ Accept wildcard characters: False
 
 ### -ResourceType
 A list of resource types that the custom resource provider implements.
-To construct, see NOTES section for RESOURCETYPE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.Api20180901Preview.ICustomRpResourceTypeRouteDefinition[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.ICustomRpResourceTypeRouteDefinition[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -199,7 +242,7 @@ Resource tags
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -211,11 +254,10 @@ Accept wildcard characters: False
 
 ### -Validation
 A list of validations to run on the custom resource provider's requests.
-To construct, see NOTES section for VALIDATION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.Api20180901Preview.ICustomRpValidations[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.ICustomRpValidations[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -263,7 +305,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.Api20180901Preview.ICustomRpManifest
+### Microsoft.Azure.PowerShell.Cmdlets.CustomProviders.Models.ICustomRpManifest
 
 ## NOTES
 

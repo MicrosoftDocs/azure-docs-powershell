@@ -17,7 +17,7 @@ Create a DriverList Object for ImportExport.
 ```
 New-AzImportExportDriveListObject [-BitLockerKey <String>] [-BytesSucceeded <Int64>] [-CopyStatus <String>]
  [-DriveHeaderHash <String>] [-DriveId <String>] [-ErrorLogUri <String>] [-ManifestFile <String>]
- [-ManifestHash <String>] [-ManifestUri <String>] [-PercentComplete <Int32>] [-State <DriveState>]
+ [-ManifestHash <String>] [-ManifestUri <String>] [-PercentComplete <Int32>] [-State <String>]
  [-VerboseLogUri <String>] [<CommonParameters>]
 ```
 
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 The drive's current state.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Support.DriveState
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -230,7 +230,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api202101.IDriveStatus
+### Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IDriveStatus
 
 ## NOTES
 

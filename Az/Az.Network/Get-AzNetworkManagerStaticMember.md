@@ -17,13 +17,15 @@ Gets network manager static members.
 ### NoExpand (Default)
 ```
 Get-AzNetworkManagerStaticMember [-Name <String>] -NetworkGroupName <String> -NetworkManagerName <String>
- -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### Expand
 ```
 Get-AzNetworkManagerStaticMember -Name <String> -NetworkGroupName <String> -NetworkManagerName <String>
- -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ -ResourceGroupName <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

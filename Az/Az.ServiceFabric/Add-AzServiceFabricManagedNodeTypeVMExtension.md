@@ -33,7 +33,7 @@ Add-AzServiceFabricManagedNodeTypeVMExtension [-ResourceGroupName] <String> [-Cl
 ```
 
 ## DESCRIPTION
-Add vm extension to the node type. This will add the extension to the underliying Virtual Machine Scale Set resource.
+Add vm extension to the node type. This will add the extension to the underlying Virtual Machine Scale Set resource.
 
 ## EXAMPLES
 

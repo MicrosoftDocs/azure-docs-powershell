@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridPermissionBinding
 
 ## SYNOPSIS
-Update a permission binding with the specified parameters.
+update a permission binding with the specified parameters.
 
 ## SYNTAX
 
@@ -38,7 +38,7 @@ Update-AzEventGridPermissionBinding -InputObject <IEventGridIdentity> [-ClientGr
 ```
 
 ## DESCRIPTION
-Update a permission binding with the specified parameters.
+update a permission binding with the specified parameters.
 
 ## EXAMPLES
 

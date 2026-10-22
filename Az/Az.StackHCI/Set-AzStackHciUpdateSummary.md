@@ -18,10 +18,10 @@ Put Update summaries under the HCI cluster
 ```
 Set-AzStackHciUpdateSummary -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  [-CurrentSbeVersion <String>] [-CurrentVersion <String>] [-HardwareModel <String>]
- [-HealthCheckDate <DateTime>] [-HealthCheckResult <IPrecheckResult[]>] [-HealthState <HealthState>]
+ [-HealthCheckDate <DateTime>] [-HealthCheckResult <IPrecheckResult[]>] [-HealthState <String>]
  [-LastChecked <DateTime>] [-LastUpdated <DateTime>] [-Location <String>] [-OemFamily <String>]
- [-PackageVersion <IPackageVersionInfo[]>] [-State <UpdateSummariesPropertiesState>]
- [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-PackageVersion <IPackageVersionInfo[]>] [-State <String>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Put
@@ -29,6 +29,20 @@ Set-AzStackHciUpdateSummary -ClusterName <String> -ResourceGroupName <String> [-
 Set-AzStackHciUpdateSummary -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  -UpdateLocationProperty <IUpdateSummaries> [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### PutViaJsonFilePath
+```
+Set-AzStackHciUpdateSummary -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### PutViaJsonString
+```
+Set-AzStackHciUpdateSummary -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -138,10 +152,9 @@ Accept wildcard characters: False
 
 ### -HealthCheckResult
 An array of pre-check result objects.
-To construct, see NOTES section for HEALTHCHECKRESULT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IPrecheckResult[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IPrecheckResult[]
 Parameter Sets: PutExpanded
 Aliases:
 
@@ -156,11 +169,41 @@ Accept wildcard characters: False
 Overall health state for update-specific health checks.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.HealthState
+Type: System.String
 Parameter Sets: PutExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Put operation
+
+```yaml
+Type: System.String
+Parameter Sets: PutViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Put operation
+
+```yaml
+Type: System.String
+Parameter Sets: PutViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -229,10 +272,9 @@ Accept wildcard characters: False
 
 ### -PackageVersion
 Current version of each updatable component.
-To construct, see NOTES section for PACKAGEVERSION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IPackageVersionInfo[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IPackageVersionInfo[]
 Parameter Sets: PutExpanded
 Aliases:
 
@@ -263,7 +305,7 @@ Accept wildcard characters: False
 Overall update state of the stamp.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.UpdateSummariesPropertiesState
+Type: System.String
 Parameter Sets: PutExpanded
 Aliases:
 
@@ -292,10 +334,9 @@ Accept wildcard characters: False
 
 ### -UpdateLocationProperty
 Get the update summaries for the cluster
-To construct, see NOTES section for UPDATELOCATIONPROPERTY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdateSummaries
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IUpdateSummaries
 Parameter Sets: Put
 Aliases:
 
@@ -342,11 +383,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdateSummaries
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IUpdateSummaries
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdateSummaries
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IUpdateSummaries
 
 ## NOTES
 

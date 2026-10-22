@@ -14,7 +14,13 @@ Gets an image version.
 
 ## SYNTAX
 
-### List (Default)
+### List1 (Default)
+```
+Get-AzDevCenterAdminImageVersion -ImageName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ -ProjectName <String> [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
+### List
 ```
 Get-AzDevCenterAdminImageVersion -DevCenterName <String> -GalleryName <String> -ImageName <String>
  -ResourceGroupName <String> [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>]
@@ -25,6 +31,19 @@ Get-AzDevCenterAdminImageVersion -DevCenterName <String> -GalleryName <String> -
 ```
 Get-AzDevCenterAdminImageVersion -DevCenterName <String> -GalleryName <String> -ImageName <String>
  -ResourceGroupName <String> [-SubscriptionId <String[]>] -VersionName <String> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### Get1
+```
+Get-AzDevCenterAdminImageVersion -ImageName <String> -ResourceGroupName <String> [-SubscriptionId <String[]>]
+ -VersionName <String> -ProjectName <String> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### GetViaIdentity1
+```
+Get-AzDevCenterAdminImageVersion -InputObject <IDevCenterIdentity> [-DefaultProfile <PSObject>]
  [<CommonParameters>]
 ```
 
@@ -44,7 +63,7 @@ Gets an image version.
 Get-AzDevCenterAdminImageVersion -ResourceGroupName testRg -DevCenterName Contoso -ImageName ContosoBaseImage -GalleryName StandardGallery
 ```
 
-This command lists the image verions for the image "ContosoBaseImage" under the gallery "StandardGallery".
+This command lists the image versions for the image "ContosoBaseImage" under the gallery "StandardGallery".
 
 ### Example 2: Get an image version
 ```powershell
@@ -114,7 +133,7 @@ The name of the image.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get
+Parameter Sets: List1, List, Get, Get1
 Aliases:
 
 Required: True
@@ -130,7 +149,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.IDevCenterIdentity
-Parameter Sets: GetViaIdentity
+Parameter Sets: GetViaIdentity1, GetViaIdentity
 Aliases:
 
 Required: True
@@ -140,13 +159,28 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -ProjectName
+The name of the project.
+
+```yaml
+Type: System.String
+Parameter Sets: List1, Get1
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ResourceGroupName
 The name of the resource group.
 The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get
+Parameter Sets: List1, List, Get, Get1
 Aliases:
 
 Required: True
@@ -161,7 +195,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: List, Get
+Parameter Sets: List1, List, Get, Get1
 Aliases:
 
 Required: False
@@ -176,7 +210,7 @@ The version of the image.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, Get1
 Aliases:
 
 Required: True
@@ -195,7 +229,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20231001Preview.IImageVersion
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20250401Preview.IImageVersion
 
 ## NOTES
 

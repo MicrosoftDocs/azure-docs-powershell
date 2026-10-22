@@ -1,7 +1,7 @@
 ---
 external help file: Az.ConfidentialLedger-help.xml
 Module Name: Az.ConfidentialLedger
-online version: https://learn.microsoft.com/powershell/module/Az.ConfidentialLedger/new-AzConfidentialLedgerCertBasedSecurityPrincipalObject
+online version: https://learn.microsoft.com/powershell/module/Az.ConfidentialLedger/new-azconfidentialledgercertbasedsecurityprincipalobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/New-AzConfidentialLedgerCertBasedSecurityPrincipalObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/New-AzConfidentialLedgerCertBasedSecurityPrincipalObject.md
@@ -15,7 +15,7 @@ Create an in-memory object for CertBasedSecurityPrincipal.
 ## SYNTAX
 
 ```
-New-AzConfidentialLedgerCertBasedSecurityPrincipalObject [-Cert <String>] [-LedgerRoleName <LedgerRoleName>]
+New-AzConfidentialLedgerCertBasedSecurityPrincipalObject [-Cert <String>] [-LedgerRoleName <String>]
  [<CommonParameters>]
 ```
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 LedgerRole associated with the Security Principal of Ledger.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Support.LedgerRoleName
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -78,7 +78,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.Api20220513.CertBasedSecurityPrincipal
+### Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.CertBasedSecurityPrincipal
 
 ## NOTES
 

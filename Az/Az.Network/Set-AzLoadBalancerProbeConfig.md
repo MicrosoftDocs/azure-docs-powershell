@@ -17,8 +17,10 @@ Updates a probe configuration for a load balancer.
 
 ```
 Set-AzLoadBalancerProbeConfig -LoadBalancer <PSLoadBalancer> -Name <String> [-Protocol <String>] -Port <Int32>
- -IntervalInSeconds <Int32> -ProbeCount <Int32> [-ProbeThreshold <Int32>] [-RequestPath <String>] [-NoHealthyBackendsBehavior <String>]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -IntervalInSeconds <Int32> -ProbeCount <Int32> [-ProbeThreshold <Int32>] [-RequestPath <String>]
+ [-NoHealthyBackendsBehavior <String>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [-AcquirePolicyToken] [-ChangeReference <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,6 +52,36 @@ Set-AzLoadBalancerProbeConfig -IntervalInSeconds 15 -Name 'NewProbe' -Port 443 -
 ```
 
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.
@@ -109,6 +141,22 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoHealthyBackendsBehavior
+Determines how new connections are handled by the load balancer when all backend instances are probed down.
+The acceptable values for this parameter are: AllProbedDown or AllProbedUp.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: AllProbedDown
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -188,23 +236,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NoHealthyBackendsBehavior
-Determines how new connections are handled by the load balancer when all backend instances are probed down.
-The acceptable values for this parameter are: AllProbedDown or AllProbedUp.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-Accepted values: AllProbedDown, AllProbedUp
-
-Required: False
-Position: Named
-Default value: AllProbedDown
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
@@ -263,5 +294,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-AzLoadBalancerProbeConfig](./New-AzLoadBalancerProbeConfig.md)
 
 [Remove-AzLoadBalancerProbeConfig](./Remove-AzLoadBalancerProbeConfig.md)
-
-

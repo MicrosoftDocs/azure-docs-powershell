@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridTopicSpace
 
 ## SYNOPSIS
-Update a topic space with the specified parameters.
+update a topic space with the specified parameters.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Update-AzEventGridTopicSpace -InputObject <IEventGridIdentity> [-Description <St
 ```
 
 ## DESCRIPTION
-Update a topic space with the specified parameters.
+update a topic space with the specified parameters.
 
 ## EXAMPLES
 

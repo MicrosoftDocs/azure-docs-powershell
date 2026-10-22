@@ -1,7 +1,7 @@
 ---
 external help file: Az.Cdn-help.xml
 Module Name: Az.Cdn
-online version: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnRuleUrlRedirectActionObject
+online version: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnruleurlredirectactionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleUrlRedirectActionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleUrlRedirectActionObject.md
@@ -15,9 +15,9 @@ Create an in-memory object for UrlRedirectAction.
 ## SYNTAX
 
 ```
-New-AzFrontDoorCdnRuleUrlRedirectActionObject -ParameterRedirectType <RedirectType> -Name <DeliveryRuleAction>
+New-AzFrontDoorCdnRuleUrlRedirectActionObject -ParameterRedirectType <String> -ParameterTypeName <String>
  [-ParameterCustomFragment <String>] [-ParameterCustomHostname <String>] [-ParameterCustomPath <String>]
- [-ParameterCustomQueryString <String>] [-ParameterDestinationProtocol <DestinationProtocol>]
+ [-ParameterCustomQueryString <String>] [-ParameterDestinationProtocol <String>]
  [<CommonParameters>]
 ```
 
@@ -40,21 +40,6 @@ UrlRedirect
 Create an in-memory object for UrlRedirectAction
 
 ## PARAMETERS
-
-### -Name
-The name of the action for the delivery rule.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DeliveryRuleAction
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ParameterCustomFragment
 Fragment to add to the redirect URL.
@@ -129,7 +114,7 @@ Protocol to use for the redirect.
 The default value is MatchRequest.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DestinationProtocol
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -144,9 +129,23 @@ Accept wildcard characters: False
 The redirect type the rule will use when redirecting traffic.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RedirectType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ParameterTypeName
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Name
 
 Required: True
 Position: Named
@@ -162,7 +161,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.UrlRedirectAction
+### Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.UrlRedirectAction
 
 ## NOTES
 

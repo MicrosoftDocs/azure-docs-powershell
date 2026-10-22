@@ -145,5 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Stop-AzHDInsightJob](./Stop-AzHDInsightJob.md)
 
 [Wait-AzHDInsightJob](./Wait-AzHDInsightJob.md)
-
-

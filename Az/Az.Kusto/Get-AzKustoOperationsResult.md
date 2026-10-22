@@ -20,6 +20,12 @@ Get-AzKustoOperationsResult -Location <String> -OperationId <String> [-Subscript
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
+### GetViaIdentityLocation
+```
+Get-AzKustoOperationsResult -OperationId <String> -LocationInputObject <IKustoIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzKustoOperationsResult -InputObject <IKustoIdentity> [-DefaultProfile <PSObject>]
@@ -64,7 +70,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
@@ -93,12 +98,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -LocationInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
+Parameter Sets: GetViaIdentityLocation
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -OperationId
 The ID of an ongoing async operation.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityLocation
 Aliases:
 
 Required: True
@@ -132,7 +152,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IOperationResult
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IOperationResult
 
 ## NOTES
 

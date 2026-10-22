@@ -10,16 +10,16 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzContainerAppConnectedEnvCert
 
 ## SYNOPSIS
-Create a Certificate.
+create a Certificate.
 
 ## SYNTAX
 
 ### CreateExpanded (Default)
 ```
 New-AzContainerAppConnectedEnvCert -ConnectedEnvironmentName <String> -Name <String>
- -ResourceGroupName <String> [-SubscriptionId <String>] -Location <String> [-InputFile <String>]
- [-Password <SecureString>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ -ResourceGroupName <String> [-SubscriptionId <String>] [-InputFile <String>] [-Location <String>]
+ [-Password <SecureString>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CreateViaJsonString
@@ -39,19 +39,19 @@ New-AzContainerAppConnectedEnvCert -ConnectedEnvironmentName <String> -Name <Str
 ### CreateViaIdentityConnectedEnvironmentExpanded
 ```
 New-AzContainerAppConnectedEnvCert -Name <String> -ConnectedEnvironmentInputObject <IAppIdentity>
- -Location <String> [-InputFile <String>] [-Password <SecureString>] [-Tag <Hashtable>]
+ [-InputFile <String>] [-Location <String>] [-Password <SecureString>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CreateViaIdentityExpanded
 ```
-New-AzContainerAppConnectedEnvCert -InputObject <IAppIdentity> -Location <String> [-InputFile <String>]
- [-Password <SecureString>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-AzContainerAppConnectedEnvCert -InputObject <IAppIdentity> [-InputFile <String>] [-Location <String>]
+ [-Password <SecureString>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a Certificate.
+create a Certificate.
 
 ## EXAMPLES
 
@@ -77,7 +77,6 @@ Create a Certificate.
 
 ### -ConnectedEnvironmentInputObject
 Identity Parameter
-To construct, see NOTES section for CONNECTEDENVIRONMENTINPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -139,7 +138,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity
@@ -191,7 +189,7 @@ Type: System.String
 Parameter Sets: CreateExpanded, CreateViaIdentityConnectedEnvironmentExpanded, CreateViaIdentityExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

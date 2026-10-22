@@ -28,18 +28,16 @@ Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope [-SubscriptionId <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### PostViaIdentityExpanded
+### PostViaJsonFilePath
 ```
-Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope -InputObject <ISelfHelpIdentity>
- [-AdditionalContext <String>] [-IssueSummary <String>] [-ResourceId <String>] [-ServiceId <String>]
+Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope [-SubscriptionId <String>] -JsonFilePath <String>
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### PostViaIdentity
+### PostViaJsonString
 ```
-Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope -InputObject <ISelfHelpIdentity>
- -DiscoverSolutionRequest <IDiscoveryNlpRequest> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope [-SubscriptionId <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +63,7 @@ Additional information in the form of a string.
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, PostViaIdentityExpanded
+Parameter Sets: PostExpanded
 Aliases:
 
 Required: False
@@ -93,27 +91,10 @@ Accept wildcard characters: False
 
 ### -DiscoverSolutionRequest
 Discover NLP request.
-To construct, see NOTES section for DISCOVERSOLUTIONREQUEST properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.IDiscoveryNlpRequest
-Parameter Sets: Post, PostViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
-Parameter Sets: PostViaIdentityExpanded, PostViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiscoveryNlpRequest
+Parameter Sets: Post
 Aliases:
 
 Required: True
@@ -128,10 +109,40 @@ Describe the issue with the affected resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, PostViaIdentityExpanded
+Parameter Sets: PostExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Post operation
+
+```yaml
+Type: System.String
+Parameter Sets: PostViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Post operation
+
+```yaml
+Type: System.String
+Parameter Sets: PostViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -143,7 +154,7 @@ Provide resourceId of affected resource
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, PostViaIdentityExpanded
+Parameter Sets: PostExpanded
 Aliases:
 
 Required: False
@@ -155,11 +166,11 @@ Accept wildcard characters: False
 
 ### -ServiceId
 Service Classification id for the resource.
-You can find required serviceId from Services API: https://learn.microsoft.com/rest/api/support/services/list Service Id is the GUID which can be found under name field in Services List response
+You can find required serviceId from Services API: https://learn.microsoft.com/rest/api/support/services/list?tabs=HTTP Service Id is the GUID which can be found under name field in Services List response
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, PostViaIdentityExpanded
+Parameter Sets: PostExpanded
 Aliases:
 
 Required: False
@@ -175,7 +186,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: PostExpanded, Post
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -221,13 +232,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.IDiscoveryNlpRequest
-
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiscoveryNlpRequest
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.ISolutionNlpMetadataResource
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiscoveryNlpResponse
 
 ## NOTES
 

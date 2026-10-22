@@ -47,6 +47,19 @@ Get-AzProviderHubSku -ProviderNamespace <String> -ResourceType <String> [-Subscr
  [-DefaultProfile <PSObject>] [<CommonParameters>]
 ```
 
+### GetViaIdentityProviderRegistration
+```
+Get-AzProviderHubSku -ResourceType <String> -Sku <String>
+ -ProviderRegistrationInputObject <IProviderHubIdentity> [-DefaultProfile <PSObject>]
+ [<CommonParameters>]
+```
+
+### GetViaIdentityResourcetypeRegistration
+```
+Get-AzProviderHubSku -Sku <String> -ResourcetypeRegistrationInputObject <IProviderHubIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzProviderHubSku -InputObject <IProviderHubIdentity> [-DefaultProfile <PSObject>]
@@ -87,7 +100,8 @@ Get the nested resource type SKU definition.
 ## PARAMETERS
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -103,7 +117,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity
@@ -177,12 +190,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProviderRegistrationInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity
+Parameter Sets: GetViaIdentityProviderRegistration
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ResourceType
 The resource type.
 
 ```yaml
 Type: System.String
-Parameter Sets: List, Get, List1, List2, List3
+Parameter Sets: List, Get, List1, List2, List3, GetViaIdentityProviderRegistration
 Aliases:
 
 Required: True
@@ -192,12 +220,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResourcetypeRegistrationInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity
+Parameter Sets: GetViaIdentityResourcetypeRegistration
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Sku
 The SKU.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityProviderRegistration, GetViaIdentityResourcetypeRegistration
 Aliases:
 
 Required: True
@@ -231,7 +274,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.Api20201120.ISkuResource
+### Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.ISkuResource
 
 ## NOTES
 

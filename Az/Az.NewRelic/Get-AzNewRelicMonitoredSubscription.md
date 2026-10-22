@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNewRelicMonitoredSubscription
 
 ## SYNOPSIS
-List the subscriptions currently being monitored by the NewRelic monitor resource.
+Lists all the subscriptions currently being monitored by the NewRelic monitor resource.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Get-AzNewRelicMonitoredSubscription -InputObject <INewRelicIdentity> [-DefaultPr
 ```
 
 ## DESCRIPTION
-List the subscriptions currently being monitored by the NewRelic monitor resource.
+Lists all the subscriptions currently being monitored by the NewRelic monitor resource.
 
 ## EXAMPLES
 

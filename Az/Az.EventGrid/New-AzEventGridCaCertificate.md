@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEventGridCaCertificate
 
 ## SYNOPSIS
-Create a CA certificate with the specified parameters.
+create a CA certificate with the specified parameters.
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ New-AzEventGridCaCertificate -InputObject <IEventGridIdentity> [-Description <St
 ```
 
 ## DESCRIPTION
-Create a CA certificate with the specified parameters.
+create a CA certificate with the specified parameters.
 
 ## EXAMPLES
 

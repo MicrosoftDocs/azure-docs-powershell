@@ -28,7 +28,8 @@ Get-AzIpAllocation [-ResourceGroupName <String>] [-DefaultProfile <IAzureContext
 
 ### GetByResourceIdParameterSet
 ```
-Get-AzIpAllocation -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzIpAllocation -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

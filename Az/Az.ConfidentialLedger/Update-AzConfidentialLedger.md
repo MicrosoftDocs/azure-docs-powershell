@@ -18,7 +18,7 @@ Updates properties of Confidential Ledger
 ```
 Update-AzConfidentialLedger -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
  -Location <String> [-AadBasedSecurityPrincipal <IAadBasedSecurityPrincipal[]>]
- [-CertBasedSecurityPrincipal <ICertBasedSecurityPrincipal[]>] [-LedgerType <LedgerType>] [-Tag <Hashtable>]
+ [-CertBasedSecurityPrincipal <ICertBasedSecurityPrincipal[]>] [-LedgerType <String>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -27,7 +27,7 @@ Update-AzConfidentialLedger -Name <String> -ResourceGroupName <String> [-Subscri
 ```
 Update-AzConfidentialLedger -InputObject <IConfidentialLedgerIdentity> -Location <String>
  [-AadBasedSecurityPrincipal <IAadBasedSecurityPrincipal[]>]
- [-CertBasedSecurityPrincipal <ICertBasedSecurityPrincipal[]>] [-LedgerType <LedgerType>] [-Tag <Hashtable>]
+ [-CertBasedSecurityPrincipal <ICertBasedSecurityPrincipal[]>] [-LedgerType <String>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -46,8 +46,8 @@ Update-AzConfidentialLedger `
   -AadBasedSecurityPrincipal `
       @{
           LedgerRoleName="Administrator"; 
-          PrincipalId="34621747-6fc8-4771-a2eb-72f31c461f2e"; 
-          TenantId="bce123b9-2b7b-4975-8360-5ca0b9b1cd08"
+          PrincipalId="00001111-aaaa-2222-bbbb-3333cccc4444"; 
+          TenantId="00001111-aaaa-2222-bbbb-3333cccc4444"
       } `
   -CertBasedSecurityPrincipal `
       @{
@@ -74,10 +74,9 @@ Updates metadata for an existing Confidential Ledger.
 
 ### -AadBasedSecurityPrincipal
 Array of all AAD based Security Principals.
-To construct, see NOTES section for AADBASEDSECURITYPRINCIPAL properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.Api20220513.IAadBasedSecurityPrincipal[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.IAadBasedSecurityPrincipal[]
 Parameter Sets: (All)
 Aliases:
 
@@ -105,10 +104,9 @@ Accept wildcard characters: False
 
 ### -CertBasedSecurityPrincipal
 Array of all cert based Security Principals.
-To construct, see NOTES section for CERTBASEDSECURITYPRINCIPAL properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.Api20220513.ICertBasedSecurityPrincipal[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.ICertBasedSecurityPrincipal[]
 Parameter Sets: (All)
 Aliases:
 
@@ -120,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -136,7 +135,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.IConfidentialLedgerIdentity
@@ -154,7 +152,7 @@ Accept wildcard characters: False
 Type of Confidential Ledger
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Support.LedgerType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -297,7 +295,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.Api20220513.IConfidentialLedger
+### Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.IConfidentialLedger
 
 ## NOTES
 

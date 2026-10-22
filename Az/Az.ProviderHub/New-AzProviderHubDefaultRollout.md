@@ -10,33 +10,72 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzProviderHubDefaultRollout
 
 ## SYNOPSIS
-Creates or updates the rollout details.
+Create the rollout details.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzProviderHubDefaultRollout -ProviderNamespace <String> -RolloutName <String> [-SubscriptionId <String>]
- [-CanaryRegion <String[]>] [-CanarySkipRegion <String[]>] [-HighTrafficRegion <String[]>]
- [-HighTrafficWaitDuration <TimeSpan>] [-LowTrafficRegion <String[]>] [-LowTrafficWaitDuration <TimeSpan>]
- [-MediumTrafficRegion <String[]>] [-MediumTrafficWaitDuration <TimeSpan>]
- [-ProvisioningState <ProvisioningState>] [-RestOfTheWorldGroupOneRegion <String[]>]
- [-RestOfTheWorldGroupOneWaitDuration <TimeSpan>] [-RestOfTheWorldGroupTwoRegion <String[]>]
- [-RestOfTheWorldGroupTwoWaitDuration <TimeSpan>] [-SpecificationProviderRegistration <IProviderRegistration>]
- [-SpecificationResourceTypeRegistration <IResourceTypeRegistration[]>] [-StatusCompletedRegion <String[]>]
- [-StatusFailedOrSkippedRegion <Hashtable>] [-StatusNextTrafficRegion <TrafficRegionCategory>]
- [-StatusNextTrafficRegionScheduledTime <DateTime>]
- [-StatusSubscriptionReregistrationResult <SubscriptionReregistrationResult>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzProviderHubDefaultRollout -RolloutName <String> -ProviderNamespace <String> [-SubscriptionId <String>]
+ [-ProvisioningState <String>] [-SpecificationCanaryRegion <String[]>]
+ [-SpecificationCanarySkipRegion <String[]>] [-SpecificationHighTrafficRegion <String[]>]
+ [-SpecificationHighTrafficWaitDuration <TimeSpan>] [-SpecificationLowTrafficRegion <String[]>]
+ [-SpecificationLowTrafficWaitDuration <TimeSpan>] [-SpecificationMediumTrafficRegion <String[]>]
+ [-SpecificationMediumTrafficWaitDuration <TimeSpan>]
+ [-SpecificationProviderRegistration <IDefaultRolloutSpecificationProviderRegistration>]
+ [-SpecificationResourceTypeRegistration <IResourceTypeRegistration[]>]
+ [-SpecificationRestOfTheWorldGroupOneRegion <String[]>]
+ [-SpecificationRestOfTheWorldGroupOneWaitDuration <TimeSpan>]
+ [-SpecificationRestOfTheWorldGroupTwoRegion <String[]>]
+ [-SpecificationRestOfTheWorldGroupTwoWaitDuration <TimeSpan>] [-StatusCompletedRegion <String[]>]
+ [-StatusFailedOrSkippedRegion <Hashtable>] [-StatusNextTrafficRegion <String>]
+ [-StatusNextTrafficRegionScheduledTime <DateTime>] [-StatusSubscriptionReregistrationResult <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzProviderHubDefaultRollout -RolloutName <String> -ProviderNamespace <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzProviderHubDefaultRollout -RolloutName <String> -ProviderNamespace <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityProviderRegistrationExpanded
+```
+New-AzProviderHubDefaultRollout -RolloutName <String> -ProviderRegistrationInputObject <IProviderHubIdentity>
+ [-ProvisioningState <String>] [-SpecificationCanaryRegion <String[]>]
+ [-SpecificationCanarySkipRegion <String[]>] [-SpecificationHighTrafficRegion <String[]>]
+ [-SpecificationHighTrafficWaitDuration <TimeSpan>] [-SpecificationLowTrafficRegion <String[]>]
+ [-SpecificationLowTrafficWaitDuration <TimeSpan>] [-SpecificationMediumTrafficRegion <String[]>]
+ [-SpecificationMediumTrafficWaitDuration <TimeSpan>]
+ [-SpecificationProviderRegistration <IDefaultRolloutSpecificationProviderRegistration>]
+ [-SpecificationResourceTypeRegistration <IResourceTypeRegistration[]>]
+ [-SpecificationRestOfTheWorldGroupOneRegion <String[]>]
+ [-SpecificationRestOfTheWorldGroupOneWaitDuration <TimeSpan>]
+ [-SpecificationRestOfTheWorldGroupTwoRegion <String[]>]
+ [-SpecificationRestOfTheWorldGroupTwoWaitDuration <TimeSpan>] [-StatusCompletedRegion <String[]>]
+ [-StatusFailedOrSkippedRegion <Hashtable>] [-StatusNextTrafficRegion <String>]
+ [-StatusNextTrafficRegionScheduledTime <DateTime>] [-StatusSubscriptionReregistrationResult <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Creates or updates the rollout details.
+Create the rollout details.
 
 ## EXAMPLES
 
-### Example 1: Create/Update a resource provider default rollout.
+### Example 1: Create a resource provider default rollout.
 ```powershell
-New-AzProviderHubDefaultRollout -ProviderNamespace "Microsoft.Contoso" -RolloutName "defaultRollout2021w10" -CanarySkipRegion "brazilus" -NoWait
+New-AzProviderHubDefaultRollout -ProviderNamespace "Microsoft.Contoso" -RolloutName "defaultRollout2021w10" -SpecificationCanarySkipRegion "brazilus" -NoWait
 ```
 
 ```output
@@ -45,7 +84,7 @@ Name                      Type
 defaultRollout2021w10     Microsoft.ProviderHub/providerRegistrations/defaultRollouts
 ```
 
-Create/Update a resource provider default rollout.
+Create a resource provider default rollout.
 
 ## PARAMETERS
 
@@ -54,36 +93,6 @@ Run the command as a job
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CanaryRegion
-.
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CanarySkipRegion
-.
-
-```yaml
-Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -110,90 +119,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HighTrafficRegion
-.
+### -JsonFilePath
+Path of Json file supplied to the Create operation
 
 ```yaml
-Type: System.String[]
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -HighTrafficWaitDuration
-.
+### -JsonString
+Json string supplied to the Create operation
 
 ```yaml
-Type: System.TimeSpan
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateViaJsonString
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LowTrafficRegion
-.
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LowTrafficWaitDuration
-.
-
-```yaml
-Type: System.TimeSpan
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MediumTrafficRegion
-.
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MediumTrafficWaitDuration
-.
-
-```yaml
-Type: System.TimeSpan
-Parameter Sets: (All)
-Aliases:
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -220,7 +169,7 @@ The name of the resource provider hosted within ProviderHub.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -230,72 +179,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ProviderRegistrationInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity
+Parameter Sets: CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ProvisioningState
 .
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Support.ProvisioningState
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestOfTheWorldGroupOneRegion
-.
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestOfTheWorldGroupOneWaitDuration
-.
-
-```yaml
-Type: System.TimeSpan
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestOfTheWorldGroupTwoRegion
-.
-
-```yaml
-Type: System.String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestOfTheWorldGroupTwoWaitDuration
-.
-
-```yaml
-Type: System.TimeSpan
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -320,13 +224,132 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SpecificationProviderRegistration
+### -SpecificationCanaryRegion
 .
-To construct, see NOTES section for SPECIFICATIONPROVIDERREGISTRATION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.Api20201120.IProviderRegistration
-Parameter Sets: (All)
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationCanarySkipRegion
+.
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationHighTrafficRegion
+.
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationHighTrafficWaitDuration
+.
+
+```yaml
+Type: System.TimeSpan
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationLowTrafficRegion
+.
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationLowTrafficWaitDuration
+.
+
+```yaml
+Type: System.TimeSpan
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationMediumTrafficRegion
+.
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationMediumTrafficWaitDuration
+.
+
+```yaml
+Type: System.TimeSpan
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationProviderRegistration
+.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IDefaultRolloutSpecificationProviderRegistration
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -338,11 +361,70 @@ Accept wildcard characters: False
 
 ### -SpecificationResourceTypeRegistration
 .
-To construct, see NOTES section for SPECIFICATIONRESOURCETYPEREGISTRATION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.Api20201120.IResourceTypeRegistration[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IResourceTypeRegistration[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationRestOfTheWorldGroupOneRegion
+.
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationRestOfTheWorldGroupOneWaitDuration
+.
+
+```yaml
+Type: System.TimeSpan
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationRestOfTheWorldGroupTwoRegion
+.
+
+```yaml
+Type: System.String[]
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SpecificationRestOfTheWorldGroupTwoWaitDuration
+.
+
+```yaml
+Type: System.TimeSpan
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -357,7 +439,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -372,7 +454,7 @@ Dictionary of \<ExtendedErrorInfo\>
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -386,8 +468,8 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Support.TrafficRegionCategory
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -402,7 +484,7 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -416,8 +498,8 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Support.SubscriptionReregistrationResult
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded, CreateViaIdentityProviderRegistrationExpanded
 Aliases:
 
 Required: False
@@ -432,7 +514,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -478,9 +560,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.Api20201120.IDefaultRollout
+### Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IDefaultRollout
 
 ## NOTES
 

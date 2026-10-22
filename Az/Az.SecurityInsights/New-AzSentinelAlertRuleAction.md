@@ -10,18 +10,40 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzSentinelAlertRuleAction
 
 ## SYNOPSIS
-Creates or updates the action of alert rule.
+Create the action of alert rule.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzSentinelAlertRuleAction -ResourceGroupName <String> -RuleId <String> -WorkspaceName <String>
- [-Id <String>] [-SubscriptionId <String>] [-LogicAppResourceId <String>] [-TriggerUri <String>]
+New-AzSentinelAlertRuleAction [-Id <String>] -ResourceGroupName <String> -RuleId <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> [-LogicAppResourceId <String>] [-TriggerUri <String>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzSentinelAlertRuleAction [-Id <String>] -ResourceGroupName <String> -RuleId <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> -JsonString <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzSentinelAlertRuleAction [-Id <String>] -ResourceGroupName <String> -RuleId <String>
+ [-SubscriptionId <String>] -WorkspaceName <String> -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityAlertRuleExpanded
+```
+New-AzSentinelAlertRuleAction [-Id <String>] -AlertRuleInputObject <ISecurityInsightsIdentity>
+ [-LogicAppResourceId <String>] [-TriggerUri <String>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates or updates the action of alert rule.
+Create the action of alert rule.
 
 ## EXAMPLES
 
@@ -35,6 +57,21 @@ New-AzSentinelAlertRuleAction -ResourceGroupName "mySentinelResourceGroupName" -
 This command adds an existing Logic App Playbook to an existing analytics rule
 
 ## PARAMETERS
+
+### -AlertRuleInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+Parameter Sets: CreateViaIdentityAlertRuleExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
@@ -67,12 +104,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LogicAppResourceId
 Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityAlertRuleExpanded
 Aliases:
 
 Required: False
@@ -88,7 +155,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -103,7 +170,7 @@ Alert rule ID
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -118,7 +185,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -133,7 +200,7 @@ Logic App Callback URL for this specific workflow.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityAlertRuleExpanded
 Aliases:
 
 Required: False
@@ -148,7 +215,7 @@ The name of the workspace.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -194,9 +261,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.IActionResponse
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.IActionResponse
 
 ## NOTES
 

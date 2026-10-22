@@ -28,6 +28,12 @@ Get-AzKustoPrivateEndpointConnection -ClusterName <String> -Name <String> -Resou
  [<CommonParameters>]
 ```
 
+### GetViaIdentityCluster
+```
+Get-AzKustoPrivateEndpointConnection -Name <String> -ClusterInputObject <IKustoIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzKustoPrivateEndpointConnection -InputObject <IKustoIdentity> [-DefaultProfile <PSObject>]
@@ -68,6 +74,21 @@ The above command returns the Kusto PrivateEndpointConnection named "privateEndp
 
 ## PARAMETERS
 
+### -ClusterInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
+Parameter Sets: GetViaIdentityCluster
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 The name of the Kusto cluster.
 
@@ -101,7 +122,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IKustoIdentity
@@ -120,7 +140,7 @@ The name of the private endpoint connection.
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityCluster
 Aliases: PrivateEndpointConnectionName
 
 Required: True
@@ -170,7 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IPrivateEndpointConnection
+### Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.IPrivateEndpointConnection
 
 ## NOTES
 

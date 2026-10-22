@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDevCenterUserEnvironment
 
 ## SYNOPSIS
-Gets an environment
+Gets an environment.
 
 ## SYNTAX
 
@@ -63,7 +63,7 @@ Get-AzDevCenterUserEnvironment -DevCenterName <String> -ProjectName <String> -Us
 ```
 
 ## DESCRIPTION
-Gets an environment
+Gets an environment.
 
 ## EXAMPLES
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the environment.
+Environment name.
 
 ```yaml
 Type: System.String
@@ -209,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProjectName
-The DevCenter Project upon which to execute operations.
+Name of the project.
 
 ```yaml
 Type: System.String
@@ -248,7 +248,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IEnvironment
+### Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20250401Preview.IEnvironment
 
 ## NOTES
 

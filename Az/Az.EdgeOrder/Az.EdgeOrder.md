@@ -38,7 +38,7 @@ Cancel order item.
 Return order item.
 
 ### [New-AzEdgeOrderAddress](New-AzEdgeOrderAddress.md)
-Creates a new address with the specified parameters.
+create a new address with the specified parameters.
 Existing address can be updated with this API
 
 ### [New-AzEdgeOrderContactDetailsObject](New-AzEdgeOrderContactDetailsObject.md)
@@ -51,8 +51,8 @@ Create an in-memory object for FilterableProperty.
 Create an in-memory object for HierarchyInformation.
 
 ### [New-AzEdgeOrderItem](New-AzEdgeOrderItem.md)
-Creates an order item.
-Existing order item cannot be updated with this api and should instead be updated with the Update order item API.
+create an order item.
+Existing order item cannot be updated with this api and should instead be updated with the create order item API.
 
 ### [New-AzEdgeOrderOrderItemDetailsObject](New-AzEdgeOrderOrderItemDetailsObject.md)
 Create an in-memory object for OrderItemDetails.
@@ -70,8 +70,8 @@ Deletes an address.
 Deletes an order item.
 
 ### [Update-AzEdgeOrderAddress](Update-AzEdgeOrderAddress.md)
-Updates the properties of an existing address.
+update the properties of an existing address.
 
 ### [Update-AzEdgeOrderItem](Update-AzEdgeOrderItem.md)
-Updates the properties of an existing order item.
+update the properties of an existing order item.
 

@@ -17,15 +17,13 @@ Starts a managed dedicated integration runtime.
 ### StartByNameParameterSet (Default)
 ```
 Start-AzSynapseIntegrationRuntime [-ResourceGroupName <String>] -WorkspaceName <String> -Name <String> [-Force]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### StartByParentObjectParameterSet
 ```
 Start-AzSynapseIntegrationRuntime -Name <String> -WorkspaceObject <PSSynapseWorkspace> [-Force]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### StartByResourceIdParameterSet
@@ -37,8 +35,7 @@ Start-AzSynapseIntegrationRuntime -ResourceId <String> [-Force] [-DefaultProfile
 ### StartByInputObjectParameterSet
 ```
 Start-AzSynapseIntegrationRuntime -InputObject <PSIntegrationRuntime> [-Force]
- [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

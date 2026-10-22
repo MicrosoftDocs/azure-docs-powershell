@@ -1,7 +1,7 @@
 ---
 external help file: Az.ConnectedNetwork-help.xml
 Module Name: Az.ConnectedNetwork
-online version: https://learn.microsoft.com/powershell/module/az.ConnectedNetwork/new-AzConnectedNetworkFunctionUserConfigurationObject
+online version: https://learn.microsoft.com/powershell/module/Az.ConnectedNetwork/new-azconnectednetworkfunctionuserconfigurationobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkFunctionUserConfigurationObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkFunctionUserConfigurationObject.md
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzConnectedNetworkFunctionUserConfigurationObject
 
 ## SYNOPSIS
-Create a in-memory object for NetworkFunctionUserConfiguration
+Create an in-memory object for NetworkFunctionUserConfiguration.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ New-AzConnectedNetworkFunctionUserConfigurationObject [-NetworkInterface <INetwo
 ```
 
 ## DESCRIPTION
-Create a in-memory object for NetworkFunctionUserConfiguration
+Create an in-memory object for NetworkFunctionUserConfiguration.
 
 ## EXAMPLES
 
@@ -43,10 +43,9 @@ Then using that to create user configuration object with role name hpehss, custo
 
 ### -NetworkInterface
 The network interface configuration.
-To construct, see NOTES section for NETWORKINTERFACE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.INetworkInterface[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.INetworkInterface[]
 Parameter Sets: (All)
 Aliases:
 
@@ -71,7 +70,7 @@ The maximum length of the binary array is 65535 bytes.
  customData is passed to the VM to be saved as a file.
 For more information see [Custom Data on Azure VMs](https://azure.microsoft.com/en-us/blog/custom-data-and-cloud-init-on-windows-azure/) 
 
- For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://learn.microsoft.com/azure/virtual-machines/linux/tutorial-automate-vm-deployment).
+ For using cloud-init for your Linux VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
 
 ```yaml
 Type: System.String
@@ -122,7 +121,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.NetworkFunctionUserConfiguration
+### Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.NetworkFunctionUserConfiguration
 
 ## NOTES
 

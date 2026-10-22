@@ -10,16 +10,17 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzDataCollectionEndpoint
 
 ## SYNOPSIS
-Create a data collection endpoint.
+create a data collection endpoint.
 
 ## SYNTAX
 
 ### CreateExpanded (Default)
 ```
 New-AzDataCollectionEndpoint -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -Location <String> [-Description <String>] [-IdentityType <String>] [-ImmutableId <String>] [-Kind <String>]
- [-NetworkAclsPublicNetworkAccess <String>] [-Tag <Hashtable>] [-UserAssignedIdentity <Hashtable>]
- [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -Location <String> [-Description <String>] [-EnableSystemAssignedIdentity] [-ImmutableId <String>]
+ [-Kind <String>] [-NetworkAclsPublicNetworkAccess <String>] [-Tag <Hashtable>]
+ [-UserAssignedIdentity <String[]>] [-DefaultProfile <PSObject>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### CreateViaJsonFilePath
@@ -37,7 +38,7 @@ New-AzDataCollectionEndpoint -Name <String> -ResourceGroupName <String> [-Subscr
 ```
 
 ## DESCRIPTION
-Create a data collection endpoint.
+create a data collection endpoint.
 
 ## EXAMPLES
 
@@ -81,9 +82,9 @@ Tag                                 : {
 Type                                : Microsoft.Insights/dataCollectionEndpoints
 ```
 
-This command creates the endpiont with given values.
+This command creates the endpoint with given values.
 
-### Example 2: Create enpoint with json file
+### Example 2: Create endpoint with json file
 ```powershell
 New-AzDataCollectionEndpoint -Name myCollectionEndpoint2 -ResourceGroupName AMCS-TEST -JsonFilePath .\test\jsonfile\endpointTest1.json
 # Note: content of .\test\jsonfile\endpointTest1.json
@@ -132,7 +133,7 @@ Tag                                 : {
 Type                                : Microsoft.Insights/dataCollectionEndpoints
 ```
 
-This command creates enpoint with given json file path.
+This command creates endpoint with given json file path.
 
 ## PARAMETERS
 
@@ -167,11 +168,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IdentityType
-Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+### -EnableSystemAssignedIdentity
+Determines whether to enable a system-assigned identity for the resource.
 
 ```yaml
-Type: System.String
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -336,12 +337,11 @@ Accept wildcard characters: False
 ```
 
 ### -UserAssignedIdentity
-The set of user assigned identities associated with the resource.
-The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
-The dictionary values can be empty objects ({}) in requests.
+The array of user assigned identities associated with the resource.
+The elements in array will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.'
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: System.String[]
 Parameter Sets: CreateExpanded
 Aliases:
 

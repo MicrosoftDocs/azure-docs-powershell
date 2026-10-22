@@ -110,5 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzApplicationGatewayHttpListener](./Remove-AzApplicationGatewayHttpListener.md)
 
 [Set-AzApplicationGatewayHttpListener](./Set-AzApplicationGatewayHttpListener.md)
-
-

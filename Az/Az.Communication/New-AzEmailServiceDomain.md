@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzEmailServiceDomain
 
 ## SYNOPSIS
-Add a new Domains resource under the parent EmailService resource or update an existing Domains resource.
+Add a new Domains resource under the parent EmailService resource or create an existing Domains resource.
 
 ## SYNTAX
 
@@ -52,7 +52,7 @@ New-AzEmailServiceDomain -Name <String> -EmailServiceInputObject <IEmailServiceI
 ```
 
 ## DESCRIPTION
-Add a new Domains resource under the parent EmailService resource or update an existing Domains resource.
+Add a new Domains resource under the parent EmailService resource or create an existing Domains resource.
 
 ## EXAMPLES
 

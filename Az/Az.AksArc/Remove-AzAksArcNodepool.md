@@ -16,16 +16,15 @@ Deletes the specified agent pool in the provisioned cluster
 
 ### Delete (Default)
 ```
-Remove-AzAksArcNodepool -ClusterName <String> -ResourceGroupName <String> -Name <String>
- [-SubscriptionId <String>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-AzAksArcNodepool -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -Name <String> [-AsJob] [-NoWait] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeleteViaIdentity
 ```
-Remove-AzAksArcNodepool -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -InputObject <IAksArcIdentity> [-AsJob] [-NoWait] [-PassThru] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Remove-AzAksArcNodepool -InputObject <IAksArcIdentity> [-AsJob] [-NoWait] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,7 +61,7 @@ The name of the Kubernetes cluster on which get is called.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Delete
 Aliases:
 
 Required: True
@@ -138,7 +137,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Delete
 Aliases:
 
 Required: True
@@ -153,7 +152,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: Delete
 Aliases:
 
 Required: False

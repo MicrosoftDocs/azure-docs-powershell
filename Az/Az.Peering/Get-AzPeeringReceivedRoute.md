@@ -217,7 +217,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IPeeringReceivedRoute
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringReceivedRoute
 
 ## NOTES
 

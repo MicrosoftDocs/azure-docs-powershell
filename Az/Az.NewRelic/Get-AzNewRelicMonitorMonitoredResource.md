@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNewRelicMonitorMonitoredResource
 
 ## SYNOPSIS
-List the resources currently being monitored by the NewRelic monitor resource.
+Lists all Azure resources that are currently being monitored by the specified New Relic monitor resource, providing insight into the coverage of your observability setup
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-AzNewRelicMonitorMonitoredResource -MonitorName <String> -ResourceGroupName 
 ```
 
 ## DESCRIPTION
-List the resources currently being monitored by the NewRelic monitor resource.
+Lists all Azure resources that are currently being monitored by the specified New Relic monitor resource, providing insight into the coverage of your observability setup
 
 ## EXAMPLES
 
@@ -61,7 +61,7 @@ ReasonForMetricsStatus :
 SendingLog             : Disabled
 SendingMetric          : 
 
-Id                     : /SUBSCRIPTIONS/11111111-2222-3333-4444-123456789101/RESOURCEGROUPS/MC_KANSINGH-RG_TESTNRCLUSTER_EASTUS/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPADDRESSES/11111111-2222-3333-4444-123456789123
+Id                     : /SUBSCRIPTIONS/11111111-2222-3333-4444-123456789101/RESOURCEGROUPS/MC_KANSINGH-RG_TESTNRCLUSTER_EASTUS/PROVIDERS/MICROSOFT.NETWORK/PUBLICIPADDRESSES/00001111-aaaa-2222-bbbb-3333cccc4444
 ReasonForLogsStatus    : DiagnosticSettingsLimitReached
 ReasonForMetricsStatus : 
 SendingLog             : Disabled

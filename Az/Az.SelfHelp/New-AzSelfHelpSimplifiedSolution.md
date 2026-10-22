@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzSelfHelpSimplifiedSolution
 
 ## SYNOPSIS
-Creates a simplified Solutions for the specific Azure resource or subscription using the inputs 'solutionId and requiredInputs' from discovery solutions.
+create a simplified Solutions for the specific Azure resource or subscription using the inputs 'solutionId and requiredInputs' from discovery solutions.
 In the absence of the 'Parameters' it is likely that some of the simplified Solutions might fail execution, and you might see an empty response.
 \<br/\>\<br/\> \<b\>Note:\</b\>  \<br/\>1.
 'requiredInputs' from Discovery solutions response must be passed via 'parameters' in the request body of simplified Solutions API.
@@ -18,14 +18,36 @@ In the absence of the 'Parameters' it is likely that some of the simplified Solu
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzSelfHelpSimplifiedSolution -SResourceName <String> -Scope <String> [-Parameter <Hashtable>]
  [-SolutionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzSelfHelpSimplifiedSolution -SResourceName <String> -Scope <String> -JsonString <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzSelfHelpSimplifiedSolution -SResourceName <String> -Scope <String> -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaIdentityExpanded
+```
+New-AzSelfHelpSimplifiedSolution -InputObject <ISelfHelpIdentity> [-Parameter <Hashtable>]
+ [-SolutionId <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates a simplified Solutions for the specific Azure resource or subscription using the inputs 'solutionId and requiredInputs' from discovery solutions.
+create a simplified Solutions for the specific Azure resource or subscription using the inputs 'solutionId and requiredInputs' from discovery solutions.
 In the absence of the 'Parameters' it is likely that some of the simplified Solutions might fail execution, and you might see an empty response.
 \<br/\>\<br/\> \<b\>Note:\</b\>  \<br/\>1.
 'requiredInputs' from Discovery solutions response must be passed via 'parameters' in the request body of simplified Solutions API.
@@ -85,6 +107,51 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -InputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
+Parameter Sets: CreateViaIdentityExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NoWait
 Run the command asynchronously
 
@@ -105,7 +172,7 @@ Client input parameters to run Simplified Solutions
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -120,7 +187,7 @@ scope = resourceUri of affected resource.\<br/\> For example: /subscriptions/0d0
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -135,7 +202,7 @@ Solution Id to identify single Simplified Solution.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -150,7 +217,7 @@ Simplified Solutions Resource Name.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases: SimplifiedSolutionsResourceName
 
 Required: True
@@ -196,9 +263,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.Api20240301Preview.ISimplifiedSolutionsResource
+### Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISimplifiedSolutionsResource
 
 ## NOTES
 

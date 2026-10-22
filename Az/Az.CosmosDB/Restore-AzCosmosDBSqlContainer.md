@@ -16,8 +16,8 @@ Restore a deleted sql container in a database to a given timestamp in the same a
 
 ```
 Restore-AzCosmosDBSqlContainer -ResourceGroupName <String> -AccountName <String> -DatabaseName <String>
- -Name <String> -RestoreTimestampInUtc <DateTime> [-DefaultProfile <IAzureContextContainer>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ -Name <String> [-RestoreTimestampInUtc <DateTime>] [-DefaultProfile <IAzureContextContainer>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ Restores the deleted sql container in the same account with the given name and t
 
 ### Example 1
 ```powershell
-Restore-AzCosmosDBSqlContainer -AccountName “my-pitr-sql-account” -ResourceGroupName “my-rg” -DatabaseName “my-database” -Name “my-container” -RestoreTimestampInUtc “2022-08-25T07:16:20Z”  
+Restore-AzCosmosDBSqlContainer -AccountName "my-pitr-sql-account" -ResourceGroupName "my-rg" -DatabaseName "my-database" -Name "my-container" -RestoreTimestampInUtc "2022-08-25T07:16:20Z"
 ```
 
 ```output
@@ -49,21 +49,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -138,7 +123,22 @@ Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

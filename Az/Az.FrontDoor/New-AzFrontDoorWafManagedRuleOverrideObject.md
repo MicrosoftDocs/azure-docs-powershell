@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+external help file: Az.FrontDoor-help.xml
 Module Name: Az.FrontDoor
-online version: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorwafmanagedruleoverrideobject
+online version: https://learn.microsoft.com/powershell/module/Az.FrontDoor/new-azfrontdoorwafmanagedruleoverrideobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleOverrideObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleOverrideObject.md
@@ -10,37 +10,38 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzFrontDoorWafManagedRuleOverrideObject
 
 ## SYNOPSIS
-Create managed rule override object
+Create an in-memory object for ManagedRuleOverride.
 
 ## SYNTAX
 
 ```
 New-AzFrontDoorWafManagedRuleOverrideObject -RuleId <String> [-Action <String>] [-Disabled]
- [-Exclusion <PSManagedRuleExclusion[]>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-Exclusion <IManagedRuleExclusion[]>] [-Sensitivity <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create PSAzureManagedRuleOverride Object for managed WAF rule group override object creation.
+Create an in-memory object for ManagedRuleOverride.
 
 ## EXAMPLES
 
-### Example 1
-Create a managed rule override object for rule 942250 (which is in SQLI group).
-
+### Example 1: Create PSAzureManagedRuleOverride Object for managed WAF rule group override object creation.
 ```powershell
 New-AzFrontDoorWafManagedRuleOverrideObject -RuleId "942250" -Action Log
 ```
 
 ```output
-RuleId EnabledState Action
------- ------------ ------
-942250      Enabled    Log
+Action EnabledState Exclusion RuleId
+------ ------------ --------- ------
+Log                           942250
 ```
+
+Create PSAzureManagedRuleOverride Object for managed WAF rule group override object creation.
 
 ## PARAMETERS
 
 ### -Action
-Override Action
+Describes the override action to be applied when rule matches.
 
 ```yaml
 Type: System.String
@@ -54,23 +55,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
-
-```yaml
-Type: Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer
-Parameter Sets: (All)
-Aliases: AzContext, AzureRmContext, AzureCredential
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Disabled
-Disabled state
+Describes if the managed rule is in enabled or disabled state.
+Defaults to Disabled if not specified.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -85,10 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusion
-Exclusion
+Describes the exclusions that are applied to this specific rule.
 
 ```yaml
-Type: Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleExclusion[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.IManagedRuleExclusion[]
 Parameter Sets: (All)
 Aliases:
 
@@ -100,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -RuleId
-Rule ID
+Identifier for the managed rule.
 
 ```yaml
 Type: System.String
@@ -114,19 +101,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Sensitivity
+Describes the override sensitivity to be applied when rule matches.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### Microsoft.Azure.Commands.FrontDoor.Models.PSAzureManagedRuleOverride
+### Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.Models.ManagedRuleOverride
 
 ## NOTES
 
 ## RELATED LINKS
-
-[New-AzFrontDoorWafRuleGroupOverrideObject](./New-AzFrontDoorWafRuleGroupOverrideObject.md)

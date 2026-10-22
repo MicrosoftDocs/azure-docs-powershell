@@ -22,7 +22,8 @@ Get-AzRouteServerPeer -ResourceGroupName <String> -PeerName <String> -RouteServe
 
 ### RouteServerNPeerResourceIdParameterSet
 ```
-Get-AzRouteServerPeer -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzRouteServerPeer -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

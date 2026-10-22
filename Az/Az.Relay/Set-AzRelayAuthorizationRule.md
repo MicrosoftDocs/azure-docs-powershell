@@ -17,7 +17,7 @@ Creates or updates an authorization rule for a namespace.
 ### UpdateExpanded (Default)
 ```
 Set-AzRelayAuthorizationRule -Name <String> -Namespace <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] [-Rights <AccessRights[]>] [-DefaultProfile <PSObject>]
+ [-SubscriptionId <String>] [-Rights <String[]>] [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -31,7 +31,7 @@ Set-AzRelayAuthorizationRule -Name <String> -Namespace <String> -ResourceGroupNa
 ### UpdateExpanded1
 ```
 Set-AzRelayAuthorizationRule -Name <String> -Namespace <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] -HybridConnection <String> [-Rights <AccessRights[]>] [-DefaultProfile <PSObject>]
+ [-SubscriptionId <String>] -HybridConnection <String> [-Rights <String[]>] [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ Set-AzRelayAuthorizationRule -Name <String> -Namespace <String> -ResourceGroupNa
 ### UpdateExpanded2
 ```
 Set-AzRelayAuthorizationRule -Name <String> -Namespace <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] -WcfRelay <String> [-Rights <AccessRights[]>] [-DefaultProfile <PSObject>]
+ [-SubscriptionId <String>] -WcfRelay <String> [-Rights <String[]>] [-DefaultProfile <PSObject>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -84,7 +84,7 @@ Type                         : Microsoft.Relay/Namespaces/AuthorizationRules
 
 This cmdlet adds Listen from the access rights of the authorization rule for the Relay namespace.
 
-### Example 2: Adds Send from the access rights of the authorization rule for the Relay namespace with InputeObject parameter
+### Example 2: Adds Send from the access rights of the authorization rule for the Relay namespace with InputObject parameter
 ```powershell
 $authRule = Get-AzRelayAuthorizationRule -ResourceGroupName Relay-ServiceBus-EastUS -Namespace namespace-pwsh01 -Name authRule-01
 $authRule.Rights += 'Send'
@@ -107,7 +107,7 @@ SystemDataLastModifiedByType :
 Type                         : Microsoft.Relay/Namespaces/AuthorizationRules
 ```
 
-This cmdlet adds Send from the access rights of the authorization rule for the Relay namespace with InputeObject parameter.
+This cmdlet adds Send from the access rights of the authorization rule for the Relay namespace with InputObject parameter.
 
 ### Example 3: Set or update Listen from the access rights of the authorization rule for the Hybrid Connection
 ```powershell
@@ -132,7 +132,7 @@ Type                         : Microsoft.Relay/namespaces/hybridconnections/auth
 
 This cmdlet set or update Listen from the access rights of the authorization rule for the Hybrid Connection.
 
-### Example 4: Adds Send from the access rights of the authorization rule for the Hybrid Connection with InputeObject parameter
+### Example 4: Adds Send from the access rights of the authorization rule for the Hybrid Connection with InputObject parameter
 ```powershell
 $authRule = Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -HybridConnection connection-01 -Name authRule-01
 $authRule.Rights += 'Send'
@@ -155,7 +155,7 @@ SystemDataLastModifiedByType :
 Type                         : Microsoft.Relay/namespaces/hybridconnections/authorizationrules
 ```
 
-This cmdlet adds Send from the access rights of the authorization rule for the Hybrid Connection with InputeObject parameter.
+This cmdlet adds Send from the access rights of the authorization rule for the Hybrid Connection with InputObject parameter.
 
 ### Example 5: Adds Send from the access rights of the authorization rule for the Wcf Relay
 ```powershell
@@ -180,7 +180,7 @@ Type                         : Microsoft.Relay/namespaces/wcfrelays/authorizatio
 
 This cmdlet adds Send from the access rights of the authorization rule for the Wcf Relay.
 
-### Example 6: Adds Send from the access rights of the authorization rule for the Wcf Relay with InputeObject parameter
+### Example 6: Adds Send from the access rights of the authorization rule for the Wcf Relay with InputObject parameter
 ```powershell
 $authRule = Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -WcfRelay wcf-01 -Name authRule-01
 $authRule.Rights += 'Send'
@@ -203,7 +203,7 @@ SystemDataLastModifiedByType :
 Type                         : Microsoft.Relay/namespaces/wcfrelays/authorizationrules
 ```
 
-This cmdlet adds Send from the access rights of the authorization rule for the Wcf Relay with InputeObject parameter.
+This cmdlet adds Send from the access rights of the authorization rule for the Wcf Relay with InputObject parameter.
 
 ## PARAMETERS
 
@@ -243,7 +243,7 @@ Single item in a List or Get AuthorizationRule operation
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IAuthorizationRule
+Type: Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IAuthorizationRule
 Parameter Sets: Update1, Update2, Update
 Aliases:
 
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 The rights associated with the rule.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Relay.Support.AccessRights[]
+Type: System.String[]
 Parameter Sets: UpdateExpanded, UpdateExpanded1, UpdateExpanded2
 Aliases:
 
@@ -381,11 +381,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IAuthorizationRule
+### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IAuthorizationRule
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IAuthorizationRule
+### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IAuthorizationRule
 
 ## NOTES
 

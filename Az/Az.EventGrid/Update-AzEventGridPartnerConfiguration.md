@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridPartnerConfiguration
 
 ## SYNOPSIS
-Synchronously updates a partner configuration with the specified parameters.
+Synchronously update a partner configuration with the specified parameters.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Update-AzEventGridPartnerConfiguration -ResourceGroupName <String> [-Subscriptio
 ```
 
 ## DESCRIPTION
-Synchronously updates a partner configuration with the specified parameters.
+Synchronously update a partner configuration with the specified parameters.
 
 ## EXAMPLES
 

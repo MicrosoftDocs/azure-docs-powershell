@@ -66,7 +66,7 @@ This example updates the UserMetadata property with new value.
 ### Example 2: Updates a HybridConnection in the specified Relay namespace
 ```powershell
 $connection = Get-AzRelayHybridConnection -ResourceGroupName Relay-ServiceBus-EastUS -Namespace namespace-pwsh01 -Name connection-01
-$connection.UserMetadata = "testHybirdConnection"
+$connection.UserMetadata = "testHybridConnection"
 Set-AzRelayHybridConnection -ResourceGroupName Relay-ServiceBus-EastUS -Namespace namespace-pwsh01 -Name connection-01 -InputObject $connection | Format-List
 ```
 
@@ -87,7 +87,7 @@ SystemDataLastModifiedBy     :
 SystemDataLastModifiedByType : 
 Type                         : Microsoft.Relay/namespaces/hybridconnections
 UpdatedAt                    : 3/30/2023 6:28:37 AM
-UserMetadata                 : testHybirdConnection
+UserMetadata                 : testHybridConnection
 ```
 
 This command updates a HybridConnection in the specified Relay namespace.
@@ -115,7 +115,7 @@ Description of hybrid connection resource.
 To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IHybridConnection
+Type: Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IHybridConnection
 Parameter Sets: Update
 Aliases:
 
@@ -240,11 +240,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IHybridConnection
+### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IHybridConnection
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IHybridConnection
+### Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IHybridConnection
 
 ## NOTES
 

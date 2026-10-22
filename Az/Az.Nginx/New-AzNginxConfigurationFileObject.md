@@ -1,7 +1,7 @@
 ---
 external help file: Az.Nginx-help.xml
 Module Name: Az.Nginx
-online version: https://learn.microsoft.com/powershell/module/Az.Nginx/new-AzNginxConfigurationFileObject
+online version: https://learn.microsoft.com/powershell/module/Az.Nginx/new-aznginxconfigurationfileobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/Nginx/help/New-AzNginxConfigurationFileObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/Nginx/help/New-AzNginxConfigurationFileObject.md
@@ -74,7 +74,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api202401Preview.NginxConfigurationFile
+### Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.NginxConfigurationFile
 
 ## NOTES
 

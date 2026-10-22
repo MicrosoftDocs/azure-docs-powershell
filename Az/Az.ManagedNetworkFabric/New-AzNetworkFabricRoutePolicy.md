@@ -17,8 +17,8 @@ Implements Route Policy PUT method.
 ### CreateExpanded (Default)
 ```
 New-AzNetworkFabricRoutePolicy -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
- -Location <String> -NetworkFabricId <String> [-AddressFamilyType <String>] [-Annotation <String>]
- [-DefaultAction <String>] [-Statement <IRoutePolicyStatementProperties[]>] [-Tag <Hashtable>]
+ -Location <String> -NetworkFabricId <String> -Statement <IRoutePolicyStatementProperties[]>
+ [-AddressFamilyType <String>] [-Annotation <String>] [-DefaultAction <String>] [-Tag <Hashtable>]
  [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -282,7 +282,7 @@ Type: Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IRoutePolic
 Parameter Sets: CreateExpanded
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewSqlServerDatabaseDataSourceObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewsqlserverdatabasedatasourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewSqlServerDatabaseDataSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewSqlServerDatabaseDataSourceObject.md
@@ -15,10 +15,9 @@ Create an in-memory object for SqlServerDatabaseDataSource.
 ## SYNTAX
 
 ```
-New-AzPurviewSqlServerDatabaseDataSourceObject -Kind <DataSourceType> [-CollectionReferenceName <String>]
- [-CollectionType <String>] [-Location <String>] [-ResourceGroup <String>] [-ResourceName <String>]
- [-ServerEndpoint <String>] [-SubscriptionId <String>]
- [<CommonParameters>]
+New-AzPurviewSqlServerDatabaseDataSourceObject [-CollectionReferenceName <String>] [-CollectionType <String>]
+ [-Location <String>] [-ResourceGroup <String>] [-ResourceName <String>] [-ServerEndpoint <String>]
+ [-SubscriptionId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -28,7 +27,7 @@ Create an in-memory object for SqlServerDatabaseDataSource.
 
 ### Example 1: Create SQL Server Database data source object
 ```powershell
-New-AzPurviewSqlServerDatabaseDataSourceObject -Kind 'SqlServerDatabase' -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -ServerEndpoint '12.13.14.12'
+New-AzPurviewSqlServerDatabaseDataSourceObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -ServerEndpoint '12.13.14.12'
 ```
 
 ```output
@@ -74,20 +73,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -171,7 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.SqlServerDatabaseDataSource
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.SqlServerDatabaseDataSource
 
 ## NOTES
 

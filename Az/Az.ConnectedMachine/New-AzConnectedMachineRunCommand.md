@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzConnectedMachineRunCommand
 
 ## SYNOPSIS
-The operation to create or update a run command.
+The operation to create a run command.
 
 ## SYNTAX
 
@@ -25,20 +25,6 @@ New-AzConnectedMachineRunCommand -MachineName <String> -ResourceGroupName <Strin
  [-ScriptUriManagedIdentityClientId <String>] [-ScriptUriManagedIdentityObjectId <String>]
  [-SourceCommandId <String>] [-SourceScript <String>] [-SourceScriptUri <String>] [-Tag <Hashtable>]
  [-TimeoutInSecond <Int32>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### ScriptLocalPath
-```
-New-AzConnectedMachineRunCommand -MachineName <String> -ResourceGroupName <String> -RunCommandName <String>
- [-SubscriptionId <String>] -Location <String> [-AsyncExecution] [-ErrorBlobManagedIdentityClientId <String>]
- [-ErrorBlobManagedIdentityObjectId <String>] [-ErrorBlobUri <String>]
- [-OutputBlobManagedIdentityClientId <String>] [-OutputBlobManagedIdentityObjectId <String>]
- [-OutputBlobUri <String>] [-Parameter <IRunCommandInputParameter[]>]
- [-ProtectedParameter <IRunCommandInputParameter[]>] [-RunAsPassword <String>] [-RunAsUser <String>]
- [-ScriptUriManagedIdentityClientId <String>] [-ScriptUriManagedIdentityObjectId <String>]
- [-SourceCommandId <String>] [-SourceScript <String>] [-SourceScriptUri <String>] [-Tag <Hashtable>]
- [-TimeoutInSecond <Int32>] [-ScriptLocalPath <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -105,13 +91,13 @@ New-AzConnectedMachineRunCommand -InputObject <IConnectedMachineIdentity>
 ```
 
 ## DESCRIPTION
-The operation to create or update a run command.
+The operation to create a run command.
 
 ## EXAMPLES
 
-### Example 1: Create a run-command for a machine
+### Example 1: Create a run command
 ```powershell
-New-AzConnectedMachineRunCommand -ResourceGroupName "az-sdk-test" -Location "eastus2euap" -SourceScript "Write-Host Hello World!" -RunCommandName "myRunCommand3" -MachineName "testmachine" -SubscriptionId ********-****-****-****-**********
+New-AzConnectedMachineRunCommand -ResourceGroupName "ytongtest" -Location "eastus" -SourceScript "Write-Host Hello World!" -RunCommandName "myRunCommand2" -MachineName "testmachine" -Subscription "********-****-****-****-**********"
 ```
 
 ```output
@@ -119,25 +105,26 @@ AsyncExecution                    : False
 ErrorBlobManagedIdentityClientId  :
 ErrorBlobManagedIdentityObjectId  :
 ErrorBlobUri                      :
-Id                                : /subscriptions/********-****-****-****-**********/resourceGroups/az-sdk-test/prov
-                                    iders/Microsoft.HybridCompute/machines/testmachine/runcommands/myRunCommand3
-InstanceViewEndTime               : 12/5/2023 7:27:26 PM
+Id                                : /subscriptions/********-****-****-****-**********/resourceGroups/ytong
+                                    test/providers/Microsoft.HybridCompute/machines/testmachine/runcommands/
+                                    myRunCommand
+InstanceViewEndTime               : 11/8/2024 7:43:31 PM
 InstanceViewError                 :
 InstanceViewExecutionMessage      : RunCommand script execution completed
 InstanceViewExecutionState        : Succeeded
 InstanceViewExitCode              : 0
 InstanceViewOutput                : Hello World!
-InstanceViewStartTime             : 12/5/2023 7:27:24 PM
+InstanceViewStartTime             : 11/8/2024 7:43:31 PM
 InstanceViewStatuses              :
-Location                          : eastus2euap
-Name                              : myRunCommand3
+Location                          : eastus
+Name                              : myRunCommand
 OutputBlobManagedIdentityClientId :
 OutputBlobManagedIdentityObjectId :
 OutputBlobUri                     :
 Parameter                         :
 ProtectedParameter                :
 ProvisioningState                 : Succeeded
-ResourceGroupName                 : az-sdk-test
+ResourceGroupName                 : ytongtest
 RunAsPassword                     :
 RunAsUser                         :
 ScriptUriManagedIdentityClientId  :
@@ -151,13 +138,13 @@ SystemDataCreatedByType           :
 SystemDataLastModifiedAt          :
 SystemDataLastModifiedBy          :
 SystemDataLastModifiedByType      :
-Tag                               : {
+Tags                              : {
                                     }
 TimeoutInSecond                   : 0
 Type                              : Microsoft.HybridCompute/machines/runcommands
 ```
 
-Create a run-command for a machine
+Create a run command
 
 ## PARAMETERS
 
@@ -182,7 +169,7 @@ If set to true, provisioning will complete as soon as script starts and will not
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -214,7 +201,7 @@ ObjectId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -230,7 +217,7 @@ ClientId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -247,7 +234,7 @@ Refer errorBlobManagedIdentity parameter.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -307,7 +294,7 @@ The geo-location where the resource lives
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -337,7 +324,7 @@ The name of the hybrid machine.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaJsonString, CreateViaJsonFilePath, Create
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, Create
 Aliases:
 
 Required: True
@@ -368,7 +355,7 @@ ObjectId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -384,7 +371,7 @@ ClientId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -401,7 +388,7 @@ Refer outputBlobManagedIdentity parameter.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -416,7 +403,7 @@ The parameters used by the script.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IRunCommandInputParameter[]
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -431,7 +418,7 @@ The parameters used by the script.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IRunCommandInputParameter[]
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -447,7 +434,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaJsonString, CreateViaJsonFilePath, Create
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, Create
 Aliases:
 
 Required: True
@@ -462,7 +449,7 @@ Specifies the user account password on the machine when executing the run comman
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -477,7 +464,7 @@ Specifies the user account on the machine when executing the run command.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -492,7 +479,7 @@ The name of the run command.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaJsonString, CreateViaJsonFilePath, Create, CreateViaIdentityMachineExpanded, CreateViaIdentityMachine
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, Create, CreateViaIdentityMachineExpanded, CreateViaIdentityMachine
 Aliases:
 
 Required: True
@@ -517,27 +504,13 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -ScriptLocalPath
-
-```yaml
-Type: System.String
-Parameter Sets: ScriptLocalPath
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ScriptUriManagedIdentityClientId
 Client Id (GUID value) of the user-assigned managed identity.
 ObjectId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -553,7 +526,7 @@ ClientId should not be used if this is provided.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -568,7 +541,7 @@ Specifies the commandId of predefined built-in script.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -583,7 +556,7 @@ Specifies the script content to be executed on the machine.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -599,7 +572,7 @@ It can be either SAS URI of an Azure storage blob with read access or public URI
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -614,8 +587,8 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaJsonString, CreateViaJsonFilePath, Create
-Aliases:
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, Create
+Aliases: Subscription
 
 Required: False
 Position: Named
@@ -629,7 +602,7 @@ Resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -644,7 +617,7 @@ The timeout in seconds to execute the run command.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: CreateExpanded, ScriptLocalPath, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
+Parameter Sets: CreateExpanded, CreateViaIdentityMachineExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False

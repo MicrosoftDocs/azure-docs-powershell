@@ -28,18 +28,16 @@ Test-AzPeeringServiceProviderAvailability [-SubscriptionId <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### CheckViaIdentityExpanded
+### CheckViaJsonFilePath
 ```
-Test-AzPeeringServiceProviderAvailability -InputObject <IPeeringIdentity> [-PeeringServiceLocation <String>]
- [-PeeringServiceProvider <String>] [-DefaultProfile <PSObject>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Test-AzPeeringServiceProviderAvailability [-SubscriptionId <String>] -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### CheckViaIdentity
+### CheckViaJsonString
 ```
-Test-AzPeeringServiceProviderAvailability -InputObject <IPeeringIdentity>
- -CheckServiceProviderAvailabilityInput <ICheckServiceProviderAvailabilityInput> [-DefaultProfile <PSObject>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+Test-AzPeeringServiceProviderAvailability [-SubscriptionId <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -63,11 +61,10 @@ Check whether the given provider is available at the given location
 
 ### -CheckServiceProviderAvailabilityInput
 Class for CheckServiceProviderAvailabilityInput
-To construct, see NOTES section for CHECKSERVICEPROVIDERAVAILABILITYINPUT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.ICheckServiceProviderAvailabilityInput
-Parameter Sets: Check, CheckViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.ICheckServiceProviderAvailabilityInput
+Parameter Sets: Check
 Aliases:
 
 Required: True
@@ -93,19 +90,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+### -JsonFilePath
+Path of Json file supplied to the Check operation
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringIdentity
-Parameter Sets: CheckViaIdentityExpanded, CheckViaIdentity
+Type: System.String
+Parameter Sets: CheckViaJsonFilePath
 Aliases:
 
 Required: True
 Position: Named
 Default value: None
-Accept pipeline input: True (ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Check operation
+
+```yaml
+Type: System.String
+Parameter Sets: CheckViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -114,7 +125,7 @@ Gets or sets the peering service location.
 
 ```yaml
 Type: System.String
-Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
+Parameter Sets: CheckExpanded
 Aliases:
 
 Required: False
@@ -129,7 +140,7 @@ Gets or sets the peering service provider.
 
 ```yaml
 Type: System.String
-Parameter Sets: CheckExpanded, CheckViaIdentityExpanded
+Parameter Sets: CheckExpanded
 Aliases:
 
 Required: False
@@ -144,7 +155,7 @@ The Azure subscription ID.
 
 ```yaml
 Type: System.String
-Parameter Sets: CheckExpanded, Check
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -190,9 +201,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.ICheckServiceProviderAvailabilityInput
-
-### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.ICheckServiceProviderAvailabilityInput
 
 ## OUTPUTS
 

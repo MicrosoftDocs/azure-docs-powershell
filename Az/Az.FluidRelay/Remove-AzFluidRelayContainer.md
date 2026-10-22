@@ -21,6 +21,20 @@ Remove-AzFluidRelayContainer -FluidRelayServerName <String> -Name <String> -Reso
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DeleteViaIdentityResourceGroup
+```
+Remove-AzFluidRelayContainer -FluidRelayServerName <String> -Name <String>
+ -ResourceGroupInputObject <IFluidRelayIdentity> [-DefaultProfile <PSObject>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DeleteViaIdentityFluidRelayServer
+```
+Remove-AzFluidRelayContainer -Name <String> -FluidRelayServerInputObject <IFluidRelayIdentity>
+ [-DefaultProfile <PSObject>] [-PassThru] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### DeleteViaIdentity
 ```
 Remove-AzFluidRelayContainer -InputObject <IFluidRelayIdentity> [-DefaultProfile <PSObject>] [-PassThru]
@@ -57,12 +71,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FluidRelayServerInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayIdentity
+Parameter Sets: DeleteViaIdentityFluidRelayServer
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -FluidRelayServerName
 The Fluid Relay server resource name.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Delete, DeleteViaIdentityResourceGroup
 Aliases:
 
 Required: True
@@ -74,7 +103,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayIdentity
@@ -93,7 +121,7 @@ The Fluid Relay container resource name.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Delete, DeleteViaIdentityResourceGroup, DeleteViaIdentityFluidRelayServer
 Aliases: FluidRelayContainerName
 
 Required: True
@@ -130,6 +158,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayIdentity
+Parameter Sets: DeleteViaIdentityResourceGroup
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

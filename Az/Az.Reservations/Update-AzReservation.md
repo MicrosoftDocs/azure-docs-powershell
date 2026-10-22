@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzReservation
 
 ## SYNOPSIS
-Updates the applied scopes of the `Reservation`.
+Update the applied scopes of the `Reservation`.
 
 ## SYNTAX
 
@@ -19,16 +19,33 @@ Updates the applied scopes of the `Reservation`.
 Update-AzReservation -Id <String> -OrderId <String> [-AppliedScope <String[]>]
  [-AppliedScopePropertyDisplayName <String>] [-AppliedScopePropertyManagementGroupId <String>]
  [-AppliedScopePropertyResourceGroupId <String>] [-AppliedScopePropertySubscriptionId <String>]
- [-AppliedScopePropertyTenantId <String>] [-AppliedScopeType <AppliedScopeType>]
- [-InstanceFlexibility <InstanceFlexibility>] [-Name <String>] [-Renew]
- [-RenewProperty <IPatchPropertiesRenewProperties>] [-ReviewDateTime <DateTime>] [-DefaultProfile <PSObject>]
+ [-AppliedScopePropertyTenantId <String>] [-AppliedScopeType <String>] [-InstanceFlexibility <String>]
+ [-Name <String>] [-Renew] [-RenewProperty <IPatchPropertiesRenewProperties>] [-ReviewDateTime <DateTime>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### UpdateViaJsonString
+```
+Update-AzReservation -Id <String> -OrderId <String> -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob]
+ [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### UpdateViaJsonFilePath
+```
+Update-AzReservation -Id <String> -OrderId <String> -JsonFilePath <String> [-DefaultProfile <PSObject>]
  [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Update
+### UpdateViaIdentityReservationOrderExpanded
 ```
-Update-AzReservation -Id <String> -OrderId <String> -Reservation <IPatch> [-DefaultProfile <PSObject>] [-AsJob]
- [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+Update-AzReservation -Id <String> -ReservationOrderInputObject <IReservationsIdentity>
+ [-AppliedScope <String[]>] [-AppliedScopePropertyDisplayName <String>]
+ [-AppliedScopePropertyManagementGroupId <String>] [-AppliedScopePropertyResourceGroupId <String>]
+ [-AppliedScopePropertySubscriptionId <String>] [-AppliedScopePropertyTenantId <String>]
+ [-AppliedScopeType <String>] [-InstanceFlexibility <String>] [-Name <String>] [-Renew]
+ [-RenewProperty <IPatchPropertiesRenewProperties>] [-ReviewDateTime <DateTime>] [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### UpdateViaIdentityExpanded
@@ -36,20 +53,14 @@ Update-AzReservation -Id <String> -OrderId <String> -Reservation <IPatch> [-Defa
 Update-AzReservation -InputObject <IReservationsIdentity> [-AppliedScope <String[]>]
  [-AppliedScopePropertyDisplayName <String>] [-AppliedScopePropertyManagementGroupId <String>]
  [-AppliedScopePropertyResourceGroupId <String>] [-AppliedScopePropertySubscriptionId <String>]
- [-AppliedScopePropertyTenantId <String>] [-AppliedScopeType <AppliedScopeType>]
- [-InstanceFlexibility <InstanceFlexibility>] [-Name <String>] [-Renew]
- [-RenewProperty <IPatchPropertiesRenewProperties>] [-ReviewDateTime <DateTime>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### UpdateViaIdentity
-```
-Update-AzReservation -InputObject <IReservationsIdentity> -Reservation <IPatch> [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AppliedScopePropertyTenantId <String>] [-AppliedScopeType <String>] [-InstanceFlexibility <String>]
+ [-Name <String>] [-Renew] [-RenewProperty <IPatchPropertiesRenewProperties>] [-ReviewDateTime <DateTime>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Updates the applied scopes of the `Reservation`.
+Update the applied scopes of the `Reservation`.
 
 ## EXAMPLES
 
@@ -95,7 +106,7 @@ This property will be deprecated and replaced by appliedScopeProperties instead 
 
 ```yaml
 Type: System.String[]
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -110,7 +121,7 @@ Display name
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -125,7 +136,7 @@ Fully-qualified identifier of the management group where the benefit must be app
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -140,7 +151,7 @@ Fully-qualified identifier of the resource group.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -155,7 +166,7 @@ Fully-qualified identifier of the subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -170,7 +181,7 @@ Tenant ID where the savings plan should apply benefit.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -184,8 +195,8 @@ Accept wildcard characters: False
 Type of the Applied Scope.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.AppliedScopeType
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Type: System.String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -231,7 +242,7 @@ Id of the reservation item
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath, UpdateViaIdentityReservationOrderExpanded
 Aliases: ReservationId
 
 Required: True
@@ -243,11 +254,10 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity
-Parameter Sets: UpdateViaIdentityExpanded, UpdateViaIdentity
+Parameter Sets: UpdateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -262,11 +272,41 @@ Turning this on will apply the reservation discount to other VMs in the same VM 
 Only specify for VirtualMachines reserved resource type.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Support.InstanceFlexibility
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Type: System.String
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Update operation
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Update operation
+
+```yaml
+Type: System.String
+Parameter Sets: UpdateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -278,7 +318,7 @@ Display name of the reservation
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -308,7 +348,7 @@ Order Id of the reservation
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, Update
+Parameter Sets: UpdateExpanded, UpdateViaJsonString, UpdateViaJsonFilePath
 Aliases: ReservationOrderId
 
 Required: True
@@ -323,7 +363,7 @@ Setting this to true will automatically purchase a new reservation on the expira
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -335,11 +375,10 @@ Accept wildcard characters: False
 
 ### -RenewProperty
 .
-To construct, see NOTES section for RENEWPROPERTY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IPatchPropertiesRenewProperties
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IPatchPropertiesRenewProperties
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -349,13 +388,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Reservation
-The request for reservation patch
-To construct, see NOTES section for RESERVATION properties and create a hash table.
+### -ReservationOrderInputObject
+Identity Parameter
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IPatch
-Parameter Sets: Update, UpdateViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity
+Parameter Sets: UpdateViaIdentityReservationOrderExpanded
 Aliases:
 
 Required: True
@@ -370,7 +408,7 @@ This is the date-time when the Azure hybrid benefit needs to be reviewed.
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: UpdateExpanded, UpdateViaIdentityReservationOrderExpanded, UpdateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -416,13 +454,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IPatch
-
 ### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IReservationResponse
+### Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationResponse
 
 ## NOTES
 

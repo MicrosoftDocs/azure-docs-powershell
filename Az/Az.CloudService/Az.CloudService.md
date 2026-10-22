@@ -55,7 +55,7 @@ If you do not want to initialize storage resources, you can use Reimage Role Ins
 The Reimage Role Instance asynchronous operation reinstalls the operating system on instances of web roles or worker roles.
 
 ### [New-AzCloudService](New-AzCloudService.md)
-Create or update a cloud service.
+Create a cloud service.
 Please note some properties can be set only during cloud service creation.
 
 ### [New-AzCloudServiceDiagnosticsExtension](New-AzCloudServiceDiagnosticsExtension.md)
@@ -68,16 +68,16 @@ Create a in-memory object for Extension
 Create a in-memory object for LoadBalancerConfiguration
 
 ### [New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject](New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject.md)
-Create a in-memory object for LoadBalancerFrontendIPConfiguration
+Create an in-memory object for LoadBalancerFrontendIPConfiguration.
 
 ### [New-AzCloudServiceRemoteDesktopExtensionObject](New-AzCloudServiceRemoteDesktopExtensionObject.md)
 Create a in-memory object for Remote Desktop Extension
 
 ### [New-AzCloudServiceRoleProfilePropertiesObject](New-AzCloudServiceRoleProfilePropertiesObject.md)
-Create a in-memory object for CloudServiceRoleProfileProperties
+Create an in-memory object for CloudServiceRoleProfileProperties.
 
 ### [New-AzCloudServiceVaultSecretGroupObject](New-AzCloudServiceVaultSecretGroupObject.md)
-Create a in-memory object for Vault Secret Group
+Create an in-memory object for CloudServiceVaultSecretGroup.
 
 ### [Remove-AzCloudService](Remove-AzCloudService.md)
 Deletes a cloud service.
@@ -92,7 +92,7 @@ Restarts one or more role instances in a cloud service.
 The Reboot Role Instance asynchronous operation requests a reboot of a role instance in the cloud service.
 
 ### [Set-AzCloudServiceUpdateDomain](Set-AzCloudServiceUpdateDomain.md)
-Updates the role instances in the specified update domain.
+Walk the role instances in the specified walk domain.
 
 ### [Start-AzCloudService](Start-AzCloudService.md)
 Starts the cloud service.
@@ -105,6 +105,6 @@ Note that resources are still attached and you are getting charged for the resou
 Swaps VIPs between two cloud service (extended support) load balancers.
 
 ### [Update-AzCloudService](Update-AzCloudService.md)
-Create or update a cloud service.
+Create a cloud service.
 Please note some properties can be set only during cloud service creation.
 

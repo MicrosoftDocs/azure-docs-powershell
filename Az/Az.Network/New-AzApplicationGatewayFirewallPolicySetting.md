@@ -20,8 +20,8 @@ New-AzApplicationGatewayFirewallPolicySetting [-Mode <String>] [-State <String>]
  [-MaxRequestBodySizeInKb <Int32>] [-DisableFileUploadEnforcement <Boolean>] [-MaxFileUploadInMb <Int32>]
  [-CustomBlockResponseStatusCode <Int32>] [-CustomBlockResponseBody <String>]
  [-LogScrubbing <PSApplicationGatewayFirewallPolicyLogScrubbingConfiguration>]
- [-JSChallengeCookieExpirationInMins <Int32>]
- [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-JSChallengeCookieExpirationInMins <Int32>] [-DefaultProfile <IAzureContextContainer>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +62,36 @@ The command creates a policy setting with state as $enabledState, mode as $enabl
 The new policySettings is stored to $condition.
 
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CustomBlockResponseBody
 Custom Block Response Body in policy settings of the firewall policy.
@@ -124,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRequestBodyCheck
-Diables the requestBodyCheck in policy settings of the firewall policy.
+Disables the requestBodyCheck in policy settings of the firewall policy.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -143,6 +173,21 @@ Disable request body enforcement limits for WAF.
 
 ```yaml
 Type: System.Nullable`1[System.Boolean]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JSChallengeCookieExpirationInMins
+Web Application Firewall JavaScript Challenge Cookie Expiration time in minutes.
+
+```yaml
+Type: System.Nullable`1[System.Int32]
 Parameter Sets: (All)
 Aliases:
 
@@ -216,21 +261,6 @@ Accept wildcard characters: False
 
 ### -RequestBodyInspectLimitInKB
 Max inspection limit in KB for request body inspection.
-
-```yaml
-Type: System.Nullable`1[System.Int32]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JSChallengeCookieExpirationInMins
-Web Application Firewall JavaScript Challenge Cookie Expiration time in minutes.
 
 ```yaml
 Type: System.Nullable`1[System.Int32]

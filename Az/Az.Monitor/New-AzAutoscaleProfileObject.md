@@ -1,7 +1,7 @@
 ---
 external help file: Az.Autoscale.psm1-help.xml
 Module Name: Az.Monitor
-online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleProfileObject
+online version: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azautoscaleprofileobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleProfileObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleProfileObject.md
@@ -17,7 +17,7 @@ Create an in-memory object for AutoscaleProfile.
 ```
 New-AzAutoscaleProfileObject -CapacityDefault <String> -CapacityMaximum <String> -CapacityMinimum <String>
  -Name <String> -Rule <IScaleRule[]> [-FixedDateEnd <DateTime>] [-FixedDateStart <DateTime>]
- [-FixedDateTimeZone <String>] [-RecurrenceFrequency <RecurrenceFrequency>] [-ScheduleDay <String[]>]
+ [-FixedDateTimeZone <String>] [-RecurrenceFrequency <String>] [-ScheduleDay <String[]>]
  [-ScheduleHour <Int32[]>] [-ScheduleMinute <Int32[]>] [-ScheduleTimeZone <String>]
  [<CommonParameters>]
 ```
@@ -163,7 +163,7 @@ For example, to set a daily schedule, set **schedule** to every day of the week.
 The frequency property specifies that the schedule is repeated weekly.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.RecurrenceFrequency
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -177,10 +177,9 @@ Accept wildcard characters: False
 ### -Rule
 the collection of rules that provide the triggers and parameters for the scaling action.
 A maximum of 10 rules can be specified.
-To construct, see NOTES section for RULE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IScaleRule[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IScaleRule[]
 Parameter Sets: (All)
 Aliases:
 
@@ -270,7 +269,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.AutoscaleProfile
+### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.AutoscaleProfile
 
 ## NOTES
 

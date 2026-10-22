@@ -30,7 +30,8 @@ Get-AzNetworkInterface -Name <String> -ResourceGroupName <String> -ExpandResourc
 ### NoExpandScaleSetNic
 ```
 Get-AzNetworkInterface [-Name <String>] -ResourceGroupName <String> [-VirtualMachineScaleSetName <String>]
- [-VirtualMachineIndex <String>] [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+ [-VirtualMachineIndex <String>] [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ### ExpandScaleSetNic
@@ -48,7 +49,8 @@ Get-AzNetworkInterface -ResourceId <String> -ExpandResource <String> [-DefaultPr
 
 ### GetByResourceIdNoExpandParameterSet
 ```
-Get-AzNetworkInterface -ResourceId <String> [-DefaultProfile <IAzureContextContainer>] [<CommonParameters>]
+Get-AzNetworkInterface -ResourceId <String> [-DefaultProfile <IAzureContextContainer>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -421,5 +423,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzNetworkInterface](./Remove-AzNetworkInterface.md)
 
 [Set-AzNetworkInterface](./Set-AzNetworkInterface.md)
-
-

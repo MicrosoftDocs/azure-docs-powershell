@@ -1,7 +1,7 @@
 ---
 external help file: Az.MachineLearningServices-help.xml
 Module Name: Az.MachineLearningServices
-online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspacePipelineJobObject
+online version: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-azmlworkspacepipelinejobobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspacePipelineJobObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspacePipelineJobObject.md
@@ -16,11 +16,13 @@ Create an in-memory object for PipelineJob.
 
 ```
 New-AzMLWorkspacePipelineJobObject [-JobInput <IPipelineJobInputs>] [-Job <IPipelineJobJobs>]
- [-JobOutput <IPipelineJobOutputs>] [-Setting <IAny>] [-ComputeId <String>] [-DisplayName <String>]
- [-ExperimentName <String>] [-IdentityType <IdentityConfigurationType>] [-IsArchived <Boolean>]
- [-ServiceEndpoint <String>] [-ServicePort <Int32>] [-ServiceProperty <IJobServiceProperties>]
- [-ServiceType <String>] [-Description <String>] [-Property <IResourceBaseProperties>]
- [-Tag <IResourceBaseTags>] [<CommonParameters>]
+ [-JobOutput <IPipelineJobOutputs>] [-Setting <IAny>] [-SourceJobId <String>] [-ComponentId <String>]
+ [-ComputeId <String>] [-DisplayName <String>] [-ExperimentName <String>] [-IdentityType <String>]
+ [-IsArchived <Boolean>] [-NotificationSettingEmail <String[]>] [-NotificationSettingEmailOn <String[]>]
+ [-NotificationSettingWebhook <INotificationSettingWebhooks>] [-ServiceEndpoint <String>]
+ [-ServicePort <Int32>] [-ServiceProperty <IJobServiceProperties>] [-ServiceType <String>]
+ [-Description <String>] [-Property <IResourceBaseProperties>] [-Tag <IResourceBaseTags>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,7 +32,7 @@ Create an in-memory object for PipelineJob.
 
 ### Example 1: Create an in-memory object for PipelineJob
 ```powershell
-# You can use following commands to create job input or job oupt as vaule pass to JobInput or JobOutput parameter of the  New-AzMLWorkspacePipelineJobObject
+# You can use following commands to create job input or job output as value pass to JobInput or JobOutput parameter of the  New-AzMLWorkspacePipelineJobObject
 
 # New-AzMLWorkspaceCustomModelJobInputObject
 # New-AzMLWorkspaceCustomModelJobOutputObject
@@ -53,6 +55,21 @@ New-AzMLWorkspacePipelineJobObject
 Create an in-memory object for PipelineJob
 
 ## PARAMETERS
+
+### -ComponentId
+ARM resource ID of the component resource.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ComputeId
 ARM resource ID of the compute resource.
@@ -119,7 +136,7 @@ Accept wildcard characters: False
 [Required] Specifies the type of identity framework.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.IdentityConfigurationType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -147,10 +164,9 @@ Accept wildcard characters: False
 
 ### -Job
 Jobs construct the Pipeline Job.
-To construct, see NOTES section for JOB properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IPipelineJobJobs
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IPipelineJobJobs
 Parameter Sets: (All)
 Aliases:
 
@@ -163,10 +179,9 @@ Accept wildcard characters: False
 
 ### -JobInput
 Inputs for the pipeline job.
-To construct, see NOTES section for JOBINPUT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IPipelineJobInputs
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IPipelineJobInputs
 Parameter Sets: (All)
 Aliases:
 
@@ -179,10 +194,55 @@ Accept wildcard characters: False
 
 ### -JobOutput
 Outputs for the pipeline job.
-To construct, see NOTES section for JOBOUTPUT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IPipelineJobOutputs
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IPipelineJobOutputs
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationSettingEmail
+This is the email recipient list which has a limitation of 499 characters in total concat with comma separator.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationSettingEmailOn
+Send email notification to user on specified notification type.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotificationSettingWebhook
+Send webhook callback to a service.
+Key is a user-provided name for the webhook.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.INotificationSettingWebhooks
 Parameter Sets: (All)
 Aliases:
 
@@ -195,10 +255,9 @@ Accept wildcard characters: False
 
 ### -Property
 The asset property dictionary.
-To construct, see NOTES section for PROPERTY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceBaseProperties
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IResourceBaseProperties
 Parameter Sets: (All)
 Aliases:
 
@@ -241,10 +300,9 @@ Accept wildcard characters: False
 
 ### -ServiceProperty
 Additional properties to set on the endpoint.
-To construct, see NOTES section for SERVICEPROPERTY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IJobServiceProperties
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IJobServiceProperties
 Parameter Sets: (All)
 Aliases:
 
@@ -285,13 +343,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SourceJobId
+ARM resource ID of source job.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tag
 Tag dictionary.
 Tags can be added, removed, and updated.
-To construct, see NOTES section for TAG properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceBaseTags
+Type: Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IResourceBaseTags
 Parameter Sets: (All)
 Aliases:
 
@@ -309,7 +381,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.PipelineJob
+### Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.PipelineJob
 
 ## NOTES
 

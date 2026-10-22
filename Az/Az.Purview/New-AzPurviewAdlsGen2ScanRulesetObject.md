@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/az.Purview/new-AzPurviewAdlsGen2ScanRulesetObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewadlsgen2scanrulesetobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAdlsGen2ScanRulesetObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAdlsGen2ScanRulesetObject.md
@@ -15,10 +15,9 @@ Create an in-memory object for AdlsGen2ScanRuleset.
 ## SYNTAX
 
 ```
-New-AzPurviewAdlsGen2ScanRulesetObject -Kind <DataSourceType> [-Description <String>]
- [-ExcludedSystemClassification <String[]>] [-IncludedCustomClassificationRuleName <String[]>]
- [-ScanningRuleCustomFileExtension <ICustomFileExtension[]>]
- [-ScanningRuleFileExtension <FileExtensionsType[]>] [-Type <ScanRulesetType>]
+New-AzPurviewAdlsGen2ScanRulesetObject [-Description <String>] [-ExcludedSystemClassification <String[]>]
+ [-IncludedCustomClassificationRuleName <String[]>] [-ScanningRuleCustomFileExtension <ICustomFileExtension[]>]
+ [-ScanningRuleFileExtension <String[]>] [-Type <String>]
  [<CommonParameters>]
 ```
 
@@ -29,7 +28,7 @@ Create an in-memory object for AdlsGen2ScanRuleset.
 
 ### Example 1: Create AdlsGen2 custom scanruleset object
 ```powershell
-New-AzPurviewAdlsGen2ScanRulesetObject -Kind 'AdlsGen2' -Description 'desc' -ExcludedSystemClassification @('MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER','MICROSOFT.SECURITY.COMMON_PASSWORDS') -IncludedCustomClassificationRuleName @('ClassificationRule2') -ScanningRuleFileExtension @("CSV","JSON","PSV","SSV","TSV","TXT","XML","PARQUET","AVRO","ORC","Documents","GZ","DOC","DOCM","DOCX","DOT","ODP","ODS","ODT","PDF","POT","PPS","PPSX","PPT","PPTM","PPTX","XLC","XLS","XLSB","XLSM","XLSX","XLT") -Type 'Custom'
+New-AzPurviewAdlsGen2ScanRulesetObject -Description 'desc' -ExcludedSystemClassification @('MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER','MICROSOFT.SECURITY.COMMON_PASSWORDS') -IncludedCustomClassificationRuleName @('ClassificationRule2') -ScanningRuleFileExtension @("CSV","JSON","PSV","SSV","TSV","TXT","XML","PARQUET","AVRO","ORC","Documents","GZ","DOC","DOCM","DOCX","DOT","ODP","ODS","ODT","PDF","POT","PPS","PPSX","PPT","PPTM","PPTX","XLC","XLS","XLSB","XLSM","XLSX","XLT") -Type 'Custom'
 ```
 
 ```output
@@ -94,25 +93,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ScanningRuleCustomFileExtension
-To construct, see NOTES section for SCANNINGRULECUSTOMFILEEXTENSION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.ICustomFileExtension[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.ICustomFileExtension[]
 Parameter Sets: (All)
 Aliases:
 
@@ -126,7 +110,7 @@ Accept wildcard characters: False
 ### -ScanningRuleFileExtension
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.FileExtensionsType[]
+Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -140,7 +124,7 @@ Accept wildcard characters: False
 ### -Type
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ScanRulesetType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -158,7 +142,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.AdlsGen2ScanRuleset
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AdlsGen2ScanRuleset
 
 ## NOTES
 

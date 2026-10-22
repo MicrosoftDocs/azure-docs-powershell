@@ -1,7 +1,7 @@
 ---
 external help file: Az.SpringCloud-help.xml
 Module Name: Az.SpringCloud
-online version: https://learn.microsoft.com/powershell/module/az.SpringCloud/new-AzSpringCloudBuildpacksGroupObject
+online version: https://learn.microsoft.com/powershell/module/Az.SpringCloud/new-azspringcloudbuildpacksgroupobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudBuildpacksGroupObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudBuildpacksGroupObject.md
@@ -45,10 +45,9 @@ Create an in-memory object for BuildpacksGroupProperties.
 
 ### -Buildpack
 Buildpacks in the buildpack group.
-To construct, see NOTES section for BUILDPACK properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.IBuildpackProperties[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.IBuildpackProperties[]
 Parameter Sets: (All)
 Aliases:
 
@@ -81,18 +80,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.BuildpacksGroupProperties
+### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.BuildpacksGroupProperties
 
 ## NOTES
-
-ALIASES
-
-COMPLEX PARAMETER PROPERTIES
-
-To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
-
-
-`BUILDPACK <IBuildpackProperties[]>`: Buildpacks in the buildpack group.
-  - `[Id <String>]`: Id of the buildpack
 
 ## RELATED LINKS

@@ -20,7 +20,7 @@ Get-AzApplicationGatewayWafDynamicManifest -Location <String> [-DefaultProfile <
 ```
 
 ## DESCRIPTION
-The **Get-AzApplicationGatewayWafDynamicManifest** cmdlet gets athe web application firewall manifest and all the supported rule sets .
+The **Get-AzApplicationGatewayWafDynamicManifest** cmdlet gets the web application firewall manifest and all the supported rule sets .
 
 ## EXAMPLES
 

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzApplicationInsightsMyWorkbook
 
 ## SYNOPSIS
-Updates a private workbook that has already been added.
+Update a new private workbook.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Update-AzApplicationInsightsMyWorkbook -Name <String> -ResourceGroupName <String
 ```
 
 ## DESCRIPTION
-Updates a private workbook that has already been added.
+Update a new private workbook.
 
 ## EXAMPLES
 
@@ -121,10 +121,9 @@ Accept wildcard characters: False
 
 ### -WorkbookProperty
 An Application Insights private workbook definition.
-To construct, see NOTES section for WORKBOOKPROPERTY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20210308.IMyWorkbook
+Type: Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.IMyWorkbook
 Parameter Sets: (All)
 Aliases:
 
@@ -171,11 +170,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20210308.IMyWorkbook
+### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.IMyWorkbook
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20210308.IMyWorkbook
+### Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.IMyWorkbook
 
 ## NOTES
 

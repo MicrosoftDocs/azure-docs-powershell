@@ -21,6 +21,20 @@ Unregister-AzStaticWebAppBuildUserProvidedFunctionApp -EnvironmentName <String> 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DetachViaIdentityStaticSite
+```
+Unregister-AzStaticWebAppBuildUserProvidedFunctionApp -EnvironmentName <String> -FunctionAppName <String>
+ -StaticSiteInputObject <IWebsitesIdentity> [-DefaultProfile <PSObject>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### DetachViaIdentityBuild
+```
+Unregister-AzStaticWebAppBuildUserProvidedFunctionApp -FunctionAppName <String>
+ -BuildInputObject <IWebsitesIdentity> [-DefaultProfile <PSObject>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### DetachViaIdentity
 ```
 Unregister-AzStaticWebAppBuildUserProvidedFunctionApp -InputObject <IWebsitesIdentity>
@@ -49,6 +63,21 @@ This command unregisters the user provided function app from the static site bui
 
 ## PARAMETERS
 
+### -BuildInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity
+Parameter Sets: DetachViaIdentityBuild
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -DefaultProfile
 The DefaultProfile parameter is not functional.
 Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
@@ -70,7 +99,7 @@ The stage site identifier.
 
 ```yaml
 Type: System.String
-Parameter Sets: Detach
+Parameter Sets: Detach, DetachViaIdentityStaticSite
 Aliases:
 
 Required: True
@@ -85,7 +114,7 @@ Name of the function app registered with the static site build.
 
 ```yaml
 Type: System.String
-Parameter Sets: Detach
+Parameter Sets: Detach, DetachViaIdentityStaticSite, DetachViaIdentityBuild
 Aliases:
 
 Required: True
@@ -97,7 +126,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity
@@ -153,6 +181,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StaticSiteInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity
+Parameter Sets: DetachViaIdentityStaticSite
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 

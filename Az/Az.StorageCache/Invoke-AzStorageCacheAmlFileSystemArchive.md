@@ -21,6 +21,20 @@ Invoke-AzStorageCacheAmlFileSystemArchive -AmlFilesystemName <String> -ResourceG
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ArchiveViaJsonString
+```
+Invoke-AzStorageCacheAmlFileSystemArchive -AmlFilesystemName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ArchiveViaJsonFilePath
+```
+Invoke-AzStorageCacheAmlFileSystemArchive -AmlFilesystemName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### ArchiveViaIdentityExpanded
 ```
 Invoke-AzStorageCacheAmlFileSystemArchive -InputObject <IStorageCacheIdentity> [-FilesystemPath <String>]
@@ -60,7 +74,7 @@ Start and end with alphanumeric.
 
 ```yaml
 Type: System.String
-Parameter Sets: ArchiveExpanded
+Parameter Sets: ArchiveExpanded, ArchiveViaJsonString, ArchiveViaJsonFilePath
 Aliases:
 
 Required: True
@@ -92,7 +106,7 @@ Specify '/' to archive all modified data.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: ArchiveExpanded, ArchiveViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -104,7 +118,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.IStorageCacheIdentity
@@ -115,6 +128,36 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Archive operation
+
+```yaml
+Type: System.String
+Parameter Sets: ArchiveViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Archive operation
+
+```yaml
+Type: System.String
+Parameter Sets: ArchiveViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -139,7 +182,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: ArchiveExpanded
+Parameter Sets: ArchiveExpanded, ArchiveViaJsonString, ArchiveViaJsonFilePath
 Aliases:
 
 Required: True
@@ -154,7 +197,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: ArchiveExpanded
+Parameter Sets: ArchiveExpanded, ArchiveViaJsonString, ArchiveViaJsonFilePath
 Aliases:
 
 Required: False

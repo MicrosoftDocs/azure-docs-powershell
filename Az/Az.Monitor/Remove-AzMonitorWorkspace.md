@@ -1,5 +1,5 @@
 ---
-external help file: Az.MonitorWorkspace.psm1-help.xml
+external help file: Az.Monitor-help.xml
 Module Name: Az.Monitor
 online version: https://learn.microsoft.com/powershell/module/az.monitor/remove-azmonitorworkspace
 schema: 2.0.0
@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Remove-AzMonitorWorkspace
 
 ## SYNOPSIS
-Delete a workspace
+Deletes an Azure Monitor Workspace
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Remove-AzMonitorWorkspace -InputObject <IMonitorWorkspaceIdentity> [-DefaultProf
 ```
 
 ## DESCRIPTION
-Delete a workspace
+Deletes an Azure Monitor Workspace
 
 ## EXAMPLES
 
@@ -81,7 +81,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.IMonitorWorkspaceIdentity
@@ -96,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the Azure Monitor workspace.
+The name of the Azure Monitor Workspace.
 The name is case insensitive
 
 ```yaml
@@ -159,6 +158,7 @@ Accept wildcard characters: False
 
 ### -SubscriptionId
 The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String

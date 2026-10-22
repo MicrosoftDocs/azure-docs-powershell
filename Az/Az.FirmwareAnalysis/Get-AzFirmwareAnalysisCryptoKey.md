@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzFirmwareAnalysisCryptoKey
 
 ## SYNOPSIS
-Lists cryptographic key analysis results found in a firmware.
+Lists crypto key analysis results of a firmware.
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Get-AzFirmwareAnalysisCryptoKey -FirmwareId <String> -ResourceGroupName <String>
 ```
 
 ## DESCRIPTION
-Lists cryptographic key analysis results found in a firmware.
+Lists crypto key analysis results of a firmware.
 
 ## EXAMPLES
 

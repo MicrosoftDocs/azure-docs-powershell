@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonthlySchedule
-A hashtable array which represents the montly Schedule
+A hashtable array which represents the monthly Schedule
 
 ```yaml
 Type: Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesMonthlySchedule
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -WeeklySchedule
-A hashtable array which represents the montly Schedule
+A hashtable array which represents the monthly Schedule
 
 ```yaml
 Type: Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesWeeklySchedule

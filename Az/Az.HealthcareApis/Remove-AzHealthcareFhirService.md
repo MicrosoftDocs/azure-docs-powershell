@@ -21,6 +21,13 @@ Remove-AzHealthcareFhirService -Name <String> -ResourceGroupName <String> [-Subs
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### DeleteViaIdentityFhirservice
+```
+Remove-AzHealthcareFhirService -WorkspaceName <String> -FhirserviceInputObject <IHealthcareApisIdentity>
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
 ### DeleteViaIdentity
 ```
 Remove-AzHealthcareFhirService -InputObject <IHealthcareApisIdentity> [-DefaultProfile <PSObject>] [-AsJob]
@@ -79,9 +86,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FhirserviceInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IHealthcareApisIdentity
+Parameter Sets: DeleteViaIdentityFhirservice
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IHealthcareApisIdentity
@@ -175,7 +196,7 @@ The name of workspace resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete
+Parameter Sets: Delete, DeleteViaIdentityFhirservice
 Aliases:
 
 Required: True

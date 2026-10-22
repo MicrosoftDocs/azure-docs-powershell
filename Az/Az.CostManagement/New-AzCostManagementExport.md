@@ -17,14 +17,28 @@ Create operation does not require eTag.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
 New-AzCostManagementExport -Name <String> -Scope <String> [-ConfigurationColumn <String[]>]
- [-DataSetGranularity <GranularityType>] [-DefinitionTimeframe <TimeframeType>] [-DefinitionType <ExportType>]
+ [-DataSetGranularity <String>] [-DefinitionTimeframe <String>] [-DefinitionType <String>]
  [-DestinationContainer <String>] [-DestinationResourceId <String>] [-DestinationRootFolderPath <String>]
- [-Format <FormatType>] [-RecurrencePeriodFrom <DateTime>] [-RecurrencePeriodTo <DateTime>]
- [-ScheduleRecurrence <RecurrenceType>] [-ScheduleStatus <StatusType>] [-TimePeriodFrom <DateTime>]
+ [-DestinationSasToken <String>] [-DestinationStorageAccount <String>] [-ETag <String>] [-Format <String>]
+ [-PartitionData] [-RecurrencePeriodFrom <DateTime>] [-RecurrencePeriodTo <DateTime>]
+ [-ScheduleRecurrence <String>] [-ScheduleStatus <String>] [-TimePeriodFrom <DateTime>]
  [-TimePeriodTo <DateTime>] [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzCostManagementExport -Name <String> -Scope <String> -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzCostManagementExport -Name <String> -Scope <String> -JsonString <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,7 +71,7 @@ The available columns can vary by customer channel (see examples).
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -72,8 +86,8 @@ The granularity of rows in the export.
 Currently only 'Daily' is supported.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.GranularityType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -84,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -103,8 +118,8 @@ The time frame for pulling data for the export.
 If custom, then a specific time period must be provided.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.TimeframeType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -119,8 +134,8 @@ The type of the export.
 Note that 'Usage' is equivalent to 'ActualCost' and is applicable to exports that do not yet provide data for charges or amortization for service reservations.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.ExportType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -132,10 +147,11 @@ Accept wildcard characters: False
 
 ### -DestinationContainer
 The name of the container where exports will be uploaded.
+If the container does not exist it will be created.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -147,10 +163,11 @@ Accept wildcard characters: False
 
 ### -DestinationResourceId
 The resource id of the storage account where exports will be delivered.
+This is not required if a sasToken and storageAccount are specified.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -165,7 +182,58 @@ The name of the directory where exports will be uploaded.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DestinationSasToken
+A SAS token for the storage account.
+For a restricted set of Azure customers this together with storageAccount can be specified instead of resourceId.
+Note: the value returned by the API for this property will always be obfuscated.
+Returning this same obfuscated value will not result in the SAS token being updated.
+To update this value a new SAS token must be specified.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DestinationStorageAccount
+The storage account where exports will be uploaded.
+For a restricted set of Azure customers this together with sasToken can be specified instead of resourceId.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ETag
+eTag of the resource.
+To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -180,11 +248,41 @@ The format of the export being delivered.
 Currently only 'Csv' is supported.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.FormatType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -206,12 +304,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PartitionData
+If set to true, exported data will be partitioned by size and placed in a blob directory together with a manifest file.
+Note: this option is currently available only for modern commerce scopes.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecurrencePeriodFrom
 The start date of recurrence.
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -226,7 +340,7 @@ The end date of recurrence.
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -240,8 +354,8 @@ Accept wildcard characters: False
 The schedule recurrence.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.RecurrenceType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -256,8 +370,8 @@ The status of the export's schedule.
 If 'Inactive', the export's schedule is paused.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.StatusType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -287,7 +401,7 @@ The start date for export data.
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -302,7 +416,7 @@ The end date for export data.
 
 ```yaml
 Type: System.DateTime
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -350,7 +464,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IExport
+### Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IExport
 
 ## NOTES
 

@@ -9,7 +9,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzWebAppAccessRestrictionConfig
 
 ## SYNOPSIS
-Updates the inheritance of Main site Access Restiction config to SCM Site for an Azure Web App.
+Updates the inheritance of Main site Access Restriction config to SCM Site for an Azure Web App.
 
 ## SYNTAX
 
@@ -18,14 +18,14 @@ Updates the inheritance of Main site Access Restiction config to SCM Site for an
 Update-AzWebAppAccessRestrictionConfig [-ResourceGroupName] <String> [-Name] <String>
  [-ScmSiteUseMainSiteRestrictionConfig] [-SlotName <String>] [-PassThru]
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ### InputObjectParameterSet
 ```
 Update-AzWebAppAccessRestrictionConfig [-PassThru] -InputObject <PSAccessRestrictionConfig>
  [-DefaultProfile <IAzureContextContainer>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-AcquirePolicyToken] [-ChangeReference <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,6 +45,36 @@ Update-AzWebAppAccessRestrictionConfig -Name IpRule -ResourceGroupName MyResourc
 ```
 
 ## PARAMETERS
+
+### -AcquirePolicyToken
+Acquire an Azure Policy token automatically for this resource operation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ChangeReference
+The change reference resource ID for this resource operation.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -DefaultProfile
 The credentials, account, tenant, and subscription used for communication with azure.

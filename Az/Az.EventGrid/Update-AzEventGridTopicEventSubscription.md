@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridTopicEventSubscription
 
 ## SYNOPSIS
-Update an existing event subscription for a topic.
+update an existing event subscription for a topic.
 
 ## SYNTAX
 
@@ -72,7 +72,7 @@ Update-AzEventGridTopicEventSubscription -InputObject <IEventGridIdentity>
 ```
 
 ## DESCRIPTION
-Update an existing event subscription for a topic.
+update an existing event subscription for a topic.
 
 ## EXAMPLES
 
@@ -309,7 +309,7 @@ Accept wildcard characters: False
 ```
 
 ### -FilterIsSubjectCaseSensitive
-Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filtershould be compared in a case sensitive manner.
+Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter should be compared in a case sensitive manner.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzDataShareSubscriptionSynchronizationDetail
 
 ## SYNOPSIS
-Gets information about synchonization details for share subscription.
+Gets information about synchronization details for share subscription.
 
 ## SYNTAX
 

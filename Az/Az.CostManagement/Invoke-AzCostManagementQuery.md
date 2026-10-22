@@ -16,21 +16,20 @@ Query the usage data for scope defined.
 
 ### UsageExpanded (Default)
 ```
-Invoke-AzCostManagementQuery -Scope <String> -Timeframe <TimeframeType> -Type <ExportType>
+Invoke-AzCostManagementQuery -Scope <String> -Timeframe <String> -Type <String>
  [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>] [-DatasetFilter <IQueryFilter>]
- [-DatasetGranularity <GranularityType>] [-DatasetGrouping <IQueryGrouping[]>] [-TimePeriodFrom <DateTime>]
+ [-DatasetGranularity <String>] [-DatasetGrouping <IQueryGrouping[]>] [-TimePeriodFrom <DateTime>]
  [-TimePeriodTo <DateTime>] [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### UsageExpanded1
 ```
-Invoke-AzCostManagementQuery -ExternalCloudProviderId <String>
- -ExternalCloudProviderType <ExternalCloudProviderType> -Timeframe <TimeframeType> -Type <ExportType>
- [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>] [-DatasetFilter <IQueryFilter>]
- [-DatasetGranularity <GranularityType>] [-DatasetGrouping <IQueryGrouping[]>] [-TimePeriodFrom <DateTime>]
- [-TimePeriodTo <DateTime>] [-DefaultProfile <PSObject>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Invoke-AzCostManagementQuery -ExternalCloudProviderId <String> -ExternalCloudProviderType <String>
+ -Timeframe <String> -Type <String> [-ConfigurationColumn <String[]>] [-DatasetAggregation <Hashtable>]
+ [-DatasetFilter <IQueryFilter>] [-DatasetGranularity <String>] [-DatasetGrouping <IQueryGrouping[]>]
+ [-TimePeriodFrom <DateTime>] [-TimePeriodTo <DateTime>] [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,10 +99,9 @@ Accept wildcard characters: False
 
 ### -DatasetFilter
 Has filter expression to use in the query.
-To construct, see NOTES section for DATASETFILTER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryFilter
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter
 Parameter Sets: (All)
 Aliases:
 
@@ -118,7 +116,7 @@ Accept wildcard characters: False
 The granularity of rows in the query.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.GranularityType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -131,10 +129,9 @@ Accept wildcard characters: False
 
 ### -DatasetGrouping
 Array of group by expression to use in the query.
-To construct, see NOTES section for DATASETGROUPING properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryGrouping[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryGrouping[]
 Parameter Sets: (All)
 Aliases:
 
@@ -179,7 +176,7 @@ Accept wildcard characters: False
 The external cloud provider type associated with dimension/query operations.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.ExternalCloudProviderType
+Type: System.String
 Parameter Sets: UsageExpanded1
 Aliases:
 
@@ -209,7 +206,7 @@ Accept wildcard characters: False
 The time frame for pulling data for the query.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.TimeframeType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -254,7 +251,7 @@ Accept wildcard characters: False
 The type of the query.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Support.ExportType
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -303,7 +300,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IQueryResult
+### Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryResult
 
 ## NOTES
 

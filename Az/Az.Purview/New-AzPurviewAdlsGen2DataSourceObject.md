@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewAdlsGen2DataSourceObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewadlsgen2datasourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAdlsGen2DataSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAdlsGen2DataSourceObject.md
@@ -15,9 +15,9 @@ Create an in-memory object for AdlsGen2DataSource.
 ## SYNTAX
 
 ```
-New-AzPurviewAdlsGen2DataSourceObject -Kind <DataSourceType> [-CollectionReferenceName <String>]
- [-CollectionType <String>] [-Endpoint <String>] [-Location <String>] [-ResourceGroup <String>]
- [-ResourceName <String>] [-SubscriptionId <String>] [<CommonParameters>]
+New-AzPurviewAdlsGen2DataSourceObject [-CollectionReferenceName <String>] [-CollectionType <String>]
+ [-Endpoint <String>] [-Location <String>] [-ResourceGroup <String>] [-ResourceName <String>]
+ [-SubscriptionId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,7 +27,7 @@ Create an in-memory object for AdlsGen2DataSource.
 
 ### Example 1: Create AdlsGen2 data source object
 ```powershell
-New-AzPurviewAdlsGen2DataSourceObject -Kind 'AdlsGen2' -CollectionReferenceName parv-brs-2 -CollectionType 'CollectionReference' -Endpoint 'https://adlsgen2datascan.dfs.core.windows.net'
+New-AzPurviewAdlsGen2DataSourceObject -CollectionReferenceName parv-brs-2 -CollectionType 'CollectionReference' -Endpoint 'https://adlsgen2datascan.dfs.core.windows.net'
 ```
 
 ```output
@@ -87,20 +87,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -170,7 +156,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.AdlsGen2DataSource
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AdlsGen2DataSource
 
 ## NOTES
 

@@ -14,14 +14,51 @@ Create Extension for HCI cluster.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzStackHciExtension -ArcSettingName <String> -ClusterName <String> -Name <String>
+New-AzStackHciExtension -Name <String> -ArcSettingName <String> -ClusterName <String>
  -ResourceGroupName <String> [-SubscriptionId <String>] [-ExtensionParameterAutoUpgradeMinorVersion]
  [-ExtensionParameterEnableAutomaticUpgrade] [-ExtensionParameterForceUpdateTag <String>]
  [-ExtensionParameterProtectedSetting <Hashtable>] [-ExtensionParameterPublisher <String>]
  [-ExtensionParameterSetting <Hashtable>] [-ExtensionParameterType <String>]
  [-ExtensionParameterTypeHandlerVersion <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
  [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzStackHciExtension -Name <String> -ArcSettingName <String> -ClusterName <String>
+ -ResourceGroupName <String> [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzStackHciExtension -Name <String> -ArcSettingName <String> -ClusterName <String>
+ -ResourceGroupName <String> [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-AsJob] [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityClusterExpanded
+```
+New-AzStackHciExtension -Name <String> -ArcSettingName <String> -ClusterInputObject <IStackHciIdentity>
+ [-ExtensionParameterAutoUpgradeMinorVersion] [-ExtensionParameterEnableAutomaticUpgrade]
+ [-ExtensionParameterForceUpdateTag <String>] [-ExtensionParameterProtectedSetting <Hashtable>]
+ [-ExtensionParameterPublisher <String>] [-ExtensionParameterSetting <Hashtable>]
+ [-ExtensionParameterType <String>] [-ExtensionParameterTypeHandlerVersion <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaIdentityArcSettingExpanded
+```
+New-AzStackHciExtension -Name <String> -ArcSettingInputObject <IStackHciIdentity>
+ [-ExtensionParameterAutoUpgradeMinorVersion] [-ExtensionParameterEnableAutomaticUpgrade]
+ [-ExtensionParameterForceUpdateTag <String>] [-ExtensionParameterProtectedSetting <Hashtable>]
+ [-ExtensionParameterPublisher <String>] [-ExtensionParameterSetting <Hashtable>]
+ [-ExtensionParameterType <String>] [-ExtensionParameterTypeHandlerVersion <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,12 +95,27 @@ Creates new arc extension with the given parameters
 
 ## PARAMETERS
 
+### -ArcSettingInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+Parameter Sets: CreateViaIdentityArcSettingExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ArcSettingName
 The name of the proxy resource holding details of HCI ArcSetting information.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath, CreateViaIdentityClusterExpanded
 Aliases:
 
 Required: True
@@ -88,12 +140,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClusterInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+Parameter Sets: CreateViaIdentityClusterExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -ClusterName
 The name of the cluster.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -125,7 +192,7 @@ Once deployed, however, the extension will not upgrade minor versions unless red
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -140,7 +207,7 @@ Indicates whether the extension should be automatically upgraded by the platform
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -155,7 +222,7 @@ How the extension handler should be forced to update even if the extension confi
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -170,7 +237,7 @@ Protected settings (may contain secrets).
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -185,7 +252,7 @@ The name of the extension handler publisher.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -200,7 +267,7 @@ Json formatted public settings for the extension.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -215,7 +282,7 @@ Specifies the type of the extension; an example is "CustomScriptExtension".
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
@@ -231,10 +298,40 @@ Latest version would be used if not specified.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityClusterExpanded, CreateViaIdentityArcSettingExpanded
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -277,7 +374,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -293,7 +390,7 @@ The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -339,9 +436,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IStackHciIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IExtension
+### Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.IExtension
 
 ## NOTES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Az.Purview-help.xml
 Module Name: Az.Purview
-online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewAzureSqlDataWarehouseDataSourceObject
+online version: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewazuresqldatawarehousedatasourceobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureSqlDataWarehouseDataSourceObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureSqlDataWarehouseDataSourceObject.md
@@ -15,7 +15,7 @@ Create an in-memory object for AzureSqlDataWarehouseDataSource.
 ## SYNTAX
 
 ```
-New-AzPurviewAzureSqlDataWarehouseDataSourceObject -Kind <DataSourceType> [-CollectionReferenceName <String>]
+New-AzPurviewAzureSqlDataWarehouseDataSourceObject [-CollectionReferenceName <String>]
  [-CollectionType <String>] [-Location <String>] [-ResourceGroup <String>] [-ResourceName <String>]
  [-ServerEndpoint <String>] [-SubscriptionId <String>]
  [<CommonParameters>]
@@ -28,7 +28,7 @@ Create an in-memory object for AzureSqlDataWarehouseDataSource.
 
 ### Example 1: Create Azure SQL datawarehouse data source object
 ```powershell
-New-AzPurviewAzureSqlDataWarehouseDataSourceObject -Kind 'AzureSqlDataWarehouse' -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -ServerEndpoint 'ause.database.windows.net'
+New-AzPurviewAzureSqlDataWarehouseDataSourceObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -ServerEndpoint 'ause.database.windows.net'
 ```
 
 ```output
@@ -74,20 +74,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Kind
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType
-Parameter Sets: (All)
-Aliases:
-
-Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -171,7 +157,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.AzureSqlDataWarehouseDataSource
+### Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AzureSqlDataWarehouseDataSource
 
 ## NOTES
 

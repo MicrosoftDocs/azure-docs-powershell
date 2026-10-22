@@ -14,16 +14,32 @@ Create or update the metadata of a service instance.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzHealthcareApisService -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>] -Kind <Kind>
- -Location <String> -CosmosOfferThroughput <Int32> [-AccessPolicyObjectId <IServiceAccessPolicyEntry[]>]
- [-AcrConfigurationLoginServer <String[]>] [-AcrConfigurationOciArtifact <IServiceOciArtifactEntry[]>]
- [-AllowCorsCredential] [-Audience <String>] [-Authority <String>] [-CorsHeader <String[]>]
- [-CorsMaxAge <Int32>] [-CorsMethod <String[]>] [-CorsOrigin <String[]>] [-CosmosKeyVaultKeyUri <String>]
- [-EnableSmartProxy] [-Etag <String>] [-ExportStorageAccountName <String>]
- [-IdentityType <ManagedServiceIdentityType>] [-PrivateEndpointConnection <IPrivateEndpointConnection[]>]
- [-PublicNetworkAccess <PublicNetworkAccess>] [-Tag <Hashtable>] [-DefaultProfile <PSObject>] [-AsJob]
- [-NoWait] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-AzHealthcareApisService -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -Kind <String> -Location <String> -CosmosOfferThroughput <Int32>
+ [-AccessPolicyObjectId <IServiceAccessPolicyEntry[]>] [-AcrConfigurationLoginServer <String[]>]
+ [-AcrConfigurationOciArtifact <IServiceOciArtifactEntry[]>] [-AllowCorsCredential] [-Audience <String>]
+ [-Authority <String>] [-CorsHeader <String[]>] [-CorsMaxAge <Int32>] [-CorsMethod <String[]>]
+ [-CorsOrigin <String[]>] [-CosmosKeyVaultKeyUri <String>] [-EnableSmartProxy] [-EnableSystemAssignedIdentity]
+ [-Etag <String>] [-ExportStorageAccountName <String>]
+ [-PrivateEndpointConnection <IPrivateEndpointConnection[]>] [-PublicNetworkAccess <String>] [-Tag <Hashtable>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzHealthcareApisService -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonFilePath <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonString
+```
+New-AzHealthcareApisService -Name <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -JsonString <String> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,11 +64,10 @@ Create or update the metadata of a service instance.
 
 ### -AccessPolicyObjectId
 The access policies of the service instance.
-To construct, see NOTES section for ACCESSPOLICYOBJECTID properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.IServiceAccessPolicyEntry[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IServiceAccessPolicyEntry[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -67,7 +82,7 @@ The list of the ACR login servers.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -79,11 +94,10 @@ Accept wildcard characters: False
 
 ### -AcrConfigurationOciArtifact
 The list of Open Container Initiative (OCI) artifacts.
-To construct, see NOTES section for ACRCONFIGURATIONOCIARTIFACT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.IServiceOciArtifactEntry[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IServiceOciArtifactEntry[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -98,7 +112,7 @@ If credentials are allowed via CORS.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -128,7 +142,7 @@ The audience url for the service
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -143,7 +157,7 @@ The authority url for the service
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -158,7 +172,7 @@ The headers to be allowed via CORS.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -173,7 +187,7 @@ The max age to be allowed via CORS.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -188,7 +202,7 @@ The methods to be allowed via CORS.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -203,7 +217,7 @@ The origins to be allowed via CORS.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -218,7 +232,7 @@ The URI of the customer-managed key for the backing database.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -233,7 +247,7 @@ The provisioned throughput for the backing database.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -244,7 +258,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -263,7 +278,22 @@ If the SMART on FHIR proxy is enabled
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSystemAssignedIdentity
+Determines whether to enable a system-assigned identity for the resource.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -278,7 +308,7 @@ An etag associated with the resource, used for optimistic concurrency when editi
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -293,7 +323,7 @@ The name of the default export storage account.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -303,15 +333,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IdentityType
-Type of identity being specified, currently SystemAssigned and None are allowed.
+### -JsonFilePath
+Path of Json file supplied to the Create operation
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Support.ManagedServiceIdentityType
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
 Aliases:
 
-Required: False
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -322,8 +367,8 @@ Accept wildcard characters: False
 The kind of the service.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Support.Kind
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -338,7 +383,7 @@ The resource location.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: True
@@ -380,11 +425,10 @@ Accept wildcard characters: False
 
 ### -PrivateEndpointConnection
 The list of private endpoint connections that are set up for this resource.
-To construct, see NOTES section for PRIVATEENDPOINTCONNECTION properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api10.IPrivateEndpointConnection[]
-Parameter Sets: (All)
+Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IPrivateEndpointConnection[]
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -398,8 +442,8 @@ Accept wildcard characters: False
 Control permission for data plane traffic coming from public networks while private endpoint is enabled.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Support.PublicNetworkAccess
-Parameter Sets: (All)
+Type: System.String
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -444,7 +488,7 @@ The resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded
 Aliases:
 
 Required: False
@@ -492,7 +536,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.Api20211101.IServicesDescription
+### Microsoft.Azure.PowerShell.Cmdlets.HealthcareApis.Models.IServicesDescription
 
 ## NOTES
 

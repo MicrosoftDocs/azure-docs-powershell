@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Update-AzEventGridNamespaceTopic
 
 ## SYNOPSIS
-Asynchronously updates a namespace topic with the specified parameters.
+Asynchronously update a namespace topic with the specified parameters.
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ Update-AzEventGridNamespaceTopic -InputObject <IEventGridIdentity> [-EventRetent
 ```
 
 ## DESCRIPTION
-Asynchronously updates a namespace topic with the specified parameters.
+Asynchronously update a namespace topic with the specified parameters.
 
 ## EXAMPLES
 

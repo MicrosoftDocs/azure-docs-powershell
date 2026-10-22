@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzVirtualNetworkGatewaySupportedVpnDevice
 
 ## SYNOPSIS
-This commandlet returns a list of supported VPN device brands, models, and firmware versions.
+This cmdlet returns a list of supported VPN device brands, models, and firmware versions.
 
 ## SYNTAX
 
@@ -20,7 +20,7 @@ Get-AzVirtualNetworkGatewaySupportedVpnDevice -Name <String> -ResourceGroupName 
 ```
 
 ## DESCRIPTION
-This commandlet returns a list of supported VPN device brands, models, and firmware versions.
+This cmdlet returns a list of supported VPN device brands, models, and firmware versions.
 
 ## EXAMPLES
 

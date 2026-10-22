@@ -1,7 +1,7 @@
 ---
 external help file: Az.PrometheusRuleGroups.psm1-help.xml
 Module Name: Az.AlertsManagement
-online version: https://learn.microsoft.com/powershell/module/Az.AlertsManagement/new-AzPrometheusRuleGroupActionObject
+online version: https://learn.microsoft.com/powershell/module/Az.AlertsManagement/new-azprometheusrulegroupactionobject
 schema: 2.0.0
 content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/New-AzPrometheusRuleGroupActionObject.md
 original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/New-AzPrometheusRuleGroupActionObject.md
@@ -57,10 +57,9 @@ Accept wildcard characters: False
 
 ### -ActionProperty
 The properties of an action group object.
-To construct, see NOTES section for ACTIONPROPERTY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.Api20230301.IPrometheusRuleGroupActionProperties
+Type: Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.IPrometheusRuleGroupActionProperties
 Parameter Sets: (All)
 Aliases:
 
@@ -78,7 +77,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.Api20230301.PrometheusRuleGroupAction
+### Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.PrometheusRuleGroupAction
 
 ## NOTES
 

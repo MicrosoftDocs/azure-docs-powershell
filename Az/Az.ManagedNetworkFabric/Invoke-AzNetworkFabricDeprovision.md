@@ -189,7 +189,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.ICommonPostActionResponseForDeviceUpdate
+### Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IOperationStatusResult
 
 ## NOTES
 

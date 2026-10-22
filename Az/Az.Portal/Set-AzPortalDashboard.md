@@ -36,7 +36,7 @@ Location Name       Type
 eastasia dashbase03 Microsoft.Portal/dashboards
 ```
 
-Update a dashboard definition using a dashbaord template file.
+Update a dashboard definition using a dashboard template file.
 
 ## PARAMETERS
 
@@ -150,7 +150,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Portal.Models.Api201901Preview.IDashboard
+### Microsoft.Azure.PowerShell.Cmdlets.Portal.Models.IDashboard
 
 ## NOTES
 

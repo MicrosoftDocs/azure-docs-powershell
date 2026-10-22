@@ -17,7 +17,7 @@ Links an Azure Notification Hub to this communication service.
 ### LinkExpanded (Default)
 ```
 Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -ResourceGroupName <String>
- [-SubscriptionId <String>] -ConnectionString <String> -NotificationHubResourceId <String>
+ [-SubscriptionId <String>] [-ConnectionString <String>] [-NotificationHubResourceId <String>]
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -26,6 +26,20 @@ Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -Re
 Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] -LinkNotificationHubParameter <ILinkNotificationHubParameters>
  [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### LinkViaJsonFilePath
+```
+Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonFilePath <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### LinkViaJsonString
+```
+Set-AzCommunicationServiceNotificationHub -CommunicationServiceName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] -JsonString <String> [-DefaultProfile <PSObject>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -65,7 +79,7 @@ Type: System.String
 Parameter Sets: LinkExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -88,12 +102,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LinkNotificationHubParameter
-Description of an Azure Notification Hub to link to the communication service
-To construct, see NOTES section for LINKNOTIFICATIONHUBPARAMETER properties and create a hash table.
+### -JsonFilePath
+Path of Json file supplied to the Link operation
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.Communication.Models.Api20230601Preview.ILinkNotificationHubParameters
+Type: System.String
+Parameter Sets: LinkViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Link operation
+
+```yaml
+Type: System.String
+Parameter Sets: LinkViaJsonString
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LinkNotificationHubParameter
+Description of an Azure Notification Hub to link to the communication service
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.Communication.Models.ILinkNotificationHubParameters
 Parameter Sets: Link
 Aliases:
 
@@ -112,7 +155,7 @@ Type: System.String
 Parameter Sets: LinkExpanded
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -187,11 +230,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Communication.Models.Api20230601Preview.ILinkNotificationHubParameters
+### Microsoft.Azure.PowerShell.Cmdlets.Communication.Models.ILinkNotificationHubParameters
 
 ## OUTPUTS
 
-### System.String
+### Microsoft.Azure.PowerShell.Cmdlets.Communication.Models.ILinkedNotificationHub
 
 ## NOTES
 

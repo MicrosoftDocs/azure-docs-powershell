@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzNewRelicMonitorMetricRule
 
 ## SYNOPSIS
-Get metric rules
+Retrieves the metric rules that are configured in the New Relic monitor resource
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Get-AzNewRelicMonitorMetricRule -InputObject <INewRelicIdentity> -UserEmail <Str
 ```
 
 ## DESCRIPTION
-Get metric rules
+Retrieves the metric rules that are configured in the New Relic monitor resource
 
 ## EXAMPLES
 

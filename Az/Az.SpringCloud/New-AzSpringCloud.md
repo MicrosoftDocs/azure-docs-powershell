@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzSpringCloud
 
 ## SYNOPSIS
-Create a new Service or update an exiting Service.
+create a new Service or update an exiting Service.
 
 ## SYNTAX
 
@@ -19,12 +19,12 @@ New-AzSpringCloud -Name <String> -ResourceGroupName <String> [-SubscriptionId <S
  [-NetworkProfileResourceGroup <String>] [-NetworkProfileServiceCidr <String>]
  [-NetworkProfileServiceResourceGroup <String>] [-NetworkProfileServiceSubnetId <String>]
  [-NetworkProfileSubnetId <String>] [-SkuCapacity <Int32>] [-SkuName <String>] [-SkuTier <String>]
- [-Tag <Hashtable>] [-ZoneRedundant] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-Tag <Hashtable>] [-ZoneRedundant] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Create a new Service or update an exiting Service.
+create a new Service or update an exiting Service.
 
 ## EXAMPLES
 
@@ -73,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProfile
-The credentials, account, tenant, and subscription used for communication with Azure.
+The DefaultProfile parameter is not functional.
+Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
 
 ```yaml
 Type: System.Management.Automation.PSObject
@@ -352,10 +353,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.IServiceResource
+### Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.IServiceResource
 
 ## NOTES
-
-ALIASES
 
 ## RELATED LINKS

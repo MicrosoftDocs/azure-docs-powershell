@@ -61,7 +61,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.Api20211001.IGetTenantPolicyResponse
+### Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.IGetTenantPolicyResponse
 
 ## NOTES
 

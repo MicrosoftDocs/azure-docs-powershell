@@ -28,6 +28,12 @@ Get-AzSentinelIncidentRelation -IncidentId <String> -RelationName <String> -Reso
  [<CommonParameters>]
 ```
 
+### GetViaIdentityIncident
+```
+Get-AzSentinelIncidentRelation -RelationName <String> -IncidentInputObject <ISecurityInsightsIdentity>
+ [-DefaultProfile <PSObject>] [<CommonParameters>]
+```
+
 ### GetViaIdentity
 ```
 Get-AzSentinelIncidentRelation -InputObject <ISecurityInsightsIdentity> [-DefaultProfile <PSObject>]
@@ -136,9 +142,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IncidentInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
+Parameter Sets: GetViaIdentityIncident
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity
@@ -173,7 +193,7 @@ Relation Name
 
 ```yaml
 Type: System.String
-Parameter Sets: Get
+Parameter Sets: Get, GetViaIdentityIncident
 Aliases:
 
 Required: True
@@ -271,7 +291,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.IRelation
+### Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.IRelation
 
 ## NOTES
 

@@ -10,19 +10,41 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # New-AzStreamAnalyticsTransformation
 
 ## SYNOPSIS
-Creates a transformation or replaces an already existing transformation under an existing streaming job.
+Create a transformation or replaces an already existing transformation under an existing streaming job.
 
 ## SYNTAX
 
+### CreateExpanded (Default)
 ```
-New-AzStreamAnalyticsTransformation -JobName <String> -Name <String> -ResourceGroupName <String>
+New-AzStreamAnalyticsTransformation -Name <String> -JobName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-IfMatch <String>] [-IfNoneMatch <String>] [-Query <String>]
  [-StreamingUnit <Int32>] [-DefaultProfile <PSObject>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
+### CreateViaJsonString
+```
+New-AzStreamAnalyticsTransformation -Name <String> -JobName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] [-IfMatch <String>] [-IfNoneMatch <String>] -JsonString <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaJsonFilePath
+```
+New-AzStreamAnalyticsTransformation -Name <String> -JobName <String> -ResourceGroupName <String>
+ [-SubscriptionId <String>] [-IfMatch <String>] [-IfNoneMatch <String>] -JsonFilePath <String>
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### CreateViaIdentityStreamingjobExpanded
+```
+New-AzStreamAnalyticsTransformation -Name <String> -StreamingjobInputObject <IStreamAnalyticsIdentity>
+ [-IfMatch <String>] [-IfNoneMatch <String>] [-Query <String>] [-StreamingUnit <Int32>]
+ [-DefaultProfile <PSObject>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
-Creates a transformation or replaces an already existing transformation under an existing streaming job.
+Create a transformation or replaces an already existing transformation under an existing streaming job.
 
 ## EXAMPLES
 
@@ -95,7 +117,37 @@ The name of the streaming job.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonFilePath
+Path of Json file supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonFilePath
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JsonString
+Json string supplied to the Create operation
+
+```yaml
+Type: System.String
+Parameter Sets: CreateViaJsonString
 Aliases:
 
 Required: True
@@ -127,7 +179,7 @@ Required on PUT (CreateOrReplace) requests.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityStreamingjobExpanded
 Aliases:
 
 Required: False
@@ -143,7 +195,7 @@ The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: True
@@ -153,12 +205,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -StreamingjobInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.IStreamAnalyticsIdentity
+Parameter Sets: CreateViaIdentityStreamingjobExpanded
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -StreamingUnit
 Specifies the number of streaming units that the streaming job uses.
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaIdentityStreamingjobExpanded
 Aliases:
 
 Required: False
@@ -173,7 +240,7 @@ The ID of the target subscription.
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: CreateExpanded, CreateViaJsonString, CreateViaJsonFilePath
 Aliases:
 
 Required: False
@@ -219,9 +286,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.IStreamAnalyticsIdentity
+
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.Api20170401Preview.ITransformation
+### Microsoft.Azure.PowerShell.Cmdlets.StreamAnalytics.Models.ITransformation
 
 ## NOTES
 

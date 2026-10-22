@@ -21,6 +21,27 @@ Start-AzConnectedNetworkVendorFunctionRoleInstance -LocationName <String> -Name 
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### StartViaIdentityVendor
+```
+Start-AzConnectedNetworkVendorFunctionRoleInstance -Name <String> -ServiceKey <String>
+ -VendorInputObject <IConnectedNetworkIdentity> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### StartViaIdentityNetworkFunction
+```
+Start-AzConnectedNetworkVendorFunctionRoleInstance -Name <String>
+ -NetworkFunctionInputObject <IConnectedNetworkIdentity> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### StartViaIdentityLocation
+```
+Start-AzConnectedNetworkVendorFunctionRoleInstance -Name <String> -ServiceKey <String> -VendorName <String>
+ -LocationInputObject <IConnectedNetworkIdentity> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### StartViaIdentity
 ```
 Start-AzConnectedNetworkVendorFunctionRoleInstance -InputObject <IConnectedNetworkIdentity>
@@ -84,11 +105,25 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity
 Parameter Sets: StartViaIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -LocationInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity
+Parameter Sets: StartViaIdentityLocation
 Aliases:
 
 Required: True
@@ -118,13 +153,28 @@ The name of the role instance of the vendor network function.
 
 ```yaml
 Type: System.String
-Parameter Sets: Start
+Parameter Sets: Start, StartViaIdentityVendor, StartViaIdentityNetworkFunction, StartViaIdentityLocation
 Aliases: RoleInstanceName
 
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkFunctionInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity
+Parameter Sets: StartViaIdentityNetworkFunction
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -163,7 +213,7 @@ The GUID for the vendor network function.
 
 ```yaml
 Type: System.String
-Parameter Sets: Start
+Parameter Sets: Start, StartViaIdentityVendor, StartViaIdentityLocation
 Aliases:
 
 Required: True
@@ -188,12 +238,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -VendorInputObject
+Identity Parameter
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity
+Parameter Sets: StartViaIdentityVendor
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -VendorName
 The name of the vendor.
 
 ```yaml
 Type: System.String
-Parameter Sets: Start
+Parameter Sets: Start, StartViaIdentityLocation
 Aliases:
 
 Required: True

@@ -10,7 +10,7 @@ original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/sr
 # Get-AzAutoscalePredictiveMetric
 
 ## SYNOPSIS
-get predictive autoscale metric future data
+Get predictive autoscale metric future data
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Get-AzAutoscalePredictiveMetric -AutoscaleSettingName <String> -ResourceGroupNam
 ```
 
 ## DESCRIPTION
-get predictive autoscale metric future data
+Get predictive autoscale metric future data
 
 ## EXAMPLES
 
@@ -91,7 +91,6 @@ Accept wildcard characters: False
 
 ### -InputObject
 Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IAutoscaleIdentity
@@ -209,7 +208,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IPredictiveResponse
+### Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IPredictiveResponse
 
 ## NOTES
 
