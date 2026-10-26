@@ -72,26 +72,6 @@ orchestration, and publishing boundaries.
 - The pipeline will not perform docs-ui schema validation. Generator
   validation is limited to the generated page set's internal consistency.
 
-### Build Service environment selection for fork validation
-
-- Source authentication accepts an explicit `auto`, `prod`, or `ppe` Build
-  Service environment at the orchestration entry point, not in source-controlled
-  content-repository configuration.
-- `auto` remains the default and preserves the shared helper's existing
-  `OPS-E2E-PPE` repository routing. Existing callers retain their behavior.
-- The isolated manual fork-validation pipeline explicitly selects `ppe` to use
-  the Learn Build Service Test app installed on the fork. Both the token
-  endpoint and Entra resource ID must use the selected environment.
-- App installation and authorization of the pipeline identity to the selected
-  backend are separate prerequisites. Authentication failures must stop the
-  run without falling back to production, anonymous access, or another credential.
-- Temporary manual-pipeline diagnostics may compare production/PPE Entra token
-  acquisition using Azure PowerShell and Azure CLI with the same service
-  connection. They must not call Build Service or GitHub, emit tokens or raw
-  errors, or bypass authentication failures. Only outcome and allowlisted
-  Entra error identifiers are logged. Both comparisons run after a token failure;
-  generation remains success-gated.
-
 ### Service contract and failure policy
 
 - `format` must be the exact value `openapi3.2`.
