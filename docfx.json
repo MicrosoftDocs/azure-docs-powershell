@@ -400,7 +400,8 @@
                 "azps-0.10.0/**/*": "4/14/2020"
             },
             "enable_powershell_try_it": {
-                "azps-*/**/*.yml": true
+                "azps-*/**/*.yml": true,
+                "azps-preview/**/*.yml": false
             },
             "searchScope": {
                 "az*-*/Az*.Billing/*.yml": ["Billing", "Cost Management", "Azure", "Azure Powershell"],
