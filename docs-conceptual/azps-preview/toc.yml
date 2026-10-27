@@ -9,6 +9,28 @@ items:
       - name: Configuration
         href: config.md
         displayName: config, defaults, settings, environment, variables
+  - name: Quickstarts
+    items:
+      - name: Set up and switch sign-in profiles
+        href: quickstart-profiles.md
+  - name: Tutorials
+    items:
+      - name: Deploy and manage a VM application
+        href: tutorial-vm-application.md
+      - name: Access a Key Vault secret with a managed identity
+        href: tutorial-managed-identity.md
+      - name: Deploy and troubleshoot a Bicep template
+        href: tutorial-deploy-bicep.md
+      - name: Store and retrieve application data
+        href: tutorial-storage-data.md
+      - name: Run repeatable deployments from a pipeline
+        href: tutorial-pipeline-deployments.md
+  - name: How-to guides
+    items:
+      - name: Find identities and register a Microsoft Entra application
+        href: how-to-entra-applications.md
+      - name: Discover commands and troubleshoot failures
+        href: how-to-command-recovery.md
   - name: Install
     items:
       - name: Overview
