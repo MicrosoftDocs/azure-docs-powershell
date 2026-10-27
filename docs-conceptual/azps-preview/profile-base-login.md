@@ -1,12 +1,13 @@
 ---
-title: Manage sign-in profiles in Azure PowerShell (Preview)
-description: Learn how to use named profiles in Azure PowerShell to save sign-in context, switch between accounts and subscriptions, and re-authenticate a specific profile.
+title: Manage sign-in profiles in Azure PowerShell (preview)
+description: Learn how to use named profiles in the Azure PowerShell preview to save sign-in context, switch between accounts and subscriptions, and re-authenticate a specific profile.
 ms.topic: concept-article
+ms.date: 10/27/2026
 ---
 
-# Manage sign-in profiles in Azure PowerShell (Preview)
+# Manage sign-in profiles in Azure PowerShell (preview)
 
-A _profile_ is a named sign-in context that Azure PowerShell saves when you authenticate. Each profile stores the tenant, subscription, cloud, and sign-in information needed to connect to Azure. Profiles let you switch between accounts, tenants, and subscriptions without signing in each time.
+A _profile_ is a named sign-in context that the Azure PowerShell preview saves when you authenticate. Each profile stores the tenant, subscription, cloud, and sign-in information needed to connect to Azure. Profiles let you switch between accounts, tenants, and subscriptions without signing in each time.
 
 Profiles are useful when you regularly work across multiple contexts, such as personal and corporate subscriptions or separate development and production environments.
 

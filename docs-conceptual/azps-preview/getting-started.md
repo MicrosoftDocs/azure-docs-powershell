@@ -1,31 +1,32 @@
 ---
-title: Get started with Azure PowerShell (Preview)
+title: Get started with Azure PowerShell (preview)
 description: Learn the core concepts, supported environments, authentication model, current limitations, and coexistence guidance for Azure PowerShell during the preview.
-ms.date: 10/19/2026
+ms.date: 10/27/2026
+ai-usage: ai-assisted
 ---
 
-# Get started with Azure PowerShell (Preview)
+# Get started with Azure PowerShell (preview)
 
-This article introduces the core concepts of Azure PowerShell and explains what you need to know
-before you begin using the preview.
+This article introduces the Azure PowerShell preview and explains its core concepts, supported
+environments, and current limitations.
 
 ## What is Azure PowerShell?
 
-Azure PowerShell is an AI-enhanced command-line experience for Azure that helps you work more
+The Azure PowerShell preview is an AI-enhanced command-line experience for Azure that helps you work more
 efficiently by reducing the complexity of Azure PowerShell commands.
 
-Rather than replacing existing tools, Azure PowerShell builds on them by providing intelligent
+Rather than replacing existing tools, the Azure PowerShell preview builds on them by providing intelligent
 assistance while continuing to use the same Azure management APIs and authentication model.
 
 ## Core concepts
 
-Azure PowerShell is designed around a few key concepts:
+The Azure PowerShell preview uses the following core concepts:
 
-- **Profile-based authentication** - Save named sign-in contexts for different accounts and subscriptions.
-- **AI-assisted workflows** - AI helps explain errors, recommend next steps, and improve
+- **Profile-based authentication**: Save named sign-in contexts for different accounts and subscriptions.
+- **AI-assisted workflows**: AI helps explain errors, recommend next steps, and improve
   productivity.
-- **Cross-platform** - Runs on operating systems supported by PowerShell 7.6 or later.
-- **Side-by-side installation** - Can be installed alongside existing Azure PowerShell and Azure CLI
+- **Cross-platform**: Runs on operating systems supported by PowerShell 7.6 or later.
+- **Side-by-side installation**: Install the preview alongside existing Azure PowerShell and Azure CLI
   installations.
 
 ## Authentication
@@ -40,14 +41,21 @@ For the best experience, use interactive user authentication.
 
 ## Current limitations
 
-The preview focuses on interactive user scenarios. Some authentication methods aren't yet
-supported.
+The preview primarily supports interactive command-line use. Some automation scenarios and
+noninteractive authentication methods aren't yet supported.
+
+Authentication support is currently limited to interactive user sign-in.
 
 The following authentication methods are currently **not supported**:
 
 - Resource Owner Password Credentials (ROPC)
 - Service principals
 - Managed identities
+
+Other preview limitations include:
+
+- Not all Azure PowerShell and Azure CLI scenarios are available.
+- Feature availability may change between preview releases.
 
 ## Coexistence with Azure PowerShell and Azure CLI
 
@@ -84,16 +92,9 @@ The following environments aren't supported:
 - Windows PowerShell 5.1
 - Windows PowerShell Integrated Scripting Environment (ISE)
 
-## Automation support
-
-The preview is primarily intended for interactive command-line use.
-
-Some automation scenarios and non-interactive authentication methods aren't yet supported. For the
-latest information, see the current limitations section of this article.
-
 ## Logging issues and providing feedback
 
-Your feedback is essential during the preview. To share feedback directly from the command line, run `Invoke-AzSurvey`.
+To share feedback from the command line, run `Invoke-AzSurvey`.
 
 If you encounter an issue:
 
@@ -113,13 +114,7 @@ When reporting an issue, include:
 - Actual behavior
 - Any relevant error messages
 
-## Known preview limitations
-
-During the preview, you should expect some limitations:
-
-- Not all Azure PowerShell and Azure CLI scenarios are available.
-- Authentication support is currently limited to interactive user sign-in.
-- Feature availability may change between preview releases.
+Before sharing commands, logs, or output, remove credentials, access tokens, and sensitive information.
 
 <!-- link references -->
 

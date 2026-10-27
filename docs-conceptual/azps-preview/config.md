@@ -1,15 +1,16 @@
 ---
 title: Configuration management
 description: Learn how to manage Azure PowerShell preview configuration settings, including keys, environment variables, and file locations.
+ms.date: 10/27/2026
 ---
 
 # Configuration management
 
-Azure PowerShell preview stores user-scope configuration in a global JSON file.
+The Azure PowerShell preview stores user-scope configuration in a global JSON file.
 
 Configuration follows strict precedence: **command args > environment variables > global config > defaults**.
 
-## Valid Configuration Keys
+## Valid configuration keys
 
 | Key                                           | Type   | Default            | Notes                                                                                                                                                                                                                                                                   |
 | --------------------------------------------- | ------ | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +31,7 @@ Configuration follows strict precedence: **command args > environment variables 
 | `defaults.vmss`                               | string | (empty)            | Default VMSS name                                                                                                                                                                                                                                                       |
 | `defaults.acr`                                | string | (empty)            | Default ACR name                                                                                                                                                                                                                                                        |
 
-## PowerShell Usage
+## PowerShell usage
 
 ### Import the Config module
 
@@ -101,7 +102,7 @@ Get-AzConfigInfo
 Get-AzConfigInfo -KeysOnly
 ```
 
-## Environment Variable Mappings
+## Environment variable mappings
 
 You can override configuration using environment variables:
 
@@ -110,7 +111,7 @@ You can override configuration using environment variables:
 | `PS_HTTP_MAX_RETRIES` / `AZURE_PS_HTTP_MAX_RETRIES`                 | `core.http.maxRetries`       |
 | `PS_HTTP_MAX_RETRIES_FOR_429` / `AZURE_PS_HTTP_MAX_RETRIES_FOR_429` | `core.http.maxRetriesFor429` |
 
-## Configuration File Location
+## Configuration file location
 
 Configuration is stored at:
 
