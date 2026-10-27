@@ -7,16 +7,13 @@ ai-usage: ai-assisted
 
 # Get started with Azure PowerShell (preview)
 
-This article introduces the Azure PowerShell preview and explains its core concepts, supported
-environments, and current limitations.
+This article introduces the Azure PowerShell preview and explains its core concepts, supported environments, and current limitations.
 
 ## What is Azure PowerShell?
 
-The Azure PowerShell preview is an AI-enhanced command-line experience for Azure that helps you work more
-efficiently by reducing the complexity of Azure PowerShell commands.
+The Azure PowerShell preview is an AI-enhanced command-line experience for Azure that helps you work more efficiently by reducing the complexity of Azure PowerShell commands.
 
-Rather than replacing existing tools, the Azure PowerShell preview builds on them by providing intelligent
-assistance while continuing to use the same Azure management APIs and authentication model.
+Rather than replacing existing tools, the Azure PowerShell preview builds on them by providing intelligent assistance while continuing to use the same Azure management APIs and authentication model.
 
 ## Core concepts
 
@@ -33,16 +30,13 @@ The Azure PowerShell preview uses the following core concepts:
 
 Sign in to the Azure PowerShell preview with `Connect-AzAccount`.
 
-Azure PowerShell and Azure CLI don't share authenticated sessions during the preview. If you use
-both tools, sign in separately to each: use `Connect-AzAccount` for Azure PowerShell and `az login`
-for Azure CLI.
+Azure PowerShell and Azure CLI don't share authenticated sessions during the preview. If you use both tools, sign in separately to each: use `Connect-AzAccount` for Azure PowerShell and `az login` for Azure CLI.
 
 For the best experience, use interactive user authentication.
 
 ## Current limitations
 
-The preview primarily supports interactive command-line use. Some automation scenarios and
-noninteractive authentication methods aren't yet supported.
+The preview primarily supports interactive command-line use. Some automation scenarios and noninteractive authentication methods aren't yet supported.
 
 Authentication support is currently limited to interactive user sign-in.
 
@@ -59,12 +53,9 @@ Other preview limitations include:
 
 ## Coexistence with Azure PowerShell and Azure CLI
 
-Azure PowerShell preview is designed to coexist with existing Azure PowerShell and Azure CLI
-installations.
+Azure PowerShell preview is designed to coexist with existing Azure PowerShell and Azure CLI installations.
 
-Installing Azure PowerShell preview doesn't replace your existing version. You can continue
-using Azure PowerShell and Azure CLI exactly as you do today while evaluating Azure PowerShell
-preview.
+Installing Azure PowerShell preview doesn't replace your existing version. You can continue using Azure PowerShell and Azure CLI exactly as you do today while evaluating Azure PowerShell preview.
 
 This allows you to:
 

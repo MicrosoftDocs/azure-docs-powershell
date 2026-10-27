@@ -7,24 +7,18 @@ ms.date: 10/27/2026
 
 # Switch between classic and preview Azure PowerShell
 
-The preview Az modules install side by side with your existing (classic) Az modules. Both use the
-same module names (`Az`, `Az.Compute`, and so on), so a single PowerShell session can load only one
-of them at a time. This article explains how to choose which version loads and how to switch between
-them.
+The preview Az modules install side by side with your existing (classic) Az modules. Both use the same module names (`Az`, `Az.Compute`, and so on), so a single PowerShell session can load only one of them at a time. This article explains how to choose which version loads and how to switch between them.
 
 ## How coexistence works
 
-When you install the preview, its modules land in the same module path as the classic modules, just
-at a different version number. The preview uses the `0.1.x` version series, starting at `0.1.1`;
-classic releases use higher version numbers (for example, `16.4.0`).
+When you install the preview, its modules land in the same module path as the classic modules, just at a different version number. The preview uses the `0.1.x` version series, starting at `0.1.1`; classic releases use higher version numbers (for example, `16.4.0`).
 
 | Product | Example version | Notes |
 | --- | --- | --- |
 | Classic Azure PowerShell | `16.4.0` | Your existing, full Az installation. |
 | Azure PowerShell preview | `0.1.5` | An example preview module version. |
 
-Because both versions are available, PowerShell decides which one to load based on the version you
-request. For more information, see [Install Azure PowerShell modules][01].
+Because both versions are available, PowerShell decides which one to load based on the version you request. For more information, see [Install Azure PowerShell modules][01].
 
 ## Check which versions are installed
 
@@ -34,22 +28,19 @@ List every installed version of the `Az` module:
 Get-Module Az -ListAvailable | Select-Object Name, Version, ModuleBase
 ```
 
-The preview appears as a version in the `0.1.x` series, such as `0.1.5`. If you also have classic
-Azure PowerShell, its higher version numbers appear in the same list.
+The preview appears as a version in the `0.1.x` series, such as `0.1.5`. If you also have classic Azure PowerShell, its higher version numbers appear in the same list.
 
 ## Load a specific version
 
 Use `Import-Module` with a version constraint to choose which version loads in the current session.
 
-Load the **preview**. Use a minimum version of `0.1.1` and a maximum version of `0.1.9999`
-to load the newest installed preview. Version `0.1.0` isn't part of this preview and is excluded:
+Load the **preview**. Use a minimum version of `0.1.1` and a maximum version of `0.1.9999` to load the newest installed preview. Version `0.1.0` isn't part of this preview and is excluded:
 
 ```powershell
 Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
 ```
 
-To load one exact build instead, use `-RequiredVersion` with an installed version number from the
-previous step. For example, if you have version `0.1.5` installed:
+To load one exact build instead, use `-RequiredVersion` with an installed version number from the previous step. For example, if you have version `0.1.5` installed:
 
 ```powershell
 Import-Module Az -RequiredVersion 0.1.5
@@ -74,26 +65,19 @@ Check the version of the `Az` module loaded in the current session:
 Get-Module Az | Select-Object Name, Version
 ```
 
-A version in the `0.1.x` series starting at `0.1.1` (for example `0.1.5`) means the preview is active.
-A higher version means the classic modules are active. If nothing is returned, no `Az` module is
-loaded yet in this session.
+A version in the `0.1.x` series starting at `0.1.1` (for example `0.1.5`) means the preview is active. A higher version means the classic modules are active. If nothing is returned, no `Az` module is loaded yet in this session.
 
 ## Switch between versions
 
-**Each PowerShell session can use only one version.** Decide which version you want before you run
-your first `Import-Module Az`, and start a new session to switch.
+**Each PowerShell session can use only one version.** Decide which version you want before you run your first `Import-Module Az`, and start a new session to switch.
 
-You can't switch versions inside a running session. The Az modules load binary (.NET) components,
-and once those are loaded, PowerShell can't replace them with a different version. Attempting to
-import the other version fails with an error such as:
+You can't switch versions inside a running session. The Az modules load binary (.NET) components, and once those are loaded, PowerShell can't replace them with a different version. Attempting to import the other version fails with an error such as:
 
 ```
 Import-Module: Could not load file or assembly '...'. Assembly with same name is already loaded
 ```
 
-`Remove-Module` doesn't help either: it removes the PowerShell module, but the loaded assemblies stay
-in the process. To switch, close the current session and start a new one — for example, run `exit`
-and then launch `pwsh` again. In the new session, load the version you want:
+`Remove-Module` doesn't help either: it removes the PowerShell module, but the loaded assemblies stay in the process. To switch, close the current session and start a new one — for example, run `exit` and then launch `pwsh` again. In the new session, load the version you want:
 
 ```powershell
 Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
@@ -101,8 +85,7 @@ Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
 
 ### Optional: helper functions
 
-To make switching feel seamless, add functions to your PowerShell profile that each start a clean
-session in the version you want:
+To make switching feel seamless, add functions to your PowerShell profile that each start a clean session in the version you want:
 
 ```powershell
 function az-preview { pwsh -NoExit -Command 'Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999' }
