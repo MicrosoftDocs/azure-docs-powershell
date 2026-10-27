@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Config.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Config
-ms.date: 09/01/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Set-AzConfig
 ---
@@ -182,6 +182,3 @@ Status string confirming the operation, in the form `Set <key> = <value>`.
 Generated help for config.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

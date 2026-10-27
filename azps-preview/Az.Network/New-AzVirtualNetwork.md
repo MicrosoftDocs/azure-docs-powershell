@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 09/08/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzVirtualNetwork
 ---
@@ -632,6 +632,3 @@ The virtual network that was created, including its address space, subnets, and 
 Generated help for network.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

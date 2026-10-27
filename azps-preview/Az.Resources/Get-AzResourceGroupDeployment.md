@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Get-AzResourceGroupDeployment
 ---
@@ -224,6 +224,6 @@ This is a read-only operation. Use `New-AzResourceGroupDeployment` to create a d
 ## RELATED LINKS
 
 
-- [New-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeploymentWhatIf]()
-- [Get-AzResourceGroup]()
+- [New-AzResourceGroupDeployment](New-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeploymentWhatIf](New-AzResourceGroupDeploymentWhatIf.md)
+- [Get-AzResourceGroup](Get-AzResourceGroup.md)

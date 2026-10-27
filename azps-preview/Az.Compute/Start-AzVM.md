@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Compute.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Compute
-ms.date: 09/28/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Start-AzVM
 ---
@@ -229,6 +229,3 @@ This cmdlet does not emit an object on the pipeline; it only writes progress and
 Generated help for compute.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

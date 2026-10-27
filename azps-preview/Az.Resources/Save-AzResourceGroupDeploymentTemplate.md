@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Save-AzResourceGroupDeploymentTemplate
 ---
@@ -276,6 +276,6 @@ The exported template is the template as submitted, not the resolved deployment 
 ## RELATED LINKS
 
 
-- [Get-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeployment]()
-- [Test-AzResourceGroupDeployment]()
+- [Get-AzResourceGroupDeployment](Get-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeployment](New-AzResourceGroupDeployment.md)
+- [Test-AzResourceGroupDeployment](Test-AzResourceGroupDeployment.md)
