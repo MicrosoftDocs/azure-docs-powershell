@@ -2,7 +2,7 @@
 Module Name: Az.Resources
 Module Guid: d4bb27e5-ae5f-4f79-a25c-ad1cecdc443a
 Download Help Link: https://learn.microsoft.com/powershell/module/az.resources
-Help Version: 0.1.3
+Help Version: 0.1.4
 Locale: en-US
 content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Resources/help
 original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Resources/help
@@ -13,6 +13,9 @@ original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Reso
 Azure PowerShell - Resources
 
 ## Az.Resources Cmdlets
+### [Get-AzManagementGroupDeployment](Get-AzManagementGroupDeployment.md)
+Gets management-group deployments.
+
 ### [Get-AzResourceGroup](Get-AzResourceGroup.md)
 Show details of a specific resource group.
 
@@ -25,6 +28,9 @@ List Azure RBAC role assignments.
 ### [Invoke-AzRestMethod](Invoke-AzRestMethod.md)
 Send an authenticated REST request to Azure Resource Manager and return the raw response.
 
+### [New-AzManagementGroupDeployment](New-AzManagementGroupDeployment.md)
+Deploy an ARM or Bicep template at management group scope.
+
 ### [New-AzResourceGroup](New-AzResourceGroup.md)
 Create a new resource group.
 
@@ -36,6 +42,9 @@ Preview the changes an ARM or Bicep deployment would make to a resource group wi
 
 ### [New-AzRoleAssignment](New-AzRoleAssignment.md)
 Create an Azure RBAC role assignment.
+
+### [Remove-AzManagementGroupDeployment](Remove-AzManagementGroupDeployment.md)
+Removes a management-group deployment from deployment history.
 
 ### [Remove-AzResourceGroup](Remove-AzResourceGroup.md)
 Deletes a resource group and all resources it contains.
@@ -52,8 +61,14 @@ Save the template used for a resource group deployment to a file.
 ### [Set-AzResourceGroup](Set-AzResourceGroup.md)
 Replaces the tags on a resource group.
 
+### [Stop-AzManagementGroupDeployment](Stop-AzManagementGroupDeployment.md)
+Cancels a running management-group deployment.
+
 ### [Stop-AzResourceGroupDeployment](Stop-AzResourceGroupDeployment.md)
 Cancel a currently running resource group deployment.
+
+### [Test-AzManagementGroupDeployment](Test-AzManagementGroupDeployment.md)
+Validate whether an ARM or Bicep template would be accepted for a management group deployment, without deploying it.
 
 ### [Test-AzResourceGroupDeployment](Test-AzResourceGroupDeployment.md)
 Validate whether an ARM or Bicep template would be accepted for a resource group deployment, without deploying it.

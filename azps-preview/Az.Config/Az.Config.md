@@ -2,7 +2,7 @@
 Module Name: Az.Config
 Module Guid: 5b70ac45-5011-483b-bf9b-e6584f1f8ef3
 Download Help Link: https://learn.microsoft.com/powershell/module/az.config
-Help Version: 0.1.3
+Help Version: 0.1.4
 Locale: en-US
 content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Config/help
 original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Config/help
