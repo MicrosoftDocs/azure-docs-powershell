@@ -21,8 +21,6 @@ items:
         href: tutorial-managed-identity.md
       - name: Deploy and troubleshoot a Bicep template
         href: tutorial-deploy-bicep.md
-      - name: Store and retrieve application data
-        href: tutorial-storage-data.md
       - name: Run repeatable deployments from a pipeline
         href: tutorial-pipeline-deployments.md
   - name: How-to guides

@@ -8,7 +8,7 @@ metadata:
   title: Azure PowerShell (preview) documentation
   description: Official documentation for the preview of Azure PowerShell. Learn how to install, configure, sign in, and troubleshoot the preview build of Azure PowerShell.
   ms.topic: landing-page
-  ms.date: 10/27/2026
+  ms.date: 10/28/2026
   ms.collection: collection
   ms.custom: devx-track-azurepowershell
   ms.service: azure-powershell
@@ -36,8 +36,6 @@ landingContent:
             url: tutorial-managed-identity.md
           - text: Deploy and troubleshoot a Bicep template
             url: tutorial-deploy-bicep.md
-          - text: Store and retrieve application data
-            url: tutorial-storage-data.md
           - text: Run repeatable deployments from a pipeline
             url: tutorial-pipeline-deployments.md
   - title: Scenario how-to guides

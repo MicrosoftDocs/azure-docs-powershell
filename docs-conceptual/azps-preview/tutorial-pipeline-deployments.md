@@ -5,14 +5,16 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: tutorial
-ms.date: 10/27/2026
+ms.date: 10/28/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
 
 # Tutorial: Run repeatable deployments from a pipeline with Azure PowerShell (preview)
 
-In this tutorial, you plan federated pipeline authentication, repeat a test deployment, detect a failure, and clean up with Azure PowerShell preview.
+In this tutorial, you set up a pipeline job that uses Azure PowerShell preview to authenticate without a browser, deploy predictably, and report a failure when a command fails.
+
+By the end of this tutorial, a non-interactive job deploys the intended storage account, a repeat run doesn't create a duplicate, failures are visible in the job, and the job removes its test resources and local sign-in state.
 
 In this tutorial, you:
 
@@ -22,9 +24,6 @@ In this tutorial, you:
 > - Deploy twice
 > - Detect a failure
 > - Clean up
-
-> [!IMPORTANT]
-> These draft examples require end-to-end validation against the release build before use.
 
 > [!WARNING]
 > This scenario requires non-interactive authentication that the [current preview limitations](getting-started.md#current-limitations) list as unsupported. Use these commands for engineering review only. They don't establish supported functionality. Don't run this walkthrough until the product team confirms support for your preview build.
@@ -63,6 +62,8 @@ $federatedToken = (Get-Content -LiteralPath $env:AZURE_FEDERATED_TOKEN_FILE -Raw
 Connect-AzAccount -ServicePrincipal -ClientId $clientId -TenantId $tenant -SubscriptionId $sub -FederatedToken $federatedToken -OutProfile $profile
 ```
 
+`Connect-AzAccount` returns the new profile with the tenant ID and subscription ID that you specified. No browser or device code prompt appears.
+
 ## Prepare the job
 
 ```powershell
@@ -70,14 +71,23 @@ Get-AzProfile -Name $profile
 New-AzResourceGroup -SubscriptionId $sub -Name $rg -Location $location
 ```
 
+`Get-AzProfile` returns the pipeline profile with the expected tenant ID and subscription ID. `New-AzResourceGroup` returns the new resource group with a provisioning state of `Succeeded`.
+
 ## Deploy twice
 
+Run the same deployment twice, as a pipeline does when a job is rerun. In Incremental mode, the second run updates the existing storage account to match the template instead of creating another one.
+
 ```powershell
-1..2 | ForEach-Object {
-    New-AzResourceGroupDeployment -SubscriptionId $sub -ResourceGroupName $rg -Name $deployment -TemplateFile $template -Parameter "storageAccountName=$storage" -Mode Incremental
+$outputs = 1..2 | ForEach-Object {
+    New-AzResourceGroupDeployment -SubscriptionId $sub -ResourceGroupName $rg -Name $deployment -TemplateFile $template -Parameter "storageAccountName=$storage" -Mode Incremental | Out-Null
+    $result = Get-AzResourceGroupDeployment -SubscriptionId $sub -ResourceGroupName $rg -Name $deployment
+    if ($result.ProvisioningState -ne 'Succeeded') { throw "Deployment run $_ didn't succeed." }
+    $result.Outputs | ConvertTo-Json -Depth 5
 }
-Get-AzResourceGroupDeployment -SubscriptionId $sub -ResourceGroupName $rg -Name $deployment
+if ($outputs[0] -ne $outputs[1]) { throw 'The repeat deployment returned a different storage account ID.' }
 ```
+
+The check produces no output when both runs succeed and return the same `storageAccountId`. If either run fails or the second run returns a different storage account, the job stops with an error.
 
 ## Detect a failure
 
@@ -91,6 +101,8 @@ catch {
 }
 ```
 
+The lookup fails because the resource group doesn't exist, and the `catch` block handles the expected error, so the step produces no output. In a real job, let unexpected errors stop the job. Because `$ErrorActionPreference` is `Stop`, a failing cmdlet stops the script with an error, and the pipeline reports the step as failed.
+
 ## Clean up resources
 
 Configure the pipeline to run cleanup even when an earlier step fails. The examples below show the cleanup commands, not a complete pipeline job or failure-handling wrapper.
@@ -103,6 +115,8 @@ Disconnect-AzAccount
 Remove-AzProfile -Name $profile
 Remove-Variable federatedToken
 ```
+
+`Remove-AzResourceGroup` returns `True` when the deletion completes, and the `Get-AzResourceGroup` command returns no output. `Disconnect-AzAccount` and `Remove-AzProfile` don't return output.
 
 ## Other sign-in methods
 
