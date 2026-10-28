@@ -22,7 +22,7 @@ jobs:
         id: checkout_repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Comment on Community PRs
-        uses: MicrosoftDocs/PowerShell-Docs/.github/actions/commenting/expectations/v1@main
+        uses: MicrosoftDocs/PowerShell-Docs/.github/actions/commenting/expectations/v1@a3de8f22552170e70852470d46cd52cd9ca471ec
         with:
           message_path: .github/messages/expectations.md
           token: ${{ github.token }}
