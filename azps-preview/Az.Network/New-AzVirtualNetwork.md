@@ -386,7 +386,8 @@ The name of the virtual network.
 Type: System.String
 DefaultValue: ''
 SupportsWildcards: false
-Aliases: []
+Aliases:
+- ResourceName
 ParameterSets:
 - Name: (All)
   Position: Named
@@ -464,7 +465,7 @@ HelpMessage: ''
 
 ### -Subnet
 
-Subnet configuration objects from `New-AzVirtualNetworkSubnetConfig`, or hashtables describing subnets to create. Recognised hashtable keys: Name, AddressPrefix, AddressPrefixes, Nsg, RouteTable, NatGateway, DefaultOutboundAccess, ServiceEndpoint, ServiceEndpointPolicy, Delegation, IpamPoolPrefixAllocation, DisablePrivateEndpointNetworkPolicies, DisablePrivateLinkServiceNetworkPolicies. Multi-valued hashtable keys take a comma-separated value.
+Subnet configuration objects from `New-AzVirtualNetworkSubnetConfig`, or hashtables describing subnets to create. Recognised hashtable keys: Name, AddressPrefix, AddressPrefixes, Nsg, RouteTable, NatGateway, DefaultOutboundAccess, ServiceEndpoint, ServiceEndpointPolicy, Delegation, IpamPoolPrefixAllocation, DisablePrivateEndpointNetworkPolicies, DisablePrivateLinkServiceNetworkPolicies. Multi-valued hashtable keys take an array or a comma-separated value.
 
 ```yaml
 Type: System.Object[]

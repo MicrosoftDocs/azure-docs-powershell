@@ -2,7 +2,7 @@
 Module Name: Az.Accounts
 Module Guid: 4a689b34-4900-472a-ae8a-f5473e0e7df2
 Download Help Link: https://learn.microsoft.com/powershell/module/az.accounts
-Help Version: 0.1.2
+Help Version: 0.1.3
 Locale: en-US
 content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Accounts/help
 original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Accounts/help
