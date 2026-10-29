@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 09/28/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzVirtualNetworkSubnetConfig
 ---
@@ -343,4 +343,4 @@ This command does not make an Azure Resource Manager request.
 
 ## RELATED LINKS
 
-- [az network vnet subnet](../../../CLI/Help/Docs/network/vnet/subnet/index.md)
+- [az network vnet subnet](/cli/azure/network/vnet/subnet?view=azure-cli-preview&preserve-view=true)

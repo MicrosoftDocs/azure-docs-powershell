@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Compute.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Compute
-ms.date: 10/13/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzVM
 ---
@@ -790,6 +790,3 @@ Networking resources are created or reused only in the default `NewNetworkInterf
 The `ExistingNetworkInterface` parameter set uses the existing NICs and their networking configuration without creating networking resources.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

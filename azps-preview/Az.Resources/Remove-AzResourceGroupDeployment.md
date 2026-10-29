@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Remove-AzResourceGroupDeployment
 ---
@@ -269,6 +269,6 @@ The delete is a long-running operation. The cmdlet polls until Azure Resource Ma
 ## RELATED LINKS
 
 
-- [Get-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeployment]()
-- [Stop-AzResourceGroupDeployment]()
+- [Get-AzResourceGroupDeployment](Get-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeployment](New-AzResourceGroupDeployment.md)
+- [Stop-AzResourceGroupDeployment](Stop-AzResourceGroupDeployment.md)

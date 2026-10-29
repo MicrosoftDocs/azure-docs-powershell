@@ -1,12 +1,13 @@
 ---
-title: Manage sign-in profiles in Azure PowerShell (Preview)
-description: Learn how to use named profiles in Azure PowerShell to save sign-in context, switch between accounts and subscriptions, and re-authenticate a specific profile.
+title: Manage sign-in profiles in Azure PowerShell (preview)
+description: Learn how to use named profiles in the Azure PowerShell preview to save sign-in context, switch between accounts and subscriptions, and re-authenticate a specific profile.
 ms.topic: concept-article
+ms.date: 10/27/2026
 ---
 
-# Manage sign-in profiles in Azure PowerShell (Preview)
+# Manage sign-in profiles in Azure PowerShell (preview)
 
-A _profile_ is a named sign-in context that Azure PowerShell saves when you authenticate. Each profile stores the tenant, subscription, cloud, and sign-in information needed to connect to Azure. Profiles let you switch between accounts, tenants, and subscriptions without signing in each time.
+A _profile_ is a named sign-in context that the Azure PowerShell preview saves when you authenticate. Each profile stores the tenant, subscription, cloud, and sign-in information needed to connect to Azure. Profiles let you switch between accounts, tenants, and subscriptions without signing in each time.
 
 Profiles are useful when you regularly work across multiple contexts, such as personal and corporate subscriptions or separate development and production environments.
 
@@ -21,8 +22,7 @@ Profiles are useful when you:
 
 ## What a profile stores
 
-When you sign in and save a profile, Azure PowerShell records the connection context for that
-profile, including:
+When you sign in and save a profile, Azure PowerShell records the connection context for that profile, including:
 
 - The profile name
 - The Azure tenant (directory)
@@ -31,20 +31,17 @@ profile, including:
 - The sign-in identity (the signed-in user)
 - The authentication method used to sign in
 
-Profiles are stored locally on your machine. Switching profiles changes which of these saved
-contexts Azure PowerShell uses for subsequent commands.
+Profiles are stored locally on your machine. Switching profiles changes which of these saved contexts Azure PowerShell uses for subsequent commands.
 
 ## Sign in and save a profile
 
-Use `Connect-AzAccount` with the `-OutProfile` parameter to sign in and save the result as a named
-profile. Specify the tenant and subscription you want the profile to use:
+Use `Connect-AzAccount` with the `-OutProfile` parameter to sign in and save the result as a named profile. Specify the tenant and subscription you want the profile to use:
 
 ```powershell
 Connect-AzAccount -TenantId <tenant-id> -SubscriptionId <subscription-id> -OutProfile personal
 ```
 
-To create a second profile for a different account, tenant, or subscription, sign in again with a
-different profile name:
+To create a second profile for a different account, tenant, or subscription, sign in again with a different profile name:
 
 ```powershell
 Connect-AzAccount -TenantId <tenant-id> -SubscriptionId <subscription-id> -OutProfile corp
@@ -52,8 +49,7 @@ Connect-AzAccount -TenantId <tenant-id> -SubscriptionId <subscription-id> -OutPr
 
 The profile that you sign in to most recently becomes the active profile.
 
-If a browser isn't available (for example, over SSH or in a container), add `-UseDeviceCode` to
-complete sign-in with the device code flow:
+If a browser isn't available (for example, over SSH or in a container), add `-UseDeviceCode` to complete sign-in with the device code flow:
 
 ```powershell
 Connect-AzAccount -TenantId <tenant-id> -SubscriptionId <subscription-id> -OutProfile corp -UseDeviceCode
@@ -95,8 +91,7 @@ Get-AzProfile -Active
 
 ## Switch the active profile
 
-Use `Set-AzProfile` to change which profile is active. After you switch, commands that rely on the
-active context use the newly activated profile:
+Use `Set-AzProfile` to change which profile is active. After you switch, commands that rely on the active context use the newly activated profile:
 
 ```powershell
 Set-AzProfile -Name personal
@@ -105,15 +100,13 @@ Get-AzResourceGroup
 
 ## Re-authenticate an existing profile
 
-If a profile's sign-in has expired, sign in again and pass the existing profile name to `-Profile`
-to refresh it in place:
+If a profile's sign-in has expired, sign in again and pass the existing profile name to `-Profile` to refresh it in place:
 
 ```powershell
 Connect-AzAccount -Profile personal
 ```
 
-The `-Profile` and `-OutProfile` parameters are mutually exclusive: use `-OutProfile` to create or
-overwrite a profile, and `-Profile` to re-authenticate an existing one.
+The `-Profile` and `-OutProfile` parameters are mutually exclusive: use `-OutProfile` to create or overwrite a profile, and `-Profile` to re-authenticate an existing one.
 
 ## Remove a profile
 
@@ -127,8 +120,7 @@ If you remove the active profile, no profile is active until you set one with `S
 
 ## Sign out
 
-To sign out of the active profile and clear its account from the token cache, use
-`Disconnect-AzAccount`:
+To sign out of the active profile and clear its account from the token cache, use `Disconnect-AzAccount`:
 
 ```powershell
 Disconnect-AzAccount
@@ -136,9 +128,7 @@ Disconnect-AzAccount
 
 ## Display the active profile in your prompt
 
-Configure your shell prompt to display the active profile name. Azure PowerShell writes the active
-profile name to an `active-profile` file in its local application data directory
-(`{LocalApplicationData}/.azclips/active-profile`).
+Configure your shell prompt to display the active profile name. Azure PowerShell writes the active profile name to an `active-profile` file in its local application data directory (`{LocalApplicationData}/.azclips/active-profile`).
 
 ### PowerShell
 

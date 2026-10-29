@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 09/08/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Remove-AzVirtualNetwork
 ---
@@ -238,6 +238,3 @@ Returned only when `-PassThru` is specified: `$true` once the virtual network ha
 Generated help for network.
 
 ## RELATED LINKS
-
-
-- [Online Version]()
