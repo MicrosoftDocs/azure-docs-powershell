@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Test-AzResourceGroupDeployment
 ---
@@ -428,6 +428,6 @@ Differences from Az.Resources: on success this cmdlet returns the `DeploymentVal
 ## RELATED LINKS
 
 
-- [New-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeploymentWhatIf]()
-- [Get-AzResourceGroupDeployment]()
+- [New-AzResourceGroupDeployment](New-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeploymentWhatIf](New-AzResourceGroupDeploymentWhatIf.md)
+- [Get-AzResourceGroupDeployment](Get-AzResourceGroupDeployment.md)

@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Remove-AzRoleAssignment
 ---
@@ -239,6 +239,3 @@ The deleted `RoleAssignment`, including its id, name, and properties (role defin
 Generated help for resources.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

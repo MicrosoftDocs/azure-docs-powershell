@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Invoke-AzRestMethod
 ---
@@ -338,5 +338,5 @@ This cmdlet targets the Azure Resource Manager audience only. It does not poll l
 ## RELATED LINKS
 
 
-- [Get-AzResourceGroup]()
-- [New-AzResourceGroupDeployment]()
+- [Get-AzResourceGroup](Get-AzResourceGroup.md)
+- [New-AzResourceGroupDeployment](New-AzResourceGroupDeployment.md)

@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 09/25/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzPublicIpAddress
 ---
@@ -603,7 +603,3 @@ The public IP address that was created.
 Generated help for network.
 
 ## RELATED LINKS
-
-
-- [Online Version]()
-

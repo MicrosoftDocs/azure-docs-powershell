@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Accounts.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Accounts
-ms.date: 09/14/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: Connect-AzAccount
 ---
@@ -363,6 +363,3 @@ The activated profile projection (name, tenant ID, subscription ID, cloud, authe
 Generated help for login.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 10/05/2026
+ms.date: 10/27/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzNetworkInterface
 ---
@@ -473,7 +473,3 @@ The network interface that was created, including its IP configuration, the allo
 Generated help for network.
 
 ## RELATED LINKS
-
-
-- [Online Version]()
-
