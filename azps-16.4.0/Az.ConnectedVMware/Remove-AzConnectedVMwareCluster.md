@@ -35,7 +35,7 @@ Implements cluster DELETE method.
 
 ### Example 1: Delete Cluster
 ```powershell
-Remove-AzConnectedVMwareCluster -Name "test-cluster" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Remove-AzConnectedVMwareCluster -Name "test-cluster" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 This command delete a Cluster named `test-cluster` from a resource group named `test-rg`.
