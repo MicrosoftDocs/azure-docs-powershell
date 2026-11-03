@@ -45,7 +45,7 @@ Implements cluster GET method.
 
 ### Example 1: List Clusters in current subscription
 ```powershell
-Get-AzConnectedVMwareCluster -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareCluster -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -65,7 +65,7 @@ This command lists Clusters in current subscription.
 
 ### Example 2: List Clusters in a resource group
 ```powershell
-Get-AzConnectedVMwareCluster -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareCluster -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -79,15 +79,15 @@ This command lists Clusters in a resource group named `test-rg`.
 
 ### Example 3: Get a specific Cluster
 ```powershell
-Get-AzConnectedVMwareCluster -Name "test-cluster" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareCluster -Name "test-cluster" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
 CustomResourceName           : dd163232-210f-4f82-8b0c-9866a2eac862
 DatastoreId                  :
-ExtendedLocationName         : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
 ExtendedLocationType         : CustomLocation
-Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/clusters/test-cluster
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/clusters/test-cluster
 InventoryItemId              :
 Kind                         :
 Location                     : eastus2euap
@@ -120,7 +120,7 @@ Type                         : microsoft.connectedvmwarevsphere/clusters
 UsedCpuMHz                   :
 UsedMemoryGb                 :
 Uuid                         : dd163232-210f-4f82-8b0c-9866a2eac862
-VCenterId                    : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
+VCenterId                    : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
 ```
 
 This command gets a Cluster named `test-cluster` in a resource group named `test-rg`.
