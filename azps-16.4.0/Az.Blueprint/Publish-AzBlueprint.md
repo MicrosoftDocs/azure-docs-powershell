@@ -32,7 +32,7 @@ Publish-AzBlueprint -Blueprint $bp -Version 1.0
 ```output
 Name           : SimpleBlueprint
 Id             : /subscriptions/{subscriptionId}/providers/Microsoft.Blueprint/blueprints/SimpleBlueprint/versions/1.0
-SubscriptionId : 00000000-1111-0000-1111-000000000000
+SubscriptionId : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Version        : 1.0
 Description    : My simple blueprint
 TimeCreated    : 2019-05-30
