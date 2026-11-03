@@ -43,7 +43,7 @@ Undo-AzKeyVaultManagedStorageAccountRemoval -VaultName myVault -Name myAccount
 Id                  : https://myvault.vault.azure.net:443/storage/myaccount
 Vault Name          : myVault
 AccountName         : myAccount
-Account Resource Id : /subscriptions/8bc48661-1801-4b7a-8ca1-6a3cadfb4870/resourceGroups/myrg/providers/Microsoft.St
+Account Resource Id : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myrg/providers/Microsoft.St
                       orage/storageAccounts/myaccount
 Active Key Name     : key2
 Auto Regenerate Key : False
