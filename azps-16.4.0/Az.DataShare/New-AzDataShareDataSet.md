@@ -54,9 +54,9 @@ New-AzDataShareDataSet -ResourceGroupName "ADS" -AccountName "WikiAds" -ShareNam
 ContainerName  : AdsContainer
 DataSetId      : d2411889-5357-4ca8-8d65-9363e46ef2ed
 ResourceGroup  : ADS
-SubscriptionId : 1834da9b-787a-44f6-ae81-60707ab8c957
+SubscriptionId : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 StorageAccount : AdsStorage
-Id             : /subscriptions/1834da9b-787a-44f6-ae81-60707ab8c957/resourceGroups/ADS/providers/Microsoft.DataShare/accounts/shelltest/shares/share4/dataSets/AdsDataSet
+Id             : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/ADS/providers/Microsoft.DataShare/accounts/shelltest/shares/share4/dataSets/AdsDataSet
 Name           : AdsDataSet
 Type           : Microsoft.DataShare/DataSets
 ```
