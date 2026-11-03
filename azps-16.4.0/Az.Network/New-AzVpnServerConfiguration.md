@@ -50,7 +50,7 @@ VpnClientRootCertificates    :
 VpnClientRevokedCertificates : [
                                  {
                                    "Name": "cert2",
-                                   "Thumbprint": "83FFBFC8848B5A5836C94D0112367E16148A286F"
+                                   "Thumbprint": "AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00"
                                  }
                                ]
 RadiusServerAddress          :
