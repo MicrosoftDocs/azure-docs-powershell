@@ -53,13 +53,13 @@ Set-AzDevCenterUserDevBoxActiveHour `
   -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" `
   -ProjectName "DevProject" `
   -DevBoxName "myDevBox" `
-  -UserId "786a823c-8037-48ab-89b8-8599901e67d0" `
+  -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" `
   -StartTimeHour 9 `
   -EndTimeHour 17 `
   -TimeZone "America/Los_Angeles"
 ```
 
-This command sets the active hours for the dev box "myDevBox" assigned to user "786a823c-8037-48ab-89b8-8599901e67d0" from 9 AM to 5 PM in the "America/Los_Angeles" time zone using the endpoint.
+This command sets the active hours for the dev box "myDevBox" assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" from 9 AM to 5 PM in the "America/Los_Angeles" time zone using the endpoint.
 
 ### Example 2: Set active hours for a Dev Box by dev center name and current user
 ```powershell
@@ -103,11 +103,11 @@ Set-AzDevCenterUserDevBoxActiveHour `
   -DevCenterName "ContosoDevCenter" `
   -ProjectName "DevProject" `
   -DevBoxName "myDevBox" `
-  -UserId "786a823c-8037-48ab-89b8-8599901e67d0" `
+  -UserId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" `
   -Body $activeHours
 ```
 
-This command sets the active hours for the dev box "myDevBox" assigned to user "786a823c-8037-48ab-89b8-8599901e67d0" from 7 AM to 3 PM in the "UTC" time zone using the dev center name and a body object.
+This command sets the active hours for the dev box "myDevBox" assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" from 7 AM to 3 PM in the "UTC" time zone using the dev center name and a body object.
 
 ## PARAMETERS
 
