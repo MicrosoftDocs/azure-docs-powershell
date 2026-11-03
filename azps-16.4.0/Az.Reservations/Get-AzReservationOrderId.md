@@ -33,11 +33,11 @@ Get applicable `Reservation`s that are applied to this subscription or a resourc
 
 ### Example 1: Get list of applicable ReservationOrder Ids.
 ```powershell
-Get-AzReservationOrderId -SubscriptionId '10000000-aaaa-bbbb-cccc-100000000005'
+Get-AzReservationOrderId -SubscriptionId 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'
 ```
 
 ```output
-Id                         : /subscriptions/10000000-aaaa-bbbb-cccc-100000000005/providers/microsoft.capacity/AppliedReservations/default
+Id                         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/microsoft.capacity/AppliedReservations/default
 Name                       : default
 ReservationOrderIdNextLink : 
 ReservationOrderIdValue    : {/providers/Microsoft.Capacity/reservationorders/7c6192be-7543-40c3-93e1-3d7f0b15203f, 
