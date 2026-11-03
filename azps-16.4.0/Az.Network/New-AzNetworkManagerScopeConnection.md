@@ -28,12 +28,12 @@ The **New-AzNetworkManagerScopeConnection** cmdlet creates a scope connection.
 
 ### Example 1
 ```powershell
-New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "subConnection" -TenantId "00001111-aaaa-2222-bbbb-3333cccc4444" -ResourceId "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884" -Description "SampleDescription"
+New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "subConnection" -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -Description "SampleDescription"
 ```
 
 ```output
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
-ResourceId        : /subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
+ResourceId        : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ConnectionState   : Pending
 DisplayName       :
 Description       : SampleDescription
@@ -57,11 +57,11 @@ Creates a scope connection to a cross-tenant subscription.
 
 ### Example 2
 ```powershell
-New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "mgConnection" -TenantId "00001111-aaaa-2222-bbbb-3333cccc4444" -ResourceId "/providers/Microsoft.Management/managementGroups/newMG" -Description "SampleDescription"
+New-AzNetworkManagerScopeConnection -ResourceGroupName psResourceGroup -NetworkManagerName psNetworkManager -Name "mgConnection" -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee" -ResourceId "/providers/Microsoft.Management/managementGroups/newMG" -Description "SampleDescription"
 ```
 
 ```output
-TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId          : aaaabbbb-0000-cccc-1111-dddd2222eeee
 ResourceId        : /providers/Microsoft.Management/managementGroups/newMG
 ConnectionState   : Pending
 DisplayName       :
