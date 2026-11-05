@@ -2410,7 +2410,7 @@ ContactDetailPhoneNumber                   :
 ContactDetailPreferredContactMethod        : Email
 ContactDetailPreferredSupportLanguage      : en-US
 ContactDetailPreferredTimeZone             : Pacific Standard Time
-ContactDetailPrimaryEmailAddress           : test@test.com
+ContactDetailPrimaryEmailAddress           : test@contoso.com
 CreatedDate                                : 5/6/2024 3:42:35 PM
 Description                                : Question: Quota type
                                              Answer: Regional Capacity Quota per Subscription (TiB)
@@ -2551,9 +2551,9 @@ Get-AzSupportCommunication -SupportTicketName 48cf91d7-69575ec1-65697697-e20c-4b
 
 #### Before
 ```powershell
-New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{vm_windows_service_guid}/problemClassifications/{problemClassification_guid}" -TechnicalTicketResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM" -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "test@test.com"}
+New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{vm_windows_service_guid}/problemClassifications/{problemClassification_guid}" -TechnicalTicketResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM" -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "test@contoso.com"}
 
-New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{cores_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"VMFamily`":`"Dv2 Series`",`"NewLimit`":350}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "test@test.com"}
+New-AzSupportTicket -Name "test1" -Title "Test" -Description "Test" -Severity "minimal" -ProblemClassificationId "/providers/Microsoft.Support/services/{quota_service_guid}/problemClassifications/{cores_problemClassification_guid}" -QuotaTicketDetail @{QuotaChangeRequestVersion = "1.0" ; QuotaChangeRequests = (@{Region = "westus"; Payload = "{`"VMFamily`":`"Dv2 Series`",`"NewLimit`":350}"})} -CustomerContactDetail @{FirstName = "first" ; LastName = "last" ; PreferredTimeZone = "pacific standard time" ; PreferredSupportLanguage = "en-us" ; Country = "USA" ; PreferredContactMethod = "Email" ; PrimaryEmailAddress = "test@contoso.com"}
 
 Id                               : /subscriptions/{subscription}/providers/Microsoft
                                    .Support/supportTickets/test_1
@@ -2582,9 +2582,9 @@ QuotaTicketDetail                : Microsoft.Azure.Commands.Support.Models.PSQuo
 ```
 #### After
 ```powershell
-New-AzSupportTicket -Name "test1" -AdvancedDiagnosticConsent "Yes" -ContactDetailCountry "USA" -ContactDetailFirstName "first" -ContactDetailLastName "last" -ContactDetailPreferredContactMethod "email" -ContactDetailPreferredSupportLanguage "en-US" -ContactDetailPreferredTimeZone "Pacific Standard Time" -ContactDetailPrimaryEmailAddress "test@test.com" -Description "test ticket" -ProblemClassificationId "/providers/microsoft.support/services/{vm_windows_service_guid}/problemclassifications/{problemClassigication_guid}" -ServiceId "/providers/microsoft.support/services/{vm_windows_service_guid}" -Severity "minimal" -Title "test" -TechnicalTicketDetailResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM"
+New-AzSupportTicket -Name "test1" -AdvancedDiagnosticConsent "Yes" -ContactDetailCountry "USA" -ContactDetailFirstName "first" -ContactDetailLastName "last" -ContactDetailPreferredContactMethod "email" -ContactDetailPreferredSupportLanguage "en-US" -ContactDetailPreferredTimeZone "Pacific Standard Time" -ContactDetailPrimaryEmailAddress "test@contoso.com" -Description "test ticket" -ProblemClassificationId "/providers/microsoft.support/services/{vm_windows_service_guid}/problemclassifications/{problemClassigication_guid}" -ServiceId "/providers/microsoft.support/services/{vm_windows_service_guid}" -Severity "minimal" -Title "test" -TechnicalTicketDetailResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testRG/providers/Microsoft.Compute/virtualMachines/testVM"
 
-New-AzSupportTicket -Name "test1" -AdvancedDiagnosticConsent "Yes" -ContactDetailCountry "USA" -ContactDetailFirstName "firstName" -ContactDetailLastName "lastName" -ContactDetailPreferredContactMethod "email" -ContactDetailPreferredSupportLanguage "en-US" -ContactDetailPreferredTimeZone "Pacific Standard Time" -ContactDetailPrimaryEmailAddress "test@test.com" -Description "test ticket please ignore and close" -ProblemClassificationId "/providers/microsoft.support/services/{quota_service_guid}/problemclassifications/{cores_problemClassification_guid}" -ServiceId "/providers/microsoft.support/services/{quota_service_guid}" -Severity "minimal" -Title "test" -QuotaTicketDetailQuotaChangeRequest @(@{ Payload = "{`"VMFamily`":`"DV2 Series`",`"NewLimit`":`"350`",`"DeploymentStack`":`"ARM`",`"Type`":`"Regional`",`"EdgeZone`":`"`"}"; Region = "EASTUS"}) -QuotaTicketDetailQuotaChangeRequestVersion "1.0"
+New-AzSupportTicket -Name "test1" -AdvancedDiagnosticConsent "Yes" -ContactDetailCountry "USA" -ContactDetailFirstName "firstName" -ContactDetailLastName "lastName" -ContactDetailPreferredContactMethod "email" -ContactDetailPreferredSupportLanguage "en-US" -ContactDetailPreferredTimeZone "Pacific Standard Time" -ContactDetailPrimaryEmailAddress "test@contoso.com" -Description "test ticket please ignore and close" -ProblemClassificationId "/providers/microsoft.support/services/{quota_service_guid}/problemclassifications/{cores_problemClassification_guid}" -ServiceId "/providers/microsoft.support/services/{quota_service_guid}" -Severity "minimal" -Title "test" -QuotaTicketDetailQuotaChangeRequest @(@{ Payload = "{`"VMFamily`":`"DV2 Series`",`"NewLimit`":`"350`",`"DeploymentStack`":`"ARM`",`"Type`":`"Regional`",`"EdgeZone`":`"`"}"; Region = "EASTUS"}) -QuotaTicketDetailQuotaChangeRequestVersion "1.0"
 
 AdvancedDiagnosticConsent                  : Yes
 ContactDetailAdditionalEmailAddress        :
@@ -2595,7 +2595,7 @@ ContactDetailPhoneNumber                   :
 ContactDetailPreferredContactMethod        : Email
 ContactDetailPreferredSupportLanguage      : en-US
 ContactDetailPreferredTimeZone             : Pacific Standard Time
-ContactDetailPrimaryEmailAddress           : test@test.com
+ContactDetailPrimaryEmailAddress           : test@contoso.com
 CreatedDate                                : 5/6/2024 4:44:24 PM
 Description                                : test ticket please ignore and close
 EnrollmentId                               :
@@ -2743,7 +2743,7 @@ ContactDetailPhoneNumber                   :
 ContactDetailPreferredContactMethod        : Email
 ContactDetailPreferredSupportLanguage      : en-US
 ContactDetailPreferredTimeZone             : Pacific Standard Time
-ContactDetailPrimaryEmailAddress           : test@test.com
+ContactDetailPrimaryEmailAddress           : test@contoso.com
 CreatedDate                                : 5/6/2024 4:44:24 PM
 Description                                : test ticket please ignore and close
 EnrollmentId                               :
