@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 10/27/2026
+ms.date: 09/08/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzVirtualNetwork
 ---
@@ -47,15 +47,6 @@ Create the virtual network `myvnet` with address space 10.0.0.0/16 and a single 
 
 ```powershell
 New-AzVirtualNetwork -ResourceGroupName myrg -Name myvnet -Location eastus -AddressPrefix 10.0.0.0/16 -Subnet @{ Name = 'default'; AddressPrefix = '10.0.0.0/24' }
-```
-
-### Create a virtual network from a subnet configuration object
-
-Create a subnet configuration locally and pass it to `New-AzVirtualNetwork`.
-
-```powershell
-$subnet = New-AzVirtualNetworkSubnetConfig -Name default -AddressPrefix 10.0.0.0/24
-New-AzVirtualNetwork -ResourceGroupName myrg -Name myvnet -Location eastus -AddressPrefix 10.0.0.0/16 -Subnet $subnet
 ```
 
 ## PARAMETERS
@@ -465,7 +456,7 @@ HelpMessage: ''
 
 ### -Subnet
 
-Subnet configuration objects from `New-AzVirtualNetworkSubnetConfig`, or hashtables describing subnets to create. Recognised hashtable keys: Name, AddressPrefix, AddressPrefixes, Nsg, RouteTable, NatGateway, DefaultOutboundAccess, ServiceEndpoint, ServiceEndpointPolicy, Delegation, IpamPoolPrefixAllocation, DisablePrivateEndpointNetworkPolicies, DisablePrivateLinkServiceNetworkPolicies. Multi-valued hashtable keys take an array or a comma-separated value.
+Subnet objects, or hashtables describing subnets to create. Recognised hashtable keys: Name, AddressPrefix, AddressPrefixes, Nsg, RouteTable, NatGateway, DefaultOutboundAccess, ServiceEndpoint, ServiceEndpointPolicy, Delegation, IpamPoolPrefixAllocation, DisablePrivateEndpointNetworkPolicies, DisablePrivateLinkServiceNetworkPolicies. Multi-valued hashtable keys take an array or a comma-separated value.
 
 ```yaml
 Type: System.Object[]
@@ -633,3 +624,6 @@ The virtual network that was created, including its address space, subnets, and 
 Generated help for network.
 
 ## RELATED LINKS
+
+
+- [Online Version]()

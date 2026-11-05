@@ -3,7 +3,7 @@
         "conceptualToc": "docs-conceptual/azps-preview/toc.yml",
         "conceptualTocUrl": "/powershell/azure/toc.json",
         "packageRoot": "azps-preview",
-        "referenceTocUrl": "/powershell/module/azure-powershell/toc.json",
+        "referenceTocUrl": "/powershell/module/azps-preview/toc.json",
         "serviceMap": "mapping/az-groupMapping-preview.json"
     },
     "azps-16.5.0": {

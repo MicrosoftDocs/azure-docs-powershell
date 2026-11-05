@@ -1,0 +1,231 @@
+---
+document type: cmdlet
+external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
+HelpUri: ''
+Locale: en-US
+Module Name: Az.Resources
+ms.date: 10/22/2026
+PlatyPS schema version: 2024-05-01
+title: Get-AzDeploymentOperation
+---
+
+# Get-AzDeploymentOperation
+
+## SYNOPSIS
+
+Get the individual operations of a subscription scoped deployment.
+
+## SYNTAX
+
+### List (Default)
+
+```
+Get-AzDeploymentOperation -DeploymentName <string> [-SubscriptionId <string>] [-Profile <string>]
+ [<CommonParameters>]
+```
+
+### Get
+
+```
+Get-AzDeploymentOperation -DeploymentName <string> -OperationIds <string[]>
+ [-SubscriptionId <string>] [-Profile <string>] [<CommonParameters>]
+```
+
+### DeploymentObject
+
+```
+Get-AzDeploymentOperation -DeploymentObject <psobject> [-Profile <string>] [<CommonParameters>]
+```
+
+## ALIASES
+
+## DESCRIPTION
+
+A deployment operation records one resource action taken during a deployment.
+Each operation is returned with its id, provisioning state, status code, the error the resource provider reported rendered as text, and the id of the resource it targeted.
+Omit `-OperationIds` to list every operation of the deployment; supply one or more ids to fetch just those.
+Pipe a deployment object, or pass it to `-DeploymentObject`, to list every operation of the deployment it names.
+This is the primary way to find the specific resource that caused a deployment to fail.
+
+## EXAMPLES
+
+### List the operations of a deployment
+
+Return every operation recorded for the subscription scoped deployment `scenario-deployment`.
+
+```powershell
+Get-AzDeploymentOperation -DeploymentName scenario-deployment
+```
+
+### Get specific operations by id
+
+Fetch two operations by id. Each id is retrieved individually and the results are returned as one array.
+
+```powershell
+Get-AzDeploymentOperation -DeploymentName scenario-deployment -OperationIds 38241FA9B6B8DAE1, 08584103205698517279
+```
+
+### List the operations of a piped deployment
+
+Pipe an object that names the deployment. The deployment name is read from its `DeploymentName` or `Name` property, and the subscription is the active profile's subscription.
+
+```powershell
+$deployment = [pscustomobject]@{ Name = 'scenario-deployment' }
+$deployment | Get-AzDeploymentOperation
+```
+
+## PARAMETERS
+
+### -DeploymentName
+
+The deployment name.
+
+```yaml
+Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases:
+- Name
+ParameterSets:
+- Name: Get
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+- Name: List
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: true
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -DeploymentObject
+
+A deployment object, usually piped, whose `DeploymentName` or `Name` property names the subscription scoped deployment whose operations are listed. The active profile's subscription is used. Cannot be combined with `-OperationIds` or `-SubscriptionId`.
+
+```yaml
+Type: System.Management.Automation.PSObject
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: DeploymentObject
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: true
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -OperationIds
+
+One or more deployment operation Ids to get. Omit to list every operation of the deployment.
+
+```yaml
+Type: System.String[]
+DefaultValue: ''
+SupportsWildcards: false
+Aliases:
+- OperationId
+ParameterSets:
+- Name: Get
+  Position: Named
+  IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -Profile
+
+Name of a saved profile to use for this call instead of the currently-active one. Manage profiles with `Set-AzProfile` / `Get-AzProfile`.
+
+```yaml
+Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -SubscriptionId
+
+Azure Subscription Id. Defaults to the active profile's subscription.
+
+```yaml
+Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: Get
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+- Name: List
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+-ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### System.String
+
+The deployment name can be supplied from the pipeline by property name.
+
+### System.Management.Automation.PSObject
+
+A deployment object can be piped to `-DeploymentObject`; the cmdlet lists every operation of the deployment it names.
+
+## OUTPUTS
+
+### Microsoft.Azure.Azclips.Extensions.Resources.Models.PSDeploymentOperation
+
+One object per matching operation — one per requested id when `-OperationIds` is supplied, every operation of the deployment otherwise.
+Each object carries only `Id`, `OperationId`, `ProvisioningState`, `StatusCode`, `StatusMessage`, and `TargetResource`.
+`StatusMessage` renders the error the resource provider reported as text, with one indented line per error detail, and is empty when the operation reported no error.
+`TargetResource` is the resource id of the resource the operation targeted.
+
+## NOTES
+
+Generated help for resources.
+
+## RELATED LINKS
+
+- [Online Version]()
+

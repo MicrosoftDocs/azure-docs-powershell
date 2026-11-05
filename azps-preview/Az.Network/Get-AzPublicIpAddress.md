@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Network.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Network
-ms.date: 10/27/2026
+ms.date: 09/25/2026
 PlatyPS schema version: 2024-05-01
 title: Get-AzPublicIpAddress
 ---
@@ -196,7 +196,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.Azclips.Extensions.Network.Models.PublicIpAddress
+### Microsoft.Azure.Azclips.Extensions.Network.Models.PublicIPAddress
 
 The requested public IP address, or every public IP address in the resource group or subscription when `-Name` is omitted.
 
@@ -205,3 +205,7 @@ The requested public IP address, or every public IP address in the resource grou
 Generated help for network.
 
 ## RELATED LINKS
+
+
+- [Online Version]()
+

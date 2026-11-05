@@ -2,7 +2,7 @@
 Module Name: Az.Resources
 Module Guid: d4bb27e5-ae5f-4f79-a25c-ad1cecdc443a
 Download Help Link: https://learn.microsoft.com/powershell/module/az.resources
-Help Version: 0.1.4
+Help Version: 0.1.5
 Locale: en-US
 content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Resources/help
 original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Resources/help
@@ -13,8 +13,14 @@ original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Reso
 Azure PowerShell - Resources
 
 ## Az.Resources Cmdlets
+### [Get-AzDeploymentOperation](Get-AzDeploymentOperation.md)
+Get the individual operations of a subscription scoped deployment.
+
 ### [Get-AzManagementGroupDeployment](Get-AzManagementGroupDeployment.md)
 Gets management-group deployments.
+
+### [Get-AzManagementGroupDeploymentOperation](Get-AzManagementGroupDeploymentOperation.md)
+Get the individual operations of a management group scoped deployment.
 
 ### [Get-AzResourceGroup](Get-AzResourceGroup.md)
 Show details of a specific resource group.
@@ -22,8 +28,14 @@ Show details of a specific resource group.
 ### [Get-AzResourceGroupDeployment](Get-AzResourceGroupDeployment.md)
 Get a single resource group deployment by name, or list all deployments in a resource group.
 
+### [Get-AzResourceGroupDeploymentOperation](Get-AzResourceGroupDeploymentOperation.md)
+Get the individual operations of a resource group scoped deployment.
+
 ### [Get-AzRoleAssignment](Get-AzRoleAssignment.md)
 List Azure RBAC role assignments.
+
+### [Get-AzTenantDeploymentOperation](Get-AzTenantDeploymentOperation.md)
+Get the individual operations of a tenant scoped deployment.
 
 ### [Invoke-AzRestMethod](Invoke-AzRestMethod.md)
 Send an authenticated REST request to Azure Resource Manager and return the raw response.

@@ -2,7 +2,7 @@
 Module Name: Az.Network
 Module Guid: a4739626-87f4-46c0-99b1-5088c786dbe5
 Download Help Link: https://learn.microsoft.com/powershell/module/az.network
-Help Version: 0.1.2
+Help Version: 0.1.3
 Locale: en-US
 content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Network/help
 original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Network/help
@@ -36,9 +36,6 @@ Create a public IP address.
 
 ### [New-AzVirtualNetwork](New-AzVirtualNetwork.md)
 Create a virtual network.
-
-### [New-AzVirtualNetworkSubnetConfig](New-AzVirtualNetworkSubnetConfig.md)
-Create an in-memory virtual network subnet configuration.
 
 ### [Remove-AzNetworkInterface](Remove-AzNetworkInterface.md)
 Delete a network interface.
