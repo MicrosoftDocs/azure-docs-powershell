@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Compute.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Compute
-ms.date: 10/27/2026
+ms.date: 09/28/2026
 PlatyPS schema version: 2024-05-01
 title: Get-AzVM
 ---
@@ -384,3 +384,6 @@ One `VirtualMachine` object per matching VM. `-ResourceGroupName` with `-Name`, 
 Generated help for compute.
 
 ## RELATED LINKS
+
+
+- [Online Version]()
