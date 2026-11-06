@@ -594,7 +594,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.Azclips.Extensions.Network.Models.PublicIpAddress
+### Microsoft.Azure.Azclips.Extensions.Network.Models.PublicIPAddress
 
 The public IP address that was created.
 

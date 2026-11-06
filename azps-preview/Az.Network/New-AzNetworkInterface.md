@@ -45,7 +45,7 @@ Create the network interface `mynic` in the first subnet of the virtual network 
 
 ```powershell
 $vnet = Get-AzVirtualNetwork -ResourceGroupName myrg -Name myvnet
-New-AzNetworkInterface -ResourceGroupName myrg -Name mynic -Location eastus -SubnetId $vnet.Properties.Subnets[0].Id
+New-AzNetworkInterface -ResourceGroupName myrg -Name mynic -Location eastus -SubnetId $vnet.Subnets[0].Id
 ```
 
 ### Create a network interface with a public IP address and a network security group
@@ -55,7 +55,7 @@ New-AzNetworkInterface -ResourceGroupName myrg -Name mynic -Location eastus -Sub
 ```powershell
 $vnet = Get-AzVirtualNetwork -ResourceGroupName myrg -Name myvnet
 $pip = Get-AzPublicIpAddress -ResourceGroupName myrg -Name mypip
-New-AzNetworkInterface -ResourceGroupName myrg -Name mynic -Location eastus -SubnetId $vnet.Properties.Subnets[0].Id `
+New-AzNetworkInterface -ResourceGroupName myrg -Name mynic -Location eastus -SubnetId $vnet.Subnets[0].Id `
     -PublicIpAddressId $pip.Id -NetworkSecurityGroupId mynsg
 ```
 
