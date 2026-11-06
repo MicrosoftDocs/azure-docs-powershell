@@ -12,7 +12,7 @@ title: Migration guide for Az 15.0.0
 
 ### `New-AzBatchCertificate`
 
-Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See https://learn.microsoft.com/en-us/azure/batch/batch-certificate-migration-guide
+Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See [Migrate from Batch account certificates to Azure Key Vault](/azure/batch/batch-certificate-migration-guide).
 
 #### Before
 ```powershell
@@ -23,7 +23,7 @@ New-AzBatchCertificate -FilePath "E:\Certificates\MyCert.cer" -BatchContext $Con
 
 ### `Remove-AzBatchCertificate`
 
-Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See https://learn.microsoft.com/en-us/azure/batch/batch-certificate-migration-guide
+Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See [Migrate from Batch account certificates to Azure Key Vault](/azure/batch/batch-certificate-migration-guide).
 
 #### Before
 ```powershell
@@ -34,7 +34,7 @@ Remove-AzBatchCertificate -ThumbprintAlgorithm "sha1" -Thumbprint "c1e494a415149
 
 ### `Stop-AzBatchCertificateDeletion`
 
-Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See https://learn.microsoft.com/en-us/azure/batch/batch-certificate-migration-guide
+Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See [Migrate from Batch account certificates to Azure Key Vault](/azure/batch/batch-certificate-migration-guide).
 
 #### Before
 ```powershell
@@ -46,7 +46,7 @@ Stop-AzBatchCertificateDeletion -ThumbprintAlgorithm "sha1" -Thumbprint "c1e494a
 
 ### `Get-AzBatchCertificate`
 
-Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See https://learn.microsoft.com/en-us/azure/batch/batch-certificate-migration-guide
+Azure Batch account certificates feature has been retired and all certificate related commands have been removed from Batch. See [Migrate from Batch account certificates to Azure Key Vault](/azure/batch/batch-certificate-migration-guide).
 
 #### Before
 ```powershell
