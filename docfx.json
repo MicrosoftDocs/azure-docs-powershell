@@ -1,7 +1,7 @@
 {
     "build": {
         "content": [
-            { "files": ["toc.yml"], "src": "azps-preview", "version": "azps-preview", "dest": "module/azps-preview" },
+            { "files": ["toc.yml"], "src": "azps-preview", "version": "azps-preview", "dest": "module/azure-powershell" },
             { "files": ["**/*.yml"], "src": "azps-preview", "version": "azps-preview", "exclude": ["docs-conceptual/**"], "dest": "module" },
             { "files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/azps-preview", "version": "azps-preview", "dest": "azure" },
 
