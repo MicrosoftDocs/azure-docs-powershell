@@ -17,6 +17,7 @@ Import a PFX or PEM certificate containing a private key.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Import-AzKeyVaultCertificate -FilePath <string> -Name <string> [-Password <securestring>]

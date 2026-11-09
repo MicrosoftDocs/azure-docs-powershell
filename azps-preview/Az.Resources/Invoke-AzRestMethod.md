@@ -17,6 +17,7 @@ Send an authenticated REST request to Azure Resource Manager and return the raw 
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Invoke-AzRestMethod [-Method <string>] [-Uri <string>] [-Payload <string>] [-Headers <Object>]

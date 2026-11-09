@@ -17,6 +17,7 @@ Authenticate to Azure.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Connect-AzAccount [-SubscriptionId <string>] [-TenantId <string>] [-UseDeviceCode]

@@ -17,6 +17,7 @@ Delete a public IP address.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Remove-AzPublicIpAddress -Name <string> -ResourceGroupName <string> [-SubscriptionId <string>]

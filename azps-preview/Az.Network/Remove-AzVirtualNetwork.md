@@ -17,6 +17,7 @@ Delete a virtual network.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Remove-AzVirtualNetwork -Name <string> -ResourceGroupName <string> [-SubscriptionId <string>]

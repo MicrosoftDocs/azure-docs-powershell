@@ -17,6 +17,7 @@ Download a public X509 certificate as PEM or DER.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Export-AzKeyVaultCertificate -Name <string> -FilePath <string> [-Version <string>]

@@ -17,6 +17,7 @@ Create a network security group.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 New-AzNetworkSecurityGroup -Name <string> -ResourceGroupName <string> -Location <string>

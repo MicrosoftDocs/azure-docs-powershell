@@ -17,6 +17,7 @@ Save the template used for a resource group deployment to a file.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Save-AzResourceGroupDeploymentTemplate -ResourceGroupName <string> -Name <string>

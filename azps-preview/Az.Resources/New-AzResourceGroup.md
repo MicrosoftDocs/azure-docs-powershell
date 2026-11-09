@@ -17,6 +17,7 @@ Create a new resource group.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 New-AzResourceGroup -Name <string> -Location <string> [-SubscriptionId <string>] [-Profile <string>]

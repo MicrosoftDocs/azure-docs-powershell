@@ -17,6 +17,7 @@ Validate whether an ARM or Bicep template would be accepted for a management gro
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Test-AzManagementGroupDeployment -ManagementGroupId <string> -Location <string> [-Name <string>]

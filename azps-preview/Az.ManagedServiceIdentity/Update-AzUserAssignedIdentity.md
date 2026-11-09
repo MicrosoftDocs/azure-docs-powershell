@@ -17,6 +17,7 @@ Updates a user-assigned managed identity.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Update-AzUserAssignedIdentity -ResourceGroupName <string> -Name <string> [-SubscriptionId <string>]

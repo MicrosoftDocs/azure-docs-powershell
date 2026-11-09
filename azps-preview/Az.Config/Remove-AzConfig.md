@@ -17,6 +17,7 @@ Delete a configuration value.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Remove-AzConfig -Key <string> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]

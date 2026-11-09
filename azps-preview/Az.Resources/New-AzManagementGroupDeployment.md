@@ -17,6 +17,7 @@ Deploy an ARM or Bicep template at management group scope.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 New-AzManagementGroupDeployment -Name <string> -ManagementGroupId <string> -Location <string>

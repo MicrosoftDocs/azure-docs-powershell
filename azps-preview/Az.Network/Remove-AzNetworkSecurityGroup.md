@@ -17,6 +17,7 @@ Delete a network security group.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Remove-AzNetworkSecurityGroup -Name <string> -ResourceGroupName <string> [-SubscriptionId <string>]

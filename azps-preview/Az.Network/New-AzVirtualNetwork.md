@@ -17,6 +17,7 @@ Create a virtual network.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 New-AzVirtualNetwork -Name <string> -Location <string> -ResourceGroupName <string>

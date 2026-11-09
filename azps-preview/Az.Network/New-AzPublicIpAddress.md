@@ -17,6 +17,7 @@ Create a public IP address.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 New-AzPublicIpAddress -Name <string> -Location <string> -ResourceGroupName <string>

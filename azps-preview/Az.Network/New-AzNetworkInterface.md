@@ -17,6 +17,7 @@ Create a network interface.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 New-AzNetworkInterface -Name <string> -Location <string> -ResourceGroupName <string>

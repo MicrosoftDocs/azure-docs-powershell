@@ -17,6 +17,7 @@ Sign out from the current Azure account context.
 
 ## SYNTAX
 
+### Syntax
 
 ```
 Disconnect-AzAccount [-WhatIf] [-Confirm] [<CommonParameters>]
