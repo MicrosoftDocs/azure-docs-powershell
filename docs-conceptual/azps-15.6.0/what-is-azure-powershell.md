@@ -9,6 +9,8 @@ title: What is Azure PowerShell
 
 # What is Azure PowerShell?
 
+**TEST: VERSION=15.6.0**
+
 Azure PowerShell is the product name for the collection of official Microsoft PowerShell modules for
 managing Azure resources. It requires PowerShell, a command-line shell and scripting language.
 

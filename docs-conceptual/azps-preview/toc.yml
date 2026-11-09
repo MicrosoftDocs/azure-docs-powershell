@@ -1,6 +1,10 @@
 items:
   - name: Azure PowerShell (preview)
     href: index.yml
+  - name: Overview
+    items:
+      - name: What is Azure PowerShell?
+        href: what-is-azure-powershell.md
   - name: Get started
     items:
       - name: Getting started
