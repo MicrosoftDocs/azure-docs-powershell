@@ -17,7 +17,6 @@ Sign out from the current Azure account context.
 
 ## SYNTAX
 
-### __AllParameterSets
 
 ```
 Disconnect-AzAccount [-WhatIf] [-Confirm] [<CommonParameters>]

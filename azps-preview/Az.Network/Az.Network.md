@@ -4,8 +4,8 @@ Module Guid: a4739626-87f4-46c0-99b1-5088c786dbe5
 Download Help Link: https://learn.microsoft.com/powershell/module/az.network
 Help Version: 0.1.3
 Locale: en-US
-content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Network/help
-original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Network/help
+content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/Network/help
+original_content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/Network/help
 ---
 
 # Az.Network Module

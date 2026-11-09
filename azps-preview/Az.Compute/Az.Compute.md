@@ -4,8 +4,8 @@ Module Guid: 6c9a0e61-382a-42be-9ccd-1383d0e38112
 Download Help Link: https://learn.microsoft.com/powershell/module/az.compute
 Help Version: 0.1.5
 Locale: en-US
-content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Compute/help
-original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Compute/help
+content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/Compute/help
+original_content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/Compute/help
 ---
 
 # Az.Compute Module

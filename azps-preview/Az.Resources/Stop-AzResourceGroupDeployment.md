@@ -17,7 +17,6 @@ Cancel a currently running resource group deployment.
 
 ## SYNTAX
 
-### __AllParameterSets
 
 ```
 Stop-AzResourceGroupDeployment [-ResourceGroupName] <string> [-Name] <string>

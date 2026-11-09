@@ -17,7 +17,6 @@ Update supplied certificate attributes, tags or issuance policy.
 
 ## SYNTAX
 
-### __AllParameterSets
 
 ```
 Update-AzKeyVaultCertificate -Name <string> [-PassThru] [-Version <string>] [-Enabled <bool>]

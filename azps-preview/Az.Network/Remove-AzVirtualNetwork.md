@@ -17,7 +17,6 @@ Delete a virtual network.
 
 ## SYNTAX
 
-### __AllParameterSets
 
 ```
 Remove-AzVirtualNetwork -Name <string> -ResourceGroupName <string> [-SubscriptionId <string>]

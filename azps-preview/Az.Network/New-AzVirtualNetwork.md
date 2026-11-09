@@ -17,7 +17,6 @@ Create a virtual network.
 
 ## SYNTAX
 
-### __AllParameterSets
 
 ```
 New-AzVirtualNetwork -Name <string> -Location <string> -ResourceGroupName <string>

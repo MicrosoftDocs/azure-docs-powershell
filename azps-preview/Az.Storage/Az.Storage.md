@@ -4,8 +4,8 @@ Module Guid: 3f1d6b28-9c04-4f7a-bb51-2a6d8e4c7f10
 Download Help Link: https://learn.microsoft.com/powershell/module/az.storage
 Help Version: 0.1.1
 Locale: en-US
-content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Storage/help
-original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/Storage/help
+content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/Storage/help
+original_content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/Storage/help
 ---
 
 # Az.Storage Module

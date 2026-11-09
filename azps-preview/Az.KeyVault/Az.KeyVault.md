@@ -4,8 +4,8 @@ Module Guid: 91be1979-845d-4cb0-9462-e0f430c19fd6
 Download Help Link: https://learn.microsoft.com/powershell/module/az.keyvault
 Help Version: 0.1.2
 Locale: en-US
-content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/KeyVault/help
-original_content_git_url: https://github.com/Azure/azclips/tree/main/src/PS/KeyVault/help
+content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/KeyVault/help
+original_content_git_url: https://github.com/Azure/azclips/tree/fix-ps-help-unnamed-parameter-set/src/PS/KeyVault/help
 ---
 
 # Az.KeyVault Module

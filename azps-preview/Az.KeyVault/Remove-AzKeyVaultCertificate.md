@@ -17,7 +17,6 @@ Soft-delete all versions of a certificate after confirmation.
 
 ## SYNTAX
 
-### __AllParameterSets
 
 ```
 Remove-AzKeyVaultCertificate -Name <string> [-PassThru] [-VaultName <string>] [-VaultUrl <string>]
