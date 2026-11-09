@@ -104,4 +104,4 @@ For more information about adding these functions to your profile, see [How to e
 <!-- link references -->
 
 [01]: ./install-powershell-modules.md
-[02]: ./getting-started.md
+[02]: ./get-started-azureps.md

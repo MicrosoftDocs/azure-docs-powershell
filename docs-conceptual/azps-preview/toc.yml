@@ -1,27 +1,29 @@
 items:
   - name: Azure PowerShell (preview)
     href: index.yml
-  - name: Get started
+  - name: Overview
     items:
-      - name: Getting started
-        href: getting-started.md
-        displayName: intro, introduction, sign in, signin, log in, login, preview
-      - name: Configuration
-        href: config.md
-        displayName: config, defaults, settings, environment, variables
+      - name: What is Azure PowerShell?
+        href: what-is-azure-powershell.md
+      - name: Get started
+        href: get-started-azureps.md
+        displayName: sign in, signin, log in, login, find, feedback, intro, introduction
   - name: Install
     items:
       - name: Overview
-        href: install-overview.md
+        href: install-azure-powershell.md
         displayName: install, setup, preview
       - name: Install Azure PowerShell modules
         href: install-powershell-modules.md
         displayName: install, modules, nupkg, tarball
-  - name: Sign in
+  - name: How-to guides
     items:
       - name: Manage sign-in profiles
         href: profile-base-login.md
         displayName: profile, login, signin, authentication, tenant, subscription
+      - name: Configuration
+        href: config.md
+        displayName: config, defaults, settings, environment, variables
   - name: Troubleshoot
     items:
       - name: Troubleshooting
