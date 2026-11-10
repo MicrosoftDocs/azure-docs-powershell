@@ -77,7 +77,7 @@ Invoke-AzRestMethod -Method GET -Uri $uri
 
 The response shows status code `200`, and the JSON body includes the storage account's name, location, `sku` set to `Standard_LRS`, `kind` set to `StorageV2`, and `properties.provisioningState`. If the provisioning state isn't `Succeeded` yet, wait a few seconds and run the `GET` request again.
 
-The preview REST cmdlet targets Azure Resource Manager only. It doesn't automatically follow pagination or poll long-running operations. For more information, see [Invoke-AzRestMethod](../../azps-preview/Az.Resources/Invoke-AzRestMethod.md).
+The preview REST cmdlet targets Azure Resource Manager only. It doesn't automatically follow pagination or poll long-running operations. For more information, see [Invoke-AzRestMethod](/powershell/module/az.resources/invoke-azrestmethod?view=azps-preview&preserve-view=true).
 
 ## Inspect a failure
 
