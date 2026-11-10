@@ -17,7 +17,7 @@ Creates a user-assigned managed identity.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 New-AzUserAssignedIdentity -ResourceGroupName <string> -Name <string> -Location <string>

@@ -17,7 +17,7 @@ Removes a user-assigned managed identity.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 Remove-AzUserAssignedIdentity -ResourceGroupName <string> -Name <string> [-SubscriptionId <string>]

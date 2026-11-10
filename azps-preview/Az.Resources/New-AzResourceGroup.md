@@ -17,7 +17,7 @@ Create a new resource group.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 New-AzResourceGroup -Name <string> -Location <string> [-SubscriptionId <string>] [-Profile <string>]
