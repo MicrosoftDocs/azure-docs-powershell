@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.ManagedServiceIdentity.dll-H
 HelpUri: ''
 Locale: en-US
 Module Name: Az.ManagedServiceIdentity
-ms.date: 09/04/2026
+ms.date: 10/29/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzUserAssignedIdentity
 ---
@@ -288,3 +288,4 @@ None.
 ## RELATED LINKS
 
 https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview
+
