@@ -17,7 +17,7 @@ Validate whether an ARM or Bicep template would be accepted for a resource group
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 Test-AzResourceGroupDeployment -ResourceGroupName <string> [-Name <string>] [-TemplateUri <string>]

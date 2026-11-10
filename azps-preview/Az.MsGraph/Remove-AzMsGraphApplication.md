@@ -17,7 +17,7 @@ Deletes a Microsoft Graph application registration.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 Remove-AzMsGraphApplication -Id <string> [-WhatIf] [-Confirm] [<CommonParameters>]

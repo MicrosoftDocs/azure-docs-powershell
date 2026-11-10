@@ -32,9 +32,13 @@
   "Update-AzKeyVaultCertificate": "Key Vault",
   "Update-AzKeyVaultSecret": "Key Vault",
 
+  "Get-AzFederatedIdentityCredential": "Managed Service Identity",
   "Get-AzUserAssignedIdentity": "Managed Service Identity",
+  "New-AzFederatedIdentityCredential": "Managed Service Identity",
   "New-AzUserAssignedIdentity": "Managed Service Identity",
+  "Remove-AzFederatedIdentityCredential": "Managed Service Identity",
   "Remove-AzUserAssignedIdentity": "Managed Service Identity",
+  "Update-AzFederatedIdentityCredential": "Managed Service Identity",
   "Update-AzUserAssignedIdentity": "Managed Service Identity",
 
   "Get-AzMsGraphApplication": "MS Graph",

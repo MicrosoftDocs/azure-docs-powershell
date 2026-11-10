@@ -17,7 +17,7 @@ Create a network interface.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 New-AzNetworkInterface -Name <string> -Location <string> -ResourceGroupName <string>

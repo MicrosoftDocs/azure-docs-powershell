@@ -17,7 +17,7 @@ Sets the active profile by name.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 Set-AzProfile [-Name] <string> [<CommonParameters>]
