@@ -129,6 +129,6 @@ Get-AzProfile
 
 ## Related content
 
-- For more information, see [Get started with the preview](getting-started.md).
+- For more information, see [Get started with the preview](get-started-azureps.md).
 - For more information, see [Manage sign-in profiles in Azure PowerShell](profile-base-login.md).
 - For more information, see [Deploy and manage a virtual machine application](tutorial-vm-application.md).

@@ -111,5 +111,5 @@ Get-AzResourceGroup -SubscriptionId $sub -Name $rg -ErrorAction SilentlyContinue
 
 ## Related content
 
-- For more information, see [Get started with the preview](getting-started.md).
+- For more information, see [Get started with the preview](get-started-azureps.md).
 - For more information, see [Troubleshoot Azure PowerShell issues](troubleshooting.md).
