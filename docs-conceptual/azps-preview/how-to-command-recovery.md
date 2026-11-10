@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: how-to
-ms.date: 10/28/2026
+ms.date: 11/10/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-generated
 ---
 
 # Discover commands and troubleshoot Azure PowerShell preview
 
-In this article, you find the right Azure PowerShell preview cmdlet for a task, fall back to an authenticated REST request when there's no cmdlet for it, and collect the information you need to recover from a failed command.
+In this article, you find the right Azure PowerShell preview cmdlet for a task, send an authenticated REST request, and collect the information you need to recover from a failed command.
 
-By the end of this article, you've inspected a cmdlet's syntax and examples, created and verified a resource that has no dedicated preview cmdlet by using `Invoke-AzRestMethod`, inspected a controlled failure, and removed everything that the article created.
+By the end of this article, you've inspected a cmdlet's syntax and examples, created and verified a resource by using `Invoke-AzRestMethod`, inspected a controlled failure, and removed everything that the article created.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ Both commands return the resource group with the name and location you specified
 
 ## Send an authenticated request when there's no cmdlet
 
-The preview doesn't include a cmdlet that creates storage accounts. Use `Invoke-AzRestMethod` to send the Azure Resource Manager request directly. The request uses the preview session's existing authentication.
+Use `Invoke-AzRestMethod` to send the Azure Resource Manager request directly. The request uses the preview session's existing authentication. This example creates a storage account through REST; the preview also provides `New-AzStorageAccount` for that task.
 
 Create a storage account with a `PUT` request:
 
@@ -77,7 +77,7 @@ Invoke-AzRestMethod -Method GET -Uri $uri
 
 The response shows status code `200`, and the JSON body includes the storage account's name, location, `sku` set to `Standard_LRS`, `kind` set to `StorageV2`, and `properties.provisioningState`. If the provisioning state isn't `Succeeded` yet, wait a few seconds and run the `GET` request again.
 
-The preview REST cmdlet targets Azure Resource Manager only. It doesn't automatically follow pagination or poll long-running operations. For more information, see [Invoke-AzRestMethod](/powershell/module/az.resources/invoke-azrestmethod?view=azps-preview&preserve-view=true).
+The preview REST cmdlet targets Azure Resource Manager only. It doesn't automatically follow pagination or poll long-running operations. For more information, see [Invoke-AzRestMethod](../../azps-preview/Az.Resources/Invoke-AzRestMethod.md).
 
 ## Inspect a failure
 
