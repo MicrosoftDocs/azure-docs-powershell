@@ -17,7 +17,7 @@ Update secret attributes without changing its value.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 Update-AzKeyVaultSecret -Name <string> [-Version <string>] [-Enabled <bool>]

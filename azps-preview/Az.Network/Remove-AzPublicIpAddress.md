@@ -17,7 +17,7 @@ Delete a public IP address.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 Remove-AzPublicIpAddress -Name <string> -ResourceGroupName <string> [-SubscriptionId <string>]

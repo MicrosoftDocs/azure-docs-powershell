@@ -17,7 +17,7 @@ Create a network security group.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 New-AzNetworkSecurityGroup -Name <string> -ResourceGroupName <string> -Location <string>

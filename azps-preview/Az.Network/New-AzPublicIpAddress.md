@@ -17,7 +17,7 @@ Create a public IP address.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 New-AzPublicIpAddress -Name <string> -Location <string> -ResourceGroupName <string>

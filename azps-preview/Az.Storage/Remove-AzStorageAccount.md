@@ -17,7 +17,7 @@ Remove an Azure Storage account.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 Remove-AzStorageAccount [-ResourceGroupName] <string> [-Name] <string> [-SubscriptionId <string>]

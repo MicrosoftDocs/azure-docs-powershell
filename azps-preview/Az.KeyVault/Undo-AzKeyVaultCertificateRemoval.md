@@ -17,7 +17,7 @@ Recover a soft-deleted certificate and its versions.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 Undo-AzKeyVaultCertificateRemoval -Name <string> [-VaultName <string>] [-VaultUrl <string>]

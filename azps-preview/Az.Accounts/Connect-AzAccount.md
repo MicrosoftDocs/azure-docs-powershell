@@ -17,7 +17,7 @@ Authenticate to Azure.
 
 ## SYNTAX
 
-### __AllParameterSets
+### All parameters
 
 ```
 Connect-AzAccount [-SubscriptionId <string>] [-TenantId <string>] [-UseDeviceCode]
