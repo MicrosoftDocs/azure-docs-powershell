@@ -17,7 +17,7 @@ Set or update a configuration value.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Set-AzConfig -Key <string> -Value <string> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]

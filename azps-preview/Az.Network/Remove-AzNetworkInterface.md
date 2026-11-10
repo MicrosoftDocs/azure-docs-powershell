@@ -17,7 +17,7 @@ Delete a network interface.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Remove-AzNetworkInterface -Name <string> -ResourceGroupName <string> [-SubscriptionId <string>]

@@ -17,7 +17,7 @@ Removes a saved profile by name.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Remove-AzProfile [-Name] <string> [-WhatIf] [-Confirm] [<CommonParameters>]

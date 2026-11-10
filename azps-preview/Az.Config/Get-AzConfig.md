@@ -17,7 +17,7 @@ Retrieve a configuration value.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Get-AzConfig -Key <string> [<CommonParameters>]

@@ -17,7 +17,7 @@ Updates a user-assigned managed identity.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Update-AzUserAssignedIdentity -ResourceGroupName <string> -Name <string> [-SubscriptionId <string>]

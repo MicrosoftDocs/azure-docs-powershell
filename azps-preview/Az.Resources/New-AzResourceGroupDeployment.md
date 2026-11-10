@@ -17,7 +17,7 @@ Deploy an ARM or Bicep template into an existing resource group.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 New-AzResourceGroupDeployment -ResourceGroupName <string> -Name <string> [-TemplateUri <string>]

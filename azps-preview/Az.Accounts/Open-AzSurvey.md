@@ -17,7 +17,7 @@ Opens the feedback form in the default System Browser to provide feedback about 
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Open-AzSurvey [<CommonParameters>]

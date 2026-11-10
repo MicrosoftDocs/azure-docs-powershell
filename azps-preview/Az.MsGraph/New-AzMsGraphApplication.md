@@ -17,7 +17,7 @@ Creates a Microsoft Graph application registration.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 New-AzMsGraphApplication -DisplayName <string> [-SignInAudience <string>] [<CommonParameters>]

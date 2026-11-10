@@ -17,7 +17,7 @@ Set a secret or create a new version using SecureString input.
 
 ## SYNTAX
 
-### All parameters
+### Default (Default)
 
 ```
 Set-AzKeyVaultSecret -SecretValue <securestring> -Name <string> [-Enabled <bool>]
