@@ -17,7 +17,7 @@ Authenticate to Azure.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 Connect-AzAccount [-SubscriptionId <string>] [-TenantId <string>] [-UseDeviceCode]
@@ -38,10 +38,12 @@ For service principal client-secret sign-in, use either `-ClientId` with
 with `-Credential <PSCredential>` syntax. The credential username is the application
 ID and its password is the client secret. Both forms use the same authentication flow.
 
-Initial service principal sign-in requires a tenant ID and subscription ID. The
-subscription can also come from the current profile's default. Client-secret arguments
+Initial service principal sign-in requires a tenant ID and an explicit subscription ID.
+Login does not inherit argument defaults from the current profile. Client-secret arguments
 can't be combined with managed identity, device-code authentication, a federated token,
 or `-Profile`. Use `-OutProfile` to save a named profile.
+
+Managed identity sign-in also requires a subscription ID, supplied with `-SubscriptionId`. The managed identity environment determines the tenant; don't supply `-TenantId` with `-Identity`.
 
 ## EXAMPLES
 
@@ -50,7 +52,34 @@ or `-Profile`. Use `-OutProfile` to save a named profile.
 Launches the interactive browser sign-in experience and persists the resulting account context for the specified subscription. Use this on a workstation with a default browser available.
 
 ```powershell
-Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '11111111-1111-1111-1111-111111111111'
+Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '00000000-0000-0000-0000-000000000000'
+```
+
+### Create a named profile
+
+Save the subscription and tenant context as `dev` and make it the active profile.
+
+```powershell
+Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '00000000-0000-0000-0000-000000000000' -OutProfile dev
+```
+
+### Switch the active profile
+
+Sign in as `dev`, then switch to an already saved `prod` profile for subsequent commands. The `prod` profile can use a different subscription and tenant.
+
+```powershell
+Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '00000000-0000-0000-0000-000000000000' -OutProfile dev
+Set-AzProfile -Name prod
+Get-AzResourceGroup
+```
+
+### Use a profile for one command
+
+Sign in as `dev`, then use an already saved `prod` profile's subscription and tenant for one command, leaving `dev` active.
+
+```powershell
+Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '00000000-0000-0000-0000-000000000000' -OutProfile dev
+Get-AzResourceGroup -Profile prod
 ```
 
 ### Sign in with device code on a host without a browser
@@ -58,7 +87,7 @@ Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -Tenant
 Uses the device-code authentication flow — prints a code and verification URL to the console so you can complete the sign-in from another device. Useful for SSH sessions, containers, and headless build agents.
 
 ```powershell
-Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '11111111-1111-1111-1111-111111111111' -UseDeviceCode
+Connect-AzAccount -SubscriptionId '00000000-0000-0000-0000-000000000000' -TenantId '00000000-0000-0000-0000-000000000000' -UseDeviceCode
 ```
 
 ### Sign in with a service principal client secret
@@ -68,7 +97,7 @@ The `-ServicePrincipal` switch is optional with `-ClientSecret`.
 
 ```powershell
 $clientSecret = $Host.UI.ReadLineAsSecureString()
-Connect-AzAccount -ClientId '22222222-2222-2222-2222-222222222222' -ClientSecret $clientSecret -Tenant '11111111-1111-1111-1111-111111111111' -Subscription '00000000-0000-0000-0000-000000000000' -OutProfile ci
+Connect-AzAccount -ClientId '00000000-0000-0000-0000-000000000000' -ClientSecret $clientSecret -Tenant '00000000-0000-0000-0000-000000000000' -Subscription '00000000-0000-0000-0000-000000000000' -OutProfile ci
 ```
 
 ### Sign in with a backward-compatible service principal credential
@@ -79,8 +108,8 @@ is the client secret. This form requires `-ServicePrincipal`; don't also pass
 
 ```powershell
 $clientSecret = $Host.UI.ReadLineAsSecureString()
-$credential = [System.Management.Automation.PSCredential]::new('22222222-2222-2222-2222-222222222222', $clientSecret)
-Connect-AzAccount -ServicePrincipal -Credential $credential -Tenant '11111111-1111-1111-1111-111111111111' -Subscription '00000000-0000-0000-0000-000000000000' -OutProfile ci
+$credential = [System.Management.Automation.PSCredential]::new('00000000-0000-0000-0000-000000000000', $clientSecret)
+Connect-AzAccount -ServicePrincipal -Credential $credential -Tenant '00000000-0000-0000-0000-000000000000' -Subscription '00000000-0000-0000-0000-000000000000' -OutProfile ci
 ```
 
 ### Re-authenticate a client-secret profile
@@ -90,6 +119,22 @@ This example uses the profile saved by either service principal example above.
 
 ```powershell
 Connect-AzAccount -Profile ci
+```
+
+### Sign in with a managed identity
+
+Sign in using a managed identity. This is typically used when running in an Azure environment that supports managed identities, such as an Azure VM, App Service, or Function App. Tenant ID will be resolved automatically from the environment.
+
+```powershell
+Connect-AzAccount -Identity -SubscriptionId '00000000-0000-0000-0000-000000000000'
+```
+
+### Sign in with a user-assigned managed identity
+
+Select a user-assigned identity by client ID and persist the specified subscription.
+
+```powershell
+Connect-AzAccount -Identity -ClientId '00000000-0000-0000-0000-000000000000' -SubscriptionId '00000000-0000-0000-0000-000000000000'
 ```
 
 ## PARAMETERS
@@ -216,6 +261,7 @@ HelpMessage: ''
 ### -Identity
 
 Sign in using a managed identity. System-assigned by default; combine with `-ClientId`, `-ObjectId`, or `-ResourceId` to select a specific user-assigned identity.
+Requires an explicit subscription ID supplied with `-SubscriptionId`.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -281,7 +327,8 @@ HelpMessage: ''
 
 ### -Profile
 
-Name of an existing named profile to sign into. Mutually exclusive with `-OutProfile`.
+Name of an existing named profile to sign into, using its saved subscription ID.
+Mutually exclusive with `-OutProfile` and `-SubscriptionId`.
 
 ```yaml
 Type: System.String
@@ -346,7 +393,8 @@ HelpMessage: ''
 
 ### -SubscriptionId
 
-Azure Subscription Id.
+Azure subscription ID. Must be supplied explicitly for initial sign-in, including
+managed identities. Can't be combined with `-Profile`.
 
 ```yaml
 Type: System.String
@@ -415,10 +463,6 @@ HelpMessage: ''
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-Runs the command in a mode that only reports what would happen without performing the actions.
-Runs the command in a mode that only reports what would happen without performing the actions.
 Runs the command in a mode that only reports what would happen without performing the actions.
 
 ```yaml

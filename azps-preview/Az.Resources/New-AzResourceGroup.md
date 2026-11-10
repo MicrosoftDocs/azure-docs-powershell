@@ -17,7 +17,7 @@ Create a new resource group.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 New-AzResourceGroup -Name <string> -Location <string> [-SubscriptionId <string>] [-Profile <string>]
@@ -161,8 +161,6 @@ HelpMessage: ''
 
 ### -WhatIf
 
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
 Runs the command in a mode that only reports what would happen without performing the actions.
 
 ```yaml

@@ -17,7 +17,7 @@ Create a certificate version from an explicit certificate policy.
 
 ## SYNTAX
 
-### __AllParameterSets
+### Default (Default)
 
 ```
 Add-AzKeyVaultCertificate -Name <string> [-NoWait] [-Wait] [-TimeoutSeconds <int>] [-Enabled <bool>]
