@@ -338,5 +338,5 @@ This cmdlet targets the Azure Resource Manager audience only. It does not poll l
 ## RELATED LINKS
 
 
-- [Get-AzResourceGroup]()
-- [New-AzResourceGroupDeployment]()
+- [Get-AzResourceGroup](./Get-AzResourceGroup.md)
+- [New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)

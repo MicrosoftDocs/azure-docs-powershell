@@ -155,6 +155,3 @@ Status string confirming the operation, in the form `Deleted <key>`.
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()

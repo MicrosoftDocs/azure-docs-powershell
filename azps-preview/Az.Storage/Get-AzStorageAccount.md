@@ -208,6 +208,3 @@ Gets Azure Storage accounts, either a single account by name or all accounts in 
 ## NOTES
 
 ## RELATED LINKS
-
-- [Online Version]()
-

@@ -214,6 +214,6 @@ Only a deployment whose provisioning state is `Accepted` or `Running` can be can
 ## RELATED LINKS
 
 
-- [Get-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeployment]()
-- [Remove-AzResourceGroupDeployment]()
+- [Get-AzResourceGroupDeployment](./Get-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+- [Remove-AzResourceGroupDeployment](./Remove-AzResourceGroupDeployment.md)

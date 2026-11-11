@@ -601,7 +601,3 @@ The public IP address that was created.
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()
-

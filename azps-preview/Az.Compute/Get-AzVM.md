@@ -467,6 +467,3 @@ One `VirtualMachine` object per matching VM. `-ResourceGroupName` with `-Name`, 
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()

@@ -197,6 +197,3 @@ Each object carries only `Id`, `OperationId`, `ProvisioningState`, `StatusCode`,
 ## NOTES
 
 ## RELATED LINKS
-
-- [Online Version]()
-

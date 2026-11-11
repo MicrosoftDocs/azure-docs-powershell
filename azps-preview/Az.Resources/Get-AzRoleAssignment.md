@@ -363,6 +363,3 @@ One `RoleAssignment` object per matching assignment, including its id, name, and
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()

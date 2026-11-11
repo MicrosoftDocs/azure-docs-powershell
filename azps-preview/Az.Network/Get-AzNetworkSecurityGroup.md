@@ -203,6 +203,3 @@ The requested network security group, or every network security group in the res
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()

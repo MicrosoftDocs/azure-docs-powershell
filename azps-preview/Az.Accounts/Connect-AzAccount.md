@@ -501,6 +501,3 @@ The activated profile projection (name, tenant ID, subscription ID, cloud, authe
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()

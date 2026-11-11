@@ -270,6 +270,3 @@ Returns `True` after the resource group deletion completes successfully.
 Deleting a resource group permanently deletes all resources contained in the group.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

@@ -428,6 +428,6 @@ Differences from Az.Resources: on success this cmdlet returns the `DeploymentVal
 ## RELATED LINKS
 
 
-- [New-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeploymentWhatIf]()
-- [Get-AzResourceGroupDeployment]()
+- [New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeploymentWhatIf](./New-AzResourceGroupDeploymentWhatIf.md)
+- [Get-AzResourceGroupDeployment](./Get-AzResourceGroupDeployment.md)

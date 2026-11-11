@@ -343,6 +343,6 @@ What-if is a read-only preview: it never creates or modifies resources. Use `New
 ## RELATED LINKS
 
 
-- [New-AzResourceGroupDeployment]()
-- [New-AzResourceGroup]()
-- [Get-AzResourceGroup]()
+- [New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+- [New-AzResourceGroup](./New-AzResourceGroup.md)
+- [Get-AzResourceGroup](./Get-AzResourceGroup.md)

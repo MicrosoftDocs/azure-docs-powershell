@@ -203,7 +203,3 @@ The requested public IP address, or every public IP address in the resource grou
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()
-
