@@ -15,6 +15,13 @@ managing Azure resources. It requires PowerShell, a command-line shell and scrip
 You can use Azure PowerShell interactively by running commands from PowerShell or creating and
 executing scripts that consist of multiple commands.
 
+## Next-generation Azure PowerShell
+
+The next-generation of Azure PowerShell is available in preview with an AI-enhanced command-line
+experience and profile-based authentication. It provides intelligent assistance while continuing to
+use the same Azure management APIs. For preview-specific guidance and limitations, see
+[What is Azure PowerShell (preview)?](/powershell/azure/what-is-azure-powershell?view=azps-preview&preserve-view=true).
+
 ## The Az PowerShell module
 
 The current version of Azure PowerShell is the **Az** PowerShell module. It's the recommended

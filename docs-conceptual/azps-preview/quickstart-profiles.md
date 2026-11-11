@@ -22,7 +22,7 @@ By the end of this quickstart, you:
 
 ## Prerequisites
 
-- Azure PowerShell preview, installed by following [Install Azure PowerShell preview](install-overview.md).
+- Azure PowerShell preview, installed by following [Install Azure PowerShell preview](install-azure-powershell.md).
 - PowerShell 7.6 or later. Use a fresh session without classic Az modules loaded.
 - A workstation with a default browser for interactive sign-in.
 - Two Azure subscriptions you can sign in to. The subscriptions can be in the same tenant or in different tenants. If you don't have a subscription, [create a free account](https://azure.microsoft.com/free/).
@@ -129,6 +129,6 @@ Get-AzProfile
 
 ## Related content
 
-- For more information, see [Get started with the preview](getting-started.md).
+- For more information, see [Get started with the preview](get-started-azureps.md).
 - For more information, see [Manage sign-in profiles in Azure PowerShell](profile-base-login.md).
 - For more information, see [Deploy and manage a virtual machine application](tutorial-vm-application.md).

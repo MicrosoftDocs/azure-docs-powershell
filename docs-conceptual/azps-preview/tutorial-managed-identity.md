@@ -27,7 +27,7 @@ In this tutorial, you:
 > - Clean up
 
 > [!WARNING]
-> This scenario requires non-interactive authentication that the [current preview limitations](getting-started.md#current-limitations) list as unsupported. Use these commands for engineering review only. They don't establish supported functionality. Don't run this walkthrough until the product team confirms support for your preview build.
+> This scenario requires non-interactive authentication that the [current preview limitations](get-started-azureps.md#current-limitations) list as unsupported. Use these commands for engineering review only. They don't establish supported functionality. Don't run this walkthrough until the product team confirms support for your preview build.
 
 ## Prerequisites
 
@@ -132,6 +132,6 @@ On the host, sign out and remove the `workload-$run` profile with `Disconnect-Az
 
 ## Related content
 
-- For more information, see [Get started with the preview](getting-started.md).
+- For more information, see [Get started with the preview](get-started-azureps.md).
 - For more information, see [Set up and switch sign-in profiles](quickstart-profiles.md).
 - For more information, see [Deploy and troubleshoot a Bicep template](tutorial-deploy-bicep.md).

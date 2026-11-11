@@ -18,8 +18,8 @@ landingContent:
     linkLists:
     - linkListType: overview
       links:
-        - text: Getting started
-          url: getting-started.md
+        - text: Get started
+          url: get-started-azureps.md
   - title: Quickstart
     linkLists:
       - linkListType: quickstart
@@ -51,7 +51,7 @@ landingContent:
       - linkListType: download
         links:
           - text: Overview
-            url: install-overview.md
+            url: install-azure-powershell.md
           - text: Install Azure PowerShell modules
             url: install-powershell-modules.md
   - title: Azure PowerShell reference

@@ -91,6 +91,6 @@ Microsoft Graph soft-deletes the registration, so it can be restored for 30 days
 
 ## Related content
 
-- For more information, see [Get started with the preview](getting-started.md).
+- For more information, see [Get started with the preview](get-started-azureps.md).
 - For more information, see [Set up and switch sign-in profiles](quickstart-profiles.md).
 - For more information, see [Run repeatable deployments from a pipeline](tutorial-pipeline-deployments.md).
