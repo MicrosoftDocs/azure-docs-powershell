@@ -186,8 +186,6 @@ The matching virtual network, or each virtual network in scope when listing.
 
 ## NOTES
 
-Generated help for network.
-
 ## RELATED LINKS
 
 

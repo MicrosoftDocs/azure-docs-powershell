@@ -376,8 +376,6 @@ The created `RoleAssignment`, including its id, name, and properties (role defin
 
 ## NOTES
 
-Generated help for resources.
-
 ## RELATED LINKS
 
 

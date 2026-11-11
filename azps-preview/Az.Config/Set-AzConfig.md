@@ -175,8 +175,6 @@ Status string confirming the operation, in the form `Set <key> = <value>`.
 
 ## NOTES
 
-Generated help for config.
-
 ## RELATED LINKS
 
 

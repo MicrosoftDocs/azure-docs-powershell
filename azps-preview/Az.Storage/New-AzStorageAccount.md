@@ -1749,8 +1749,6 @@ The newly-created `StorageAccount` object, including its assigned ARM resource I
 
 ## NOTES
 
-Generated help for storage.
-
 ## RELATED LINKS
 
 

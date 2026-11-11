@@ -500,8 +500,6 @@ The activated profile projection (name, tenant ID, subscription ID, cloud, authe
 
 ## NOTES
 
-Generated help for login.
-
 ## RELATED LINKS
 
 
