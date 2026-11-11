@@ -198,8 +198,6 @@ The newly-created `ResourceGroup` object, including its ARM resource ID and prov
 
 ## NOTES
 
-Generated help for resources.
-
 ## RELATED LINKS
 
 

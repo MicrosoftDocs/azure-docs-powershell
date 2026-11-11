@@ -154,8 +154,6 @@ Status string confirming the operation, in the form `Deleted <key>`.
 
 ## NOTES
 
-Generated help for config.
-
 ## RELATED LINKS
 
 

@@ -143,8 +143,6 @@ One `ResourceGroup` object per matching group — a single result when `-Name` i
 
 ## NOTES
 
-Generated help for resources.
-
 ## RELATED LINKS
 
 

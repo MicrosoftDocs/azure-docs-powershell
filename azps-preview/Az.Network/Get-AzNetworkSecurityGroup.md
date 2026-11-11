@@ -202,8 +202,6 @@ The requested network security group, or every network security group in the res
 
 ## NOTES
 
-Generated help for network.
-
 ## RELATED LINKS
 
 

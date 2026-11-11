@@ -470,8 +470,6 @@ The network interface that was created, including its IP configuration, the allo
 
 ## NOTES
 
-Generated help for network.
-
 ## RELATED LINKS
 
 

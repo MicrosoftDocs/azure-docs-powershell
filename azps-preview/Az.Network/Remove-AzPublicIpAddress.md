@@ -231,8 +231,6 @@ Returned only when `-PassThru` is specified: `$true` once the public IP address 
 
 ## NOTES
 
-Generated help for network.
-
 ## RELATED LINKS
 
 

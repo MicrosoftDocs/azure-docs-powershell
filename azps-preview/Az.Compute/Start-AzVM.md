@@ -226,8 +226,6 @@ This cmdlet does not emit an object on the pipeline; it only writes progress and
 
 ## NOTES
 
-Generated help for compute.
-
 ## RELATED LINKS
 
 

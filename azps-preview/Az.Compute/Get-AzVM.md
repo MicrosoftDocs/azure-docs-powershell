@@ -466,8 +466,6 @@ One `VirtualMachine` object per matching VM. `-ResourceGroupName` with `-Name`, 
 
 ## NOTES
 
-Generated help for compute.
-
 ## RELATED LINKS
 
 

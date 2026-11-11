@@ -202,8 +202,6 @@ The requested public IP address, or every public IP address in the resource grou
 
 ## NOTES
 
-Generated help for network.
-
 ## RELATED LINKS
 
 
