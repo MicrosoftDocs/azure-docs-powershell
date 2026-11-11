@@ -441,6 +441,6 @@ Differences from Az.Resources: the cmdlet returns the `DeploymentExtended` model
 
 ## RELATED LINKS
 
-- [Test-AzManagementGroupDeployment]()
-- [Get-AzManagementGroupDeployment]()
-- [Remove-AzManagementGroupDeployment]()
+- [Test-AzManagementGroupDeployment](./Test-AzManagementGroupDeployment.md)
+- [Get-AzManagementGroupDeployment](./Get-AzManagementGroupDeployment.md)
+- [Remove-AzManagementGroupDeployment](./Remove-AzManagementGroupDeployment.md)

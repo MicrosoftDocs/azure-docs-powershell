@@ -422,5 +422,5 @@ Differences from Az.Resources: on success this cmdlet returns the `DeploymentVal
 
 ## RELATED LINKS
 
-- [New-AzManagementGroupDeployment]()
-- [Get-AzManagementGroupDeployment]()
+- [New-AzManagementGroupDeployment](./New-AzManagementGroupDeployment.md)
+- [Get-AzManagementGroupDeployment](./Get-AzManagementGroupDeployment.md)

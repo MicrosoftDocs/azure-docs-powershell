@@ -211,6 +211,3 @@ Returns the updated resource group.
 This cmdlet replaces tags; it does not merge them with the existing tag collection.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

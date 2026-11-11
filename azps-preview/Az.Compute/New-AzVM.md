@@ -883,6 +883,3 @@ Networking resources are created or reused only in the default `NewNetworkInterf
 The `ExistingNetworkInterface` parameter set uses the existing NICs and their networking configuration without creating networking resources.
 
 ## RELATED LINKS
-
-
-- [Online Version]()

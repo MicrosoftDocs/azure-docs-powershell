@@ -276,6 +276,6 @@ The exported template is the template as submitted, not the resolved deployment 
 ## RELATED LINKS
 
 
-- [Get-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeployment]()
-- [Test-AzResourceGroupDeployment]()
+- [Get-AzResourceGroupDeployment](./Get-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+- [Test-AzResourceGroupDeployment](./Test-AzResourceGroupDeployment.md)

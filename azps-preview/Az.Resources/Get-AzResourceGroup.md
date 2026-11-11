@@ -144,6 +144,3 @@ One `ResourceGroup` object per matching group — a single result when `-Name` i
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()

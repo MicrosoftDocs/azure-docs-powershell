@@ -427,5 +427,5 @@ The target resource group must already exist. Use `New-AzResourceGroup` to creat
 ## RELATED LINKS
 
 
-- [New-AzResourceGroup]()
-- [Get-AzResourceGroup]()
+- [New-AzResourceGroup](./New-AzResourceGroup.md)
+- [Get-AzResourceGroup](./Get-AzResourceGroup.md)

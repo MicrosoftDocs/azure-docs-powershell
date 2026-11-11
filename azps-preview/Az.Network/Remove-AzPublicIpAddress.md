@@ -232,7 +232,3 @@ Returned only when `-PassThru` is specified: `$true` once the public IP address 
 ## NOTES
 
 ## RELATED LINKS
-
-
-- [Online Version]()
-

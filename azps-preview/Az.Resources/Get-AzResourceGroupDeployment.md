@@ -224,6 +224,6 @@ This is a read-only operation. Use `New-AzResourceGroupDeployment` to create a d
 ## RELATED LINKS
 
 
-- [New-AzResourceGroupDeployment]()
-- [New-AzResourceGroupDeploymentWhatIf]()
-- [Get-AzResourceGroup]()
+- [New-AzResourceGroupDeployment](./New-AzResourceGroupDeployment.md)
+- [New-AzResourceGroupDeploymentWhatIf](./New-AzResourceGroupDeploymentWhatIf.md)
+- [Get-AzResourceGroup](./Get-AzResourceGroup.md)
