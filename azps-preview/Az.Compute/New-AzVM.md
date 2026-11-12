@@ -21,12 +21,12 @@ Create a virtual machine with a new network interface or attach existing network
 
 ```
 New-AzVM -Name <string> -Location <string> -ResourceGroupName <string> -VmSize <string>
- -AdminUsername <string> -AdminPassword <string> -NetworkInterfaceName <string>
- [-SubscriptionId <string>] [-Zone <string>] [-StorageSku <string>] [-OSDiskDeleteOption <string>]
- [-Image <string>] [-SecurityType <string>] [-OSDiskSecurityEncryptionType <string>]
- [-OSDiskSecureVMDiskEncryptionSet <string>] [-EnableSecureBoot <bool>] [-EnableVtpm <bool>]
- [-VirtualNetworkName <string>] [-SecurityGroupName <string>] [-SubnetName <string>]
- [-NetworkInterfaceDeleteOption <string>] [-SubnetNames <string[]>]
+ -AdminUsername <string> -NetworkInterfaceName <string> [-SubscriptionId <string>] [-Zone <string>]
+ [-StorageSku <string>] [-OSDiskDeleteOption <string>] [-Image <string>] [-SecurityType <string>]
+ [-OSDiskSecurityEncryptionType <string>] [-OSDiskSecureVMDiskEncryptionSet <string>]
+ [-EnableSecureBoot <bool>] [-EnableVtpm <bool>] [-AdminPassword <string>]
+ [-SshKeyValues <string[]>] [-VirtualNetworkName <string>] [-SecurityGroupName <string>]
+ [-SubnetName <string>] [-NetworkInterfaceDeleteOption <string>] [-SubnetNames <string[]>]
  [-SubnetAddressPrefixes <string[][]>] [-AddressPrefixes <string[]>] [-AcceleratedNetworking]
  [-PublicIpAddressName <string>] [-Tags <hashtable>] [-Profile <string>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -36,12 +36,12 @@ New-AzVM -Name <string> -Location <string> -ResourceGroupName <string> -VmSize <
 
 ```
 New-AzVM -Name <string> -Location <string> -ResourceGroupName <string> -VmSize <string>
- -AdminUsername <string> -AdminPassword <string> -NetworkInterfaceId <string[]>
- [-SubscriptionId <string>] [-Zone <string>] [-StorageSku <string>] [-OSDiskDeleteOption <string>]
- [-Image <string>] [-SecurityType <string>] [-OSDiskSecurityEncryptionType <string>]
- [-OSDiskSecureVMDiskEncryptionSet <string>] [-EnableSecureBoot <bool>] [-EnableVtpm <bool>]
- [-NetworkInterfaceDeleteOption <string>] [-Tags <hashtable>] [-Profile <string>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ -AdminUsername <string> -NetworkInterfaceId <string[]> [-SubscriptionId <string>] [-Zone <string>]
+ [-StorageSku <string>] [-OSDiskDeleteOption <string>] [-Image <string>] [-SecurityType <string>]
+ [-OSDiskSecurityEncryptionType <string>] [-OSDiskSecureVMDiskEncryptionSet <string>]
+ [-EnableSecureBoot <bool>] [-EnableVtpm <bool>] [-AdminPassword <string>]
+ [-SshKeyValues <string[]>] [-NetworkInterfaceDeleteOption <string>] [-Tags <hashtable>]
+ [-Profile <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## ALIASES
@@ -62,6 +62,7 @@ Use `-PublicIpAddressName` to choose the public IP address by name or resource I
 Use `-Zone` to place the virtual machine in a single availability zone.
 Use `-StorageSku` to choose the storage SKU of the managed OS disk.
 Use `-OSDiskDeleteOption` to choose whether the OS disk is deleted or kept when the virtual machine is deleted.
+For Linux images, use `-SshKeyValues` with inline SSH public keys or public key file paths. `-AdminPassword` is optional when at least one SSH public key is supplied; omitting it disables password authentication.
 Use this command when you want a one-shot VM deployment without composing the underlying resources individually.
 
 ## EXAMPLES
@@ -74,6 +75,15 @@ Assign `$adminPassword` from a secure source in your own pipeline before invokin
 ```powershell
 $adminPassword = 'P@ssw0rd-replace-me!'
 New-AzVM -SubscriptionId 00000000-0000-0000-0000-000000000000 -Name myvm -Location eastus -ResourceGroupName myrg -VmSize Standard_D2s_v3 -Image MicrosoftWindowsServer:WindowsServer:2022-datacenter-azure-edition:latest -AdminUsername azureuser -AdminPassword $adminPassword -NetworkInterfaceName mynic -VirtualNetworkName myvnet
+```
+
+### Create a Linux VM with SSH key-only authentication
+
+Provision an Ubuntu VM using an existing SSH public key. Because `-AdminPassword` is omitted, password authentication is disabled.
+
+```powershell
+$sshPublicKey = 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8g'
+New-AzVM -SubscriptionId 00000000-0000-0000-0000-000000000000 -Name myvm -Location eastus -ResourceGroupName myrg -VmSize Standard_D2s_v3 -Image Canonical:0001-com-ubuntu-server-jammy:22_04-lts-gen2:latest -AdminUsername azureuser -SshKeyValues $sshPublicKey -NetworkInterfaceName mynic -VirtualNetworkName myvnet
 ```
 
 ### Create a VM that uses an existing network security group
@@ -222,7 +232,7 @@ HelpMessage: ''
 
 ### -AdminPassword
 
-The administrator password.
+The administrator password. For a Linux image, this parameter can be omitted when at least one SSH public key is supplied with `-SshKeyValues`; omitting it disables password authentication.
 
 ```yaml
 Type: System.String
@@ -232,7 +242,7 @@ Aliases: []
 ParameterSets:
 - Name: (All)
   Position: Named
-  IsRequired: true
+  IsRequired: false
   ValueFromPipeline: false
   ValueFromPipelineByPropertyName: false
   ValueFromRemainingArguments: false
@@ -643,6 +653,27 @@ AcceptedValues:
 - TrustedLaunch
 - ConfidentialVM
 - Standard
+HelpMessage: ''
+```
+
+### -SshKeyValues
+
+One or more SSH public key values or paths to existing public key files. This parameter requires a Linux marketplace image. When `-AdminPassword` is omitted, password authentication is disabled.
+
+```yaml
+Type: System.String[]
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
 HelpMessage: ''
 ```
 

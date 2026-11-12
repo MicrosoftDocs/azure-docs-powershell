@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Resources.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Resources
-ms.date: 10-09-2026
+ms.date: 10/09/2026
 PlatyPS schema version: 2024-05-01
 title: Test-AzResourceGroupDeployment
 ---
@@ -80,7 +80,7 @@ HelpMessage: ''
 
 ### -Name
 
-The name of the deployment. Used to track and reference the validation in deployment history.
+The name of the deployment. Used to track and reference the validation in deployment history. When omitted, defaults to the template file or URI name without its extension, or a generated GUID when no valid name can be derived.
 
 ```yaml
 Type: System.String
