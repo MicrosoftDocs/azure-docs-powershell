@@ -36,7 +36,7 @@ New-AzConfigurationAssignment -ResourceGroupName smdtest$location -ResourceParen
 ```output
 Location                   : westus2
 MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/ps1/providers/Microsoft.Maintenance/maintenanceConfigurations/ps2
-ResourceId                 : 7b32ed22-dc7b-4a17-9c42-36c024f4c9f9
+ResourceId                 : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 Id                         :
 /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/smdtestwestus2/providers/Microsoft.Compute/hostGroups/smddhgwestus2/hosts/smddhwestus2/providers/Microsoft.Maintenance/configurationAssignments/ps2
 Name                       : ps2
@@ -47,14 +47,14 @@ Register maintenance configuration for dedicated host.
 
 ### Example 2
 ```powershell
-New-AzConfigurationAssignment -ConfigurationAssignmentName configAssignmentName -MaintenanceConfigurationId /subscriptions/eee2cef4-bc47-4278-b4f8-cfc65f25dfd8/resourceGroups/AUMDemov01/providers/Microsoft.Maintenance/maintenanceConfigurations/kachavan-prepost01  -FilterLocation eastus2euap,centraluseuap  -FilterOsType Windows,Linux -FilterTag '{"tagKey1" : ["tagKey1Value1", "tagKey1Value2"], "tagKey2" : ["tagKey2Value1", "tagKey2Value2", "tagKey2Value3"] }' -FilterOperator "Any" -Location global
+New-AzConfigurationAssignment -ConfigurationAssignmentName configAssignmentName -MaintenanceConfigurationId /subscriptions/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2/resourceGroups/AUMDemov01/providers/Microsoft.Maintenance/maintenanceConfigurations/kachavan-prepost01  -FilterLocation eastus2euap,centraluseuap  -FilterOsType Windows,Linux -FilterTag '{"tagKey1" : ["tagKey1Value1", "tagKey1Value2"], "tagKey2" : ["tagKey2Value1", "tagKey2Value2", "tagKey2Value3"] }' -FilterOperator "Any" -Location global
 ```
 
 ```output
 Location                   : global
-MaintenanceConfigurationId : /subscriptions/eee2cef4-bc47-4278-b4f8-cfc65f25dfd8/resourceGroups/AUMDemov01/providers/Microsoft.Maintenance/maintenanceConfigurations/kachavan-prepost01
-ResourceId                 : /subscriptions/eee2cef4-bc47-4278-b4f8-cfc65f25dfd8
-Id                         : /subscriptions/eee2cef4-bc47-4278-b4f8-cfc65f25dfd8/providers/microsoft.maintenance/configurationassignments/configassignmentname
+MaintenanceConfigurationId : /subscriptions/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2/resourceGroups/AUMDemov01/providers/Microsoft.Maintenance/maintenanceConfigurations/kachavan-prepost01
+ResourceId                 : /subscriptions/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
+Id                         : /subscriptions/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2/providers/microsoft.maintenance/configurationassignments/configassignmentname
 Name                       : configassignmentname
 Type                       : microsoft.maintenance/configurationassignments
 FilterTag                  : {"tagKey1":["tagKey1Value1","tagKey1Value2"],"tagKey2":["tagKey2Value1","tagKey2Value2","tagKey2Value3"]}

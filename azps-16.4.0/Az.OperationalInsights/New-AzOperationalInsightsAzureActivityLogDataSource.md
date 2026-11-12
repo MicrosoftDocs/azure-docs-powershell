@@ -36,16 +36,16 @@ The New-AzOperationalInsightsAzureActivityLogDataSource cmdlet enables Log Analy
 
 ### Example 1
 ```powershell
-New-AzOperationalInsightsAzureActivityLogDataSource -ResourceGroupName testrg -WorkspaceName LogAnalyticsworkspace -Name test -SubscriptionId 0b1f6471-1bf0-4dda-aec3-cb9272f09590
+New-AzOperationalInsightsAzureActivityLogDataSource -ResourceGroupName testrg -WorkspaceName LogAnalyticsworkspace -Name test -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
 Name              : test
 ResourceGroupName : testrg
 WorkspaceName     : LogAnalyticsworkspace
-ResourceId        : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/testrg/providers/Microsoft.OperationalInsights/workspaces/LogAnalyticsworkspace/datasources/test
+ResourceId        : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/testrg/providers/Microsoft.OperationalInsights/workspaces/LogAnalyticsworkspace/datasources/test
 Kind              : AzureActivityLog
-Properties        : {"linkedResourceId":"/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/providers/microsoft.insights/eventtypes/management","backfillStartTime":"0001-01-01T00:00:00+00:00"}
+Properties        : {"linkedResourceId":"/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/microsoft.insights/eventtypes/management","backfillStartTime":"0001-01-01T00:00:00+00:00"}
 ```
 
 This command enables Log Analytics to collect Azure activity log from given subscription.
