@@ -34,7 +34,7 @@ Delete a InformaticaOrganizationResource
 
 ### Example 1: Remove Informatica Organization
 ```powershell
-Remove-AzInformaticaOrganization -Name "InformaticaTestResource" -ResourceGroupName "InformaticaTestRg" -SubscriptionId "ce37d538-dfa3-49c3-b3cd-149b4b7db48a"
+Remove-AzInformaticaOrganization -Name "InformaticaTestResource" -ResourceGroupName "InformaticaTestRg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output

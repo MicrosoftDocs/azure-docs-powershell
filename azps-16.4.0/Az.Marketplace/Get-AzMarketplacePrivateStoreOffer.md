@@ -62,7 +62,7 @@ Get private store's offers with private + public plans  that were added under te
 
 ### Example 2
 ```powershell
-Get-AzMarketplacePrivateStoreOffer -PrivateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -SubscriptionId bc17bb69-1264-4f90-a9f6-0e51e29d5281
+Get-AzMarketplacePrivateStoreOffer -PrivateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -74,7 +74,7 @@ PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
 CreatedBy                 :
 CreatedDate               : 01/01/0001 00:00:00
 SpecificPlanIdsLimitation : {large-pr, small-pr}
-Id                        : /subscriptions/bc17bb69-1264-4f90-a9f6-0e51e29d5281/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+Id                        : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
                             publisherid.offerid
 Name                      : publisherid.offerid
 Type                      : Microsoft.Marketplace/privateStores/offers
@@ -87,7 +87,7 @@ PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
 CreatedBy                 :
 CreatedDate               : 01/01/0001 00:00:00
 SpecificPlanIdsLimitation : {azure_managedservices_professional-pr}
-Id                        : /subscriptions/bc17bb69-1264-4f90-a9f6-0e51e29d5281/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+Id                        : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
                             publisherid1.offerid1
 Name                      : publisherid1.offerid1
 Type                      : Microsoft.Marketplace/privateStores/offers
@@ -119,7 +119,7 @@ Get  private store's offer with private + public plans that was been added under
 
 ### Example 4
 ```powershell
-Get-AzMarketplacePrivateStoreOffer -PrivateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -OfferId publisherid.offerid -SubscriptionId bc17bb69-1264-4f90-a9f6-0e51e29d5281
+Get-AzMarketplacePrivateStoreOffer -PrivateStoreId 7gh67884-1r56-44fb-a93d-030d4ae08b2d -OfferId publisherid.offerid -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output
@@ -131,7 +131,7 @@ PrivateStoreId            : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
 CreatedBy                 :
 CreatedDate               : 01/01/0001 00:00:00
 SpecificPlanIdsLimitation : {large-pr, small-pr}
-Id                        : /subscriptions/bc17bb69-1264-4f90-a9f6-0e51e29d5281/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
+Id                        : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d/offers/
                             publisherid.offerid
 Name                      : publisherid.offerid
 Type                      : Microsoft.Marketplace/privateStores/offers
