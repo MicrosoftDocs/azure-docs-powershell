@@ -141,7 +141,7 @@ HelpMessage: ''
 
 ### -Name
 
-The name used for validation. Defaults to a new GUID when omitted.
+The name used for validation. When omitted, defaults to the template file or URI name without its extension, or a generated GUID when no valid name can be derived.
 Use 1-64 characters: letters, numbers, underscores, hyphens, periods, or parentheses.
 
 ```yaml

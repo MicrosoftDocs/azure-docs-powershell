@@ -34,6 +34,12 @@ Get the individual operations of a resource group scoped deployment.
 ### [Get-AzRoleAssignment](Get-AzRoleAssignment.md)
 List Azure RBAC role assignments.
 
+### [Get-AzSubDeployment](Get-AzSubDeployment.md)
+Get a single subscription-scope deployment by name, or list all deployments in a subscription.
+
+### [Get-AzSubDeploymentWhatIfResult](Get-AzSubDeploymentWhatIfResult.md)
+Preview the changes an ARM or Bicep template would make at the subscription scope, without deploying it.
+
 ### [Get-AzTenantDeploymentOperation](Get-AzTenantDeploymentOperation.md)
 Get the individual operations of a tenant scoped deployment.
 
@@ -55,6 +61,9 @@ Preview the changes an ARM or Bicep deployment would make to a resource group wi
 ### [New-AzRoleAssignment](New-AzRoleAssignment.md)
 Create an Azure RBAC role assignment.
 
+### [New-AzSubDeployment](New-AzSubDeployment.md)
+Deploy an ARM or Bicep template at the subscription scope.
+
 ### [Remove-AzManagementGroupDeployment](Remove-AzManagementGroupDeployment.md)
 Removes a management-group deployment from deployment history.
 
@@ -67,8 +76,14 @@ Delete a resource group deployment from the deployment history.
 ### [Remove-AzRoleAssignment](Remove-AzRoleAssignment.md)
 Delete an Azure RBAC role assignment.
 
+### [Remove-AzSubDeployment](Remove-AzSubDeployment.md)
+Delete a subscription-scope deployment from the deployment history.
+
 ### [Save-AzResourceGroupDeploymentTemplate](Save-AzResourceGroupDeploymentTemplate.md)
 Save the template used for a resource group deployment to a file.
+
+### [Save-AzSubDeploymentTemplate](Save-AzSubDeploymentTemplate.md)
+Save the template used for a subscription-scope deployment to a file.
 
 ### [Set-AzResourceGroup](Set-AzResourceGroup.md)
 Replaces the tags on a resource group.
@@ -79,8 +94,14 @@ Cancels a running management-group deployment.
 ### [Stop-AzResourceGroupDeployment](Stop-AzResourceGroupDeployment.md)
 Cancel a currently running resource group deployment.
 
+### [Stop-AzSubDeployment](Stop-AzSubDeployment.md)
+Cancel a currently running subscription-scope deployment.
+
 ### [Test-AzManagementGroupDeployment](Test-AzManagementGroupDeployment.md)
 Validate whether an ARM or Bicep template would be accepted for a management group deployment, without deploying it.
 
 ### [Test-AzResourceGroupDeployment](Test-AzResourceGroupDeployment.md)
 Validate whether an ARM or Bicep template would be accepted for a resource group deployment, without deploying it.
+
+### [Test-AzSubDeployment](Test-AzSubDeployment.md)
+Validate whether an ARM or Bicep template would be accepted for a subscription-scope deployment, without deploying it.
