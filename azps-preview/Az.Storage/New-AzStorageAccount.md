@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Storage.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Storage
-ms.date: 10/13/2026
+ms.date: 11/12/2026
 PlatyPS schema version: 2024-05-01
 title: New-AzStorageAccount
 ---
@@ -1743,10 +1743,11 @@ You can pipe a resource group name, storage account name, SKU name and location 
 
 ## OUTPUTS
 
-### Microsoft.Azure.Azclips.Extensions.Storage.Models.StorageAccount
+### Microsoft.Azure.Azclips.Extensions.Storage.Management.Models.StorageAccount
 
 The newly-created `StorageAccount` object, including its assigned ARM resource ID, provisioning state, SKU, kind, and service endpoints.
 
 ## NOTES
 
 ## RELATED LINKS
+

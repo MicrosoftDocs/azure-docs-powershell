@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Storage.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Storage
-ms.date: 10/13/2026
+ms.date: 11/12/2026
 PlatyPS schema version: 2024-05-01
 title: Remove-AzStorageAccount
 ---
@@ -220,3 +220,4 @@ Removes an Azure Storage account and all of the data it contains.
 ## NOTES
 
 ## RELATED LINKS
+
