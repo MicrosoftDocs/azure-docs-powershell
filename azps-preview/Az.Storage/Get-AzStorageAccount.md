@@ -4,7 +4,7 @@ external help file: Microsoft.Azure.Azclips.Cmdlets.Storage.dll-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: Az.Storage
-ms.date: 10/13/2026
+ms.date: 11/12/2026
 PlatyPS schema version: 2024-05-01
 title: Get-AzStorageAccount
 ---
@@ -201,10 +201,11 @@ You can pipe a resource group name and storage account name to this cmdlet by pr
 
 ## OUTPUTS
 
-### Microsoft.Azure.Azclips.Extensions.Storage.Models.StorageAccount
+### Microsoft.Azure.Azclips.Extensions.Storage.Management.Models.StorageAccount
 
 Gets Azure Storage accounts, either a single account by name or all accounts in a resource group or subscription.
 
 ## NOTES
 
 ## RELATED LINKS
+
