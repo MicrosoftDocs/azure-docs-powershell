@@ -40,8 +40,14 @@ Get a single subscription-scope deployment by name, or list all deployments in a
 ### [Get-AzSubDeploymentWhatIfResult](Get-AzSubDeploymentWhatIfResult.md)
 Preview the changes an ARM or Bicep template would make at the subscription scope, without deploying it.
 
+### [Get-AzTenantDeployment](Get-AzTenantDeployment.md)
+Get deployments at tenant scope.
+
 ### [Get-AzTenantDeploymentOperation](Get-AzTenantDeploymentOperation.md)
 Get the individual operations of a tenant scoped deployment.
+
+### [Get-AzTenantDeploymentWhatIfResult](Get-AzTenantDeploymentWhatIfResult.md)
+Preview the changes a tenant-scope deployment would make.
 
 ### [Invoke-AzRestMethod](Invoke-AzRestMethod.md)
 Send an authenticated REST request to Azure Resource Manager and return the raw response.
@@ -64,6 +70,9 @@ Create an Azure RBAC role assignment.
 ### [New-AzSubDeployment](New-AzSubDeployment.md)
 Deploy an ARM or Bicep template at the subscription scope.
 
+### [New-AzTenantDeployment](New-AzTenantDeployment.md)
+Deploy an ARM or Bicep template at tenant scope.
+
 ### [Remove-AzManagementGroupDeployment](Remove-AzManagementGroupDeployment.md)
 Removes a management-group deployment from deployment history.
 
@@ -79,11 +88,17 @@ Delete an Azure RBAC role assignment.
 ### [Remove-AzSubDeployment](Remove-AzSubDeployment.md)
 Delete a subscription-scope deployment from the deployment history.
 
+### [Remove-AzTenantDeployment](Remove-AzTenantDeployment.md)
+Delete a deployment from the tenant deployment history.
+
 ### [Save-AzResourceGroupDeploymentTemplate](Save-AzResourceGroupDeploymentTemplate.md)
 Save the template used for a resource group deployment to a file.
 
 ### [Save-AzSubDeploymentTemplate](Save-AzSubDeploymentTemplate.md)
 Save the template used for a subscription-scope deployment to a file.
+
+### [Save-AzTenantDeploymentTemplate](Save-AzTenantDeploymentTemplate.md)
+Save the template used by a tenant-scope deployment to a file.
 
 ### [Set-AzResourceGroup](Set-AzResourceGroup.md)
 Replaces the tags on a resource group.
@@ -97,6 +112,9 @@ Cancel a currently running resource group deployment.
 ### [Stop-AzSubDeployment](Stop-AzSubDeployment.md)
 Cancel a currently running subscription-scope deployment.
 
+### [Stop-AzTenantDeployment](Stop-AzTenantDeployment.md)
+Cancel a running deployment at tenant scope.
+
 ### [Test-AzManagementGroupDeployment](Test-AzManagementGroupDeployment.md)
 Validate whether an ARM or Bicep template would be accepted for a management group deployment, without deploying it.
 
@@ -105,3 +123,6 @@ Validate whether an ARM or Bicep template would be accepted for a resource group
 
 ### [Test-AzSubDeployment](Test-AzSubDeployment.md)
 Validate whether an ARM or Bicep template would be accepted for a subscription-scope deployment, without deploying it.
+
+### [Test-AzTenantDeployment](Test-AzTenantDeployment.md)
+Validate an ARM or Bicep template deployment at tenant scope.
