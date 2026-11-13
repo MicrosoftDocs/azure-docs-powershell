@@ -14,7 +14,7 @@ Azure PowerShell - Compute
 
 ## Az.Compute Cmdlets
 ### [Get-AzVM](Get-AzVM.md)
-Get a virtual machine or list virtual machines.
+Get a virtual machine or list virtual machines. TAG TEST ONLY - DO NOT MERGE.
 
 ### [New-AzVM](New-AzVM.md)
 Create a virtual machine with a new network interface or attach existing network interfaces.

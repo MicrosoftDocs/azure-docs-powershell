@@ -13,7 +13,7 @@ title: Get-AzVM
 
 ## SYNOPSIS
 
-Get a virtual machine or list virtual machines.
+Get a virtual machine or list virtual machines. TAG TEST ONLY - DO NOT MERGE.
 
 ## SYNTAX
 
