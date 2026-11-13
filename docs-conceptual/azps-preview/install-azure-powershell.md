@@ -1,7 +1,7 @@
 ---
 title: Install the Azure PowerShell preview
 description: Learn how to install the Azure PowerShell preview modules.
-ms.date: 10/27/2026
+ms.date: 11/13/2026
 ---
 
 # Install the Azure PowerShell preview
@@ -13,29 +13,42 @@ The Azure PowerShell preview ships as **azps** — the Az PowerShell modules (`A
 
 ## Install azps (one command)
 
-Preview artifacts live in a **private** GitHub repo; your account has **read** access. The installer uses your authenticated GitHub CLI (`gh`) session.
+The installer downloads the latest public preview bundle from
+[GitHub Releases](https://github.com/Azure/azclips/releases). GitHub CLI and GitHub sign-in aren't
+required.
 
 **Prerequisites:**
 
 - [PowerShell 7.6+](https://aka.ms/powershell)
-- [GitHub CLI](https://cli.github.com/) signed in (`gh auth login`)
+- `tar` available on `PATH` to extract the bundle
 
-**Download and install:**
+Run the following command inside PowerShell 7.6 or later (`pwsh`) on Linux, macOS, WSL, or Windows:
 
 ```powershell
-gh release download --repo Azure/azclips --pattern 'azps-cmdlets-*.tar.gz' --dir . --clobber
-New-Item -ItemType Directory -Force -Path azps-cmdlets | Out-Null
-$bundle = Get-ChildItem azps-cmdlets-*.tar.gz | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-tar -xzf $bundle.FullName -C azps-cmdlets
-./azps-cmdlets/InstallModule.ps1
+irm https://raw.githubusercontent.com/Azure/azclips/main/install/azps-install.ps1 -ErrorAction Stop | iex
 ```
+
+The bootstrap downloads and extracts the bundle into a temporary directory, invokes its
+`InstallModule.ps1` helper for the current user, and removes its temporary repository and files
+afterward. Installing the preview doesn't change your classic Az installation. New preview versions
+can coexist with previously installed preview versions.
+
+For installer parameters or manual/offline installation, see
+[Install Azure PowerShell preview modules](./install-powershell-modules.md).
 
 ## Verify
 
+Start a new PowerShell session and explicitly load the preview before running Azure cmdlets:
+
 ```powershell
-Import-Module -Name Az
-Get-Module -Name Az.* -ListAvailable | Select-Object Name, Version
+Import-Module Az -MinimumVersion 0.1.0 -MaximumVersion 0.1.9999
+Get-Module Az | Select-Object Name, Version, Path
 ```
+
+The output should show `Az` with a version in the `0.1.x` series and its installed path.
+`Import-Module Az` without a version constraint loads classic Az when it's installed. Running an
+Azure cmdlet without explicitly importing the preview can also autoload classic modules. For details,
+see [Switch between classic and preview Azure PowerShell](./switch-azps-versions.md).
 
 ## Other install scenarios
 
