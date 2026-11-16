@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: tutorial
-ms.date: 10/28/2026
+ms.date: 11/16/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
@@ -140,7 +140,13 @@ catch {
 
 `Foo` isn't a valid deployment mode, so the deployment is rejected. The output is the error message that explains why the request was rejected. Use the message to correct the command before you retry it.
 
-Inspect the deployment operations: **Pending engineering confirmation: deployment operations command.**
+When a deployment that Azure accepts fails later, list its individual operations to find the resource that failed:
+
+```powershell
+Get-AzResourceGroupDeploymentOperation -SubscriptionId $sub -ResourceGroupName $rg -DeploymentName '<failed-deployment-name>'
+```
+
+Each operation in the output includes its provisioning state, status code, the error that the resource provider reported, and the ID of the resource it targeted.
 
 ## Clean up resources
 
@@ -155,9 +161,21 @@ Get-AzResourceGroup -SubscriptionId $sub -Name $rg -ErrorAction SilentlyContinue
 
 Repeat the preview, deploy, inspect and clean-up steps at a broader scope, using a template written for that scope. Use test scopes and uniquely named resources. Deleting the resource group doesn't remove resources deployed at a higher scope, so remove those resources individually.
 
-- Subscription scope: **Pending engineering confirmation: subscription deployment commands.**
-- Management group scope: **Pending engineering confirmation: management group deployment commands.**
-- Tenant scope: **Pending engineering confirmation: tenant deployment commands.**
+Each scope has its own cmdlets. Unlike resource group deployments, these cmdlets require `-Location`, which is where Azure Resource Manager stores the deployment data.
+
+| Scope | Deploy | Preview changes | List operations |
+| --- | --- | --- | --- |
+| Subscription | `New-AzSubDeployment` | `Get-AzSubDeploymentWhatIfResult` | `Get-AzDeploymentOperation` |
+| Management group | `New-AzManagementGroupDeployment` | Not available | `Get-AzManagementGroupDeploymentOperation` |
+| Tenant | `New-AzTenantDeployment` | `Get-AzTenantDeploymentWhatIfResult` | `Get-AzTenantDeploymentOperation` |
+
+For example, to preview and deploy a subscription-scoped template:
+
+```powershell
+$subTemplate = '<path-to-subscription-template.bicep>'
+Get-AzSubDeploymentWhatIfResult -SubscriptionId $sub -Location $location -Name "sub-$run" -TemplateFile $subTemplate
+New-AzSubDeployment -SubscriptionId $sub -Location $location -Name "sub-$run" -TemplateFile $subTemplate -Mode Incremental
+```
 
 ## Related content
 
