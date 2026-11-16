@@ -1,7 +1,7 @@
 ---
 title: Get started with Azure PowerShell (preview)
 description: Learn the core concepts, supported environments, authentication model, current limitations, and coexistence guidance for Azure PowerShell during the preview.
-ms.date: 10/27/2026
+ms.date: 11/16/2026
 ai-usage: ai-assisted
 ---
 
@@ -28,23 +28,26 @@ The Azure PowerShell preview uses the following core concepts:
 
 ## Authentication
 
-Sign in to the Azure PowerShell preview with `Connect-AzAccount`.
+Sign in to the Azure PowerShell preview with `Connect-AzAccount`. It supports these sign-in methods:
+
+- **Interactive user sign-in**: `Connect-AzAccount -TenantId <tenant-id> -SubscriptionId <subscription-id>`. This method gives the best experience during the preview.
+- **Device code**: Add `-UseDeviceCode`, for environments without a browser.
+- **Managed identity**: `Connect-AzAccount -Identity -SubscriptionId <subscription-id>` for a system-assigned identity. For a user-assigned identity, add `-ClientId`, `-ObjectId`, or `-ResourceId`.
+- **Service principal with a client secret**: `Connect-AzAccount -ClientId <app-id> -ClientSecret <secret> -TenantId <tenant-id> -SubscriptionId <subscription-id>`, where `<secret>` is a `SecureString`. You can also pass a `PSCredential` with `-ServicePrincipal -Credential`.
+- **Service principal with a federated token**: `Connect-AzAccount -ServicePrincipal -ClientId <app-id> -TenantId <tenant-id> -SubscriptionId <subscription-id> -FederatedToken <token>`, for workload identity federation (OIDC) in pipelines.
+
+A subscription ID is required for each initial sign-in. For all parameters, see [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount?view=azps-preview&preserve-view=true).
 
 Azure PowerShell and Azure CLI don't share authenticated sessions during the preview. If you use both tools, sign in separately to each: use `Connect-AzAccount` for Azure PowerShell and `az login` for Azure CLI.
 
-For the best experience, use interactive user authentication.
-
 ## Current limitations
 
-The preview primarily supports interactive command-line use. Some automation scenarios and noninteractive authentication methods aren't yet supported.
-
-Authentication support is currently limited to interactive user sign-in.
+The preview is designed primarily for interactive command-line use. Support for managed identities and service principals is available but might not cover every automation scenario yet.
 
 The following authentication methods are currently **not supported**:
 
-- Resource Owner Password Credentials (ROPC)
-- Service principals
-- Managed identities
+- Resource Owner Password Credentials (ROPC), or signing in with a username and password
+- Service principals that use a certificate
 
 Other preview limitations include:
 

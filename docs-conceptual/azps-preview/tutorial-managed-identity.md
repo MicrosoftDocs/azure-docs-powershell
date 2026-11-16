@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: tutorial
-ms.date: 10/28/2026
+ms.date: 11/16/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
@@ -27,7 +27,7 @@ In this tutorial, you:
 > - Clean up
 
 > [!WARNING]
-> This scenario requires non-interactive authentication that the [current preview limitations](get-started-azureps.md#current-limitations) list as unsupported. Use these commands for engineering review only. They don't establish supported functionality. Don't run this walkthrough until the product team confirms support for your preview build.
+> This walkthrough still requires engineering confirmation of the commands to attach and detach the identity on the host. Use these commands for engineering review only until those steps are supplied and validated. For more information about authentication support, see [Get started with Azure PowerShell (preview)](get-started-azureps.md#authentication).
 
 ## Prerequisites
 
