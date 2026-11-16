@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: quickstart
-ms.date: 10/28/2026
+ms.date: 11/13/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
@@ -34,7 +34,7 @@ To find each subscription ID and its directory (tenant) ID, go to the Azure port
 Load the newest installed preview, and then confirm that the cmdlets come from the preview modules.
 
 ```powershell
-Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
+Import-Module Az -MinimumVersion 0.1.0 -MaximumVersion 0.1.9999
 Get-Command Connect-AzAccount, Get-AzResourceGroup
 Get-Module Az.Accounts, Az.Resources | Select-Object Name, Version, Path
 ```

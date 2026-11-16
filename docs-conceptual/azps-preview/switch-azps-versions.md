@@ -2,7 +2,7 @@
 title: Switch between classic and preview Azure PowerShell
 description: Learn how the preview Az modules coexist with your classic Az installation and how to choose which version loads in a PowerShell session.
 ms.topic: concept-article
-ms.date: 10/27/2026
+ms.date: 11/13/2026
 ---
 
 # Switch between classic and preview Azure PowerShell
@@ -11,7 +11,10 @@ The preview Az modules install side by side with your existing (classic) Az modu
 
 ## How coexistence works
 
-When you install the preview, its modules land in the same module path as the classic modules, just at a different version number. The preview uses the `0.1.x` version series, starting at `0.1.1`; classic releases use higher version numbers (for example, `16.4.0`).
+When you install the preview, its modules land in the same module path as the classic modules, just
+at a different version number. The preview uses the `0.1.x` version series; classic releases use higher
+version numbers (for example, `16.4.0`). Installing a new preview version doesn't change classic Az or
+remove older preview versions.
 
 | Product | Example version | Notes |
 | --- | --- | --- |
@@ -34,10 +37,11 @@ The preview appears as a version in the `0.1.x` series, such as `0.1.5`. If you 
 
 Use `Import-Module` with a version constraint to choose which version loads in the current session.
 
-Load the **preview**. Use a minimum version of `0.1.1` and a maximum version of `0.1.9999` to load the newest installed preview. Version `0.1.0` isn't part of this preview and is excluded:
+Load the **preview** in a new session before running Azure cmdlets. Use a minimum version of `0.1.0`
+and a maximum version of `0.1.9999` to load the newest installed preview:
 
 ```powershell
-Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
+Import-Module Az -MinimumVersion 0.1.0 -MaximumVersion 0.1.9999
 ```
 
 To load one exact build instead, use `-RequiredVersion` with an installed version number from the previous step. For example, if you have version `0.1.5` installed:
@@ -56,6 +60,7 @@ Import-Module Az -RequiredVersion 16.4.0
 > If you run `Import-Module Az` without a version, PowerShell loads the **highest** installed
 > version. When classic Azure PowerShell is present, that means the classic modules load, not the
 > preview. Pass the version range shown above (or a specific `-RequiredVersion`) to load the preview.
+> Running an Azure cmdlet without explicitly importing the preview can also autoload classic modules.
 
 ## Confirm which version is active
 
@@ -65,7 +70,9 @@ Check the version of the `Az` module loaded in the current session:
 Get-Module Az | Select-Object Name, Version
 ```
 
-A version in the `0.1.x` series starting at `0.1.1` (for example `0.1.5`) means the preview is active. A higher version means the classic modules are active. If nothing is returned, no `Az` module is loaded yet in this session.
+A version in the `0.1.x` series (for example `0.1.5`) means the preview is active. A higher version
+means the classic modules are active. If nothing is returned, no `Az` module is loaded yet in this
+session.
 
 ## Switch between versions
 
@@ -80,7 +87,7 @@ Import-Module: Could not load file or assembly '...'. Assembly with same name is
 `Remove-Module` doesn't help either: it removes the PowerShell module, but the loaded assemblies stay in the process. To switch, close the current session and start a new one — for example, run `exit` and then launch `pwsh` again. In the new session, load the version you want:
 
 ```powershell
-Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
+Import-Module Az -MinimumVersion 0.1.0 -MaximumVersion 0.1.9999
 ```
 
 ### Optional: helper functions
@@ -88,7 +95,7 @@ Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999
 To make switching feel seamless, add functions to your PowerShell profile that each start a clean session in the version you want:
 
 ```powershell
-function az-preview { pwsh -NoExit -Command 'Import-Module Az -MinimumVersion 0.1.1 -MaximumVersion 0.1.9999' }
+function az-preview { pwsh -NoExit -Command 'Import-Module Az -MinimumVersion 0.1.0 -MaximumVersion 0.1.9999' }
 function az-classic { pwsh -NoExit -Command 'Import-Module Az' }
 ```
 
