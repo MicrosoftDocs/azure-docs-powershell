@@ -88,7 +88,7 @@ The following environments aren't supported:
 
 ## Logging issues and providing feedback
 
-To share feedback from the command line, run `Invoke-AzSurvey`.
+To share feedback from the command line, run `Open-AzSurvey`.
 
 If you encounter an issue:
 
