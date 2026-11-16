@@ -8,6 +8,9 @@ items:
       - name: Get started
         href: get-started-azureps.md
         displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+      - name: Sign in interactively
+        href: authenticate-interactive.md
+        displayName: sign in, signin, login, Connect-AzAccount, browser, device code, sign out
   - name: Quickstarts
     items:
       - name: Set up and switch sign-in profiles
