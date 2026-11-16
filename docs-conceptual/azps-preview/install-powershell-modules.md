@@ -1,12 +1,12 @@
 ---
 title: Install the Azure PowerShell preview release
 description: Learn how to install the Az PowerShell modules from the Azure PowerShell preview release.
-ms.date: 11/13/2026
+ms.date: 11/16/2026
 ---
 
 # Install the Azure PowerShell preview release
 
-> This article covers **azps** (the Az PowerShell preview modules), a separate product from **azcli** (the Azure CLI preview). For more information about installing the CLI, see the [Azure CLI preview install overview](/cli/azure/install-overview?view=azure-cli-preview&preserve-view=true).
+> This article covers **azps** (the Az PowerShell preview modules), a separate product from **azcli** (the Azure CLI preview). For more information about installing the CLI, see the [Azure CLI preview install overview](/cli/azure/install-azure-cli?view=azure-cli-preview&preserve-view=true).
 
 The Az PowerShell cmdlets ship as NuGet module packages (`Az.*.nupkg`). Each release includes `azps-cmdlets-<version>.tar.gz`, which contains:
 
