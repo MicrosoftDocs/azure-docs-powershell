@@ -78,6 +78,6 @@ To remove a saved profile entirely, use `Remove-AzProfile -Name <profile-name>`.
 
 ## Related content
 
-- For more information, see [Manage sign-in profiles](authenticate-azureps.md).
+- For more information, see [Manage sign-in profiles](profile-base-login.md).
 - For more information, see [Quickstart: Set up and switch sign-in profiles](quickstart-profiles.md).
 - For more information, see [Get started with Azure PowerShell (preview)](get-started-azureps.md).
