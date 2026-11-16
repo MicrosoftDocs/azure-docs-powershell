@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: quickstart
-ms.date: 11/13/2026
+ms.date: 11/16/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
@@ -130,5 +130,5 @@ Get-AzProfile
 ## Related content
 
 - For more information, see [Get started with the preview](get-started-azureps.md).
-- For more information, see [Manage sign-in profiles in Azure PowerShell](profile-base-login.md).
+- For more information, see [Manage sign-in profiles in Azure PowerShell](authenticate-azureps.md).
 - For more information, see [Deploy and manage a virtual machine application](tutorial-vm-application.md).

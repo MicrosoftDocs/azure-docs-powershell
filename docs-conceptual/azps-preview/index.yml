@@ -65,13 +65,13 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Manage sign-in profiles
-            url: profile-base-login.md
+            url: authenticate-azureps.md
   - title: Configuration
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Configuration management
-            url: config.md
+            url: configure-global-settings.md
   - title: Coexistence and migration
     linkLists:
       - linkListType: how-to-guide

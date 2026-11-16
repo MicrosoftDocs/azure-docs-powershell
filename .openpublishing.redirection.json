@@ -74,6 +74,16 @@
       "redirect_document_id": false,
       "redirect_url": "/powershell/azure/",
       "source_path": "docs-conceptual/azuresmps-4.0.0/install-azure-ps.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/authenticate-azureps?view=azps-preview",
+      "source_path": "docs-conceptual/azps-preview/profile-base-login.md"
+    },
+    {
+      "redirect_document_id": false,
+      "redirect_url": "/powershell/azure/configure-global-settings?view=azps-preview",
+      "source_path": "docs-conceptual/azps-preview/config.md"
     }
   ]
 }

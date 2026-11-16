@@ -4,7 +4,7 @@ ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: overview
-ms.date: 11/12/2026
+ms.date: 11/16/2026
 title: Azure PowerShell preview overview
 ai-usage: ai-assisted
 ---
@@ -73,6 +73,6 @@ To choose which version loads, see [Switch between classic and preview Azure Pow
 <!-- link references -->
 
 [azps-install]: install-azure-powershell.md
-[azps-auth]: profile-base-login.md
+[azps-auth]: authenticate-azureps.md
 [azps-get-started]: get-started-azureps.md
 [azps-switch]: switch-azps-versions.md
