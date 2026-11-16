@@ -2,7 +2,7 @@
 title: Manage sign-in profiles in Azure PowerShell (preview)
 description: Learn how to use named profiles in the Azure PowerShell preview to save sign-in context, switch between accounts and subscriptions, and re-authenticate a specific profile.
 ms.topic: concept-article
-ms.date: 10/27/2026
+ms.date: 11/16/2026
 ---
 
 # Manage sign-in profiles in Azure PowerShell (preview)
