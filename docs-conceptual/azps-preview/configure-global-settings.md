@@ -1,7 +1,7 @@
 ---
 title: Configuration management
 description: Learn how to manage Azure PowerShell preview configuration settings, including keys, environment variables, and file locations.
-ms.date: 10/27/2026
+ms.date: 11/16/2026
 ---
 
 # Configuration management

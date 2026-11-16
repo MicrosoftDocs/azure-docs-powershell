@@ -4,7 +4,7 @@ ms.custom: devx-track-azurepowershell
 ms.devlang: powershell
 ms.service: azure-powershell
 ms.topic: overview
-ms.date: 11/12/2026
+ms.date: 11/16/2026
 title: Azure PowerShell preview overview
 ai-usage: ai-assisted
 ---
