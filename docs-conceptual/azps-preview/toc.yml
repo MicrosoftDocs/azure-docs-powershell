@@ -36,7 +36,7 @@ items:
   - name: How-to guides
     items:
       - name: Manage sign-in profiles
-        href: authenticate-azureps.md
+        href: profile-base-login.md
         displayName: profile, login, signin, authentication, tenant, subscription
       - name: Configuration
         href: configure-global-settings.md

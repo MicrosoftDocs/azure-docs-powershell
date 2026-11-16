@@ -65,7 +65,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Manage sign-in profiles
-            url: authenticate-azureps.md
+            url: profile-base-login.md
   - title: Configuration
     linkLists:
       - linkListType: how-to-guide
