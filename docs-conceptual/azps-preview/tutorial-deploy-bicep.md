@@ -169,6 +169,8 @@ Each scope has its own cmdlets. Unlike resource group deployments, these cmdlets
 | Management group | `New-AzManagementGroupDeployment` | Not available | `Get-AzManagementGroupDeploymentOperation` |
 | Tenant | `New-AzTenantDeployment` | `Get-AzTenantDeploymentWhatIfResult` | `Get-AzTenantDeploymentOperation` |
 
+For compatibility with classic Azure PowerShell, `New-AzSubscriptionDeployment` and `Get-AzSubscriptionDeploymentOperation` are aliases for `New-AzSubDeployment` and `Get-AzDeploymentOperation`. The preview doesn't yet include a management group what-if cmdlet. To preview management group changes, use `az deployment mg what-if` in the Azure CLI preview.
+
 For example, to preview and deploy a subscription-scoped template:
 
 ```powershell
