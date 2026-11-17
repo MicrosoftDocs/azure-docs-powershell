@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: tutorial
-ms.date: 10/28/2026
+ms.date: 11/16/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
@@ -25,8 +25,8 @@ In this tutorial, you:
 > - Detect a failure
 > - Clean up
 
-> [!WARNING]
-> This scenario requires non-interactive authentication that the [current preview limitations](get-started-azureps.md#current-limitations) list as unsupported. Use these commands for engineering review only. They don't establish supported functionality. Don't run this walkthrough until the product team confirms support for your preview build.
+> [!NOTE]
+> The preview supports managed identity and service principal authentication, but might not cover every automation scenario. Validate this walkthrough with your pipeline provider and preview build before using it. For more information, see [Current limitations](get-started-azureps.md#current-limitations).
 
 ## Prerequisites
 
@@ -126,9 +126,11 @@ Replace the sign-in example with one of the following. Keep secrets and certific
 
 - Azure PowerShell preview: `Connect-AzAccount -Identity -ClientId $clientId -SubscriptionId $sub -OutProfile $profile`
 
-**Client secret or certificate**
+**Client secret**, read from the pipeline's secret store into a `SecureString` variable, such as `$clientSecret`:
 
-- Azure PowerShell preview: **Pending engineering confirmation: client-secret or certificate sign-in command.**
+- Azure PowerShell preview: `Connect-AzAccount -ClientId $clientId -ClientSecret $clientSecret -TenantId $tenant -SubscriptionId $sub -OutProfile $profile`
+
+Service principal certificate sign-in isn't supported in this preview.
 
 ## Related content
 

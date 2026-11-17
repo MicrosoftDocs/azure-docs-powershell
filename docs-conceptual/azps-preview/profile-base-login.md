@@ -2,7 +2,7 @@
 title: Manage sign-in profiles in Azure PowerShell (preview)
 description: Learn how to use named profiles in the Azure PowerShell preview to save sign-in context, switch between accounts and subscriptions, and re-authenticate a specific profile.
 ms.topic: concept-article
-ms.date: 11/16/2026
+ms.date: 11/17/2026
 ---
 
 # Manage sign-in profiles in Azure PowerShell (preview)
@@ -10,6 +10,12 @@ ms.date: 11/16/2026
 A _profile_ is a named sign-in context that the Azure PowerShell preview saves when you authenticate. Each profile stores the tenant, subscription, cloud, and sign-in information needed to connect to Azure. Profiles let you switch between accounts, tenants, and subscriptions without signing in each time.
 
 Profiles are useful when you regularly work across multiple contexts, such as personal and corporate subscriptions or separate development and production environments.
+
+## Watch a profiles demo
+
+Watch this demo to see how to use sign-in profiles with the next-generation Azure PowerShell.
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=12be8dd0-98ce-4ceb-b509-1c3ea74151d4]
 
 ## When to use profiles
 
@@ -128,7 +134,7 @@ Disconnect-AzAccount
 
 ## Display the active profile in your prompt
 
-Configure your shell prompt to display the active profile name. Azure PowerShell writes the active profile name to an `active-profile` file in its local application data directory (`{LocalApplicationData}/.azclips/active-profile`).
+Configure your shell prompt to display the active profile name. Azure PowerShell writes the active profile name to an `active-profile` file in the `.azclips` folder in your home directory, or in the folder that the `AZCLIPS_HOME` environment variable specifies. Azure CLI uses the same file.
 
 ### PowerShell
 
@@ -136,7 +142,8 @@ Open your PowerShell profile script (for example, run `code $PROFILE`) and incor
 
 ```powershell
 function prompt {
-    $activeProfileFile = Join-Path (Join-Path ([Environment]::GetFolderPath('LocalApplicationData')) '.azclips') 'active-profile'
+    $azclipsHome = if ($env:AZCLIPS_HOME) { $env:AZCLIPS_HOME } else { Join-Path $HOME '.azclips' }
+    $activeProfileFile = Join-Path $azclipsHome 'active-profile'
     $activeProfile = if (Test-Path $activeProfileFile) { (Get-Content $activeProfileFile -Raw).Trim() } else { '' }
     $suffix = if ($activeProfile) { " @$activeProfile" } else { '' }
     "PS $($ExecutionContext.SessionState.Path.CurrentLocation)$suffix$('>' * ($NestedPromptLevel + 1)) "
@@ -145,16 +152,15 @@ function prompt {
 
 ### Zsh with Starship
 
-On macOS, add this to your `~/.config/starship.toml`:
+Add this to your `~/.config/starship.toml`:
 ~~~toml
 [custom.profile]
-command = 'test -f "$HOME/Library/Application Support/.azclips/active-profile" && cat "$HOME/Library/Application Support/.azclips/active-profile"'
+command = 'cat "${AZCLIPS_HOME:-$HOME/.azclips}/active-profile"'
 symbol = '@'
-when = 'test -f "$HOME/Library/Application Support/.azclips/active-profile"'
+when = 'test -f "${AZCLIPS_HOME:-$HOME/.azclips}/active-profile"'
 description = 'Name of the active profile in Azure PowerShell'
 ~~~
 
 > [!NOTE]
-> The location of the `active-profile` file depends on your operating system's local application
-> data directory. To discover the path on your machine, run `[Environment]::GetFolderPath('LocalApplicationData')` in PowerShell and append `/.azclips/active-profile`.
+> The active profile file is `$HOME/.azclips/active-profile` on Linux and macOS, and `%USERPROFILE%\.azclips\active-profile` on Windows. If you set `AZCLIPS_HOME`, the file is `$AZCLIPS_HOME/active-profile`.
 > Use `Get-AzProfile -Active` to confirm which profile is active.

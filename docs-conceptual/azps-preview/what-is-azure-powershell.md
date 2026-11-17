@@ -21,6 +21,12 @@ use the same Azure management APIs.
 For supported environments and current
 limitations, see [Get started with Azure PowerShell (preview)][azps-get-started].
 
+## Watch an end-to-end demo
+
+Watch this walkthrough to see the next-generation Azure PowerShell in action.
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=36ffb31f-fa06-45ef-80d8-debf9a297b41]
+
 ## The Az PowerShell modules
 
 The next-generation Azure PowerShell preview ships as the **Az** PowerShell module and its Azure
