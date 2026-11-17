@@ -1,7 +1,7 @@
 ---
 title: Get started with Azure PowerShell (preview)
 description: Learn the core concepts, supported environments, authentication model, current limitations, and coexistence guidance for Azure PowerShell during the preview.
-ms.date: 10/27/2026
+ms.date: 11/16/2026
 ai-usage: ai-assisted
 ---
 
@@ -14,6 +14,12 @@ This article introduces the Azure PowerShell preview and explains its core conce
 The Azure PowerShell preview is an AI-enhanced command-line experience for Azure that helps you work more efficiently by reducing the complexity of Azure PowerShell commands.
 
 Rather than replacing existing tools, the Azure PowerShell preview builds on them by providing intelligent assistance while continuing to use the same Azure management APIs and authentication model.
+
+## Watch an end-to-end demo
+
+Watch this walkthrough to see the next-generation Azure PowerShell in action.
+
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=36ffb31f-fa06-45ef-80d8-debf9a297b41]
 
 ## Core concepts
 
