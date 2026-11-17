@@ -1,7 +1,7 @@
 ---
 title: Configuration management
 description: Learn how to manage Azure PowerShell preview configuration settings, including keys, environment variables, and file locations.
-ms.date: 11/16/2026
+ms.date: 11/17/2026
 ---
 
 # Configuration management
@@ -45,18 +45,16 @@ Import-Module ./src/PS/Config/Config.psd1
 Get-AzConfig -Key core.logging.level
 # Output: core.logging.level = warn [default]
 
-Get-AzConfig -Key core.logging.level -AsJson
-# Output: {"Key":"core.logging.level","Value":"warn","Source":"default"}
+Get-AzConfig -Key core.logging.level | ConvertTo-Json -Depth 10
 
 # Retrieve a section (text output)
 Get-AzConfig -Key core
 
 # Retrieve a subsection as JSON
-Get-AzConfig -Key core.logging -AsJson
-# Output: {"level":"warn"}
+Get-AzConfig -Key core.logging | ConvertTo-Json -Depth 10
 
-# Retrieve a section as nested JSON
-Get-AzConfig -Key core -AsJson
+# Retrieve a section as JSON
+Get-AzConfig -Key core | ConvertTo-Json -Depth 10
 ```
 
 ### Set a configuration value
@@ -79,7 +77,7 @@ Get-AzConfigList
 Get-AzConfigList -IncludeDefaults
 
 # Output as JSON
-Get-AzConfigList -IncludeDefaults -AsJson
+Get-AzConfigList -IncludeDefaults | ConvertTo-Json -Depth 10
 ```
 
 ### Delete a configuration value
