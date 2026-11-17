@@ -8,6 +8,9 @@ items:
       - name: Get started
         href: get-started-azureps.md
         displayName: sign in, signin, log in, login, find, feedback, intro, introduction
+      - name: Sign in interactively
+        href: authenticate-interactive.md
+        displayName: sign in, signin, login, Connect-AzAccount, browser, device code, sign out
   - name: Quickstarts
     items:
       - name: Set up and switch sign-in profiles
@@ -36,7 +39,7 @@ items:
         href: profile-base-login.md
         displayName: profile, login, signin, authentication, tenant, subscription
       - name: Configuration
-        href: config.md
+        href: configure-global-settings.md
         displayName: config, defaults, settings, environment, variables
       - name: Switch between classic Azure PowerShell and preview build
         href: switch-azps-versions.md

@@ -5,7 +5,7 @@ author: msmbaldwin
 ms.author: mbaldwin
 ms.service: azure-powershell
 ms.topic: tutorial
-ms.date: 10/28/2026
+ms.date: 11/16/2026
 ms.custom: devx-track-azurepowershell
 ai-usage: ai-assisted
 ---
@@ -25,9 +25,6 @@ In this tutorial, you:
 > - Operate the virtual machine
 > - Clean up
 
-> [!IMPORTANT]
-> The SSH-key-based VM creation command still requires engineering confirmation. Don't continue with this walkthrough until that command is available and validated.
-
 ## Prerequisites
 
 - PowerShell 7.6 or later. Use a fresh session without classic Az modules loaded.
@@ -45,12 +42,14 @@ Verify the SSH host fingerprint when prompted. Don't disable host-key checking.
 $ErrorActionPreference = 'Stop'
 $sub = '<test-subscription-id>'
 $location = '<region>'
+$nsgId = '<existing-NSG-resource-ID>'
 $run = Get-Date -Format 'yyyyMMddHHmmss'
 $rg = "azclips-app-$run"
 $vm = "app-$run"
 $pip = "$vm-pip"
 $admin = 'azadmin'
 $key = Join-Path ([IO.Path]::GetTempPath()) "$vm-key"
+$image = 'Canonical:0001-com-ubuntu-server-jammy:22_04-lts-gen2:latest'
 $psVm = @{ SubscriptionId = $sub; ResourceGroupName = $rg; Name = $vm }
 $page = 'AzCLIPS scenario 2 is running'
 ```
@@ -70,15 +69,16 @@ The first command returns the new resource group with a provisioning state of `S
 ssh-keygen -t ed25519 -f $key -C "azclips-$run"
 ```
 
-`ssh-keygen` creates a private key file and a matching `.pub` public key file in your temporary folder.
+`ssh-keygen` prompts for a passphrase and creates a private key file and a matching `.pub` public key file in your temporary folder.
 
-Create the Ubuntu VM with SSH-key authentication, the public IP and your NSG: **Pending engineering confirmation: New-AzVM command using SSH-key authentication.**
+Create an Ubuntu VM that uses your public key for sign-in, the static public IP address, and your existing network security group:
 
 ```powershell
+New-AzVM @psVm -Location $location -VmSize Standard_D2s_v3 -Image $image -AdminUsername $admin -SshKeyValues "$key.pub" -VirtualNetworkName "$vm-vnet" -SecurityGroupName $nsgId -PublicIpAddressName $pip
 Get-AzVM @psVm
 ```
 
-The output shows the VM with a provisioning state of `Succeeded`.
+Because the command doesn't specify `-AdminPassword`, password authentication is disabled, and you can sign in only with the SSH key. `New-AzVM` creates the virtual network and network interface, and attaches the existing network security group and public IP address without changing them. The `Get-AzVM` output shows the VM with a provisioning state of `Succeeded`.
 
 ## Run the application
 
