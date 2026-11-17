@@ -89,4 +89,4 @@ landingContent:
     - linkListType: overview
       links:
         - text: Report a problem or share feedback
-          url: https://github.com/Azure/azure-powershell/issues
+          url: https://github.com/Azure/azclips/issues
