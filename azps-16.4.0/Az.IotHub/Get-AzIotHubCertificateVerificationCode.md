@@ -49,7 +49,7 @@ ResourceGroupName	: myresourcegroup
 Name				: myiothub
 CertificateName		: mycertificate
 Subject				: CN=mycertificate
-Thumbprint			: 38303FC7371EC13DDE3E18D712C8414EE50969C7
+Thumbprint			: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 VerificationCode	: 47292AB6260DB02CCD2D07C601B7303DD49858B6
 Status				: Unverified
 Expiry				: 1/01/2027 16:01

@@ -26,13 +26,13 @@ Create an in-memory object for WorkspaceProviderAuthorization.
 
 ### Example 1: Create an in-memory object for WorkspaceProviderAuthorization.
 ```powershell
-New-AzDatabricksWorkspaceProviderAuthorizationObject -PrincipalId 024d7367-0890-4ad3-8140-e37374722820 -RoleDefinitionId 2124844c-7e23-48cc-bc52-a3af25f7a4ae
+New-AzDatabricksWorkspaceProviderAuthorizationObject -PrincipalId aaaaaaaa-bbbb-cccc-1111-222222222222 -RoleDefinitionId bbbbbbbb-cccc-dddd-2222-333333333333
 ```
 
 ```output
 PrincipalId                          RoleDefinitionId
 -----------                          ----------------
-024d7367-0890-4ad3-8140-e37374722820 2124844c-7e23-48cc-bc52-a3af25f7a4ae
+aaaaaaaa-bbbb-cccc-1111-222222222222 bbbbbbbb-cccc-dddd-2222-333333333333
 ```
 
 Create an in-memory object for WorkspaceProviderAuthorization.

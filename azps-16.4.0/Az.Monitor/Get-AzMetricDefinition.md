@@ -28,7 +28,7 @@ The **Get-AzMetricDefinition** cmdlet gets metric definitions.
 
 ### Example 1: Get metric definitions for a resource
 ```powershell
-Get-AzMetricDefinition -ResourceId "/subscriptions/d33fb0c7-69d3-40be-e35b-4f0deba70fff/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2"
+Get-AzMetricDefinition -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2"
 ```
 
 ```output
@@ -56,7 +56,7 @@ This command gets the metrics definitions for the specified resource.
 
 ### Example 2: Get metric definitions with detailed output
 ```powershell
-Get-AzMetricDefinition -ResourceId "/subscriptions/d33fb0c7-69d3-40be-e35b-4f0deba70fff/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2" -DetailedOutput
+Get-AzMetricDefinition -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2" -DetailedOutput
 ```
 
 ```output
@@ -99,7 +99,7 @@ The output is detailed.
 
 ### Example 3: Get metric definitions by name
 ```powershell
-Get-AzMetricDefinition -ResourceId "/subscriptions/d33fb0c7-69d3-40be-e35b-4f0deba70fff/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2" -DetailedOutput -MetricName "BytesSent,CpuTime"
+Get-AzMetricDefinition -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2" -DetailedOutput -MetricName "BytesSent,CpuTime"
 ```
 
 ```output

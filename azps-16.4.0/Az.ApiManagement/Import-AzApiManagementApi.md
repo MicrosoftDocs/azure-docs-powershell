@@ -109,7 +109,7 @@ This command imports an API from the specified Open 3.0 specification link.
 
 ```powershell
 $context = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
-Import-AzApiManagementApi -Context $context -SpecificationPath "C:\contoso\specifications\uspto.yml" -SpecificationFormat OpenApi -Path uspostal -ApiVersionSetId 0d50e2cf-aaeb-4ea3-8a58-db9ec079c6cd -ApiVersion v2
+Import-AzApiManagementApi -Context $context -SpecificationPath "C:\contoso\specifications\uspto.yml" -SpecificationFormat OpenApi -Path uspostal -ApiVersionSetId aaaabbbb-0000-cccc-1111-dddd2222eeee -ApiVersion v2
 ```
 
 ```output
@@ -136,7 +136,7 @@ IsOnline                      : False
 SubscriptionRequired          :
 ApiRevisionDescription        :
 ApiVersionSetDescription      :
-ApiVersionSetId               : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apiVersionSets/0d50e2cf-aaeb-4ea3-8a58-db9ec079c6cd
+ApiVersionSetId               : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apiVersionSets/aaaabbbb-0000-cccc-1111-dddd2222eeee
 Id                            : /subscriptions/subid/resourceGroups/Api-Default-East-US/providers/Microsoft.ApiManagement/service/contoso/apis/6c3f20c66e5745b19229d06cd865948f    
 ResourceGroupName             : Api-Default-East-US
 ServiceName                   : contoso
@@ -444,5 +444,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-AzApiManagementApi](./Remove-AzApiManagementApi.md)
 
 [Set-AzApiManagementApi](./Set-AzApiManagementApi.md)
-
-
