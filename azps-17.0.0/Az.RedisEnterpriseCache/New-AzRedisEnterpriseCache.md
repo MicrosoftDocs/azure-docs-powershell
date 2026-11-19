@@ -1,0 +1,733 @@
+---
+external help file: Az.RedisEnterpriseCache-help.xml
+Module Name: Az.RedisEnterpriseCache
+online version: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/new-azredisenterprisecache
+schema: 2.0.0
+content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/New-AzRedisEnterpriseCache.md
+original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/New-AzRedisEnterpriseCache.md
+---
+
+# New-AzRedisEnterpriseCache
+
+## SYNOPSIS
+Creates a Redis Enterprise cache.
+
+## SYNTAX
+
+### CreateClusterWithDatabase (Default)
+```
+New-AzRedisEnterpriseCache -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -Location <String> -Sku <String> [-Capacity <Int32>] [-MinimumTlsVersion <String>] [-Zone <String[]>]
+ [-Tag <Hashtable>] [-Module <IModule[]>] [-ClientProtocol <String>] [-Port <Int32>] [-EvictionPolicy <String>]
+ [-GroupNickname <String>] [-LinkedDatabase <ILinkedDatabase[]>] [-ClusteringPolicy <String>]
+ [-AccessKeysAuthentication <String>] [-NotifyKeyspaceEvents <String>]
+ [-CustomerManagedKeyEncryptionKeyUrl <String>] [-HighAvailability <String>] [-PublicNetworkAccess <String>]
+ [-EnableSystemAssignedIdentity] [-UserAssignedIdentity <String[]>] [-KeyEncryptionKeyIdentityType <String>]
+ [-KeyEncryptionKeyIdentityUserAssignedIdentityResourceId <String>]
+ [-MaintenanceConfigurationMaintenanceWindow <IMaintenanceWindow[]>] [-AofPersistenceEnabled]
+ [-AofPersistenceFrequency <String>] [-RdbPersistenceEnabled] [-RdbPersistenceFrequency <String>]
+ [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### CreateClusterOnly
+```
+New-AzRedisEnterpriseCache -ClusterName <String> -ResourceGroupName <String> [-SubscriptionId <String>]
+ -Location <String> -Sku <String> [-Capacity <Int32>] [-MinimumTlsVersion <String>] [-Zone <String[]>]
+ [-Tag <Hashtable>] [-CustomerManagedKeyEncryptionKeyUrl <String>] [-HighAvailability <String>]
+ [-PublicNetworkAccess <String>] [-EnableSystemAssignedIdentity] [-UserAssignedIdentity <String[]>]
+ [-KeyEncryptionKeyIdentityType <String>] [-KeyEncryptionKeyIdentityUserAssignedIdentityResourceId <String>]
+ [-MaintenanceConfigurationMaintenanceWindow <IMaintenanceWindow[]>] [-DefaultProfile <PSObject>] [-AsJob]
+ [-NoWait] [-NoDatabase] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+Creates or updates an existing (overwrite/recreate, with potential downtime) cache cluster with an associated database.
+
+## EXAMPLES
+
+### Example 1: Create a Redis Enterprise cache
+```powershell
+New-AzRedisEnterpriseCache -Name "MyCache" -ResourceGroupName "MyGroup" -Location "West US" -Sku "Enterprise_E10" -PublicNetworkAccess "Enabled"
+```
+
+```output
+Location Name    Type                            Zone Database
+-------- ----    ----                            ---- --------
+West US  MyCache Microsoft.Cache/redisEnterprise      {default}
+```
+
+This command creates a Redis Enterprise cache named MyCache with an associated database named default.
+
+### Example 2: Create a Redis Enterprise cache using some optional parameters
+```powershell
+New-AzRedisEnterpriseCache -Name "MyCache" -ResourceGroupName "MyGroup" -Location "East US" -Sku "Enterprise_E20" -PublicNetworkAccess "Enabled" -Capacity 4 -MinimumTlsVersion "1.2" -Zone "1","2","3" -Tag @{"tag1" = "value1"} -Module "{name:RedisBloom, args:`"ERROR_RATE 0.00 INITIAL_SIZE 400`"}","{name:RedisTimeSeries, args:`"RETENTION_POLICY 20`"}","{name:RediSearch}" -ClientProtocol "Plaintext" -EvictionPolicy "NoEviction" -ClusteringPolicy "EnterpriseCluster" -AofPersistenceEnabled -AofPersistenceFrequency "1s"
+```
+
+```output
+Location Name    Type                            Zone      Database
+-------- ----    ----                            ----      --------
+East US  MyCache Microsoft.Cache/redisEnterprise {1, 2, 3} {default}
+```
+
+This command creates a Redis Enterprise cache named MyCache with an associated database named default, using some optional parameters.
+
+### Example 3: Advanced - Create a Redis Enterprise cache cluster without an associated database
+```powershell
+New-AzRedisEnterpriseCache -Name "MyCache" -ResourceGroupName "MyGroup" -Location "East US" -Sku "EnterpriseFlash_F300" -PublicNetworkAccess "Enabled" -NoDatabase
+```
+
+```output
+Location Name    Type                            Zone Database
+-------- ----    ----                            ---- --------
+East US  MyCache Microsoft.Cache/redisEnterprise      {}
+```
+
+Warning: This command creates a Redis Enterprise cache cluster named MyCache without any associated database to hold data.
+
+### Example 4: Create a cache in a new active geo-replication group
+```powershell
+$subscriptionId = (Get-AzContext).Subscription.Id
+$cache1Database = "{id:`"/subscriptions/$subscriptionId/resourceGroups/MyGroup/providers/Microsoft.Cache/redisEnterprise/Cache1/databases/default`"}"
+New-AzRedisEnterpriseCache -Name "Cache1" -ResourceGroupName "MyGroup" -Location "East US" -Sku "Balanced_B10" -PublicNetworkAccess "Enabled" -GroupNickname "replicationGroup" -LinkedDatabase $cache1Database
+```
+
+```output
+Location Name   Type                            Zone Database
+-------- ----   ----                            ---- --------
+East US  Cache1 Microsoft.Cache/redisEnterprise      {default}
+
+```
+
+This command creates Cache1 and adds it to a new active geo-replication group. The `-LinkedDatabase` value must include Cache1's own default database resource ID.
+
+### Example 5: Create a cache in an existing active geo-replication group
+```powershell
+$subscriptionId = (Get-AzContext).Subscription.Id
+$cache1Database = "{id:`"/subscriptions/$subscriptionId/resourceGroups/MyGroup/providers/Microsoft.Cache/redisEnterprise/Cache1/databases/default`"}"
+$cache2Database = "{id:`"/subscriptions/$subscriptionId/resourceGroups/MyGroup/providers/Microsoft.Cache/redisEnterprise/Cache2/databases/default`"}"
+New-AzRedisEnterpriseCache -Name "Cache2" -ResourceGroupName "MyGroup" -Location "West US" -Sku "Balanced_B10" -PublicNetworkAccess "Enabled" -GroupNickname "replicationGroup" -LinkedDatabase $cache1Database,$cache2Database
+```
+
+```output
+Location Name   Type                            Zone Database
+-------- ----   ----                            ---- --------
+West US  Cache2 Microsoft.Cache/redisEnterprise      {default}
+```
+
+This command creates Cache2 and adds it to the active geo-replication group containing Cache1. The `-LinkedDatabase` value includes the default database resource IDs for both caches.
+
+### Example 6: Create a Redis Enterprise cache with a maintenance window
+```powershell
+$windows = @(
+    @{Type="Weekly"; ScheduleDayOfWeek="Saturday"; StartHourUtc=0; Duration="PT10H"}
+    @{Type="Weekly"; ScheduleDayOfWeek="Wednesday"; StartHourUtc=0; Duration="PT10H"}
+)
+$cache = New-AzRedisEnterpriseCache -Name "MyCache" -ResourceGroupName "MyGroup" -Location "East US" -Sku "Balanced_B10" -PublicNetworkAccess "Enabled" -MaintenanceConfigurationMaintenanceWindow $windows
+$cache | Format-List Name, SkuName, ProvisioningState, ResourceState
+$cache.MaintenanceConfigurationMaintenanceWindow | Format-Table Type, ScheduleDayOfWeek, StartHourUtc, Duration
+```
+
+```output
+Name              : MyCache
+SkuName           : Balanced_B10
+ProvisioningState : Succeeded
+ResourceState     : Running
+
+Type   ScheduleDayOfWeek StartHourUtc Duration
+----   ----------------- ------------ --------
+Weekly Saturday                     0 PT10H
+Weekly Wednesday                    0 PT10H
+```
+
+This command creates a Redis Enterprise cache named MyCache with custom maintenance windows on Saturdays and Wednesdays starting at midnight UTC for 10 hours.
+At least 2 maintenance windows are required.
+
+## PARAMETERS
+
+### -AccessKeysAuthentication
+This property can be Enabled/Disabled to allow or deny access with the current access keys.
+Can be updated even after database is created.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AofPersistenceEnabled
+[Preview] Sets whether AOF persistence is enabled.
+After enabling AOF persistence, you will be unable to disable it.
+Support for disabling AOF persistence after enabling will be added at a later date.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AofPersistenceFrequency
+[Preview] Sets the frequency at which data is written to disk if AOF persistence is enabled.
+Allowed values: 1s, always
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+Run the command as a job
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Capacity
+The size of the RedisEnterprise cluster.
+Defaults to 2 or 3 or not applicable depending on SKU.Valid values are (2, 4, 6, ...) for Enterprise_* SKUs and (3, 9, 15, ...) for EnterpriseFlash_* SKUs.
+For other SKUs capacity argument is not supported.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases: SkuCapacity
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientProtocol
+Specifies whether redis clients can connect using TLS-encrypted or plaintext redis protocols - default is Encrypted
+Allowed values: Encrypted, Plaintext
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClusteringPolicy
+Clustering policy - default is OSSCluster
+Specified at create time.
+Allowed values: EnterpriseCluster, OSSCluster
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClusterName
+The name of the Redis Enterprise cluster.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: Name
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomerManagedKeyEncryptionKeyUrl
+Key encryption key Url versioned only.
+Ex: https://contosovault.vault.azure.net/keys/contosokek/562a4bb76b524a1493a6afe8e536ee78"
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultProfile
+The credentials, account, tenant, and subscription used for communication with Azure.
+
+```yaml
+Type: System.Management.Automation.PSObject
+Parameter Sets: (All)
+Aliases: AzureRMContext, AzureCredential
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSystemAssignedIdentity
+Determines whether to enable a system-assigned identity for the resource.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EvictionPolicy
+Redis eviction policy - default is VolatileLRU
+Allowed values: AllKeysLFU, AllKeysLRU, AllKeysRandom, VolatileLRU, VolatileLFU, VolatileTTL, VolatileRandom, NoEviction
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GroupNickname
+Name for the group of linked database resources
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HighAvailability
+Enabled by default.
+Can only be updated from disabled to enabled.
+If highAvailability is disabled, the data set is not replicated.
+This affects the availability SLA, and increases the risk of data loss.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyEncryptionKeyIdentityType
+Only userAssignedIdentity is supported in this API version; other types may be supported in the future
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KeyEncryptionKeyIdentityUserAssignedIdentityResourceId
+User assigned identity to use for accessing key encryption key Url.
+Ex: /subscriptions/\<sub uuid\>/resourceGroups/\<resource group\>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myId.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LinkedDatabase
+List of database resources to link with this database
+To construct, see NOTES section for GEOREPLICATIONLINKEDDATABASE properties and create a hash table.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.ILinkedDatabase[]
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Location
+The geo-location where the resource lives.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaintenanceConfigurationMaintenanceWindow
+Custom maintenance windows that apply to the cluster.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.IMaintenanceWindow[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MinimumTlsVersion
+The minimum TLS version for the cluster to support - default is 1.2
+Allowed values: 1.0, 1.1, 1.2
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Module
+Optional set of redis modules to enable in this database - modules can only be added at create time.
+To construct, see NOTES section for MODULE properties and create a hash table.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.IModule[]
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoDatabase
+Advanced - Do not automatically create a default database.
+Warning: The cache will not be usable until you create a database.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateClusterOnly
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NotifyKeyspaceEvents
+Specifies which keyspace events should trigger notifications on the default database.
+Default is an empty string, meaning this feature is disabled.
+When enabled, at least 'K' (keyspace events) or 'E' (keyevent events) must be present.
+For example, 'AKE' enables all standard events.
+See https://redis.io/docs/latest/develop/use/keyspace-notifications/ for the complete list of event types.
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoWait
+Run the command asynchronously
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Port
+TCP port of the database endpoint - defaults to an available port
+Specified at create time.
+
+```yaml
+Type: System.Int32
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublicNetworkAccess
+Whether or not public network traffic can access the Redis cluster.
+Only 'Enabled' or 'Disabled' can be set.
+Defaults to Enabled for new clusters and preserves the current value when updating an existing cluster.
+Null is only supported for clusters created with an older API version that do not have this property.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RdbPersistenceEnabled
+[Preview] Sets whether RDB persistence is enabled.
+After enabling RDB persistence, you will be unable to disable it.
+Support for disabling RDB persistence after enabling will be added at a later date.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RdbPersistenceFrequency
+[Preview] Sets the frequency at which a snapshot of the database is created if RDB persistence is enabled.
+Allowed values: 1h, 6h, 12h
+
+```yaml
+Type: System.String
+Parameter Sets: CreateClusterWithDatabase
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResourceGroupName
+The name of the resource group.
+The name is case insensitive.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sku
+The type of RedisEnterprise cluster to deploy.
+Accepted values: Balanced_B0, Balanced_B1, Balanced_B10, Balanced_B100, Balanced_B1000, Balanced_B150, Balanced_B20, Balanced_B250, Balanced_B3, Balanced_B350, Balanced_B5, Balanced_B50, Balanced_B500, Balanced_B700, ComputeOptimized_X10, ComputeOptimized_X100, ComputeOptimized_X150, ComputeOptimized_X20, ComputeOptimized_X250, ComputeOptimized_X3, ComputeOptimized_X350, ComputeOptimized_X5, ComputeOptimized_X50, ComputeOptimized_X500, ComputeOptimized_X700, EnterpriseFlash_F1500, EnterpriseFlash_F300, EnterpriseFlash_F700, Enterprise_E1, Enterprise_E10, Enterprise_E100, Enterprise_E20, Enterprise_E200, Enterprise_E400, Enterprise_E5, Enterprise_E50, FlashOptimized_A1000, FlashOptimized_A1500, FlashOptimized_A2000, FlashOptimized_A250, FlashOptimized_A4500, FlashOptimized_A500, FlashOptimized_A700, MemoryOptimized_M10, MemoryOptimized_M100, MemoryOptimized_M1000, MemoryOptimized_M150, MemoryOptimized_M1500, MemoryOptimized_M20, MemoryOptimized_M2000, MemoryOptimized_M250, MemoryOptimized_M350, MemoryOptimized_M50, MemoryOptimized_M500, MemoryOptimized_M700
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: SkuName
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubscriptionId
+The ID of the target subscription.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: (Get-AzContext).Subscription.Id
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+Cluster resource tags.
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserAssignedIdentity
+The array of user assigned identities associated with the resource.
+The elements in array will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.'
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Zone
+The Availability Zones where this cluster will be deployed.
+
+```yaml
+Type: System.String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+### Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.ICluster
+
+## NOTES
+
+## RELATED LINKS

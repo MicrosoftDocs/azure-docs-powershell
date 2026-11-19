@@ -54,10 +54,13 @@ orchestration, and publishing boundaries.
 
 - A separate `openapi_reference.services` block will configure the new
   toolchain. The legacy REST configuration and entry points remain unchanged.
-- A dedicated Node 22 adapter backed by the toolchain's pinned `js-yaml`
+- A dedicated Node 26 adapter backed by the toolchain's pinned `js-yaml`
   dependency will read the YAML and emit `openapi_reference` as JSON. It will
   not mutate files, clone repositories, run generators, or make publishing
   decisions.
+- As of 2026-10-30, Node 26 LTS replaces the original Node 22 baseline.
+  Pipeline setup, package engine constraints, and tests must agree on this
+  runtime major; this does not change generation or publishing boundaries.
 - The page and TOC generators will own OpenAPI transformation and generated
   structure validation. They will not know about Azure Pipelines parameters,
   Git repositories, branches, or publishing.
