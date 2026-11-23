@@ -72,8 +72,8 @@ Get-AzBlueprint
 
 ```output
 Name                 : PS-BlueprintDefinition
-Id                   : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprints/PS-BlueprintDefinition
-SubscriptionId       : 00000000-1111-0000-1111-000000000000
+Id                   : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprints/PS-BlueprintDefinition
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Versions             : {1.0}
 Description          : Powershell test blueprint
 TimeCreated          : 2019-02-01
@@ -105,13 +105,13 @@ Get the blueprint definitions within the specified management group.
 
 ### Example 3
 ```powershell
-Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000"
+Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
 Name                 : PS-BlueprintDefinition
-Id                   : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprints/PS-BlueprintDefinition
-SubscriptionId       : 00000000-1111-0000-1111-000000000000
+Id                   : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/providers/Microsoft.Blueprint/blueprints/PS-BlueprintDefinition
+SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 Versions             : {1.0}
 Description          : Powershell test blueprint
 TimeCreated          : 2019-02-01
@@ -124,7 +124,7 @@ Get the blueprint definitions within the specified subscription and the manageme
 
 ### Example 4
 ```powershell
-Get-AzBlueprint -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myBlueprintName"
+Get-AzBlueprint -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Name "myBlueprintName"
 ```
 
 Get the blueprint definition with the given name within the specified subscription.

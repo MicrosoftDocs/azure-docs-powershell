@@ -52,7 +52,7 @@ ResourceGroupName	: myresourcegroup
 Name				: myiotdps
 CertificateName		: mycertificate
 Subject				: CN=mycertificate
-Thumbprint			: 38303FC7371EC78DDE3E18D712C8414EE50969C7
+Thumbprint			: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 VerificationCode	: A901A843EFF75419AC1F0EB460E85DF153092A0547AA30F5
 Status				: Unverified
 Expiry				: 1/01/2027 16:01
@@ -73,7 +73,7 @@ ResourceGroupName	: myresourcegroup
 Name				: myiotdps
 CertificateName		: mycertificate
 Subject				: CN=mycertificate
-Thumbprint			: 38303FC7371EC78DDE3E18D712C8414EE50969C7
+Thumbprint			: AA11BB22CC33DD44EE55FF66AA77BB88CC99DD00
 VerificationCode	: A901A843EFF75419AC1F0EB460E85DF153092A0547AA30F5
 Status				: Unverified
 Expiry				: 1/01/2027 16:01

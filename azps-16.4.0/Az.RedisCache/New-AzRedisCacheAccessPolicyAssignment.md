@@ -37,7 +37,7 @@ Create an access policy assignment (redis user) for a Redis Cache.
 
 ### Example 1
 ```powershell
-New-AzRedisCacheAccessPolicyAssignment -Name "testCache" -AccessPolicyAssignmentName "testAccessPolicyAssignmentName" -AccessPolicyName "testAccessPolicyName" -ObjectId "69d700c5-ca77-4335-947e-xxxxxxxxxxxx" -ObjectIdAlias "testAlias"
+New-AzRedisCacheAccessPolicyAssignment -Name "testCache" -AccessPolicyAssignmentName "testAccessPolicyAssignmentName" -AccessPolicyName "testAccessPolicyName" -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb" -ObjectIdAlias "testAlias"
 ```
 
 This command creates access policy assignment (redis user) named testAccessPolicyAssignmentName on Redis Cache named testCache.

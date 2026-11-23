@@ -50,7 +50,7 @@ Removing a schema also removes all nested schema version resources.
 ### Example 2: Remove a schema using schema registry identity object
 ```powershell
 $registryIdentity = @{
-    SubscriptionId = "12345678-1234-1234-1234-123456789abc"
+    SubscriptionId = "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
     ResourceGroupName = "my-resource-group"
     SchemaRegistryName = "my-schema-registry"
 }

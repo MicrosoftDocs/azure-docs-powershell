@@ -70,10 +70,10 @@ New-AzKeyVaultManagedHsm -Name 'myhsm' -ResourceGroupName 'myrg1' -Location 'eas
 Managed HSM Name                        : myhsm
 Resource Group Name                     : myrg1
 Location                                : eastus2euap
-Resource ID                             : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/bez-rg/pro
+Resource ID                             : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/bez-rg/pro
                                           viders/Microsoft.KeyVault/managedHSMs/bezmhsm
 HSM Pool URI                            :
-Tenant ID                               : 00001111-aaaa-2222-bbbb-3333cccc4444
+Tenant ID                               : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Initial Admin Object Ids                : {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
 SKU                                     : StandardB1
 Soft Delete Enabled?                    : True

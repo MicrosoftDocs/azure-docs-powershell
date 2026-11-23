@@ -86,10 +86,10 @@ Update-AzKeyVaultManagedHsm -Name $hsmName -ResourceGroupName $resourceGroupName
 Managed HSM Name                    : testmhsm
 Resource Group Name                 : test-rg
 Location                            : eastus
-Resource ID                         : /subscriptions/xxxxxx71-1bf0-4dda-aec3-xxxxxxxxxxxx/resourceGroups/test-rg/provide
+Resource ID                         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/test-rg/provide
                                       rs/Microsoft.KeyVault/managedHSMs/testmhsm
 HSM Pool URI                        :
-Tenant ID                           : 54xxxxxx-38d6-4fb2-bad9-xxxxxxxxxxxx
+Tenant ID                           : aaaabbbb-0000-cccc-1111-dddd2222eeee
 Initial Admin Object Ids            : {xxxxxx9e-5be9-4f43-abd2-xxxxxxxxxxxx}
 SKU                                 : StandardB1
 Soft Delete Enabled?                : True

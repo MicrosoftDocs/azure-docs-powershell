@@ -45,7 +45,7 @@ Get a file system resource
 
 ### Example 1: List by subscription
 ```powershell
-Get-AzQumuloFileSystem -SubscriptionId fc35d936-3b89-41f8-8110-a24b56826c37
+Get-AzQumuloFileSystem -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
 ```
 
 ```output

@@ -40,7 +40,7 @@ Get-AzManagementGroupHierarchySetting -GroupName c7a87cda-9a66-4920-b0f8-869baa0
 Id          : /providers/Microsoft.Management/managementGroups/c7a87cda-9a66-4920-b0f8-869baa04efe0/settings/default
 Type        : Microsoft.Management/managementGroups/settings
 Name        : default
-TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+TenantId    : aaaabbbb-0000-cccc-1111-dddd2222eeee
 RequireAuthorizationForGroupCreation : true
 DefaultManagementGroup : TestGroup
 ```

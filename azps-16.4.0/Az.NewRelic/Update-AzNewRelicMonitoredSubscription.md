@@ -54,7 +54,7 @@ MonitoredSubscriptionList : {{
                               "tagRules": {
                                 "provisioningState": "Accepted"
                               },
-                              "subscriptionId": "11111111-2222-3333-4444-123456789101",
+                              "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
                               "status": "Active"
                             }}
 Name                      : default

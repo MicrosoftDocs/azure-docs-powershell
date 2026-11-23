@@ -45,7 +45,7 @@ Implements vCenter GET method.
 
 ### Example 1: List VCenters in current subscription
 ```powershell
-Get-AzConnectedVMwareVCenter -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareVCenter -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -65,7 +65,7 @@ This command lists VCenters in current subscription.
 
 ### Example 2: List VCenters in a resource group
 ```powershell
-Get-AzConnectedVMwareVCenter -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareVCenter -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -79,7 +79,7 @@ This command lists VCenters in a resource group named `test-rg`.
 
 ### Example 3: Get a specific VCenter
 ```powershell
-Get-AzConnectedVMwareVCenter -Name "test-vc" -ResourceGroupName "test-rg" -SubscriptionId "204898ee-cd13-4332-b9d4-55ca5c25496d"
+Get-AzConnectedVMwareVCenter -Name "test-vc" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
 ```
 
 ```output
@@ -87,10 +87,10 @@ ConnectionStatus             : Connected
 CredentialsPassword          :
 CredentialsUsername          : arcvmware
 CustomResourceName           : e6048b2a-ba86-4334-adff-ba3d617d12ef
-ExtendedLocationName         : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
 ExtendedLocationType         : CustomLocation
 Fqdn                         : 1.2.3.4
-Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
+Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/vcenters/test-vc
 InstanceUuid                 : db73f8f2-624c-4a0f-905b-8c6f34442cbc
 Kind                         : VMware
 Location                     : eastus
