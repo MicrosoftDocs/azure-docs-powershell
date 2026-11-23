@@ -39,7 +39,7 @@ Set-AzNetworkManagerConnectivityConfiguration -InputObject $ConnectivityConfigur
 
 ```output
 ConnectivityTopology  : HubAndSpoke
-Hubs                  : {/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub}
+Hubs                  : {/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub}
 DeleteExistingPeering : True
 IsGlobal              : False
 ConnectivityCapability : {
@@ -67,7 +67,7 @@ AppliesToGroupsText   : [
                         ]
 HubsText              : [
                           {
-                            "ResourceId": "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub",
+                            "ResourceId": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub",
                             "ResourceType": "Microsoft.Network/virtualNetworks"
                           }
                         ]
@@ -104,7 +104,7 @@ Set-AzNetworkManagerConnectivityConfiguration -InputObject $ConnectivityConfigur
 
 ```output
 ConnectivityTopology  : HubAndSpoke
-Hubs                  : {/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub}
+Hubs                  : {/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub}
 DeleteExistingPeering : True
 IsGlobal              : False
 ConnectivityCapability : {
@@ -132,7 +132,7 @@ AppliesToGroupsText   : [
                         ]
 HubsText              : [
                           {
-                            "ResourceId": "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub",
+                            "ResourceId": "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/jaredgorthy-PowerShellTestResources/providers/Microsoft.Network/virtualNetworks/powerShellTestVnetHub",
                             "ResourceType": "Microsoft.Network/virtualNetworks"
                           }
                         ]
