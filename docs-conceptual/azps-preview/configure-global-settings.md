@@ -33,11 +33,9 @@ Configuration follows strict precedence: **command args > environment variables 
 
 ## PowerShell usage
 
-### Import the Config module
+### Load the preview
 
-```powershell
-Import-Module ./src/PS/Config/Config.psd1
-```
+The configuration cmdlets are part of the Azure PowerShell preview. In a fresh PowerShell 7.6 or later session, explicitly import the preview so that classic Az modules don't load by accident. For more information, see [Install the Azure PowerShell preview](install-azure-powershell.md#verify).
 
 ### Get configuration values or sections
 
